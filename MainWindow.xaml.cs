@@ -214,7 +214,7 @@ namespace Assembly69
             foreach (var line in lines)
             {
                 string[] hex_string = line.Split(" : ");
-
+                if (!inhaled_tagnames.ContainsKey(hex_string[0]))
                 inhaled_tagnames.Add(hex_string[0], hex_string[1]);
             }
         }
