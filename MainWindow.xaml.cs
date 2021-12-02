@@ -194,7 +194,7 @@ namespace Assembly69
                 tag_struct tag = Tags_List[i];
                 Tag_groups.TryGetValue(tag.Tag_group, out group_tag_struct dict_tag_group);
 
-                t.Header = convert_ID_to_tag_name(tag.ObjectID);
+                t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectID);
                 t.Tag = i;
                 //t.MouseLeftButtonDown += new MouseButtonEventHandler(Select_Tag_click);
                 t.Selected += Select_Tag_click;

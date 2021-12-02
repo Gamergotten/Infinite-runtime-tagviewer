@@ -9,18 +9,17 @@
     <Grid Background="DarkCyan">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="400"/>
-            <ColumnDefinition Width="2"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="20"/>
             <RowDefinition/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="1" Grid.RowSpan="3" Grid.Column="2" Background="White">
+        <Grid Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" Background="White">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="10"/>
@@ -47,11 +46,26 @@
         </Grid>
 
 
+        <GridSplitter Grid.Column="1" 
+              Grid.RowSpan="4" 
+              HorizontalAlignment="Left" 
+              VerticalAlignment="Stretch"
+              Background="DarkCyan" 
+              ShowsPreview="true"
+              Width="2"/>
 
-        <TextBlock Text="Search" Grid.Row="1" Margin="10,0,0,0" />
-        <TextBox x:Name="Searchbox" Grid.Row="1" TextChanged="Searchbox_TextChanged" HorizontalAlignment="Stretch" Margin="53,0,30,0"/>
 
+        <Grid Grid.RowSpan="2" Background="White" Margin="0,1,0,2">
 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Text="Search" Grid.Row="1" Margin="10,0,0,0" />
+            <TextBox x:Name="Searchbox" Grid.Row="1" TextChanged="Searchbox_TextChanged" HorizontalAlignment="Stretch" Margin="53,0,30,0"/>
+
+        </Grid>
 
         <TreeView x:Name="TagsTree" Grid.Row="2" >
             <!--TreeViewItem Header="test">
