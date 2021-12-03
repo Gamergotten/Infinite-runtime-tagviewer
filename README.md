@@ -10,4 +10,4 @@ however it does partly require the TagID's and their respective Tagnames from th
 
 thats about it lol
 
-enormous thanks to Krevil for his tool that allows us to dump the tag names&IDs, so we can see the correct names of each tag and easily redump the info anytime theres a change in the module information
+enormous thanks to Krevil for his tool (https://github.com/Krevil/InfiniteModuleReader) that allows us to dump the tag names&IDs, so we can see the correct names of each tag and easily redump the info anytime theres a change in the module information
