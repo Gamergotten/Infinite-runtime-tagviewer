@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Assembly69.theUIstuff.valueBlock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Assembly69.theUIstuff"
+             mc:Ignorable="d" 
+             >
+    <Grid Background="Chartreuse" Margin="5,5,0,0" Height="18">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="70" Width="1*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+       <TextBox x:Name="value" Grid.Column="1"/>
+        <TextBlock x:Name="value_type" Text="Tag Value test one two three" HorizontalAlignment="Stretch" Margin="10,0,5,0" />
+
+    </Grid>
+</UserControl>

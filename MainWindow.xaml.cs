@@ -14,6 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Memory;
 using System.IO;
+using Assembly69.object_classes;
+using Assembly69.theUIstuff;
+using System.Text.RegularExpressions;
 
 namespace Assembly69
 {
@@ -23,6 +26,9 @@ namespace Assembly69
     public partial class MainWindow : Window
     {
         Mem m = new Mem();
+
+        public tagref_dropdown trd; // this is our dropdown box for selecting tag references
+        public Button the_last_tagref_button_we_pressed; // since we did it for the window why not also do it for the button
 
         public MainWindow()
         {
@@ -255,9 +261,223 @@ namespace Assembly69
             tagdatnum_text.Text = "Datnum: " + loading_tag.Datnum;
             tagdata_text.Text = "Tag data address: 0x" + loading_tag.Tag_data.ToString("X");
 
+            tagview_panels.Children.Clear();
+
+            if (loading_tag.Tag_group == "vehi")
+            {
+                
+                Dictionary<long, string> strings = vehi.VehicleTag;
+                do_the_tag_thing(strings, loading_tag);
+            }
+            else if (loading_tag.Tag_group == "weap")
+            {
+
+                Dictionary<long, string> strings = vehi.WeaponTag;
+                do_the_tag_thing(strings, loading_tag);
+            }
+
+
+        }
+
+        public void do_the_tag_thing(Dictionary<long, string> VehicleTag, tag_struct loading_tag)
+        {
+            foreach (KeyValuePair<long, string> entry in VehicleTag)
+            {
+                switch (entry.Value)
+                {
+                    case "4Byte":
+                        valueBlock vb1 = new valueBlock { HorizontalAlignment = HorizontalAlignment.Left };
+                        vb1.value_type.Text = "4 Byte";
+                        vb1.value.Text = m.ReadInt((loading_tag.Tag_data + entry.Key).ToString("X")).ToString();
+                        tagview_panels.Children.Add(vb1);
+
+                        vb1.value.Tag = loading_tag.Tag_data + entry.Key + ":4Byte";
+                        vb1.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+                        break;
+                    case "Float":
+                        valueBlock vb2 = new valueBlock { HorizontalAlignment = HorizontalAlignment.Left };
+                        vb2.value_type.Text = "Float";
+                        vb2.value.Text = m.ReadFloat((loading_tag.Tag_data + entry.Key).ToString("X")).ToString();
+                        tagview_panels.Children.Add(vb2);
+
+                        vb2.value.Tag = loading_tag.Tag_data + entry.Key + ":Float";
+                        vb2.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+                        break;
+                    case "TagRef":
+                        tagrefblock tfb1 = new tagrefblock { HorizontalAlignment = HorizontalAlignment.Left };
+                        foreach (string s in Tag_groups.Keys)
+                        {
+                            tfb1.taggroup.Items.Add(s);
+                        }
+                        string test_group = ReverseString(m.ReadString((loading_tag.Tag_data + entry.Key + 20).ToString("X"), "", 4));
+                        tfb1.taggroup.SelectedItem = test_group;
+
+                        // read tagID rather than datnum // or rather, convert datnum to ID
+                        string test = BitConverter.ToString(m.ReadBytes((loading_tag.Tag_data + entry.Key + 24).ToString("X"), 4)).Replace("-", string.Empty);
+                        string test_nameID = convert_ID_to_tag_name(get_tagid_by_datnum(test));
+
+
+                        tfb1.tag_button.Content = test_nameID;
+                        tagview_panels.Children.Add(tfb1);
+
+                        tfb1.taggroup.Tag = (loading_tag.Tag_data + entry.Key + 20);
+                        tfb1.taggroup.SelectionChanged += new SelectionChangedEventHandler(taggroup_SelectionChanged);
+
+                        tfb1.tag_button.Tag = (loading_tag.Tag_data + entry.Key + 24) + ":" + test_group;
+                        tfb1.tag_button.Click += new RoutedEventHandler(tagrefbutton);
+
+
+
+                        break;
+                    case "Pointer":
+                        valueBlock vb3 = new valueBlock { HorizontalAlignment = HorizontalAlignment.Left };
+                        vb3.value_type.Text = "Pointer";
+                        vb3.value.Text = m.ReadLong((loading_tag.Tag_data + entry.Key).ToString("X")).ToString("X");
+                        tagview_panels.Children.Add(vb3);
+
+                        vb3.value.Tag = loading_tag.Tag_data + entry.Key + ":Pointer";
+                        vb3.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+                        break;
+                    case "Tagblock":
+                        tagblock tb1 = new tagblock { HorizontalAlignment = HorizontalAlignment.Left };
+                        tb1.tagblock_address.Text = "0x" + m.ReadLong((loading_tag.Tag_data + entry.Key).ToString("X")).ToString("X");
+                        tb1.tagblock_title.Text = m.ReadString((loading_tag.Tag_data + entry.Key + 8).ToString("X") + ",0,0");
+                        tb1.tagblock_count.Text = m.ReadInt((loading_tag.Tag_data + entry.Key + 16).ToString("X")).ToString();
+                        tagview_panels.Children.Add(tb1);
+
+                        tb1.tagblock_address.Tag = (loading_tag.Tag_data + entry.Key) + ":Pointer";
+                        tb1.tagblock_address.TextChanged += new TextChangedEventHandler(value_TextChanged);
+
+                        tb1.tagblock_count.Tag = (loading_tag.Tag_data + entry.Key + 16) + ":4Byte";
+                        tb1.tagblock_count.TextChanged += new TextChangedEventHandler(value_TextChanged);
+                        break;
+                    case "String":
+                        valueBlock vb4 = new valueBlock { HorizontalAlignment = HorizontalAlignment.Left };
+                        vb4.value_type.Text = "String";
+                        vb4.value.Text = m.ReadString((loading_tag.Tag_data + entry.Key).ToString("X")).ToString();
+                        tagview_panels.Children.Add(vb4);
+
+                        vb4.value.Tag = loading_tag.Tag_data + entry.Key + ":String";
+                        vb4.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+                        break;
+
+                }
+            }
         }
 
 
+
+
+        // list of changes to ammend to the memory when we phit the poke button
+        public Dictionary<long, KeyValuePair<string, string>> pokelist = new Dictionary<long, KeyValuePair<string, string>>();
+        
+        // type (TagrefGroup, TagrefTag)
+        // address, 
+        public void addpokechange(long offset, string type, string value)
+        {
+            pokelist[offset] = new KeyValuePair<string, string>(type, value);
+
+            change_text.Text = pokelist.Count + " changes queued";
+        }
+
+        // for text boxes
+        private void value_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            string[] s = tb.Tag.ToString().Split(":");
+            addpokechange(long.Parse(s[0]), s[1], tb.Text);
+        }
+        // for tag group
+        private void taggroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox cb = sender as ComboBox;
+
+            addpokechange(long.Parse(cb.Tag.ToString()), "TagrefGroup", cb.SelectedValue.ToString());
+
+            Grid td = cb.Parent as Grid;
+            Button b = td.Children[1] as Button;
+            string[] s = b.Tag.ToString().Split(":");
+            b.Tag = s[0] + ":" + cb.SelectedValue.ToString();
+            // THAT WAS PROBABLY THE MOST DODGY THING IVE EVER DONE WTFFFF
+        }
+
+        
+
+        private void tagrefbutton(object sender, RoutedEventArgs e)
+        {
+            Button b = sender as Button;
+
+            string[] s = b.Tag.ToString().Split(":");
+
+            if (s.Length > 1)
+            {
+                trd = new tagref_dropdown();
+
+                var myButtonLocation = b.PointToScreen(new Point(0, 0));
+
+                trd.Width = b.ActualWidth + 116;
+                trd.Height = 400;
+                trd.Left = myButtonLocation.X - 8;
+                trd.Top = myButtonLocation.Y + 1;
+
+
+
+                trd.MainWindow = this;
+                the_last_tagref_button_we_pressed = b;
+
+                TreeViewItem NULL = new TreeViewItem();
+
+                NULL.Header = convert_ID_to_tag_name("FFFFFFFF");
+                NULL.Tag = s[0] + ":" + "FFFFFFFF";
+
+                trd.tag_select_panel.Items.Add(NULL);
+                NULL.Selected += new RoutedEventHandler(update_tagref);
+
+
+                foreach (tag_struct tg in Tags_List)
+                {
+                    if (tg.Tag_group == s[1])
+                    {
+                        TreeViewItem testing = new TreeViewItem();
+
+                        testing.Header = convert_ID_to_tag_name(tg.ObjectID);
+                        testing.Tag = s[0] + ":" + tg.Datnum;
+
+                        trd.tag_select_panel.Items.Add(testing);
+                        testing.Selected += new RoutedEventHandler(update_tagref);
+                    }
+                }
+                
+                trd.Show();
+            }
+        }
+
+        public void update_tagref(object sender, RoutedEventArgs e)
+        {
+            TreeViewItem b = sender as TreeViewItem;
+
+            string[] s = b.Tag.ToString().Split(":");
+            addpokechange(long.Parse(s[0]), "TagrefTag", s[1]);
+
+            the_last_tagref_button_we_pressed.Content = convert_ID_to_tag_name(get_tagid_by_datnum(s[1]));
+
+            if (trd != null)
+            {
+                trd.closethis();
+            }
+        }
+
+
+        public string get_tagid_by_datnum(string datnum)
+        {
+            foreach (tag_struct t in Tags_List)
+            {
+                if (t.Datnum == datnum)
+                    return t.ObjectID;
+            }
+
+            return "Tag not present(" + datnum + ")";
+        }
 
 
         private void Searchbox_TextChanged(object sender, TextChangedEventArgs e)
@@ -295,5 +515,64 @@ namespace Assembly69
             }
         }
 
+
+
+        // POKE OUR CHANGES LETSGOOOO
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            foreach (KeyValuePair<long, KeyValuePair<string, string>> pair in pokelist)
+            {
+                long address = pair.Key;
+                string type = pair.Value.Key;
+                string value = pair.Value.Value;
+                switch (type)
+                {
+                    case "4Byte":
+                        m.WriteMemory(address.ToString("X"), "int", value);
+                        break;
+                    case "Float":
+                        m.WriteMemory(address.ToString("X"), "float", value);
+                        break;
+                    case "Pointer":
+                        string will_this_work = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
+                        m.WriteMemory(address.ToString("X"), "long", will_this_work); // apparently it does
+                        break;
+                    case "String":
+                        m.WriteMemory(address.ToString("X"), "string", value + "\0");
+                        break;
+                    case "TagrefGroup":
+                        m.WriteMemory(address.ToString("X"), "string", ReverseString(value));
+
+                        break;
+                    case "TagrefTag":
+                        string why_do_i_need_to_convert_EVERYTHING = Convert.ToInt32(value, 16).ToString();
+                        // THAT FLIPS IT BACKWARDS
+
+                        string temp = Regex.Replace(value, @"(.{2})", "$1 ");
+                        temp = temp.TrimEnd();
+                        m.WriteMemory(address.ToString("X"), "bytes", temp);
+                        int w2 = 0;
+
+
+                        break;
+                }
+            }
+
+            poke_text.Text = pokelist.Count + " changes poked";
+
+            pokelist.Clear();
+            change_text.Text = pokelist.Count + " changes queued";
+        }
+
+
+        /* 4Byte
+         * Float
+         * TagRef
+         * Pointer
+         * Tagblock
+         * String
+         * TagrefGroup
+         * TagrefTag
+         */
     }
 }
