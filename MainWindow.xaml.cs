@@ -48,7 +48,7 @@ namespace Assembly69
             base_address = m.ReadLong("HaloInfinite.exe+0x3E82120");
 
             string validtest = m.ReadString(base_address.ToString("X"));
-            if(validtest != null)
+            if(validtest == "tag instances")
             {
                 hook_text.Text = "Process Hooked";
             }
@@ -264,7 +264,7 @@ namespace Assembly69
             inhale_tag(int.Parse(thing.Tag.ToString()));
         }
 
-        public void inhale_tag(int tag_index)
+        public void inhale_tag(int tag_index) // as in a literal index to the tag
         {
             tag_struct loading_tag = Tags_List[tag_index];
             Tagname_text.Text = convert_ID_to_tag_name(loading_tag.ObjectID);
@@ -337,8 +337,7 @@ namespace Assembly69
 
                         // read tagID rather than datnum // or rather, convert datnum to ID
                         string test = BitConverter.ToString(m.ReadBytes((address + entry.Key + 24).ToString("X"), 4)).Replace("-", string.Empty);
-                        string ID = get_tagid_by_datnum(test);
-                        string test_nameID = convert_ID_to_tag_name(ID);
+                        string test_nameID = convert_ID_to_tag_name(get_tagid_by_datnum(test));
 
                         tfb1.tag_button.Content = test_nameID;
                         parentpanel.Children.Add(tfb1);
@@ -349,7 +348,9 @@ namespace Assembly69
                         tfb1.tag_button.Tag = (address + entry.Key + 24) + ":" + test_group;
                         tfb1.tag_button.Click += new RoutedEventHandler(tagrefbutton);
 
-                        tfb1.goto_button.Tag = ID;
+                        int ID = get_tagindex_by_datnum(test);
+
+                        tfb1.goto_button.Tag = ID; // need to get the index of the tag not the ID
                         tfb1.goto_button.Click += new RoutedEventHandler(gotobutton);
 
                         break;
@@ -432,12 +433,36 @@ namespace Assembly69
 
         // list of changes to ammend to the memory when we phit the poke button
         public Dictionary<long, KeyValuePair<string, string>> pokelist = new Dictionary<long, KeyValuePair<string, string>>();
-        
+
+        // to keep track of the UI elements we're gonna use a dictionary, will probably be better
+        public Dictionary<long, Changesblock> UIpokelist = new Dictionary<long, Changesblock>();
+
         // type (TagrefGroup, TagrefTag)
         // address, 
         public void addpokechange(long offset, string type, string value)
         {
+            // hmm we need to change this so we either update or add a new UI element
+
             pokelist[offset] = new KeyValuePair<string, string>(type, value);
+            // there we go, now we aren't touching the pokelist code
+            if (UIpokelist.ContainsKey(offset))
+            {
+                Changesblock update_element = UIpokelist[offset];
+                update_element.address.Text = "0x" + offset.ToString("X");
+                update_element.type.Text = type;
+                update_element.value.Text = value;
+            }
+            else
+            {
+                Changesblock NEW_BLOCK = new Changesblock();
+                NEW_BLOCK.address.Text = "0x" + offset.ToString("X");
+                NEW_BLOCK.type.Text = type;
+                NEW_BLOCK.value.Text = value;
+
+                changes_panel.Children.Add(NEW_BLOCK);
+                UIpokelist.Add(offset, NEW_BLOCK);
+            }
+
 
             change_text.Text = pokelist.Count + " changes queued";
         }
@@ -466,7 +491,9 @@ namespace Assembly69
         public void gotobutton(object sender, RoutedEventArgs e)
         {
             Button b = sender as Button;
-            inhale_tag(int.Parse(b.Tag.ToString()));
+            int w = int.Parse(b.Tag.ToString());
+            if (w != -1)
+                inhale_tag(w);
         }
 
         private void tagrefbutton(object sender, RoutedEventArgs e)
@@ -551,6 +578,19 @@ namespace Assembly69
             return "Tag not present(" + datnum + ")";
         }
 
+        public int get_tagindex_by_datnum(string datnum)
+        {
+            //tag_struct t in Tags_List
+            for (int i = 0; i < Tags_List.Count; i++)
+            {
+                tag_struct t = Tags_List[i];
+                if (t.Datnum == datnum)
+                    return i;
+            }
+
+            return -1;
+        }
+
         // search filter
         private void Searchbox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -632,6 +672,14 @@ namespace Assembly69
 
             poke_text.Text = pokelist.Count + " changes poked";
 
+            changes_panel.Children.Clear();
+            pokelist.Clear();
+            change_text.Text = pokelist.Count + " changes queued";
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            changes_panel.Children.Clear();
             pokelist.Clear();
             change_text.Text = pokelist.Count + " changes queued";
         }
