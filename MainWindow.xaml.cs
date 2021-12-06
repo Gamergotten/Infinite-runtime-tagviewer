@@ -674,6 +674,7 @@ namespace Assembly69
 
             changes_panel.Children.Clear();
             pokelist.Clear();
+            UIpokelist.Clear();
             change_text.Text = pokelist.Count + " changes queued";
         }
 
@@ -681,6 +682,7 @@ namespace Assembly69
         {
             changes_panel.Children.Clear();
             pokelist.Clear();
+            UIpokelist.Clear();
             change_text.Text = pokelist.Count + " changes queued";
         }
 
