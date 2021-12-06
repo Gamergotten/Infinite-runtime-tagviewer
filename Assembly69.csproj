@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="object classes\**" />
+    <EmbeddedResource Remove="object classes\**" />
+    <None Remove="object classes\**" />
+    <Page Remove="object classes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Memory.dll.x64" Version="1.2.21" />
     <PackageReference Include="System.Security.Principal.Windows" Version="5.0.0" />
   </ItemGroup>
@@ -16,7 +23,6 @@
   <ItemGroup>
     <Folder Include="files\" />
     <Folder Include="Interface\Windows\" />
-    <Folder Include="object classes\" />
   </ItemGroup>
 
   <ItemGroup>
