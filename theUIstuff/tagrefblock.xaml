@@ -10,11 +10,13 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80*" MinWidth="80"/>
             <ColumnDefinition Width="250*" MinWidth="250"/>
+            <ColumnDefinition Width="50"/>
         </Grid.ColumnDefinitions>
         <ComboBox x:Name="taggroup" SelectedIndex="0" >
             <ComboBoxItem Content="Null" IsSelected="True"/>
         </ComboBox>
         <Button x:Name="tag_button" Grid.Column="1" Content="tag\wahtever\test\amongus\sussy"/>
+        <Button x:Name="goto_button" Grid.Column="2" Content="goto" />
 
 
     </Grid>

@@ -286,7 +286,18 @@ namespace Assembly69
                 Dictionary<long, vehi.c> strings = vehi.WeaponTag;
                 do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
+            else if (loading_tag.Tag_group == "proj")
+            {
 
+                Dictionary<long, vehi.c> strings = vehi.projectileTag;
+                do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
+            }
+            else if (loading_tag.Tag_group == "hlmt")
+            {
+
+                Dictionary<long, vehi.c> strings = vehi.HLMTTag;
+                do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
+            }
 
         }
 
@@ -326,7 +337,8 @@ namespace Assembly69
 
                         // read tagID rather than datnum // or rather, convert datnum to ID
                         string test = BitConverter.ToString(m.ReadBytes((address + entry.Key + 24).ToString("X"), 4)).Replace("-", string.Empty);
-                        string test_nameID = convert_ID_to_tag_name(get_tagid_by_datnum(test));
+                        string ID = get_tagid_by_datnum(test);
+                        string test_nameID = convert_ID_to_tag_name(ID);
 
                         tfb1.tag_button.Content = test_nameID;
                         parentpanel.Children.Add(tfb1);
@@ -336,6 +348,10 @@ namespace Assembly69
 
                         tfb1.tag_button.Tag = (address + entry.Key + 24) + ":" + test_group;
                         tfb1.tag_button.Click += new RoutedEventHandler(tagrefbutton);
+
+                        tfb1.goto_button.Tag = ID;
+                        tfb1.goto_button.Click += new RoutedEventHandler(gotobutton);
+
                         break;
                     case "Pointer":
                         valueBlock vb3 = new valueBlock { HorizontalAlignment = HorizontalAlignment.Left };
@@ -346,11 +362,12 @@ namespace Assembly69
                         vb3.value.Tag = address + entry.Key + ":Pointer";
                         vb3.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
-                    case "Tagblock":
+                    case "Tagblock": // need to find some kinda "whoops that tag isnt actually loaded"; keep erroring with the hlmt tag
                         tagblock tb1 = new tagblock { HorizontalAlignment = HorizontalAlignment.Left };
                         long new_address = m.ReadLong((address + entry.Key).ToString("X"));
                         tb1.tagblock_address.Text = "0x" + new_address.ToString("X");
-                        tb1.tagblock_title.Text = m.ReadString((address + entry.Key + 8).ToString("X") + ",0,0");
+                        if (new_address != 0x100000000)
+                            tb1.tagblock_title.Text = m.ReadString((address + entry.Key + 8).ToString("X") + ",0,0");
                         string children_count = m.ReadInt((address + entry.Key + 16).ToString("X")).ToString();
                         tb1.tagblock_count.Text = children_count;
                         parentpanel.Children.Add(tb1);
@@ -411,6 +428,8 @@ namespace Assembly69
         }
 
 
+
+
         // list of changes to ammend to the memory when we phit the poke button
         public Dictionary<long, KeyValuePair<string, string>> pokelist = new Dictionary<long, KeyValuePair<string, string>>();
         
@@ -444,6 +463,11 @@ namespace Assembly69
             // THAT WAS PROBABLY THE MOST DODGY THING IVE EVER DONE WTFFFF
         }
 
+        public void gotobutton(object sender, RoutedEventArgs e)
+        {
+            Button b = sender as Button;
+            inhale_tag(int.Parse(b.Tag.ToString()));
+        }
 
         private void tagrefbutton(object sender, RoutedEventArgs e)
         {
@@ -501,8 +525,12 @@ namespace Assembly69
 
             string[] s = b.Tag.ToString().Split(":");
             addpokechange(long.Parse(s[0]), "TagrefTag", s[1]);
-
-            the_last_tagref_button_we_pressed.Content = convert_ID_to_tag_name(get_tagid_by_datnum(s[1]));
+            string ID = get_tagid_by_datnum(s[1]);
+            the_last_tagref_button_we_pressed.Content = convert_ID_to_tag_name(ID);
+            // need to do this the lazy way again, have to head off in a sec
+            Grid td = the_last_tagref_button_we_pressed.Parent as Grid;
+            Button X = td.Children[2] as Button;
+            X.Tag = ID;
 
             if (trd != null)
             {

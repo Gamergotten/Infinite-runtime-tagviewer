@@ -547,6 +547,250 @@ namespace Assembly69.object_classes
             { 0x113C, new c{ T="Tagblock"}}
 
         };
+        public static Dictionary<long, c> HLMTTag = new Dictionary<long, c>
+        {
+            { 0x10, new c{ T="TagRef"}}, // mode
+            { 0x2C, new c{ T="TagRef"}}, // COLL
+            { 0x48, new c{ T="TagRef"}}, // JMAD
+            { 0x64, new c{ T="TagRef"}}, // PHMO
 
+            { 0xAC, new c{ T="Tagblock"}},
+            { 0xF4, new c{ T="Tagblock", B=new Dictionary<long, c> // object variant
+            {
+                { 0x34, new c{ T="Tagblock"}},
+                { 0x48, new c{ T="Tagblock", B=new Dictionary<long, c> // object block
+                {
+                    { 12, new c{ T="TagRef"}}, // 
+                    { 40, new c{ T="TagRef"}}, // 
+                }, S=72}},
+                { 0x5C, new c{ T="Tagblock"}},
+                { 0x70, new c{ T="Tagblock"}},
+                { 0x104, new c{ T="TagRef"}},
+                { 0x120, new c{ T="TagRef"}},
+                { 0x13C, new c{ T="TagRef"}},
+                { 0x158, new c{ T="TagRef"}},
+                { 0x174, new c{ T="Tagblock"}},
+
+                //{ 0x1BC, new c{ T="Tagblock"}},
+                //{ 0x1D0, new c{ T="Tagblock"}},
+                //{ 0x1E4, new c{ T="Tagblock"}},
+                //{ 0x1F8, new c{ T="Tagblock"}},
+                //{ 0x28C, new c{ T="TagRef"}},
+                //{ 0x2A8, new c{ T="TagRef"}},
+                //{ 0x2C4, new c{ T="TagRef"}},
+                //{ 0x2E0, new c{ T="TagRef"}},
+                //{ 0x2FC, new c{ T="Tagblock"}},
+            }, S=392}}, // 784
+            { 0x108, new c{ T="Tagblock"}},
+            { 0x11C, new c{ T="Tagblock"}},
+            { 0x130, new c{ T="Tagblock"}},
+            { 0x150, new c{ T="TagRef"}},
+
+            { 0x16C, new c{ T="Tagblock"}},
+            { 0x180, new c{ T="Tagblock"}},
+            { 0x194, new c{ T="Tagblock"}},
+
+            { 0x1E8, new c{ T="TagRef"}},
+
+            { 0x204, new c{ T="Tagblock"}},
+            { 0x218, new c{ T="Tagblock"}},
+            { 0x22C, new c{ T="Tagblock"}},
+            { 0x240, new c{ T="Tagblock"}},
+            { 0x258, new c{ T="Tagblock"}},
+            { 0x26C, new c{ T="Tagblock"}},
+
+            { 0x280, new c{ T="TagRef"}},
+            { 0x29C, new c{ T="TagRef"}},
+
+            { 0x2B8, new c{ T="Tagblock"}},
+            { 0x2CC, new c{ T="Tagblock"}},
+            { 0x2E0, new c{ T="Tagblock"}},
+        };
+
+        public static Dictionary<long, c> projectileTag = new Dictionary<long, c>
+        {
+            { 0, new c{ T="Pointer"}},
+            { 8, new c{ T="4Byte"}}, // datnum
+            { 12, new c{ T="4Byte"}}, // tagID
+
+            { 40, new c{ T="Float"}},
+            { 44, new c{ T="Float"}},
+            { 48, new c{ T="Float"}},
+            { 52, new c{ T="Float"}},
+            { 56, new c{ T="Float"}},
+            { 60, new c{ T="Float"}},
+            { 64, new c{ T="Float"}},
+            { 76, new c{ T="Float"}},
+            { 80, new c{ T="Float"}},
+            { 84, new c{ T="Float"}},
+
+            { 92, new c{ T="Tagblock"}}, // SidecarPathDefinition
+
+            { 112, new c{ T="Float"}},
+            { 116, new c{ T="Float"}},
+
+            { 120, new c{ T="TagRef"}}, // vehicle model
+            { 148, new c{ T="TagRef"}}, // aset tag ref
+            { 176, new c{ T="TagRef"}},
+            { 204, new c{ T="TagRef"}},
+
+            { 232, new c{ T="4Byte"}},
+
+            { 240, new c{ T="TagRef"}},
+
+            { 276, new c{ T="Float"}},
+
+            { 288, new c{ T="TagRef"}},
+            { 316, new c{ T="TagRef"}}, // foot tag ref
+            { 344, new c{ T="TagRef"}}, // vemd tag ref
+            { 372, new c{ T="TagRef"}}, // smed tag ref
+            { 400, new c{ T="TagRef"}},
+
+            { 432, new c{ T="Float"}},
+
+            { 448, new c{ T="Tagblock"}}, // object_ai_properties
+            { 468, new c{ T="Tagblock"}}, // s_object_function_definition
+            { 488, new c{ T="4Byte"}},
+            { 492, new c{ T="Tagblock"}}, // ObjectRuntimeInterpolatorFunctionsBlock
+            { 512, new c{ T="Tagblock"}}, // ObjectFunctionSwitchDefinition
+            { 532, new c{ T="Tagblock"}}, // i343::Objects::ObjectFunctionForwarding
+            { 552, new c{ T="4Byte"}},
+            { 556, new c{ T="Tagblock"}}, // i343::Objects::AmmoRefillVariant
+            { 576, new c{ T="4Byte"}},
+            { 0x248, new c{ T="Tagblock", B=new Dictionary<long, c> // object_attachment_definition
+            {
+                { 4, new c{ T="TagRef"}}, // effe
+                { 32, new c{ T="TagRef"}}, // effe
+                { 64, new c{ T="Tagblock"}},
+                { 84, new c{ T="TagRef"}}, // 
+                { 112, new c{ T="Tagblock"}}
+            }, S=148}},
+            { 604, new c{ T="Tagblock"}}, // object_indirect_lighting_settings_definition
+            { 624, new c{ T="Tagblock"}}, // s_water_physics_hull_surface_definition
+            { 644, new c{ T="Tagblock"}}, // s_jetwash_definition
+            { 664, new c{ T="Tagblock"}}, // object_definition_widget
+            { 684, new c{ T="Tagblock"}}, // object_change_color_definition
+            { 704, new c{ T="Tagblock"}}, // s_multiplayer_object_properties_definition
+            { 724, new c{ T="Tagblock"}}, // i343::Objects::ForgeObjectEntryDefinition
+
+            { 744, new c{ T="TagRef"}},
+            { 772, new c{ T="TagRef"}},
+
+            { 800, new c{ T="Tagblock"}}, // s_object_spawn_effects
+            { 820, new c{ T="Tagblock"}}, // ModelDissolveDataBlock
+
+            { 0x448, new c{ T="Tagblock"}},
+            { 0x45C, new c{ T="TagRef"}},
+            { 0x484, new c{ T="Tagblock"}},
+            { 0x4C8, new c{ T="Tagblock"}},
+            { 0x4E4, new c{ T="TagRef"}},
+            { 0x500, new c{ T="Tagblock"}},
+            { 0x514, new c{ T="TagRef"}},
+            { 0x530, new c{ T="Tagblock"}},
+            { 0x548, new c{ T="Tagblock"}},
+            { 0x55C, new c{ T="TagRef"}},
+
+            { 0x578, new c{ T="Tagblock"}},
+            { 0x58C, new c{ T="Tagblock"}},
+
+            { 0x5A0, new c{ T="Float"}},
+            { 0x5A4, new c{ T="Float"}},
+            { 0x5A8, new c{ T="Float"}},
+            { 0x5AC, new c{ T="Float"}},
+            { 0x5B0, new c{ T="Float"}},
+            { 0x5B4, new c{ T="Float"}},
+            { 0x5B8, new c{ T="Float"}},
+            { 0x5BC, new c{ T="Float"}},
+            { 0x5C0, new c{ T="Float"}},
+            { 0x5E0, new c{ T="Float"}},
+
+            { 0x5E8, new c{ T="Tagblock"}},
+            { 0x60C, new c{ T="Tagblock"}},
+            { 0x620, new c{ T="Tagblock"}},
+            { 0x638, new c{ T="Tagblock"}},
+            { 0x64C, new c{ T="Float"}},
+            { 0x650, new c{ T="Tagblock"}},
+            { 0x664, new c{ T="Tagblock"}},
+            { 0x678, new c{ T="Tagblock"}},
+            { 0x688, new c{ T="Tagblock"}},
+            { 0x6A0, new c{ T="Tagblock"}},
+
+            { 0x6B8, new c{ T="TagRef"}}, //PROJ
+
+            { 0x6D4, new c{ T="Float"}},
+            { 0x6F8, new c{ T="Float"}},
+            { 0x704, new c{ T="Float"}},
+            { 0x708, new c{ T="Float"}},
+            { 0x710, new c{ T="Float"}},
+            { 0x720, new c{ T="Float"}},
+            { 0x72C, new c{ T="Float"}},
+
+            { 0x738, new c{ T="TagRef"}}, // EFFE
+            { 0x754, new c{ T="TagRef"}}, // EEFFE
+            { 0x770, new c{ T="TagRef"}},
+            { 0x78C, new c{ T="TagRef"}}, // JPT
+            { 0x7A8, new c{ T="TagRef"}}, // JPT
+            { 0x7C4, new c{ T="TagRef"}},
+            { 0x7E0, new c{ T="TagRef"}},
+            { 0x800, new c{ T="TagRef"}},
+            { 0x81C, new c{ T="TagRef"}},
+
+            { 0x83C, new c{ T="Tagblock"}},
+
+            { 0x850, new c{ T="TagRef"}},
+            { 0x86C, new c{ T="TagRef"}},
+            { 0x888, new c{ T="TagRef"}}, // SND
+            { 0x8A4, new c{ T="TagRef"}},
+            { 0x8C0, new c{ T="TagRef"}}, // SND
+            { 0x8DC, new c{ T="TagRef"}},
+
+            { 0x8FC, new c{ T="Float"}},
+
+            { 0x908, new c{ T="TagRef"}},
+            { 0x924, new c{ T="TagRef"}},
+            { 0x944, new c{ T="TagRef"}},
+            { 0x984, new c{ T="TagRef"}},
+            { 0x9A0, new c{ T="TagRef"}}, // JPT
+            { 0x9BC, new c{ T="TagRef"}}, // JPT
+
+            { 0x9DC, new c{ T="Tagblock"}},
+
+            { 0x9F0, new c{ T="Float"}},
+
+            { 0x9F4, new c{ T="TagRef"}}, //JPT
+            { 0xA10, new c{ T="TagRef"}}, // JPT
+
+            { 0xA2C, new c{ T="Float"}},
+            { 0xA34, new c{ T="Float"}},
+            { 0xA38, new c{ T="Float"}},
+            { 0xA40, new c{ T="Float"}},
+            { 0xA44, new c{ T="Float"}},
+            { 0xA80, new c{ T="Float"}},
+
+            { 0xAA0, new c{ T="TagRef"}},
+
+            { 0xABC, new c{ T="Tagblock"}},
+            { 0xAD0, new c{ T="Tagblock"}},
+            { 0xAE4, new c{ T="Tagblock"}},
+            { 0xAF8, new c{ T="Tagblock"}},
+            { 0xB0C, new c{ T="Tagblock"}},
+
+            { 0xB20, new c{ T="TagRef"}},
+
+            { 0xB3C, new c{ T="Float"}},
+            { 0xB40, new c{ T="Float"}},
+            { 0xB44, new c{ T="Float"}},
+
+            { 0xB48, new c{ T="Tagblock"}},
+            { 0xB60, new c{ T="Tagblock"}},
+
+            { 0xB8C, new c{ T="Float"}},
+            { 0xB90, new c{ T="Float"}},
+
+            { 0xBA0, new c{ T="TagRef"}}, // JPT
+            { 0xBBC, new c{ T="TagRef"}},
+            { 0xBDC, new c{ T="TagRef"}}, // EFFE
+            { 0xBF5, new c{ T="TagRef"}}, // EFFE
+        };
     }
 }
