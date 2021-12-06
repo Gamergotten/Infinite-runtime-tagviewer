@@ -12,14 +12,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Assembly69.theUIstuff
-{
+namespace Assembly69.Interface.Controls {
     /// <summary>
     /// Interaction logic for tagref_dropdown.xaml
     /// </summary>
-    public partial class tagref_dropdown : Window
+    public partial class TagRefDropdown : Window
     {
-        public tagref_dropdown()
+        public TagRefDropdown()
         {
             InitializeComponent();
         }

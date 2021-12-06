@@ -12,16 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Assembly69.object_classes;
 
-namespace Assembly69.theUIstuff
-{
+using Assembly69.Halo.TagObjects;
+
+namespace Assembly69.Interface.Controls {
     /// <summary>
     /// Interaction logic for tagblock.xaml
     /// </summary>
-    public partial class tagblock : UserControl
+    public partial class TagBlock : UserControl
     {
-        public tagblock()
+        public TagBlock()
         {
             InitializeComponent();
         }

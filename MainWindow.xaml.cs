@@ -14,12 +14,11 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Memory;
 using System.IO;
-using Assembly69.object_classes;
-using Assembly69.theUIstuff;
 using System.Text.RegularExpressions;
+using Assembly69.Halo.TagObjects;
+using Assembly69.Interface.Controls;
 
-namespace Assembly69
-{
+namespace Assembly69 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -27,8 +26,8 @@ namespace Assembly69
     {
         Mem m = new Mem();
 
-        public tagref_dropdown trd; // this is our dropdown box for selecting tag references
-        public Button the_last_tagref_button_we_pressed; // since we did it for the window why not also do it for the button
+        public TagRefDropdown? trd = null; // this is our dropdown box for selecting tag references
+        public Button? the_last_tagref_button_we_pressed = null; // since we did it for the window why not also do it for the button
 
         public MainWindow()
         {
@@ -38,11 +37,10 @@ namespace Assembly69
         }
 
         public long base_address = -1;
-
         public int tag_count = -1;
 
-        // hook to halo infinite
-        private void Button_Click(object sender, RoutedEventArgs e)
+        // Hook to halo infinite
+        private void BtnHook_Click(object sender, RoutedEventArgs e)
         {
             m.OpenProcess("HaloInfinite.exe");
             base_address = m.ReadLong("HaloInfinite.exe+0x3E82120");
@@ -92,15 +90,12 @@ namespace Assembly69
 
 
         // load tags from Mem
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            if (tag_count != -1)
-            {
+        private void BtnLoadTags_Click(object sender, RoutedEventArgs e) {
+            if (tag_count != -1) {
                 tag_count = -1;
                 Tag_groups.Clear();
                 Tags_List.Clear();
             }
-            
 
 
             TagsTree.Items.Clear();
@@ -138,8 +133,6 @@ namespace Assembly69
                 current_tag.Tag_data = m.ReadLong((tag_address+0x10).ToString("X"));
 
                 // do the tag definitition
-
-
                 Tags_List.Add(current_tag);
             }
             Loadtags();
@@ -165,15 +158,10 @@ namespace Assembly69
                     current_group.tag_extra_name = m.ReadString((test_address).ToString("X"));
 
                 // Doing the UI here so we dont have to literally reconstruct the elements elsewhere
-
                 //TreeViewItem sortheader = new TreeViewItem();
-
                 //sortheader.Header = ReverseString(current_group.tag_group_name.Substring(0, 4)) + " (" + current_group.tag_group_desc + ")";
-
                 //sortheader.ToolTip = current_group.tag_group_definitition;
-
                 //TagsTree.Items.Add(sortheader);
-
                 //current_group.tag_category = sortheader;
 
                 Tag_groups.Add(key, current_group);
@@ -309,7 +297,7 @@ namespace Assembly69
                 switch (entry.Value.T)
                 {
                     case "4Byte":
-                        valueBlock vb1 = new valueBlock { HorizontalAlignment = HorizontalAlignment.Left };
+                        TagValueBlock vb1 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         vb1.value_type.Text = "4 Byte";
                         vb1.value.Text = m.ReadInt(( + entry.Key).ToString("X")).ToString();
                         parentpanel.Children.Add(vb1);
@@ -318,7 +306,7 @@ namespace Assembly69
                         vb1.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
                     case "Float":
-                        valueBlock vb2 = new valueBlock { HorizontalAlignment = HorizontalAlignment.Left };
+                        TagValueBlock vb2 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         vb2.value_type.Text = "Float";
                         vb2.value.Text = m.ReadFloat((address + entry.Key).ToString("X")).ToString();
                         parentpanel.Children.Add(vb2);
@@ -327,7 +315,7 @@ namespace Assembly69
                         vb2.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
                     case "TagRef":
-                        tagrefblock tfb1 = new tagrefblock { HorizontalAlignment = HorizontalAlignment.Left };
+                        TagRefBlock tfb1 = new TagRefBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         foreach (string s in Tag_groups.Keys)
                         {
                             tfb1.taggroup.Items.Add(s);
@@ -355,7 +343,7 @@ namespace Assembly69
 
                         break;
                     case "Pointer":
-                        valueBlock vb3 = new valueBlock { HorizontalAlignment = HorizontalAlignment.Left };
+                        TagValueBlock vb3 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         vb3.value_type.Text = "Pointer";
                         vb3.value.Text = m.ReadLong((address + entry.Key).ToString("X")).ToString("X");
                         parentpanel.Children.Add(vb3);
@@ -364,7 +352,7 @@ namespace Assembly69
                         vb3.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
                     case "Tagblock": // need to find some kinda "whoops that tag isnt actually loaded"; keep erroring with the hlmt tag
-                        tagblock tb1 = new tagblock { HorizontalAlignment = HorizontalAlignment.Left };
+                        TagBlock tb1 = new TagBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         long new_address = m.ReadLong((address + entry.Key).ToString("X"));
                         tb1.tagblock_address.Text = "0x" + new_address.ToString("X");
                         if (new_address != 0x100000000)
@@ -403,7 +391,7 @@ namespace Assembly69
                         //recall_blockloop(entry, new_address, tb1.dockpanel);
                         break;
                     case "String":
-                        valueBlock vb4 = new valueBlock { HorizontalAlignment = HorizontalAlignment.Left };
+                        TagValueBlock vb4 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         vb4.value_type.Text = "String";
                         vb4.value.Text = m.ReadString((address + entry.Key).ToString("X")).ToString();
                         parentpanel.Children.Add(vb4);
@@ -435,7 +423,7 @@ namespace Assembly69
         public Dictionary<long, KeyValuePair<string, string>> pokelist = new Dictionary<long, KeyValuePair<string, string>>();
 
         // to keep track of the UI elements we're gonna use a dictionary, will probably be better
-        public Dictionary<long, Changesblock> UIpokelist = new Dictionary<long, Changesblock>();
+        public Dictionary<long, TagChangesBlock> UIpokelist = new Dictionary<long, TagChangesBlock>();
 
         // type (TagrefGroup, TagrefTag)
         // address, 
@@ -447,14 +435,14 @@ namespace Assembly69
             // there we go, now we aren't touching the pokelist code
             if (UIpokelist.ContainsKey(offset))
             {
-                Changesblock update_element = UIpokelist[offset];
+                TagChangesBlock update_element = UIpokelist[offset];
                 update_element.address.Text = "0x" + offset.ToString("X");
                 update_element.type.Text = type;
                 update_element.value.Text = value;
             }
             else
             {
-                Changesblock NEW_BLOCK = new Changesblock();
+                TagChangesBlock NEW_BLOCK = new TagChangesBlock();
                 NEW_BLOCK.address.Text = "0x" + offset.ToString("X");
                 NEW_BLOCK.type.Text = type;
                 NEW_BLOCK.value.Text = value;
@@ -504,7 +492,7 @@ namespace Assembly69
 
             if (s.Length > 1)
             {
-                trd = new tagref_dropdown();
+                trd = new TagRefDropdown();
 
                 var myButtonLocation = b.PointToScreen(new Point(0, 0));
 

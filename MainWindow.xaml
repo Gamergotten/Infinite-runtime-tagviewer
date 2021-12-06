@@ -1,4 +1,4 @@
-﻿<Window xmlns:theUIstuff="clr-namespace:Assembly69.theUIstuff"  x:Class="Assembly69.MainWindow"
+﻿<Window xmlns:theUIstuff="clr-namespace:Assembly69"  x:Class="Assembly69.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,21 +6,27 @@
         xmlns:local="clr-namespace:Assembly69"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="DarkCyan">
+    <Window.Resources>
+        <ScaleTransform 
+            x:Key="windowScaleTransform" 
+            ScaleX="1" 
+            ScaleY="1" />
+    </Window.Resources>
+    <Grid  LayoutTransform="{StaticResource windowScaleTransform}" >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="8"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="20"/>
-            <RowDefinition/>
-            <RowDefinition Height="40"/>
-        </Grid.RowDefinitions>
-
-        <Grid Grid.Row="0" Grid.RowSpan="4" Grid.Column="1" Background="White" Margin="0,1,0,0" >
-
+        <GridSplitter Grid.Column="1" 
+              HorizontalAlignment="Stretch" 
+              VerticalAlignment="Stretch"
+              Background="#ccc" 
+              ShowsPreview="true" />
+        
+        <!-- Tags Grid -->
+        <Grid Grid.Row="0" Grid.RowSpan="4" Grid.Column="2" Background="White" Margin="0,1,5,0" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="10"/>
                 <ColumnDefinition />
@@ -39,23 +45,16 @@
             <TextBox x:Name="tagdata_text"  Text="Data Address: " Grid.Row="1" Grid.Column="1" />
             <TextBox x:Name="tagdatnum_text"  Text="Datnum: 00000000" Grid.Column="2" Grid.Row="1"/>
 
-
-
             <ScrollViewer BorderBrush="Black" BorderThickness="1" Grid.Row="2" Grid.RowSpan="1" Grid.ColumnSpan="3">
-                <StackPanel x:Name="tagview_panels"  Margin="0,0,0,0">
-
-                </StackPanel>
+                <StackPanel x:Name="tagview_panels"  Margin="0,0,0,0" /> 
             </ScrollViewer>
-
 
             <GridSplitter Grid.ColumnSpan="3" 
               Grid.Row="2" 
               HorizontalAlignment="Stretch" 
               VerticalAlignment="Bottom"
-              Background="DarkCyan" 
+              Background="#ccc" 
               ShowsPreview="true" Height="2"/>
-            
-            
 
             <Grid Grid.Row="3" Grid.ColumnSpan="3">
                 <Grid.ColumnDefinitions>
@@ -77,69 +76,55 @@
                 <TextBlock x:Name="change_text" Grid.Column="2" HorizontalAlignment="Right" Text="0 changes queued" VerticalAlignment="Center" Margin="0,0,5,0"/>
                 <Button Grid.Column="3" Content="Clear" HorizontalAlignment="Stretch" Click="Button_Click_3"   />
 
-                <StackPanel x:Name="changes_panel" Grid.Row="1" Grid.ColumnSpan="5" Margin="0,10,0,0">
-                    
-                </StackPanel>
+                <StackPanel x:Name="changes_panel" Grid.Row="1" Grid.ColumnSpan="5" Margin="0,10,0,0" />
+
 
             </Grid>
-
-
         </Grid>
+        <!-- > Tags Grid -->
 
-
-        <GridSplitter Grid.Column="1" 
-              Grid.RowSpan="4" 
-              HorizontalAlignment="Left" 
-              VerticalAlignment="Stretch"
-              Background="DarkCyan" 
-              ShowsPreview="true"
-              Width="2"/>
-
-
-        <Grid Grid.RowSpan="2" Background="White" Margin="0,1,0,2">
-
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="10"/>
+                <RowDefinition Height="20"/>
                 <RowDefinition/>
+                <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Search" Grid.Row="1" Margin="10,0,0,0" />
-            <TextBox x:Name="Searchbox" Grid.Row="1" TextChanged="Searchbox_TextChanged" HorizontalAlignment="Stretch" Margin="53,0,30,0"/>
+            <!-- > Search Box -->
+            <Grid Grid.RowSpan="2" Background="White" Margin="0,1,0,2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Search" Grid.Row="1" Margin="10,0,0,0" />
+                <TextBox x:Name="Searchbox" Grid.Row="1" TextChanged="Searchbox_TextChanged" HorizontalAlignment="Stretch" Margin="53,0,30,0"/>
+            </Grid>
+            <!-- < Search Box -->
+
+            <TreeView x:Name="TagsTree" Grid.Row="2" >
+                <TreeViewItem Header="Hook and load to get started!" />
+            </TreeView>
+            <!-- < #TagsTree -->
+
+            <Grid Grid.Row="3" Grid.ColumnSpan="1" Margin="0,5,0,5" Background="White" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Content="Hook" Grid.Column="1" Click="BtnHook_Click"/>
+                <TextBlock x:Name="hook_text" Text="Not hooked" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" />
+
+                <Button Content="Load" Grid.Column="3" Click="BtnLoadTags_Click"/>
+            </Grid>
 
         </Grid>
-
-        <TreeView x:Name="TagsTree" Grid.Row="2" >
-            <TreeViewItem Header="Hook and load to get started!"/>
-            <!--TreeViewItem Header="test">
-                <TreeViewItem Header="test5" Tag="testing123" Selected="Select_Tag_click"/>
-                <TreeViewItem Header="test6"/>
-                <TreeViewItem Header="test7"/>
-                <TreeViewItem Header="test8"/>
-                
-            </TreeViewItem-->
-
-
-        </TreeView>
-
-        <Grid Grid.Row="3" Grid.ColumnSpan="1" Margin="0,1,0,0" Background="White">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="10"/>
-                <ColumnDefinition Width="60"/>
-                <ColumnDefinition />
-                <ColumnDefinition Width="60"/>
-            </Grid.ColumnDefinitions>
-
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition Height="15"/>
-            </Grid.RowDefinitions>
-
-            <Button Content="Hook" Grid.Column="1" Click="Button_Click"/>
-            <TextBlock x:Name="hook_text" Text="Not hooked" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" />
-
-            <Button Content="Load" Grid.Column="3" Click="Button_Click_1"/>
-        </Grid>
-
+        
+        
 
     </Grid>
 </Window>
