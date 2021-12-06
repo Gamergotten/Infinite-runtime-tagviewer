@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Assembly69.object_classes;
 
 namespace Assembly69.theUIstuff
 {
@@ -23,6 +24,15 @@ namespace Assembly69.theUIstuff
         public tagblock()
         {
             InitializeComponent();
+        }
+
+        public KeyValuePair<long, vehi.c> children;
+        public long block_address;
+        public MainWindow mainWindow;
+
+        private void indexbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            mainWindow.recall_blockloop(children, block_address + (indexbox.SelectedIndex * children.Value.S), dockpanel);
         }
     }
 }

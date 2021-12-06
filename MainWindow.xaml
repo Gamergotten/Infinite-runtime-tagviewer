@@ -77,6 +77,7 @@
         </Grid>
 
         <TreeView x:Name="TagsTree" Grid.Row="2" >
+            <TreeViewItem Header="Hook and load to get started!"/>
             <!--TreeViewItem Header="test">
                 <TreeViewItem Header="test5" Tag="testing123" Selected="Select_Tag_click"/>
                 <TreeViewItem Header="test6"/>

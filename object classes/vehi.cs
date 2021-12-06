@@ -6,470 +6,545 @@ using System.Threading.Tasks;
 
 namespace Assembly69.object_classes
 {
-    static class vehi
+    public class vehi
     {
-        public static Dictionary<long, string> VehicleTag = new Dictionary<long, string>
+        public struct c
         {
-            { 0, "Pointer" },
-            { 8, "4Byte" }, // datnum
-            { 12, "4Byte" }, // tagID
+            public string T { get; set; }
+            public Dictionary<long, c> B { get; set; }
 
-            { 40, "Float" },
-            { 44, "Float" },
-            { 48, "Float" },
-            { 52, "Float" },
-            { 56, "Float" },
-            { 60, "Float" },
-            { 64, "Float" },
-            { 76, "Float" },
-            { 80, "Float" },
-            { 84, "Float" },
+            public long S { get; set; } // length of tagblock
+        }
 
-            { 92, "Tagblock" }, // SidecarPathDefinition
+        public static Dictionary<long, c> VehicleTag = new Dictionary<long, c>
+        {
+            { 0, new c{ T="Pointer"}},
+            { 8, new c{ T="4Byte"}}, // datnum
+            { 12, new c{ T="4Byte"}}, // tagID
 
-            { 112, "Float" },
-            { 116, "Float" },
+            { 40, new c{ T="Float"}},
+            { 44, new c{ T="Float"}},
+            { 48, new c{ T="Float"}},
+            { 52, new c{ T="Float"}},
+            { 56, new c{ T="Float"}},
+            { 60, new c{ T="Float"}},
+            { 64, new c{ T="Float"}},
+            { 76, new c{ T="Float"}},
+            { 80, new c{ T="Float"}},
+            { 84, new c{ T="Float"}},
 
-            { 120, "TagRef" }, // vehicle model
-            { 148, "TagRef" }, // aset tag ref
-            { 176, "TagRef" }, 
-            { 204, "TagRef" },
+            { 92, new c{ T="Tagblock"}}, // SidecarPathDefinition
 
-            { 232, "4Byte" },
+            { 112, new c{ T="Float"}},
+            { 116, new c{ T="Float"}},
 
-            { 240, "TagRef" },
+            { 120, new c{ T="TagRef"}}, // vehicle model
+            { 148, new c{ T="TagRef"}}, // aset tag ref
+            { 176, new c{ T="TagRef"}},
+            { 204, new c{ T="TagRef"}},
 
-            { 276, "Float" },
+            { 232, new c{ T="4Byte"}},
 
-            { 288, "TagRef" },
-            { 316, "TagRef" }, // foot tag ref
-            { 344, "TagRef" }, // vemd tag ref
-            { 372, "TagRef" }, // smed tag ref
-            { 400, "TagRef" },
+            { 240, new c{ T="TagRef"}},
 
-            { 432, "Float" },
+            { 276, new c{ T="Float"}},
 
-            { 448, "Tagblock" }, // object_ai_properties
-            { 468, "Tagblock" }, // s_object_function_definition
-            { 488, "4Byte" },
-            { 492, "Tagblock" }, // ObjectRuntimeInterpolatorFunctionsBlock
-            { 512, "Tagblock" }, // ObjectFunctionSwitchDefinition
-            { 532, "Tagblock" }, // i343::Objects::ObjectFunctionForwarding
-            { 552, "4Byte" },
-            { 556, "Tagblock" }, // i343::Objects::AmmoRefillVariant
-            { 576, "4Byte" },
-            { 584, "Tagblock" }, // object_attachment_definition
-            { 604, "Tagblock" }, // object_indirect_lighting_settings_definition
-            { 624, "Tagblock" }, // s_water_physics_hull_surface_definition
-            { 644, "Tagblock" }, // s_jetwash_definition
-            { 664, "Tagblock" }, // object_definition_widget
-            { 684, "Tagblock" }, // object_change_color_definition
-            { 704, "Tagblock" }, // s_multiplayer_object_properties_definition
-            { 724, "Tagblock" }, // i343::Objects::ForgeObjectEntryDefinition
+            { 288, new c{ T="TagRef"}},
+            { 316, new c{ T="TagRef"}}, // foot tag ref
+            { 344, new c{ T="TagRef"}}, // vemd tag ref
+            { 372, new c{ T="TagRef"}}, // smed tag ref
+            { 400, new c{ T="TagRef"}},
 
-            { 744, "TagRef" },
-            { 772, "TagRef" },
+            { 432, new c{ T="Float"}},
 
-            { 800, "Tagblock" }, // s_object_spawn_effects
-            { 820, "Tagblock" }, // ModelDissolveDataBlock
+            { 448, new c{ T="Tagblock"}}, // object_ai_properties
+            { 468, new c{ T="Tagblock"}}, // s_object_function_definition
+            { 488, new c{ T="4Byte"}},
+            { 492, new c{ T="Tagblock"}}, // ObjectRuntimeInterpolatorFunctionsBlock
+            { 512, new c{ T="Tagblock"}}, // ObjectFunctionSwitchDefinition
+            { 532, new c{ T="Tagblock"}}, // i343::Objects::ObjectFunctionForwarding
+            { 552, new c{ T="4Byte"}},
+            { 556, new c{ T="Tagblock"}}, // i343::Objects::AmmoRefillVariant
+            { 576, new c{ T="4Byte"}},
+            { 0x248, new c{ T="Tagblock", B=new Dictionary<long, c> // object_attachment_definition
+            {
+                { 4, new c{ T="TagRef"}}, // effe
+                { 32, new c{ T="TagRef"}}, // effe
+                { 64, new c{ T="Tagblock"}},
+                { 84, new c{ T="TagRef"}}, // 
+                { 112, new c{ T="Tagblock"}}
+            }, S=148}}, 
+            { 604, new c{ T="Tagblock"}}, // object_indirect_lighting_settings_definition
+            { 624, new c{ T="Tagblock"}}, // s_water_physics_hull_surface_definition
+            { 644, new c{ T="Tagblock"}}, // s_jetwash_definition
+            { 664, new c{ T="Tagblock"}}, // object_definition_widget
+            { 684, new c{ T="Tagblock"}}, // object_change_color_definition
+            { 704, new c{ T="Tagblock"}}, // s_multiplayer_object_properties_definition
+            { 724, new c{ T="Tagblock"}}, // i343::Objects::ForgeObjectEntryDefinition
 
-            { 840, "String" }, // (vehicle_partial_emp)
+            { 744, new c{ T="TagRef"}},
+            { 772, new c{ T="TagRef"}},
 
-            { 0x448, "Tagblock" }, // HsReferencesBlock
-            { 0x45C, "TagRef" },
+            { 800, new c{ T="Tagblock"}}, // s_object_spawn_effects
+            { 820, new c{ T="Tagblock"}}, // ModelDissolveDataBlock
 
-            { 0x480, "Float" },
+            { 840, new c{ T="String"}}, // (vehicle_partial_emp)
 
-            { 0x484, "Tagblock" }, // metalabel somethiong ?? recheck this one
-            { 0x498, "Tagblock" }, // SoundRTPCBlockDefinition
-            { 0x4AC, "Tagblock" }, // SoundSweetenerBlockDefinition
+            { 0x448, new c{ T="Tagblock"}}, // HsReferencesBlock
+            { 0x45C, new c{ T="TagRef"}},
 
-            { 0x4C0, "Pointer" },
+            { 0x480, new c{ T="Float"}},
 
-            { 0x4C8, "Tagblock" }, // i343::Objects::ComputeFunctionSmoothingBlockDefinition
+            { 0x484, new c{ T="Tagblock"}}, // metalabel somethiong ?? recheck this one
+            { 0x498, new c{ T="Tagblock"}}, // SoundRTPCBlockDefinition
+            { 0x4AC, new c{ T="Tagblock"}}, // SoundSweetenerBlockDefinition
 
-            { 0x4DC, "Float" },
-            { 0x4E0, "Float" },
+            { 0x4C0, new c{ T="Pointer"}},
 
-            { 0x4E4, "TagRef" },
-            { 0x500, "Tagblock" }, // i343::SpartanTracking::ObjectDefinition
+            { 0x4C8, new c{ T="Tagblock"}}, // i343::Objects::ComputeFunctionSmoothingBlockDefinition
 
-            { 0x514, "TagRef" },
-            { 0x530, "Tagblock" }, // InteractionOpportunityDefinition
+            { 0x4DC, new c{ T="Float"}},
+            { 0x4E0, new c{ T="Float"}},
 
-            { 0x544, "Float" },
-            { 0x548, "Tagblock" }, // ScriptedSequenceActionDefinition
-            { 0x55C, "TagRef" },
-            { 0x578, "Tagblock" }, // AnimChannelEntry
-            { 0x58C, "Tagblock" }, // AnimSetTableEntry
+            { 0x4E4, new c{ T="TagRef"}},
+            { 0x500, new c{ T="Tagblock"}}, // i343::SpartanTracking::ObjectDefinition
 
-            { 0x5A0, "Float" },
-            { 0x5A4, "Float" },
-            { 0x5A8, "Float" },
-            { 0x5AC, "Float" },
-            { 0x5B0, "Float" },
-            { 0x5B4, "Float" },
-            { 0x5B8, "Float" },
-            { 0x5BC, "Float" },
-            { 0x5C0, "Float" },
-            { 0x5CC, "4Byte" },
-            { 0x5DC, "Float" },
-            { 0x5E0, "Float" },
-            { 0x5E4, "Float" },
+            { 0x514, new c{ T="TagRef"}},
+            { 0x530, new c{ T="Tagblock"}}, // InteractionOpportunityDefinition
 
-            { 0x5E8, "Tagblock" }, // LegGroundingSettings
+            { 0x544, new c{ T="Float"}},
+            { 0x548, new c{ T="Tagblock"}}, // ScriptedSequenceActionDefinition
+            { 0x55C, new c{ T="TagRef"}},
+            { 0x578, new c{ T="Tagblock"}}, // AnimChannelEntry
+            { 0x58C, new c{ T="Tagblock"}}, // AnimSetTableEntry
 
-            { 0x5FC, "Float" },
-            { 0x600, "Float" },
-            { 0x604, "Float" },
-            { 0x608, "Float" },
+            { 0x5A0, new c{ T="Float"}},
+            { 0x5A4, new c{ T="Float"}},
+            { 0x5A8, new c{ T="Float"}},
+            { 0x5AC, new c{ T="Float"}},
+            { 0x5B0, new c{ T="Float"}},
+            { 0x5B4, new c{ T="Float"}},
+            { 0x5B8, new c{ T="Float"}},
+            { 0x5BC, new c{ T="Float"}},
+            { 0x5C0, new c{ T="Float"}},
+            { 0x5CC, new c{ T="4Byte"}},
+            { 0x5DC, new c{ T="Float"}},
+            { 0x5E0, new c{ T="Float"}},
+            { 0x5E4, new c{ T="Float"}},
 
-            { 0x60C, "Tagblock" }, // i343::Objects::ObjectNodeGraphDefinition
-            { 0x620, "Tagblock" }, // i343::Objects::AnimationMatchingTableEntry
+            { 0x5E8, new c{ T="Tagblock"}}, // LegGroundingSettings
 
-            { 0x634, "Float" },
+            { 0x5FC, new c{ T="Float"}},
+            { 0x600, new c{ T="Float"}},
+            { 0x604, new c{ T="Float"}},
+            { 0x608, new c{ T="Float"}},
 
-            { 0x638, "Tagblock" }, // i343::Objects::ModelVariantSwappingTableEntry
+            { 0x60C, new c{ T="Tagblock"}}, // i343::Objects::ObjectNodeGraphDefinition
+            { 0x620, new c{ T="Tagblock"}}, // i343::Objects::AnimationMatchingTableEntry
 
-            { 0x63C, "Float" },
+            { 0x634, new c{ T="Float"}},
 
-            { 0x650, "Tagblock" }, // i343::Items::LocationSensorDefinition
-            { 0x664, "Tagblock" }, // i343::Items::ShroudGeneratorDefinition
-            { 0x678, "Tagblock" }, // i343::Objects::PowerComponentDefinition
-            { 0x68C, "Tagblock" }, // i343::Objects::SelfDestructHandlerDefinition
-            { 0x6A0, "Tagblock" }, // i343::Objects::IndirectLightingComponentDefinition
+            { 0x638, new c{ T="Tagblock"}}, // i343::Objects::ModelVariantSwappingTableEntry
 
-            { 0x6B4, "Float" },
-            { 0x6B8, "4Byte" },
-            { 0x6BC, "4Byte" },
+            { 0x63C, new c{ T="Float"}},
 
-            { 0x6C4, "TagRef" },
-            { 0x6E0, "Tagblock" }, // s_campaign_metagame_bucket
-            { 0x6F4, "Tagblock" }, // s_unit_screen_effect_definition
+            { 0x650, new c{ T="Tagblock"}}, // i343::Items::LocationSensorDefinition
+            { 0x664, new c{ T="Tagblock"}}, // i343::Items::ShroudGeneratorDefinition
+            { 0x678, new c{ T="Tagblock"}}, // i343::Objects::PowerComponentDefinition
+            { 0x68C, new c{ T="Tagblock"}}, // i343::Objects::SelfDestructHandlerDefinition
+            { 0x6A0, new c{ T="Tagblock"}}, // i343::Objects::IndirectLightingComponentDefinition
 
-            { 0x70C, "Float" },
-            { 0x720, "Tagblock" }, // s_unit_camera_track
-            { 0x768, "Tagblock" }, // s_unit_camera_acceleration
-            { 0x77C, "Float" },
-            { 0x790, "Tagblock" }, // s_unit_camera_track
-            { 0x7D8, "Tagblock" }, // s_unit_camera_acceleration
+            { 0x6B4, new c{ T="Float"}},
+            { 0x6B8, new c{ T="4Byte"}},
+            { 0x6BC, new c{ T="4Byte"}},
 
-            { 0x7F0, "TagRef" },
+            { 0x6C4, new c{ T="TagRef"}},
+            { 0x6E0, new c{ T="Tagblock"}}, // s_campaign_metagame_bucket
+            { 0x6F4, new c{ T="Tagblock"}}, // s_unit_screen_effect_definition
 
-            { 0x818, "Float" },
-            { 0x81C, "Float" },
-            { 0x830, "Float" },
+            { 0x70C, new c{ T="Float"}},
+            { 0x720, new c{ T="Tagblock"}}, // s_unit_camera_track
+            { 0x768, new c{ T="Tagblock"}}, // s_unit_camera_acceleration
+            { 0x77C, new c{ T="Float"}},
+            { 0x790, new c{ T="Tagblock"}}, // s_unit_camera_track
+            { 0x7D8, new c{ T="Tagblock"}}, // s_unit_camera_acceleration
 
-            { 0x870, "TagRef" },
+            { 0x7F0, new c{ T="TagRef"}},
 
-            { 0x898, "Float" },
+            { 0x818, new c{ T="Float"}},
+            { 0x81C, new c{ T="Float"}},
+            { 0x830, new c{ T="Float"}},
 
-            { 0x8BC, "Tagblock" }, // WeaponSpecificMarkers
-            { 0x8D0, "TagRef" },
-            { 0x908, "TagRef" },
-            { 0x924, "TagRef" },
-            { 0x940, "TagRef" },
-            { 0x95C, "TagRef" },
-            { 0x978, "TagRef" },
-            { 0x994, "TagRef" },
-            { 0x9B0, "TagRef" },
+            { 0x870, new c{ T="TagRef"}},
 
-            { 0x9D0, "Float" },
+            { 0x898, new c{ T="Float"}},
 
-            { 0x9E0, "Tagblock" }, // HudUnitSoundDefinitions
-            { 0x9F4, "Tagblock" }, // dialogue_variant_definition
+            { 0x8BC, new c{ T="Tagblock"}}, // WeaponSpecificMarkers
+            { 0x8D0, new c{ T="TagRef"}},
+            { 0x908, new c{ T="TagRef"}},
+            { 0x924, new c{ T="TagRef"}},
+            { 0x940, new c{ T="TagRef"}},
+            { 0x95C, new c{ T="TagRef"}},
+            { 0x978, new c{ T="TagRef"}},
+            { 0x994, new c{ T="TagRef"}},
+            { 0x9B0, new c{ T="TagRef"}},
 
-            { 0xA30, "Float" },
-            { 0xA34, "Float" },
-            { 0xA38, "Float" },
+            { 0x9D0, new c{ T="Float"}},
 
-            { 0xA64, "Tagblock" }, // powered_seat_definition
-            { 0xA78, "Tagblock" }, // unit_initial_weapon
-            { 0xA8C, "Tagblock" }, // s_target_tracking_parameters
-            { 0xAA0, "Tagblock" }, // unit_seat
+            { 0x9E0, new c{ T="Tagblock"}}, // HudUnitSoundDefinitions
+            { 0x9F4, new c{ T="Tagblock"}}, // dialogue_variant_definition
 
-            { 0xAB4, "Float" },
-            { 0xAB8, "Float" },
-            { 0xABC, "Float" },
+            { 0xA30, new c{ T="Float"}},
+            { 0xA34, new c{ T="Float"}},
+            { 0xA38, new c{ T="Float"}},
 
-            { 0xAC8, "TagRef" },
-            { 0xAE4, "Tagblock" }, // i343::Objects::PowerComponentDefinition
-            { 0xAF8, "TagRef" },
-            { 0xB14, "TagRef" },
+            { 0xA64, new c{ T="Tagblock"}}, // powered_seat_definition
+            { 0xA78, new c{ T="Tagblock", B=new Dictionary<long, c> // unit_initial_weapon
+            {
+                { 0, new c{ T="TagRef"}}, // weap
+                { 40, new c{ T="Float"}}, 
+                { 48, new c{ T="Float"}},
+                { 148, new c{ T="TagRef"}}, // 
+                { 188, new c{ T="Tagblock"}}
+            }, S=212}}, 
+            { 0xA8C, new c{ T="Tagblock"}}, // s_target_tracking_parameters
+            { 0xAA0, new c{ T="Tagblock"}}, // unit_seat
 
-            { 0xB38, "Float" },
-            { 0xB3C, "Float" },
-            { 0xB40, "Float" },
-            { 0xB44, "Float" },
-            { 0xB48, "Float" },
-            { 0xB4C, "Float" },
+            { 0xAB4, new c{ T="Float"}},
+            { 0xAB8, new c{ T="Float"}},
+            { 0xABC, new c{ T="Float"}},
 
-            { 0xB54, "Pointer" },
-            { 0xB5C, "Pointer" },
+            { 0xAC8, new c{ T="TagRef"}},
+            { 0xAE4, new c{ T="Tagblock"}}, // i343::Objects::PowerComponentDefinition
+            { 0xAF8, new c{ T="TagRef"}},
+            { 0xB14, new c{ T="TagRef"}},
 
-            { 0xB7C, "TagRef" },
-            { 0xB98, "TagRef" },
+            { 0xB38, new c{ T="Float"}},
+            { 0xB3C, new c{ T="Float"}},
+            { 0xB40, new c{ T="Float"}},
+            { 0xB44, new c{ T="Float"}},
+            { 0xB48, new c{ T="Float"}},
+            { 0xB4C, new c{ T="Float"}},
 
-            { 0xBB4, "Tagblock" }, // ExitAndDetachVariant
+            { 0xB54, new c{ T="Pointer"}},
+            { 0xB5C, new c{ T="Pointer"}},
 
-            { 0xBCC, "Float" },
+            { 0xB7C, new c{ T="TagRef"}},
+            { 0xB98, new c{ T="TagRef"}},
 
-            { 0xBE4, "TagRef" },
+            { 0xBB4, new c{ T="Tagblock"}}, // ExitAndDetachVariant
 
-            { 0xC00, "Float" },
-            { 0xC04, "Float" },
-            { 0xC08, "Float" },
-            { 0xC0C, "Float" },
-            { 0xC10, "Float" },
-            { 0xC18, "Float" },
-            { 0xC1C, "Float" },
-            { 0xC28, "Float" },
-            { 0xC30, "Float" },
-            { 0xC34, "Float" },
-            { 0xC3C, "Float" },
-            { 0xC40, "Float" },
-            { 0xC5C, "Float" },
-            { 0xC64, "Float" },
-            { 0xC68, "Float" },
-            { 0xC70, "Float" },
-            { 0xC74, "Float" },
-            { 0xC7C, "Float" },
-            { 0xC80, "Float" },
-            { 0xC84, "Float" },
-            { 0xC88, "Float" },
-            { 0xC8C, "Float" },
-            { 0xC94, "Float" },
-            { 0xC98, "Float" },
-            { 0xCA0, "Float" },
-            { 0xCAC, "Float" },
-            { 0xCB8, "Float" },
-            { 0xCBC, "Float" },
-            { 0xCC4, "Float" },
-            { 0xCC8, "Float" },
-            { 0xCD0, "Float" },
-            { 0xCD4, "Float" },
-            { 0xCDC, "Float" },
-            { 0xCE0, "Float" },
-            { 0xCE8, "Float" },
-            { 0xCF4, "Float" },
-            { 0xCF8, "Float" },
-            { 0xD00, "Float" },
-            { 0xD04, "Float" },
-            { 0xD0C, "Float" },
-            { 0xD10, "Float" },
-            { 0xD18, "Float" },
-            { 0xD1C, "Float" },
-            { 0xD24, "Float" },
+            { 0xBCC, new c{ T="Float"}},
 
-            { 0xD28, "TagRef" },
-            { 0xD44, "TagRef" }, // EFFECT TAG REF
-            { 0xD64, "TagRef" },
-            { 0xD80, "TagRef" }, // VEHI TAG REF
+            { 0xBE4, new c{ T="TagRef"}},
 
-            { 0xDA0, "Tagblock" }, // s_vehicle_human_tank_definition
-            { 0xDB4, "Tagblock" }, // s_vehicle_human_jeep_definition
-            { 0xDC8, "Tagblock" }, // s_vehicle_human_plane_definition
-            { 0xDDC, "Tagblock" }, // s_vehicle_alien_scout_definition
-            { 0xDF0, "Tagblock" }, // s_vehicle_alien_fighter_definition
-            { 0xE04, "Tagblock" }, // s_vehicle_turret_definition
-            { 0xE18, "Tagblock" }, // s_vehicle_vtol_definition
-            { 0xE2C, "Tagblock" }, // s_vehicle_chopper_definition
-            { 0xE40, "Tagblock" }, // s_vehicle_guardian_definition
-            { 0xE54, "Tagblock" }, // s_vehicle_jackal_glider_definition
-            { 0xE68, "Tagblock" }, // s_vehicle_space_fighter_definition
-            { 0xE7C, "Tagblock" }, // s_vehicle_revenant_definition
+            { 0xC00, new c{ T="Float"}},
+            { 0xC04, new c{ T="Float"}},
+            { 0xC08, new c{ T="Float"}},
+            { 0xC0C, new c{ T="Float"}},
+            { 0xC10, new c{ T="Float"}},
+            { 0xC18, new c{ T="Float"}},
+            { 0xC1C, new c{ T="Float"}},
+            { 0xC28, new c{ T="Float"}},
+            { 0xC30, new c{ T="Float"}},
+            { 0xC34, new c{ T="Float"}},
+            { 0xC3C, new c{ T="Float"}},
+            { 0xC40, new c{ T="Float"}},
+            { 0xC5C, new c{ T="Float"}},
+            { 0xC64, new c{ T="Float"}},
+            { 0xC68, new c{ T="Float"}},
+            { 0xC70, new c{ T="Float"}},
+            { 0xC74, new c{ T="Float"}},
+            { 0xC7C, new c{ T="Float"}},
+            { 0xC80, new c{ T="Float"}},
+            { 0xC84, new c{ T="Float"}},
+            { 0xC88, new c{ T="Float"}},
+            { 0xC8C, new c{ T="Float"}},
+            { 0xC94, new c{ T="Float"}},
+            { 0xC98, new c{ T="Float"}},
+            { 0xCA0, new c{ T="Float"}},
+            { 0xCAC, new c{ T="Float"}},
+            { 0xCB8, new c{ T="Float"}},
+            { 0xCBC, new c{ T="Float"}},
+            { 0xCC4, new c{ T="Float"}},
+            { 0xCC8, new c{ T="Float"}},
+            { 0xCD0, new c{ T="Float"}},
+            { 0xCD4, new c{ T="Float"}},
+            { 0xCDC, new c{ T="Float"}},
+            { 0xCE0, new c{ T="Float"}},
+            { 0xCE8, new c{ T="Float"}},
+            { 0xCF4, new c{ T="Float"}},
+            { 0xCF8, new c{ T="Float"}},
+            { 0xD00, new c{ T="Float"}},
+            { 0xD04, new c{ T="Float"}},
+            { 0xD0C, new c{ T="Float"}},
+            { 0xD10, new c{ T="Float"}},
+            { 0xD18, new c{ T="Float"}},
+            { 0xD1C, new c{ T="Float"}},
+            { 0xD24, new c{ T="Float"}},
 
-            { 0xE90, "Float" },
-            { 0xE94, "4Byte" },
+            { 0xD28, new c{ T="TagRef"}},
+            { 0xD44, new c{ T="TagRef"}}, // EFFECT TAG REF
+            { 0xD64, new c{ T="TagRef"}},
+            { 0xD80, new c{ T="TagRef"}}, // VEHI TAG REF
 
-            { 0xE98, "Tagblock" }, // i343::Vehicles::AntiGravityPointConfiguration
-            { 0xEAC, "Tagblock" }, // i343::Vehicles::AntiGravityPointDefinition
-            { 0xEC0, "Tagblock" }, // i343::Vehicles::FrictionPointConfiguration
-            { 0xED4, "Tagblock" }, // i343::Vehicles::FrictionPointDefinition
+            { 0xDA0, new c{ T="Tagblock"}}, // s_vehicle_human_tank_definition
+            { 0xDB4, new c{ T="Tagblock"}}, // s_vehicle_human_jeep_definition
+            { 0xDC8, new c{ T="Tagblock"}}, // s_vehicle_human_plane_definition
+            { 0xDDC, new c{ T="Tagblock"}}, // s_vehicle_alien_scout_definition
+            { 0xDF0, new c{ T="Tagblock"}}, // s_vehicle_alien_fighter_definition
+            { 0xE04, new c{ T="Tagblock"}}, // s_vehicle_turret_definition
+            { 0xE18, new c{ T="Tagblock"}}, // s_vehicle_vtol_definition
+            { 0xE2C, new c{ T="Tagblock"}}, // s_vehicle_chopper_definition
+            { 0xE40, new c{ T="Tagblock"}}, // s_vehicle_guardian_definition
+            { 0xE54, new c{ T="Tagblock"}}, // s_vehicle_jackal_glider_definition
+            { 0xE68, new c{ T="Tagblock"}}, // s_vehicle_space_fighter_definition
+            { 0xE7C, new c{ T="Tagblock"}}, // s_vehicle_revenant_definition
 
-            { 0xEE8, "Float" },
-            { 0xEEC, "Float" },
+            { 0xE90, new c{ T="Float"}},
+            { 0xE94, new c{ T="4Byte"}},
 
-            { 0xEF0, "Pointer" },
-            { 0xEF8, "Pointer" },
-            { 0xF08, "Pointer" },
-            { 0xF10, "Pointer" },
+            { 0xE98, new c{ T="Tagblock"}}, // i343::Vehicles::AntiGravityPointConfiguration
+            { 0xEAC, new c{ T="Tagblock"}}, // i343::Vehicles::AntiGravityPointDefinition
+            { 0xEC0, new c{ T="Tagblock"}}, // i343::Vehicles::FrictionPointConfiguration
+            { 0xED4, new c{ T="Tagblock"}}, // i343::Vehicles::FrictionPointDefinition
 
-            { 0xF2C, "Tagblock" }, // s_unit_trick_definition
-            { 0xF40, "Float" },
-            { 0xF50, "Float" },
-            { 0xF54, "Float" },
-            { 0xF58, "Float" },
-            { 0xF60, "Float" },
-            { 0xF74, "4Byte" },
+            { 0xEE8, new c{ T="Float"}},
+            { 0xEEC, new c{ T="Float"}},
 
-            { 0xF78, "TagRef" },
-            { 0xF94, "TagRef" },
-            { 0xFB0, "TagRef" },
-            { 0xFD0, "TagRef" },
-            { 0xFF0, "TagRef" },
-            { 0x1024, "Tagblock" }, // SoundRTPCBlockDefinition
-            { 0x1038, "Tagblock" }, // SoundSweetenerBlockDefinition
+            { 0xEF0, new c{ T="Pointer"}},
+            { 0xEF8, new c{ T="Pointer"}},
+            { 0xF08, new c{ T="Pointer"}},
+            { 0xF10, new c{ T="Pointer"}},
 
-            { 0x104C, "TagRef" },
-            { 0x1068, "TagRef" },
-            { 0x1084, "TagRef" },
+            { 0xF2C, new c{ T="Tagblock"}}, // s_unit_trick_definition
+            { 0xF40, new c{ T="Float"}},
+            { 0xF50, new c{ T="Float"}},
+            { 0xF54, new c{ T="Float"}},
+            { 0xF58, new c{ T="Float"}},
+            { 0xF60, new c{ T="Float"}},
+            { 0xF74, new c{ T="4Byte"}},
 
-            { 0x10A4, "Tagblock" }, // s_vehicleAiCruiseControl
-            { 0x10B8, "Tagblock" }, // Interface::UIItemInfo
+            { 0xF78, new c{ T="TagRef"}},
+            { 0xF94, new c{ T="TagRef"}},
+            { 0xFB0, new c{ T="TagRef"}},
+            { 0xFD0, new c{ T="TagRef"}},
+            { 0xFF0, new c{ T="TagRef"}},
+            { 0x1024, new c{ T="Tagblock"}}, // SoundRTPCBlockDefinition
+            { 0x1038, new c{ T="Tagblock"}}, // SoundSweetenerBlockDefinition
 
-            { 0x10CC, "TagRef" },
-            { 0x10EC, "Float" },
+            { 0x104C, new c{ T="TagRef"}},
+            { 0x1068, new c{ T="TagRef"}},
+            { 0x1084, new c{ T="TagRef"}},
+
+            { 0x10A4, new c{ T="Tagblock"}}, // s_vehicleAiCruiseControl
+            { 0x10B8, new c{ T="Tagblock"}}, // Interface::UIItemInfo
+
+            { 0x10CC, new c{ T="TagRef"}},
+            { 0x10EC, new c{ T="Float"}},
 
         };
 
-        public static Dictionary<long, string> WeaponTag = new Dictionary<long, string>
+        public static Dictionary<long, c> WeaponTag = new Dictionary<long, c>
         {
-            { 0, "Pointer" },
-            { 8, "4Byte" }, // datnum
-            { 12, "4Byte" }, // tagID
+            { 0, new c{ T="Pointer"}},
+            { 8, new c{ T="4Byte"}}, // datnum
+            { 12, new c{ T="4Byte"}}, // tagID
 
-            { 0x05C, "Tagblock" },
-            { 0x078, "TagRef" }, // HLMT
-            { 0x094, "TagRef" },
-            { 0x0B0, "TagRef" },
-            { 0x0CC, "TagRef" },
-            { 0x0F0, "TagRef" },
+            { 0x05C, new c{ T="Tagblock"}},
+            { 0x078, new c{ T="TagRef"}}, // HLMT
+            { 0x094, new c{ T="TagRef"}},
+            { 0x0B0, new c{ T="TagRef"}},
+            { 0x0CC, new c{ T="TagRef"}},
+            { 0x0F0, new c{ T="TagRef"}},
 
-            { 0x10C, "Tagblock" },
+            { 0x10C, new c{ T="Tagblock"}},
 
-            { 0x120, "TagRef" },
-            { 0x13C, "TagRef" }, // FOOT
-            { 0x158, "TagRef" }, // VMED
-            { 0x174, "TagRef" }, // SMED
-            { 0x190, "TagRef" },
+            { 0x120, new c{ T="TagRef"}},
+            { 0x13C, new c{ T="TagRef"}}, // FOOT
+            { 0x158, new c{ T="TagRef"}}, // VMED
+            { 0x174, new c{ T="TagRef"}}, // SMED
+            { 0x190, new c{ T="TagRef"}},
 
-            { 0x1C0, "Tagblock" },
-            { 0x1D4, "Tagblock" },
-            { 0x1EC, "Tagblock" },
-            { 0x200, "Tagblock" },
-            { 0x214, "Tagblock" },
-            { 0x22C, "Tagblock" },
-            { 0x248, "Tagblock" },
-            { 0x25C, "Tagblock" },
-            { 0x270, "Tagblock" },
-            { 0x284, "Tagblock" },
-            { 0x298, "Tagblock" },
-            { 0x2AC, "Tagblock" },
-            { 0x2C0, "Tagblock" },
-            { 0x2D4, "Tagblock" },
+            { 0x1C0, new c{ T="Tagblock"}},
+            { 0x1D4, new c{ T="Tagblock"}},
+            { 0x1EC, new c{ T="Tagblock"}},
+            { 0x200, new c{ T="Tagblock"}},
+            { 0x214, new c{ T="Tagblock"}},
+            { 0x22C, new c{ T="Tagblock"}},
+            { 0x248, new c{ T="Tagblock", B=new Dictionary<long, c> // attachment block
+            {
+                { 4, new c{ T="TagRef"}}, // effe
+                { 32, new c{ T="TagRef"}}, // effe
+                { 64, new c{ T="Tagblock"}},
+                { 84, new c{ T="TagRef"}}, // 
+                { 112, new c{ T="Tagblock"}}
+            }, S=148}},
 
-            { 0x2E8, "TagRef" },
-            { 0x304, "TagRef" },
+            { 0x25C, new c{ T="Tagblock"}},
+            { 0x270, new c{ T="Tagblock"}},
+            { 0x284, new c{ T="Tagblock"}},
+            { 0x298, new c{ T="Tagblock"}},
+            { 0x2AC, new c{ T="Tagblock"}},
+            { 0x2C0, new c{ T="Tagblock"}},
+            { 0x2D4, new c{ T="Tagblock"}},
 
-            { 0x320, "Tagblock" },
-            { 0x334, "Tagblock" },
-            { 0x448, "Tagblock" },
+            { 0x2E8, new c{ T="TagRef"}},
+            { 0x304, new c{ T="TagRef"}},
 
-            { 0x45C, "TagRef" },
+            { 0x320, new c{ T="Tagblock"}},
+            { 0x334, new c{ T="Tagblock"}},
+            { 0x448, new c{ T="Tagblock"}},
 
-            { 0x484, "Tagblock" },
-            { 0x498, "Tagblock" },
-            { 0x4AC, "Tagblock" },
-            { 0x4C8, "Tagblock" },
+            { 0x45C, new c{ T="TagRef"}},
 
-            { 0x4E4, "TagRef" },
+            { 0x484, new c{ T="Tagblock"}},
+            { 0x498, new c{ T="Tagblock"}},
+            { 0x4AC, new c{ T="Tagblock"}},
+            { 0x4C8, new c{ T="Tagblock"}},
 
-            { 0x500, "Tagblock" },
-            { 0x514, "TagRef" },
+            { 0x4E4, new c{ T="TagRef"}},
 
-            { 0x530, "Tagblock" },
-            { 0x548, "Tagblock" },
+            { 0x500, new c{ T="Tagblock"}},
+            { 0x514, new c{ T="TagRef"}},
 
-            { 0x55C, "TagRef" },
+            { 0x530, new c{ T="Tagblock"}},
+            { 0x548, new c{ T="Tagblock"}},
 
-            { 0x578, "Tagblock" },
-            { 0x58C, "Tagblock" },
-            { 0x5E8, "Tagblock" },
-            { 0x60C, "Tagblock" },
-            { 0x620, "Tagblock" },
-            { 0x638, "Tagblock" },
-            { 0x650, "Tagblock" },
-            { 0x664, "Tagblock" },
-            { 0x678, "Tagblock" },
-            { 0x68C, "Tagblock" },
-            { 0x6A0, "Tagblock" },
-            { 0x730, "Tagblock" },
-            { 0x744, "Tagblock" },
+            { 0x55C, new c{ T="TagRef"}},
 
-            { 0x758, "TagRef" },
-            { 0x77C, "TagRef" },
-            { 0x798, "TagRef" },
-            { 0x7D8, "TagRef" },
-            { 0x7F4, "TagRef" },
-            { 0x850, "TagRef" }, // WEAP
-            { 0x88C, "TagRef" },
-            { 0x8A8, "TagRef" },
-            { 0x924, "TagRef" },
-            { 0x940, "TagRef" },
-            { 0x95C, "TagRef" },
-            { 0x978, "TagRef" },
+            { 0x578, new c{ T="Tagblock"}},
+            { 0x58C, new c{ T="Tagblock"}},
+            { 0x5E8, new c{ T="Tagblock"}},
+            { 0x60C, new c{ T="Tagblock"}},
+            { 0x620, new c{ T="Tagblock"}},
+            { 0x638, new c{ T="Tagblock"}},
+            { 0x650, new c{ T="Tagblock"}},
+            { 0x664, new c{ T="Tagblock"}},
+            { 0x678, new c{ T="Tagblock"}},
+            { 0x68C, new c{ T="Tagblock"}},
+            { 0x6A0, new c{ T="Tagblock"}},
+            { 0x730, new c{ T="Tagblock"}},
+            { 0x744, new c{ T="Tagblock"}},
 
-            { 0x994, "Tagblock" },
+            { 0x758, new c{ T="TagRef"}},
+            { 0x77C, new c{ T="TagRef"}},
+            { 0x798, new c{ T="TagRef"}},
+            { 0x7D8, new c{ T="TagRef"}},
+            { 0x7F4, new c{ T="TagRef"}},
+            { 0x850, new c{ T="TagRef"}}, // WEAP
+            { 0x88C, new c{ T="TagRef"}},
+            { 0x8A8, new c{ T="TagRef"}},
+            { 0x924, new c{ T="TagRef"}},
+            { 0x940, new c{ T="TagRef"}},
+            { 0x95C, new c{ T="TagRef"}},
+            { 0x978, new c{ T="TagRef"}},
 
-            { 0x9A8, "TagRef" },
-            { 0x9D4, "TagRef" },
+            { 0x994, new c{ T="Tagblock"}},
 
-            { 0x9F0, "Tagblock" },
-            { 0xA80, "Tagblock" },
-            { 0xA94, "Tagblock" },
+            { 0x9A8, new c{ T="TagRef"}},
+            { 0x9D4, new c{ T="TagRef"}},
 
-            { 0xAF0, "TagRef" },
-            { 0xB0C, "TagRef" },
+            { 0x9F0, new c{ T="Tagblock"}},
+            { 0xA80, new c{ T="Tagblock"}},
+            { 0xA94, new c{ T="Tagblock"}},
 
-            { 0xB6C, "Tagblock" },
-            { 0xB88, "Tagblock" },
-            { 0xBA4, "Tagblock" },
+            { 0xAF0, new c{ T="TagRef"}},
+            { 0xB0C, new c{ T="TagRef"}},
 
-            { 0xBB8, "TagRef" },
-            { 0xBE4, "TagRef" },
-            { 0xC00, "TagRef" },
+            { 0xB6C, new c{ T="Tagblock"}},
+            { 0xB88, new c{ T="Tagblock"}},
+            { 0xBA4, new c{ T="Tagblock"}},
 
-            { 0xC1C, "Tagblock" },
+            { 0xBB8, new c{ T="TagRef"}},
+            { 0xBE4, new c{ T="TagRef"}},
+            { 0xC00, new c{ T="TagRef"}},
 
-            { 0xC30, "TagRef" }, // BITM
+            { 0xC1C, new c{ T="Tagblock"}},
 
-            { 0xC4C, "Tagblock" },
+            { 0xC30, new c{ T="TagRef"}}, // BITM
 
-            { 0xC60, "TagRef" },
-            { 0xC7C, "Tagblock" },
-            { 0xC90, "Tagblock" },
+            { 0xC4C, new c{ T="Tagblock"}},
 
-            { 0xCBC, "TagRef" },
-            { 0xCD8, "TagRef" },
-            { 0xCF4, "TagRef" },
-            { 0xD10, "TagRef" },
+            { 0xC60, new c{ T="TagRef"}},
+            { 0xC7C, new c{ T="Tagblock"}},
+            { 0xC90, new c{ T="Tagblock", B=new Dictionary<long, c> // barrel block
+            {
+                { 4, new c{ T="Float"}},
+                { 8, new c{ T="Float"}},
 
-            { 0xDB4, "Tagblock" },
-            { 0xDC8, "TagRef" },
-            { 0xDE8, "Tagblock" },
+                { 60, new c{ T="Float"}},
+                { 64, new c{ T="Float"}},
 
-            { 0xE00, "TagRef" },
-            { 0xE1C, "TagRef" },
-            { 0xE38, "TagRef" },
-            { 0xE54, "TagRef" },
-            { 0xE70, "TagRef" },
-            { 0xE8C, "TagRef" },
-            { 0xEA8, "TagRef" },
-            { 0xEC4, "TagRef" },
+                { 76, new c{ T="Float"}},
+                { 80, new c{ T="Float"}},
 
-            { 0xF80, "Tagblock" },
-            { 0xFBC, "Tagblock" },
+                { 92, new c{ T="Float"}},
 
-            { 0x1074, "TagRef" },
-            { 0x109C, "TagRef" },
-            { 0x10BC, "Tagblock" },
-            { 0x10D0, "TagRef" },
-            { 0x10EC, "TagRef" },
-            { 0x1108, "TagRef" },
+                { 0x64, new c{ T="4Byte"}},
+                { 0x68, new c{ T="Float"}},
 
-            { 0x1128, "Tagblock" },
-            { 0x113C, "Tagblock" },
+                { 0x84, new c{ T="Tagblock"}},
+                { 0x98, new c{ T="Tagblock"}},
+                { 0xB8, new c{ T="Float"}},
+                { 0xBC, new c{ T="Float"}},
+                { 0xFC, new c{ T="Tagblock"}},
+                { 0x110, new c{ T="Tagblock"}},
+                { 0x124, new c{ T="Tagblock"}},
+                { 0x138, new c{ T="Tagblock"}},
+                { 0x150, new c{ T="Tagblock"}},
+                { 0x164, new c{ T="Tagblock"}},
+                { 0x178, new c{ T="Tagblock"}},
+                { 0x18C, new c{ T="Tagblock"}},
+                { 0x1A4, new c{ T="Tagblock"}},
+
+                { 0x1B8, new c{ T="TagRef"}}, // PROJ
+                { 0x1D4, new c{ T="TagRef"}}, // PROJ
+
+                { 0x1F4, new c{ T="Tagblock"}},
+                { 0x208, new c{ T="TagRef"}},
+                { 0x224, new c{ T="TagRef"}},
+                { 0x240, new c{ T="TagRef"}},
+
+                { 0x25C, new c{ T="Float"}},
+                { 0x260, new c{ T="Float"}},
+                { 0x264, new c{ T="Float"}},
+                { 0x268, new c{ T="Float"}},
+                { 0x26C, new c{ T="Float"}},
+                { 0x270, new c{ T="Float"}},
+                { 0x274, new c{ T="Float"}}
+            }, S=848}},
+
+            { 0xCBC, new c{ T="TagRef"}},
+            { 0xCD8, new c{ T="TagRef"}},
+            { 0xCF4, new c{ T="TagRef"}},
+            { 0xD10, new c{ T="TagRef"}},
+
+            { 0xDB4, new c{ T="Tagblock"}},
+            { 0xDC8, new c{ T="TagRef"}},
+            { 0xDEC, new c{ T="Tagblock"}},
+
+            { 0xE00, new c{ T="TagRef"}},
+            { 0xE1C, new c{ T="TagRef"}},
+            { 0xE38, new c{ T="TagRef"}},
+            { 0xE54, new c{ T="TagRef"}},
+            { 0xE70, new c{ T="TagRef"}},
+            { 0xE8C, new c{ T="TagRef"}},
+            { 0xEA8, new c{ T="TagRef"}},
+            { 0xEC4, new c{ T="TagRef"}},
+
+            { 0xF80, new c{ T="Tagblock"}},
+            { 0xFBC, new c{ T="Tagblock"}},
+
+            { 0x1074, new c{ T="TagRef"}},
+            { 0x109C, new c{ T="TagRef"}},
+            { 0x10BC, new c{ T="Tagblock"}},
+            { 0x10D0, new c{ T="TagRef"}},
+            { 0x10EC, new c{ T="TagRef"}},
+            { 0x1108, new c{ T="TagRef"}},
+
+            { 0x1128, new c{ T="Tagblock"}},
+            { 0x113C, new c{ T="Tagblock"}}
 
         };
 

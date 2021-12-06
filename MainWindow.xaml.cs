@@ -94,6 +94,17 @@ namespace Assembly69
         // load tags from Mem
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            if (tag_count != -1)
+            {
+                tag_count = -1;
+                Tag_groups.Clear();
+                Tags_List.Clear();
+            }
+            
+
+
+            TagsTree.Items.Clear();
+
             tag_count = m.ReadInt((base_address + 0x6C).ToString("X"));
             long tags_start = m.ReadLong((base_address + 0x78).ToString("X"));
 
@@ -265,42 +276,43 @@ namespace Assembly69
 
             if (loading_tag.Tag_group == "vehi")
             {
-                
-                Dictionary<long, string> strings = vehi.VehicleTag;
-                do_the_tag_thing(strings, loading_tag);
+
+                Dictionary<long, vehi.c> strings = vehi.VehicleTag;
+                do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
             else if (loading_tag.Tag_group == "weap")
             {
 
-                Dictionary<long, string> strings = vehi.WeaponTag;
-                do_the_tag_thing(strings, loading_tag);
+                Dictionary<long, vehi.c> strings = vehi.WeaponTag;
+                do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
 
 
         }
 
-        public void do_the_tag_thing(Dictionary<long, string> VehicleTag, tag_struct loading_tag)
+        // had to adapt this to bealbe to read tagblocks and forgot to allow it to iterate through them *sigh* good enough for now
+        void do_the_tag_thing(Dictionary<long, vehi.c> VehicleTag, long address, StackPanel parentpanel)
         {
-            foreach (KeyValuePair<long, string> entry in VehicleTag)
+            foreach (KeyValuePair<long, vehi.c> entry in VehicleTag)
             {
-                switch (entry.Value)
+                switch (entry.Value.T)
                 {
                     case "4Byte":
                         valueBlock vb1 = new valueBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         vb1.value_type.Text = "4 Byte";
-                        vb1.value.Text = m.ReadInt((loading_tag.Tag_data + entry.Key).ToString("X")).ToString();
-                        tagview_panels.Children.Add(vb1);
+                        vb1.value.Text = m.ReadInt(( + entry.Key).ToString("X")).ToString();
+                        parentpanel.Children.Add(vb1);
 
-                        vb1.value.Tag = loading_tag.Tag_data + entry.Key + ":4Byte";
+                        vb1.value.Tag = address + entry.Key + ":4Byte";
                         vb1.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
                     case "Float":
                         valueBlock vb2 = new valueBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         vb2.value_type.Text = "Float";
-                        vb2.value.Text = m.ReadFloat((loading_tag.Tag_data + entry.Key).ToString("X")).ToString();
-                        tagview_panels.Children.Add(vb2);
+                        vb2.value.Text = m.ReadFloat((address + entry.Key).ToString("X")).ToString();
+                        parentpanel.Children.Add(vb2);
 
-                        vb2.value.Tag = loading_tag.Tag_data + entry.Key + ":Float";
+                        vb2.value.Tag = address + entry.Key + ":Float";
                         vb2.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
                     case "TagRef":
@@ -309,63 +321,94 @@ namespace Assembly69
                         {
                             tfb1.taggroup.Items.Add(s);
                         }
-                        string test_group = ReverseString(m.ReadString((loading_tag.Tag_data + entry.Key + 20).ToString("X"), "", 4));
+                        string test_group = ReverseString(m.ReadString((address + entry.Key + 20).ToString("X"), "", 4));
                         tfb1.taggroup.SelectedItem = test_group;
 
                         // read tagID rather than datnum // or rather, convert datnum to ID
-                        string test = BitConverter.ToString(m.ReadBytes((loading_tag.Tag_data + entry.Key + 24).ToString("X"), 4)).Replace("-", string.Empty);
+                        string test = BitConverter.ToString(m.ReadBytes((address + entry.Key + 24).ToString("X"), 4)).Replace("-", string.Empty);
                         string test_nameID = convert_ID_to_tag_name(get_tagid_by_datnum(test));
 
-
                         tfb1.tag_button.Content = test_nameID;
-                        tagview_panels.Children.Add(tfb1);
+                        parentpanel.Children.Add(tfb1);
 
-                        tfb1.taggroup.Tag = (loading_tag.Tag_data + entry.Key + 20);
+                        tfb1.taggroup.Tag = (address + entry.Key + 20);
                         tfb1.taggroup.SelectionChanged += new SelectionChangedEventHandler(taggroup_SelectionChanged);
 
-                        tfb1.tag_button.Tag = (loading_tag.Tag_data + entry.Key + 24) + ":" + test_group;
+                        tfb1.tag_button.Tag = (address + entry.Key + 24) + ":" + test_group;
                         tfb1.tag_button.Click += new RoutedEventHandler(tagrefbutton);
-
-
-
                         break;
                     case "Pointer":
                         valueBlock vb3 = new valueBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         vb3.value_type.Text = "Pointer";
-                        vb3.value.Text = m.ReadLong((loading_tag.Tag_data + entry.Key).ToString("X")).ToString("X");
-                        tagview_panels.Children.Add(vb3);
+                        vb3.value.Text = m.ReadLong((address + entry.Key).ToString("X")).ToString("X");
+                        parentpanel.Children.Add(vb3);
 
-                        vb3.value.Tag = loading_tag.Tag_data + entry.Key + ":Pointer";
+                        vb3.value.Tag = address + entry.Key + ":Pointer";
                         vb3.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
                     case "Tagblock":
                         tagblock tb1 = new tagblock { HorizontalAlignment = HorizontalAlignment.Left };
-                        tb1.tagblock_address.Text = "0x" + m.ReadLong((loading_tag.Tag_data + entry.Key).ToString("X")).ToString("X");
-                        tb1.tagblock_title.Text = m.ReadString((loading_tag.Tag_data + entry.Key + 8).ToString("X") + ",0,0");
-                        tb1.tagblock_count.Text = m.ReadInt((loading_tag.Tag_data + entry.Key + 16).ToString("X")).ToString();
-                        tagview_panels.Children.Add(tb1);
+                        long new_address = m.ReadLong((address + entry.Key).ToString("X"));
+                        tb1.tagblock_address.Text = "0x" + new_address.ToString("X");
+                        tb1.tagblock_title.Text = m.ReadString((address + entry.Key + 8).ToString("X") + ",0,0");
+                        string children_count = m.ReadInt((address + entry.Key + 16).ToString("X")).ToString();
+                        tb1.tagblock_count.Text = children_count;
+                        parentpanel.Children.Add(tb1);
 
-                        tb1.tagblock_address.Tag = (loading_tag.Tag_data + entry.Key) + ":Pointer";
+                        tb1.tagblock_address.Tag = (address + entry.Key) + ":Pointer";
                         tb1.tagblock_address.TextChanged += new TextChangedEventHandler(value_TextChanged);
 
-                        tb1.tagblock_count.Tag = (loading_tag.Tag_data + entry.Key + 16) + ":4Byte";
+                        tb1.tagblock_count.Tag = (address + entry.Key + 16) + ":4Byte";
                         tb1.tagblock_count.TextChanged += new TextChangedEventHandler(value_TextChanged);
+
+                        //tb1.indexbox.SelectionChanged += new SelectionChangedEventHandler(indexbox_SelectionChanged);
+
+                        tb1.children = entry;
+
+                        tb1.mainWindow = this;
+                        tb1.block_address = new_address;
+                        int childs = int.Parse(children_count);
+                        for (int y=0; y <childs; y++)
+                        {
+                            tb1.indexbox.Items.Add(new ListViewItem { Content=y });
+                        }
+                        if (childs > 0)
+                        {
+                            tb1.indexbox.SelectedIndex = 0;
+
+                        }
+                        else
+                        {
+                            tb1.indexbox.IsEnabled = false;
+                        }
+
+                        //recall_blockloop(entry, new_address, tb1.dockpanel);
                         break;
                     case "String":
                         valueBlock vb4 = new valueBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         vb4.value_type.Text = "String";
-                        vb4.value.Text = m.ReadString((loading_tag.Tag_data + entry.Key).ToString("X")).ToString();
-                        tagview_panels.Children.Add(vb4);
+                        vb4.value.Text = m.ReadString((address + entry.Key).ToString("X")).ToString();
+                        parentpanel.Children.Add(vb4);
 
-                        vb4.value.Tag = loading_tag.Tag_data + entry.Key + ":String";
+                        vb4.value.Tag = address + entry.Key + ":String";
                         vb4.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
 
                 }
+                
             }
         }
+        // hmm we need a system that reads the pointer and adds it
+        // also, we need to beable to read multiple tag things but i may put that on hold
+        public void recall_blockloop(KeyValuePair<long, vehi.c> entry, long loading_tag, StackPanel parentpanel)
+        {
+            parentpanel.Children.Clear();
+            if (entry.Value.B != null)
+            {
+                do_the_tag_thing(entry.Value.B, loading_tag, parentpanel);
+            }
 
-
+        }
 
 
         // list of changes to ammend to the memory when we phit the poke button
@@ -401,7 +444,6 @@ namespace Assembly69
             // THAT WAS PROBABLY THE MOST DODGY THING IVE EVER DONE WTFFFF
         }
 
-        
 
         private void tagrefbutton(object sender, RoutedEventArgs e)
         {
@@ -452,6 +494,7 @@ namespace Assembly69
             }
         }
 
+        // this is for our dropdown thingo for changing tag refs
         public void update_tagref(object sender, RoutedEventArgs e)
         {
             TreeViewItem b = sender as TreeViewItem;
@@ -467,7 +510,8 @@ namespace Assembly69
             }
         }
 
-
+        // need this to read tagref blocks - because we only get a datnum to figure out the name with
+        // so we find what else has the same datnum and then run the other method to get name based off of ID
         public string get_tagid_by_datnum(string datnum)
         {
             foreach (tag_struct t in Tags_List)
@@ -479,7 +523,7 @@ namespace Assembly69
             return "Tag not present(" + datnum + ")";
         }
 
-
+        // search filter
         private void Searchbox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string search = Searchbox.Text;
