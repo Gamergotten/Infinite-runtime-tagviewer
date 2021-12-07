@@ -72,7 +72,7 @@ namespace Assembly69.Interface.Controls {
 
         // for tag group
         private void taggroup_SelectionChanged(object sender, SelectionChangedEventArgs e) {
-            ComboBox cb = sender as ComboBox;
+            ComboBox cb = sender as ComboBox ?? throw new InvalidOperationException();
 
             mainWindow.addpokechange(long.Parse(cb.Tag.ToString()), "TagrefGroup", cb.SelectedValue.ToString());
 
