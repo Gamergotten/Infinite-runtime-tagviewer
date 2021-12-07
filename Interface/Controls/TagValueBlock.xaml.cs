@@ -4,7 +4,7 @@ namespace Assembly69.Interface.Controls {
     /// <summary>
     /// Interaction logic for valueBlock.xaml
     /// </summary>
-    public partial class TagValueBlock : UserControl
+    public partial class TagValueBlock
     {
         public TagValueBlock()
         {

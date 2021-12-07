@@ -6,7 +6,7 @@ namespace Assembly69.Interface.Controls {
     /// <summary>
     /// Interaction logic for tagref_dropdown.xaml
     /// </summary>
-    public partial class TagRefDropdown : Window
+    public partial class TagRefDropdown
     {
         public TagRefDropdown()
         {
