@@ -17,12 +17,12 @@ namespace Assembly69.Interface.Controls
             EditorControl = editorControl;
         }
 
-        public KeyValuePair<long, vehi.c> children;
-        public long block_address;
+        public KeyValuePair<long, Vehi.C> Children;
+        public long BlockAddress;
 
         private void indexbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            EditorControl.recall_blockloop(children, block_address + (indexbox.SelectedIndex * children.Value.S), dockpanel);
+            EditorControl.recall_blockloop(Children, BlockAddress + (indexbox.SelectedIndex * Children.Value.S), dockpanel);
         }
     }
 }
