@@ -13,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Assembly69.theUIstuff
+namespace Assembly69.Interface.Controls
 {
     /// <summary>
-    /// Interaction logic for tagrefblock.xaml
+    /// Interaction logic for Changesblock.xaml
     /// </summary>
-    public partial class tagrefblock : UserControl
+    public partial class TagChangesBlock : UserControl
     {
-        public tagrefblock()
+        public TagChangesBlock()
         {
             InitializeComponent();
         }
-
-        
     }
 }

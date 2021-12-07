@@ -1,15 +1,13 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assembly69.object_classes
-{
-    public class vehi
-    {
-        public struct c
-        {
+namespace Assembly69.Halo.TagObjects {
+    public class vehi {
+        public struct c {
             public string T { get; set; }
             public Dictionary<long, c> B { get; set; }
 
@@ -73,7 +71,7 @@ namespace Assembly69.object_classes
                 { 64, new c{ T="Tagblock"}},
                 { 84, new c{ T="TagRef"}}, // 
                 { 112, new c{ T="Tagblock"}}
-            }, S=148}}, 
+            }, S=148}},
             { 604, new c{ T="Tagblock"}}, // object_indirect_lighting_settings_definition
             { 624, new c{ T="Tagblock"}}, // s_water_physics_hull_surface_definition
             { 644, new c{ T="Tagblock"}}, // s_jetwash_definition
@@ -202,11 +200,11 @@ namespace Assembly69.object_classes
             { 0xA78, new c{ T="Tagblock", B=new Dictionary<long, c> // unit_initial_weapon
             {
                 { 0, new c{ T="TagRef"}}, // weap
-                { 40, new c{ T="Float"}}, 
+                { 40, new c{ T="Float"}},
                 { 48, new c{ T="Float"}},
                 { 148, new c{ T="TagRef"}}, // 
                 { 188, new c{ T="Tagblock"}}
-            }, S=212}}, 
+            }, S=212}},
             { 0xA8C, new c{ T="Tagblock"}}, // s_target_tracking_parameters
             { 0xAA0, new c{ T="Tagblock"}}, // unit_seat
 

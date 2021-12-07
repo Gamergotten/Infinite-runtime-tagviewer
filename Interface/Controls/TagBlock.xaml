@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="Assembly69.theUIstuff.tagblock"
+﻿<UserControl x:Class="Assembly69.Interface.Controls.TagBlock"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Assembly69.theUIstuff"
+             xmlns:local="clr-namespace:Assembly69.Interface.Controls"
              mc:Ignorable="d">
     <Grid Background="Purple" Margin="5,5,0,0">
         <Grid.ColumnDefinitions>
@@ -17,17 +17,13 @@
             <RowDefinition Height="20"/>
             <RowDefinition Height="Auto" MinHeight="3"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="tagblock_title" Text="Tag block description" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Margin="5,0,0,0"/>
+        <TextBlock x:Name="tagblock_title" Text="Tag block description" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Margin="5,0,0,0" Foreground="White" />
 
         <TextBox x:Name="tagblock_address" Text="Tag block address" Grid.Row="1" Margin="5,0,0,0"/>
-        <TextBlock Text="Count" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,8,0"/>
+        <TextBlock Text="Count" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,8,0" Foreground="White"/>
         <TextBox x:Name="tagblock_count" Text="-" Grid.Row="1" Grid.Column="2"/>
 
-        <StackPanel x:Name="dockpanel" Background="Gray" Grid.Row="3" Grid.ColumnSpan="4">
-
-        </StackPanel>
+        <StackPanel x:Name="dockpanel" Background="Gray" Grid.Row="3" Grid.ColumnSpan="4" />
         <ComboBox x:Name="indexbox" Grid.Column="2" Margin="2,2,0,2" SelectionChanged="indexbox_SelectionChanged"  />
-
-
     </Grid>
 </UserControl>

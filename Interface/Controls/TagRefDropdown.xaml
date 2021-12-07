@@ -1,9 +1,9 @@
-﻿<Window x:Class="Assembly69.theUIstuff.tagref_dropdown"
+﻿<Window x:Class="Assembly69.Interface.Controls.TagRefDropdown"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Assembly69.theUIstuff"
+        xmlns:local="clr-namespace:Assembly69.Interface.Controls"
         mc:Ignorable="d"
         WindowStyle="None"
         Title="tagref_dropdown" Height="450" Width="400" Deactivated="Window_Deactivated">

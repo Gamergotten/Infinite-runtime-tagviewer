@@ -13,17 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Assembly69.theUIstuff
-{
+namespace Assembly69.Interface.Controls {
     /// <summary>
     /// Interaction logic for valueBlock.xaml
     /// </summary>
-    public partial class valueBlock : UserControl
+    public partial class TagValueBlock : UserControl
     {
-        public valueBlock()
+        public TagValueBlock()
         {
             InitializeComponent();
         }
-
     }
 }

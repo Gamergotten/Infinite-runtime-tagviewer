@@ -12,27 +12,31 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Assembly69.object_classes;
 
-namespace Assembly69.theUIstuff
-{
+using Assembly69.Halo.TagObjects;
+
+namespace Assembly69.Interface.Controls {
     /// <summary>
     /// Interaction logic for tagblock.xaml
     /// </summary>
-    public partial class tagblock : UserControl
+    public partial class TagBlock : UserControl
     {
-        public tagblock()
+        public TagEditorControl EditorControl { get; }
+
+
+        public TagBlock(TagEditorControl editorControl)
         {
             InitializeComponent();
+            EditorControl = editorControl;
         }
 
         public KeyValuePair<long, vehi.c> children;
         public long block_address;
-        public MainWindow mainWindow;
+
 
         private void indexbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            mainWindow.recall_blockloop(children, block_address + (indexbox.SelectedIndex * children.Value.S), dockpanel);
+            EditorControl.recall_blockloop(children, block_address + (indexbox.SelectedIndex * children.Value.S), dockpanel);
         }
     }
 }
