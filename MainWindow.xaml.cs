@@ -63,7 +63,7 @@ namespace Assembly69 {
             
         }
 
-        public List<tag_struct> Tags_List { get; set; }
+        public List<tag_struct> Tags_List { get; set; } = null!;
         public SortedDictionary<string, group_tag_struct> Tag_groups { get; set; } = new SortedDictionary<string, group_tag_struct>();
 
         public struct tag_struct
