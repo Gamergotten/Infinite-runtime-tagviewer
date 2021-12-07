@@ -1,11 +1,9 @@
-﻿using Assembly69.Halo.TagObjects;
-
-using Memory;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using Assembly69.Halo.TagObjects;
+using Memory;
 using static Assembly69.MainWindow;
 
 namespace Assembly69.Interface.Controls {
@@ -17,8 +15,8 @@ namespace Assembly69.Interface.Controls {
         Mem m;
 
         public TagEditorControl(MainWindow mw) {
-            this.mainWindow = mw;
-            this.m = mainWindow.m;
+            mainWindow = mw;
+            m = mainWindow.m;
 
             InitializeComponent();
         }
@@ -79,7 +77,7 @@ namespace Assembly69.Interface.Controls {
             Grid td = cb.Parent as Grid;
             Button b = td.Children[1] as Button;
             string[] s = b.Tag.ToString().Split(":");
-            b.Tag = s[0] + ":" + cb.SelectedValue.ToString();
+            b.Tag = s[0] + ":" + cb.SelectedValue;
             // THAT WAS PROBABLY THE MOST DODGY THING IVE EVER DONE WTFFFF
         }
 
@@ -116,7 +114,7 @@ namespace Assembly69.Interface.Controls {
                 item.Tag = s[0] + ":" + "FFFFFFFF";
 
                 mainWindow.trd.tag_select_panel.Items.Add(item);
-                item.Selected += new RoutedEventHandler(update_tagref);
+                item.Selected += update_tagref;
 
 
                 foreach (tag_struct tg in mainWindow.Tags_List) {
@@ -127,7 +125,7 @@ namespace Assembly69.Interface.Controls {
                         testing.Tag = s[0] + ":" + tg.Datnum;
 
                         mainWindow.trd.tag_select_panel.Items.Add(testing);
-                        testing.Selected += new RoutedEventHandler(update_tagref);
+                        testing.Selected += update_tagref;
                     }
                 }
 
@@ -167,7 +165,7 @@ namespace Assembly69.Interface.Controls {
                     parentpanel.Children.Add(vb1);
 
                     vb1.value.Tag = address + entry.Key + ":4Byte";
-                    vb1.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+                    vb1.value.TextChanged += value_TextChanged;
                     break;
                 case "Float":
                     TagValueBlock vb2 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
@@ -176,7 +174,7 @@ namespace Assembly69.Interface.Controls {
                     parentpanel.Children.Add(vb2);
 
                     vb2.value.Tag = address + entry.Key + ":Float";
-                    vb2.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+                    vb2.value.TextChanged += value_TextChanged;
                     break; 
                 case "TagRef":
                     TagRefBlock tfb1 = new TagRefBlock { HorizontalAlignment = HorizontalAlignment.Left };
@@ -194,15 +192,15 @@ namespace Assembly69.Interface.Controls {
                     parentpanel.Children.Add(tfb1);
 
                     tfb1.taggroup.Tag = (address + entry.Key + 20);
-                    tfb1.taggroup.SelectionChanged += new SelectionChangedEventHandler(taggroup_SelectionChanged);
+                    tfb1.taggroup.SelectionChanged += taggroup_SelectionChanged;
 
                     tfb1.tag_button.Tag = (address + entry.Key + 24) + ":" + test_group;
-                    tfb1.tag_button.Click += new RoutedEventHandler(tagrefbutton);
+                    tfb1.tag_button.Click += tagrefbutton;
 
                     int ID = mainWindow.get_tagindex_by_datnum(test);
 
                     tfb1.goto_button.Tag = ID; // need to get the index of the tag not the ID
-                    tfb1.goto_button.Click += new RoutedEventHandler(gotobutton);
+                    tfb1.goto_button.Click += gotobutton;
 
                     break;
                 case "Pointer":
@@ -212,7 +210,7 @@ namespace Assembly69.Interface.Controls {
                     parentpanel.Children.Add(vb3);
 
                     vb3.value.Tag = address + entry.Key + ":Pointer";
-                    vb3.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+                    vb3.value.TextChanged += value_TextChanged;
                     break;
                 case "Tagblock": // need to find some kinda "whoops that tag isnt actually loaded"; keep erroring with the hlmt tag
                     TagBlock tb1 = new TagBlock (this) { HorizontalAlignment = HorizontalAlignment.Left };
@@ -225,10 +223,10 @@ namespace Assembly69.Interface.Controls {
                     parentpanel.Children.Add(tb1);
 
                     tb1.tagblock_address.Tag = (address + entry.Key) + ":Pointer";
-                    tb1.tagblock_address.TextChanged += new TextChangedEventHandler(value_TextChanged);
+                    tb1.tagblock_address.TextChanged += value_TextChanged;
 
                     tb1.tagblock_count.Tag = (address + entry.Key + 16) + ":4Byte";
-                    tb1.tagblock_count.TextChanged += new TextChangedEventHandler(value_TextChanged);
+                    tb1.tagblock_count.TextChanged += value_TextChanged;
 
                     //tb1.indexbox.SelectionChanged += new SelectionChangedEventHandler(indexbox_SelectionChanged);
 
@@ -252,11 +250,11 @@ namespace Assembly69.Interface.Controls {
                 case "String":
                     TagValueBlock vb4 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
                     vb4.value_type.Text = "String";
-                    vb4.value.Text = m.ReadString((address + entry.Key).ToString("X")).ToString();
+                    vb4.value.Text = m.ReadString((address + entry.Key).ToString("X"));
                     parentpanel.Children.Add(vb4);
 
                     vb4.value.Tag = address + entry.Key + ":String";
-                    vb4.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+                    vb4.value.TextChanged += value_TextChanged;
                     break;
 
                 }

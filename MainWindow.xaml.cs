@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using Memory;
-using System.IO;
-using System.Text.RegularExpressions;
 using Assembly69.Interface.Controls;
+using AvalonDock;
 using AvalonDock.Layout;
+using Memory;
 
 namespace Assembly69 {
     /// <summary>
@@ -222,7 +224,7 @@ namespace Assembly69 {
         public void inhale_tagnames()
         {
             string filename = Directory.GetCurrentDirectory() + @"\files\tagnames.txt";
-            var lines = System.IO.File.ReadLines(filename);
+            var lines = File.ReadLines(filename);
             foreach (var line in lines)
             {
                 string[] hex_string = line.Split(" : ");
@@ -273,7 +275,7 @@ namespace Assembly69 {
                         dockSearch.IsActive = true;
 
                     // Set the tag as the active tab
-                    var ldp = dockSearch.Parent as AvalonDock.Layout.LayoutDocumentPane;
+                    var ldp = dockSearch.Parent as LayoutDocumentPane;
 					if (ldp != null) 
                     {
 						for (int x = 0; x < ldp.Children.Count; x++) 
@@ -424,7 +426,7 @@ namespace Assembly69 {
                         m.WriteMemory(address.ToString("X"), "float", value);
                         break;
                     case "Pointer":
-                        string will_this_work = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
+                        string will_this_work = new Int64Converter().ConvertFromString(value).ToString();
                         m.WriteMemory(address.ToString("X"), "long", will_this_work); // apparently it does
                         break;
                     case "String":
@@ -463,7 +465,7 @@ namespace Assembly69 {
             change_text.Text = pokelist.Count + " changes queued";
         }
 
-        private void DockManager_DocumentClosing(object sender, AvalonDock.DocumentClosingEventArgs e) {
+        private void DockManager_DocumentClosing(object sender, DocumentClosingEventArgs e) {
             // On tag window closing.
 
         }
