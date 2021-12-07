@@ -21,18 +21,22 @@ namespace Assembly69.Interface.Controls {
     /// </summary>
     public partial class TagBlock : UserControl
     {
-        public TagBlock()
+        public TagEditorControl EditorControl { get; }
+
+
+        public TagBlock(TagEditorControl editorControl)
         {
             InitializeComponent();
+            EditorControl = editorControl;
         }
 
         public KeyValuePair<long, vehi.c> children;
         public long block_address;
-        public MainWindow mainWindow;
+
 
         private void indexbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            mainWindow.recall_blockloop(children, block_address + (indexbox.SelectedIndex * children.Value.S), dockpanel);
+            EditorControl.recall_blockloop(children, block_address + (indexbox.SelectedIndex * children.Value.S), dockpanel);
         }
     }
 }
