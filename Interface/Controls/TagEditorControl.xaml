@@ -46,8 +46,6 @@
                 <RowDefinition Height="20"/>
                 <RowDefinition />
             </Grid.RowDefinitions>
-
-            
         </Grid>
     </Grid>
 </UserControl>
