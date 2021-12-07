@@ -1,8 +1,11 @@
 ﻿using System.Collections.Generic;
 
-namespace Assembly69.Halo.TagObjects {
-    public class vehi {
-        public struct c {
+namespace Assembly69.Halo.TagObjects
+{
+    public class vehi
+    {
+        public struct c
+        {
             public string T { get; set; }
             public Dictionary<long, c> B { get; set; }
 
@@ -64,7 +67,7 @@ namespace Assembly69.Halo.TagObjects {
                 { 4, new c{ T="TagRef"}}, // effe
                 { 32, new c{ T="TagRef"}}, // effe
                 { 64, new c{ T="Tagblock"}},
-                { 84, new c{ T="TagRef"}}, // 
+                { 84, new c{ T="TagRef"}}, //
                 { 112, new c{ T="Tagblock"}}
             }, S=148}},
             { 604, new c{ T="Tagblock"}}, // object_indirect_lighting_settings_definition
@@ -197,7 +200,7 @@ namespace Assembly69.Halo.TagObjects {
                 { 0, new c{ T="TagRef"}}, // weap
                 { 40, new c{ T="Float"}},
                 { 48, new c{ T="Float"}},
-                { 148, new c{ T="TagRef"}}, // 
+                { 148, new c{ T="TagRef"}}, //
                 { 188, new c{ T="Tagblock"}}
             }, S=212}},
             { 0xA8C, new c{ T="Tagblock"}}, // s_target_tracking_parameters
@@ -335,7 +338,6 @@ namespace Assembly69.Halo.TagObjects {
 
             { 0x10CC, new c{ T="TagRef"}},
             { 0x10EC, new c{ T="Float"}},
-
         };
 
         public static Dictionary<long, c> WeaponTag = new Dictionary<long, c>
@@ -370,7 +372,7 @@ namespace Assembly69.Halo.TagObjects {
                 { 4, new c{ T="TagRef"}}, // effe
                 { 32, new c{ T="TagRef"}}, // effe
                 { 64, new c{ T="Tagblock"}},
-                { 84, new c{ T="TagRef"}}, // 
+                { 84, new c{ T="TagRef"}}, //
                 { 112, new c{ T="Tagblock"}}
             }, S=148}},
 
@@ -538,8 +540,8 @@ namespace Assembly69.Halo.TagObjects {
 
             { 0x1128, new c{ T="Tagblock"}},
             { 0x113C, new c{ T="Tagblock"}}
-
         };
+
         public static Dictionary<long, c> HLMTTag = new Dictionary<long, c>
         {
             { 0x10, new c{ T="TagRef"}}, // mode
@@ -553,8 +555,8 @@ namespace Assembly69.Halo.TagObjects {
                 { 0x34, new c{ T="Tagblock"}},
                 { 0x48, new c{ T="Tagblock", B=new Dictionary<long, c> // object block
                 {
-                    { 12, new c{ T="TagRef"}}, // 
-                    { 40, new c{ T="TagRef"}}, // 
+                    { 12, new c{ T="TagRef"}}, //
+                    { 40, new c{ T="TagRef"}}, //
                 }, S=72}},
                 { 0x5C, new c{ T="Tagblock"}},
                 { 0x70, new c{ T="Tagblock"}},
@@ -655,7 +657,7 @@ namespace Assembly69.Halo.TagObjects {
                 { 4, new c{ T="TagRef"}}, // effe
                 { 32, new c{ T="TagRef"}}, // effe
                 { 64, new c{ T="Tagblock"}},
-                { 84, new c{ T="TagRef"}}, // 
+                { 84, new c{ T="TagRef"}}, //
                 { 112, new c{ T="Tagblock"}}
             }, S=148}},
             { 604, new c{ T="Tagblock"}}, // object_indirect_lighting_settings_definition

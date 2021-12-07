@@ -1,3 +1,7 @@
+using Assembly69.Interface.Controls;
+using AvalonDock;
+using AvalonDock.Layout;
+using Memory;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,12 +10,9 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using Assembly69.Interface.Controls;
-using AvalonDock;
-using AvalonDock.Layout;
-using Memory;
 
-namespace Assembly69 {
+namespace Assembly69
+{
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -44,25 +45,29 @@ namespace Assembly69 {
             base_address = m.ReadLong("HaloInfinite.exe+0x3E82120");
             string validtest = m.ReadString(base_address.ToString("X"));
 
-            if (validtest == "tag instances") {
+            if (validtest == "tag instances")
+            {
                 hook_text.Text = "Process Hooked";
-            } else {
+            }
+            else
+            {
                 hook_text.Text = "Offset failed, scanning...";
 
                 long? aobScan = (await m.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
                 .First(); // "tag instances"
 
                 // Failed to find base tag address
-                if (aobScan == null || aobScan == 0) {
+                if (aobScan == null || aobScan == 0)
+                {
                     base_address = -1;
                     hook_text.Text = "Failed to locate base tag address";
-                } else {
+                }
+                else
+                {
                     base_address = aobScan.Value;
                     hook_text.Text = "Process Hooked";
                 }
             }
-
-            
         }
 
         public List<tag_struct> Tags_List { get; set; } = null!;
@@ -81,7 +86,6 @@ namespace Assembly69 {
             public string Tag_type_desc;
         }
 
-
         public struct group_tag_struct
         {
             public string tag_group_desc;
@@ -97,15 +101,15 @@ namespace Assembly69 {
             public TreeViewItem tag_category;
         }
 
-
         // load tags from Mem
-        private void BtnLoadTags_Click(object sender, RoutedEventArgs e) {
-            if (tag_count != -1) {
+        private void BtnLoadTags_Click(object sender, RoutedEventArgs e)
+        {
+            if (tag_count != -1)
+            {
                 tag_count = -1;
                 Tag_groups.Clear();
                 Tags_List.Clear();
             }
-
 
             TagsTree.Items.Clear();
 
@@ -125,10 +129,9 @@ namespace Assembly69 {
             {
                 tag_struct current_tag = new tag_struct();
 
-                long tag_address = tags_start + (tag_index*52);
+                long tag_address = tags_start + (tag_index * 52);
 
-                
-                byte[] test1 =  m.ReadBytes(tag_address.ToString("X"), 4);
+                byte[] test1 = m.ReadBytes(tag_address.ToString("X"), 4);
 
                 current_tag.Datnum = BitConverter.ToString(test1).Replace("-", string.Empty);
 
@@ -139,7 +142,7 @@ namespace Assembly69 {
 
                 current_tag.Tag_group = read_tag_group(m.ReadLong((tag_address + 0x8).ToString("X")));
 
-                current_tag.Tag_data = m.ReadLong((tag_address+0x10).ToString("X"));
+                current_tag.Tag_data = m.ReadLong((tag_address + 0x10).ToString("X"));
 
                 // do the tag definitition
                 Tags_List.Add(current_tag);
@@ -176,7 +179,6 @@ namespace Assembly69 {
                 Tag_groups.Add(key, current_group);
             }
 
-
             return key;
         }
 
@@ -201,7 +203,6 @@ namespace Assembly69 {
                 Tag_groups[Tag_groups.ElementAt(i).Key] = display_group;
             }
 
-
             for (int i = 0; i < Tags_List.Count; i++)
             {
                 TreeViewItem t = new TreeViewItem();
@@ -214,9 +215,7 @@ namespace Assembly69 {
                 t.Selected += Select_Tag_click;
 
                 dict_tag_group.tag_category.Items.Add(t);
-
             }
-
         }
 
         public Dictionary<string, string> inhaled_tagnames = new Dictionary<string, string>();
@@ -229,13 +228,12 @@ namespace Assembly69 {
             {
                 string[] hex_string = line.Split(" : ");
                 if (!inhaled_tagnames.ContainsKey(hex_string[0]))
-                inhaled_tagnames.Add(hex_string[0], hex_string[1]);
+                    inhaled_tagnames.Add(hex_string[0], hex_string[1]);
             }
         }
 
         public string convert_ID_to_tag_name(string value)
         {
-
             inhaled_tagnames.TryGetValue(value, out string potential_name);
 
             if (potential_name == null)
@@ -253,60 +251,58 @@ namespace Assembly69 {
             return new string(myArr);
         }
 
-
         private void Select_Tag_click(object sender, RoutedEventArgs e)
         {
             TreeViewItem? item = sender as TreeViewItem;
-            string? tagFull = (string) item.Header;
+            string? tagFull = (string)item.Header;
             string? tagName = tagFull.Split('\\').Last();
 
-			// Find the existing layout document ( draggable panel item )
-            if (dockManager.Layout.Descendents().OfType<LayoutDocument>().Any()) 
+            // Find the existing layout document ( draggable panel item )
+            if (dockManager.Layout.Descendents().OfType<LayoutDocument>().Any())
             {
                 var dockSearch = dockManager.Layout.Descendents()
                     .OfType<LayoutDocument>()
                     .FirstOrDefault(a => a.ContentId == tagFull);
 
                 // Check if we found the tag
-                if (dockSearch != null) 
+                if (dockSearch != null)
                 {
                     // Set the tag as active
-                    if (dockSearch.IsActive) 
+                    if (dockSearch.IsActive)
                         dockSearch.IsActive = true;
 
                     // Set the tag as the active tab
                     var ldp = dockSearch.Parent as LayoutDocumentPane;
-					if (ldp != null) 
+                    if (ldp != null)
                     {
-						for (int x = 0; x < ldp.Children.Count; x++) 
+                        for (int x = 0; x < ldp.Children.Count; x++)
                         {
-							var dlp = ldp.Children[x];
+                            var dlp = ldp.Children[x];
 
-							if (dlp == dockSearch) 
+                            if (dlp == dockSearch)
                             {
                                 ldp.SelectedContentIndex = x;
-							}
-						}
-					}
+                            }
+                        }
+                    }
 
-					return;
+                    return;
                 }
             }
 
-			// Create the tag editor.
+            // Create the tag editor.
             var tagEditor = new TagEditorControl(this);
-            tagEditor.inhale_tag( int.Parse(item.Tag.ToString()) );
+            tagEditor.inhale_tag(int.Parse(item.Tag.ToString()));
 
-			// Create the layout document for docking.
+            // Create the layout document for docking.
             var doc = new LayoutDocument();
             doc.Title = tagName;
             doc.IsActive = true;
             doc.Content = tagEditor;
             doc.ContentId = tagFull;
-			dockLayoutDocPane.Children.Add(doc);
-			dockLayoutRoot.ActiveContent = doc;
-		}
-
+            dockLayoutDocPane.Children.Add(doc);
+            dockLayoutRoot.ActiveContent = doc;
+        }
 
         // list of changes to ammend to the memory when we phit the poke button
         public Dictionary<long, KeyValuePair<string, string>> pokelist = new Dictionary<long, KeyValuePair<string, string>>();
@@ -315,7 +311,7 @@ namespace Assembly69 {
         public Dictionary<long, TagChangesBlock> UIpokelist = new Dictionary<long, TagChangesBlock>();
 
         // type (TagrefGroup, TagrefTag)
-        // address, 
+        // address,
         public void addpokechange(long offset, string type, string value)
         {
             // hmm we need to change this so we either update or add a new UI element
@@ -342,8 +338,6 @@ namespace Assembly69 {
 
             change_text.Text = pokelist.Count + " changes queued";
         }
-
-
 
         // need this to read tagref blocks - because we only get a datnum to figure out the name with
         // so we find what else has the same datnum and then run the other method to get name based off of ID
@@ -375,7 +369,7 @@ namespace Assembly69 {
         private void Searchbox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string search = Searchbox.Text;
-            foreach(TreeViewItem tv in TagsTree.Items)
+            foreach (TreeViewItem tv in TagsTree.Items)
             {
                 if (!tv.Header.ToString().Contains(search))
                 {
@@ -399,15 +393,10 @@ namespace Assembly69 {
                     foreach (TreeViewItem tc in tv.Items)
                     {
                         tc.Visibility = Visibility.Visible;
-                        
                     }
-
                 }
-
             }
         }
-
-
 
         // POKE OUR CHANGES LETSGOOOO
         private void BtnPokeChanges_Click(object sender, RoutedEventArgs e)
@@ -422,20 +411,25 @@ namespace Assembly69 {
                     case "4Byte":
                         m.WriteMemory(address.ToString("X"), "int", value);
                         break;
+
                     case "Float":
                         m.WriteMemory(address.ToString("X"), "float", value);
                         break;
+
                     case "Pointer":
                         string will_this_work = new Int64Converter().ConvertFromString(value).ToString();
                         m.WriteMemory(address.ToString("X"), "long", will_this_work); // apparently it does
                         break;
+
                     case "String":
                         m.WriteMemory(address.ToString("X"), "string", value + "\0");
                         break;
+
                     case "TagrefGroup":
                         m.WriteMemory(address.ToString("X"), "string", ReverseString(value));
 
                         break;
+
                     case "TagrefTag":
                         string why_do_i_need_to_convert_EVERYTHING = Convert.ToInt32(value, 16).ToString();
                         // THAT FLIPS IT BACKWARDS
@@ -443,7 +437,6 @@ namespace Assembly69 {
                         string temp = Regex.Replace(value, @"(.{2})", "$1 ");
                         temp = temp.TrimEnd();
                         m.WriteMemory(address.ToString("X"), "bytes", temp);
-
 
                         break;
                 }
@@ -465,15 +458,19 @@ namespace Assembly69 {
             change_text.Text = pokelist.Count + " changes queued";
         }
 
-        private void DockManager_DocumentClosing(object sender, DocumentClosingEventArgs e) {
+        private void DockManager_DocumentClosing(object sender, DocumentClosingEventArgs e)
+        {
             // On tag window closing.
-
         }
 
-        private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e) {
-            if (changes_panel.Visibility == Visibility.Visible) {
+        private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e)
+        {
+            if (changes_panel.Visibility == Visibility.Visible)
+            {
                 changes_panel.Visibility = Visibility.Collapsed;
-            } else {
+            }
+            else
+            {
                 changes_panel.Visibility = Visibility.Visible;
             }
         }

@@ -2,7 +2,8 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Assembly69.Interface.Controls {
+namespace Assembly69.Interface.Controls
+{
     /// <summary>
     /// Interaction logic for tagref_dropdown.xaml
     /// </summary>
@@ -22,8 +23,6 @@ namespace Assembly69.Interface.Controls {
 
         public bool is_closing;
 
-
-
         public void closethis()
         {
             if (!is_closing)
@@ -32,7 +31,6 @@ namespace Assembly69.Interface.Controls {
                 Close();
             }
         }
-
 
         private void Searchbox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -61,11 +59,8 @@ namespace Assembly69.Interface.Controls {
                     foreach (TreeViewItem tc in tv.Items)
                     {
                         tc.Visibility = Visibility.Visible;
-
                     }
-
                 }
-
             }
         }
     }

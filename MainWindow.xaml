@@ -6,27 +6,27 @@
         mc:Ignorable="d"
         Title="Infinite Runtime Tagviewer" Height="450" Width="800">
     <Window.Resources>
-        <ScaleTransform 
-            x:Key="windowScaleTransform" 
-            ScaleX="1" 
+        <ScaleTransform
+            x:Key="windowScaleTransform"
+            ScaleX="1"
             ScaleY="1" />
     </Window.Resources>
-    
-    <Grid  LayoutTransform="{StaticResource windowScaleTransform}" >
+
+    <Grid  LayoutTransform="{StaticResource windowScaleTransform}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="8"/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="8" />
+            <ColumnDefinition Width="3*" />
         </Grid.ColumnDefinitions>
-        
-        <GridSplitter Grid.Column="1" 
-              HorizontalAlignment="Stretch" 
+
+        <GridSplitter Grid.Column="1"
+              HorizontalAlignment="Stretch"
               VerticalAlignment="Stretch"
-              Background="#ccc" 
+              Background="#ccc"
               ShowsPreview="true" />
-        
+
         <!-- Tags Grid -->
-        <Grid Grid.Column="2" Margin="5,0,0,0" >
+        <Grid Grid.Column="2" Margin="5,0,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="auto" />
@@ -44,7 +44,7 @@
 				<DockingManager.Theme>
                     <GenericTheme />
                 </DockingManager.Theme>
-                
+
                 <DockingManager.DocumentHeaderTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -52,7 +52,7 @@
                         </StackPanel>
                     </DataTemplate>
                 </DockingManager.DocumentHeaderTemplate>
-                
+
                 <LayoutRoot x:Name="dockLayoutRoot">
 					<LayoutPanel x:Name="dockLayoutPanel">
                         <LayoutDocumentPaneGroup>
@@ -64,20 +64,20 @@
 
             <Grid Grid.Row="1" Margin="0,0,0,5">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="40"/>
-                    <ColumnDefinition Width="110"/>
-                    <ColumnDefinition Width="110"/>
-                    <ColumnDefinition Width="40"/>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Button     Content="Poke" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BtnPokeChanges_Click"/>
-                <TextBlock  x:Name="poke_text" Grid.Column="1" HorizontalAlignment="Left" Text=". . ." VerticalAlignment="Center" Margin="5,0,0,0"/>
+                <Button     Content="Poke" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BtnPokeChanges_Click" />
+                <TextBlock  x:Name="poke_text" Grid.Column="1" HorizontalAlignment="Left" Text=". . ." VerticalAlignment="Center" Margin="5,0,0,0" />
 
-                <TextBlock  x:Name="change_text" Grid.Column="2" HorizontalAlignment="Right" Text="0 changes queued" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <TextBlock  x:Name="change_text" Grid.Column="2" HorizontalAlignment="Right" Text="0 changes queued" VerticalAlignment="Center" Margin="0,0,5,0" />
                 <Button     Grid.Column="3" Content="Clear" HorizontalAlignment="Stretch" Click="BtnClearQueue_Click" />
-                <Button     Grid.Column="4" Content="Show/Hide Queue" HorizontalAlignment="Stretch" Click="BtnShowHideQueue_Click" Margin="10,0,0,0"   />
+                <Button     Grid.Column="4" Content="Show/Hide Queue" HorizontalAlignment="Stretch" Click="BtnShowHideQueue_Click" Margin="10,0,0,0" />
             </Grid>
 
             <StackPanel x:Name="changes_panel" Grid.Row="3" Grid.ColumnSpan="5" Margin="0,10,0,0" Visibility="Collapsed" />
@@ -86,10 +86,10 @@
 
         <Grid Margin="0,0,2,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="10"/>
-                <RowDefinition Height="20"/>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="20" />
                 <RowDefinition />
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
 
             <!-- > Search Box -->
@@ -100,27 +100,27 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Label   Content="Search"   Grid.Column="0" Width="auto" Margin="0,0,10,0" />
-                    <TextBox x:Name="Searchbox" Grid.Column="1" TextChanged="Searchbox_TextChanged" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                    <TextBox x:Name="Searchbox" Grid.Column="1" TextChanged="Searchbox_TextChanged" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
                 </Grid>
             </Grid>
             <!-- < Search Box -->
 
-            <TreeView x:Name="TagsTree" Grid.Row="2" >
+            <TreeView x:Name="TagsTree" Grid.Row="2">
                 <TreeViewItem Header="Hook and load to get started!" />
             </TreeView>
             <!-- < #TagsTree -->
 
             <Grid Grid.Row="3" Grid.ColumnSpan="1" Margin="5,5,5,5" Background="White">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto" />
                     <ColumnDefinition />
-                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
 
                 <Button Content="Hook" Grid.Column="0" Click="BtnHook_Click" Padding="4,4,4,4" />
                 <TextBlock x:Name="hook_text" Text="Not hooked" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" />
 
-                <Button Content="Load" Grid.Column="2" Click="BtnLoadTags_Click" Padding="4,4,4,4"/>
+                <Button Content="Load" Grid.Column="2" Click="BtnLoadTags_Click" Padding="4,4,4,4" />
             </Grid>
         </Grid>
     </Grid>

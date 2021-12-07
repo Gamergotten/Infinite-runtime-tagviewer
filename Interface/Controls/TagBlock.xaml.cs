@@ -1,15 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using Assembly69.Halo.TagObjects;
+using System.Collections.Generic;
 using System.Windows.Controls;
-using Assembly69.Halo.TagObjects;
 
-namespace Assembly69.Interface.Controls {
+namespace Assembly69.Interface.Controls
+{
     /// <summary>
     /// Interaction logic for tagblock.xaml
     /// </summary>
     public partial class TagBlock
     {
         public TagEditorControl EditorControl { get; }
-
 
         public TagBlock(TagEditorControl editorControl)
         {
@@ -19,7 +19,6 @@ namespace Assembly69.Interface.Controls {
 
         public KeyValuePair<long, vehi.c> children;
         public long block_address;
-
 
         private void indexbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
