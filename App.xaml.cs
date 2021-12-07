@@ -1,6 +1,4 @@
-﻿using System.Windows;
-
-namespace Assembly69
+﻿namespace Assembly69
 {
     /// <summary>
     /// Interaction logic for App.xaml
