@@ -40,11 +40,28 @@ namespace Assembly69 {
         public int tag_count = -1;
 
         // Hook to halo infinite
-        private void BtnHook_Click(object sender, RoutedEventArgs e)
+        private async void BtnHook_Click(object sender, RoutedEventArgs e)
         {
             m.OpenProcess("HaloInfinite.exe");
-            base_address = m.ReadLong("HaloInfinite.exe+0x3E82120");
+            long? aobScan = (await m.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
+                .First(); // "tag instances"
 
+            // Failed to find base tag address
+            if (aobScan == null || aobScan == 0) 
+            {
+                base_address = -1;
+                hook_text.Text = "Failed to locate base tag address";
+            }
+            else 
+            {
+                base_address = aobScan.Value;
+                hook_text.Text = "Process Hooked";
+            }
+
+            return;
+
+            // Old base address discovery
+            base_address = m.ReadLong("HaloInfinite.exe+0x3E82120");
             string validtest = m.ReadString(base_address.ToString("X"));
             if(validtest == "tag instances")
             {
