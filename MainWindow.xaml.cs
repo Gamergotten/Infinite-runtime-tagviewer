@@ -273,8 +273,7 @@ namespace Assembly69 {
                         dockSearch.IsActive = true;
 
                     // Set the tag as the active tab
-					bool found = false;
-					var ldp = dockSearch.Parent as AvalonDock.Layout.LayoutDocumentPane;
+                    var ldp = dockSearch.Parent as AvalonDock.Layout.LayoutDocumentPane;
 					if (ldp != null) 
                     {
 						for (int x = 0; x < ldp.Children.Count; x++) 
@@ -283,8 +282,7 @@ namespace Assembly69 {
 
 							if (dlp == dockSearch) 
                             {
-								found = true;
-								ldp.SelectedContentIndex = x;
+                                ldp.SelectedContentIndex = x;
 							}
 						}
 					}
@@ -443,7 +441,6 @@ namespace Assembly69 {
                         string temp = Regex.Replace(value, @"(.{2})", "$1 ");
                         temp = temp.TrimEnd();
                         m.WriteMemory(address.ToString("X"), "bytes", temp);
-                        int w2 = 0;
 
 
                         break;
