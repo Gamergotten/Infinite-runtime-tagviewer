@@ -65,8 +65,8 @@ namespace Assembly69.Interface.Controls {
 
         // for text boxes
         private void value_TextChanged(object sender, TextChangedEventArgs e) {
-            TextBox tb = sender as TextBox;
-            string[] s = tb.Tag.ToString().Split(":");
+            TextBox tb = sender as TextBox ?? throw new InvalidOperationException();
+            string[] s = tb.Tag.ToString()!.Split(":");
             mainWindow.addpokechange(long.Parse(s[0]), s[1], tb.Text);
         }
 
