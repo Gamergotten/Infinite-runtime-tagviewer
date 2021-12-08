@@ -18,6 +18,7 @@ using System.Text.RegularExpressions;
 using Assembly69.Halo.TagObjects;
 using Assembly69.Interface.Controls;
 using AvalonDock.Layout;
+using Assembly69.Interface.Windows;
 
 namespace Assembly69 {
     /// <summary>
@@ -48,6 +49,12 @@ namespace Assembly69 {
             hook_text.Text = "Openning process...";
             m.OpenProcess("HaloInfinite.exe");
 
+            if (m.pHandle == IntPtr.Zero) {
+                // Could not find the process
+                hook_text.Text = "Cant find HaloInfinite.exe";
+                return;
+            }
+
             // Get the base address
             base_address = m.ReadLong("HaloInfinite.exe+0x3E82120");
             string validtest = m.ReadString(base_address.ToString("X"));
@@ -60,7 +67,8 @@ namespace Assembly69 {
                 long? aobScan = (await m.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
                 .First(); // "tag instances"
 
-                // Failed to find base tag address
+                // Failed to find base tag address+		dockManager	{AvalonDock.DockingManager}	AvalonDock.DockingManager
+
                 if (aobScan == null || aobScan == 0) {
                     base_address = -1;
                     hook_text.Text = "Failed to locate base tag address";
@@ -262,59 +270,61 @@ namespace Assembly69 {
         }
 
 
-        private void Select_Tag_click(object sender, RoutedEventArgs e)
-        {
-            TreeViewItem? item = sender as TreeViewItem;
-            string? tagFull = (string) item.Header;
-            string? tagName = tagFull.Split('\\').Last();
+       
+        public void CreateTagEditorTabByTagIndex(int tagIndex) {
+            var     tag = Tags_List[tagIndex];
+            var     tagFull = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectID);
+            string  tagName = tagFull.Split('\\').Last();
 
-			// Find the existing layout document ( draggable panel item )
-            if (dockManager.Layout.Descendents().OfType<LayoutDocument>().Any()) 
-            {
+            // Find the existing layout document ( draggable panel item )
+            if (dockManager.Layout.Descendents().OfType<LayoutDocument>().Any()) {
                 var dockSearch = dockManager.Layout.Descendents()
                     .OfType<LayoutDocument>()
                     .FirstOrDefault(a => a.ContentId == tagFull);
 
                 // Check if we found the tag
-                if (dockSearch != null) 
-                {
+                if (dockSearch != null) {
                     // Set the tag as active
-                    if (dockSearch.IsActive) 
+                    if (dockSearch.IsActive)
                         dockSearch.IsActive = true;
 
                     // Set the tag as the active tab
-					bool found = false;
-					var ldp = dockSearch.Parent as AvalonDock.Layout.LayoutDocumentPane;
-					if (ldp != null) 
-                    {
-						for (int x = 0; x < ldp.Children.Count; x++) 
-                        {
-							var dlp = ldp.Children[x];
+                    bool found = false; // used for debugging
+                    var ldp = dockSearch.Parent as AvalonDock.Layout.LayoutDocumentPane;
+                    if (ldp != null) {
+                        for (int x = 0; x < ldp.Children.Count; x++) {
+                            var dlp = ldp.Children[x];
 
-							if (dlp == dockSearch) 
-                            {
-								found = true;
-								ldp.SelectedContentIndex = x;
-							}
-						}
-					}
+                            if (dlp == dockSearch) {
+                                found = true;
+                                ldp.SelectedContentIndex = x;
+                            }
+                        }
+                    }
 
-					return;
+                    return;
                 }
             }
 
-			// Create the tag editor.
+            // Create the tag editor.
             var tagEditor = new TagEditorControl(this);
-            tagEditor.inhale_tag( int.Parse(item.Tag.ToString()) );
+            tagEditor.inhale_tag(tagIndex);
 
-			// Create the layout document for docking.
-            var doc = new LayoutDocument();
+            // Create the layout document for docking.
+            LayoutDocument doc = tagEditor.LayoutDocument = new LayoutDocument();
             doc.Title = tagName;
             doc.IsActive = true;
             doc.Content = tagEditor;
             doc.ContentId = tagFull;
-			dockLayoutDocPane.Children.Add(doc);
-			dockLayoutRoot.ActiveContent = doc;
+
+            dockLayoutDocPane.Children.Add(doc);
+            dockLayoutRoot.ActiveContent = doc;
+        }
+
+        private void Select_Tag_click(object sender, RoutedEventArgs e)
+        {
+            TreeViewItem? item = sender as TreeViewItem;
+            CreateTagEditorTabByTagIndex(int.Parse(item.Tag.ToString()));
 		}
 
 
@@ -427,6 +437,7 @@ namespace Assembly69 {
                 long address = pair.Key;
                 string type = pair.Value.Key;
                 string value = pair.Value.Value;
+
                 switch (type)
                 {
                     case "4Byte":
@@ -444,7 +455,6 @@ namespace Assembly69 {
                         break;
                     case "TagrefGroup":
                         m.WriteMemory(address.ToString("X"), "string", ReverseString(value));
-
                         break;
                     case "TagrefTag":
                         string why_do_i_need_to_convert_EVERYTHING = Convert.ToInt32(value, 16).ToString();

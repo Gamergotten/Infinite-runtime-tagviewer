@@ -1,4 +1,7 @@
 ﻿using Assembly69.Halo.TagObjects;
+using Assembly69.Interface.Windows;
+
+using AvalonDock.Layout;
 
 using Memory;
 
@@ -26,6 +29,8 @@ namespace Assembly69.Interface.Controls {
     public partial class TagEditorControl : UserControl {
         MainWindow mainWindow;
         Mem m;
+
+        public LayoutDocument LayoutDocument { get; internal set; }
 
         public TagEditorControl(MainWindow mw) {
             this.mainWindow = mw;
@@ -96,29 +101,67 @@ namespace Assembly69.Interface.Controls {
 
         public void gotobutton(object sender, RoutedEventArgs e) {
             Button b = sender as Button;
-            int w = int.Parse(b.Tag.ToString());
-            if (w != -1)
-                inhale_tag(w);
+            var sTagId = b.Tag.ToString();
+            int iTagId = int.Parse(sTagId);
+
+            if (iTagId != -1) {
+                mainWindow.CreateTagEditorTabByTagIndex(iTagId);
+            }
+        }
+
+        // Gets the absolute mouse position, relative to screen
+        //Point GetMousePos() => _window.PointToScreen(Mouse.GetPosition(_window));
+
+        DependencyObject GetTopLevelControl(DependencyObject control) {
+            DependencyObject tmp = control;
+            DependencyObject parent = null;
+            while ((tmp = VisualTreeHelper.GetParent(tmp)) != null) {
+                parent = tmp;
+            }
+            return parent;
+        }
+
+        T? GetTopLevelControlOfType<T>(DependencyObject control) where T : DependencyObject {
+            DependencyObject tmp = control;
+            T? target = default(T);
+
+            while ((tmp = VisualTreeHelper.GetParent(tmp)) != null) {
+                System.Diagnostics.Debug.WriteLine("- " + tmp.GetType());
+
+                if (tmp is T)
+                    target = (T) tmp;
+            }
+
+            return target;
+        }
+
+        private Rect GetAbsolutePlacement(FrameworkElement element, bool relativeToScreen = false) {
+            var absolutePos = element.PointToScreen(new System.Windows.Point(0, 0));
+            if (relativeToScreen) {
+                return new Rect(absolutePos.X, absolutePos.Y, element.ActualWidth, element.ActualHeight);
+            }
+
+            var posMW = Application.Current.MainWindow.PointToScreen(new System.Windows.Point(0, 0));
+            absolutePos = new System.Windows.Point(absolutePos.X - posMW.X, absolutePos.Y - posMW.Y);
+            return new Rect(absolutePos.X, absolutePos.Y, element.ActualWidth, element.ActualHeight);
         }
 
         private void tagrefbutton(object sender, RoutedEventArgs e) {
             Button b = sender as Button;
-
             string[] s = b.Tag.ToString().Split(":");
 
             if (s.Length > 1) {
-                mainWindow.trd = new TagRefDropdown();
+                var trd = mainWindow.trd = new TagRefDropdown();
+                var trdWidth = trd.Width = b.ActualWidth + 116;
+                var trdHeight = trd.Height = 400;
+
 
                 var myButtonLocation = b.PointToScreen(new Point(0, 0));
 
-                mainWindow.trd.Width = b.ActualWidth + 116;
-                mainWindow.trd.Height = 400;
-                mainWindow.trd.Left = myButtonLocation.X - 8;
-                mainWindow.trd.Top = myButtonLocation.Y + 1;
+                trd.Left = myButtonLocation.X - 8;
+                trd.Top = myButtonLocation.Y + 1;
 
-
-
-                mainWindow.trd.MainWindow = mainWindow;
+                trd.MainWindow = mainWindow;
                 mainWindow.the_last_tagref_button_we_pressed = b;
 
                 TreeViewItem item = new TreeViewItem();
@@ -211,6 +254,8 @@ namespace Assembly69.Interface.Controls {
                     tfb1.tag_button.Click += new RoutedEventHandler(tagrefbutton);
 
                     int ID = mainWindow.get_tagindex_by_datnum(test);
+
+                    // tag
 
                     tfb1.goto_button.Tag = ID; // need to get the index of the tag not the ID
                     tfb1.goto_button.Click += new RoutedEventHandler(gotobutton);
