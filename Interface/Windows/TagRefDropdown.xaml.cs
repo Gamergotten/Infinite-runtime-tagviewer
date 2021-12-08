@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Assembly69.Interface.Controls {
+namespace Assembly69.Interface.Windows {
     /// <summary>
     /// Interaction logic for tagref_dropdown.xaml
     /// </summary>
@@ -43,6 +43,11 @@ namespace Assembly69.Interface.Controls {
             }
         }
 
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e) {
+            // If the user is holding down left mouse let them drag the window
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
 
         private void Searchbox_TextChanged(object sender, TextChangedEventArgs e)
         {
