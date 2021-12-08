@@ -790,5 +790,212 @@ namespace Assembly69.Halo.TagObjects {
             { 0xBDC, new c{ T="TagRef"}}, // EFFE
             { 0xBF5, new c{ T="TagRef"}}, // EFFE
         };
+
+        public static Dictionary<long, c> sddtTag = new Dictionary<long, c>
+        {
+            { 0, new c{ T="Pointer"}},
+            { 8, new c{ T="4Byte"}}, // datnum
+            { 12, new c{ T="4Byte"}}, // tagID
+
+            { 0x40, new c{ T="4Byte"}},
+
+            { 0x44, new c{ T="Tagblock"}},
+            { 0x58, new c{ T="Tagblock"}},
+            { 0x6C, new c{ T="Tagblock"}},
+            { 0x80, new c{ T="Tagblock"}},
+            { 0x94, new c{ T="Tagblock"}},
+            { 0xA8, new c{ T="Tagblock"}},
+
+            { 0xC0, new c{ T="4Byte"}},
+
+            { 0xC4, new c{ T="Tagblock"}},
+            { 0xD8, new c{ T="Tagblock"}},
+            { 0xEC, new c{ T="Tagblock"}},
+            { 0x100, new c{ T="Tagblock"}},
+            { 0x114, new c{ T="Tagblock"}},
+            { 0x128, new c{ T="Tagblock"}},
+            { 0x13C, new c{ T="Tagblock"}},
+            { 0x158, new c{ T="Tagblock"}},
+            { 0x16C, new c{ T="Tagblock"}},
+            { 0x180, new c{ T="Tagblock"}},
+            { 0x194, new c{ T="Tagblock"}},
+            { 0x1A8, new c{ T="Tagblock"}},
+            { 0x1BC, new c{ T="Tagblock"}},
+            { 0x1D0, new c{ T="Tagblock"}},
+            { 0x1F0, new c{ T="Tagblock"}},
+            { 0x204, new c{ T="Tagblock"}},
+
+
+
+        };
+
+        public static Dictionary<long, c> levlTag = new Dictionary<long, c>
+        {
+            { 0, new c{ T="Pointer"}},
+            { 8, new c{ T="4Byte"}}, // datnum
+            { 12, new c{ T="4Byte"}}, // tagID
+
+            { 0x10, new c{ T="Tagblock"}},
+            { 0x24, new c{ T="Tagblock"}},
+            { 0x38, new c{ T="Tagblock"}},
+            { 0x4C, new c{ T="Tagblock"}},
+
+            { 0x5C, new c{ T="4Byte"}},
+
+            { 0x60, new c{ T="Tagblock"}},
+            { 0x74, new c{ T="Tagblock"}},
+            { 0x88, new c{ T="Tagblock"}},
+            { 0x9C, new c{ T="Tagblock"}},
+            { 0xB0, new c{ T="Tagblock"}},
+            { 0xC4, new c{ T="Tagblock"}},
+            { 0xD8, new c{ T="Tagblock"}},
+            { 0xEC, new c{ T="Tagblock"}},
+            { 0x100, new c{ T="Tagblock"}},
+            { 0x114, new c{ T="Tagblock"}},
+            { 0x128, new c{ T="Tagblock"}},
+            { 0x13C, new c{ T="Tagblock"}},
+            { 0x150, new c{ T="Tagblock"}},
+            { 0x164, new c{ T="Tagblock"}},
+            { 0x178, new c{ T="Tagblock"}},
+            { 0x18C, new c{ T="Tagblock"}},
+            { 0x1A0, new c{ T="Tagblock"}},
+            { 0x1B4, new c{ T="Tagblock"}},
+            { 0x1C8, new c{ T="Tagblock"}},
+            { 0x1DC, new c{ T="Tagblock"}},
+            { 0x1F0, new c{ T="Tagblock"}},
+            { 0x204, new c{ T="Tagblock"}},
+            { 0x218, new c{ T="Tagblock"}},
+            { 0x22C, new c{ T="Tagblock"}},
+            { 0x240, new c{ T="Tagblock"}},
+            { 0x254, new c{ T="Tagblock"}},
+            { 0x268, new c{ T="Tagblock"}},
+            { 0x27C, new c{ T="Tagblock"}},
+            { 0x290, new c{ T="Tagblock"}},
+            { 0x2A4, new c{ T="Tagblock"}},
+            { 0x2B8, new c{ T="Tagblock"}},
+            { 0x2CC, new c{ T="Tagblock"}},
+            { 0x2E0, new c{ T="Tagblock"}},
+            { 0x2F4, new c{ T="Tagblock"}},
+            { 0x308, new c{ T="Tagblock"}},
+            { 0x31C, new c{ T="Tagblock"}},
+            { 0x330, new c{ T="Tagblock"}},
+            { 0x344, new c{ T="Tagblock"}},
+            { 0x358, new c{ T="Tagblock"}},
+            { 0x36C, new c{ T="Tagblock"}},
+            { 0x380, new c{ T="Tagblock"}},
+            { 0x394, new c{ T="Tagblock"}},
+            { 0x3A8, new c{ T="Tagblock"}},
+            { 0x3BC, new c{ T="Tagblock"}},
+            { 0x3D0, new c{ T="Tagblock"}},
+            { 0x3E4, new c{ T="Tagblock"}},
+            { 0x3F8, new c{ T="Tagblock"}},
+            { 0x40C, new c{ T="Tagblock"}},
+            { 0x420, new c{ T="Tagblock"}},
+            { 0x434, new c{ T="Tagblock"}},
+            { 0x448, new c{ T="Tagblock"}},
+            { 0x45C, new c{ T="Tagblock"}},
+            { 0x470, new c{ T="Tagblock"}},
+            { 0x484, new c{ T="Tagblock"}},
+            { 0x498, new c{ T="Tagblock"}},
+            { 0x4AC, new c{ T="Tagblock"}},
+            { 0x4C0, new c{ T="Tagblock"}},
+            { 0x4D4, new c{ T="Tagblock"}},
+            { 0x4E8, new c{ T="Tagblock"}},
+            { 0x4FC, new c{ T="Tagblock"}},
+            { 0x510, new c{ T="Tagblock"}},
+            { 0x524, new c{ T="Tagblock"}},
+            { 0x54C, new c{ T="Tagblock"}},
+            { 0x560, new c{ T="Tagblock"}},
+            { 0x574, new c{ T="Tagblock"}},
+            { 0x588, new c{ T="Tagblock"}},
+            { 0x59C, new c{ T="Tagblock"}},
+            { 0x5B0, new c{ T="Tagblock"}},
+            { 0x5C4, new c{ T="Tagblock"}},
+            { 0x5D8, new c{ T="Tagblock"}},
+            { 0x5EC, new c{ T="Tagblock"}},
+            { 0x600, new c{ T="Tagblock"}},
+            { 0x614, new c{ T="Tagblock"}},
+            { 0x628, new c{ T="Tagblock"}},
+            { 0x63C, new c{ T="Tagblock"}},
+            { 0x650, new c{ T="Tagblock"}},
+            { 0x664, new c{ T="Tagblock"}},
+            { 0x678, new c{ T="Tagblock"}},
+            { 0x68C, new c{ T="Tagblock"}},
+            { 0x6A0, new c{ T="Tagblock"}},
+            { 0x6B4, new c{ T="Tagblock"}},
+            { 0x6C8, new c{ T="Tagblock"}},
+            { 0x6DC, new c{ T="Tagblock"}},
+            { 0x6F0, new c{ T="Tagblock"}},
+            { 0x71C, new c{ T="Tagblock"}},
+
+            { 0x730, new c{ T="TagRef"}},
+            { 0x74C, new c{ T="TagRef"}},
+
+            { 0x788, new c{ T="Tagblock"}},
+
+            { 0x79C, new c{ T="TagRef"}},
+            { 0x7B8, new c{ T="TagRef"}},
+            { 0x7D4, new c{ T="TagRef"}},
+            { 0x7F0, new c{ T="TagRef"}},
+
+            { 0x80C, new c{ T="Tagblock"}},
+            { 0x820, new c{ T="Tagblock"}},
+
+            { 0x834, new c{ T="TagRef"}},
+
+            { 0x850, new c{ T="Tagblock"}},
+            { 0x864, new c{ T="Tagblock"}},
+            { 0x878, new c{ T="Tagblock"}},
+            { 0x88C, new c{ T="Tagblock"}},
+            { 0x8A0, new c{ T="Tagblock"}},
+            { 0x8B4, new c{ T="Tagblock"}},
+
+            { 0x8C8, new c{ T="TagRef"}},
+            { 0x8E4, new c{ T="TagRef"}},
+            { 0x900, new c{ T="TagRef"}},
+            { 0x91C, new c{ T="TagRef"}},
+            { 0x938, new c{ T="TagRef"}},
+
+            { 0x954, new c{ T="Tagblock"}},
+            { 0x968, new c{ T="Tagblock"}},
+            { 0x97C, new c{ T="Tagblock"}},
+            { 0x990, new c{ T="Tagblock"}},
+            { 0x9A4, new c{ T="Tagblock"}},
+            { 0x9B8, new c{ T="Tagblock"}},
+
+            { 0x9CC, new c{ T="TagRef"}},
+            { 0x9E8, new c{ T="TagRef"}},
+            { 0xA04, new c{ T="TagRef"}},
+            { 0xA20, new c{ T="TagRef"}},
+            { 0xA3C, new c{ T="TagRef"}},
+            { 0xA58, new c{ T="TagRef"}},
+            { 0xA74, new c{ T="TagRef"}},
+            { 0xA90, new c{ T="TagRef"}},
+            { 0xAAC, new c{ T="TagRef"}},
+
+            { 0xAE8, new c{ T="Tagblock"}},
+            { 0xAFC, new c{ T="Tagblock"}},
+            { 0xB10, new c{ T="Tagblock"}},
+            { 0xB24, new c{ T="Tagblock"}},
+
+            { 0xB38, new c{ T="TagRef"}},
+            { 0xB54, new c{ T="Tagblock"}},
+            { 0xB68, new c{ T="Tagblock"}},
+            { 0xB7C, new c{ T="TagRef"}},
+            { 0xB98, new c{ T="TagRef"}},
+
+            { 0xBB8, new c{ T="Tagblock"}},
+
+            { 0xBD4, new c{ T="TagRef"}},
+            { 0xBF0, new c{ T="TagRef"}},
+            { 0xC0C, new c{ T="TagRef"}},
+            { 0xC48, new c{ T="TagRef"}},
+            { 0xC64, new c{ T="TagRef"}},
+
+            { 0xC84, new c{ T="Tagblock"}},
+            { 0xCB4, new c{ T="Tagblock"}},
+            { 0xCC8, new c{ T="Tagblock"}},
+            { 0xCDC, new c{ T="Tagblock"}}
+        };
     }
 }

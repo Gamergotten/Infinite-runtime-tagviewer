@@ -54,7 +54,7 @@ namespace Assembly69 {
 
             if (validtest == "tag instances") {
                 hook_text.Text = "Process Hooked";
-            } else {
+            } else { // eww
                 hook_text.Text = "Offset failed, scanning...";
 
                 long? aobScan = (await m.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
