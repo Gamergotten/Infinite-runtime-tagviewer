@@ -242,7 +242,10 @@ namespace Assembly69.Interface.Controls
             // need to do this the lazy way again, have to head off in a sec
             Grid td = mainWindow.the_last_tagref_button_we_pressed.Parent as Grid;
             Button X = td.Children[2] as Button;
-            X.Tag = ID;
+            //X.Tag = ID;
+
+            X.Tag = mainWindow.get_tagindex_by_datnum(s[1]);
+
 
             if (mainWindow.trd != null)
             {
