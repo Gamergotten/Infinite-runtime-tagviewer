@@ -1,13 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 
-namespace Assembly69.Interface.Controls
-{
+namespace Assembly69.Interface.Windows {
     /// <summary>
     /// Interaction logic for tagref_dropdown.xaml
     /// </summary>
-    public partial class TagRefDropdown
+    public partial class TagRefDropdown : Window
     {
         public TagRefDropdown()
         {
@@ -23,6 +32,8 @@ namespace Assembly69.Interface.Controls
 
         public bool is_closing;
 
+
+
         public void closethis()
         {
             if (!is_closing)
@@ -30,6 +41,12 @@ namespace Assembly69.Interface.Controls
                 is_closing = true;
                 Close();
             }
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e) {
+            // If the user is holding down left mouse let them drag the window
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
         }
 
         private void Searchbox_TextChanged(object sender, TextChangedEventArgs e)
@@ -59,8 +76,11 @@ namespace Assembly69.Interface.Controls
                     foreach (TreeViewItem tc in tv.Items)
                     {
                         tc.Visibility = Visibility.Visible;
+
                     }
+
                 }
+
             }
         }
     }
