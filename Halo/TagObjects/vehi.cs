@@ -5,9 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assembly69.Halo.TagObjects {
-    public class vehi {
-        public struct c {
+namespace Assembly69.Halo.TagObjects
+{
+    public class vehi
+    {
+        public struct c
+        {
             public string T { get; set; }
             public Dictionary<long, c> B { get; set; }
 

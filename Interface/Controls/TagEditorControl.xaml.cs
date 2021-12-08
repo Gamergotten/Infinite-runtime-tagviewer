@@ -32,7 +32,10 @@ namespace Assembly69.Interface.Controls
         MainWindow mainWindow;
         Mem m;
 
-        public TagEditorControl(MainWindow mw) {
+        public LayoutDocument LayoutDocument { get; internal set; }
+
+        public TagEditorControl(MainWindow mw)
+        {
             this.mainWindow = mw;
             this.m = mainWindow.m;
 
@@ -49,7 +52,7 @@ namespace Assembly69.Interface.Controls
 
             tagview_panels.Children.Clear();
 
-            if (loading_tag.Tag_group == "vehi") // i keep forgetting how switches work so i haven't changed this yet
+            if (loading_tag.Tag_group == "vehi")
             {
 
                 Dictionary<long, vehi.c> strings = vehi.VehicleTag;
@@ -122,13 +125,14 @@ namespace Assembly69.Interface.Controls
             // THAT WAS PROBABLY THE MOST DODGY THING IVE EVER DONE WTFFFF
         }
 
-        public void gotobutton(object sender, RoutedEventArgs e) 
+        public void gotobutton(object sender, RoutedEventArgs e)
         {
             Button b = sender as Button;
             var sTagId = b.Tag.ToString();
             int iTagId = int.Parse(sTagId);
 
-            if (iTagId != -1) {
+            if (iTagId != -1)
+            {
                 mainWindow.CreateTagEditorTabByTagIndex(iTagId);
             }
         }
@@ -136,32 +140,38 @@ namespace Assembly69.Interface.Controls
         // Gets the absolute mouse position, relative to screen
         //Point GetMousePos() => _window.PointToScreen(Mouse.GetPosition(_window));
 
-        DependencyObject GetTopLevelControl(DependencyObject control) {
+        DependencyObject GetTopLevelControl(DependencyObject control)
+        {
             DependencyObject tmp = control;
             DependencyObject parent = null;
-            while ((tmp = VisualTreeHelper.GetParent(tmp)) != null) {
+            while ((tmp = VisualTreeHelper.GetParent(tmp)) != null)
+            {
                 parent = tmp;
             }
             return parent;
         }
 
-        T? GetTopLevelControlOfType<T>(DependencyObject control) where T : DependencyObject {
+        T? GetTopLevelControlOfType<T>(DependencyObject control) where T : DependencyObject
+        {
             DependencyObject tmp = control;
             T? target = default(T);
 
-            while ((tmp = VisualTreeHelper.GetParent(tmp)) != null) {
+            while ((tmp = VisualTreeHelper.GetParent(tmp)) != null)
+            {
                 System.Diagnostics.Debug.WriteLine("- " + tmp.GetType());
 
                 if (tmp is T)
-                    target = (T) tmp;
+                    target = (T)tmp;
             }
 
             return target;
         }
 
-        private Rect GetAbsolutePlacement(FrameworkElement element, bool relativeToScreen = false) {
+        private Rect GetAbsolutePlacement(FrameworkElement element, bool relativeToScreen = false)
+        {
             var absolutePos = element.PointToScreen(new System.Windows.Point(0, 0));
-            if (relativeToScreen) {
+            if (relativeToScreen)
+            {
                 return new Rect(absolutePos.X, absolutePos.Y, element.ActualWidth, element.ActualHeight);
             }
 
@@ -175,8 +185,12 @@ namespace Assembly69.Interface.Controls
             Button b = sender as Button;
             string[] s = b.Tag.ToString().Split(":");
 
-            if (s.Length > 1) {
-                mainWindow.trd = new TagRefDropdown();
+            if (s.Length > 1)
+            {
+                var trd = mainWindow.trd = new TagRefDropdown();
+                var trdWidth = trd.Width = b.ActualWidth + 116;
+                var trdHeight = trd.Height = 400;
+
 
                 var myButtonLocation = b.PointToScreen(new Point(0, 0));
 
@@ -225,12 +239,10 @@ namespace Assembly69.Interface.Controls
             string ID = mainWindow.get_tagid_by_datnum(s[1]);
             mainWindow.the_last_tagref_button_we_pressed.Content = mainWindow.convert_ID_to_tag_name(ID);
 
-            // need to do this the lazy way again, have to head off in a sec, no i am not going to fix this 
-            // if someone ends up here, then likely someone has changed the tagref block UI and its broken
+            // need to do this the lazy way again, have to head off in a sec
             Grid td = mainWindow.the_last_tagref_button_we_pressed.Parent as Grid;
             Button X = td.Children[2] as Button;
-
-            X.Tag = mainWindow.get_tagindex_by_datnum(s[1]); // theres one of our problems, we were still using tagID rather than tag index
+            X.Tag = ID;
 
             if (mainWindow.trd != null)
             {
@@ -238,7 +250,7 @@ namespace Assembly69.Interface.Controls
             }
         }
 
-        // had to adapt this to bealbe to read tagblocks
+        // had to adapt this to bealbe to read tagblocks and forgot to allow it to iterate through them *sigh* good enough for now
         void do_the_tag_thing(Dictionary<long, vehi.c> VehicleTag, long address, StackPanel parentpanel)
         {
             foreach (KeyValuePair<long, vehi.c> entry in VehicleTag)
@@ -285,10 +297,12 @@ namespace Assembly69.Interface.Controls
                         tfb1.tag_button.Tag = (address + entry.Key + 24) + ":" + test_group;
                         tfb1.tag_button.Click += new RoutedEventHandler(tagrefbutton);
 
-                        int ID = mainWindow.get_tagindex_by_datnum(test); // do this for the "goto" button too // we forgot
+                        int ID = mainWindow.get_tagindex_by_datnum(test);
 
-                    tfb1.goto_button.Tag = ID; // need to get the index of the tag not the ID
-                    tfb1.goto_button.Click += new RoutedEventHandler(gotobutton);
+                        // tag
+
+                        tfb1.goto_button.Tag = ID; // need to get the index of the tag not the ID
+                        tfb1.goto_button.Click += new RoutedEventHandler(gotobutton);
 
                         break;
                     case "Pointer":
@@ -364,7 +378,5 @@ namespace Assembly69.Interface.Controls
                 }
             }
         }
-
-        // hey where'd the rest go lol
     }
 }
