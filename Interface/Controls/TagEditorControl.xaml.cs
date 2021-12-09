@@ -155,11 +155,39 @@ namespace Assembly69.Interface.Controls {
                 var trdWidth = trd.Width = b.ActualWidth + 116;
                 var trdHeight = trd.Height = 400;
 
+                // TODO figure out how to do this on popped out windows
+                Window controlsWindow = GetTopLevelControlOfType<Window>((DependencyObject) sender);
 
-                var myButtonLocation = b.PointToScreen(new Point(0, 0));
+                var wind = Window.GetWindow(b);
 
-                trd.Left = myButtonLocation.X - 8;
-                trd.Top = myButtonLocation.Y + 1;
+                // There seems to be no way to get the window
+                // that the control is assigned to, I'll come up with
+                // a solution soon.
+                var ld = this.LayoutDocument;
+                LayoutDocumentPane ldp = ld.Parent as LayoutDocumentPane;
+                var dockingWindow = ldp.FindParent<LayoutDocumentFloatingWindow>();
+
+                // If we can get the topmost window, use a precise approach
+                if (controlsWindow != null) {
+                    // Get the control's point relative to the parent window.
+                    Point relativeControlLocation = b.TranslatePoint(new Point(0, b.ActualHeight), controlsWindow);
+                    
+                    // Set the location to the parent window + control location
+                    // This sets it to just above the control, by adding the height by a factor of 1.5 it seems
+                    // to be an almost fit. 
+                    trd.Left = controlsWindow.Left + relativeControlLocation.X;
+                    trd.Top  = controlsWindow.Top  + relativeControlLocation.Y + (b.ActualHeight * 1.5);
+                }
+                // else if (dockingWindow != null) {
+                //     //Point relativeControlLocation = b.TranslatePoint(new Point(0, b.ActualHeight), dockingWindow);
+                // }
+                // If we cannot find the topmost window, use 
+                else {
+                    var myButtonLocation = b.PointToScreen(new Point(0, 0));
+                    
+                    trd.Left = myButtonLocation.X - 8;
+                    trd.Top = myButtonLocation.Y + 1;
+                }
 
                 trd.MainWindow = mainWindow;
                 mainWindow.the_last_tagref_button_we_pressed = b;
