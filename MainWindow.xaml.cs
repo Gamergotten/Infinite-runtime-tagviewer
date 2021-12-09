@@ -58,7 +58,7 @@ namespace Assembly69
             }
 
             // Get the base address
-            base_address = m.ReadLong("HaloInfinite.exe+0x3E82120");
+            base_address = m.ReadLong("HaloInfinite.exe+0x3E952A0");
             string validtest = m.ReadString(base_address.ToString("X"));
 
             if (validtest == "tag instances")
