@@ -72,10 +72,8 @@ namespace Assembly69
                 long? aobScan = (await m.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
                 .First(); // "tag instances"
 
-                // Failed to find base tag address+		dockManager	{AvalonDock.DockingManager}	AvalonDock.DockingManager
-
-                if (aobScan == null || aobScan == 0)
-                {
+                // Failed to find base tag address
+                if (aobScan == null || aobScan == 0) {
                     base_address = -1;
                     hook_text.Text = "Failed to locate base tag address";
                 }

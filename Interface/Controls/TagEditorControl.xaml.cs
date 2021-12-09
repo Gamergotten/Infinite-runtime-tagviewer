@@ -1,6 +1,7 @@
 ﻿using Assembly69.Halo.TagObjects;
 using Assembly69.Interface.Windows;
 
+using AvalonDock.Controls;
 using AvalonDock.Layout;
 
 using Memory;
@@ -137,9 +138,6 @@ namespace Assembly69.Interface.Controls
             }
         }
 
-        // Gets the absolute mouse position, relative to screen
-        //Point GetMousePos() => _window.PointToScreen(Mouse.GetPosition(_window));
-
         DependencyObject GetTopLevelControl(DependencyObject control)
         {
             DependencyObject tmp = control;
@@ -158,28 +156,14 @@ namespace Assembly69.Interface.Controls
 
             while ((tmp = VisualTreeHelper.GetParent(tmp)) != null)
             {
-                System.Diagnostics.Debug.WriteLine("- " + tmp.GetType());
-
+                // System.Diagnostics.Debug.WriteLine("- " + tmp.GetType());
                 if (tmp is T)
-                    target = (T)tmp;
+                    target = (T) tmp;
             }
 
             return target;
         }
-
-        private Rect GetAbsolutePlacement(FrameworkElement element, bool relativeToScreen = false)
-        {
-            var absolutePos = element.PointToScreen(new System.Windows.Point(0, 0));
-            if (relativeToScreen)
-            {
-                return new Rect(absolutePos.X, absolutePos.Y, element.ActualWidth, element.ActualHeight);
-            }
-
-            var posMW = Application.Current.MainWindow.PointToScreen(new System.Windows.Point(0, 0));
-            absolutePos = new System.Windows.Point(absolutePos.X - posMW.X, absolutePos.Y - posMW.Y);
-            return new Rect(absolutePos.X, absolutePos.Y, element.ActualWidth, element.ActualHeight);
-        }
-
+    
         private void tagrefbutton(object sender, RoutedEventArgs e)
         {
             Button b = sender as Button;
@@ -191,11 +175,72 @@ namespace Assembly69.Interface.Controls
                 var trdWidth = trd.Width = b.ActualWidth + 116;
                 var trdHeight = trd.Height = 400;
 
+                // 
+                Window controlsWindow = GetTopLevelControlOfType<Window>((DependencyObject) sender);
 
-                var myButtonLocation = b.PointToScreen(new Point(0, 0));
+                // There seems to be no way to get the window, so we will find the LayoutDocumentPaneGroupControl
+                // instead and we can use that to crawl backwards through the Windows to find it.
+                var dockingPaneGroup = GetTopLevelControlOfType<LayoutDocumentPaneGroupControl>(b);
+                bool foundDockingWindow = false;
 
-                trd.Left = myButtonLocation.X - 8;
-                trd.Top = myButtonLocation.Y + 1;
+                // Handle if we have a popped out window.
+                if (controlsWindow == null && dockingPaneGroup != null)
+                {
+                    // Check if we can figure out where this docking pane is located
+                    foreach (Window appWindow in Application.Current.Windows)
+                    {
+                        var floatingWind = appWindow as LayoutDocumentFloatingWindowControl;
+                        if (floatingWind == null)
+                            continue;
+
+                        // Make sure we have a FloatingWindowContentHost
+                        var floatingWindContHost = floatingWind.Content; // AvalonDock.Controls.LayoutFloatingWindowControl.FloatingWindowContentHost
+                        if (floatingWindContHost == null && floatingWindContHost.GetType().Name != "FloatingWindowContentHost")
+                            continue;
+
+                        // Get the public property "Content", we cant get this normally because this
+                        // is a internal / sealed class. We need to use reflection to get our 
+                        // grubby mitts on it.
+                        var prop = floatingWindContHost.GetType().GetProperty("Content");
+                        var contentResult = prop.GetValue(floatingWindContHost) as LayoutDocumentPaneGroupControl;
+
+                        // Check if this is our DockingPanelGroup 
+                        if (contentResult == dockingPaneGroup)
+                        {
+                            // Get the control's point relative to the parent window.
+                            Point relativeControlLocation = b.TranslatePoint(new Point(0, b.ActualHeight), appWindow);
+
+                            // Set the location to the parent window + control location
+                            // This sets it to just above the control, by adding the height by a factor of 1.5 it seems
+                            // to be an almost fit. 
+                            trd.Left = appWindow.Left + relativeControlLocation.X;
+                            trd.Top = appWindow.Top + relativeControlLocation.Y;
+
+                            foundDockingWindow = true;
+                            break;
+                        }
+                    }
+                }
+
+                // If we can get the topmost window, use a precise approach
+                if (controlsWindow != null)
+                {
+                    // Get the control's point relative to the parent window.
+                    Point relativeControlLocation = b.TranslatePoint(new Point(0, b.ActualHeight), controlsWindow);
+
+                    // Set the location to the parent window + control location
+                    // This sets it to just above the control, by adding the height by a factor of 1.5 it seems
+                    // to be an almost fit. 
+                    trd.Left = controlsWindow.Left + relativeControlLocation.X;
+                    trd.Top = controlsWindow.Top + relativeControlLocation.Y + (b.ActualHeight * 1.5);
+                }
+                else if (foundDockingWindow == false)
+                {
+                    var myButtonLocation = b.PointToScreen(new Point(0, 0));
+
+                    trd.Left = myButtonLocation.X - 8;
+                    trd.Top = myButtonLocation.Y + 1;
+                }
 
                 trd.MainWindow = mainWindow;
                 mainWindow.the_last_tagref_button_we_pressed = b;
