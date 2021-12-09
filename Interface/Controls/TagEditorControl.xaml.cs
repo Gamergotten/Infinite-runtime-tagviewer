@@ -161,7 +161,7 @@ namespace Assembly69.Interface.Controls
                 System.Diagnostics.Debug.WriteLine("- " + tmp.GetType());
 
                 if (tmp is T)
-                    target = (T)tmp;
+                    target = (T) tmp;
             }
 
             return target;
@@ -204,23 +204,25 @@ namespace Assembly69.Interface.Controls
                 var dockingWindow = ldp.FindParent<LayoutDocumentFloatingWindow>();
 
                 // If we can get the topmost window, use a precise approach
-                if (controlsWindow != null) {
+                if (controlsWindow != null)
+                {
                     // Get the control's point relative to the parent window.
                     Point relativeControlLocation = b.TranslatePoint(new Point(0, b.ActualHeight), controlsWindow);
-                    
+
                     // Set the location to the parent window + control location
                     // This sets it to just above the control, by adding the height by a factor of 1.5 it seems
                     // to be an almost fit. 
                     trd.Left = controlsWindow.Left + relativeControlLocation.X;
-                    trd.Top  = controlsWindow.Top  + relativeControlLocation.Y + (b.ActualHeight * 1.5);
+                    trd.Top = controlsWindow.Top + relativeControlLocation.Y + (b.ActualHeight * 1.5);
                 }
                 // else if (dockingWindow != null) {
                 //     //Point relativeControlLocation = b.TranslatePoint(new Point(0, b.ActualHeight), dockingWindow);
                 // }
                 // If we cannot find the topmost window, use 
-                else {
+                else
+                {
                     var myButtonLocation = b.PointToScreen(new Point(0, 0));
-                    
+
                     trd.Left = myButtonLocation.X - 8;
                     trd.Top = myButtonLocation.Y + 1;
                 }
