@@ -138,9 +138,6 @@ namespace Assembly69.Interface.Controls
             }
         }
 
-        // Gets the absolute mouse position, relative to screen
-        //Point GetMousePos() => _window.PointToScreen(Mouse.GetPosition(_window));
-
         DependencyObject GetTopLevelControl(DependencyObject control)
         {
             DependencyObject tmp = control;
@@ -159,28 +156,14 @@ namespace Assembly69.Interface.Controls
 
             while ((tmp = VisualTreeHelper.GetParent(tmp)) != null)
             {
-                System.Diagnostics.Debug.WriteLine("- " + tmp.GetType());
-
+                // System.Diagnostics.Debug.WriteLine("- " + tmp.GetType());
                 if (tmp is T)
                     target = (T) tmp;
             }
 
             return target;
         }
-
-        private Rect GetAbsolutePlacement(FrameworkElement element, bool relativeToScreen = false)
-        {
-            var absolutePos = element.PointToScreen(new System.Windows.Point(0, 0));
-            if (relativeToScreen)
-            {
-                return new Rect(absolutePos.X, absolutePos.Y, element.ActualWidth, element.ActualHeight);
-            }
-
-            var posMW = Application.Current.MainWindow.PointToScreen(new System.Windows.Point(0, 0));
-            absolutePos = new System.Windows.Point(absolutePos.X - posMW.X, absolutePos.Y - posMW.Y);
-            return new Rect(absolutePos.X, absolutePos.Y, element.ActualWidth, element.ActualHeight);
-        }
-
+    
         private void tagrefbutton(object sender, RoutedEventArgs e)
         {
             Button b = sender as Button;
@@ -191,7 +174,6 @@ namespace Assembly69.Interface.Controls
                 var trd = mainWindow.trd = new TagRefDropdown();
                 var trdWidth = trd.Width = b.ActualWidth + 116;
                 var trdHeight = trd.Height = 400;
-
 
                 // 
                 Window controlsWindow = GetTopLevelControlOfType<Window>((DependencyObject) sender);
