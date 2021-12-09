@@ -1,6 +1,7 @@
 ﻿using Assembly69.Halo.TagObjects;
 using Assembly69.Interface.Windows;
 
+using AvalonDock.Controls;
 using AvalonDock.Layout;
 
 using Memory;
@@ -191,17 +192,53 @@ namespace Assembly69.Interface.Controls
                 var trdWidth = trd.Width = b.ActualWidth + 116;
                 var trdHeight = trd.Height = 400;
 
-                // TODO figure out how to do this on popped out windows
+
+                // 
                 Window controlsWindow = GetTopLevelControlOfType<Window>((DependencyObject) sender);
 
-                var wind = Window.GetWindow(b);
+                // There seems to be no way to get the window, so we will find the LayoutDocumentPaneGroupControl
+                // instead and we can use that to crawl backwards through the Windows to find it.
+                var dockingPaneGroup = GetTopLevelControlOfType<LayoutDocumentPaneGroupControl>(b);
+                bool foundDockingWindow = false;
 
-                // There seems to be no way to get the window
-                // that the control is assigned to, I'll come up with
-                // a solution soon.
-                var ld = this.LayoutDocument;
-                LayoutDocumentPane ldp = ld.Parent as LayoutDocumentPane;
-                var dockingWindow = ldp.FindParent<LayoutDocumentFloatingWindow>();
+                // Handle if we have a popped out window.
+                if (controlsWindow == null && dockingPaneGroup != null)
+                {
+                    // Check if we can figure out where this docking pane is located
+                    foreach (Window appWindow in Application.Current.Windows)
+                    {
+                        var floatingWind = appWindow as LayoutDocumentFloatingWindowControl;
+                        if (floatingWind == null)
+                            continue;
+
+                        // Make sure we have a FloatingWindowContentHost
+                        var floatingWindContHost = floatingWind.Content; // AvalonDock.Controls.LayoutFloatingWindowControl.FloatingWindowContentHost
+                        if (floatingWindContHost == null && floatingWindContHost.GetType().Name != "FloatingWindowContentHost")
+                            continue;
+
+                        // Get the public property "Content", we cant get this normally because this
+                        // is a internal / sealed class. We need to use reflection to get our 
+                        // grubby mitts on it.
+                        var prop = floatingWindContHost.GetType().GetProperty("Content");
+                        var contentResult = prop.GetValue(floatingWindContHost) as LayoutDocumentPaneGroupControl;
+
+                        // Check if this is our DockingPanelGroup 
+                        if (contentResult == dockingPaneGroup)
+                        {
+                            // Get the control's point relative to the parent window.
+                            Point relativeControlLocation = b.TranslatePoint(new Point(0, b.ActualHeight), appWindow);
+
+                            // Set the location to the parent window + control location
+                            // This sets it to just above the control, by adding the height by a factor of 1.5 it seems
+                            // to be an almost fit. 
+                            trd.Left = appWindow.Left + relativeControlLocation.X;
+                            trd.Top = appWindow.Top + relativeControlLocation.Y;
+
+                            foundDockingWindow = true;
+                            break;
+                        }
+                    }
+                }
 
                 // If we can get the topmost window, use a precise approach
                 if (controlsWindow != null)
@@ -215,11 +252,7 @@ namespace Assembly69.Interface.Controls
                     trd.Left = controlsWindow.Left + relativeControlLocation.X;
                     trd.Top = controlsWindow.Top + relativeControlLocation.Y + (b.ActualHeight * 1.5);
                 }
-                // else if (dockingWindow != null) {
-                //     //Point relativeControlLocation = b.TranslatePoint(new Point(0, b.ActualHeight), dockingWindow);
-                // }
-                // If we cannot find the topmost window, use 
-                else
+                else if (foundDockingWindow == false)
                 {
                     var myButtonLocation = b.PointToScreen(new Point(0, 0));
 
