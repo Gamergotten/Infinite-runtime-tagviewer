@@ -20,7 +20,8 @@ using Assembly69.Interface.Controls;
 using AvalonDock.Layout;
 using Assembly69.Interface.Windows;
 
-namespace Assembly69 {
+namespace Assembly69
+{
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -49,19 +50,23 @@ namespace Assembly69 {
             hook_text.Text = "Openning process...";
             m.OpenProcess("HaloInfinite.exe");
 
-            if (m.pHandle == IntPtr.Zero) {
+            if (m.pHandle == IntPtr.Zero)
+            {
                 // Could not find the process
                 hook_text.Text = "Cant find HaloInfinite.exe";
                 return;
             }
 
             // Get the base address
-            base_address = m.ReadLong("HaloInfinite.exe+0x3E82120");
+            base_address = m.ReadLong("HaloInfinite.exe+0x3E952A0");
             string validtest = m.ReadString(base_address.ToString("X"));
 
-            if (validtest == "tag instances") {
+            if (validtest == "tag instances")
+            {
                 hook_text.Text = "Process Hooked";
-            } else {
+            }
+            else
+            {
                 hook_text.Text = "Offset failed, scanning...";
 
                 long? aobScan = (await m.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
@@ -71,13 +76,15 @@ namespace Assembly69 {
                 if (aobScan == null || aobScan == 0) {
                     base_address = -1;
                     hook_text.Text = "Failed to locate base tag address";
-                } else {
+                }
+                else
+                {
                     base_address = aobScan.Value;
                     hook_text.Text = "Process Hooked";
                 }
             }
 
-            
+
         }
 
         public List<tag_struct> Tags_List { get; set; }
@@ -114,8 +121,10 @@ namespace Assembly69 {
 
 
         // load tags from Mem
-        private void BtnLoadTags_Click(object sender, RoutedEventArgs e) {
-            if (tag_count != -1) {
+        private void BtnLoadTags_Click(object sender, RoutedEventArgs e)
+        {
+            if (tag_count != -1)
+            {
                 tag_count = -1;
                 Tag_groups.Clear();
                 Tags_List.Clear();
@@ -140,10 +149,10 @@ namespace Assembly69 {
             {
                 tag_struct current_tag = new tag_struct();
 
-                long tag_address = tags_start + (tag_index*52);
+                long tag_address = tags_start + (tag_index * 52);
 
-                
-                byte[] test1 =  m.ReadBytes(tag_address.ToString("X"), 4);
+
+                byte[] test1 = m.ReadBytes(tag_address.ToString("X"), 4);
 
                 current_tag.Datnum = BitConverter.ToString(test1).Replace("-", string.Empty);
 
@@ -154,7 +163,7 @@ namespace Assembly69 {
 
                 current_tag.Tag_group = read_tag_group(m.ReadLong((tag_address + 0x8).ToString("X")));
 
-                current_tag.Tag_data = m.ReadLong((tag_address+0x10).ToString("X"));
+                current_tag.Tag_data = m.ReadLong((tag_address + 0x10).ToString("X"));
 
                 // do the tag definitition
                 Tags_List.Add(current_tag);
@@ -244,7 +253,7 @@ namespace Assembly69 {
             {
                 string[] hex_string = line.Split(" : ");
                 if (!inhaled_tagnames.ContainsKey(hex_string[0]))
-                inhaled_tagnames.Add(hex_string[0], hex_string[1]);
+                    inhaled_tagnames.Add(hex_string[0], hex_string[1]);
             }
         }
 
@@ -269,20 +278,23 @@ namespace Assembly69 {
         }
 
 
-       
-        public void CreateTagEditorTabByTagIndex(int tagIndex) {
-            var     tag = Tags_List[tagIndex];
-            var     tagFull = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectID);
-            string  tagName = tagFull.Split('\\').Last();
+
+        public void CreateTagEditorTabByTagIndex(int tagIndex)
+        {
+            var tag = Tags_List[tagIndex];
+            var tagFull = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectID);
+            string tagName = tagFull.Split('\\').Last();
 
             // Find the existing layout document ( draggable panel item )
-            if (dockManager.Layout.Descendents().OfType<LayoutDocument>().Any()) {
+            if (dockManager.Layout.Descendents().OfType<LayoutDocument>().Any())
+            {
                 var dockSearch = dockManager.Layout.Descendents()
                     .OfType<LayoutDocument>()
                     .FirstOrDefault(a => a.ContentId == tagFull);
 
                 // Check if we found the tag
-                if (dockSearch != null) {
+                if (dockSearch != null)
+                {
                     // Set the tag as active
                     if (dockSearch.IsActive)
                         dockSearch.IsActive = true;
@@ -290,11 +302,14 @@ namespace Assembly69 {
                     // Set the tag as the active tab
                     bool found = false; // used for debugging
                     var ldp = dockSearch.Parent as AvalonDock.Layout.LayoutDocumentPane;
-                    if (ldp != null) {
-                        for (int x = 0; x < ldp.Children.Count; x++) {
+                    if (ldp != null)
+                    {
+                        for (int x = 0; x < ldp.Children.Count; x++)
+                        {
                             var dlp = ldp.Children[x];
 
-                            if (dlp == dockSearch) {
+                            if (dlp == dockSearch)
+                            {
                                 found = true;
                                 ldp.SelectedContentIndex = x;
                             }
@@ -324,7 +339,7 @@ namespace Assembly69 {
         {
             TreeViewItem? item = sender as TreeViewItem;
             CreateTagEditorTabByTagIndex(int.Parse(item.Tag.ToString()));
-		}
+        }
 
 
         // list of changes to ammend to the memory when we phit the poke button
@@ -394,7 +409,7 @@ namespace Assembly69 {
         private void Searchbox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string search = Searchbox.Text;
-            foreach(TreeViewItem tv in TagsTree.Items)
+            foreach (TreeViewItem tv in TagsTree.Items)
             {
                 if (!tv.Header.ToString().Contains(search))
                 {
@@ -418,7 +433,7 @@ namespace Assembly69 {
                     foreach (TreeViewItem tc in tv.Items)
                     {
                         tc.Visibility = Visibility.Visible;
-                        
+
                     }
 
                 }
@@ -485,15 +500,20 @@ namespace Assembly69 {
             change_text.Text = pokelist.Count + " changes queued";
         }
 
-        private void DockManager_DocumentClosing(object sender, AvalonDock.DocumentClosingEventArgs e) {
+        private void DockManager_DocumentClosing(object sender, AvalonDock.DocumentClosingEventArgs e)
+        {
             // On tag window closing.
 
         }
 
-        private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e) {
-            if (changes_panel.Visibility == Visibility.Visible) {
+        private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e)
+        {
+            if (changes_panel.Visibility == Visibility.Visible)
+            {
                 changes_panel.Visibility = Visibility.Collapsed;
-            } else {
+            }
+            else
+            {
                 changes_panel.Visibility = Visibility.Visible;
             }
         }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assembly69"
         mc:Ignorable="d"
-        Title="Infinite Runtime Tagviewer" Height="450" Width="800">
+        Title="Infinite Runtime Tagviewer" Height="650" Width="1100">
     <Window.Resources>
         <ScaleTransform 
             x:Key="windowScaleTransform" 
@@ -108,6 +108,7 @@
 
             <TreeView x:Name="TagsTree" Grid.Row="2" >
                 <TreeViewItem Header="Hook and load to get started!" />
+                <TreeViewItem Header="reload the tags whenever the map changes" />
             </TreeView>
             <!-- < #TagsTree -->
 
