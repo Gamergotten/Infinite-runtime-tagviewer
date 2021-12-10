@@ -166,15 +166,16 @@ namespace Assembly69
             string key = ReverseString(m.ReadString((tag_group_address + 0xC).ToString("X"), "", 8).Substring(0, 4));
             if (!Tag_groups.ContainsKey(key))
             {
-                group_tag_struct current_group = new group_tag_struct();
+                group_tag_struct current_group = new group_tag_struct {
+                    tag_group_desc = m.ReadString((tag_group_address).ToString("X") + ",0x0"),
+                    tag_group_name = key,
+                    tag_group_definitition = m.ReadString((tag_group_address + 0x20).ToString("X") + ",0x0,0x0"),
+                    tag_extra_type = m.ReadString((tag_group_address + 0x2C).ToString("X"), "", 12)
+                };
 
-                current_group.tag_group_desc = m.ReadString((tag_group_address).ToString("X") + ",0x0");
 
-                current_group.tag_group_name = key;
 
-                current_group.tag_group_definitition = m.ReadString((tag_group_address + 0x20).ToString("X") + ",0x0,0x0");
 
-                current_group.tag_extra_type = m.ReadString((tag_group_address + 0x2C).ToString("X"), "", 12);
 
                 long test_address = m.ReadLong((tag_group_address + 0x48).ToString("X"));
                 if (test_address != 0)
@@ -202,11 +203,12 @@ namespace Assembly69
             {
                 group_tag_struct display_group = Tag_groups.ElementAt(i).Value;
 
-                TreeViewItem sortheader = new TreeViewItem();
+                TreeViewItem sortheader = new TreeViewItem {
+                    Header = display_group.tag_group_name + " (" + display_group.tag_group_desc + ")",
+                    ToolTip = display_group.tag_group_definitition
+                };
 
-                sortheader.Header = display_group.tag_group_name + " (" + display_group.tag_group_desc + ")";
 
-                sortheader.ToolTip = display_group.tag_group_definitition;
 
                 display_group.tag_category = sortheader;
 
@@ -355,10 +357,9 @@ namespace Assembly69
             }
             else
             {
-                TagChangesBlock NEW_BLOCK = new TagChangesBlock();
-                NEW_BLOCK.address.Text = "0x" + offset.ToString("X");
-                NEW_BLOCK.type.Text = type;
-                NEW_BLOCK.value.Text = value;
+                TagChangesBlock NEW_BLOCK = new TagChangesBlock {
+                    address = {Text = "0x" + offset.ToString("X")}, type = {Text = type}, value = {Text = value}
+                };
 
                 changes_panel.Children.Add(NEW_BLOCK);
                 UIpokelist.Add(offset, NEW_BLOCK);

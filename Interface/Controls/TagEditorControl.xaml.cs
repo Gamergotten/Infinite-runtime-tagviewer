@@ -235,10 +235,10 @@ namespace Assembly69.Interface.Controls
                 trd.MainWindow = mainWindow;
                 mainWindow.the_last_tagref_button_we_pressed = b;
 
-                TreeViewItem item = new TreeViewItem();
+                TreeViewItem item = new TreeViewItem {
+                    Header = mainWindow.convert_ID_to_tag_name("FFFFFFFF"), Tag = s[0] + ":" + "FFFFFFFF"
+                };
 
-                item.Header = mainWindow.convert_ID_to_tag_name("FFFFFFFF");
-                item.Tag = s[0] + ":" + "FFFFFFFF";
 
                 mainWindow.trd.tag_select_panel.Items.Add(item);
                 item.Selected += new RoutedEventHandler(update_tagref);
@@ -248,10 +248,10 @@ namespace Assembly69.Interface.Controls
                 {
                     if (tg.Tag_group == s[1])
                     {
-                        TreeViewItem testing = new TreeViewItem();
+                        TreeViewItem testing = new TreeViewItem {
+                            Header = mainWindow.convert_ID_to_tag_name(tg.ObjectID), Tag = s[0] + ":" + tg.Datnum
+                        };
 
-                        testing.Header = mainWindow.convert_ID_to_tag_name(tg.ObjectID);
-                        testing.Tag = s[0] + ":" + tg.Datnum;
 
                         mainWindow.trd.tag_select_panel.Items.Add(testing);
                         testing.Selected += new RoutedEventHandler(update_tagref);
