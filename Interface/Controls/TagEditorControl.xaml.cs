@@ -18,7 +18,7 @@ namespace Assembly69.Interface.Controls
     /// <summary>
     /// Interaction logic for TagEditorControl.xaml
     /// </summary>
-    public partial class TagEditorControl : UserControl
+    public partial class TagEditorControl
     {
         MainWindow mainWindow;
         Mem m;
