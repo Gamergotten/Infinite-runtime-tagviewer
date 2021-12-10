@@ -147,8 +147,10 @@ namespace Assembly69.Interface.Controls
             while ((tmp = VisualTreeHelper.GetParent(tmp)) != null)
             {
                 // System.Diagnostics.Debug.WriteLine("- " + tmp.GetType());
-                if (tmp is T)
-                    target = (T) tmp;
+                if (tmp is T dependencyObject)
+                {
+                    target = dependencyObject;
+                }
             }
 
             return target;
