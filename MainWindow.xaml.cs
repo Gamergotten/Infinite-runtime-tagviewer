@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using Memory;
-using System.IO;
-using System.Text.RegularExpressions;
 using Assembly69.Interface.Controls;
-using AvalonDock.Layout;
 using Assembly69.Interface.Windows;
+using AvalonDock.Layout;
+using Memory;
 
 namespace Assembly69
 {
@@ -63,7 +63,8 @@ namespace Assembly69
                 .First(); // "tag instances"
 
                 // Failed to find base tag address
-                if (aobScan == null || aobScan == 0) {
+                if (aobScan == null || aobScan == 0)
+                {
                     base_address = -1;
                     hook_text.Text = "Failed to locate base tag address";
                 }
@@ -73,8 +74,6 @@ namespace Assembly69
                     hook_text.Text = "Process Hooked";
                 }
             }
-
-
         }
 
         public List<tag_struct> Tags_List { get; set; }
@@ -93,7 +92,6 @@ namespace Assembly69
             public string Tag_type_desc;
         }
 
-
         public struct group_tag_struct
         {
             public string tag_group_desc;
@@ -109,7 +107,6 @@ namespace Assembly69
             public TreeViewItem tag_category;
         }
 
-
         // load tags from Mem
         private void BtnLoadTags_Click(object sender, RoutedEventArgs e)
         {
@@ -119,7 +116,6 @@ namespace Assembly69
                 Tag_groups.Clear();
                 Tags_List.Clear();
             }
-
 
             TagsTree.Items.Clear();
 
@@ -140,7 +136,6 @@ namespace Assembly69
                 tag_struct current_tag = new();
 
                 long tag_address = tags_start + (tag_index * 52);
-
 
                 byte[] test1 = m.ReadBytes(tag_address.ToString("X"), 4);
 
@@ -173,10 +168,6 @@ namespace Assembly69
                     tag_extra_type = m.ReadString((tag_group_address + 0x2C).ToString("X"), "", 12)
                 };
 
-
-
-
-
                 long test_address = m.ReadLong((tag_group_address + 0x48).ToString("X"));
                 if (test_address != 0)
                     current_group.tag_extra_name = m.ReadString((test_address).ToString("X"));
@@ -190,7 +181,6 @@ namespace Assembly69
 
                 Tag_groups.Add(key, current_group);
             }
-
 
             return key;
         }
@@ -208,15 +198,12 @@ namespace Assembly69
                     ToolTip = display_group.tag_group_definitition
                 };
 
-
-
                 display_group.tag_category = sortheader;
 
                 TagsTree.Items.Add(sortheader);
 
                 Tag_groups[Tag_groups.ElementAt(i).Key] = display_group;
             }
-
 
             for (int i = 0; i < Tags_List.Count; i++)
             {
@@ -230,9 +217,7 @@ namespace Assembly69
                 t.Selected += Select_Tag_click;
 
                 dict_tag_group.tag_category.Items.Add(t);
-
             }
-
         }
 
         public Dictionary<string, string> inhaled_tagnames = new();
@@ -262,8 +247,6 @@ namespace Assembly69
             Array.Reverse(myArr);
             return new string(myArr);
         }
-
-
 
         public void CreateTagEditorTabByTagIndex(int tagIndex)
         {
@@ -326,7 +309,6 @@ namespace Assembly69
             CreateTagEditorTabByTagIndex(int.Parse(item.Tag.ToString()));
         }
 
-
         // list of changes to ammend to the memory when we phit the poke button
         public Dictionary<long, KeyValuePair<string, string>> pokelist = new();
 
@@ -334,7 +316,7 @@ namespace Assembly69
         public Dictionary<long, TagChangesBlock> UIpokelist = new();
 
         // type (TagrefGroup, TagrefTag)
-        // address, 
+        // address,
         public void addpokechange(long offset, string type, string value)
         {
             // hmm we need to change this so we either update or add a new UI element
@@ -351,7 +333,9 @@ namespace Assembly69
             else
             {
                 TagChangesBlock NEW_BLOCK = new() {
-                    address = {Text = "0x" + offset.ToString("X")}, type = {Text = type}, value = {Text = value}
+                    address = { Text = "0x" + offset.ToString("X") },
+                    type = { Text = type },
+                    value = { Text = value }
                 };
 
                 changes_panel.Children.Add(NEW_BLOCK);
@@ -360,8 +344,6 @@ namespace Assembly69
 
             change_text.Text = pokelist.Count + " changes queued";
         }
-
-
 
         // need this to read tagref blocks - because we only get a datnum to figure out the name with
         // so we find what else has the same datnum and then run the other method to get name based off of ID
@@ -417,15 +399,10 @@ namespace Assembly69
                     foreach (TreeViewItem tc in tv.Items)
                     {
                         tc.Visibility = Visibility.Visible;
-
                     }
-
                 }
-
             }
         }
-
-
 
         // POKE OUR CHANGES LETSGOOOO
         private void BtnPokeChanges_Click(object sender, RoutedEventArgs e)
@@ -441,19 +418,24 @@ namespace Assembly69
                     case "4Byte":
                         m.WriteMemory(address.ToString("X"), "int", value);
                         break;
+
                     case "Float":
                         m.WriteMemory(address.ToString("X"), "float", value);
                         break;
+
                     case "Pointer":
                         string will_this_work = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
                         m.WriteMemory(address.ToString("X"), "long", will_this_work); // apparently it does
                         break;
+
                     case "String":
                         m.WriteMemory(address.ToString("X"), "string", value + "\0");
                         break;
+
                     case "TagrefGroup":
                         m.WriteMemory(address.ToString("X"), "string", ReverseString(value));
                         break;
+
                     case "TagrefTag":
                         string why_do_i_need_to_convert_EVERYTHING = Convert.ToInt32(value, 16).ToString();
                         // THAT FLIPS IT BACKWARDS
@@ -462,7 +444,6 @@ namespace Assembly69
                         temp = temp.TrimEnd();
                         m.WriteMemory(address.ToString("X"), "bytes", temp);
                         int w2 = 0;
-
 
                         break;
                 }
@@ -487,7 +468,6 @@ namespace Assembly69
         private void DockManager_DocumentClosing(object sender, AvalonDock.DocumentClosingEventArgs e)
         {
             // On tag window closing.
-
         }
 
         private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e)

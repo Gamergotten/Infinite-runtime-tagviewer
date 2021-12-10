@@ -1,16 +1,13 @@
-﻿using Assembly69.Halo.TagObjects;
-using Assembly69.Interface.Windows;
-
-using AvalonDock.Controls;
-using AvalonDock.Layout;
-
-using Memory;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using Assembly69.Halo.TagObjects;
+using Assembly69.Interface.Windows;
+using AvalonDock.Controls;
+using AvalonDock.Layout;
+using Memory;
 using static Assembly69.MainWindow;
 
 namespace Assembly69.Interface.Controls
@@ -20,8 +17,8 @@ namespace Assembly69.Interface.Controls
     /// </summary>
     public partial class TagEditorControl
     {
-        MainWindow mainWindow;
-        Mem m;
+        private MainWindow mainWindow;
+        private Mem m;
 
         public LayoutDocument LayoutDocument { get; internal set; }
 
@@ -45,42 +42,35 @@ namespace Assembly69.Interface.Controls
 
             if (loading_tag.Tag_group == "vehi")
             {
-
                 Dictionary<long, vehi.c> strings = vehi.VehicleTag;
                 do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
             else if (loading_tag.Tag_group == "weap")
             {
-
                 Dictionary<long, vehi.c> strings = vehi.WeaponTag;
                 do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
             else if (loading_tag.Tag_group == "proj")
             {
-
                 Dictionary<long, vehi.c> strings = vehi.projectileTag;
                 do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
             else if (loading_tag.Tag_group == "hlmt")
             {
-
                 Dictionary<long, vehi.c> strings = vehi.HLMTTag;
                 do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
             else if (loading_tag.Tag_group == "sddt")
             {
-
                 Dictionary<long, vehi.c> strings = vehi.sddtTag;
                 do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
             else if (loading_tag.Tag_group == "levl")
             {
-
                 Dictionary<long, vehi.c> strings = vehi.levlTag;
                 do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
         }
-
 
         // hmm we need a system that reads the pointer and adds it
         // also, we need to beable to read multiple tag things but i may put that on hold
@@ -92,7 +82,6 @@ namespace Assembly69.Interface.Controls
                 do_the_tag_thing(entry.Value.B, loading_tag, parentpanel);
             }
         }
-
 
         // for text boxes
         private void value_TextChanged(object sender, TextChangedEventArgs e)
@@ -128,7 +117,7 @@ namespace Assembly69.Interface.Controls
             }
         }
 
-        DependencyObject GetTopLevelControl(DependencyObject control)
+        private DependencyObject GetTopLevelControl(DependencyObject control)
         {
             DependencyObject tmp = control;
             DependencyObject parent = null;
@@ -139,7 +128,7 @@ namespace Assembly69.Interface.Controls
             return parent;
         }
 
-        T? GetTopLevelControlOfType<T>(DependencyObject control) where T : DependencyObject
+        private T? GetTopLevelControlOfType<T>(DependencyObject control) where T : DependencyObject
         {
             DependencyObject tmp = control;
             T? target = default(T);
@@ -155,7 +144,7 @@ namespace Assembly69.Interface.Controls
 
             return target;
         }
-    
+
         private void tagrefbutton(object sender, RoutedEventArgs e)
         {
             Button b = sender as Button;
@@ -167,7 +156,7 @@ namespace Assembly69.Interface.Controls
                 var trdWidth = trd.Width = b.ActualWidth + 116;
                 var trdHeight = trd.Height = 400;
 
-                // 
+                //
                 Window controlsWindow = GetTopLevelControlOfType<Window>((DependencyObject) sender);
 
                 // There seems to be no way to get the window, so we will find the LayoutDocumentPaneGroupControl
@@ -191,12 +180,12 @@ namespace Assembly69.Interface.Controls
                             continue;
 
                         // Get the public property "Content", we cant get this normally because this
-                        // is a internal / sealed class. We need to use reflection to get our 
+                        // is a internal / sealed class. We need to use reflection to get our
                         // grubby mitts on it.
                         var prop = floatingWindContHost.GetType().GetProperty("Content");
                         var contentResult = prop.GetValue(floatingWindContHost) as LayoutDocumentPaneGroupControl;
 
-                        // Check if this is our DockingPanelGroup 
+                        // Check if this is our DockingPanelGroup
                         if (contentResult == dockingPaneGroup)
                         {
                             // Get the control's point relative to the parent window.
@@ -204,7 +193,7 @@ namespace Assembly69.Interface.Controls
 
                             // Set the location to the parent window + control location
                             // This sets it to just above the control, by adding the height by a factor of 1.5 it seems
-                            // to be an almost fit. 
+                            // to be an almost fit.
                             trd.Left = appWindow.Left + relativeControlLocation.X;
                             trd.Top = appWindow.Top + relativeControlLocation.Y;
 
@@ -222,7 +211,7 @@ namespace Assembly69.Interface.Controls
 
                     // Set the location to the parent window + control location
                     // This sets it to just above the control, by adding the height by a factor of 1.5 it seems
-                    // to be an almost fit. 
+                    // to be an almost fit.
                     trd.Left = controlsWindow.Left + relativeControlLocation.X;
                     trd.Top = controlsWindow.Top + relativeControlLocation.Y + (b.ActualHeight * 1.5);
                 }
@@ -238,22 +227,21 @@ namespace Assembly69.Interface.Controls
                 mainWindow.the_last_tagref_button_we_pressed = b;
 
                 TreeViewItem item = new() {
-                    Header = mainWindow.convert_ID_to_tag_name("FFFFFFFF"), Tag = s[0] + ":" + "FFFFFFFF"
+                    Header = mainWindow.convert_ID_to_tag_name("FFFFFFFF"),
+                    Tag = s[0] + ":" + "FFFFFFFF"
                 };
-
 
                 mainWindow.trd.tag_select_panel.Items.Add(item);
                 item.Selected += new RoutedEventHandler(update_tagref);
-
 
                 foreach (tag_struct tg in mainWindow.Tags_List)
                 {
                     if (tg.Tag_group == s[1])
                     {
                         TreeViewItem testing = new() {
-                            Header = mainWindow.convert_ID_to_tag_name(tg.ObjectID), Tag = s[0] + ":" + tg.Datnum
+                            Header = mainWindow.convert_ID_to_tag_name(tg.ObjectID),
+                            Tag = s[0] + ":" + tg.Datnum
                         };
-
 
                         mainWindow.trd.tag_select_panel.Items.Add(testing);
                         testing.Selected += new RoutedEventHandler(update_tagref);
@@ -263,7 +251,6 @@ namespace Assembly69.Interface.Controls
                 mainWindow.trd.Show();
             }
         }
-
 
         // this is for our dropdown thingo for changing tag refs
         public void update_tagref(object sender, RoutedEventArgs e)
@@ -283,7 +270,6 @@ namespace Assembly69.Interface.Controls
 
             X.Tag = mainWindow.get_tagindex_by_datnum(s[1]);
 
-
             if (mainWindow.trd != null)
             {
                 mainWindow.trd.closethis();
@@ -291,7 +277,7 @@ namespace Assembly69.Interface.Controls
         }
 
         // had to adapt this to bealbe to read tagblocks and forgot to allow it to iterate through them *sigh* good enough for now
-        void do_the_tag_thing(Dictionary<long, vehi.c> VehicleTag, long address, StackPanel parentpanel)
+        private void do_the_tag_thing(Dictionary<long, vehi.c> VehicleTag, long address, StackPanel parentpanel)
         {
             foreach (KeyValuePair<long, vehi.c> entry in VehicleTag)
             {
@@ -306,6 +292,7 @@ namespace Assembly69.Interface.Controls
                         vb1.value.Tag = address + entry.Key + ":4Byte";
                         vb1.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
+
                     case "Float":
                         TagValueBlock vb2 = new() { HorizontalAlignment = HorizontalAlignment.Left };
                         vb2.value_type.Text = "Float";
@@ -315,6 +302,7 @@ namespace Assembly69.Interface.Controls
                         vb2.value.Tag = address + entry.Key + ":Float";
                         vb2.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
+
                     case "TagRef":
                         TagRefBlock tfb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
                         foreach (string s in mainWindow.Tag_groups.Keys)
@@ -345,6 +333,7 @@ namespace Assembly69.Interface.Controls
                         tfb1.goto_button.Click += new RoutedEventHandler(gotobutton);
 
                         break;
+
                     case "Pointer":
                         TagValueBlock vb3 = new() { HorizontalAlignment = HorizontalAlignment.Left };
                         vb3.value_type.Text = "Pointer";
@@ -354,6 +343,7 @@ namespace Assembly69.Interface.Controls
                         vb3.value.Tag = address + entry.Key + ":Pointer";
                         vb3.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
+
                     case "Tagblock": // need to find some kinda "whoops that tag isnt actually loaded"; keep erroring with the hlmt tag
                         TagBlock tb1 = new(this) { HorizontalAlignment = HorizontalAlignment.Left };
                         long new_address = m.ReadLong((address + entry.Key).ToString("X"));
@@ -363,7 +353,6 @@ namespace Assembly69.Interface.Controls
                         if (string_address is < 0x7E7515B65B3B4A00 and > 0)
                         {
                             tb1.tagblock_title.Text = m.ReadString((address + entry.Key + 8).ToString("X") + ",0,0"); // this is the only thing that causes errors with unloaded tags
-
                         }
                         else
                         {
@@ -395,7 +384,6 @@ namespace Assembly69.Interface.Controls
                         if (childs > 0)
                         {
                             tb1.indexbox.SelectedIndex = 0;
-
                         }
                         else
                         {
@@ -414,7 +402,6 @@ namespace Assembly69.Interface.Controls
                         vb4.value.Tag = address + entry.Key + ":String";
                         vb4.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
-
                 }
             }
         }

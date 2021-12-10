@@ -3,7 +3,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace Assembly69.Interface.Windows {
+namespace Assembly69.Interface.Windows
+{
     /// <summary>
     /// Interaction logic for tagref_dropdown.xaml
     /// </summary>
@@ -23,8 +24,6 @@ namespace Assembly69.Interface.Windows {
 
         public bool is_closing;
 
-
-
         public void closethis()
         {
             if (!is_closing)
@@ -34,7 +33,8 @@ namespace Assembly69.Interface.Windows {
             }
         }
 
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e) {
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
             // If the user is holding down left mouse let them drag the window
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
@@ -67,11 +67,8 @@ namespace Assembly69.Interface.Windows {
                     foreach (TreeViewItem tc in tv.Items)
                     {
                         tc.Visibility = Visibility.Visible;
-
                     }
-
                 }
-
             }
         }
     }

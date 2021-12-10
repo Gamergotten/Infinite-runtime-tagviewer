@@ -8,23 +8,21 @@
         Title="tagref_dropdown" Height="450" Width="400" Deactivated="Window_Deactivated">
     <Grid Background="LightGray" MouseDown="Grid_MouseDown">
         <Grid.RowDefinitions>
-            <RowDefinition Height="24"/>
-            <RowDefinition/>
-
+            <RowDefinition Height="24" />
+            <RowDefinition />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="200" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
         <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.ColumnSpan="3">
             <TreeView x:Name="tag_select_panel" />
         </Border>
-        
-        <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Text="Search" VerticalAlignment="Center" Margin="10,0,6,0"/>
-        <TextBox x:Name="search_block" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Text="" VerticalAlignment="Center" TextChanged="Searchbox_TextChanged"/>
 
+        <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Text="Search" VerticalAlignment="Center" Margin="10,0,6,0" />
+        <TextBox x:Name="search_block" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Text="" VerticalAlignment="Center" TextChanged="Searchbox_TextChanged" />
     </Grid>
 </Window>
