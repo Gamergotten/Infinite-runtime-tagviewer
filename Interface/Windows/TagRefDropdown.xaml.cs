@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Assembly69.Interface.Windows {
     /// <summary>
@@ -27,18 +18,18 @@ namespace Assembly69.Interface.Windows {
 
         private void Window_Deactivated(object sender, EventArgs e)
         {
-            closethis();
+            Closethis();
         }
 
-        public bool is_closing;
+        public bool IsClosing;
 
 
 
-        public void closethis()
+        public void Closethis()
         {
-            if (!is_closing)
+            if (!IsClosing)
             {
-                is_closing = true;
+                IsClosing = true;
                 Close();
             }
         }
