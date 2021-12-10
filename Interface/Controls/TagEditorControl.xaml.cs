@@ -237,7 +237,7 @@ namespace Assembly69.Interface.Controls
                 trd.MainWindow = mainWindow;
                 mainWindow.the_last_tagref_button_we_pressed = b;
 
-                TreeViewItem item = new TreeViewItem {
+                TreeViewItem item = new() {
                     Header = mainWindow.convert_ID_to_tag_name("FFFFFFFF"), Tag = s[0] + ":" + "FFFFFFFF"
                 };
 
@@ -250,7 +250,7 @@ namespace Assembly69.Interface.Controls
                 {
                     if (tg.Tag_group == s[1])
                     {
-                        TreeViewItem testing = new TreeViewItem {
+                        TreeViewItem testing = new() {
                             Header = mainWindow.convert_ID_to_tag_name(tg.ObjectID), Tag = s[0] + ":" + tg.Datnum
                         };
 
@@ -298,7 +298,7 @@ namespace Assembly69.Interface.Controls
                 switch (entry.Value.T)
                 {
                     case "4Byte":
-                        TagValueBlock vb1 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
+                        TagValueBlock vb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
                         vb1.value_type.Text = "4 Byte";
                         vb1.value.Text = m.ReadInt((+entry.Key).ToString("X")).ToString();
                         parentpanel.Children.Add(vb1);
@@ -307,7 +307,7 @@ namespace Assembly69.Interface.Controls
                         vb1.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
                     case "Float":
-                        TagValueBlock vb2 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
+                        TagValueBlock vb2 = new() { HorizontalAlignment = HorizontalAlignment.Left };
                         vb2.value_type.Text = "Float";
                         vb2.value.Text = m.ReadFloat((address + entry.Key).ToString("X")).ToString();
                         parentpanel.Children.Add(vb2);
@@ -316,7 +316,7 @@ namespace Assembly69.Interface.Controls
                         vb2.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
                     case "TagRef":
-                        TagRefBlock tfb1 = new TagRefBlock { HorizontalAlignment = HorizontalAlignment.Left };
+                        TagRefBlock tfb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
                         foreach (string s in mainWindow.Tag_groups.Keys)
                         {
                             tfb1.taggroup.Items.Add(s);
@@ -346,7 +346,7 @@ namespace Assembly69.Interface.Controls
 
                         break;
                     case "Pointer":
-                        TagValueBlock vb3 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
+                        TagValueBlock vb3 = new() { HorizontalAlignment = HorizontalAlignment.Left };
                         vb3.value_type.Text = "Pointer";
                         vb3.value.Text = m.ReadLong((address + entry.Key).ToString("X")).ToString("X");
                         parentpanel.Children.Add(vb3);
@@ -355,7 +355,7 @@ namespace Assembly69.Interface.Controls
                         vb3.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
                     case "Tagblock": // need to find some kinda "whoops that tag isnt actually loaded"; keep erroring with the hlmt tag
-                        TagBlock tb1 = new TagBlock(this) { HorizontalAlignment = HorizontalAlignment.Left };
+                        TagBlock tb1 = new(this) { HorizontalAlignment = HorizontalAlignment.Left };
                         long new_address = m.ReadLong((address + entry.Key).ToString("X"));
                         tb1.tagblock_address.Text = "0x" + new_address.ToString("X");
 
@@ -406,7 +406,7 @@ namespace Assembly69.Interface.Controls
                         break;
 
                     case "String":
-                        TagValueBlock vb4 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
+                        TagValueBlock vb4 = new() { HorizontalAlignment = HorizontalAlignment.Left };
                         vb4.value_type.Text = "String";
                         vb4.value.Text = m.ReadString((address + entry.Key).ToString("X")).ToString();
                         parentpanel.Children.Add(vb4);

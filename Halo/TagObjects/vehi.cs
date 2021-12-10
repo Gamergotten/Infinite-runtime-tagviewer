@@ -12,8 +12,7 @@ namespace Assembly69.Halo.TagObjects
             public long S { get; set; } // length of tagblock
         }
 
-        public static Dictionary<long, c> VehicleTag = new Dictionary<long, c>
-        {
+        public static Dictionary<long, c> VehicleTag = new() {
             { 0, new c{ T="Pointer"}},
             { 8, new c{ T="4Byte"}}, // datnum
             { 12, new c{ T="4Byte"}}, // tagID
@@ -341,8 +340,7 @@ namespace Assembly69.Halo.TagObjects
 
         };
 
-        public static Dictionary<long, c> WeaponTag = new Dictionary<long, c>
-        {
+        public static Dictionary<long, c> WeaponTag = new() {
             { 0, new c{ T="Pointer"}},
             { 8, new c{ T="4Byte"}}, // datnum
             { 12, new c{ T="4Byte"}}, // tagID
@@ -543,8 +541,7 @@ namespace Assembly69.Halo.TagObjects
             { 0x113C, new c{ T="Tagblock"}}
 
         };
-        public static Dictionary<long, c> HLMTTag = new Dictionary<long, c>
-        {
+        public static Dictionary<long, c> HLMTTag = new() {
             { 0x10, new c{ T="TagRef"}}, // mode
             { 0x2C, new c{ T="TagRef"}}, // COLL
             { 0x48, new c{ T="TagRef"}}, // JMAD
@@ -603,8 +600,7 @@ namespace Assembly69.Halo.TagObjects
             { 0x2E0, new c{ T="Tagblock"}},
         };
 
-        public static Dictionary<long, c> projectileTag = new Dictionary<long, c>
-        {
+        public static Dictionary<long, c> projectileTag = new() {
             { 0, new c{ T="Pointer"}},
             { 8, new c{ T="4Byte"}}, // datnum
             { 12, new c{ T="4Byte"}}, // tagID
@@ -789,8 +785,7 @@ namespace Assembly69.Halo.TagObjects
             { 0xBF5, new c{ T="TagRef"}}, // EFFE
         };
 
-        public static Dictionary<long, c> sddtTag = new Dictionary<long, c>
-        {
+        public static Dictionary<long, c> sddtTag = new() {
             { 0, new c{ T="Pointer"}},
             { 8, new c{ T="4Byte"}}, // datnum
             { 12, new c{ T="4Byte"}}, // tagID
@@ -827,8 +822,7 @@ namespace Assembly69.Halo.TagObjects
 
         };
 
-        public static Dictionary<long, c> levlTag = new Dictionary<long, c>
-        {
+        public static Dictionary<long, c> levlTag = new() {
             { 0, new c{ T="Pointer"}},
             { 8, new c{ T="4Byte"}}, // datnum
             { 12, new c{ T="4Byte"}}, // tagID

@@ -17,12 +17,12 @@ namespace Assembly69
     /// </summary>
     public partial class MainWindow
     {
-        public Mem m = new Mem();
+        public Mem m = new();
 
         public TagRefDropdown? trd { get; set; } = null; // this is our dropdown box for selecting tag references
         public Button? the_last_tagref_button_we_pressed { get; set; } = null; // since we did it for the window why not also do it for the button
 
-        public Dictionary<string, TagEditorControl> TagEditors { get; set; } = new Dictionary<string, TagEditorControl>();
+        public Dictionary<string, TagEditorControl> TagEditors { get; set; } = new();
 
         public MainWindow()
         {
@@ -78,7 +78,7 @@ namespace Assembly69
         }
 
         public List<tag_struct> Tags_List { get; set; }
-        public SortedDictionary<string, group_tag_struct> Tag_groups { get; set; } = new SortedDictionary<string, group_tag_struct>();
+        public SortedDictionary<string, group_tag_struct> Tag_groups { get; set; } = new();
 
         public struct tag_struct
         {
@@ -137,7 +137,7 @@ namespace Assembly69
 
             for (int tag_index = 0; tag_index < tag_count; tag_index++)
             {
-                tag_struct current_tag = new tag_struct();
+                tag_struct current_tag = new();
 
                 long tag_address = tags_start + (tag_index * 52);
 
@@ -166,7 +166,7 @@ namespace Assembly69
             string key = ReverseString(m.ReadString((tag_group_address + 0xC).ToString("X"), "", 8).Substring(0, 4));
             if (!Tag_groups.ContainsKey(key))
             {
-                group_tag_struct current_group = new group_tag_struct {
+                group_tag_struct current_group = new() {
                     tag_group_desc = m.ReadString((tag_group_address).ToString("X") + ",0x0"),
                     tag_group_name = key,
                     tag_group_definitition = m.ReadString((tag_group_address + 0x20).ToString("X") + ",0x0,0x0"),
@@ -203,7 +203,7 @@ namespace Assembly69
             {
                 group_tag_struct display_group = Tag_groups.ElementAt(i).Value;
 
-                TreeViewItem sortheader = new TreeViewItem {
+                TreeViewItem sortheader = new() {
                     Header = display_group.tag_group_name + " (" + display_group.tag_group_desc + ")",
                     ToolTip = display_group.tag_group_definitition
                 };
@@ -220,7 +220,7 @@ namespace Assembly69
 
             for (int i = 0; i < Tags_List.Count; i++)
             {
-                TreeViewItem t = new TreeViewItem();
+                TreeViewItem t = new();
                 tag_struct tag = Tags_List[i];
                 Tag_groups.TryGetValue(tag.Tag_group, out group_tag_struct dict_tag_group);
 
@@ -235,7 +235,7 @@ namespace Assembly69
 
         }
 
-        public Dictionary<string, string> inhaled_tagnames = new Dictionary<string, string>();
+        public Dictionary<string, string> inhaled_tagnames = new();
 
         public void inhale_tagnames()
         {
@@ -328,10 +328,10 @@ namespace Assembly69
 
 
         // list of changes to ammend to the memory when we phit the poke button
-        public Dictionary<long, KeyValuePair<string, string>> pokelist = new Dictionary<long, KeyValuePair<string, string>>();
+        public Dictionary<long, KeyValuePair<string, string>> pokelist = new();
 
         // to keep track of the UI elements we're gonna use a dictionary, will probably be better
-        public Dictionary<long, TagChangesBlock> UIpokelist = new Dictionary<long, TagChangesBlock>();
+        public Dictionary<long, TagChangesBlock> UIpokelist = new();
 
         // type (TagrefGroup, TagrefTag)
         // address, 
@@ -350,7 +350,7 @@ namespace Assembly69
             }
             else
             {
-                TagChangesBlock NEW_BLOCK = new TagChangesBlock {
+                TagChangesBlock NEW_BLOCK = new() {
                     address = {Text = "0x" + offset.ToString("X")}, type = {Text = type}, value = {Text = value}
                 };
 
