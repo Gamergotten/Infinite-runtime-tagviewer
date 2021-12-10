@@ -19,16 +19,16 @@ namespace Assembly69.Interface.Windows
 
         private void Window_Deactivated(object sender, EventArgs e)
         {
-            closethis();
+            Closethis();
         }
 
-        public bool is_closing;
+        public bool IsClosing;
 
-        public void closethis()
+        public void Closethis()
         {
-            if (!is_closing)
+            if (!IsClosing)
             {
-                is_closing = true;
+                IsClosing = true;
                 Close();
             }
         }
