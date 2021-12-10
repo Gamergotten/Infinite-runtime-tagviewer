@@ -251,15 +251,9 @@ namespace Assembly69
 
         public string convert_ID_to_tag_name(string value)
         {
-
             inhaled_tagnames.TryGetValue(value, out string potential_name);
 
-            if (potential_name == null)
-            {
-                potential_name = "ObjectID: " + value;
-            }
-
-            return potential_name;
+            return potential_name ??= "ObjectID: " + value;
         }
 
         public static string ReverseString(string myStr)
@@ -499,14 +493,7 @@ namespace Assembly69
 
         private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e)
         {
-            if (changes_panel.Visibility == Visibility.Visible)
-            {
-                changes_panel.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                changes_panel.Visibility = Visibility.Visible;
-            }
+            changes_panel.Visibility = changes_panel.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
         }
 
         /* 4Byte
