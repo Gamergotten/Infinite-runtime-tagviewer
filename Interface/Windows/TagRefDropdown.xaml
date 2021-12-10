@@ -23,8 +23,8 @@
             <TreeView x:Name="tag_select_panel" />
         </Border>
         
-        <TextBlock HorizontalAlignment="Right" Text="Search" VerticalAlignment="Center" Margin="10,0,6,0"/>
-        <TextBox x:Name="search_block" Grid.Column="1" HorizontalAlignment="Stretch" Text="" VerticalAlignment="Center" TextChanged="Searchbox_TextChanged"/>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Right" Text="Search" VerticalAlignment="Center" Margin="10,0,6,0"/>
+        <TextBox x:Name="search_block" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Text="" VerticalAlignment="Center" TextChanged="Searchbox_TextChanged"/>
 
     </Grid>
 </Window>

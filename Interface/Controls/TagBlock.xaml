@@ -18,11 +18,11 @@
         </Grid.RowDefinitions>
         <TextBlock x:Name="tagblock_title" Text="Tag block description" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Margin="5,0,0,0" Foreground="White" />
 
-        <TextBox x:Name="tagblock_address" Text="Tag block address" Grid.Row="1" Margin="5,0,0,0"/>
+        <TextBox x:Name="tagblock_address" Text="Tag block address" Grid.Row="1" Grid.Column="0" Margin="5,0,0,0"/>
         <TextBlock Text="Count" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,8,0" Foreground="White"/>
         <TextBox x:Name="tagblock_count" Text="-" Grid.Row="1" Grid.Column="2"/>
 
-        <StackPanel x:Name="dockpanel" Background="Gray" Grid.Row="3" Grid.ColumnSpan="4" />
-        <ComboBox x:Name="indexbox" Grid.Column="2" Margin="2,2,0,2" SelectionChanged="indexbox_SelectionChanged"  />
+        <StackPanel x:Name="dockpanel" Background="Gray" Grid.Row="3" Grid.ColumnSpan="4" Grid.Column="0" />
+        <ComboBox x:Name="indexbox" Grid.Row="0" Grid.Column="2" Margin="2,2,0,2" SelectionChanged="indexbox_SelectionChanged"  />
     </Grid>
 </UserControl>

@@ -19,16 +19,16 @@
         </Grid.RowDefinitions>
 
         <TextBox x:Name="Tagname_text"    Text="Tag Name" Grid.Column="1" />
-        <TextBox x:Name="tagID_text"      Text="ID: 00000000" Grid.Column="2" />
+        <TextBox x:Name="tagID_text"      Text="ID: 00000000" Grid.Row="0" Grid.Column="2" />
 
         <TextBox x:Name="tagdata_text"    Text="Data Address: " Grid.Row="1" Grid.Column="1" />
         <TextBox x:Name="tagdatnum_text"  Text="Datnum: 00000000" Grid.Column="2" Grid.Row="1"/>
 
-        <ScrollViewer BorderBrush="Black" BorderThickness="1" Grid.Row="2" Grid.ColumnSpan="3">
+        <ScrollViewer BorderBrush="Black" BorderThickness="1" Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="0">
             <StackPanel x:Name="tagview_panels"  Margin="0,5,0,10" />
         </ScrollViewer>
 
-        <Grid Grid.Row="4" Grid.ColumnSpan="3">
+        <Grid Grid.Row="4" Grid.ColumnSpan="3" Grid.Column="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="40"/>
                 <ColumnDefinition Width="110"/>

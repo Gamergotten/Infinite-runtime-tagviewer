@@ -10,7 +10,7 @@
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
        <TextBox x:Name="value" Grid.Column="1"/>
-        <TextBlock x:Name="value_type" Text="Tag Value test one two three" HorizontalAlignment="Stretch" Margin="10,0,5,0" />
+        <TextBlock Grid.Column="0" x:Name="value_type" Text="Tag Value test one two three" HorizontalAlignment="Stretch" Margin="10,0,5,0" />
 
     </Grid>
 </UserControl>

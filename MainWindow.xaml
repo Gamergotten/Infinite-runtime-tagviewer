@@ -84,7 +84,7 @@
         </Grid>
         <!-- > Tags Grid -->
 
-        <Grid Margin="0,0,2,0">
+        <Grid Grid.Column="0" Margin="0,0,2,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="10"/>
                 <RowDefinition Height="20"/>
