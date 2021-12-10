@@ -1,4 +1,5 @@
-﻿using Assembly69.Interface.Windows;
+﻿using Assembly69.Halo.TagObjects;
+using Assembly69.Interface.Windows;
 
 using AvalonDock.Controls;
 using AvalonDock.Layout;
@@ -7,9 +8,19 @@ using Memory;
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
 using static Assembly69.MainWindow;
 
 namespace Assembly69.Interface.Controls
@@ -19,76 +30,76 @@ namespace Assembly69.Interface.Controls
     /// </summary>
     public partial class TagEditorControl : UserControl
     {
-        MainWindow _mainWindow;
-        Mem _m;
+        MainWindow mainWindow;
+        Mem m;
 
         public LayoutDocument LayoutDocument { get; internal set; }
 
         public TagEditorControl(MainWindow mw)
         {
-            this._mainWindow = mw;
-            this._m = _mainWindow.M;
+            this.mainWindow = mw;
+            this.m = mainWindow.m;
 
             InitializeComponent();
         }
 
-        public void inhale_tag(int tagIndex) // as in a literal index to the tag
+        public void inhale_tag(int tag_index) // as in a literal index to the tag
         {
-            TagStruct loadingTag = _mainWindow.TagsList[tagIndex];
-            Tagname_text.Text = _mainWindow.convert_ID_to_tag_name(loadingTag.ObjectId);
-            tagID_text.Text = "ID: " + loadingTag.ObjectId;
-            tagdatnum_text.Text = "Datnum: " + loadingTag.Datnum;
-            tagdata_text.Text = "Tag data address: 0x" + loadingTag.TagData.ToString("X");
+            tag_struct loading_tag = mainWindow.Tags_List[tag_index];
+            Tagname_text.Text = mainWindow.convert_ID_to_tag_name(loading_tag.ObjectID);
+            tagID_text.Text = "ID: " + loading_tag.ObjectID;
+            tagdatnum_text.Text = "Datnum: " + loading_tag.Datnum;
+            tagdata_text.Text = "Tag data address: 0x" + loading_tag.Tag_data.ToString("X");
 
             tagview_panels.Children.Clear();
 
-            if (loadingTag.TagGroup == "vehi")
+            if (loading_tag.Tag_group == "vehi")
             {
 
-                Dictionary<long, Vehi.C> strings = Vehi.VehicleTag;
-                do_the_tag_thing(strings, loadingTag.TagData, tagview_panels);
+                Dictionary<long, vehi.c> strings = vehi.VehicleTag;
+                do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
-            else if (loadingTag.TagGroup == "weap")
+            else if (loading_tag.Tag_group == "weap")
             {
 
-                Dictionary<long, Vehi.C> strings = Vehi.WeaponTag;
-                do_the_tag_thing(strings, loadingTag.TagData, tagview_panels);
+                Dictionary<long, vehi.c> strings = vehi.WeaponTag;
+                do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
-            else if (loadingTag.TagGroup == "proj")
+            else if (loading_tag.Tag_group == "proj")
             {
 
-                Dictionary<long, Vehi.C> strings = Vehi.ProjectileTag;
-                do_the_tag_thing(strings, loadingTag.TagData, tagview_panels);
+                Dictionary<long, vehi.c> strings = vehi.projectileTag;
+                do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
-            else if (loadingTag.TagGroup == "hlmt")
+            else if (loading_tag.Tag_group == "hlmt")
             {
 
-                Dictionary<long, Vehi.C> strings = Vehi.HlmtTag;
-                do_the_tag_thing(strings, loadingTag.TagData, tagview_panels);
+                Dictionary<long, vehi.c> strings = vehi.HLMTTag;
+                do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
-            else if (loadingTag.TagGroup == "sddt")
+            else if (loading_tag.Tag_group == "sddt")
             {
 
-                Dictionary<long, Vehi.C> strings = Vehi.SddtTag;
-                do_the_tag_thing(strings, loadingTag.TagData, tagview_panels);
+                Dictionary<long, vehi.c> strings = vehi.sddtTag;
+                do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
-            else if (loadingTag.TagGroup == "levl")
+            else if (loading_tag.Tag_group == "levl")
             {
 
-                Dictionary<long, Vehi.C> strings = Vehi.LevlTag;
-                do_the_tag_thing(strings, loadingTag.TagData, tagview_panels);
+                Dictionary<long, vehi.c> strings = vehi.levlTag;
+                do_the_tag_thing(strings, loading_tag.Tag_data, tagview_panels);
             }
         }
 
 
         // hmm we need a system that reads the pointer and adds it
         // also, we need to beable to read multiple tag things but i may put that on hold
-        public void recall_blockloop(KeyValuePair<long, Vehi.C> entry, long loadingTag, StackPanel parentpanel)
+        public void recall_blockloop(KeyValuePair<long, vehi.c> entry, long loading_tag, StackPanel parentpanel)
         {
             parentpanel.Children.Clear();
             if (entry.Value.B != null)
             {
-                do_the_tag_thing(entry.Value.B, loadingTag, parentpanel);
+                do_the_tag_thing(entry.Value.B, loading_tag, parentpanel);
             }
         }
 
@@ -98,7 +109,7 @@ namespace Assembly69.Interface.Controls
         {
             TextBox tb = sender as TextBox;
             string[] s = tb.Tag.ToString().Split(":");
-            _mainWindow.Addpokechange(long.Parse(s[0]), s[1], tb.Text);
+            mainWindow.addpokechange(long.Parse(s[0]), s[1], tb.Text);
         }
 
         // for tag group
@@ -106,7 +117,7 @@ namespace Assembly69.Interface.Controls
         {
             ComboBox cb = sender as ComboBox;
 
-            _mainWindow.Addpokechange(long.Parse(cb.Tag.ToString()), "TagrefGroup", cb.SelectedValue.ToString());
+            mainWindow.addpokechange(long.Parse(cb.Tag.ToString()), "TagrefGroup", cb.SelectedValue.ToString());
 
             Grid td = cb.Parent as Grid;
             Button b = td.Children[1] as Button;
@@ -115,7 +126,7 @@ namespace Assembly69.Interface.Controls
             // THAT WAS PROBABLY THE MOST DODGY THING IVE EVER DONE WTFFFF
         }
 
-        public void Gotobutton(object sender, RoutedEventArgs e)
+        public void gotobutton(object sender, RoutedEventArgs e)
         {
             Button b = sender as Button;
             var sTagId = b.Tag.ToString();
@@ -123,7 +134,7 @@ namespace Assembly69.Interface.Controls
 
             if (iTagId != -1)
             {
-                _mainWindow.CreateTagEditorTabByTagIndex(iTagId);
+                mainWindow.CreateTagEditorTabByTagIndex(iTagId);
             }
         }
 
@@ -153,14 +164,14 @@ namespace Assembly69.Interface.Controls
             return target;
         }
     
-        private void Tagrefbutton(object sender, RoutedEventArgs e)
+        private void tagrefbutton(object sender, RoutedEventArgs e)
         {
             Button b = sender as Button;
             string[] s = b.Tag.ToString().Split(":");
 
             if (s.Length > 1)
             {
-                var trd = _mainWindow.Trd = new TagRefDropdown();
+                var trd = mainWindow.trd = new TagRefDropdown();
                 var trdWidth = trd.Width = b.ActualWidth + 116;
                 var trdHeight = trd.Height = 400;
 
@@ -231,33 +242,33 @@ namespace Assembly69.Interface.Controls
                     trd.Top = myButtonLocation.Y + 1;
                 }
 
-                trd.MainWindow = _mainWindow;
-                _mainWindow.TheLastTagrefButtonWePressed = b;
+                trd.MainWindow = mainWindow;
+                mainWindow.the_last_tagref_button_we_pressed = b;
 
                 TreeViewItem item = new TreeViewItem();
 
-                item.Header = _mainWindow.convert_ID_to_tag_name("FFFFFFFF");
+                item.Header = mainWindow.convert_ID_to_tag_name("FFFFFFFF");
                 item.Tag = s[0] + ":" + "FFFFFFFF";
 
-                _mainWindow.Trd.tag_select_panel.Items.Add(item);
+                mainWindow.trd.tag_select_panel.Items.Add(item);
                 item.Selected += new RoutedEventHandler(update_tagref);
 
 
-                foreach (TagStruct tg in _mainWindow.TagsList)
+                foreach (tag_struct tg in mainWindow.Tags_List)
                 {
-                    if (tg.TagGroup == s[1])
+                    if (tg.Tag_group == s[1])
                     {
                         TreeViewItem testing = new TreeViewItem();
 
-                        testing.Header = _mainWindow.convert_ID_to_tag_name(tg.ObjectId);
+                        testing.Header = mainWindow.convert_ID_to_tag_name(tg.ObjectID);
                         testing.Tag = s[0] + ":" + tg.Datnum;
 
-                        _mainWindow.Trd.tag_select_panel.Items.Add(testing);
+                        mainWindow.trd.tag_select_panel.Items.Add(testing);
                         testing.Selected += new RoutedEventHandler(update_tagref);
                     }
                 }
 
-                _mainWindow.Trd.Show();
+                mainWindow.trd.Show();
             }
         }
 
@@ -268,36 +279,36 @@ namespace Assembly69.Interface.Controls
             TreeViewItem b = sender as TreeViewItem;
 
             string[] s = b.Tag.ToString().Split(":");
-            _mainWindow.Addpokechange(long.Parse(s[0]), "TagrefTag", s[1]);
+            mainWindow.addpokechange(long.Parse(s[0]), "TagrefTag", s[1]);
 
-            string id = _mainWindow.get_tagid_by_datnum(s[1]);
-            _mainWindow.TheLastTagrefButtonWePressed.Content = _mainWindow.convert_ID_to_tag_name(id);
+            string ID = mainWindow.get_tagid_by_datnum(s[1]);
+            mainWindow.the_last_tagref_button_we_pressed.Content = mainWindow.convert_ID_to_tag_name(ID);
 
             // need to do this the lazy way again, have to head off in a sec
-            Grid td = _mainWindow.TheLastTagrefButtonWePressed.Parent as Grid;
-            Button x = td.Children[2] as Button;
+            Grid td = mainWindow.the_last_tagref_button_we_pressed.Parent as Grid;
+            Button X = td.Children[2] as Button;
             //X.Tag = ID;
 
-            x.Tag = _mainWindow.get_tagindex_by_datnum(s[1]);
+            X.Tag = mainWindow.get_tagindex_by_datnum(s[1]);
 
 
-            if (_mainWindow.Trd != null)
+            if (mainWindow.trd != null)
             {
-                _mainWindow.Trd.Closethis();
+                mainWindow.trd.closethis();
             }
         }
 
         // had to adapt this to bealbe to read tagblocks and forgot to allow it to iterate through them *sigh* good enough for now
-        void do_the_tag_thing(Dictionary<long, Vehi.C> vehicleTag, long address, StackPanel parentpanel)
+        void do_the_tag_thing(Dictionary<long, vehi.c> VehicleTag, long address, StackPanel parentpanel)
         {
-            foreach (KeyValuePair<long, Vehi.C> entry in vehicleTag)
+            foreach (KeyValuePair<long, vehi.c> entry in VehicleTag)
             {
                 switch (entry.Value.T)
                 {
                     case "4Byte":
                         TagValueBlock vb1 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         vb1.value_type.Text = "4 Byte";
-                        vb1.value.Text = _m.ReadInt((+entry.Key).ToString("X")).ToString();
+                        vb1.value.Text = m.ReadInt((+entry.Key).ToString("X")).ToString();
                         parentpanel.Children.Add(vb1);
 
                         vb1.value.Tag = address + entry.Key + ":4Byte";
@@ -306,7 +317,7 @@ namespace Assembly69.Interface.Controls
                     case "Float":
                         TagValueBlock vb2 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         vb2.value_type.Text = "Float";
-                        vb2.value.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
+                        vb2.value.Text = m.ReadFloat((address + entry.Key).ToString("X")).ToString();
                         parentpanel.Children.Add(vb2);
 
                         vb2.value.Tag = address + entry.Key + ":Float";
@@ -314,38 +325,38 @@ namespace Assembly69.Interface.Controls
                         break;
                     case "TagRef":
                         TagRefBlock tfb1 = new TagRefBlock { HorizontalAlignment = HorizontalAlignment.Left };
-                        foreach (string s in _mainWindow.TagGroups.Keys)
+                        foreach (string s in mainWindow.Tag_groups.Keys)
                         {
                             tfb1.taggroup.Items.Add(s);
                         }
-                        string testGroup = ReverseString(_m.ReadString((address + entry.Key + 20).ToString("X"), "", 4));
-                        tfb1.taggroup.SelectedItem = testGroup;
+                        string test_group = ReverseString(m.ReadString((address + entry.Key + 20).ToString("X"), "", 4));
+                        tfb1.taggroup.SelectedItem = test_group;
 
                         // read tagID rather than datnum // or rather, convert datnum to ID
-                        string test = BitConverter.ToString(_m.ReadBytes((address + entry.Key + 24).ToString("X"), 4)).Replace("-", string.Empty);
-                        string testNameId = _mainWindow.convert_ID_to_tag_name(_mainWindow.get_tagid_by_datnum(test));
+                        string test = BitConverter.ToString(m.ReadBytes((address + entry.Key + 24).ToString("X"), 4)).Replace("-", string.Empty);
+                        string test_nameID = mainWindow.convert_ID_to_tag_name(mainWindow.get_tagid_by_datnum(test));
 
-                        tfb1.tag_button.Content = testNameId;
+                        tfb1.tag_button.Content = test_nameID;
                         parentpanel.Children.Add(tfb1);
 
                         tfb1.taggroup.Tag = (address + entry.Key + 20);
                         tfb1.taggroup.SelectionChanged += new SelectionChangedEventHandler(taggroup_SelectionChanged);
 
-                        tfb1.tag_button.Tag = (address + entry.Key + 24) + ":" + testGroup;
-                        tfb1.tag_button.Click += new RoutedEventHandler(Tagrefbutton);
+                        tfb1.tag_button.Tag = (address + entry.Key + 24) + ":" + test_group;
+                        tfb1.tag_button.Click += new RoutedEventHandler(tagrefbutton);
 
-                        int id = _mainWindow.get_tagindex_by_datnum(test);
+                        int ID = mainWindow.get_tagindex_by_datnum(test);
 
                         // tag
 
-                        tfb1.goto_button.Tag = id; // need to get the index of the tag not the ID
-                        tfb1.goto_button.Click += new RoutedEventHandler(Gotobutton);
+                        tfb1.goto_button.Tag = ID; // need to get the index of the tag not the ID
+                        tfb1.goto_button.Click += new RoutedEventHandler(gotobutton);
 
                         break;
                     case "Pointer":
                         TagValueBlock vb3 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         vb3.value_type.Text = "Pointer";
-                        vb3.value.Text = _m.ReadLong((address + entry.Key).ToString("X")).ToString("X");
+                        vb3.value.Text = m.ReadLong((address + entry.Key).ToString("X")).ToString("X");
                         parentpanel.Children.Add(vb3);
 
                         vb3.value.Tag = address + entry.Key + ":Pointer";
@@ -353,13 +364,13 @@ namespace Assembly69.Interface.Controls
                         break;
                     case "Tagblock": // need to find some kinda "whoops that tag isnt actually loaded"; keep erroring with the hlmt tag
                         TagBlock tb1 = new TagBlock(this) { HorizontalAlignment = HorizontalAlignment.Left };
-                        long newAddress = _m.ReadLong((address + entry.Key).ToString("X"));
-                        tb1.tagblock_address.Text = "0x" + newAddress.ToString("X");
+                        long new_address = m.ReadLong((address + entry.Key).ToString("X"));
+                        tb1.tagblock_address.Text = "0x" + new_address.ToString("X");
 
-                        long stringAddress = _m.ReadLong((address + entry.Key + 8).ToString("X"));
-                        if (stringAddress < 0x7E7515B65B3B4A00 && stringAddress > 0)
+                        long string_address = m.ReadLong((address + entry.Key + 8).ToString("X"));
+                        if (string_address < 0x7E7515B65B3B4A00 && string_address > 0)
                         {
-                            tb1.tagblock_title.Text = _m.ReadString((address + entry.Key + 8).ToString("X") + ",0,0"); // this is the only thing that causes errors with unloaded tags
+                            tb1.tagblock_title.Text = m.ReadString((address + entry.Key + 8).ToString("X") + ",0,0"); // this is the only thing that causes errors with unloaded tags
 
                         }
                         else
@@ -369,8 +380,8 @@ namespace Assembly69.Interface.Controls
                             break;
                         }
 
-                        string childrenCount = _m.ReadInt((address + entry.Key + 16).ToString("X")).ToString();
-                        tb1.tagblock_count.Text = childrenCount;
+                        string children_count = m.ReadInt((address + entry.Key + 16).ToString("X")).ToString();
+                        tb1.tagblock_count.Text = children_count;
                         parentpanel.Children.Add(tb1);
 
                         tb1.tagblock_address.Tag = (address + entry.Key) + ":Pointer";
@@ -381,10 +392,10 @@ namespace Assembly69.Interface.Controls
 
                         //tb1.indexbox.SelectionChanged += new SelectionChangedEventHandler(indexbox_SelectionChanged);
 
-                        tb1.Children = entry;
-                        tb1.BlockAddress = newAddress;
+                        tb1.children = entry;
+                        tb1.block_address = new_address;
 
-                        int childs = int.Parse(childrenCount);
+                        int childs = int.Parse(children_count);
                         for (int y = 0; y < childs; y++)
                         {
                             tb1.indexbox.Items.Add(new ListViewItem { Content = y });
@@ -405,7 +416,7 @@ namespace Assembly69.Interface.Controls
                     case "String":
                         TagValueBlock vb4 = new TagValueBlock { HorizontalAlignment = HorizontalAlignment.Left };
                         vb4.value_type.Text = "String";
-                        vb4.value.Text = _m.ReadString((address + entry.Key).ToString("X")).ToString();
+                        vb4.value.Text = m.ReadString((address + entry.Key).ToString("X")).ToString();
                         parentpanel.Children.Add(vb4);
 
                         vb4.value.Tag = address + entry.Key + ":String";
