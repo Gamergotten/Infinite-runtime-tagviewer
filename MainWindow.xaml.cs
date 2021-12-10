@@ -287,8 +287,7 @@ namespace Assembly69
 
                     // Set the tag as the active tab
                     bool found = false; // used for debugging
-                    var ldp = dockSearch.Parent as AvalonDock.Layout.LayoutDocumentPane;
-                    if (ldp != null)
+                    if (dockSearch.Parent is LayoutDocumentPane ldp)
                     {
                         for (int x = 0; x < ldp.Children.Count; x++)
                         {
