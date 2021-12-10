@@ -358,7 +358,7 @@ namespace Assembly69.Interface.Controls
                         tb1.tagblock_address.Text = "0x" + new_address.ToString("X");
 
                         long string_address = m.ReadLong((address + entry.Key + 8).ToString("X"));
-                        if (string_address < 0x7E7515B65B3B4A00 && string_address > 0)
+                        if (string_address is < 0x7E7515B65B3B4A00 and > 0)
                         {
                             tb1.tagblock_title.Text = m.ReadString((address + entry.Key + 8).ToString("X") + ",0,0"); // this is the only thing that causes errors with unloaded tags
 
