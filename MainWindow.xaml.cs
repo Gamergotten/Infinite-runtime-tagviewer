@@ -1,38 +1,28 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Memory;
-using System.IO;
-using System.Text.RegularExpressions;
-using Assembly69.Halo.TagObjects;
 using Assembly69.Interface.Controls;
-using AvalonDock.Layout;
 using Assembly69.Interface.Windows;
+using AvalonDock.Layout;
+using Memory;
 
 namespace Assembly69
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
-        public Mem m = new Mem();
+        public Mem M = new();
 
-        public TagRefDropdown? trd { get; set; } = null; // this is our dropdown box for selecting tag references
-        public Button? the_last_tagref_button_we_pressed { get; set; } = null; // since we did it for the window why not also do it for the button
+        public TagRefDropdown? Trd { get; set; } = null; // this is our dropdown box for selecting tag references
+        public Button? TheLastTagrefButtonWePressed { get; set; } = null; // since we did it for the window why not also do it for the button
 
-        public Dictionary<string, TagEditorControl> TagEditors { get; set; } = new Dictionary<string, TagEditorControl>();
+        public Dictionary<string, TagEditorControl> TagEditors { get; set; } = new();
 
         public MainWindow()
         {
@@ -41,16 +31,16 @@ namespace Assembly69
             inhale_tagnames();
         }
 
-        public long base_address = -1;
-        public int tag_count = -1;
+        public long BaseAddress = -1;
+        public int TagCount = -1;
 
         // Hook to halo infinite
         private async void BtnHook_Click(object sender, RoutedEventArgs e)
         {
             hook_text.Text = "Openning process...";
-            m.OpenProcess("HaloInfinite.exe");
+            M.OpenProcess("HaloInfinite.exe");
 
-            if (m.pHandle == IntPtr.Zero)
+            if (M.pHandle == IntPtr.Zero)
             {
                 // Could not find the process
                 hook_text.Text = "Cant find HaloInfinite.exe";
@@ -58,8 +48,8 @@ namespace Assembly69
             }
 
             // Get the base address
-            base_address = m.ReadLong("HaloInfinite.exe+0x3E952A0");
-            string validtest = m.ReadString(base_address.ToString("X"));
+            BaseAddress = M.ReadLong("HaloInfinite.exe+0x3E952A0");
+            string validtest = M.ReadString(BaseAddress.ToString("X"));
 
             if (validtest == "tag instances")
             {
@@ -69,72 +59,68 @@ namespace Assembly69
             {
                 hook_text.Text = "Offset failed, scanning...";
 
-                long? aobScan = (await m.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
+                long? aobScan = (await M.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
                 .First(); // "tag instances"
 
                 // Failed to find base tag address
-                if (aobScan == null || aobScan == 0) {
-                    base_address = -1;
+                if (aobScan == null || aobScan == 0)
+                {
+                    BaseAddress = -1;
                     hook_text.Text = "Failed to locate base tag address";
                 }
                 else
                 {
-                    base_address = aobScan.Value;
+                    BaseAddress = aobScan.Value;
                     hook_text.Text = "Process Hooked";
                 }
             }
-
-
         }
 
-        public List<tag_struct> Tags_List { get; set; }
-        public SortedDictionary<string, group_tag_struct> Tag_groups { get; set; } = new SortedDictionary<string, group_tag_struct>();
+        public List<TagStruct> TagsList { get; set; }
+        public SortedDictionary<string, GroupTagStruct> TagGroups { get; set; } = new();
 
-        public struct tag_struct
+        public struct TagStruct
         {
             public string Datnum;
 
-            public string ObjectID;
+            public string ObjectId;
 
-            public string Tag_group;
+            public string TagGroup;
 
-            public long Tag_data;
+            public long TagData;
 
-            public string Tag_type_desc;
+            public string TagTypeDesc;
         }
 
-
-        public struct group_tag_struct
+        public struct GroupTagStruct
         {
-            public string tag_group_desc;
+            public string TagGroupDesc;
 
-            public string tag_group_name;
+            public string TagGroupName;
 
-            public string tag_group_definitition;
+            public string TagGroupDefinitition;
 
-            public string tag_extra_type;
+            public string TagExtraType;
 
-            public string tag_extra_name;
+            public string TagExtraName;
 
-            public TreeViewItem tag_category;
+            public TreeViewItem TagCategory;
         }
-
 
         // load tags from Mem
         private void BtnLoadTags_Click(object sender, RoutedEventArgs e)
         {
-            if (tag_count != -1)
+            if (TagCount != -1)
             {
-                tag_count = -1;
-                Tag_groups.Clear();
-                Tags_List.Clear();
+                TagCount = -1;
+                TagGroups.Clear();
+                TagsList.Clear();
             }
-
 
             TagsTree.Items.Clear();
 
-            tag_count = m.ReadInt((base_address + 0x6C).ToString("X"));
-            long tags_start = m.ReadLong((base_address + 0x78).ToString("X"));
+            TagCount = M.ReadInt((BaseAddress + 0x6C).ToString("X"));
+            long tagsStart = M.ReadLong((BaseAddress + 0x78).ToString("X"));
 
             // each tag is 52 bytes long // was it 52 or was it 0x52? whatever
             // 0x0 datnum 4bytes
@@ -143,52 +129,48 @@ namespace Assembly69
             // 0x10 Tag_data Pointer 8bytes
             // 0x18 Tag_type_desc Pointer 8bytes
 
-            Tags_List = new List<tag_struct>();
+            TagsList = new List<TagStruct>();
 
-            for (int tag_index = 0; tag_index < tag_count; tag_index++)
+            for (int tagIndex = 0; tagIndex < TagCount; tagIndex++)
             {
-                tag_struct current_tag = new tag_struct();
+                TagStruct currentTag = new();
 
-                long tag_address = tags_start + (tag_index * 52);
+                long tagAddress = tagsStart + (tagIndex * 52);
 
+                byte[] test1 = M.ReadBytes(tagAddress.ToString("X"), 4);
 
-                byte[] test1 = m.ReadBytes(tag_address.ToString("X"), 4);
+                currentTag.Datnum = BitConverter.ToString(test1).Replace("-", string.Empty);
 
-                current_tag.Datnum = BitConverter.ToString(test1).Replace("-", string.Empty);
-
-                byte[] test = (m.ReadBytes((tag_address + 4).ToString("X"), 4));
+                byte[] test = (M.ReadBytes((tagAddress + 4).ToString("X"), 4));
 
                 // = String.Concat(bytes.Where(c => !Char.IsWhiteSpace(c)));
-                current_tag.ObjectID = BitConverter.ToString(test).Replace("-", string.Empty);
+                currentTag.ObjectId = BitConverter.ToString(test).Replace("-", string.Empty);
 
-                current_tag.Tag_group = read_tag_group(m.ReadLong((tag_address + 0x8).ToString("X")));
+                currentTag.TagGroup = read_tag_group(M.ReadLong((tagAddress + 0x8).ToString("X")));
 
-                current_tag.Tag_data = m.ReadLong((tag_address + 0x10).ToString("X"));
+                currentTag.TagData = M.ReadLong((tagAddress + 0x10).ToString("X"));
 
                 // do the tag definitition
-                Tags_List.Add(current_tag);
+                TagsList.Add(currentTag);
             }
             Loadtags();
         }
 
-        public string read_tag_group(long tag_group_address)
+        public string read_tag_group(long tagGroupAddress)
         {
-            string key = ReverseString(m.ReadString((tag_group_address + 0xC).ToString("X"), "", 8).Substring(0, 4));
-            if (!Tag_groups.ContainsKey(key))
+            string key = ReverseString(M.ReadString((tagGroupAddress + 0xC).ToString("X"), "", 8).Substring(0, 4));
+            if (!TagGroups.ContainsKey(key))
             {
-                group_tag_struct current_group = new group_tag_struct();
+                GroupTagStruct currentGroup = new() {
+                    TagGroupDesc = M.ReadString((tagGroupAddress).ToString("X") + ",0x0"),
+                    TagGroupName = key,
+                    TagGroupDefinitition = M.ReadString((tagGroupAddress + 0x20).ToString("X") + ",0x0,0x0"),
+                    TagExtraType = M.ReadString((tagGroupAddress + 0x2C).ToString("X"), "", 12)
+                };
 
-                current_group.tag_group_desc = m.ReadString((tag_group_address).ToString("X") + ",0x0");
-
-                current_group.tag_group_name = key;
-
-                current_group.tag_group_definitition = m.ReadString((tag_group_address + 0x20).ToString("X") + ",0x0,0x0");
-
-                current_group.tag_extra_type = m.ReadString((tag_group_address + 0x2C).ToString("X"), "", 12);
-
-                long test_address = m.ReadLong((tag_group_address + 0x48).ToString("X"));
-                if (test_address != 0)
-                    current_group.tag_extra_name = m.ReadString((test_address).ToString("X"));
+                long testAddress = M.ReadLong((tagGroupAddress + 0x48).ToString("X"));
+                if (testAddress != 0)
+                    currentGroup.TagExtraName = M.ReadString((testAddress).ToString("X"));
 
                 // Doing the UI here so we dont have to literally reconstruct the elements elsewhere
                 //TreeViewItem sortheader = new TreeViewItem();
@@ -197,9 +179,8 @@ namespace Assembly69
                 //TagsTree.Items.Add(sortheader);
                 //current_group.tag_category = sortheader;
 
-                Tag_groups.Add(key, current_group);
+                TagGroups.Add(key, currentGroup);
             }
-
 
             return key;
         }
@@ -208,42 +189,38 @@ namespace Assembly69
         {
             // TagsTree
 
-            for (int i = 0; i < Tag_groups.Count; i++)
+            for (int i = 0; i < TagGroups.Count; i++)
             {
-                group_tag_struct display_group = Tag_groups.ElementAt(i).Value;
+                GroupTagStruct displayGroup = TagGroups.ElementAt(i).Value;
 
-                TreeViewItem sortheader = new TreeViewItem();
+                TreeViewItem sortheader = new() {
+                    Header = displayGroup.TagGroupName + " (" + displayGroup.TagGroupDesc + ")",
+                    ToolTip = displayGroup.TagGroupDefinitition
+                };
 
-                sortheader.Header = display_group.tag_group_name + " (" + display_group.tag_group_desc + ")";
-
-                sortheader.ToolTip = display_group.tag_group_definitition;
-
-                display_group.tag_category = sortheader;
+                displayGroup.TagCategory = sortheader;
 
                 TagsTree.Items.Add(sortheader);
 
-                Tag_groups[Tag_groups.ElementAt(i).Key] = display_group;
+                TagGroups[TagGroups.ElementAt(i).Key] = displayGroup;
             }
 
-
-            for (int i = 0; i < Tags_List.Count; i++)
+            for (int i = 0; i < TagsList.Count; i++)
             {
-                TreeViewItem t = new TreeViewItem();
-                tag_struct tag = Tags_List[i];
-                Tag_groups.TryGetValue(tag.Tag_group, out group_tag_struct dict_tag_group);
+                TreeViewItem t = new();
+                TagStruct tag = TagsList[i];
+                TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct dictTagGroup);
 
-                t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectID);
+                t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
                 t.Tag = i;
                 //t.MouseLeftButtonDown += new MouseButtonEventHandler(Select_Tag_click);
                 t.Selected += Select_Tag_click;
 
-                dict_tag_group.tag_category.Items.Add(t);
-
+                dictTagGroup.TagCategory.Items.Add(t);
             }
-
         }
 
-        public Dictionary<string, string> inhaled_tagnames = new Dictionary<string, string>();
+        public Dictionary<string, string> InhaledTagnames = new();
 
         public void inhale_tagnames()
         {
@@ -251,23 +228,17 @@ namespace Assembly69
             var lines = System.IO.File.ReadLines(filename);
             foreach (var line in lines)
             {
-                string[] hex_string = line.Split(" : ");
-                if (!inhaled_tagnames.ContainsKey(hex_string[0]))
-                    inhaled_tagnames.Add(hex_string[0], hex_string[1]);
+                string[] hexString = line.Split(" : ");
+                if (!InhaledTagnames.ContainsKey(hexString[0]))
+                    InhaledTagnames.Add(hexString[0], hexString[1]);
             }
         }
 
         public string convert_ID_to_tag_name(string value)
         {
+            InhaledTagnames.TryGetValue(value, out string potentialName);
 
-            inhaled_tagnames.TryGetValue(value, out string potential_name);
-
-            if (potential_name == null)
-            {
-                potential_name = "ObjectID: " + value;
-            }
-
-            return potential_name;
+            return potentialName ??= "ObjectID: " + value;
         }
 
         public static string ReverseString(string myStr)
@@ -277,12 +248,10 @@ namespace Assembly69
             return new string(myArr);
         }
 
-
-
         public void CreateTagEditorTabByTagIndex(int tagIndex)
         {
-            var tag = Tags_List[tagIndex];
-            var tagFull = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectID);
+            var tag = TagsList[tagIndex];
+            var tagFull = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
             string tagName = tagFull.Split('\\').Last();
 
             // Find the existing layout document ( draggable panel item )
@@ -301,8 +270,7 @@ namespace Assembly69
 
                     // Set the tag as the active tab
                     bool found = false; // used for debugging
-                    var ldp = dockSearch.Parent as AvalonDock.Layout.LayoutDocumentPane;
-                    if (ldp != null)
+                    if (dockSearch.Parent is LayoutDocumentPane ldp)
                     {
                         for (int x = 0; x < ldp.Children.Count; x++)
                         {
@@ -341,52 +309,50 @@ namespace Assembly69
             CreateTagEditorTabByTagIndex(int.Parse(item.Tag.ToString()));
         }
 
-
         // list of changes to ammend to the memory when we phit the poke button
-        public Dictionary<long, KeyValuePair<string, string>> pokelist = new Dictionary<long, KeyValuePair<string, string>>();
+        public Dictionary<long, KeyValuePair<string, string>> Pokelist = new();
 
         // to keep track of the UI elements we're gonna use a dictionary, will probably be better
-        public Dictionary<long, TagChangesBlock> UIpokelist = new Dictionary<long, TagChangesBlock>();
+        public Dictionary<long, TagChangesBlock> UIpokelist = new();
 
         // type (TagrefGroup, TagrefTag)
-        // address, 
-        public void addpokechange(long offset, string type, string value)
+        // address,
+        public void Addpokechange(long offset, string type, string value)
         {
             // hmm we need to change this so we either update or add a new UI element
-            pokelist[offset] = new KeyValuePair<string, string>(type, value);
+            Pokelist[offset] = new KeyValuePair<string, string>(type, value);
 
             // there we go, now we aren't touching the pokelist code
             if (UIpokelist.ContainsKey(offset))
             {
-                TagChangesBlock update_element = UIpokelist[offset];
-                update_element.address.Text = "0x" + offset.ToString("X");
-                update_element.type.Text = type;
-                update_element.value.Text = value;
+                TagChangesBlock updateElement = UIpokelist[offset];
+                updateElement.address.Text = "0x" + offset.ToString("X");
+                updateElement.type.Text = type;
+                updateElement.value.Text = value;
             }
             else
             {
-                TagChangesBlock NEW_BLOCK = new TagChangesBlock();
-                NEW_BLOCK.address.Text = "0x" + offset.ToString("X");
-                NEW_BLOCK.type.Text = type;
-                NEW_BLOCK.value.Text = value;
+                TagChangesBlock newBlock = new() {
+                    address = { Text = "0x" + offset.ToString("X") },
+                    type = { Text = type },
+                    value = { Text = value }
+                };
 
-                changes_panel.Children.Add(NEW_BLOCK);
-                UIpokelist.Add(offset, NEW_BLOCK);
+                changes_panel.Children.Add(newBlock);
+                UIpokelist.Add(offset, newBlock);
             }
 
-            change_text.Text = pokelist.Count + " changes queued";
+            change_text.Text = Pokelist.Count + " changes queued";
         }
-
-
 
         // need this to read tagref blocks - because we only get a datnum to figure out the name with
         // so we find what else has the same datnum and then run the other method to get name based off of ID
         public string get_tagid_by_datnum(string datnum)
         {
-            foreach (tag_struct t in Tags_List)
+            foreach (TagStruct t in TagsList)
             {
                 if (t.Datnum == datnum)
-                    return t.ObjectID;
+                    return t.ObjectId;
             }
 
             return "Tag not present(" + datnum + ")";
@@ -395,9 +361,9 @@ namespace Assembly69
         public int get_tagindex_by_datnum(string datnum)
         {
             //tag_struct t in Tags_List
-            for (int i = 0; i < Tags_List.Count; i++)
+            for (int i = 0; i < TagsList.Count; i++)
             {
-                tag_struct t = Tags_List[i];
+                TagStruct t = TagsList[i];
                 if (t.Datnum == datnum)
                     return i;
             }
@@ -433,20 +399,15 @@ namespace Assembly69
                     foreach (TreeViewItem tc in tv.Items)
                     {
                         tc.Visibility = Visibility.Visible;
-
                     }
-
                 }
-
             }
         }
-
-
 
         // POKE OUR CHANGES LETSGOOOO
         private void BtnPokeChanges_Click(object sender, RoutedEventArgs e)
         {
-            foreach (KeyValuePair<long, KeyValuePair<string, string>> pair in pokelist)
+            foreach (KeyValuePair<long, KeyValuePair<string, string>> pair in Pokelist)
             {
                 long address = pair.Key;
                 string type = pair.Value.Key;
@@ -455,67 +416,63 @@ namespace Assembly69
                 switch (type)
                 {
                     case "4Byte":
-                        m.WriteMemory(address.ToString("X"), "int", value);
+                        M.WriteMemory(address.ToString("X"), "int", value);
                         break;
+
                     case "Float":
-                        m.WriteMemory(address.ToString("X"), "float", value);
+                        M.WriteMemory(address.ToString("X"), "float", value);
                         break;
+
                     case "Pointer":
-                        string will_this_work = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
-                        m.WriteMemory(address.ToString("X"), "long", will_this_work); // apparently it does
+                        string willThisWork = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
+                        M.WriteMemory(address.ToString("X"), "long", willThisWork); // apparently it does
                         break;
+
                     case "String":
-                        m.WriteMemory(address.ToString("X"), "string", value + "\0");
+                        M.WriteMemory(address.ToString("X"), "string", value + "\0");
                         break;
+
                     case "TagrefGroup":
-                        m.WriteMemory(address.ToString("X"), "string", ReverseString(value));
+                        M.WriteMemory(address.ToString("X"), "string", ReverseString(value));
                         break;
+
                     case "TagrefTag":
-                        string why_do_i_need_to_convert_EVERYTHING = Convert.ToInt32(value, 16).ToString();
+                        string whyDoINeedToConvertEverything = Convert.ToInt32(value, 16).ToString();
                         // THAT FLIPS IT BACKWARDS
 
                         string temp = Regex.Replace(value, @"(.{2})", "$1 ");
                         temp = temp.TrimEnd();
-                        m.WriteMemory(address.ToString("X"), "bytes", temp);
+                        M.WriteMemory(address.ToString("X"), "bytes", temp);
                         int w2 = 0;
-
 
                         break;
                 }
             }
 
-            poke_text.Text = pokelist.Count + " changes poked";
+            poke_text.Text = Pokelist.Count + " changes poked";
 
             changes_panel.Children.Clear();
-            pokelist.Clear();
+            Pokelist.Clear();
             UIpokelist.Clear();
-            change_text.Text = pokelist.Count + " changes queued";
+            change_text.Text = Pokelist.Count + " changes queued";
         }
 
         private void BtnClearQueue_Click(object sender, RoutedEventArgs e)
         {
             changes_panel.Children.Clear();
-            pokelist.Clear();
+            Pokelist.Clear();
             UIpokelist.Clear();
-            change_text.Text = pokelist.Count + " changes queued";
+            change_text.Text = Pokelist.Count + " changes queued";
         }
 
         private void DockManager_DocumentClosing(object sender, AvalonDock.DocumentClosingEventArgs e)
         {
             // On tag window closing.
-
         }
 
         private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e)
         {
-            if (changes_panel.Visibility == Visibility.Visible)
-            {
-                changes_panel.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                changes_panel.Visibility = Visibility.Visible;
-            }
+            changes_panel.Visibility = changes_panel.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
         }
 
         /* 4Byte
