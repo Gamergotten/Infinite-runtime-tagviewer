@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
+
 using Assembly69.Interface.Controls;
 using Assembly69.Interface.Windows;
 using AvalonDock.Layout;
@@ -39,6 +41,8 @@ namespace Assembly69
         public MainWindow()
         {
             InitializeComponent();
+            StateChanged += MainWindowStateChangeRaised;
+
 
             inhale_tagnames();
         }
@@ -348,7 +352,7 @@ namespace Assembly69
                 TagChangesBlock newBlock = new() {
                     address = { Text = "0x" + offset.ToString("X") },
                     type = { Text = type },
-                    value = { Text = value }
+                    value = { Text = value },
                 };
 
                 changes_panel.Children.Add(newBlock);
@@ -490,7 +494,13 @@ namespace Assembly69
 
         private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e)
         {
-            changes_panel.Visibility = changes_panel.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+            var btn = (Button) sender;
+            
+            changes_panel_container.Visibility = changes_panel_container.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+            btn.Content = 
+                changes_panel_container.Visibility == Visibility.Visible
+                ? ""
+                : "";
         }
 
         /* 4Byte
@@ -502,5 +512,55 @@ namespace Assembly69
          * TagrefGroup
          * TagrefTag
          */
+
+        #region Window Styling
+
+        // Can execute
+        private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        // Minimize
+        private void CommandBinding_Executed_Minimize(object sender, ExecutedRoutedEventArgs e)
+        {
+            SystemCommands.MinimizeWindow(this);
+        }
+
+        // Maximize
+        private void CommandBinding_Executed_Maximize(object sender, ExecutedRoutedEventArgs e)
+        {
+            SystemCommands.MaximizeWindow(this);
+        }
+
+        // Restore
+        private void CommandBinding_Executed_Restore(object sender, ExecutedRoutedEventArgs e)
+        {
+            SystemCommands.RestoreWindow(this);
+        }
+
+        // Close
+        private void CommandBinding_Executed_Close(object sender, ExecutedRoutedEventArgs e)
+        {
+            SystemCommands.CloseWindow(this);
+        }
+
+        // State change
+        private void MainWindowStateChangeRaised(object sender, EventArgs e)
+        {
+            if (WindowState == WindowState.Maximized)
+            {
+                MainWindowBorder.BorderThickness = new Thickness(8);
+                RestoreButton.Visibility = Visibility.Visible;
+                MaximizeButton.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                MainWindowBorder.BorderThickness = new Thickness(0);
+                RestoreButton.Visibility = Visibility.Collapsed;
+                MaximizeButton.Visibility = Visibility.Visible;
+            }
+        }
+        #endregion
     }
 }
