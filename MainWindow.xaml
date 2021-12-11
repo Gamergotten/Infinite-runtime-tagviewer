@@ -9,10 +9,16 @@
                  Title="Infinite Runtime Tagviewer" Height="650" Width="1100">
 
     <Window.Resources>
-        <ScaleTransform
-            x:Key="windowScaleTransform"
-            ScaleX="1"
-            ScaleY="1" />
+        <TransformGroup x:Key="windowScaleTransform">
+            <ScaleTransform
+                ScaleX="1"
+                ScaleY="1" />
+
+            <!-- <SkewTransform
+                AngleX="30" />
+
+            <RotateTransform Angle="6" /> -->
+        </TransformGroup>
     </Window.Resources>
 
     <Grid  LayoutTransform="{StaticResource windowScaleTransform}">

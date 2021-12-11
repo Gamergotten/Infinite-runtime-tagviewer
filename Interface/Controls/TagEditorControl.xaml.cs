@@ -511,7 +511,7 @@ namespace Assembly69.Interface.Controls
                 if (control is TagBlock)
                 {
                     var trb = (TagBlock) control;
-                    if (trb.tagblock_title.Text.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+                    if (((string)trb.tagblock_title.Text).Contains(filterText, StringComparison.OrdinalIgnoreCase))
                     {
                         control.Visibility = Visibility.Visible;
                         found = true;

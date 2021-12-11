@@ -2737,12 +2737,12 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="6"/>
                         </Grid.RowDefinitions>
-                        <Border BorderBrush="Transparent"
+                        <Border BorderBrush="#505050"
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     Background="{TemplateBinding Background}"
                                     Grid.ColumnSpan="4" 
                                     Grid.Column="0"
-                                    CornerRadius="3"
+                                    CornerRadius="0"
                                     Grid.Row="1"
                                     Grid.RowSpan="3">
                             <!--<Border Grid.ColumnSpan="4"
@@ -2751,7 +2751,6 @@
 									Grid.RowSpan="3">-->
                             <Border.OpacityMask>
                                 <MultiBinding ConverterParameter="7" Converter="{StaticResource BorderGapMaskConverter}">
-                                    <Binding ElementName="Header" Path="ActualWidth"/>
                                     <Binding Path="ActualWidth" RelativeSource="{RelativeSource Self}"/>
                                     <Binding Path="ActualHeight" RelativeSource="{RelativeSource Self}"/>
                                 </MultiBinding>
