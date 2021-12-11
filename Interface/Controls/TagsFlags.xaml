@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Assembly69.Interface.Controls.TagsFlags"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Assembly69.Interface.Controls"
+             mc:Ignorable="d">
+    <Border Background="DarkGoldenrod" Margin="5,5,0,0" Width="170" Height="120">
+        <StackPanel Grid.Column="1" Margin="5, 0, 0, 0">
+            <CheckBox x:Name="flag1" Content="Flag1" Click="flag1_Checked"/>
+            <CheckBox x:Name="flag2" Content="Flag2" Click="flag1_Checked"/>
+            <CheckBox x:Name="flag3" Content="Flag3" Click="flag1_Checked"/>
+            <CheckBox x:Name="flag4" Content="Flag4" Click="flag1_Checked"/>
+            <CheckBox x:Name="flag5" Content="Flag5" Click="flag1_Checked"/>
+            <CheckBox x:Name="flag6" Content="Flag6" Click="flag1_Checked"/>
+            <CheckBox x:Name="flag7" Content="Flag7" Click="flag1_Checked"/>
+            <CheckBox x:Name="flag8" Content="Flag8" Click="flag1_Checked"/>
+        </StackPanel>
+
+    </Border>
+</UserControl>
