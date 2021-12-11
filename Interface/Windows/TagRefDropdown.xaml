@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         WindowStyle="None"
+        Background="#252526"
+        ResizeMode="CanResizeWithGrip"
         Title="tagref_dropdown" Height="450" Width="400" Deactivated="Window_Deactivated">
-    <Grid Background="LightGray" MouseDown="Grid_MouseDown">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="1,1,1,1" CornerRadius="2" />
+    </WindowChrome.WindowChrome>
+
+    <Grid Margin="0,0,0,0" WindowChrome.IsHitTestVisibleInChrome="True" 
+           FocusManager.FocusedElement="{Binding ElementName=search_block}">
         <Grid.RowDefinitions>
             <RowDefinition Height="24" />
             <RowDefinition />
@@ -14,15 +22,18 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="200" />
-            <ColumnDefinition />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
         </Grid.ColumnDefinitions>
 
         <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.ColumnSpan="3">
             <TreeView x:Name="tag_select_panel" />
         </Border>
 
-        <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Text="Search" VerticalAlignment="Center" Margin="10,0,6,0" />
-        <TextBox x:Name="search_block" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Text="" VerticalAlignment="Center" TextChanged="Searchbox_TextChanged" />
+        <TextBlock WindowChrome.IsHitTestVisibleInChrome="True" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" 
+                   Text="Search" VerticalAlignment="Center" 
+                   Margin="10,0,6,0" />
+        <TextBox WindowChrome.IsHitTestVisibleInChrome="True" x:Name="search_block" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" 
+                 Text="" VerticalAlignment="Center" TextChanged="Searchbox_TextChanged" Margin="10,0,20,0" />
     </Grid>
 </Window>
