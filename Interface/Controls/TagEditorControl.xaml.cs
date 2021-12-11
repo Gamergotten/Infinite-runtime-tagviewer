@@ -309,6 +309,15 @@ namespace Assembly69.Interface.Controls
                         vb1.value.Tag = address + entry.Key + ":4Byte";
                         vb1.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
+                    case "2Byte":
+                        TagValueBlock vb6 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+                        vb6.value_type.Text = "2 Byte";
+                        vb6.value.Text = _m.Read2Byte((address + entry.Key).ToString("X")).ToString();
+                        parentpanel.Children.Add(vb6);
+
+                        vb6.value.Tag = address + entry.Key + ":2Byte";
+                        vb6.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+                        break;
 
                     case "Float":
                         TagValueBlock vb2 = new() { HorizontalAlignment = HorizontalAlignment.Left };

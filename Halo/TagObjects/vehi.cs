@@ -478,7 +478,30 @@ namespace Assembly69.Halo.TagObjects
 
             { 0xC30, new C { T = "TagRef" } }, // BITM
 
-            { 0xC4C, new C { T = "Tagblock" } },
+            { 0xC4C, new C { T = "Tagblock", B = new Dictionary<long, C> // barrel block
+            {
+                { 0x6, new C { T = "2Byte" } },
+                { 0x8, new C { T = "2Byte" } },
+                { 0xA, new C { T = "2Byte" } },
+                { 0xC, new C { T = "2Byte" } },
+                { 0xE, new C { T = "2Byte" } },
+                { 0x10, new C { T = "2Byte" } },
+                { 0x12, new C { T = "2Byte" } },
+                { 0x14, new C { T = "2Byte" } },
+                { 0x16, new C { T = "2Byte" } },
+                { 0x18, new C { T = "2Byte" } },
+                { 0x1A, new C { T = "2Byte" } },
+                { 0x1C, new C { T = "TagRef" } },
+                { 0x38, new C { T = "TagRef" } },
+                { 0x54, new C { T = "TagRef" } },
+                { 0x70, new C { T = "TagRef" } },
+                { 0x8C, new C{ T="Tagblock", B=new Dictionary<long, C> // object block
+                {
+                    { 0x4, new C{ T="TagRef"}}, //
+                }, S=32}},
+
+            }, S = 160 } },
+
 
             { 0xC60, new C { T = "TagRef" } },
             { 0xC7C, new C { T = "Tagblock" } },
