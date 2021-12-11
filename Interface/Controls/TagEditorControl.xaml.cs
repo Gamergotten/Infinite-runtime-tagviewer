@@ -81,6 +81,10 @@ namespace Assembly69.Interface.Controls
                     Dictionary<long, Vehi.C> strings9 = Vehi.pmcgTag;
                     do_the_tag_thing(strings9, loadingTag.TagData, tagview_panels);
                     break;
+                case "glpa":
+                    Dictionary<long, Vehi.C> strings10 = Vehi.glpaTag;
+                    do_the_tag_thing(strings10, loadingTag.TagData, tagview_panels);
+                    break;
             }
 
         }
@@ -226,7 +230,7 @@ namespace Assembly69.Interface.Controls
                     // This sets it to just above the control, by adding the height by a factor of 1.5 it seems
                     // to be an almost fit.
                     trd.Left = controlsWindow.Left + relativeControlLocation.X;
-                    trd.Top = controlsWindow.Top + relativeControlLocation.Y + (b.ActualHeight * 1.5);
+                    trd.Top = controlsWindow.Top + relativeControlLocation.Y;
                 }
                 else if (foundDockingWindow == false)
                 {
