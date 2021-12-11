@@ -9,7 +9,8 @@
             <ColumnDefinition MinWidth="70" Width="1*" />
             <ColumnDefinition Width="200" />
         </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" x:Name="value_type" Foreground="#000"
+                  Text="Tag Value test one two three" HorizontalAlignment="Stretch" Margin="10,0,5,0" />
        <TextBox x:Name="value" Grid.Column="1" />
-        <TextBlock Grid.Column="0" x:Name="value_type" Text="Tag Value test one two three" HorizontalAlignment="Stretch" Margin="10,0,5,0" />
     </Grid>
 </UserControl>
