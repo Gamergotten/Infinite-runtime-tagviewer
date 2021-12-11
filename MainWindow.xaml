@@ -197,9 +197,18 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto" />
                                 <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="auto" />
                             </Grid.ColumnDefinitions>
                             <Label   Content="Search"   Grid.Column="0" Width="auto" Margin="0,0,10,0" />
                             <TextBox x:Name="Searchbox" Grid.Column="1" TextChanged="Searchbox_TextChanged" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+
+                            <CheckBox Grid.Column="2" VerticalAlignment="Center" Margin="5,0,0,0"
+                                      x:Name="cbxFilterOnlyMapped"
+                                      Checked="cbxFilterOnlyMapped_Changed" Unchecked="cbxFilterOnlyMapped_Changed">
+                                <CheckBox.ToolTip>
+                                    <TextBlock Foreground="Black">Only show mapped tags</TextBlock>
+                                </CheckBox.ToolTip>
+                            </CheckBox>
                         </Grid>
                     </Grid>
                     <!-- < Search Box -->

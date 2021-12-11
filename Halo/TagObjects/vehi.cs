@@ -4,6 +4,12 @@ namespace Assembly69.Halo.TagObjects
 {
     public class Vehi
     {
+        // Make sure this up to date for the mapped checkbox filter.
+        public static string[] MappedTags = {
+            "vehi", "weap", "hlmt", "proj", "sddt", "levl", "effe", 
+            "matg", "pmcg", "glpa"
+        };
+
         public struct C
         {
             public string T { get; set; }
