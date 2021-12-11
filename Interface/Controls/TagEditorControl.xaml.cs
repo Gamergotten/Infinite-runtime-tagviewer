@@ -452,9 +452,35 @@ namespace Assembly69.Interface.Controls
                         vb4.value.Tag = address + entry.Key + ":String";
                         vb4.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
+                    case "Flags":
+                        TagsFlags vb9 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+                        byte flags_value = (byte)_m.ReadByte((address + entry.Key).ToString("X"));
+                        parentpanel.Children.Add(vb9);
+
+                        vb9.flag1.IsChecked = flags_value.GetBit(0);
+                        vb9.flag2.IsChecked = flags_value.GetBit(1);
+                        vb9.flag3.IsChecked = flags_value.GetBit(2);
+                        vb9.flag4.IsChecked = flags_value.GetBit(3);
+                        vb9.flag5.IsChecked = flags_value.GetBit(4);
+                        vb9.flag6.IsChecked = flags_value.GetBit(5);
+                        vb9.flag7.IsChecked = flags_value.GetBit(6);
+                        vb9.flag8.IsChecked = flags_value.GetBit(7);
+
+
+                        vb9._mainwindow = _mainWindow;
+                        vb9.address = address + entry.Key;
+
+
+                        break;
+
+
+
+                        
                 }
             }
         }
+
+
 
         private void tagfilter_text_Changed(object sender, TextChangedEventArgs e)
         {

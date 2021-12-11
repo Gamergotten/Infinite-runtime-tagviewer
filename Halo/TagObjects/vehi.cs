@@ -447,8 +447,22 @@ namespace Assembly69.Halo.TagObjects
             { 0x7D8, new C { T = "TagRef" } },
             { 0x7F4, new C { T = "TagRef" } },
             { 0x850, new C { T = "TagRef" } }, // WEAP
+
+            { 0x86C, new C { T = "Flags" } },
+            { 0x86D, new C { T = "Flags" } },
+            { 0x86E, new C { T = "Flags" } }, // thrid person (5)
+            { 0x86F, new C { T = "Flags" } },
+
+            { 0x870, new C { T = "Flags" } },
+            { 0x871, new C { T = "Flags" } },
+            { 0x872, new C { T = "Flags" } },
+            { 0x873, new C { T = "Flags" } },
+
             { 0x88C, new C { T = "TagRef" } },
             { 0x8A8, new C { T = "TagRef" } },
+
+
+
             { 0x924, new C { T = "TagRef" } },
             { 0x940, new C { T = "TagRef" } },
             { 0x95C, new C { T = "TagRef" } },
@@ -478,7 +492,7 @@ namespace Assembly69.Halo.TagObjects
 
             { 0xC30, new C { T = "TagRef" } }, // BITM
 
-            { 0xC4C, new C { T = "Tagblock", B = new Dictionary<long, C> // barrel block
+            { 0xC4C, new C { T = "Tagblock", B = new Dictionary<long, C> // magazine block
             {
                 { 0x6, new C { T = "2Byte" } },
                 { 0x8, new C { T = "2Byte" } },

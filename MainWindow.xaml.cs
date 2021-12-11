@@ -434,7 +434,9 @@ namespace Assembly69
                     case "2Byte":
                         M.WriteMemory(address.ToString("X"), "2bytes", value);
                         break;
-
+                    case "Flags":
+                        M.WriteMemory(address.ToString("X"), "byte",Convert.ToByte(value).ToString("X"));
+                        break;
                     case "Float":
                         M.WriteMemory(address.ToString("X"), "float", value);
                         break;
