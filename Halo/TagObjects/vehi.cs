@@ -207,23 +207,64 @@ namespace Assembly69.Halo.TagObjects
             { 0xA38, new C { T = "Float" } },
 
             { 0xA64, new C { T = "Tagblock" } }, // powered_seat_definition
-            {
-                0xA78,
-                new C {
-                    T = "Tagblock",
-                    B = new Dictionary<long, C> // unit_initial_weapon
+            { 0xA78, new C { T = "Tagblock", B = new Dictionary<long, C> // unit_initial_weapon
             {
                 { 0, new C{ T="TagRef"}}, // weap
                 { 40, new C{ T="Float"}},
                 { 48, new C{ T="Float"}},
                 { 148, new C{ T="TagRef"}}, //
                 { 188, new C{ T="Tagblock"}}
-            },
-                    S = 212
-                }
-            },
+            }, S = 212}},
+
             { 0xA8C, new C { T = "Tagblock" } }, // s_target_tracking_parameters
-            { 0xAA0, new C { T = "Tagblock" } }, // unit_seat
+
+            { 0xAA0, new C { T = "Tagblock", B = new Dictionary<long, C>  // unit_seat
+            {
+                { 0x0, new C{ T="Flags"}},
+                { 0x1, new C{ T="Flags"}},
+                { 0x2, new C{ T="Flags"}},
+                { 0x3, new C{ T="Flags"}},
+                { 0x4, new C{ T="Flags"}},
+                { 0x5, new C{ T="Flags"}},
+                { 0x6, new C{ T="Flags"}},
+                { 0x7, new C{ T="Flags"}},
+
+                { 0x14, new C{ T="String"}},
+                { 0x58, new C{ T="Tagblock"}},
+                { 0x06C, new C { T = "Float" }},
+
+                { 0x074, new C{ T="TagRef"}},
+
+                { 0x90, new C { T = "Float" }},
+
+                { 0x98, new C{ T="Tagblock"}},
+
+                { 0xE8, new C { T = "Float" }},
+                { 0xEC, new C { T = "Float" }},
+                { 0xF0, new C { T = "Float" }},
+                { 0xF4, new C { T = "Float" }},
+                { 0xF8, new C { T = "Float" }},
+                { 0xFC, new C { T = "Float" }},
+                { 0x100, new C { T = "Float" }},
+
+                { 0x11C, new C{ T="Tagblock"}},
+
+                { 0x130, new C { T = "Float" }},
+                { 0x134, new C { T = "Float" }},
+                { 0x138, new C { T = "Float" }},
+
+                { 0x148, new C{ T="Float"}},
+
+                { 0x164, new C{ T="Tagblock"}},
+                { 0x178, new C{ T="TagRef"}},
+                { 0x194, new C{ T="TagRef"}},
+                { 0x1B4, new C{ T="Tagblock"}},
+
+                { 0x1E8, new C{ T="TagRef"}},
+                { 0x212, new C{ T="TagRef"}},
+                { 0x24C, new C{ T="TagRef"}},
+
+            }, S = 632}}, 
 
             { 0xAB4, new C { T = "Float" } },
             { 0xAB8, new C { T = "Float" } },
