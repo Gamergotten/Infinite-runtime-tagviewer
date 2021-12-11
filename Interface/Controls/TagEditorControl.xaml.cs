@@ -42,36 +42,47 @@ namespace Assembly69.Interface.Controls
 
             tagview_panels.Children.Clear();
 
-            if (loadingTag.TagGroup == "vehi")
+            // there we go, finally fixed that
+            switch (loadingTag.TagGroup)
             {
-                Dictionary<long, Vehi.C> strings = Vehi.VehicleTag;
-                do_the_tag_thing(strings, loadingTag.TagData, tagview_panels);
+                case "vehi":
+                    Dictionary<long, Vehi.C> strings1 = Vehi.VehicleTag;
+                    do_the_tag_thing(strings1, loadingTag.TagData, tagview_panels);
+                    break;
+                case "weap":
+                    Dictionary<long, Vehi.C> strings2 = Vehi.WeaponTag; // why // why are theses varaibles considered to be in the same scope
+                    do_the_tag_thing(strings2, loadingTag.TagData, tagview_panels);
+                    break;
+                case "proj":
+                    Dictionary<long, Vehi.C> strings3 = Vehi.ProjectileTag;
+                    do_the_tag_thing(strings3, loadingTag.TagData, tagview_panels);
+                    break;
+                case "hlmt":
+                    Dictionary<long, Vehi.C> strings4 = Vehi.HlmtTag;
+                    do_the_tag_thing(strings4, loadingTag.TagData, tagview_panels);
+                    break;
+                case "sddt":
+                    Dictionary<long, Vehi.C> strings5 = Vehi.SddtTag;
+                    do_the_tag_thing(strings5, loadingTag.TagData, tagview_panels);
+                    break;
+                case "levl":
+                    Dictionary<long, Vehi.C> strings6 = Vehi.LevlTag;
+                    do_the_tag_thing(strings6, loadingTag.TagData, tagview_panels);
+                    break;
+                case "effe":
+                    Dictionary<long, Vehi.C> strings7 = Vehi.effeTag;
+                    do_the_tag_thing(strings7, loadingTag.TagData, tagview_panels);
+                    break;
+                case "matg":
+                    Dictionary<long, Vehi.C> strings8 = Vehi.matgTag;
+                    do_the_tag_thing(strings8, loadingTag.TagData, tagview_panels);
+                    break;
+                case "pmcg":
+                    Dictionary<long, Vehi.C> strings9 = Vehi.pmcgTag;
+                    do_the_tag_thing(strings9, loadingTag.TagData, tagview_panels);
+                    break;
             }
-            else if (loadingTag.TagGroup == "weap")
-            {
-                Dictionary<long, Vehi.C> strings = Vehi.WeaponTag;
-                do_the_tag_thing(strings, loadingTag.TagData, tagview_panels);
-            }
-            else if (loadingTag.TagGroup == "proj")
-            {
-                Dictionary<long, Vehi.C> strings = Vehi.ProjectileTag;
-                do_the_tag_thing(strings, loadingTag.TagData, tagview_panels);
-            }
-            else if (loadingTag.TagGroup == "hlmt")
-            {
-                Dictionary<long, Vehi.C> strings = Vehi.HlmtTag;
-                do_the_tag_thing(strings, loadingTag.TagData, tagview_panels);
-            }
-            else if (loadingTag.TagGroup == "sddt")
-            {
-                Dictionary<long, Vehi.C> strings = Vehi.SddtTag;
-                do_the_tag_thing(strings, loadingTag.TagData, tagview_panels);
-            }
-            else if (loadingTag.TagGroup == "levl")
-            {
-                Dictionary<long, Vehi.C> strings = Vehi.LevlTag;
-                do_the_tag_thing(strings, loadingTag.TagData, tagview_panels);
-            }
+
         }
 
         // hmm we need a system that reads the pointer and adds it
@@ -288,7 +299,7 @@ namespace Assembly69.Interface.Controls
                     case "4Byte":
                         TagValueBlock vb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
                         vb1.value_type.Text = "4 Byte";
-                        vb1.value.Text = _m.ReadInt((+entry.Key).ToString("X")).ToString();
+                        vb1.value.Text = _m.ReadInt((address + entry.Key).ToString("X")).ToString(); // (+entry.Key?) lmao, no wonder why it wasn't working
                         parentpanel.Children.Add(vb1);
 
                         vb1.value.Tag = address + entry.Key + ":4Byte";
@@ -352,7 +363,7 @@ namespace Assembly69.Interface.Controls
                         tb1.tagblock_address.Text = "0x" + newAddress.ToString("X");
 
                         long stringAddress = _m.ReadLong((address + entry.Key + 8).ToString("X"));
-                        if (stringAddress is < 0x7E7515B65B3B4A00 and > 0)
+                        if (stringAddress is < 0x7E7515B65B3B4A00 and > 0) // have yet to run into an unloaded tag after the fact, so haven't tested this
                         {
                             tb1.tagblock_title.Text = _m.ReadString((address + entry.Key + 8).ToString("X") + ",0,0"); // this is the only thing that causes errors with unloaded tags
                         }
