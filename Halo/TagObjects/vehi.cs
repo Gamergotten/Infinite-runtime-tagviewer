@@ -478,7 +478,30 @@ namespace Assembly69.Halo.TagObjects
 
             { 0xC30, new C { T = "TagRef" } }, // BITM
 
-            { 0xC4C, new C { T = "Tagblock" } },
+            { 0xC4C, new C { T = "Tagblock", B = new Dictionary<long, C> // barrel block
+            {
+                { 0x6, new C { T = "2Byte" } },
+                { 0x8, new C { T = "2Byte" } },
+                { 0xA, new C { T = "2Byte" } },
+                { 0xC, new C { T = "2Byte" } },
+                { 0xE, new C { T = "2Byte" } },
+                { 0x10, new C { T = "2Byte" } },
+                { 0x12, new C { T = "2Byte" } },
+                { 0x14, new C { T = "2Byte" } },
+                { 0x16, new C { T = "2Byte" } },
+                { 0x18, new C { T = "2Byte" } },
+                { 0x1A, new C { T = "2Byte" } },
+                { 0x1C, new C { T = "TagRef" } },
+                { 0x38, new C { T = "TagRef" } },
+                { 0x54, new C { T = "TagRef" } },
+                { 0x70, new C { T = "TagRef" } },
+                { 0x8C, new C{ T="Tagblock", B=new Dictionary<long, C> // object block
+                {
+                    { 0x4, new C{ T="TagRef"}}, //
+                }, S=32}},
+
+            }, S = 160 } },
+
 
             { 0xC60, new C { T = "TagRef" } },
             { 0xC7C, new C { T = "Tagblock" } },
@@ -1187,5 +1210,41 @@ namespace Assembly69.Halo.TagObjects
 
         };
 
+        public static Dictionary<long, C> glpaTag = new Dictionary<long, C>
+        {
+            { 0, new C{ T="Pointer"}},
+            { 8, new C{ T="4Byte"}}, // datnum
+            { 12, new C{ T="4Byte"}}, // tagID
+
+            { 0x014, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
+            {
+                { 0x0C, new C{ T="TagRef"}},
+                { 0x2C, new C{ T="TagRef"}},
+                { 0x4C, new C{ T="TagRef"}},
+                { 0x6C, new C{ T="TagRef"}},
+                { 0x8C, new C{ T="TagRef"}},
+                { 0xA8, new C{ T="TagRef"}},
+                { 0xCC, new C{ T="Tagblock", B=new Dictionary<long, C>
+                {
+                    { 0x0, new C{ T="4Byte"}}, // datnum
+                    { 0x4, new C{ T="4Byte"}}, // datnum
+                }, S=8}},
+                { 0x0E4, new C{ T="TagRef"}},
+                { 0x100, new C{ T="TagRef"}},
+                { 0x11C, new C{ T="TagRef"}},
+                { 0x138, new C{ T="TagRef"}},
+                { 0x154, new C{ T="TagRef"}},
+                { 0x170, new C{ T="TagRef"}},
+                { 0x18C, new C{ T="TagRef"}},
+                { 0x1A8, new C{ T="TagRef"}},
+                { 0x1C4, new C{ T="TagRef"}},
+                { 0x1E0, new C{ T="TagRef"}},
+                { 0x1FC, new C{ T="TagRef"}},
+            }, S=536}},
+            { 0x028, new C{ T="Tagblock"}},
+            { 0x03C, new C{ T="Tagblock"}},
+            { 0x050, new C{ T="Tagblock"}},
+            { 0x064, new C{ T="Tagblock"}},
+        };
     }
 }
