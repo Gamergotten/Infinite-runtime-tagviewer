@@ -172,7 +172,10 @@ namespace Assembly69
                 // do the tag definitition
                 TagsList.Add(currentTag);
             }
+
             Loadtags();
+
+            Searchbox_TextChanged(null, null);
         }
 
         public string read_tag_group(long tagGroupAddress)
@@ -469,8 +472,8 @@ namespace Assembly69
             changes_panel_container.Visibility = changes_panel_container.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
             btn.Content =
                 changes_panel_container.Visibility == Visibility.Visible
-                ? ""
-                : "";
+                ? "Hide Queue"
+                : "Show Queue";
         }
 
         /* 4Byte

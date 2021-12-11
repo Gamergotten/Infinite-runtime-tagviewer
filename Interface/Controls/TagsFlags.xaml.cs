@@ -45,10 +45,6 @@ namespace Assembly69.Interface.Controls
 
                 _mainwindow.Addpokechange(address, "Flags", flag_as_int8.ToString());
             }
-
-
-
-
         }
 
         private void flag1_Checked(object sender, RoutedEventArgs e)

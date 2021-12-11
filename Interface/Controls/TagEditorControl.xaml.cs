@@ -320,6 +320,7 @@ namespace Assembly69.Interface.Controls
         // had to adapt this to bealbe to read tagblocks and forgot to allow it to iterate through them *sigh* good enough for now
         private void do_the_tag_thing(Dictionary<long, Vehi.C> vehicleTag, long address, VirtualizingStackPanel parentpanel)
         {
+            KeyValuePair<long, Vehi.C> prevEntry;
             foreach (KeyValuePair<long, Vehi.C> entry in vehicleTag)
             {
                 switch (entry.Value.T)
@@ -452,6 +453,7 @@ namespace Assembly69.Interface.Controls
                         vb4.value.Tag = address + entry.Key + ":String";
                         vb4.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
                         break;
+
                     case "Flags":
                         TagsFlags vb9 = new() { HorizontalAlignment = HorizontalAlignment.Left };
                         byte flags_value = (byte)_m.ReadByte((address + entry.Key).ToString("X"));
@@ -473,10 +475,25 @@ namespace Assembly69.Interface.Controls
 
                         break;
 
-
-
+                    case "FlagGroup":
+                        //if (1 == 1)
+                        //    continue;
+                        // make sure we got a flaggroup def
+                        if (! (entry.Value is Vehi.FlagGroup)) 
+                            continue;
                         
+                        var fg = entry.Value as Vehi.FlagGroup;
+                        TagFlagsGroup tfg = new() { HorizontalAlignment = HorizontalAlignment.Left };
+                        tfg.M = _mainWindow.M;
+                        tfg._mainwindow = _mainWindow;
+
+                        parentpanel.Children.Add(tfg);
+                        tfg.generateBits(address + entry.Key, fg.A, fg.MB, fg.STR);
+
+                        break;
                 }
+
+                prevEntry = entry;
             }
         }
 
