@@ -38,6 +38,8 @@ namespace Assembly69.Interface.Controls
             tagdatnum_text.Text = "Datnum: " + loadingTag.Datnum;
             tagdata_text.Text = "Tag data address: 0x" + loadingTag.TagData.ToString("X");
 
+            tagfilter_text.Text = "";
+
             tagview_panels.Children.Clear();
 
             // there we go, finally fixed that
@@ -415,6 +417,174 @@ namespace Assembly69.Interface.Controls
                         break;
                 }
             }
+        }
+
+        private void tagfilter_text_Changed(object sender, TextChangedEventArgs e)
+        {
+            var text = tagfilter_text.Text;
+            var children = tagview_panels.Children;
+            const int all = 0, titles = 1, datatypes = 2, values = 3;
+
+            if (string.IsNullOrWhiteSpace(tagfilter_text.Text))
+            {
+                filterTags_SetVisibility(children, Visibility.Visible);
+                return;
+            }
+
+            filterTags_SetVisibility(children, Visibility.Collapsed);
+
+            switch (cbxSearchType.SelectedIndex)
+            {
+                case all:
+                    filterTags_Titles(children, text);
+                    filterTags_Datatypes(children, text);
+                    filterTags_Values(children, text);
+                    break;
+                case titles:
+                    filterTags_Titles(children, text);
+                    break;
+                case datatypes:
+                    filterTags_Datatypes(children, text);
+                    break;
+                case values:
+                    filterTags_Values(children, text);
+                    break;
+            }
+        }
+
+        private void filterTags_SetVisibility(UIElementCollection collection, Visibility vis)
+        {
+            foreach (Control control in collection)
+            {
+                if (control is TagBlock)
+                {
+                    var tb = (TagBlock) control;
+                    filterTags_SetVisibility(tb.dockpanel.Children, vis);
+                } 
+
+                control.Visibility = vis;
+            }
+        }
+
+        private bool filterTags_Titles(UIElementCollection collection, string filterText)
+        {
+            bool found = false;
+            foreach (Control control in collection)
+            {
+                if (control is TagBlock)
+                {
+                    var trb = (TagBlock) control;
+                    if (trb.tagblock_title.Text.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+                    {
+                        control.Visibility = Visibility.Visible;
+                        found = true;
+                    }
+                }
+
+                else if (control is TagBlock)
+                {
+                    var tb = (TagBlock) control;
+                    var dp = tb.dockpanel;
+                    if (dp == null) continue;
+                    var f = filterTags_Titles(dp.Children, filterText);
+                    if (f)
+                    {
+                        found = true;
+                        tb.Visibility = Visibility.Visible;
+                    }
+                }
+            }
+            return found;
+        }
+
+        private bool filterTags_Datatypes(UIElementCollection collection, string filterText)
+        {
+            bool found = false;
+
+            foreach (Control control in collection)
+            {
+                if (control is TagRefBlock)
+                {
+                    var trb = (TagRefBlock) control;
+                    ComboBoxItem cbxi = trb.taggroup.SelectedItem as ComboBoxItem;
+                    if (cbxi == null) continue;
+
+                    string str = cbxi.Content as string;
+                    if (str != null && str.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+                    {
+                        control.Visibility = Visibility.Visible;
+                        found = true;
+                    }
+                }
+
+                else if (control is TagValueBlock)
+                {
+                    var trb = (TagValueBlock) control;
+                    string str = (string) trb.value_type.Text;
+                    if (str != null && str.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+                    {
+                        control.Visibility = Visibility.Visible;
+                        found = true;
+                    }
+                }
+
+                else if (control is TagBlock)
+                {
+                    var tb = (TagBlock) control;
+                    var dp = tb.dockpanel;
+                    if (dp == null) continue;
+                    var f = filterTags_Datatypes(dp.Children, filterText);
+                    if (f)
+                    {
+                        found = true;
+                        tb.Visibility = Visibility.Visible;
+                    }
+                }
+            }
+            return found;
+        }
+
+        private bool filterTags_Values(UIElementCollection collection, string filterText)
+        {
+            bool found = false;
+            foreach (Control control in collection)
+            {
+                if (control is TagValueBlock)
+                {
+                    var tvb = (TagValueBlock) control;
+                    var val = tvb.value.Text.ToString();
+                    if (val != null && val.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+                    {
+                        control.Visibility = Visibility.Visible;
+                        found = true;
+                    }
+                }
+
+                else if (control is TagRefBlock)
+                {
+                    var trb = (TagRefBlock) control;
+                    var val = (string) trb.tag_button.Content;
+                    if (val != null && val.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+                    {
+                        control.Visibility = Visibility.Visible;
+                        found = true;
+                    }
+                }
+
+                else if (control is TagBlock)
+                {
+                    var tb = (TagBlock) control;
+                    var dp = tb.dockpanel;
+                    if (dp == null) continue;
+                    var f = filterTags_Values(dp.Children, filterText);
+                    if (f)
+                    {
+                        found = true;
+                        tb.Visibility = Visibility.Visible;
+                    }
+                }
+            }
+            return found;
         }
     }
 }

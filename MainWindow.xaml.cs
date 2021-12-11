@@ -51,6 +51,7 @@ namespace Assembly69
         {
             hook_text.Text = "Openning process...";
             M.OpenProcess("HaloInfinite.exe");
+            //M.OpenProcess(Convert.ToInt32(haloPid.Text));
 
             if (M.pHandle == IntPtr.Zero)
             {
