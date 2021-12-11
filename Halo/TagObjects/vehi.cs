@@ -1027,5 +1027,165 @@ namespace Assembly69.Halo.TagObjects
             { 0xCC8, new C { T = "Tagblock" } },
             { 0xCDC, new C { T = "Tagblock" } }
         };
+
+
+        public static Dictionary<long, C> effeTag = new Dictionary<long, C>
+        {
+            { 0, new C{ T="Pointer"}},
+            { 8, new C{ T="4Byte"}}, // datnum
+            { 12, new C{ T="4Byte"}}, // tagID
+
+            { 0x10, new C{ T="Tagblock"}},
+            { 0x5C, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
+            {
+                { 0x2A, new C{ T="TagRef"}},
+
+                { 0x50, new C{ T="Tagblock"}},
+                { 0x64, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
+                {
+                    { 0x20, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
+                    {
+                        { -8, new C{ T="TagRef"}}, // we should probably create a special class for this but whatev
+                        { 0x30, new C{ T="TagRef"}},
+
+                    }, S=140}},
+                    { 0x34, new C{ T="Tagblock"}},
+                    { 0x48, new C{ T="Tagblock"}},
+
+                }, S=92}},
+
+                { 0x78, new C{ T="Tagblock"}},
+
+            }, S=140}},
+        };
+
+
+        public static Dictionary<long, C> matgTag = new() {
+            { 0, new C { T = "Pointer" } },
+            { 8, new C { T = "4Byte" } }, // datnum
+            { 12, new C { T = "4Byte" } }, // tagID
+
+            { 0x10, new C { T = "TagRef" } },
+            { 0x2C, new C { T = "TagRef" } },
+            { 0x48, new C { T = "TagRef" } },
+            { 0x64, new C { T = "TagRef" } },
+            { 0x80, new C { T = "TagRef" } },
+            { 0x9C, new C { T = "TagRef" } },
+            { 0xB8, new C { T = "TagRef" } },
+            { 0xD4, new C { T = "TagRef" } },
+            { 0xF0, new C { T = "TagRef" } },
+            { 0x10C, new C { T = "TagRef" } },
+            { 0x128, new C { T = "TagRef" } },
+            { 0x144, new C { T = "TagRef" } },
+            { 0x160, new C { T = "TagRef" } },
+            { 0x17C, new C { T = "TagRef" } },
+            { 0x198, new C { T = "TagRef" } },
+            { 0x1B4, new C { T = "TagRef" } },
+            { 0x1D0, new C { T = "TagRef" } },
+            { 0x1EC, new C { T = "TagRef" } },
+            { 0x208, new C { T = "TagRef" } },
+            { 0x224, new C { T = "TagRef" } },
+            { 0x240, new C { T = "TagRef" } },
+            { 0x25C, new C { T = "TagRef" } },
+            { 0x278, new C { T = "TagRef" } },
+            { 0x294, new C { T = "TagRef" } },
+            { 0x2B0, new C { T = "TagRef" } },
+            { 0x2CC, new C { T = "TagRef" } },
+            { 0x2E8, new C { T = "TagRef" } },
+            { 0x304, new C { T = "TagRef" } },
+            { 0x320, new C { T = "TagRef" } },
+            { 0x33C, new C { T = "TagRef" } },
+            { 0x358, new C { T = "TagRef" } },
+            { 0x374, new C { T = "TagRef" } },
+            { 0x390, new C { T = "TagRef" } },
+            { 0x3AC, new C { T = "TagRef" } },
+            { 0x3C8, new C { T = "TagRef" } },
+            { 0x3E4, new C { T = "TagRef" } },
+            { 0x400, new C { T = "TagRef" } },
+            { 0x41C, new C { T = "TagRef" } },
+            { 0x438, new C { T = "TagRef" } },
+            { 0x454, new C { T = "TagRef" } },
+            { 0x470, new C { T = "TagRef" } },
+            { 0x48C, new C { T = "TagRef" } },
+            { 0x4A8, new C { T = "TagRef" } },
+            { 0x4C4, new C { T = "TagRef" } },
+            { 0x4E0, new C { T = "TagRef" } },
+            { 0x4FC, new C { T = "TagRef" } },
+            { 0x518, new C { T = "TagRef" } },
+            { 0x534, new C { T = "TagRef" } },
+            { 0x550, new C { T = "TagRef" } },
+            { 0x56C, new C { T = "TagRef" } },
+            { 0x588, new C { T = "TagRef" } },
+            { 0x5A4, new C { T = "TagRef" } },
+            { 0x5C0, new C { T = "TagRef" } },
+            { 0x5DC, new C { T = "TagRef" } },
+            { 0x5F8, new C { T = "TagRef" } },
+            { 0x614, new C { T = "TagRef" } },
+            { 0x630, new C { T = "TagRef" } },
+            { 0x64C, new C { T = "TagRef" } },
+            { 0x668, new C { T = "TagRef" } },
+            { 0x684, new C { T = "TagRef" } },
+            { 0x6A0, new C { T = "TagRef" } },
+            { 0x6BC, new C { T = "TagRef" } },
+            { 0x6D8, new C { T = "TagRef" } },
+            { 0x6F4, new C { T = "TagRef" } },
+            { 0x710, new C { T = "Tagblock" } },
+            { 0x724, new C { T = "TagRef" } },
+            { 0x740, new C { T = "TagRef" } },
+            { 0x75C, new C { T = "TagRef" } },
+            { 0x778, new C { T = "TagRef" } },
+            { 0x794, new C { T = "TagRef" } },
+            { 0x7B0, new C { T = "TagRef" } },
+            { 0x7CC, new C { T = "TagRef" } },
+        };
+
+        public static Dictionary<long, C> pmcgTag = new Dictionary<long, C>
+{
+            { 0, new C{ T="Pointer"}},
+            { 8, new C{ T="4Byte"}}, // datnum
+            { 12, new C{ T="4Byte"}}, // tagID
+
+            { 0x10, new C{ T="TagRef"}},
+            { 0x2C, new C{ T="TagRef"}},
+
+            { 0x048, new C{ T="Tagblock"}},
+            { 0x05C, new C{ T="Tagblock"}},
+            { 0x070, new C{ T="Tagblock"}},
+            { 0x084, new C{ T="Tagblock"}},
+            { 0x098, new C{ T="Tagblock"}},
+            { 0x0AC, new C{ T="Tagblock"}},
+            { 0x0C0, new C{ T="Tagblock"}},
+            { 0x0D4, new C{ T="Tagblock"}},
+            { 0x0E8, new C{ T="Tagblock"}},
+            { 0x0FC, new C{ T="Tagblock"}},
+            { 0x110, new C{ T="Tagblock"}},
+            { 0x124, new C{ T="Tagblock"}},
+
+            { 0x138, new C{ T="Tagblock", B=new Dictionary<long, C> // 
+            {
+                { 0x14, new C{ T="TagRef"}},
+
+                { 0x30, new C{ T="String"}},
+                { 0x130, new C{ T="Tagblock", B=new Dictionary<long, C> // 
+                {
+                    { 0x0, new C{ T="4Byte"}},
+                    { 0x4, new C{ T="4Byte"}},
+                    { 0x8, new C{ T="4Byte"}},
+
+                    { 0x0C, new C{ T="String"}},
+
+                    { 0x10C, new C{ T="Tagblock", B=new Dictionary<long, C> // 
+                    {
+                        { 0x0, new C{ T="4Byte"}},
+                        { 0x4, new C{ T="4Byte"}},
+
+                    }, S=8}},
+                }, S=288}},
+            }, S=324}},
+
+            { 0x14C, new C{ T="Tagblock"}},
+
+        };
+
     }
 }

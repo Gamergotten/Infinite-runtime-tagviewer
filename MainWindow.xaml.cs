@@ -17,6 +17,18 @@ namespace Assembly69
     /// </summary>
     public partial class MainWindow
     {
+        // #### NOTES
+        //
+        // tagref dropdown actually gives the wrong tags, may be because some objects have the same datnums
+        //
+        // loading levl tag on campaign takes FOREVER + 3gigs RAM
+        //
+        // i think our "readstring" is capped to a specific amount of characters
+        //
+        // something since the inital release is causing windows defender to act up
+        // my thoughts - either the AOB or .net 5.0? could just be random too tho
+        //
+
         public Mem M = new();
 
         public TagRefDropdown? Trd { get; set; } = null; // this is our dropdown box for selecting tag references
@@ -172,7 +184,7 @@ namespace Assembly69
                 if (testAddress != 0)
                     currentGroup.TagExtraName = M.ReadString((testAddress).ToString("X"));
 
-                // Doing the UI here so we dont have to literally reconstruct the elements elsewhere
+                // Doing the UI here so we dont have to literally reconstruct the elements elsewhere // lol
                 //TreeViewItem sortheader = new TreeViewItem();
                 //sortheader.Header = ReverseString(current_group.tag_group_name.Substring(0, 4)) + " (" + current_group.tag_group_desc + ")";
                 //sortheader.ToolTip = current_group.tag_group_definitition;
