@@ -33,5 +33,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: build-output
-        path: binary_output.zip
+        path: release.zip
         retention-days: 7
