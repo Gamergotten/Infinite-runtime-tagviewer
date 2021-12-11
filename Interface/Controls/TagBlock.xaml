@@ -23,7 +23,7 @@
         <TextBox x:Name="tagblock_count" Text="-" Grid.Row="1" Grid.Column="2" />
 
         <Grid Grid.Row="3" Grid.ColumnSpan="4" Grid.Column="0" Height="auto" >
-            <StackPanel x:Name="dockpanel" Background="Gray" Height="auto" />
+            <VirtualizingStackPanel x:Name="dockpanel" Background="Gray" Height="auto" />
         </Grid>
         
         <ComboBox x:Name="indexbox" Grid.Row="0" Grid.Column="2" Margin="2,2,0,2" SelectionChanged="indexbox_SelectionChanged" />

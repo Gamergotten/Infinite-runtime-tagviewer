@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Interop;
 using System.Windows.Media;
 using Assembly69.Halo.TagObjects;
 using Assembly69.Interface.Windows;
@@ -91,7 +93,7 @@ namespace Assembly69.Interface.Controls
 
         // hmm we need a system that reads the pointer and adds it
         // also, we need to beable to read multiple tag things but i may put that on hold
-        public void recall_blockloop(KeyValuePair<long, Vehi.C> entry, long loadingTag, StackPanel parentpanel)
+        public void recall_blockloop(KeyValuePair<long, Vehi.C> entry, long loadingTag, VirtualizingStackPanel parentpanel)
         {
             parentpanel.Children.Clear();
             if (entry.Value.B != null)
@@ -162,6 +164,28 @@ namespace Assembly69.Interface.Controls
             return target;
         }
 
+        [StructLayout(LayoutKind.Sequential)]
+        public struct RECT
+        {
+            public int Left;
+            public int Top;
+            public int Right;
+            public int Bottom;
+        }
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool GetWindowRect(IntPtr hWnd, out RECT lpRect);
+
+        // Make sure RECT is actually OUR defined struct, not the windows rect.
+        public static RECT GetWindowRectangle(Window window)
+        {
+            RECT rect;
+            GetWindowRect((new WindowInteropHelper(window)).Handle, out rect);
+
+            return rect;
+        }
+
         private void Tagrefbutton(object sender, RoutedEventArgs e)
         {
             Button b = sender as Button;
@@ -211,8 +235,8 @@ namespace Assembly69.Interface.Controls
                             // Set the location to the parent window + control location
                             // This sets it to just above the control, by adding the height by a factor of 1.5 it seems
                             // to be an almost fit.
-                            trd.Left = appWindow.Left + relativeControlLocation.X;
-                            trd.Top = appWindow.Top + relativeControlLocation.Y;
+                            trd.Left = appWindow.GetWindowLeft() + relativeControlLocation.X;
+                            trd.Top = appWindow.GetWindowTop() + relativeControlLocation.Y;
 
                             foundDockingWindow = true;
                             break;
@@ -229,8 +253,8 @@ namespace Assembly69.Interface.Controls
                     // Set the location to the parent window + control location
                     // This sets it to just above the control, by adding the height by a factor of 1.5 it seems
                     // to be an almost fit.
-                    trd.Left = controlsWindow.Left + relativeControlLocation.X;
-                    trd.Top = controlsWindow.Top + relativeControlLocation.Y;
+                    trd.Left = controlsWindow.GetWindowLeft() + relativeControlLocation.X;
+                    trd.Top = controlsWindow.GetWindowTop() + relativeControlLocation.Y + (b.ActualHeight * 1.5);
                 }
                 else if (foundDockingWindow == false)
                 {
@@ -294,7 +318,7 @@ namespace Assembly69.Interface.Controls
         }
 
         // had to adapt this to bealbe to read tagblocks and forgot to allow it to iterate through them *sigh* good enough for now
-        private void do_the_tag_thing(Dictionary<long, Vehi.C> vehicleTag, long address, StackPanel parentpanel)
+        private void do_the_tag_thing(Dictionary<long, Vehi.C> vehicleTag, long address, VirtualizingStackPanel parentpanel)
         {
             foreach (KeyValuePair<long, Vehi.C> entry in vehicleTag)
             {
