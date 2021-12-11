@@ -348,7 +348,7 @@ namespace Assembly69
                 TagChangesBlock newBlock = new() {
                     address = { Text = "0x" + offset.ToString("X") },
                     type = { Text = type },
-                    value = { Text = value }
+                    value = { Text = value },
                 };
 
                 changes_panel.Children.Add(newBlock);
@@ -488,7 +488,13 @@ namespace Assembly69
 
         private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e)
         {
-            changes_panel.Visibility = changes_panel.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+            var btn = (Button) sender;
+            
+            changes_panel_container.Visibility = changes_panel_container.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+            btn.Content = 
+                changes_panel_container.Visibility == Visibility.Visible
+                ? ""
+                : "";
         }
 
         /* 4Byte

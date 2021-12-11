@@ -29,7 +29,7 @@
               ShowsPreview="true" />
 
         <!-- Tags Grid -->
-        <Grid Grid.Column="2" Margin="0,0,0,0">
+        <Grid Grid.Column="2" Margin="0,0,0,0" Background="#252526">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="auto" />
@@ -80,12 +80,13 @@
 
                     <TextBlock  x:Name="change_text" Grid.Column="2" HorizontalAlignment="Right" Text="0 changes queued" VerticalAlignment="Center" Margin="0,0,5,0" />
                     <Button     Grid.Column="3" Content="Clear" HorizontalAlignment="Stretch" Click="BtnClearQueue_Click" />
-                    <Button     Grid.Column="4" Content="Show/Hide Queue" HorizontalAlignment="Stretch" Click="BtnShowHideQueue_Click" Margin="10,0,0,0" />
+                    <Button     Grid.Column="4" Content="Show Queue" HorizontalAlignment="Stretch" Click="BtnShowHideQueue_Click" Margin="10,0,0,0" />
                 </Grid>
-                
             </Grid>
 
-            <StackPanel x:Name="changes_panel" Grid.Row="3" Grid.ColumnSpan="5" Margin="0,10,0,0" Visibility="Collapsed" />
+            <ScrollViewer x:Name="changes_panel_container" MinHeight="100" MaxHeight="200" Grid.Row="3" Grid.ColumnSpan="5" Margin="0,10,0,10" Background="#252526" Visibility="Collapsed" >
+                <StackPanel x:Name="changes_panel" Background="#252526" />
+            </ScrollViewer>
         </Grid>
         <!-- > Tags Grid -->
 
