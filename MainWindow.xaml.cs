@@ -9,7 +9,9 @@ using System.Windows.Input;
 
 using Assembly69.Interface.Controls;
 using Assembly69.Interface.Windows;
+
 using AvalonDock.Layout;
+
 using Memory;
 
 namespace Assembly69
@@ -170,7 +172,10 @@ namespace Assembly69
                 // do the tag definitition
                 TagsList.Add(currentTag);
             }
+
             Loadtags();
+
+            Searchbox_TextChanged(null, null);
         }
 
         public string read_tag_group(long tagGroupAddress)
@@ -388,38 +393,6 @@ namespace Assembly69
             return -1;
         }
 
-        // search filter
-        private void Searchbox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            string search = Searchbox.Text;
-            foreach (TreeViewItem tv in TagsTree.Items)
-            {
-                if (!tv.Header.ToString().Contains(search))
-                {
-                    tv.Visibility = Visibility.Collapsed;
-                    foreach (TreeViewItem tc in tv.Items)
-                    {
-                        if (tc.Header.ToString().Contains(search))
-                        {
-                            tc.Visibility = Visibility.Visible;
-                            tv.Visibility = Visibility.Visible;
-                        }
-                        else
-                        {
-                            tc.Visibility = Visibility.Collapsed;
-                        }
-                    }
-                }
-                else
-                {
-                    tv.Visibility = Visibility.Visible;
-                    foreach (TreeViewItem tc in tv.Items)
-                    {
-                        tc.Visibility = Visibility.Visible;
-                    }
-                }
-            }
-        }
 
         // POKE OUR CHANGES LETSGOOOO
         private void BtnPokeChanges_Click(object sender, RoutedEventArgs e)
@@ -439,7 +412,7 @@ namespace Assembly69
                         M.WriteMemory(address.ToString("X"), "2bytes", value);
                         break;
                     case "Flags":
-                        M.WriteMemory(address.ToString("X"), "byte",Convert.ToByte(value).ToString("X"));
+                        M.WriteMemory(address.ToString("X"), "byte", Convert.ToByte(value).ToString("X"));
                         break;
                     case "Float":
                         M.WriteMemory(address.ToString("X"), "float", value);
@@ -495,12 +468,12 @@ namespace Assembly69
         private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e)
         {
             var btn = (Button) sender;
-            
+
             changes_panel_container.Visibility = changes_panel_container.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
-            btn.Content = 
+            btn.Content =
                 changes_panel_container.Visibility == Visibility.Visible
-                ? ""
-                : "";
+                ? "Hide Queue"
+                : "Show Queue";
         }
 
         /* 4Byte
@@ -562,5 +535,78 @@ namespace Assembly69
             }
         }
         #endregion
+
+
+        // search filter
+        private void Searchbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string[] supportedTags = Halo.TagObjects.Vehi.MappedTags;
+            string search = Searchbox.Text;
+            foreach (TreeViewItem tv in TagsTree.Items)
+            {
+                var isSupportedTag = supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower());
+
+                // Ignore tags that are not implemented
+                if ((bool) cbxFilterOnlyMapped.IsChecked && !isSupportedTag)
+                {
+                    tv.Visibility = Visibility.Collapsed;
+                    continue;
+                }
+
+                if (!tv.Header.ToString().Contains(search))
+                {
+                    tv.Visibility = Visibility.Collapsed;
+                    foreach (TreeViewItem tc in tv.Items)
+                    {
+                        if (tc.Header.ToString().Contains(search))
+                        {
+                            tc.Visibility = Visibility.Visible;
+                            tv.Visibility = Visibility.Visible;
+                        }
+                        else
+                        {
+                            tc.Visibility = Visibility.Collapsed;
+                        }
+                    }
+                }
+                else
+                {
+                    tv.Visibility = Visibility.Visible;
+                    foreach (TreeViewItem tc in tv.Items)
+                    {
+                        tc.Visibility = Visibility.Visible;
+                    }
+                }
+            }
+        }
+
+        private void cbxFilterOnlyMapped_Changed(object sender, RoutedEventArgs e)
+        {
+            string[] supportedTags = Halo.TagObjects.Vehi.MappedTags;
+            string search = Searchbox.Text;
+
+            // If we have a filter just call the search function
+            if (!string.IsNullOrEmpty(search))
+            {
+                Searchbox_TextChanged(null, null);
+                return;
+            }
+
+            foreach (TreeViewItem tv in TagsTree.Items)
+            {
+                // Ignore tags that are not implemented
+                if ((bool) cbxFilterOnlyMapped.IsChecked)
+                {
+                    if (supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower()))
+                        tv.Visibility = Visibility.Visible;
+                    else
+                        tv.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    tv.Visibility = Visibility.Visible;
+                }
+            }
+        }
     }
 }

@@ -16,6 +16,5 @@
             <CheckBox x:Name="flag7" Content="Flag7" Click="flag1_Checked"/>
             <CheckBox x:Name="flag8" Content="Flag8" Click="flag1_Checked"/>
         </StackPanel>
-
     </Border>
 </UserControl>
