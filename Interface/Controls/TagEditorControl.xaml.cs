@@ -362,27 +362,32 @@ namespace Assembly69.Interface.Controls
                         }
                         string testGroup = ReverseString(_m.ReadString((address + entry.Key + 20).ToString("X"), "", 4));
                         tfb1.taggroup.SelectedItem = testGroup;
-
                         // read tagID rather than datnum // or rather, convert datnum to ID
-                        string test = BitConverter.ToString(_m.ReadBytes((address + entry.Key + 24).ToString("X"), 4)).Replace("-", string.Empty);
-                        string testNameId = _mainWindow.convert_ID_to_tag_name(_mainWindow.get_tagid_by_datnum(test));
+                        try
+                        {
+                            string test = BitConverter.ToString(_m.ReadBytes((address + entry.Key + 24).ToString("X"), 4)).Replace("-", string.Empty);
+                            string testNameId = _mainWindow.convert_ID_to_tag_name(_mainWindow.get_tagid_by_datnum(test));
 
-                        tfb1.tag_button.Content = testNameId;
-                        parentpanel.Children.Add(tfb1);
+                            tfb1.tag_button.Content = testNameId;
+                            parentpanel.Children.Add(tfb1);
 
-                        tfb1.taggroup.Tag = (address + entry.Key + 20);
-                        tfb1.taggroup.SelectionChanged += new SelectionChangedEventHandler(taggroup_SelectionChanged);
+                            tfb1.taggroup.Tag = (address + entry.Key + 20);
+                            tfb1.taggroup.SelectionChanged += new SelectionChangedEventHandler(taggroup_SelectionChanged);
 
-                        tfb1.tag_button.Tag = (address + entry.Key + 24) + ":" + testGroup;
-                        tfb1.tag_button.Click += new RoutedEventHandler(Tagrefbutton);
+                            tfb1.tag_button.Tag = (address + entry.Key + 24) + ":" + testGroup;
+                            tfb1.tag_button.Click += new RoutedEventHandler(Tagrefbutton);
 
-                        int id = _mainWindow.get_tagindex_by_datnum(test);
+                            int id = _mainWindow.get_tagindex_by_datnum(test);
 
-                        // tag
+                            // tag
 
-                        tfb1.goto_button.Tag = id; // need to get the index of the tag not the ID
-                        tfb1.goto_button.Click += new RoutedEventHandler(Gotobutton);
-
+                            tfb1.goto_button.Tag = id; // need to get the index of the tag not the ID
+                            tfb1.goto_button.Click += new RoutedEventHandler(Gotobutton);
+                        }
+                        catch
+                        {
+                            break;
+                        }
                         break;
 
                     case "Pointer":
