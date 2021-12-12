@@ -87,6 +87,10 @@ namespace Assembly69.Interface.Controls
                     Dictionary<long, Vehi.C> strings10 = Vehi.glpaTag;
                     do_the_tag_thing(strings10, loadingTag.TagData, tagview_panels);
                     break;
+                case "foot":
+                    Dictionary<long, Vehi.C> strings11 = Vehi.footTag;
+                    do_the_tag_thing(strings11, loadingTag.TagData, tagview_panels);
+                    break;
             }
 
         }
@@ -429,7 +433,7 @@ namespace Assembly69.Interface.Controls
                         int childs = int.Parse(childrenCount);
                         for (int y = 0; y < childs; y++)
                         {
-                            tb1.indexbox.Items.Add(new ListViewItem { Content = y });
+                            tb1.indexbox.Items.Add(new ListViewItem { Content = y }); // this should be a combobox item?
                         }
                         if (childs > 0)
                         {

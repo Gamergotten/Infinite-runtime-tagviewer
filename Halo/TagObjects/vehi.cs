@@ -560,11 +560,7 @@ namespace Assembly69.Halo.TagObjects
 
             { 0xC60, new C { T = "TagRef" } },
             { 0xC7C, new C { T = "Tagblock" } },
-            {
-                0xC90,
-                new C {
-                    T = "Tagblock",
-                    B = new Dictionary<long, C> // barrel block
+            { 0xC90, new C {T = "Tagblock", B = new Dictionary<long, C> // barrel block
             {
                 { 4, new C{ T="Float"}},
                 { 8, new C{ T="Float"}},
@@ -584,7 +580,8 @@ namespace Assembly69.Halo.TagObjects
                 { 0x98, new C{ T="Tagblock"}},
                 { 0xB8, new C{ T="Float"}},
                 { 0xBC, new C{ T="Float"}},
-                { 0xFC, new C{ T="Tagblock"}},
+                { 0xFC, new C{ T="Tagblock" } },
+
                 { 0x110, new C{ T="Tagblock"}},
                 { 0x124, new C{ T="Tagblock"}},
                 { 0x138, new C{ T="Tagblock"}},
@@ -608,7 +605,49 @@ namespace Assembly69.Halo.TagObjects
                 { 0x268, new C{ T="Float"}},
                 { 0x26C, new C{ T="Float"}},
                 { 0x270, new C{ T="Float"}},
-                { 0x274, new C{ T="Float"}}
+                { 0x274, new C{ T="Float"}},
+                { 0x2B0, new C{ T="Tagblock", B = new Dictionary<long, C> // THE FIRING EFFECTS
+                {
+                    { 0x04, new C{ T="TagRef"}},
+
+                    { 0x24, new C{ T="Tagblock"}},
+                    { 0x38, new C{ T="Tagblock"}},
+
+                    { 0x4C, new C{ T="TagRef"}},
+                    { 0x6C, new C{ T="Tagblock"}},
+                    { 0x80, new C{ T="Tagblock"}},
+
+                    { 0x94, new C{ T="TagRef"}},
+                    { 0xB4, new C{ T="Tagblock"}},
+                    { 0xC8, new C{ T="Tagblock"}},
+
+                    { 0xDC, new C{ T="TagRef"}},
+                    { 0xFC, new C{ T="Tagblock"}},
+                    { 0x110, new C{ T="Tagblock"}},
+
+                    { 0x124, new C{ T="TagRef"}},
+                    { 0x144, new C{ T="Tagblock"}},
+                    { 0x158, new C{ T="Tagblock"}},
+
+                    { 0x16C, new C{ T="TagRef"}},
+                    { 0x188, new C{ T="TagRef"}},
+                    { 0x1A4, new C{ T="TagRef"}},
+                    { 0x1C0, new C{ T="TagRef"}},
+                    { 0x1DC, new C{ T="TagRef"}},
+                    { 0x1F8, new C{ T="TagRef"}},
+                    { 0x214, new C{ T="TagRef"}},
+                    { 0x230, new C{ T="TagRef"}},
+                    { 0x24C, new C{ T="TagRef"}},
+                    { 0x268, new C{ T="TagRef"}},
+                    { 0x284, new C{ T="TagRef"}},
+                    { 0x2A0, new C{ T="TagRef"}},
+                    { 0x2BC, new C{ T="TagRef"}},
+                    { 0x2D8, new C{ T="TagRef"}},
+                    { 0x2F4, new C{ T="TagRef"}}
+                },S=784 } },
+                { 0x2E8, new C{ T="Tagblock"}},
+                { 0x320, new C{ T="Tagblock"}},
+
             },
                     S = 848
                 }
@@ -1121,6 +1160,9 @@ namespace Assembly69.Halo.TagObjects
                 { 0x50, new C{ T="Tagblock"}},
                 { 0x64, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
                 {
+                    { 0x14, new C { T = "Float" } },
+                    { 0x18, new C { T = "Float" } },
+
                     { 0x20, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
                     {
                         { -8, new C{ T="TagRef"}}, // we should probably create a special class for this but whatev
@@ -1300,6 +1342,27 @@ namespace Assembly69.Halo.TagObjects
             { 0x03C, new C{ T="Tagblock"}},
             { 0x050, new C{ T="Tagblock"}},
             { 0x064, new C{ T="Tagblock"}},
+        };
+
+        public static Dictionary<long, C> footTag = new Dictionary<long, C>
+        {
+            { 0, new C{ T="Pointer"}},
+            { 8, new C{ T="4Byte"}}, // datnum
+            { 12, new C{ T="4Byte"}}, // tagID
+
+            { 0x10, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
+            {
+                { 0x0, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
+                {
+                    { 0x00, new C{ T="TagRef"}},
+                    { 0x1C, new C{ T="TagRef"}}
+                }, S=72 } },
+                { 0x14, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
+                {
+                    { 0x00, new C{ T="TagRef"}},
+                    { 0x1C, new C{ T="TagRef"}}
+                }, S=72 } }
+            }, S=40 } }
         };
     }
 }
