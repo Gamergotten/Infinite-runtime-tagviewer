@@ -14,7 +14,7 @@ using InfiniteRuntimeTagViewer.Interface.Windows;
 using AvalonDock.Layout;
 
 using Memory;
-using Assembly69.Halo;
+using InfiniteRuntimeTagViewer.Halo;
 
 namespace InfiniteRuntimeTagViewer
 {

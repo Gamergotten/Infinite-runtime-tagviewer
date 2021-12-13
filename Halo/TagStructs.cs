@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-using Assembly69.Halo.TagObjects;
+using InfiniteRuntimeTagViewer.Halo.TagObjects;
 
-namespace Assembly69.Halo
+namespace InfiniteRuntimeTagViewer.Halo
 {
 	// Changed to class because we are storing references to this now, saves on memory usage.
 	public class TagStruct
