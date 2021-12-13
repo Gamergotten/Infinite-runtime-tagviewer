@@ -48,9 +48,6 @@ namespace Assembly69
             InitializeComponent();
             StateChanged += MainWindowStateChangeRaised;
 
-			var tags = Halo.TagObjects.Vehi.Tags;
-			System.IO.File.WriteAllText("halo_tags.json", JsonConvert.SerializeObject(tags, Formatting.Indented));
-
 			inhale_tagnames();
         }
 
