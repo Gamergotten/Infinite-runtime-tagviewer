@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 
 namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 {
-	public class Vehi
+	public class TagLayouts
 	{
 		public class C
 		{
