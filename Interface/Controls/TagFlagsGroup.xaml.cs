@@ -13,14 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using InfiniteRuntimeTagViewer.Halo;
+
 namespace InfiniteRuntimeTagViewer.Interface.Controls
+
 {
     /// <summary>
     /// Interaction logic for TagFlagsGroup.xaml
     /// </summary>
     public partial class TagFlagsGroup : UserControl
     {
-        public MainWindow? _mainwindow;
+		public TagEditorDefinition ValueDefinition { get; set; }
+
+		public MainWindow? mainWindow;
         public Memory.Mem? M;
         public long startAddress;
         public int? amountOfBytes;
@@ -84,8 +89,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
                     bitsLeft--;
                 }
             }
-
-            //int x = 0;
         }
 
         private void Checkbox_BitIsChanged(int byteNo, int bit)
@@ -103,7 +106,13 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
                 output.UpdateBit(x, value: (bool) cbx.IsChecked);
             }
 
-            _mainwindow.Addpokechange(targetAddress, "Flags", output.ToString());
+			mainWindow.AddPokeChange(new TagEditorDefinition(ValueDefinition)
+			{
+				MemoryAddress  = startAddress + byteNo,
+				OffsetOverride = ValueDefinition.GetTagOffset() + byteNo
+			}, output.ToString());
+
+            //mainWindow.AddPokeChange(targetAddress, "Flags", output.ToString());
         }
     }
 }
