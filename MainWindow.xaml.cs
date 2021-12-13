@@ -6,8 +6,6 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Diagnostics;
-
 using InfiniteRuntimeTagViewer.Interface.Controls;
 using InfiniteRuntimeTagViewer.Interface.Windows;
 

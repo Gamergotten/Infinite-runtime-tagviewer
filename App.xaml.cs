@@ -1,6 +1,4 @@
-﻿using InfiniteRuntimeTagViewer.Halo.TagObjects;
-
-namespace InfiniteRuntimeTagViewer
+﻿namespace InfiniteRuntimeTagViewer
 
 {
     /// <summary>

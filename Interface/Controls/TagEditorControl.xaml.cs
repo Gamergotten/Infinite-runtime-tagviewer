@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Interop;
 using System.Windows.Media;
-using System.Diagnostics;
 using InfiniteRuntimeTagViewer.Halo.TagObjects;
 using InfiniteRuntimeTagViewer.Interface.Windows;
 using AvalonDock.Controls;
