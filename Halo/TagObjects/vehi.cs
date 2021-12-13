@@ -4,21 +4,21 @@ namespace Assembly69.Halo.TagObjects
 {
     public class Vehi
     {
-        // Make sure this up to date for the mapped checkbox filter.
+        // Make sure this up to date for the mapped checkbox filter. // im gonna turn this into a dictionary and you cant stop me
         public static string[] MappedTags = {
             "vehi", "weap", "hlmt", "proj", "sddt", "levl", "effe", 
-            "matg", "pmcg", "glpa"
-        };
+            "matg", "pmcg", "glpa", "foot", "ocgd"
+        }; 
 
         public class C
         {
-            public string? T { get; set; }
-            public Dictionary<long, C>? B { get; set; }
+            public string? T { get; set; } // T = type
+            public Dictionary<long, C>? B { get; set; } // B = blocks? i forgot what B stands for
 
             /// <summary>
             /// Length of the tagblock
             /// </summary>
-            public long S { get; set; } // length of tagblock
+            public long S { get; set; } // S = size // length of tagblock
         }
 
         public class FlagGroup : C
@@ -44,6 +44,8 @@ namespace Assembly69.Halo.TagObjects
             public Dictionary<int, string> STR { get; set; } = new Dictionary<int, string>();
         }
 
+
+        // im not cleaning that up next time someone makes the recursive tagblocks gross
         public static Dictionary<long, C> VehicleTag = new() {
 
             { 40, new C { T = "Float" } },
@@ -90,21 +92,14 @@ namespace Assembly69.Halo.TagObjects
             { 552, new C { T = "4Byte" } },
             { 556, new C { T = "Tagblock" } }, // i343::Objects::AmmoRefillVariant
             { 576, new C { T = "4Byte" } },
-            {
-                0x248,
-                new C {
-                    T = "Tagblock",
-                    B = new Dictionary<long, C> // object_attachment_definition
+            {0x248,new C {T = "Tagblock",B = new Dictionary<long, C> // object_attachment_definition
             {
                 { 4, new C{ T="TagRef"}}, // effe
                 { 32, new C{ T="TagRef"}}, // effe
                 { 64, new C{ T="Tagblock"}},
                 { 84, new C{ T="TagRef"}}, //
                 { 112, new C{ T="Tagblock"}}
-            },
-                    S = 148
-                }
-            },
+            },S = 148} },
             { 604, new C { T = "Tagblock" } }, // object_indirect_lighting_settings_definition
             { 624, new C { T = "Tagblock" } }, // s_water_physics_hull_surface_definition
             { 644, new C { T = "Tagblock" } }, // s_jetwash_definition
@@ -446,21 +441,14 @@ namespace Assembly69.Halo.TagObjects
             { 0x200, new C { T = "Tagblock" } },
             { 0x214, new C { T = "Tagblock" } },
             { 0x22C, new C { T = "Tagblock" } },
-            {
-                0x248,
-                new C {
-                    T = "Tagblock",
-                    B = new Dictionary<long, C> // attachment block
+            { 0x248,new C {T = "Tagblock", B = new Dictionary<long, C> // attachment block
             {
                 { 4, new C{ T="TagRef"}}, // effe
                 { 32, new C{ T="TagRef"}}, // effe
                 { 64, new C{ T="Tagblock"}},
                 { 84, new C{ T="TagRef"}}, //
                 { 112, new C{ T="Tagblock"}}
-            },
-                    S = 148
-                }
-            },
+            },S = 148} },
 
             { 0x25C, new C { T = "Tagblock" } },
             { 0x270, new C { T = "Tagblock" } },
@@ -515,12 +503,10 @@ namespace Assembly69.Halo.TagObjects
             { 0x7F4, new C { T = "TagRef" } },
             { 0x850, new C { T = "TagRef" } }, // WEAP
 
+            {0x86C,new FlagGroup 
             {
-                0x86C,
-                new FlagGroup {
-                    A = 4,
-                    STR = new Dictionary<int, string>() { { 20, "Third Person" } }
-                }
+                A = 4,
+                STR = new Dictionary<int, string>() { { 20, "Third Person" } }}
             },
             { 0x870, new FlagGroup { A = 4 } },
 
@@ -568,11 +554,7 @@ namespace Assembly69.Halo.TagObjects
 
             { 0xC30, new C { T = "TagRef" } }, // BITM
 
-            {
-                0xC4C,
-                new C {
-                    T = "Tagblock",
-                    B = new Dictionary<long, C> // magazine block
+            { 0xC4C,new C {T = "Tagblock", B = new Dictionary<long, C> // magazine block
             {
                 { 0x6, new C { T = "2Byte" } },
                 { 0x8, new C { T = "2Byte" } },
@@ -594,11 +576,7 @@ namespace Assembly69.Halo.TagObjects
                     { 0x4, new C{ T="TagRef"}}, //
                 }, S=32}},
 
-            },
-                    S = 160
-                }
-            },
-
+            },S = 160}},
 
             { 0xC60, new C { T = "TagRef" } },
             { 0xC7C, new C { T = "Tagblock" } },
@@ -690,10 +668,7 @@ namespace Assembly69.Halo.TagObjects
                 { 0x2E8, new C{ T="Tagblock"}},
                 { 0x320, new C{ T="Tagblock"}},
 
-            },
-                    S = 848
-                }
-            },
+            },S = 848}},
 
             { 0xCBC, new C { T = "TagRef" } },
             { 0xCD8, new C { T = "TagRef" } },
@@ -734,11 +709,7 @@ namespace Assembly69.Halo.TagObjects
             { 0x64, new C { T = "TagRef" } }, // PHMO
 
             { 0xAC, new C { T = "Tagblock" } },
-            {
-                0xF4,
-                new C {
-                    T = "Tagblock",
-                    B = new Dictionary<long, C> // object variant
+            {0xF4,new C {T = "Tagblock", B = new Dictionary<long, C> // object variant
             {
                 { 0x34, new C{ T="Tagblock"}},
                 { 0x48, new C{ T="Tagblock", B=new Dictionary<long, C> // object block
@@ -753,20 +724,7 @@ namespace Assembly69.Halo.TagObjects
                 { 0x13C, new C{ T="TagRef"}},
                 { 0x158, new C{ T="TagRef"}},
                 { 0x174, new C{ T="Tagblock"}},
-
-                //{ 0x1BC, new c{ T="Tagblock"}},
-                //{ 0x1D0, new c{ T="Tagblock"}},
-                //{ 0x1E4, new c{ T="Tagblock"}},
-                //{ 0x1F8, new c{ T="Tagblock"}},
-                //{ 0x28C, new c{ T="TagRef"}},
-                //{ 0x2A8, new c{ T="TagRef"}},
-                //{ 0x2C4, new c{ T="TagRef"}},
-                //{ 0x2E0, new c{ T="TagRef"}},
-                //{ 0x2FC, new c{ T="Tagblock"}},
-            },
-                    S = 392
-                }
-            }, // 784
+            },S = 392} },
             { 0x108, new C { T = "Tagblock" } },
             { 0x11C, new C { T = "Tagblock" } },
             { 0x130, new C { T = "Tagblock" } },
@@ -839,21 +797,14 @@ namespace Assembly69.Halo.TagObjects
             { 552, new C { T = "4Byte" } },
             { 556, new C { T = "Tagblock" } }, // i343::Objects::AmmoRefillVariant
             { 576, new C { T = "4Byte" } },
-            {
-                0x248,
-                new C {
-                    T = "Tagblock",
-                    B = new Dictionary<long, C> // object_attachment_definition
+            {0x248, new C { T = "Tagblock", B = new Dictionary<long, C> // object_attachment_definition
             {
                 { 4, new C{ T="TagRef"}}, // effe
                 { 32, new C{ T="TagRef"}}, // effe
                 { 64, new C{ T="Tagblock"}},
                 { 84, new C{ T="TagRef"}}, //
                 { 112, new C{ T="Tagblock"}}
-            },
-                    S = 148
-                }
-            },
+            }, S = 148  }},
             { 604, new C { T = "Tagblock" } }, // object_indirect_lighting_settings_definition
             { 624, new C { T = "Tagblock" } }, // s_water_physics_hull_surface_definition
             { 644, new C { T = "Tagblock" } }, // s_jetwash_definition
@@ -1417,9 +1368,30 @@ namespace Assembly69.Halo.TagObjects
                 }, S=4 }},
             }, S=60 }},
 
-            { 0x38, new C{ T="Tagblock"}},
-            { 0x4C, new C{ T="Tagblock"}},
-            { 0x60, new C{ T="Tagblock"}},
+            { 0x38, new C{ T="Tagblock", B= new Dictionary<long, C>
+            {
+                { 0x0, new C{ T="TagRef"} },
+            }, S=28 }},
+
+            { 0x4C, new C{ T="Tagblock", B= new Dictionary<long, C>
+            {
+                { 0x0, new C{ T="TagRef"} },
+            }, S=28 }},
+
+            { 0x60, new C{ T="Tagblock", B= new Dictionary<long, C>
+            {
+                { 0x0, new C{ T="4Byte"} },
+                { 0x4, new C{ T="TagRef"} },
+                { 0x20, new C{ T="TagRef"} },
+                { 0x3C, new C{ T="Tagblock", B= new Dictionary<long, C>
+                {
+                    { 0x0, new C{ T="4Byte"} },
+                    { 0x4, new C{ T="4Byte"} },
+                    { 0x8, new C{ T="TagRef"} },
+                    { 0x24, new C{ T="TagRef"} },
+
+                }, S=64 }},
+            }, S=80 }},
             { 0x74, new C{ T="Tagblock"}},
             { 0x88, new C{ T="Tagblock"}},
             { 0x9C, new C{ T="Tagblock"}},
