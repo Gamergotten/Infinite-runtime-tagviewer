@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Controls;
-using Assembly69.Halo.TagObjects;
+using InfiniteRuntimeTagViewer.Halo.TagObjects;
 
-namespace Assembly69.Interface.Controls
+namespace InfiniteRuntimeTagViewer.Interface.Controls
 {
     /// <summary>
     /// Interaction logic for tagblock.xaml

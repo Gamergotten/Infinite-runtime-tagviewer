@@ -6,14 +6,14 @@ using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Diagnostics;
-using Assembly69.Halo.TagObjects;
-using Assembly69.Interface.Windows;
+using InfiniteRuntimeTagViewer.Halo.TagObjects;
+using InfiniteRuntimeTagViewer.Interface.Windows;
 using AvalonDock.Controls;
 using AvalonDock.Layout;
 using Memory;
-using static Assembly69.MainWindow;
+using static InfiniteRuntimeTagViewer.MainWindow;
 
-namespace Assembly69.Interface.Controls
+namespace InfiniteRuntimeTagViewer.Interface.Controls
 {
     /// <summary>
     /// Interaction logic for TagEditorControl.xaml

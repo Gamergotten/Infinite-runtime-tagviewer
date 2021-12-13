@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="Assembly69.Interface.Controls.ProcessSelector"
+﻿<UserControl x:Class="InfiniteRuntimeTagViewer.Interface.Controls.ProcessSelector"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Assembly69.Interface.Controls"
+             xmlns:local="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls"
              mc:Ignorable="d" d:DesignWidth="150" Height="24">
     <Grid>
         <Grid.ColumnDefinitions>

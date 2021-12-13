@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace Assembly69.Interface.Windows
+namespace InfiniteRuntimeTagViewer.Interface.Windows
 {
     /// <summary>
     /// Interaction logic for tagref_dropdown.xaml

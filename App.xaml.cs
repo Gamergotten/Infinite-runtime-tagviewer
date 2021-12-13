@@ -1,8 +1,8 @@
-﻿using Assembly69.Halo.TagObjects;
+﻿using InfiniteRuntimeTagViewer.Halo.TagObjects;
 
 using Newtonsoft.Json;
 
-namespace Assembly69
+namespace InfiniteRuntimeTagViewer
 {
     /// <summary>
     /// Interaction logic for App.xaml
