@@ -604,7 +604,10 @@ namespace Assembly69
                 Searchbox_TextChanged(null, null);
                 return;
             }
+            if (TagsTree != null)
+            { 
 
+            
             foreach (TreeViewItem tv in TagsTree.Items)
             {
                 // Ignore tags that are not implemented
@@ -618,6 +621,7 @@ namespace Assembly69
                 else
                 {
                     tv.Visibility = Visibility.Visible;
+                }
                 }
             }
         }
