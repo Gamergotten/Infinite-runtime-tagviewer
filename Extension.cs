@@ -18,11 +18,13 @@ namespace Assembly69
         {
             if (window.WindowState == WindowState.Maximized)
             {
-                var leftField = typeof(Window).GetField("_actualLeft", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                System.Reflection.FieldInfo? leftField = typeof(Window).GetField("_actualLeft", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
                 return (double) leftField.GetValue(window);
             }
             else
+            {
                 return window.Left;
+            }
         }
 
         /// <summary>
@@ -34,11 +36,13 @@ namespace Assembly69
         {
             if (window.WindowState == WindowState.Maximized)
             {
-                var topField = typeof(Window).GetField("_actualTop", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                System.Reflection.FieldInfo? topField = typeof(Window).GetField("_actualTop", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
                 return (double) topField.GetValue(window);
             }
             else
+            {
                 return window.Top;
+            }
         }
 
         public static bool GetBit(this byte b, int bitNumber)

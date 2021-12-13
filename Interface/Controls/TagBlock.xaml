@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d">
-    <GroupBox BorderThickness="2" Background="Purple" Margin="2,5,2,1">
+    <GroupBox BorderThickness="2" Background="#3F3F46" Margin="2,5,2,1">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition MinWidth="150" Width="1*" />
