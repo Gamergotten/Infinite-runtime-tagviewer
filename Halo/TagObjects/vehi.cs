@@ -14,7 +14,7 @@ namespace Assembly69.Halo.TagObjects
 			/// <summary>
 			/// Length of the tagblock
 			/// </summary>
-			public long? S { get; set; } = null; // S = size // length of tagblock
+			public long S { get; set; } // S = size // length of tagblock
 		}
 
 		public class FlagGroup : C
