@@ -7,6 +7,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 	{
 		public class C
 		{
+
 			public string? T { get; set; } // T = type
 			public Dictionary<long, C>? B { get; set; } = null; // B = blocks? i forgot what B stands for
 
