@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Border Margin="5,5,0,0" Width="170" Height="120">
+    <Border Margin="5,5,0,0" MinWidth="250" Width="auto" Height="120">
         <ScrollViewer MaxHeight="400" Background="DarkGoldenrod">
             <StackPanel Margin="5, 0, 0, 0" x:Name="spBitCollection" Orientation="Vertical">
             </StackPanel>

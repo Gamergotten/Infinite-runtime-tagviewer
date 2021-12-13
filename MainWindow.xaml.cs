@@ -13,6 +13,9 @@ using AvalonDock.Layout;
 
 using Memory;
 using InfiniteRuntimeTagViewer.Halo;
+using System.Xml.Serialization;
+using InfiniteRuntimeTagViewer.Halo.TagObjects;
+using System.Windows.Media;
 
 namespace InfiniteRuntimeTagViewer
 {
@@ -189,8 +192,8 @@ namespace InfiniteRuntimeTagViewer
 
                 TreeViewItem sortheader = new() {
                     Header = displayGroup.TagGroupName + " (" + displayGroup.TagGroupDesc + ")",
-                    ToolTip = displayGroup.TagGroupDefinitition
-                };
+                    ToolTip = new TextBlock { Foreground = Brushes.Black, Text = displayGroup.TagGroupDefinitition }
+				};
 
                 displayGroup.TagCategory = sortheader;
 

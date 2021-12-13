@@ -4,13 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d">
-    <Grid Background="#3F3F46" Margin="5,5,0,0" Height="18">
+    <Grid Background="#3F3F46" Margin="5,5,0,0" Height="20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition MinWidth="70" Width="1*" />
             <ColumnDefinition Width="200" />
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="0" x:Name="value_type" Foreground="#fff"
-                      Text="Tag Value test one two three" HorizontalAlignment="Stretch" Margin="10,0,5,0" />
+                   Text="Tag Value test one two three" HorizontalAlignment="Stretch" Margin="10,0,5,0" />
         <TextBox x:Name="value" Grid.Column="1" BorderThickness="1" BorderBrush="#505050" />
     </Grid>
 </UserControl>

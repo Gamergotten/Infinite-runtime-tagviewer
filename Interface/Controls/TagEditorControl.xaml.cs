@@ -58,7 +58,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 		// TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
 		~TagEditorControl()
 		{
-			int x = 0;
+			int debugMeme = 0;
 		}
 
 		public void Inhale_tag(int tagIndex) // as in a literal index to the tag
