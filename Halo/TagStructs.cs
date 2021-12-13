@@ -43,9 +43,16 @@ namespace InfiniteRuntimeTagViewer.Halo
 	}
 
 
+	[Flags]
+	public enum TagEditorDefType : UInt32
+	{
+		TagEditorDefinition = 0,
+		TED_TagRefGroup = 1
+	}
 
 	public class TagEditorDefinition
 	{
+		public TagEditorDefType TEDType = TagEditorDefType.TagEditorDefinition;
 		public long MemoryAddress;
 		public string MemoryType;
 		public long? OffsetOverride = null;
@@ -84,9 +91,13 @@ namespace InfiniteRuntimeTagViewer.Halo
 	public class TED_TagRefGroup : TagEditorDefinition {
 		public string TagGroup;
 
-		public TED_TagRefGroup() : base() { }
+		public TED_TagRefGroup() : base() {
+			TEDType = TagEditorDefType.TED_TagRefGroup;
+		}
+
 		public TED_TagRefGroup(TED_TagRefGroup ted) : base(ted) 
 		{
+			TEDType = TagEditorDefType.TED_TagRefGroup;
 			this.TagGroup = ted.TagGroup;
 		}
 	}

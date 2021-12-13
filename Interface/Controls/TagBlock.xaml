@@ -5,6 +5,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d">
     <GroupBox BorderThickness="2" Background="#3F3F46" Margin="2,5,2,1">
+        <GroupBox.RenderTransform>
+            <RotateTransform x:Name="AnimatedRotateTransform" Angle="0" />
+        </GroupBox.RenderTransform>
+        <GroupBox.Triggers>
+            <EventTrigger RoutedEvent="MouseDown">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetName="AnimatedRotateTransform" 
+                                            Storyboard.TargetProperty="Angle" 
+                                            RepeatBehavior="1x"
+                                            By="10"        
+                                            To="360" 
+                                            Duration="0:0:0.5"
+                                            FillBehavior="Stop" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </GroupBox.Triggers>
+        
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition MinWidth="150" Width="1*" />
@@ -33,8 +52,10 @@
                     <ColumnDefinition Width="auto" />
                     <ColumnDefinition Width="4" />
                 </Grid.ColumnDefinitions>
-                
-                <VirtualizingStackPanel Grid.Row="0" x:Name="dockpanel" Background="#222" />
+
+                <StackPanel Grid.Row="0" x:Name="dockpanel" Background="#222">
+                    
+                </StackPanel>
             </Grid>
 
             <ComboBox x:Name="indexbox" Grid.Row="0" Grid.Column="2" Margin="2,5,0,2" SelectionChanged="indexbox_SelectionChanged" />
