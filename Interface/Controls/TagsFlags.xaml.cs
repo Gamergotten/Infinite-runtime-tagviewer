@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Assembly69.Halo;
+
 namespace Assembly69.Interface.Controls
 {
     /// <summary>
@@ -20,7 +22,9 @@ namespace Assembly69.Interface.Controls
     /// </summary>
     public partial class TagsFlags : UserControl
     {
-        public TagsFlags() => InitializeComponent();
+		public TagEditorDefinition ValueDefinition { get; set; }
+
+		public TagsFlags() => InitializeComponent();
 
 
         public long address;
@@ -40,7 +44,7 @@ namespace Assembly69.Interface.Controls
                 flag_as_int8 = (flag7.IsChecked == true) ? flag_as_int8 + 64 : flag_as_int8;
                 flag_as_int8 = (flag8.IsChecked == true) ? flag_as_int8 + 128 : flag_as_int8;
 
-                _mainwindow.Addpokechange(address, "Flags", flag_as_int8.ToString());
+				_mainwindow.AddPokeChange(ValueDefinition, flag_as_int8.ToString());
             }
         }
 

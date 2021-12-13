@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Controls;
+
+using Assembly69.Halo;
 using Assembly69.Halo.TagObjects;
 
 namespace Assembly69.Interface.Controls
@@ -11,18 +13,23 @@ namespace Assembly69.Interface.Controls
     {
         public TagEditorControl EditorControl { get; }
 
-        public TagBlock(TagEditorControl editorControl)
-        {
-            InitializeComponent();
-            EditorControl = editorControl;
-        }
+		public TagBlock(TagEditorControl editorControl, long blockOffset, TagStruct tagStruct)
+		{
+			InitializeComponent();
+			EditorControl = editorControl;
+			BlockOffset = blockOffset;	
+			TagStruct = tagStruct;
+		}
 
-        public KeyValuePair<long, Vehi.C> Children;
-        public long BlockAddress;
+		public KeyValuePair<long, Vehi.C> Children { get; set; }
+		public long BlockAddress { get; set; }
+		public long BlockOffset { get; set; }
+		public TagStruct TagStruct { get; set; }
 
         private void indexbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            EditorControl.recall_blockloop(Children, BlockAddress + (indexbox.SelectedIndex * Children.Value.S), dockpanel);
+            EditorControl.recall_blockloop(TagStruct, BlockOffset + (indexbox.SelectedIndex * Children.Value.S), 
+				Children, BlockAddress + (indexbox.SelectedIndex * Children.Value.S), dockpanel);
         }
     }
 }

@@ -15,6 +15,24 @@ namespace Assembly69.Halo.TagObjects
 			/// Length of the tagblock
 			/// </summary>
 			public long S { get; set; } // S = size // length of tagblock
+
+
+			/// <summary>
+			/// Set during load, will be used when I add netcode 
+			/// </summary>
+			public long MemoryAddress { get; set; }
+
+			/// <summary>
+			/// The absolute offset from the base address of the tag
+			/// eg C2 will resolve to assault_rifle_mp.weapon + C2 
+			/// 
+			/// This will be recursive so the actual value might be 
+			///		assault_rifle_mp.weapon + C2 + (nested block) 12 + (nested block) 4
+			///		
+			/// This will allow us to sync up changes across the server and client without
+			/// the need to re-resolve memory addresses.
+			/// </summary>
+			public long AbsoluteTagOffset { get; set; }
 		}
 
 		public class FlagGroup : C

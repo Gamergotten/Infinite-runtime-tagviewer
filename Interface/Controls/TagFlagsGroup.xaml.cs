@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Assembly69.Halo;
+
 namespace Assembly69.Interface.Controls
 {
     /// <summary>
@@ -20,7 +22,9 @@ namespace Assembly69.Interface.Controls
     /// </summary>
     public partial class TagFlagsGroup : UserControl
     {
-        public MainWindow? _mainwindow;
+		public TagEditorDefinition ValueDefinition { get; set; }
+
+		public MainWindow? mainWindow;
         public Memory.Mem? M;
         public long startAddress;
         public int? amountOfBytes;
@@ -84,8 +88,6 @@ namespace Assembly69.Interface.Controls
                     bitsLeft--;
                 }
             }
-
-            //int x = 0;
         }
 
         private void Checkbox_BitIsChanged(int byteNo, int bit)
@@ -103,7 +105,13 @@ namespace Assembly69.Interface.Controls
                 output.UpdateBit(x, value: (bool) cbx.IsChecked);
             }
 
-            _mainwindow.Addpokechange(targetAddress, "Flags", output.ToString());
+			mainWindow.AddPokeChange(new TagEditorDefinition(ValueDefinition)
+			{
+				MemoryAddress  = startAddress + byteNo,
+				OffsetOverride = ValueDefinition.GetTagOffset() + byteNo
+			}, output.ToString());
+
+            //mainWindow.AddPokeChange(targetAddress, "Flags", output.ToString());
         }
     }
 }

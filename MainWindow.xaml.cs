@@ -14,6 +14,7 @@ using Assembly69.Interface.Windows;
 using AvalonDock.Layout;
 
 using Memory;
+using Assembly69.Halo;
 
 namespace Assembly69
 {
@@ -59,7 +60,6 @@ namespace Assembly69
         {
             hook_text.Text = "Openning process...";
             processSelector.hookProcess(M);
-            //M.OpenProcess("HaloInfinite.exe");
 
             if (M.pHandle == IntPtr.Zero)
             {
@@ -100,33 +100,7 @@ namespace Assembly69
         public List<TagStruct> TagsList { get; set; } = new List<TagStruct>();
         public SortedDictionary<string, GroupTagStruct> TagGroups { get; set; } = new();
 
-        public struct TagStruct
-        {
-            public string Datnum;
-
-            public string ObjectId;
-
-            public string TagGroup;
-
-            public long TagData;
-
-            public string TagTypeDesc;
-        }
-
-        public struct GroupTagStruct
-        {
-            public string TagGroupDesc;
-
-            public string TagGroupName;
-
-            public string TagGroupDefinitition;
-
-            public string TagExtraType;
-
-            public string TagExtraName;
-
-            public TreeViewItem TagCategory;
-        }
+		
 
         // load tags from Mem
         private void BtnLoadTags_Click(object sender, RoutedEventArgs e)
@@ -151,28 +125,25 @@ namespace Assembly69
             // 0x18 Tag_type_desc Pointer 8bytes
 
             TagsList = new List<TagStruct>();
-
             for (int tagIndex = 0; tagIndex < TagCount; tagIndex++)
             {
                 TagStruct currentTag = new();
-
                 long tagAddress = tagsStart + (tagIndex * 52);
 
                 byte[] test1 = M.ReadBytes(tagAddress.ToString("X"), 4);
-
                 currentTag.Datnum = BitConverter.ToString(test1).Replace("-", string.Empty);
 
                 byte[] test = (M.ReadBytes((tagAddress + 4).ToString("X"), 4));
 
                 // = String.Concat(bytes.Where(c => !Char.IsWhiteSpace(c)));
                 currentTag.ObjectId = BitConverter.ToString(test).Replace("-", string.Empty);
-
                 currentTag.TagGroup = read_tag_group(M.ReadLong((tagAddress + 0x8).ToString("X")));
-
                 currentTag.TagData = M.ReadLong((tagAddress + 0x10).ToString("X"));
+				currentTag.TagFullName = convert_ID_to_tag_name(currentTag.ObjectId).Trim();
+				currentTag.TagFile = currentTag.TagFullName.Split('\\').Last().Trim();
 
-                // do the tag definitition
-                TagsList.Add(currentTag);
+				// do the tag definitition
+				TagsList.Add(currentTag);
             }
 
             Loadtags();
@@ -344,10 +315,14 @@ namespace Assembly69
         // to keep track of the UI elements we're gonna use a dictionary, will probably be better
         public Dictionary<long, TagChangesBlock> UIpokelist = new();
 
-        // type (TagrefGroup, TagrefTag)
-        // address,
-        public void Addpokechange(long offset, string type, string value)
+		// type (TagrefGroup, TagrefTag)
+		// address,
+		// WARNING: Please note if something calls this function it wont be replicated
+		// in the future when saving or netcode is added!!!
+		public void AddPokeChange(long offset, string type, string value)
         {
+		
+
             // hmm we need to change this so we either update or add a new UI element
             Pokelist[offset] = new KeyValuePair<string, string>(type, value);
 
@@ -373,6 +348,37 @@ namespace Assembly69
 
             change_text.Text = Pokelist.Count + " changes queued";
         }
+
+		public void AddPokeChange(TagEditorDefinition def, string value)
+		{
+			// Hmm we need to change this so we either update or add a new UI element
+			Pokelist[def.MemoryAddress] = new KeyValuePair<string, string>(def.MemoryType, value);
+
+			// there we go, now we aren't touching the pokelist code
+			if (UIpokelist.ContainsKey(def.MemoryAddress))
+			{
+				TagChangesBlock updateElement = UIpokelist[def.MemoryAddress];
+				updateElement.address.Text = "0x" + def.MemoryAddress.ToString("X");
+				updateElement.type.Text = def.MemoryType;
+				updateElement.value.Text = value;
+				updateElement.tagSource.Text = def.TagStruct.TagFile + " + " + def.GetTagOffset();
+			}
+			else
+			{
+				TagChangesBlock newBlock = new()
+				{
+					address = { Text = "0x" + def.MemoryAddress.ToString("X") },
+					type = { Text = def.MemoryType },
+					value = { Text = value },
+					tagSource = { Text = def.TagStruct.TagFile + " + " + def.GetTagOffset() }
+				};
+
+				changes_panel.Children.Add(newBlock);
+				UIpokelist.Add(def.MemoryAddress, newBlock);
+			}
+
+			change_text.Text = Pokelist.Count + " changes queued";
+		}
 
         // need this to read tagref blocks - because we only get a datnum to figure out the name with
         // so we find what else has the same datnum and then run the other method to get name based off of ID

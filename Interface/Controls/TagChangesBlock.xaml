@@ -13,16 +13,21 @@
             <ColumnDefinition Width="120" />
             <ColumnDefinition Width="60" />
             <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition Width="*" MinWidth="120" />
+            <ColumnDefinition Width="20" />
         </Grid.ColumnDefinitions>
-        
-        <TextBlock HorizontalAlignment="Right" Text="Address" VerticalAlignment="Stretch" Margin="0,0,5,0" />
+
+        <TextBlock HorizontalAlignment="Right" Text="Address" VerticalAlignment="Center" Margin="0,0,5,0" />
         <TextBox x:Name="address" Grid.Column="1" Text="0x00000" VerticalAlignment="Stretch" />
 
-        <TextBlock Grid.Column="2" HorizontalAlignment="Right" Text="Type" VerticalAlignment="Stretch" Margin="0,0,5,0" />
+        <TextBlock Grid.Column="2" HorizontalAlignment="Right" Text="Type" VerticalAlignment="Center" Margin="0,0,5,0" />
         <TextBox x:Name="type" Grid.Column="3" Text="None" VerticalAlignment="Stretch" />
 
-        <TextBlock Grid.Column="4" HorizontalAlignment="Right" Text="Value" VerticalAlignment="Stretch" Margin="0,0,5,0" />
+        <TextBlock Grid.Column="4" HorizontalAlignment="Right" Text="Value" VerticalAlignment="Center" Margin="0,0,5,0" />
         <TextBox x:Name="value" Grid.Column="5" Text="None" VerticalAlignment="Stretch" />
 
+        <TextBlock Grid.Column="6" HorizontalAlignment="Right" Text="Source" VerticalAlignment="Center" Margin="0,0,5,0" />
+        <TextBox x:Name="tagSource" Grid.Column="7" Text="" VerticalAlignment="Stretch" />
     </Grid>
 </UserControl>
