@@ -50,7 +50,7 @@ namespace InfiniteRuntimeTagViewer.Halo
 		public string MemoryType;
 		public long? OffsetOverride = null;
 
-		public Vehi.C TagDef;
+		public TagLayouts.C TagDef;
 		public TagStruct TagStruct;
 
 		public string DatNum;
