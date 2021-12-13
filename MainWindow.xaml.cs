@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Diagnostics;
 
 using Assembly69.Interface.Controls;
 using Assembly69.Interface.Windows;
@@ -35,10 +36,10 @@ namespace Assembly69
 
         public Mem M = new();
 
-        public TagRefDropdown? Trd { get; set; } = null; // this is our dropdown box for selecting tag references
-        public Button? TheLastTagrefButtonWePressed { get; set; } = null; // since we did it for the window why not also do it for the button
+        public TagRefDropdown? Trd { get; set; } // this is our dropdown box for selecting tag references
+        public Button? TheLastTagrefButtonWePressed { get; set; } // since we did it for the window why not also do it for the button
 
-        public Dictionary<string, TagEditorControl> TagEditors { get; set; } = new();
+        public Dictionary<string, TagEditorControl>? TagEditors { get; set; } = new();
 
         public MainWindow()
         {
@@ -49,14 +50,21 @@ namespace Assembly69
             inhale_tagnames();
         }
 
-        public long BaseAddress = -1;
-        public int TagCount = -1;
+        private long BaseAddress = -1;
+        private int TagCount = -1;
 
         // Hook to halo infinite
         private async void BtnHook_Click(object sender, RoutedEventArgs e)
         {
-            hook_text.Text = "Openning process...";
-            M.OpenProcess("HaloInfinite.exe");
+            hook_text.Text = "Openning process..."; 
+            Process[] process = Process.GetProcessesByName("HaloInfinite");
+            int i = process.Length;
+            while (i > 0)
+            {
+                string haloPid = process[i - 1].Id.ToString();
+                _ = M.OpenProcess(Convert.ToInt32(Convert.ToString(haloPid)));
+                i -= 1;
+            }
             //M.OpenProcess(Convert.ToInt32(haloPid.Text));
 
             if (M.pHandle == IntPtr.Zero)
@@ -95,7 +103,7 @@ namespace Assembly69
             }
         }
 
-        public List<TagStruct> TagsList { get; set; }
+        public List<TagStruct> TagsList { get; set; } = new List<TagStruct>();
         public SortedDictionary<string, GroupTagStruct> TagGroups { get; set; } = new();
 
         public struct TagStruct
@@ -258,7 +266,7 @@ namespace Assembly69
 
         public string convert_ID_to_tag_name(string value)
         {
-            InhaledTagnames.TryGetValue(value, out string potentialName);
+            _ = InhaledTagnames.TryGetValue(value, value: out string? potentialName);
 
             return potentialName ??= "ObjectID: " + value;
         }
@@ -291,17 +299,22 @@ namespace Assembly69
                         dockSearch.IsActive = true;
 
                     // Set the tag as the active tab
-                    bool found = false; // used for debugging
                     if (dockSearch.Parent is LayoutDocumentPane ldp)
                     {
                         for (int x = 0; x < ldp.Children.Count; x++)
                         {
-                            var dlp = ldp.Children[x];
+                            LayoutContent dlp = ldp.Children[x];
 
                             if (dlp == dockSearch)
                             {
-                                found = true;
+                                bool? found = true;
                                 ldp.SelectedContentIndex = x;
+                                Console.WriteLine(found);
+                            }
+                            else
+                            {
+                                bool? found = false; // used for debugging
+                                Console.WriteLine(found);
                             }
                         }
                     }
@@ -312,7 +325,7 @@ namespace Assembly69
 
             // Create the tag editor.
             var tagEditor = new TagEditorControl(this);
-            tagEditor.inhale_tag(tagIndex);
+            tagEditor.Inhale_tag(tagIndex);
 
             // Create the layout document for docking.
             LayoutDocument doc = tagEditor.LayoutDocument = new LayoutDocument();
@@ -419,7 +432,7 @@ namespace Assembly69
                         break;
 
                     case "Pointer":
-                        string willThisWork = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
+                        string? willThisWork = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
                         M.WriteMemory(address.ToString("X"), "long", willThisWork); // apparently it does
                         break;
 
@@ -438,7 +451,7 @@ namespace Assembly69
                         string temp = Regex.Replace(value, @"(.{2})", "$1 ");
                         temp = temp.TrimEnd();
                         M.WriteMemory(address.ToString("X"), "bytes", temp);
-                        int w2 = 0;
+                        //int w2 = 0;
 
                         break;
                 }
@@ -519,7 +532,7 @@ namespace Assembly69
         }
 
         // State change
-        private void MainWindowStateChangeRaised(object sender, EventArgs e)
+        private void MainWindowStateChangeRaised(object? sender, EventArgs e)
         {
             if (WindowState == WindowState.Maximized)
             {
@@ -538,13 +551,13 @@ namespace Assembly69
 
 
         // search filter
-        private void Searchbox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Searchbox_TextChanged(object? sender, TextChangedEventArgs? e)
         {
             string[] supportedTags = Halo.TagObjects.Vehi.MappedTags;
             string search = Searchbox.Text;
-            foreach (TreeViewItem tv in TagsTree.Items)
+            foreach (TreeViewItem? tv in TagsTree.Items)
             {
-                var isSupportedTag = supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower());
+                bool isSupportedTag = supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower());
 
                 // Ignore tags that are not implemented
                 if ((bool) cbxFilterOnlyMapped.IsChecked && !isSupportedTag)
@@ -591,7 +604,10 @@ namespace Assembly69
                 Searchbox_TextChanged(null, null);
                 return;
             }
+            if (TagsTree != null)
+            { 
 
+            
             foreach (TreeViewItem tv in TagsTree.Items)
             {
                 // Ignore tags that are not implemented
@@ -605,6 +621,7 @@ namespace Assembly69
                 else
                 {
                     tv.Visibility = Visibility.Visible;
+                }
                 }
             }
         }
