@@ -216,6 +216,8 @@
                     <TreeView x:Name="TagsTree" Grid.Row="2">
                         <TreeViewItem Header="Hook and load to get started!" />
                         <TreeViewItem Header="reload the tags whenever the map changes" />
+
+                        
                     </TreeView>
                     <!-- < #TagsTree -->
 

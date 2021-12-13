@@ -17,12 +17,17 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 	/// <summary>
 	/// Interaction logic for TagEditorControl.xaml
 	/// </summary>
-	public partial class TagEditorControl
+	public partial class TagEditorControl : IDisposable
 	{
+
 		private MainWindow _mainWindow;
 		private readonly Mem _m;
 
 		public LayoutDocument? LayoutDocument { get; internal set; }
+		public Button? TheLastTagrefButtonWePressed { get; set; } // since we did it for the window why not also do it for the button
+
+		private List<Action> disposeActions = new List<Action>();
+		private bool disposedValue;
 
 		public TagEditorControl(MainWindow mw)
 		{
@@ -30,6 +35,30 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			_m = _mainWindow.M;
 
 			InitializeComponent();
+		}
+
+		protected virtual void Dispose(bool disposing)
+		{
+			if (!disposedValue)
+			{
+				if (disposing)
+				{
+					// TODO: dispose managed state (managed objects)
+					// TODO: call the action list
+					for (int x = 0; x < disposeActions.Count; x++)
+						disposeActions[x].Invoke();
+				}
+
+				// TODO: free unmanaged resources (unmanaged objects) and override finalizer
+				// TODO: set large fields to null
+				disposedValue = true;
+			}
+		}
+
+		// TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
+		~TagEditorControl()
+		{
+			int x = 0;
 		}
 
 		public void Inhale_tag(int tagIndex) // as in a literal index to the tag
@@ -87,7 +116,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 		// hmm we need a system that reads the pointer and adds it
 		// also, we need to beable to read multiple tag things but i may put that on hold
-		public void recall_blockloop(TagStruct tagStruct, long tagOffset, KeyValuePair<long, TagLayouts.C> entry, long loadingTag, VirtualizingStackPanel parentpanel)
+		public void recall_blockloop(TagStruct tagStruct, long tagOffset, KeyValuePair<long, TagLayouts.C> entry, long loadingTag, StackPanel parentpanel)
 		{
 			parentpanel.Children.Clear();
 			if (entry.Value.B != null)
@@ -171,13 +200,14 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			return target;
 		}
 
+		TagRefDropdown? trd;
 		private void TagRefButton(object sender, RoutedEventArgs e)
 		{
 			Button? b = sender as Button;
 			TED_TagRefGroup ted = b.Tag as TED_TagRefGroup;
 			System.Diagnostics.Debug.Assert(ted != null);
 
-			TagRefDropdown? trd = _mainWindow.Trd = new TagRefDropdown();
+			trd = new TagRefDropdown();
 			double trdWidth = trd.Width = b.ActualWidth + 116;
 			double trdHeight = trd.Height = 400;
 
@@ -252,7 +282,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			}
 
 			trd.MainWindow = _mainWindow;
-			_mainWindow.TheLastTagrefButtonWePressed = b;
+			TheLastTagrefButtonWePressed = b;
 
 			// Null type
 			TreeViewItem? tvi = new()
@@ -265,8 +295,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 				} //s[0] + ":" + "FFFFFFFF"
 			};
 
-			_mainWindow.Trd.tag_select_panel.Items.Add(tvi);
-			tvi.Selected += new RoutedEventHandler(update_tagref);
+			trd.tag_select_panel.Items.Add(tvi);
+			tvi.Selected += update_tagref;
+			disposeActions.Add(() => tvi.Selected -= update_tagref);
 
 			foreach (TagStruct tg in _mainWindow.TagsList)
 			{
@@ -283,12 +314,13 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						}
 					};
 
-					_mainWindow.Trd.tag_select_panel.Items.Add(tvi2);
-					tvi2.Selected += new RoutedEventHandler(update_tagref);
+					trd.tag_select_panel.Items.Add(tvi2);
+					tvi2.Selected += update_tagref;
+					disposeActions.Add(() => tvi2.Selected -= update_tagref);
 				}
 			}
 
-			_mainWindow.Trd.Show();
+			trd.Show();
 			return;
 		}
 
@@ -301,23 +333,23 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			_mainWindow.AddPokeChange(ted, ted.DatNum);
 
 			string id = _mainWindow.get_tagid_by_datnum(ted.DatNum);
-			_mainWindow.TheLastTagrefButtonWePressed.Content = _mainWindow.convert_ID_to_tag_name(id);
+			TheLastTagrefButtonWePressed.Content = _mainWindow.convert_ID_to_tag_name(id);
 
 			// need to do this the lazy way again, have to head off in a sec
-			Grid? td = _mainWindow.TheLastTagrefButtonWePressed.Parent as Grid;
+			Grid? td = TheLastTagrefButtonWePressed.Parent as Grid;
 			Button? x = td.Children[2] as Button;
 			//X.Tag = ID;
 
 			x.Tag = _mainWindow.get_tagindex_by_datnum(ted.DatNum);
 
-			if (_mainWindow.Trd != null)
+			if (trd != null)
 			{
-				_mainWindow.Trd.Closethis();
+				trd.Closethis();
 			}
 		}
 
 		// had to adapt this to bealbe to read tagblocks and forgot to allow it to iterate through them *sigh* good enough for now
-		private void readTagsAndCreateControls(TagStruct tagStruct, long startingTagOffset, Dictionary<long, TagLayouts.C> tagDefinitions, long address, VirtualizingStackPanel parentpanel)
+		private void readTagsAndCreateControls(TagStruct tagStruct, long startingTagOffset, Dictionary<long, TagLayouts.C> tagDefinitions, long address, StackPanel parentpanel)
 		{
 			KeyValuePair<long, TagLayouts.C> prevEntry;
 			foreach (KeyValuePair<long, TagLayouts.C> entry in tagDefinitions)
@@ -342,7 +374,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							TagStruct = tagStruct
 						};
 
-						vb1.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+						vb1.value.TextChanged += value_TextChanged;
+						disposeActions.Add(() => vb1.value.TextChanged -= value_TextChanged);
 						break;
 					case "2Byte":
 						TagValueBlock? vb6 = new() { HorizontalAlignment = HorizontalAlignment.Left };
@@ -358,7 +391,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							TagStruct = tagStruct
 						};
 
-						vb6.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+						vb6.value.TextChanged += value_TextChanged;
+						disposeActions.Add(() => vb6.value.TextChanged -= value_TextChanged);
 						break;
 
 					case "Float":
@@ -375,7 +409,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							TagStruct = tagStruct
 						};
 
-						vb2.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+						vb2.value.TextChanged += value_TextChanged;
+						disposeActions.Add(() => vb2.value.TextChanged -= value_TextChanged);
+
 						break;
 
 					case "TagRef":
@@ -411,7 +447,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 								TagGroup = tagGroup
 							};
-							tfb1.taggroup.SelectionChanged += new SelectionChangedEventHandler(taggroup_SelectionChanged);
+							tfb1.taggroup.SelectionChanged += taggroup_SelectionChanged;
+							disposeActions.Add(() => tfb1.taggroup.SelectionChanged -= taggroup_SelectionChanged);
 
 							//tfb1.tag_button.Tag = (address + entry.Key + 24) + ":" + testGroup;
 							tfb1.tag_button.Tag = new TED_TagRefGroup()
@@ -426,13 +463,15 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 								TagGroup = tagGroup
 							};
-							tfb1.tag_button.Click += new RoutedEventHandler(TagRefButton);
+							tfb1.tag_button.Click += TagRefButton;
+							disposeActions.Add(() => tfb1.tag_button.Click -= TagRefButton);
 
 							int id = _mainWindow.get_tagindex_by_datnum(datNum);
 
 							// tag
 							tfb1.goto_button.Tag = id; // need to get the index of the tag not the ID
-							tfb1.goto_button.Click += new RoutedEventHandler(Gotobutton);
+							tfb1.goto_button.Click += Gotobutton;
+							disposeActions.Add(() => tfb1.goto_button.Click -= Gotobutton);
 						}
 						catch
 						{
@@ -454,7 +493,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							TagStruct = tagStruct
 						};
 
-						vb3.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+						vb3.value.TextChanged += value_TextChanged;
+						disposeActions.Add(() => vb3.value.TextChanged -= value_TextChanged);
+
 						break;
 
 					case "Tagblock": // need to find some kinda "whoops that tag isnt actually loaded"; keep erroring with the hlmt tag
@@ -485,7 +526,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							TagDef = entry.Value,
 							TagStruct = tagStruct
 						};
-						tb1.tagblock_address.TextChanged += new TextChangedEventHandler(value_TextChanged);
+						tb1.tagblock_address.TextChanged += value_TextChanged;
+						disposeActions.Add(() => tb1.tagblock_address.TextChanged -= value_TextChanged);
 
 						//tb1.tagblock_count.Tag = (address + entry.Key + 16) + ":4Byte";
 						tb1.tagblock_count.Tag = new TagEditorDefinition()
@@ -495,7 +537,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							TagDef = entry.Value,
 							TagStruct = tagStruct
 						};
-						tb1.tagblock_count.TextChanged += new TextChangedEventHandler(value_TextChanged);
+						tb1.tagblock_count.TextChanged += value_TextChanged;
+						disposeActions.Add(() => tb1.tagblock_count.TextChanged -= value_TextChanged);
 
 						//tb1.indexbox.SelectionChanged += new SelectionChangedEventHandler(indexbox_SelectionChanged);
 
@@ -541,7 +584,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							TagDef = entry.Value,
 							TagStruct = tagStruct
 						};
-						vb4.value.TextChanged += new TextChangedEventHandler(value_TextChanged);
+						vb4.value.TextChanged += value_TextChanged;
+						disposeActions.Add(() => vb4.value.TextChanged -= value_TextChanged);
 						break;
 
 					case "Flags":
@@ -768,6 +812,15 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 				}
 			}
 			return found;
+		}
+
+	
+
+		public void Dispose()
+		{
+			// Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+			Dispose(disposing: true);
+			GC.SuppressFinalize(this);
 		}
 	}
 }

@@ -37,11 +37,6 @@ namespace InfiniteRuntimeTagViewer
 
         public Mem M = new();
 
-        public TagRefDropdown? Trd { get; set; } // this is our dropdown box for selecting tag references
-        public Button? TheLastTagrefButtonWePressed { get; set; } // since we did it for the window why not also do it for the button
-
-        public Dictionary<string, TagEditorControl>? TagEditors { get; set; } = new();
-
         public MainWindow()
         {
             InitializeComponent();
@@ -56,6 +51,8 @@ namespace InfiniteRuntimeTagViewer
         // Hook to halo infinite
         private async void BtnHook_Click(object sender, RoutedEventArgs e)
         {
+			System.Diagnostics.Debugger.Log(0, "DBGTIMING", "Hooking game");
+
             hook_text.Text = "Openning process...";
             processSelector.hookProcess(M);
 
@@ -103,7 +100,9 @@ namespace InfiniteRuntimeTagViewer
         // load tags from Mem
         private void BtnLoadTags_Click(object sender, RoutedEventArgs e)
         {
-            if (TagCount != -1)
+			System.Diagnostics.Debugger.Log(0, "DBGTIMING", "Loading tags");
+
+			if (TagCount != -1)
             {
                 TagCount = -1;
                 TagGroups.Clear();
@@ -147,9 +146,11 @@ namespace InfiniteRuntimeTagViewer
             Loadtags();
 
             Searchbox_TextChanged(null, null);
-        }
 
-        public string read_tag_group(long tagGroupAddress)
+			System.Diagnostics.Debugger.Log(0, "DBGTIMING", "Done loading tags");
+		}
+
+		public string read_tag_group(long tagGroupAddress)
         {
             string key = ReverseString(M.ReadString((tagGroupAddress + 0xC).ToString("X"), "", 8).Substring(0, 4));
             if (!TagGroups.ContainsKey(key))
@@ -198,14 +199,17 @@ namespace InfiniteRuntimeTagViewer
                 TagGroups[TagGroups.ElementAt(i).Key] = displayGroup;
             }
 
-            for (int i = 0; i < TagsList.Count; i++)
+			var sortedList = TagsList.OrderBy(x => x.TagFullName).ToList();
+
+            for (int i = 0; i < sortedList.Count; i++)
             {
                 TreeViewItem t = new();
-                TagStruct tag = TagsList[i];
+                TagStruct tag = sortedList[i];
                 TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct dictTagGroup);
 
                 t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
-                t.Tag = i;
+                t.Tag = TagsList.FindIndex(x => x.ObjectId == tag.ObjectId);
+
                 //t.MouseLeftButtonDown += new MouseButtonEventHandler(Select_Tag_click);
                 t.Selected += Select_Tag_click;
 
@@ -272,12 +276,10 @@ namespace InfiniteRuntimeTagViewer
                             {
                                 bool? found = true;
                                 ldp.SelectedContentIndex = x;
-                                Console.WriteLine(found);
                             }
                             else
                             {
                                 bool? found = false; // used for debugging
-                                Console.WriteLine(found);
                             }
                         }
                     }
@@ -473,8 +475,11 @@ namespace InfiniteRuntimeTagViewer
 
         private void DockManager_DocumentClosing(object sender, AvalonDock.DocumentClosingEventArgs e)
         {
-            // On tag window closing.
-        }
+			// On tag window closing.
+			this.UpdateLayout();
+
+			GC.Collect(3, GCCollectionMode.Forced);
+		}
 
         private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e)
         {
