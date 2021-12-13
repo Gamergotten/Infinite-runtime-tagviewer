@@ -75,63 +75,16 @@ namespace Assembly69.Interface.Controls
                 return;
             }
 
-            // there we go, finally fixed that
-            switch (loadingTag.TagGroup)
-            {
-                case "vehi":
-                    Dictionary<long, Vehi.C> strings1 = Vehi.VehicleTag;
-                    do_the_tag_thing(strings1, loadingTag.TagData, tagview_panels);
-                    break;
-                case "weap":
-                    Dictionary<long, Vehi.C> strings2 = Vehi.WeaponTag; // why // why are theses varaibles considered to be in the same scope
-                    do_the_tag_thing(strings2, loadingTag.TagData, tagview_panels);
-                    break;
-                case "proj":
-                    Dictionary<long, Vehi.C> strings3 = Vehi.ProjectileTag;
-                    do_the_tag_thing(strings3, loadingTag.TagData, tagview_panels);
-                    break;
-                case "hlmt":
-                    Dictionary<long, Vehi.C> strings4 = Vehi.HlmtTag;
-                    do_the_tag_thing(strings4, loadingTag.TagData, tagview_panels);
-                    break;
-                case "sddt":
-                    Dictionary<long, Vehi.C> strings5 = Vehi.SddtTag;
-                    do_the_tag_thing(strings5, loadingTag.TagData, tagview_panels);
-                    break;
-                case "levl":
-                    Dictionary<long, Vehi.C> strings6 = Vehi.LevlTag;
-                    do_the_tag_thing(strings6, loadingTag.TagData, tagview_panels);
-                    break;
-                case "effe":
-                    Dictionary<long, Vehi.C> strings7 = Vehi.effeTag;
-                    do_the_tag_thing(strings7, loadingTag.TagData, tagview_panels);
-                    break;
-                case "matg":
-                    Dictionary<long, Vehi.C> strings8 = Vehi.matgTag;
-                    do_the_tag_thing(strings8, loadingTag.TagData, tagview_panels);
-                    break;
-                case "pmcg":
-                    Dictionary<long, Vehi.C> strings9 = Vehi.pmcgTag;
-                    do_the_tag_thing(strings9, loadingTag.TagData, tagview_panels);
-                    break;
-                case "glpa":
-                    Dictionary<long, Vehi.C> strings10 = Vehi.glpaTag;
-                    do_the_tag_thing(strings10, loadingTag.TagData, tagview_panels);
-                    break;
-                case "foot":
-                    Dictionary<long, Vehi.C> strings11 = Vehi.footTag;
-                    do_the_tag_thing(strings11, loadingTag.TagData, tagview_panels);
-                    break;
-                case "ocgd":
-                    Dictionary<long, Vehi.C> strings12 = Vehi.ocgdTag;
-                    do_the_tag_thing(strings12, loadingTag.TagData, tagview_panels);
-                    break;
-                default:
-                    TextBox tb = new TextBox { Text = "This tag isn't mapped out ):" };
-                    tagview_panels.Children.Add(tb);
-                    break;
-            }
-
+			if (Vehi.Tags.ContainsKey(loadingTag.TagGroup))
+			{
+				Dictionary<long, Vehi.C> strings1 = Vehi.Tags[loadingTag.TagGroup];
+				do_the_tag_thing(strings1, loadingTag.TagData, tagview_panels);
+			} 
+			else
+			{
+				TextBox tb = new TextBox { Text = "This tag isn't mapped out ):" };
+				tagview_panels.Children.Add(tb);
+			}
         }
 
         // hmm we need a system that reads the pointer and adds it

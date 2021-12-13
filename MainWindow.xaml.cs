@@ -32,6 +32,8 @@ namespace Assembly69
         //
         // something since the inital release is causing windows defender to act up
         // my thoughts - either the AOB or .net 5.0? could just be random too tho
+		// - Callum : I believe its AOB, That kind of stuff always flags up the AV's.
+		//            They smell it like blood in the water.
         //
 
         public Mem M = new();
@@ -46,8 +48,10 @@ namespace Assembly69
             InitializeComponent();
             StateChanged += MainWindowStateChangeRaised;
 
+			var tags = Halo.TagObjects.Vehi.Tags;
+			System.IO.File.WriteAllText("halo_tags.json", JsonConvert.SerializeObject(tags, Formatting.Indented));
 
-            inhale_tagnames();
+			inhale_tagnames();
         }
 
         private long BaseAddress = -1;
@@ -80,7 +84,7 @@ namespace Assembly69
                 hook_text.Text = "Offset failed, scanning...";
 
                 long? aobScan = (await M.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
-                .First(); // "tag instances"
+					.First(); // "tag instances"
 
                 // Failed to find base tag address
                 if (aobScan == null || aobScan == 0)
@@ -91,8 +95,8 @@ namespace Assembly69
                 else
                 {
                     BaseAddress = aobScan.Value;
-                    hook_text.Text = "Process Hooked";
-                }
+					hook_text.Text = "Process Hooked: " + M.theProc.Id + " (AOB)";
+				}
             }
         }
 
@@ -195,7 +199,7 @@ namespace Assembly69
                 if (testAddress != 0)
                     currentGroup.TagExtraName = M.ReadString((testAddress).ToString("X"));
 
-                // Doing the UI here so we dont have to literally reconstruct the elements elsewhere // lol
+                // Doing the UI here so we dont have to literally reconstruct the elements elsewhere // lol // xd how'd that work out for you
                 //TreeViewItem sortheader = new TreeViewItem();
                 //sortheader.Header = ReverseString(current_group.tag_group_name.Substring(0, 4)) + " (" + current_group.tag_group_desc + ")";
                 //sortheader.ToolTip = current_group.tag_group_definitition;
@@ -543,10 +547,10 @@ namespace Assembly69
         #endregion
 
 
-        // search filter
+        // Search filter
         private void Searchbox_TextChanged(object? sender, TextChangedEventArgs? e)
         {
-            string[] supportedTags = Halo.TagObjects.Vehi.MappedTags;
+            string[] supportedTags = Halo.TagObjects.Vehi.Tags.Keys.ToArray();
             string search = Searchbox.Text;
             foreach (TreeViewItem? tv in TagsTree.Items)
             {
@@ -588,7 +592,7 @@ namespace Assembly69
 
         private void cbxFilterOnlyMapped_Changed(object sender, RoutedEventArgs e)
         {
-            string[] supportedTags = Halo.TagObjects.Vehi.MappedTags;
+            string[] supportedTags = Halo.TagObjects.Vehi.Tags.Keys.ToArray();
             string search = Searchbox.Text;
 
             // If we have a filter just call the search function
@@ -599,22 +603,20 @@ namespace Assembly69
             }
             if (TagsTree != null)
             { 
-
-            
-            foreach (TreeViewItem tv in TagsTree.Items)
-            {
-                // Ignore tags that are not implemented
-                if ((bool) cbxFilterOnlyMapped.IsChecked)
-                {
-                    if (supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower()))
-                        tv.Visibility = Visibility.Visible;
-                    else
-                        tv.Visibility = Visibility.Collapsed;
-                }
-                else
-                {
-                    tv.Visibility = Visibility.Visible;
-                }
+				foreach (TreeViewItem tv in TagsTree.Items)
+				{
+				    // Ignore tags that are not implemented
+				    if ((bool) cbxFilterOnlyMapped.IsChecked)
+				    {
+				        if (supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower()))
+				            tv.Visibility = Visibility.Visible;
+				        else
+				            tv.Visibility = Visibility.Collapsed;
+				    }
+				    else
+				    {
+				        tv.Visibility = Visibility.Visible;
+				    }
                 }
             }
         }
