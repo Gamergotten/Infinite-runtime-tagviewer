@@ -18,7 +18,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Assembly69.Interface.Controls
+namespace InfiniteRuntimeTagViewer.Interface.Controls
 {
 
     [Flags]

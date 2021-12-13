@@ -8,15 +8,15 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Diagnostics;
 
-using Assembly69.Interface.Controls;
-using Assembly69.Interface.Windows;
+using InfiniteRuntimeTagViewer.Interface.Controls;
+using InfiniteRuntimeTagViewer.Interface.Windows;
 
 using AvalonDock.Layout;
 
 using Memory;
 using Assembly69.Halo;
 
-namespace Assembly69
+namespace InfiniteRuntimeTagViewer
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

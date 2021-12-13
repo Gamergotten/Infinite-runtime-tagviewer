@@ -13,9 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using Assembly69.Halo;
+using InfiniteRuntimeTagViewer.Halo;
 
-namespace Assembly69.Interface.Controls
+namespace InfiniteRuntimeTagViewer.Interface.Controls
 {
     /// <summary>
     /// Interaction logic for TagsFlags.xaml

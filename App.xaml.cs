@@ -1,6 +1,7 @@
-﻿using Assembly69.Halo.TagObjects;
+﻿using InfiniteRuntimeTagViewer.Halo.TagObjects;
 
-namespace Assembly69
+namespace InfiniteRuntimeTagViewer
+
 {
     /// <summary>
     /// Interaction logic for App.xaml

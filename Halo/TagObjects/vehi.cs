@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace Assembly69.Halo.TagObjects
+namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 {
 	public class Vehi
 	{

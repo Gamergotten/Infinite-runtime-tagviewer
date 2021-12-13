@@ -3,8 +3,8 @@
                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                 xmlns:local="clr-namespace:Assembly69" xmlns:controls="clr-namespace:Assembly69.Interface.Controls" x:Name="window"
-                 x:Class="Assembly69.MainWindow"
+                 xmlns:local="clr-namespace:InfiniteRuntimeTagViewer" xmlns:controls="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls" x:Name="window"
+                 x:Class="InfiniteRuntimeTagViewer.MainWindow"
                  mc:Ignorable="d"
                  Background="#333333"
                  Title="Infinite Runtime Tagviewer" Height="650" Width="1100">

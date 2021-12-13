@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Assembly69
+namespace InfiniteRuntimeTagViewer
 {
     public static class Extension
     {

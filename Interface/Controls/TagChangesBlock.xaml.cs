@@ -1,4 +1,4 @@
-﻿namespace Assembly69.Interface.Controls
+﻿namespace InfiniteRuntimeTagViewer.Interface.Controls
 {
     /// <summary>
     /// Interaction logic for Changesblock.xaml
