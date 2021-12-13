@@ -21,7 +21,7 @@ csharp_indent_switch_labels = true
 #place else statements on a new line
 csharp_new_line_before_else = true
 #require braces to be on a new line for types, control_blocks, and methods (also known as "Allman" style)
-csharp_new_line_before_open_brace = types, control_blocks, methods
+csharp_new_line_before_open_brace =all
 
 #Formatting - organize using options
 
@@ -117,3 +117,6 @@ dotnet_style_qualification_for_field = false:suggestion
 dotnet_style_qualification_for_method = false:suggestion
 #prefer properties not to be prefaced with this. or Me. in Visual Basic
 dotnet_style_qualification_for_property = false:suggestion
+
+[*.{cs,vb}]
+indent_style=tab
