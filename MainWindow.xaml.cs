@@ -56,8 +56,8 @@ namespace Assembly69
         private async void BtnHook_Click(object sender, RoutedEventArgs e)
         {
             hook_text.Text = "Openning process...";
-            M.OpenProcess("HaloInfinite.exe");
-            //M.OpenProcess(Convert.ToInt32(haloPid.Text));
+            processSelector.hookProcess(M);
+            //M.OpenProcess("HaloInfinite.exe");
 
             if (M.pHandle == IntPtr.Zero)
             {
@@ -72,7 +72,7 @@ namespace Assembly69
 
             if (validtest == "tag instances")
             {
-                hook_text.Text = "Process Hooked";
+                hook_text.Text = "Process Hooked: " + M.theProc.Id;
             }
             else
             {

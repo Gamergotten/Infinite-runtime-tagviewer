@@ -521,13 +521,7 @@ namespace Assembly69.Halo.TagObjects
             { 0x7F4, new C { T = "TagRef" } },
             { 0x850, new C { T = "TagRef" } }, // WEAP
 
-            {
-                0x86C,
-                new FlagGroup {
-                    A = 4,
-                    STR = new Dictionary<int, string>() { { 20, "Third Person" } }
-                }
-            },
+            { 0x86C, new FlagGroup { A = 4, STR = new Dictionary<int, string>() { { 20, "Third Person" } } } },
             { 0x870, new FlagGroup { A = 4 } },
 
             // { 0x86C, new C { T = "Flags" } },
@@ -542,8 +536,6 @@ namespace Assembly69.Halo.TagObjects
 
             { 0x88C, new C { T = "TagRef" } },
             { 0x8A8, new C { T = "TagRef" } },
-
-
 
             { 0x924, new C { T = "TagRef" } },
             { 0x940, new C { T = "TagRef" } },
