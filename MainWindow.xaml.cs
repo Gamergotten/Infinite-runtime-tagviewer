@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Diagnostics;
 
 using Assembly69.Interface.Controls;
 using Assembly69.Interface.Windows;
@@ -49,14 +50,21 @@ namespace Assembly69
             inhale_tagnames();
         }
 
-        public long BaseAddress = -1;
-        public int TagCount = -1;
+        private long BaseAddress = -1;
+        private int TagCount = -1;
 
         // Hook to halo infinite
         private async void BtnHook_Click(object sender, RoutedEventArgs e)
         {
-            hook_text.Text = "Openning process...";
-            M.OpenProcess("HaloInfinite.exe");
+            hook_text.Text = "Openning process..."; 
+            Process[] process = Process.GetProcessesByName("HaloInfinite");
+            int i = process.Length;
+            while (i > 0)
+            {
+                string haloPid = process[i - 1].Id.ToString();
+                _ = M.OpenProcess(Convert.ToInt32(Convert.ToString(haloPid)));
+                i -= 1;
+            }
             //M.OpenProcess(Convert.ToInt32(haloPid.Text));
 
             if (M.pHandle == IntPtr.Zero)
