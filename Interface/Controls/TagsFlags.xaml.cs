@@ -20,16 +20,13 @@ namespace Assembly69.Interface.Controls
     /// </summary>
     public partial class TagsFlags : UserControl
     {
-        public TagsFlags()
-        {
-            InitializeComponent();
-        }
+        public TagsFlags() => InitializeComponent();
 
 
         public long address;
-        public MainWindow _mainwindow;
+        public MainWindow? _mainwindow;
 
-        public void calculate_and_report()
+        public void Calculate_and_report()
         {
             if (_mainwindow != null)
             {
@@ -49,7 +46,7 @@ namespace Assembly69.Interface.Controls
 
         private void flag1_Checked(object sender, RoutedEventArgs e)
         {
-            calculate_and_report();
+            Calculate_and_report();
         }
     }
 }
