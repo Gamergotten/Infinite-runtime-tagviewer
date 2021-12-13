@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Interop;
 using System.Windows.Media;
-using System.Diagnostics;
 using InfiniteRuntimeTagViewer.Halo.TagObjects;
 using InfiniteRuntimeTagViewer.Interface.Windows;
 using AvalonDock.Controls;
@@ -105,9 +102,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 				return;
 			}
 
-			if (Vehi.Tags.ContainsKey(loadingTag.TagGroup))
+			if (TagLayouts.Tags.ContainsKey(loadingTag.TagGroup))
 			{
-				Dictionary<long, Vehi.C> tags = Vehi.Tags[loadingTag.TagGroup];
+				Dictionary<long, TagLayouts.C> tags = TagLayouts.Tags[loadingTag.TagGroup];
 				readTagsAndCreateControls(loadingTag, 0, tags, loadingTag.TagData, tagview_panels);
 			}
 			else
@@ -119,7 +116,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 		// hmm we need a system that reads the pointer and adds it
 		// also, we need to beable to read multiple tag things but i may put that on hold
-		public void recall_blockloop(TagStruct tagStruct, long tagOffset, KeyValuePair<long, Vehi.C> entry, long loadingTag, StackPanel parentpanel)
+		public void recall_blockloop(TagStruct tagStruct, long tagOffset, KeyValuePair<long, TagLayouts.C> entry, long loadingTag, StackPanel parentpanel)
 		{
 			parentpanel.Children.Clear();
 			if (entry.Value.B != null)
@@ -352,10 +349,10 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 		}
 
 		// had to adapt this to bealbe to read tagblocks and forgot to allow it to iterate through them *sigh* good enough for now
-		private void readTagsAndCreateControls(TagStruct tagStruct, long startingTagOffset, Dictionary<long, Vehi.C> tagDefinitions, long address, StackPanel parentpanel)
+		private void readTagsAndCreateControls(TagStruct tagStruct, long startingTagOffset, Dictionary<long, TagLayouts.C> tagDefinitions, long address, StackPanel parentpanel)
 		{
-			KeyValuePair<long, Vehi.C> prevEntry;
-			foreach (KeyValuePair<long, Vehi.C> entry in tagDefinitions)
+			KeyValuePair<long, TagLayouts.C> prevEntry;
+			foreach (KeyValuePair<long, TagLayouts.C> entry in tagDefinitions)
 			{
 				entry.Value.MemoryAddress = address + entry.Key;
 				entry.Value.AbsoluteTagOffset = startingTagOffset + entry.Key;
@@ -622,10 +619,10 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 					case "FlagGroup":
 						// make sure we got a flaggroup def
-						if (!(entry.Value is Vehi.FlagGroup))
+						if (!(entry.Value is TagLayouts.FlagGroup))
 							continue;
 
-						var fg = entry.Value as Vehi.FlagGroup;
+						var fg = entry.Value as TagLayouts.FlagGroup;
 						TagFlagsGroup? tfg = new() { HorizontalAlignment = HorizontalAlignment.Left };
 						tfg.ValueDefinition = new TagEditorDefinition()
 						{

@@ -21,7 +21,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			TagStruct = tagStruct;
 		}
 
-		public KeyValuePair<long, Vehi.C> Children { get; set; }
+		public KeyValuePair<long, TagLayouts.C> Children { get; set; }
 		public long BlockAddress { get; set; }
 		public long BlockOffset { get; set; }
 		public TagStruct TagStruct { get; set; }

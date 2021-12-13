@@ -6,8 +6,6 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Diagnostics;
-
 using InfiniteRuntimeTagViewer.Interface.Controls;
 using InfiniteRuntimeTagViewer.Interface.Windows;
 
@@ -555,7 +553,7 @@ namespace InfiniteRuntimeTagViewer
         // Search filter
         private void Searchbox_TextChanged(object? sender, TextChangedEventArgs? e)
         {
-            string[] supportedTags = Halo.TagObjects.Vehi.Tags.Keys.ToArray();
+            string[] supportedTags = Halo.TagObjects.TagLayouts.Tags.Keys.ToArray();
             string search = Searchbox.Text;
             foreach (TreeViewItem? tv in TagsTree.Items)
             {
@@ -597,7 +595,7 @@ namespace InfiniteRuntimeTagViewer
 
         private void cbxFilterOnlyMapped_Changed(object sender, RoutedEventArgs e)
         {
-            string[] supportedTags = Halo.TagObjects.Vehi.Tags.Keys.ToArray();
+            string[] supportedTags = Halo.TagObjects.TagLayouts.Tags.Keys.ToArray();
             string search = Searchbox.Text;
 
             // If we have a filter just call the search function

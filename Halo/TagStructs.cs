@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 
 using InfiniteRuntimeTagViewer.Halo.TagObjects;
@@ -57,7 +53,7 @@ namespace InfiniteRuntimeTagViewer.Halo
 		public string MemoryType;
 		public long? OffsetOverride = null;
 
-		public Vehi.C TagDef;
+		public TagLayouts.C TagDef;
 		public TagStruct TagStruct;
 
 		public string DatNum;
