@@ -25,7 +25,7 @@ namespace Assembly69
         //
         // tagref dropdown actually gives the wrong tags, may be because some objects have the same datnums
         //
-        // loading levl tag on campaign takes FOREVER + 3gigs RAM
+        // loading levl tag on campaign takes FOREVER + 3gigs RAM // fixed
         //
         // i think our "readstring" is capped to a specific amount of characters
         //

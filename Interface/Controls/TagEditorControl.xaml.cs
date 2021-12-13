@@ -44,6 +44,36 @@ namespace Assembly69.Interface.Controls
 
             tagview_panels.Children.Clear();
 
+            // OK, now we do a proper check to see if this tag is loaded, finally looked into this
+
+            // pointer check
+            TagValueBlock p_block = new() { HorizontalAlignment = HorizontalAlignment.Left };
+            p_block.value_type.Text = "Pointer check";
+            p_block.value.Text = _m.ReadLong((loadingTag.TagData).ToString("X")).ToString("X");
+            tagview_panels.Children.Add(p_block);
+
+            // ID check
+            TagValueBlock id_block = new() { HorizontalAlignment = HorizontalAlignment.Left };
+            id_block.value_type.Text = "ID check";
+            string checked_ID = BitConverter.ToString(_m.ReadBytes((loadingTag.TagData + 8).ToString("X"), 4)).Replace("-", string.Empty);
+            id_block.value.Text = checked_ID;
+            tagview_panels.Children.Add(id_block);
+
+            // Datnum check
+            TagValueBlock dat_block = new() { HorizontalAlignment = HorizontalAlignment.Left };
+            dat_block.value_type.Text = "Datnum check";
+            string checked_datnum = BitConverter.ToString(_m.ReadBytes((loadingTag.TagData + 12).ToString("X"), 4)).Replace("-", string.Empty);
+            dat_block.value.Text = checked_datnum;
+            tagview_panels.Children.Add(dat_block);
+
+            if (checked_ID != loadingTag.ObjectId || checked_datnum != loadingTag.Datnum)
+            {
+                TextBox tb = new TextBox {Text = "Datnum/ID mismatch; Tag appears to be unloaded, meaning it may not be active on the map, else try reloading the tags" };
+                tagview_panels.Children.Add(tb);
+
+                return;
+            }
+
             // there we go, finally fixed that
             switch (loadingTag.TagGroup)
             {
@@ -90,6 +120,14 @@ namespace Assembly69.Interface.Controls
                 case "foot":
                     Dictionary<long, Vehi.C> strings11 = Vehi.footTag;
                     do_the_tag_thing(strings11, loadingTag.TagData, tagview_panels);
+                    break;
+                case "ocgd":
+                    Dictionary<long, Vehi.C> strings12 = Vehi.ocgdTag;
+                    do_the_tag_thing(strings12, loadingTag.TagData, tagview_panels);
+                    break;
+                default:
+                    TextBox tb = new TextBox { Text = "This tag isn't mapped out ):" };
+                    tagview_panels.Children.Add(tb);
                     break;
             }
 
@@ -405,16 +443,12 @@ namespace Assembly69.Interface.Controls
                         tb1.tagblock_address.Text = "0x" + newAddress.ToString("X");
 
                         long stringAddress = _m.ReadLong((address + entry.Key + 8).ToString("X"));
-                        if (stringAddress is < 0x7E7515B65B3B4A00 and > 0) // have yet to run into an unloaded tag after the fact, so haven't tested this
-                        {
-                            tb1.tagblock_title.Text = _m.ReadString((address + entry.Key + 8).ToString("X") + ",0,0"); // this is the only thing that causes errors with unloaded tags
-                        }
-                        else
-                        {
-                            tb1.tagblock_title.Text = "Error: tag Unloaded";
-                            parentpanel.Children.Add(tb1);
-                            break;
-                        }
+
+                        tb1.tagblock_title.Text = _m.ReadString((address + entry.Key + 8).ToString("X") + ",0,0", "", 100); // this is the only thing that causes errors with unloaded tags
+                       
+                        //tb1.tagblock_title.Text = "Error: tag Unloaded";
+                        //parentpanel.Children.Add(tb1);
+
 
                         string childrenCount = _m.ReadInt((address + entry.Key + 16).ToString("X")).ToString();
                         tb1.tagblock_count.Text = childrenCount;
@@ -432,17 +466,25 @@ namespace Assembly69.Interface.Controls
                         tb1.BlockAddress = newAddress;
 
                         int childs = int.Parse(childrenCount);
-                        for (int y = 0; y < childs; y++)
+                        if (entry.Value.B != null) // this should optimize the hell outta opening tags // like we were literally instaniating 1million items for the levl tag
                         {
-                            tb1.indexbox.Items.Add(new ListViewItem { Content = y }); // this should be a combobox item?
-                        }
-                        if (childs > 0)
-                        {
-                            tb1.indexbox.SelectedIndex = 0;
+                            for (int y = 0; y < childs; y++)
+                            {
+                                tb1.indexbox.Items.Add(new ComboBoxItem { Content = y }); // this should be a combobox item?
+                            }
+                            if (childs > 0)
+                            {
+                                tb1.indexbox.SelectedIndex = 0;
+                            }
+                            else
+                            {
+                                tb1.indexbox.IsEnabled = false;
+                            }
                         }
                         else
                         {
                             tb1.indexbox.IsEnabled = false;
+
                         }
 
                         //recall_blockloop(entry, new_address, tb1.dockpanel);
@@ -451,7 +493,7 @@ namespace Assembly69.Interface.Controls
                     case "String":
                         TagValueBlock vb4 = new() { HorizontalAlignment = HorizontalAlignment.Left };
                         vb4.value_type.Text = "String";
-                        vb4.value.Text = _m.ReadString((address + entry.Key).ToString("X")).ToString();
+                        vb4.value.Text = _m.ReadString((address + entry.Key).ToString("X"), "", 100).ToString();
                         parentpanel.Children.Add(vb4);
 
                         vb4.value.Tag = address + entry.Key + ":String";
