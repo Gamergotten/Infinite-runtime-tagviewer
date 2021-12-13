@@ -204,7 +204,7 @@
 
                             <CheckBox Grid.Column="2" VerticalAlignment="Center" Margin="5,0,0,0"
                                       x:Name="cbxFilterOnlyMapped"
-                                      Checked="cbxFilterOnlyMapped_Changed" Unchecked="cbxFilterOnlyMapped_Changed">
+                                      Checked="cbxFilterOnlyMapped_Changed" Unchecked="cbxFilterOnlyMapped_Changed" IsChecked="True">
                                 <CheckBox.ToolTip>
                                     <TextBlock Foreground="Black">Only show mapped tags</TextBlock>
                                 </CheckBox.ToolTip>

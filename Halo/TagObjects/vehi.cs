@@ -12,8 +12,8 @@ namespace Assembly69.Halo.TagObjects
 
         public class C
         {
-            public string T { get; set; }
-            public Dictionary<long, C> B { get; set; }
+            public string? T { get; set; }
+            public Dictionary<long, C>? B { get; set; }
 
             /// <summary>
             /// Length of the tagblock

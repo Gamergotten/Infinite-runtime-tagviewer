@@ -20,25 +20,25 @@ namespace Assembly69.Interface.Controls
     /// </summary>
     public partial class TagFlagsGroup : UserControl
     {
-        public MainWindow _mainwindow;
-        public Memory.Mem M;
+        public MainWindow? _mainwindow;
+        public Memory.Mem? M;
         public long startAddress;
-        public int amountOfBytes;
-        public int maxBit;
+        public int? amountOfBytes;
+        public int? maxBit;
 
         public TagFlagsGroup()
         {
             InitializeComponent();
         }
 
-        public void generateBits(long startAddress, int amountOfBytes, int maxBit, Dictionary<int, string> descriptions = null)
+        public void generateBits(long startAddress, int amountOfBytes, int maxBit, Dictionary<int, string>? descriptions = null)
         {
             this.startAddress = startAddress; 
             this.amountOfBytes = amountOfBytes; 
             this.maxBit = maxBit;  
 
             if (maxBit == 0)
-                this.maxBit = maxBit = amountOfBytes * 8;
+                maxBit = maxBit = amountOfBytes * 8;
 
             spBitCollection.Children.Clear();
 
@@ -60,7 +60,7 @@ namespace Assembly69.Interface.Controls
                     if (bitsLeft < 0)
                         continue;
 
-                    CheckBox checkbox = null;
+                    CheckBox? checkbox = null;
 
                     int _byte = @byte, _bit = bit;
 
@@ -85,7 +85,7 @@ namespace Assembly69.Interface.Controls
                 }
             }
 
-            int x = 0;
+            //int x = 0;
         }
 
         private void Checkbox_BitIsChanged(int byteNo, int bit)
@@ -99,8 +99,8 @@ namespace Assembly69.Interface.Controls
                 if (spBitCollection.Children.Count < index)
                     continue;
 
-                var cbx = (CheckBox) spBitCollection.Children[index];
-                output.UpdateBit(x, (bool) cbx.IsChecked);
+                CheckBox? cbx = (CheckBox) spBitCollection.Children[index];
+                output.UpdateBit(x, value: (bool) cbx.IsChecked);
             }
 
             _mainwindow.Addpokechange(targetAddress, "Flags", output.ToString());

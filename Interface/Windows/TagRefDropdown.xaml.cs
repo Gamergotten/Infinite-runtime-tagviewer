@@ -15,7 +15,7 @@ namespace Assembly69.Interface.Windows
             InitializeComponent();
         }
 
-        public MainWindow MainWindow;
+        public MainWindow? MainWindow;
 
         private void Window_Deactivated(object sender, EventArgs e)
         {
