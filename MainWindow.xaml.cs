@@ -30,7 +30,7 @@ namespace InfiniteRuntimeTagViewer
         //
         // loading levl tag on campaign takes FOREVER + 3gigs RAM // fixed
         //
-        // i think our "readstring" is capped to a specific amount of characters
+        // i think our "readstring" is capped to a specific amount of characters // fixed
         //
         // something since the inital release is causing windows defender to act up
         // my thoughts - either the AOB or .net 5.0? could just be random too tho

@@ -617,6 +617,11 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x9D4, new C { T = "TagRef" } },
 
 					{ 0x9F0, new C { T = "Tagblock" } },
+
+					{ 0xA08, new C{ T="Float"}},
+					{ 0xA14, new C{ T="Float"}},
+					{ 0xA44, new C{ T="Float"}},
+
 					{ 0xA80, new C { T = "Tagblock" } },
 					{ 0xA94, new C { T = "Tagblock" } },
 
