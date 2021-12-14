@@ -26,7 +26,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 		public LayoutDocument? LayoutDocument { get; internal set; }
 		public Button? TheLastTagrefButtonWePressed { get; set; } // since we did it for the window why not also do it for the button
 
-		private List<Action> disposeActions = new List<Action>();
 		private bool disposedValue;
 
 		public TagEditorControl(MainWindow mw)
@@ -44,9 +43,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 				if (disposing)
 				{
 					// TODO: dispose managed state (managed objects)
-					// TODO: call the action list
-					for (int x = 0; x < disposeActions.Count; x++)
-						disposeActions[x].Invoke();
 				}
 
 				// TODO: free unmanaged resources (unmanaged objects) and override finalizer
@@ -297,7 +293,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 			trd.tag_select_panel.Items.Add(tvi);
 			tvi.Selected += update_tagref;
-			disposeActions.Add(() => tvi.Selected -= update_tagref);
 
 			foreach (TagStruct tg in _mainWindow.TagsList)
 			{
@@ -316,7 +311,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 					trd.tag_select_panel.Items.Add(tvi2);
 					tvi2.Selected += update_tagref;
-					disposeActions.Add(() => tvi2.Selected -= update_tagref);
 				}
 			}
 
@@ -375,7 +369,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						};
 
 						vb1.value.TextChanged += value_TextChanged;
-						disposeActions.Add(() => vb1.value.TextChanged -= value_TextChanged);
 						break;
 					case "2Byte":
 						TagValueBlock? vb6 = new() { HorizontalAlignment = HorizontalAlignment.Left };
@@ -392,7 +385,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						};
 
 						vb6.value.TextChanged += value_TextChanged;
-						disposeActions.Add(() => vb6.value.TextChanged -= value_TextChanged);
 						break;
 
 					case "Float":
@@ -410,7 +402,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						};
 
 						vb2.value.TextChanged += value_TextChanged;
-						disposeActions.Add(() => vb2.value.TextChanged -= value_TextChanged);
 
 						break;
 
@@ -448,7 +439,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 								TagGroup = tagGroup
 							};
 							tfb1.taggroup.SelectionChanged += taggroup_SelectionChanged;
-							disposeActions.Add(() => tfb1.taggroup.SelectionChanged -= taggroup_SelectionChanged);
 
 							//tfb1.tag_button.Tag = (address + entry.Key + 24) + ":" + testGroup;
 							tfb1.tag_button.Tag = new TED_TagRefGroup()
@@ -464,14 +454,12 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 								TagGroup = tagGroup
 							};
 							tfb1.tag_button.Click += TagRefButton;
-							disposeActions.Add(() => tfb1.tag_button.Click -= TagRefButton);
 
 							int id = _mainWindow.get_tagindex_by_datnum(datNum);
 
 							// tag
 							tfb1.goto_button.Tag = id; // need to get the index of the tag not the ID
 							tfb1.goto_button.Click += Gotobutton;
-							disposeActions.Add(() => tfb1.goto_button.Click -= Gotobutton);
 						}
 						catch
 						{
@@ -494,7 +482,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						};
 
 						vb3.value.TextChanged += value_TextChanged;
-						disposeActions.Add(() => vb3.value.TextChanged -= value_TextChanged);
 
 						break;
 
@@ -527,7 +514,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							TagStruct = tagStruct
 						};
 						tb1.tagblock_address.TextChanged += value_TextChanged;
-						disposeActions.Add(() => tb1.tagblock_address.TextChanged -= value_TextChanged);
 
 						//tb1.tagblock_count.Tag = (address + entry.Key + 16) + ":4Byte";
 						tb1.tagblock_count.Tag = new TagEditorDefinition()
@@ -538,7 +524,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							TagStruct = tagStruct
 						};
 						tb1.tagblock_count.TextChanged += value_TextChanged;
-						disposeActions.Add(() => tb1.tagblock_count.TextChanged -= value_TextChanged);
 
 						//tb1.indexbox.SelectionChanged += new SelectionChangedEventHandler(indexbox_SelectionChanged);
 
@@ -585,7 +570,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							TagStruct = tagStruct
 						};
 						vb4.value.TextChanged += value_TextChanged;
-						disposeActions.Add(() => vb4.value.TextChanged -= value_TextChanged);
 						break;
 
 					case "Flags":
