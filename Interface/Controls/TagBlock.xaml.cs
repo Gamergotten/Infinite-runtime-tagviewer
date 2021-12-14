@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Controls;
+using System.Windows.Media.Animation;
 
 using InfiniteRuntimeTagViewer.Halo;
 using InfiniteRuntimeTagViewer.Halo.TagObjects;
@@ -31,5 +33,19 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
             EditorControl.recall_blockloop(TagStruct, BlockOffset + (indexbox.SelectedIndex * Children.Value.S), 
 				Children, BlockAddress + (indexbox.SelectedIndex * Children.Value.S), dockpanel);
         }
-    }
+
+		Random rand = new Random();
+		private void GroupBox_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+		{
+			Storyboard sb = (Storyboard) TryFindResource("AnimateRotationStoryBoard");
+
+			if (rand == null)
+				rand = new Random();
+
+			if (rand.Next(1, 30) == 1)
+			{
+				sb.Begin();
+			}
+		}
+	}
 }

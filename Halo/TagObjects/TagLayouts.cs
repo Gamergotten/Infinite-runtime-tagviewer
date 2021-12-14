@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
-
+using System.Xml.Linq;
+using System.Xml.Schema;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 {
 	public class TagLayouts
 	{
-		public class C
+		public class C 
 		{
 			public string? T { get; set; } // T = type
 			public Dictionary<long, C>? B { get; set; } = null; // B = blocks? i forgot what B stands for
@@ -271,14 +274,60 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 							T = "Tagblock",
 							B = new Dictionary<long, C>  // unit_seat
 							{
-								{ 0x0, new C{ T="Flags"}},
-								{ 0x1, new C{ T="Flags"}},
-								{ 0x2, new C{ T="Flags"}},
-								{ 0x3, new C{ T="Flags"}},
-								{ 0x4, new C{ T="Flags"}},
-								{ 0x5, new C{ T="Flags"}},
-								{ 0x6, new C{ T="Flags"}},
-								{ 0x7, new C{ T="Flags"}},
+								{ 0x0, new FlagGroup {
+									A = 4,
+									STR = new Dictionary<int, string>() {
+										{ 0,  "invisible"  },
+										{ 1,  "locked"  },
+										{ 2,  "driver"  },
+										{ 3,  "gunner"  },
+										{ 4,  "third person camera"  },
+										{ 5,  "allows weapons"  },
+										{ 6,  "third person on enter"  },
+										{ 7,  "first person camera slaved to gun."  },
+										{ 8,  "not valid without driver"  },
+										{ 9,  "allow AI noncombatants"  },
+										{ 10, "boarding seat"  },
+										{ 11, "ai firing disabled by max acceleration"  },
+										{ 12, "boarding enters seat"  },
+										{ 13, "boarding need any passenger"  },
+										{ 14, "invalid for player"  },
+										{ 15, "invalid for non-player"  },
+										{ 16, "invalid for hero"  },
+										{ 17, "gunner (player only)"  },
+										{ 18, "invisible under major damage"  },
+										{ 19, "melee instant killable"  },
+										{ 20, "leader preference"  },
+										{ 21, "allows exit and detach"  },
+										{ 22, "blocks headshots"  },
+										{ 23, "exits to ground"  },
+										{ 24, "forward from attachment"  },
+										{ 25, "disallow AI shooting"  },
+										{ 26, "prevents weapon stowing"  },
+										{ 27, "takes top level aoe damage"  },
+										{ 28, "disallow exit"  },
+										{ 29, "local aiming"  },
+										{ 30, "pelvis relative attachment"  },
+										{ 31, "apply velocity on death exit"  }
+									}
+								} },
+
+								{ 0x3, new FlagGroup {
+									A = 4,
+									STR = new Dictionary<int, string>() {
+										{ 0, "skip obstacle check"  },
+										{ 1, "search parent for entry marker"  },
+										{ 2, "gunner release aim on exit"  },
+										{ 3, "fully open before allowing exit"  },
+										{ 4, "finish melee before allowing exit"  },
+										{ 5, "kill parent if unit in seat dies"  },
+										{ 6, "co-pilot"  },
+										{ 7, "ejectable seat"  },
+										{ 8, "kill on ejection"  },
+										{ 9, "use head marker for navpoint"  },
+										{ 10, "allows equipment and grenade switching"  },
+									} 
+								} },
 
 								{ 0x14, new C{ T="String"}},
 								{ 0x58, new C{ T="Tagblock"}},

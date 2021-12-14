@@ -13,6 +13,9 @@ using AvalonDock.Layout;
 
 using Memory;
 using InfiniteRuntimeTagViewer.Halo;
+using System.Xml.Serialization;
+using InfiniteRuntimeTagViewer.Halo.TagObjects;
+using System.Windows.Media;
 
 namespace InfiniteRuntimeTagViewer
 {
@@ -189,8 +192,8 @@ namespace InfiniteRuntimeTagViewer
 
                 TreeViewItem sortheader = new() {
                     Header = displayGroup.TagGroupName + " (" + displayGroup.TagGroupDesc + ")",
-                    ToolTip = displayGroup.TagGroupDefinitition
-                };
+                    ToolTip = new TextBlock { Foreground = Brushes.Black, Text = displayGroup.TagGroupDefinitition }
+				};
 
                 displayGroup.TagCategory = sortheader;
 
@@ -199,14 +202,17 @@ namespace InfiniteRuntimeTagViewer
                 TagGroups[TagGroups.ElementAt(i).Key] = displayGroup;
             }
 
-            for (int i = 0; i < TagsList.Count; i++)
+			var sortedList = TagsList.OrderBy(x => x.TagFullName).ToList();
+
+            for (int i = 0; i < sortedList.Count; i++)
             {
                 TreeViewItem t = new();
-                TagStruct tag = TagsList[i];
+                TagStruct tag = sortedList[i];
                 TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct dictTagGroup);
 
                 t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
-                t.Tag = i;
+                t.Tag = TagsList.FindIndex(x => x.ObjectId == tag.ObjectId);
+
                 //t.MouseLeftButtonDown += new MouseButtonEventHandler(Select_Tag_click);
                 t.Selected += Select_Tag_click;
 

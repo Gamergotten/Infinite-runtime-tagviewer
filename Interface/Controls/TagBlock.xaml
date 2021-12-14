@@ -4,26 +4,23 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d">
-    <GroupBox BorderThickness="2" Background="#3F3F46" Margin="2,5,2,1">
-        <GroupBox.RenderTransform>
-            <RotateTransform x:Name="AnimatedRotateTransform" Angle="0" />
-        </GroupBox.RenderTransform>
-        <GroupBox.Triggers>
-            <EventTrigger RoutedEvent="MouseDown">
-                <BeginStoryboard>
-                    <Storyboard>
-                        <DoubleAnimation Storyboard.TargetName="AnimatedRotateTransform" 
-                                            Storyboard.TargetProperty="Angle" 
-                                            RepeatBehavior="1x"
-                                            By="10"        
-                                            To="360" 
-                                            Duration="0:0:0.5"
-                                            FillBehavior="Stop" />
-                    </Storyboard>
-                </BeginStoryboard>
-            </EventTrigger>
-        </GroupBox.Triggers>
-        
+    <UserControl.Resources>
+        <Storyboard x:Key="AnimateRotationStoryBoard" x:Name="AnimateRotationStoryBoard">
+            <DoubleAnimation 
+                Storyboard.TargetName="AnimatedRotateTransform" 
+                Storyboard.TargetProperty="Angle" 
+                RepeatBehavior="1x"
+                By="10"        
+                To="360" 
+                Duration="0:0:0.5"
+                FillBehavior="Stop" />
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.RenderTransform>
+        <RotateTransform x:Name="AnimatedRotateTransform" Angle="0" />
+    </UserControl.RenderTransform>
+
+    <GroupBox BorderThickness="2" Background="#3F3F46" Margin="2,5,2,1" MouseDown="GroupBox_MouseDown">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition MinWidth="150" Width="1*" />
