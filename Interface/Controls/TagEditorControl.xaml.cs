@@ -57,9 +57,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			int debugMeme = 0;
 		}
 
-		public void Inhale_tag(int tagIndex) // as in a literal index to the tag
+		public void Inhale_tag(string tagID) // as in a literal index to the tag // get fucked, we're a dictionary now
 		{
-			TagStruct loadingTag = _mainWindow.TagsList[tagIndex];
+			TagStruct loadingTag = _mainWindow.TagsList[tagID];
 			Tagname_text.Text = _mainWindow.convert_ID_to_tag_name(loadingTag.ObjectId);
 			tagID_text.Text = "ID: " + loadingTag.ObjectId;
 			tagdatnum_text.Text = "Datnum: " + loadingTag.Datnum;
@@ -160,12 +160,11 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 		{
 			Button? b = sender as Button;
 			string? sTagId = b.Tag.ToString();
-			int iTagId = int.Parse(sTagId);
+			//int iTagId = int.Parse(sTagId);
 
-			if (iTagId != -1)
-			{
-				_mainWindow.CreateTagEditorTabByTagIndex(iTagId);
-			}
+			//if (sTagId != -1) // i forsee this becoming a problematic fix
+				_mainWindow.CreateTagEditorTabByTagIndex(sTagId);
+
 		}
 
 		private DependencyObject GetTopLevelControl(DependencyObject control)
@@ -294,18 +293,18 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			trd.tag_select_panel.Items.Add(tvi);
 			tvi.Selected += update_tagref;
 
-			foreach (TagStruct tg in _mainWindow.TagsList)
+			foreach (KeyValuePair<string, TagStruct> tg in _mainWindow.TagsList)
 			{
-				if (tg.TagGroup == ted.TagGroup)
+				if (tg.Value.TagGroup == ted.TagGroup)
 				{
 					TreeViewItem? tvi2 = new()
 					{
-						Header = _mainWindow.convert_ID_to_tag_name(tg.ObjectId),
+						Header = _mainWindow.convert_ID_to_tag_name(tg.Key),
 						//Tag = s[0] + ":" + tg.Datnum
 						Tag = new TED_TagRefGroup(ted)
 						{
 							MemoryType = "TagrefTag",
-							DatNum = tg.Datnum
+							DatNum = tg.Value.Datnum
 						}
 					};
 
@@ -334,7 +333,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			Button? x = td.Children[2] as Button;
 			//X.Tag = ID;
 
-			x.Tag = _mainWindow.get_tagindex_by_datnum(ted.DatNum);
+			x.Tag = _mainWindow.get_tagID_by_datnum(ted.DatNum); // need to do tagID rather
 
 			if (trd != null)
 			{
@@ -455,10 +454,10 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							};
 							tfb1.tag_button.Click += TagRefButton;
 
-							int id = _mainWindow.get_tagindex_by_datnum(datNum);
+							string id = _mainWindow.get_tagID_by_datnum(datNum);
 
 							// tag
-							tfb1.goto_button.Tag = id; // need to get the index of the tag not the ID
+							tfb1.goto_button.Tag = id; // 
 							tfb1.goto_button.Click += Gotobutton;
 						}
 						catch

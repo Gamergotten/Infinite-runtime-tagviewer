@@ -28,7 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="files\" />
     <Folder Include="Themes\" />
     <Folder Include="Utility\" />
   </ItemGroup>

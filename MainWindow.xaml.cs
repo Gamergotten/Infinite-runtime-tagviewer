@@ -95,7 +95,7 @@ namespace InfiniteRuntimeTagViewer
             }
         }
 
-        public List<TagStruct> TagsList { get; set; } = new List<TagStruct>();
+        public SortedDictionary<string, TagStruct> TagsList { get; set; } = new (); // get real
         public SortedDictionary<string, GroupTagStruct> TagGroups { get; set; } = new();
 
 		
@@ -124,7 +124,7 @@ namespace InfiniteRuntimeTagViewer
             // 0x10 Tag_data Pointer 8bytes
             // 0x18 Tag_type_desc Pointer 8bytes
 
-            TagsList = new List<TagStruct>();
+            TagsList = new SortedDictionary<string, TagStruct>();
             for (int tagIndex = 0; tagIndex < TagCount; tagIndex++)
             {
                 TagStruct currentTag = new();
@@ -143,7 +143,8 @@ namespace InfiniteRuntimeTagViewer
 				currentTag.TagFile = currentTag.TagFullName.Split('\\').Last().Trim();
 
 				// do the tag definitition
-				TagsList.Add(currentTag);
+				if (!TagsList.ContainsKey(currentTag.ObjectId))
+				TagsList.Add(currentTag.ObjectId, currentTag); // WHAT DO YOU MEAN ITS ALREADY ADDED. HOW IS THERE A DUPLICATE TAG
             }
 
             Loadtags();
@@ -202,23 +203,26 @@ namespace InfiniteRuntimeTagViewer
                 TagGroups[TagGroups.ElementAt(i).Key] = displayGroup;
             }
 
-			var sortedList = TagsList.OrderBy(x => x.TagFullName).ToList();
+			// var sortedList = TagsList.OrderBy(x => x.TagFullName).ToList();
 
-            for (int i = 0; i < sortedList.Count; i++)
-            {
-                TreeViewItem t = new();
-                TagStruct tag = sortedList[i];
-                TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct dictTagGroup);
+			foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList.OrderBy(key => key.Value.TagFullName))
+			{
+				TreeViewItem t = new();
+				TagStruct tag = curr_tag.Value;
+				TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct dictTagGroup);
 
-                t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
-                t.Tag = TagsList.FindIndex(x => x.ObjectId == tag.ObjectId);
+				t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
 
-                //t.MouseLeftButtonDown += new MouseButtonEventHandler(Select_Tag_click);
-                t.Selected += Select_Tag_click;
+				t.Tag = curr_tag.Key; // our index to our tag
 
-                dictTagGroup.TagCategory.Items.Add(t);
-            }
-        }
+				//t.Tag = TagsList.FindIndex(x => x.ObjectId == tag.ObjectId); // yucky, this thing causes way too much latency // remember we do this up to 70000 times
+
+				//t.MouseLeftButtonDown += new MouseButtonEventHandler(Select_Tag_click);
+				t.Selected += Select_Tag_click;
+
+				dictTagGroup.TagCategory.Items.Add(t);
+			}
+		}
 
         public Dictionary<string, string> InhaledTagnames = new();
 
@@ -248,9 +252,9 @@ namespace InfiniteRuntimeTagViewer
             return new string(myArr);
         }
 
-        public void CreateTagEditorTabByTagIndex(int tagIndex)
+        public void CreateTagEditorTabByTagIndex(string tagID)
         {
-            var tag = TagsList[tagIndex];
+            var tag = TagsList[tagID]; 
             var tagFull = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
             string tagName = tagFull.Split('\\').Last();
 
@@ -293,7 +297,7 @@ namespace InfiniteRuntimeTagViewer
 
             // Create the tag editor.
             var tagEditor = new TagEditorControl(this);
-            tagEditor.Inhale_tag(tagIndex);
+            tagEditor.Inhale_tag(tagID);
 
             // Create the layout document for docking.
             LayoutDocument doc = tagEditor.LayoutDocument = new LayoutDocument();
@@ -309,7 +313,7 @@ namespace InfiniteRuntimeTagViewer
         private void Select_Tag_click(object sender, RoutedEventArgs e)
         {
             TreeViewItem? item = sender as TreeViewItem;
-            CreateTagEditorTabByTagIndex(int.Parse(item.Tag.ToString()));
+            CreateTagEditorTabByTagIndex(item.Tag.ToString());
         }
 
         // list of changes to ammend to the memory when we phit the poke button
@@ -387,31 +391,30 @@ namespace InfiniteRuntimeTagViewer
         // so we find what else has the same datnum and then run the other method to get name based off of ID
         public string get_tagid_by_datnum(string datnum)
         {
-            foreach (TagStruct t in TagsList)
+            foreach (KeyValuePair<string, TagStruct> t in TagsList)
             {
-                if (t.Datnum == datnum)
-                    return t.ObjectId;
+                if (t.Value.Datnum == datnum)
+                    return t.Value.ObjectId;
             }
 
             return "Tag not present(" + datnum + ")";
         }
 
-        public int get_tagindex_by_datnum(string datnum)
-        {
-            //tag_struct t in Tags_List
-            for (int i = 0; i < TagsList.Count; i++)
-            {
-                TagStruct t = TagsList[i];
-                if (t.Datnum == datnum)
-                    return i;
-            }
+		public string get_tagID_by_datnum(string datnum)
+		{
+			//tag_struct t in Tags_List
+			foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList)
+			{
+				if (curr_tag.Value.Datnum == datnum)
+					return curr_tag.Key;
+			}
 
-            return -1;
-        }
+			return "wtf does this even do";
+		}
 
 
-        // POKE OUR CHANGES LETSGOOOO
-        private void BtnPokeChanges_Click(object sender, RoutedEventArgs e)
+		// POKE OUR CHANGES LETSGOOOO
+		private void BtnPokeChanges_Click(object sender, RoutedEventArgs e)
         {
             foreach (KeyValuePair<long, KeyValuePair<string, string>> pair in Pokelist)
             {
