@@ -95,7 +95,7 @@ namespace InfiniteRuntimeTagViewer
             }
         }
 
-        public SortedDictionary<string, TagStruct> TagsList { get; set; } = new (); // get real
+        public Dictionary<string, TagStruct> TagsList { get; set; } = new (); // and now we can convert it back because we just sort it elsewhere
         public SortedDictionary<string, GroupTagStruct> TagGroups { get; set; } = new();
 
 		
@@ -124,7 +124,7 @@ namespace InfiniteRuntimeTagViewer
             // 0x10 Tag_data Pointer 8bytes
             // 0x18 Tag_type_desc Pointer 8bytes
 
-            TagsList = new SortedDictionary<string, TagStruct>();
+            TagsList = new Dictionary<string, TagStruct>();
             for (int tagIndex = 0; tagIndex < TagCount; tagIndex++)
             {
                 TagStruct currentTag = new();
@@ -451,14 +451,9 @@ namespace InfiniteRuntimeTagViewer
                         break;
 
                     case "TagrefTag":
-                        string whyDoINeedToConvertEverything = Convert.ToInt32(value, 16).ToString();
-                        // THAT FLIPS IT BACKWARDS
-
                         string temp = Regex.Replace(value, @"(.{2})", "$1 ");
                         temp = temp.TrimEnd();
                         M.WriteMemory(address.ToString("X"), "bytes", temp);
-                        //int w2 = 0;
-
                         break;
                 }
             }

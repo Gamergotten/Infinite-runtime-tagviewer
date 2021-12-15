@@ -8,6 +8,7 @@ using InfiniteRuntimeTagViewer.Interface.Windows;
 using AvalonDock.Controls;
 using AvalonDock.Layout;
 using Memory;
+using System.Linq;
 
 using static InfiniteRuntimeTagViewer.MainWindow;
 using InfiniteRuntimeTagViewer.Halo;
@@ -293,7 +294,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			trd.tag_select_panel.Items.Add(tvi);
 			tvi.Selected += update_tagref;
 
-			foreach (KeyValuePair<string, TagStruct> tg in _mainWindow.TagsList)
+			foreach (KeyValuePair<string, TagStruct> tg in _mainWindow.TagsList.OrderBy(key => key.Value.TagFullName)) // should probably store this instead of sorting everytime
 			{
 				if (tg.Value.TagGroup == ted.TagGroup)
 				{
