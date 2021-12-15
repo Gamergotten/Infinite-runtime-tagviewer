@@ -16,6 +16,7 @@ using InfiniteRuntimeTagViewer.Halo;
 using System.Xml.Serialization;
 using InfiniteRuntimeTagViewer.Halo.TagObjects;
 using System.Windows.Media;
+using System.Timers;
 
 namespace InfiniteRuntimeTagViewer
 {
@@ -24,31 +25,92 @@ namespace InfiniteRuntimeTagViewer
     /// </summary>
     public partial class MainWindow
     {
-        // #### NOTES
-        //
-        // tagref dropdown actually gives the wrong tags, may be because some objects have the same datnums
-        //
-        // loading levl tag on campaign takes FOREVER + 3gigs RAM // fixed
-        //
-        // i think our "readstring" is capped to a specific amount of characters // fixed
-        //
-        // something since the inital release is causing windows defender to act up
-        // my thoughts - either the AOB or .net 5.0? could just be random too tho
+		// #### NOTES
+		//
+		// tagref dropdown actually gives the wrong tags, may be because some objects have the same datnums
+		//
+		// loading levl tag on campaign takes FOREVER + 3gigs RAM // fixed
+		//
+		// i think our "readstring" is capped to a specific amount of characters // fixed
+		//
+		// something since the inital release is causing windows defender to act up
+		// my thoughts - either the AOB or .net 5.0? could just be random too tho
 		// - Callum : I believe its AOB, That kind of stuff always flags up the AV's.
 		//            They smell it like blood in the water.
-        //
-
-        public Mem M = new();
+		//
+		private readonly Timer _t;
+		public Mem M = new();
 
         public MainWindow()
         {
             InitializeComponent();
             StateChanged += MainWindowStateChangeRaised;
-
+			_t = new Timer();
+			_t.Elapsed += OnTimedEvent;
+			_t.Interval = 2000;
+			_t.AutoReset = true;
 			inhale_tagnames();
         }
 
-        private long BaseAddress = -1;
+		private async void OnTimedEvent(object source, ElapsedEventArgs e)
+		{
+			System.Diagnostics.Debugger.Log(0, "DBGTIMING", "Hooking game");
+			Dispatcher.Invoke(new Action(async () => {
+				hook_text.Text = "Openning process...";
+			processSelector.hookProcess(M);
+
+			if (M.pHandle == IntPtr.Zero)
+			{
+				// Could not find the process
+				hook_text.Text = "Cant find HaloInfinite.exe";
+				return;
+			}
+
+			// Get the base address
+			BaseAddress = M.ReadLong("HaloInfinite.exe+0x3E952A0");
+			string validtest = M.ReadString(BaseAddress.ToString("X"));
+
+			if (validtest == "tag instances")
+			{
+				hook_text.Text = "Process Hooked: " + M.theProc.Id;
+			}
+			else
+			{
+				hook_text.Text = "Offset failed, scanning...";
+					try
+					{
+						long? aobScan = (await M.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
+							.First(); // "tag instances"
+
+						// Failed to find base tag address
+						if (aobScan == null || aobScan == 0)
+						{
+							BaseAddress = -1;
+							hook_text.Text = "Failed to locate base tag address";
+						}
+						else
+						{
+							BaseAddress = aobScan.Value;
+							hook_text.Text = "Process Hooked: " + M.theProc.Id + " (AOB)";
+						}
+					}
+					catch (Exception ex)
+					{
+						hook_text.Text = "Cant find HaloInfinite.exe";
+					}
+			}
+			}));
+		}
+
+		private void CheckBoxProcessCheck(object sender, RoutedEventArgs e)
+		{
+			if (CbxSearchProcess.IsChecked != null)
+			{
+				_t.Enabled = (bool) CbxSearchProcess.IsChecked;
+			}
+		}
+
+		private long BaseAddress = -1;
         private int TagCount = -1;
 
         // Hook to halo infinite
@@ -615,11 +677,8 @@ namespace InfiniteRuntimeTagViewer
 				    // Ignore tags that are not implemented
 				    if ((bool) cbxFilterOnlyMapped.IsChecked)
 				    {
-				        if (supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower()))
-				            tv.Visibility = Visibility.Visible;
-				        else
-				            tv.Visibility = Visibility.Collapsed;
-				    }
+				        tv.Visibility = supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower()) ? Visibility.Visible : Visibility.Collapsed;
+					}
 				    else
 				    {
 				        tv.Visibility = Visibility.Visible;

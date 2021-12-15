@@ -217,7 +217,7 @@
                         <TreeViewItem Header="Hook and load to get started!" />
                         <TreeViewItem Header="reload the tags whenever the map changes" />
 
-                        
+
                     </TreeView>
                     <!-- < #TagsTree -->
 
@@ -235,7 +235,13 @@
 
                         <Button Content="Hook" Grid.Column="0" Click="BtnHook_Click" Padding="4,4,4,4" />
                         <TextBlock x:Name="hook_text" Text="Not hooked" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" />
-
+                        <CheckBox Grid.Column="1" VerticalAlignment="Top" Margin="154,5,10,0"
+                                      x:Name="CbxSearchProcess"
+                                      Checked="CheckBoxProcessCheck" Unchecked="CheckBoxProcessCheck" IsChecked="False">
+                            <CheckBox.ToolTip>
+                                <TextBlock Foreground="Black">Auto Hook</TextBlock>
+                            </CheckBox.ToolTip>
+                        </CheckBox>
                         <Button Content="Load" Grid.Column="2" Click="BtnLoadTags_Click" Padding="4,4,4,4" />
 
                         <controls:ProcessSelector x:Name="processSelector" Grid.Row="1" Grid.ColumnSpan="3" Margin="00,2,0,0" />
