@@ -56,10 +56,9 @@ namespace InfiniteRuntimeTagViewer
 		private bool loadedTags = false;
 		private void OnTimedEvent(object source, ElapsedEventArgs e)
 		{
-			System.Diagnostics.Debugger.Log(0, "DBGTIMING", "Hooking game");
 			Dispatcher.Invoke(new Action(async () =>
 			{
-				hook_text.Text = "Openning process...";
+				hook_text.Text = "Opening process...";
 				processSelector.hookProcess(M);
 
 				if (M.pHandle == IntPtr.Zero)
@@ -179,92 +178,95 @@ namespace InfiniteRuntimeTagViewer
         // load tags from Mem
         private async void BtnLoadTags_ClickAsync(object sender, RoutedEventArgs e)
         {
-			hook_text.Text = "Openning process...";
-			processSelector.hookProcess(M);
-
-			if (M.pHandle == IntPtr.Zero)
+			if (BaseAddress == -1)
 			{
-				// Could not find the process
-				hook_text.Text = "Cant find HaloInfinite.exe";
-				return;
-			}
+				hook_text.Text = "Opening Process...";
+				processSelector.hookProcess(M);
 
-			// Get the base address
-			BaseAddress = M.ReadLong("HaloInfinite.exe+0x3E952A0");
-			string validtest = M.ReadString(BaseAddress.ToString("X"));
-
-			if (validtest == "tag instances")
-			{
-				hook_text.Text = "Process Hooked: " + M.theProc.Id;
-			}
-			else
-			{
-				hook_text.Text = "Offset failed, scanning...";
-
-				long? aobScan = (await M.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
-					.First(); // "tag instances"
-
-				// Failed to find base tag address
-				if (aobScan == null || aobScan == 0)
+				if (M.pHandle == IntPtr.Zero)
 				{
-					BaseAddress = -1;
-					hook_text.Text = "Failed to locate base tag address";
+					// Could not find the process
+					hook_text.Text = "Can't Find HaloInfinite.exe";
+					return;
+				}
+
+				// Get the base address
+				BaseAddress = M.ReadLong("HaloInfinite.exe+0x3E952A0");
+				string validtest = M.ReadString(BaseAddress.ToString("X"));
+
+				if (validtest == "tag instances")
+				{
+					hook_text.Text = "Process Hooked: " + M.theProc.Id;
 				}
 				else
 				{
-					BaseAddress = aobScan.Value;
-					hook_text.Text = "Process Hooked: " + M.theProc.Id + " (AOB)";
+					hook_text.Text = "Offset Failed, Scanning...";
+
+					long? aobScan = (await M.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
+						.First(); // "tag instances"
+
+					// Failed to find base tag address
+					if (aobScan == null || aobScan == 0)
+					{
+						BaseAddress = -1;
+						hook_text.Text = "Failed to locate base tag address";
+					}
+					else
+					{
+						BaseAddress = aobScan.Value;
+						hook_text.Text = "Process Hooked: " + M.theProc.Id + " (AOB)";
+					}
 				}
 			}
 
-
-			if (TagCount != -1 && BaseAddress != -1)
-            {
-                TagCount = -1;
-                TagGroups.Clear();
-                TagsList.Clear();
-            }
-
-            TagsTree.Items.Clear();
-
-            TagCount = M.ReadInt((BaseAddress + 0x6C).ToString("X"));
-            long tagsStart = M.ReadLong((BaseAddress + 0x78).ToString("X"));
-
-            // each tag is 52 bytes long // was it 52 or was it 0x52? whatever
-            // 0x0 datnum 4bytes
-            // 0x4 ObjectID 4bytes
-            // 0x8 Tag_group Pointer 8bytes
-            // 0x10 Tag_data Pointer 8bytes
-            // 0x18 Tag_type_desc Pointer 8bytes
-
-            TagsList = new Dictionary<string, TagStruct>();
-            for (int tagIndex = 0; tagIndex < TagCount; tagIndex++)
-            {
-                TagStruct currentTag = new();
-                long tagAddress = tagsStart + (tagIndex * 52);
-
-                byte[] test1 = M.ReadBytes(tagAddress.ToString("X"), 4);
-                currentTag.Datnum = BitConverter.ToString(test1).Replace("-", string.Empty);
-
-                byte[] test = (M.ReadBytes((tagAddress + 4).ToString("X"), 4));
-
-                // = String.Concat(bytes.Where(c => !Char.IsWhiteSpace(c)));
-                currentTag.ObjectId = BitConverter.ToString(test).Replace("-", string.Empty);
-                currentTag.TagGroup = read_tag_group(M.ReadLong((tagAddress + 0x8).ToString("X")));
-                currentTag.TagData = M.ReadLong((tagAddress + 0x10).ToString("X"));
-				currentTag.TagFullName = convert_ID_to_tag_name(currentTag.ObjectId).Trim();
-				currentTag.TagFile = currentTag.TagFullName.Split('\\').Last().Trim();
-
-				// do the tag definitition
-				if (!TagsList.ContainsKey(currentTag.ObjectId))
+				if (TagCount != -1 && BaseAddress != -1)
 				{
-					TagsList.Add(currentTag.ObjectId, currentTag); // WHAT DO YOU MEAN ITS ALREADY ADDED. HOW IS THERE A DUPLICATE TAG
+					TagCount = -1;
+					TagGroups.Clear();
+					TagsList.Clear();
 				}
-			}
 
-            Loadtags();
+				TagsTree.Items.Clear();
 
-            Searchbox_TextChanged(null, null);
+				TagCount = M.ReadInt((BaseAddress + 0x6C).ToString("X"));
+				long tagsStart = M.ReadLong((BaseAddress + 0x78).ToString("X"));
+
+				// each tag is 52 bytes long // was it 52 or was it 0x52? whatever
+				// 0x0 datnum 4bytes
+				// 0x4 ObjectID 4bytes
+				// 0x8 Tag_group Pointer 8bytes
+				// 0x10 Tag_data Pointer 8bytes
+				// 0x18 Tag_type_desc Pointer 8bytes
+
+				TagsList = new Dictionary<string, TagStruct>();
+				for (int tagIndex = 0; tagIndex < TagCount; tagIndex++)
+				{
+					TagStruct currentTag = new();
+					long tagAddress = tagsStart + (tagIndex * 52);
+
+					byte[] test1 = M.ReadBytes(tagAddress.ToString("X"), 4);
+					currentTag.Datnum = BitConverter.ToString(test1).Replace("-", string.Empty);
+
+					byte[] test = (M.ReadBytes((tagAddress + 4).ToString("X"), 4));
+
+					// = String.Concat(bytes.Where(c => !Char.IsWhiteSpace(c)));
+					currentTag.ObjectId = BitConverter.ToString(test).Replace("-", string.Empty);
+					currentTag.TagGroup = read_tag_group(M.ReadLong((tagAddress + 0x8).ToString("X")));
+					currentTag.TagData = M.ReadLong((tagAddress + 0x10).ToString("X"));
+					currentTag.TagFullName = convert_ID_to_tag_name(currentTag.ObjectId).Trim();
+					currentTag.TagFile = currentTag.TagFullName.Split('\\').Last().Trim();
+
+					// do the tag definitition
+					if (!TagsList.ContainsKey(currentTag.ObjectId))
+					{
+						TagsList.Add(currentTag.ObjectId, currentTag); // WHAT DO YOU MEAN ITS ALREADY ADDED. HOW IS THERE A DUPLICATE TAG
+					}
+				}
+
+				Loadtags();
+
+				Searchbox_TextChanged(null, null);
+			
 		}
 
 		public string read_tag_group(long tagGroupAddress)
