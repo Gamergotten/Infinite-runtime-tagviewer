@@ -22,8 +22,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
     {
         public int ProcessId { get; set; }
         public ProcessType ProcessType { get; set; }
-        public System.Diagnostics.Process Process { get; set; } = null;
-        public string CommandLine { get; set; }
+        public System.Diagnostics.Process? Process { get; set; } = null;
+        public string? CommandLine { get; set; }
     }
 
     /// <summary>
@@ -31,29 +31,32 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
     /// </summary>
     public partial class ProcessSelector : UserControl
     {
-        public ProcessInformation SelectedProcess { get; private set; } = null;
-        public ComboBoxItem cbxiChooseAny { get; private set; }
-
-        public void hookProcess(Memory.Mem m)
+        public ProcessInformation? SelectedProcess { get; private set; } = null;
+        public ComboBoxItem? cbxiChooseAny { get; private set; }
+		public bool selected = false;
+        public bool hookProcess(Memory.Mem m)
         {
             if (SelectedProcess == null)
             {
-                m.OpenProcess("HaloInfinite.exe");
-                return;
+                selected = m.OpenProcess("HaloInfinite.exe");
+				return selected;
             }
 
             // Check if the process is still alive
             SelectedProcess.Process.Refresh();
             if (SelectedProcess.Process.HasExited)
             {
+				System.Diagnostics.Debug.WriteLine("Process not open.");
                 MessageBox.Show("Selected halo process closed, Hooking any HI process...");
-                m.OpenProcess("HaloInfinite.exe");
-                return;
+				selected = m.OpenProcess("HaloInfinite.exe");
+                return selected;
             }
 
-            // Attempt to hook PID
-            m.OpenProcess(SelectedProcess.ProcessId);
-        }
+			// Attempt to hook PID
+			selected = m.OpenProcess(SelectedProcess.ProcessId);
+			return selected;
+
+		}
 
         public ProcessSelector()
         {
@@ -62,44 +65,55 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
             // Don't get the processes if in designer
             if (! DesignerProperties.GetIsInDesignMode(this))
-                ReloadProcesses();
-        }
+			{
+				ReloadProcesses();
+			}
+		}
 
         private void ReloadProcesses()
         {
             System.Diagnostics.Process hi;
 
-            var si = cbxSelector.SelectedIndex; 
+			int si = cbxSelector.SelectedIndex; 
             cbxSelector.Items.Clear();
             cbxSelector.Items.Add(cbxiChooseAny);
-            if (si == 0) cbxSelector.SelectedIndex = 0;
+            if (si == 0)
+			{
+				cbxSelector.SelectedIndex = 0;
+			}
 
-            List<ProcessInformation> foundProcesses = new List<ProcessInformation>();
+			List<ProcessInformation> foundProcesses = new List<ProcessInformation>();
 
             // Find all halo processes and determine if its steam or uwp winstore
-            foreach (var proc in System.Diagnostics.Process.GetProcesses())
+            foreach (System.Diagnostics.Process? proc in System.Diagnostics.Process.GetProcesses())
             {
-                string fullPath = null;
+                string? fullPath = null;
                 try
                 {
                     fullPath = proc.MainModule.FileName;
-                    string exeName = fullPath.Split('\\').Last();
+                    string? exeName = fullPath.Split('\\').Last();
 
                     if (exeName != "HaloInfinite.exe")
-                        continue;
+					{
+						continue;
+					}
 
-                    // Look for appxdeployment in modules ? 
+					// Look for appxdeployment in modules ? 
 
-                    ProcessInformation procInfo = new ProcessInformation();
+					ProcessInformation procInfo = new ProcessInformation();
                     procInfo.ProcessType = ProcessType.WinStore;
                     procInfo.Process = proc;
                     procInfo.ProcessId = proc.Id;
 
                     foreach (System.Diagnostics.ProcessModule mod in proc.Modules)
-                        if (mod.ModuleName.ToLower().StartsWith("steamclient64.dll"))
-                            procInfo.ProcessType = ProcessType.Steam;
+					{
+						if (mod.ModuleName.ToLower().StartsWith("steamclient64.dll"))
+						{
+							procInfo.ProcessType = ProcessType.Steam;
+						}
+					}
 
-                    foundProcesses.Add(procInfo);
+					foundProcesses.Add(procInfo);
                     hi = proc;
                 }
                 catch (Exception ex)
@@ -130,10 +144,10 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(wmiScope, query);
             foreach (ManagementObject mo in searcher.Get())
             {
-                var pid = Convert.ToInt32((System.UInt32) mo["ProcessId"]);
-                var commandLine = (string) mo["CommandLine"];
+				int pid = Convert.ToInt32((System.UInt32) mo["ProcessId"]);
+				string? commandLine = (string) mo["CommandLine"];
 
-                var pi = foundProcesses.Where(x => x.ProcessId == pid).First();
+				ProcessInformation? pi = foundProcesses.Where(x => x.ProcessId == pid).First();
                 pi.CommandLine = commandLine;
 
                 if (pi.CommandLine.Contains("-server"))
@@ -142,14 +156,14 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
                 }
             }
 
-            var found = false;
+			bool found = false;
 
             for (int x = 0; x < foundProcesses.Count; x++)
             {
-                var pi = foundProcesses[x];
-                var time = (DateTime.Now - pi.Process.StartTime).ToString(@"hh\:mm\:ss");
+				ProcessInformation? pi = foundProcesses[x];
+				string? time = (DateTime.Now - pi.Process.StartTime).ToString(@"hh\:mm\:ss");
 
-                var cbxi = new ComboBoxItem() {
+				ComboBoxItem? cbxi = new ComboBoxItem() {
                     Content = $"Halo Infinite, {pi.ProcessType}, {pi.ProcessId}, {time}",
                     Tag = pi
                 };
@@ -164,8 +178,10 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
             }
 
             if (!found)
-                cbxSelector.SelectedIndex = 0;
-        }
+			{
+				cbxSelector.SelectedIndex = 0;
+			}
+		}
 
         private void cbxSelector_DropDownOpened(object sender, EventArgs e)
         {
@@ -180,11 +196,13 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
                 return;
             }
 
-            var cbxi = (ComboBoxItem) cbxSelector.SelectedItem;
+			ComboBoxItem? cbxi = (ComboBoxItem) cbxSelector.SelectedItem;
             if (cbxi?.Tag == null || (cbxi.Tag as ProcessInformation) == null)
-                return;
+			{
+				return;
+			}
 
-            var pi = (ProcessInformation) cbxi.Tag;
+			ProcessInformation? pi = (ProcessInformation) cbxi.Tag;
 
 
             this.SelectedProcess = pi;

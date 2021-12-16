@@ -32,9 +32,11 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
             this.maxBit = maxBit;  
 
             if (maxBit == 0)
-                maxBit = maxBit = amountOfBytes * 8;
+			{
+				maxBit = maxBit = amountOfBytes * 8;
+			}
 
-            spBitCollection.Children.Clear();
+			spBitCollection.Children.Clear();
 
             int maxAmountOfBytes = Math.Clamp((int)Math.Ceiling((double)maxBit / 8), 0, amountOfBytes);
             int bitsLeft = maxBit - 1; // -1 to start at 
@@ -42,9 +44,11 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
             for (int @byte = 0; @byte < maxAmountOfBytes; @byte++)
             {
                 if (bitsLeft < 0)
-                    continue;
+				{
+					continue;
+				}
 
-                int amountOfBits = @byte * 8 > maxBit ? ((@byte * 8) - maxBit) : 8;
+				int amountOfBits = @byte * 8 > maxBit ? ((@byte * 8) - maxBit) : 8;
                 long addr = startAddress + @byte;
                 byte flags_value = (byte) M.ReadByte((addr).ToString("X"));
 
@@ -52,9 +56,11 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
                 {
                     int currentBitIndex = (@byte * 8) + bit;
                     if (bitsLeft < 0)
-                        continue;
+					{
+						continue;
+					}
 
-                    CheckBox? checkbox = null;
+					CheckBox? checkbox = null;
 
                     int _byte = @byte, _bit = bit;
 
@@ -73,9 +79,11 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
                     };
 
                     if (checkbox != null)
-                        spBitCollection.Children.Add (checkbox);
+					{
+						spBitCollection.Children.Add (checkbox);
+					}
 
-                    bitsLeft--;
+					bitsLeft--;
                 }
             }
         }
@@ -89,9 +97,11 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
             {
                 int index = (byteNo * 8) + x;
                 if (spBitCollection.Children.Count < index)
-                    continue;
+				{
+					continue;
+				}
 
-                CheckBox? cbx = (CheckBox) spBitCollection.Children[index];
+				CheckBox? cbx = (CheckBox) spBitCollection.Children[index];
                 output.UpdateBit(x, value: (bool) cbx.IsChecked);
             }
 
