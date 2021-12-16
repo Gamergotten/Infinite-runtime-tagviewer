@@ -40,7 +40,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			Storyboard sb = (Storyboard) TryFindResource("AnimateRotationStoryBoard");
 
 			if (rand == null)
+			{
 				rand = new Random();
+			}
 
 			if (rand.Next(1, 30) == 1)
 			{

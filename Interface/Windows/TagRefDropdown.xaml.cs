@@ -37,8 +37,10 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
         {
             // If the user is holding down left mouse let them drag the window
             if (e.ChangedButton == MouseButton.Left)
-                this.DragMove();
-        }
+			{
+				this.DragMove();
+			}
+		}
 
         private void Searchbox_TextChanged(object sender, TextChangedEventArgs e)
         {

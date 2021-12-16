@@ -148,7 +148,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			// What the actual fuck is all of this? 
 			Grid? td = cb.Parent as Grid;
 			Button? b = td.Children[1] as Button;
-			var btnTed = b.Tag as TED_TagRefGroup;
+			TED_TagRefGroup? btnTed = b.Tag as TED_TagRefGroup;
 			btnTed.TagGroup = cb.SelectedValue.ToString();
 
 			//string[] s = b.Tag.ToString().Split(":");
@@ -213,7 +213,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 				// There seems to be no way to get the window, so we will find the LayoutDocumentPaneGroupControl
 				// instead and we can use that to crawl backwards through the Windows to find it.
-				var dockingPaneGroup = GetTopLevelControlOfType<LayoutDocumentPaneGroupControl>(b);
+				LayoutDocumentPaneGroupControl? dockingPaneGroup = GetTopLevelControlOfType<LayoutDocumentPaneGroupControl>(b);
 				bool foundDockingWindow = false;
 
 				// Handle if we have a popped out window.
@@ -222,20 +222,24 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 					// Check if we can figure out where this docking pane is located
 					foreach (Window appWindow in Application.Current.Windows)
 					{
-						var floatingWind = appWindow as LayoutDocumentFloatingWindowControl;
+						LayoutDocumentFloatingWindowControl? floatingWind = appWindow as LayoutDocumentFloatingWindowControl;
 						if (floatingWind == null)
+						{
 							continue;
+						}
 
 						// Make sure we have a FloatingWindowContentHost
-						var floatingWindContHost = floatingWind.Content; // AvalonDock.Controls.LayoutFloatingWindowControl.FloatingWindowContentHost
+						object? floatingWindContHost = floatingWind.Content; // AvalonDock.Controls.LayoutFloatingWindowControl.FloatingWindowContentHost
 						if (floatingWindContHost == null && floatingWindContHost.GetType().Name != "FloatingWindowContentHost")
+						{
 							continue;
+						}
 
 						// Get the public property "Content", we cant get this normally because this
 						// is a internal / sealed class. We need to use reflection to get our
 						// grubby mitts on it.
-						var prop = floatingWindContHost.GetType().GetProperty("Content");
-						var contentResult = prop.GetValue(floatingWindContHost) as LayoutDocumentPaneGroupControl;
+						System.Reflection.PropertyInfo? prop = floatingWindContHost.GetType().GetProperty("Content");
+						LayoutDocumentPaneGroupControl? contentResult = prop.GetValue(floatingWindContHost) as LayoutDocumentPaneGroupControl;
 
 						// Check if this is our DockingPanelGroup
 						if (contentResult == dockingPaneGroup)
@@ -269,7 +273,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 				}
 				else if (foundDockingWindow == false)
 				{
-					var myButtonLocation = b.PointToScreen(new Point(0, 0));
+					Point myButtonLocation = b.PointToScreen(new Point(0, 0));
 
 					trd.Left = myButtonLocation.X - 8;
 					trd.Top = myButtonLocation.Y + 1;
@@ -604,9 +608,11 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 					case "FlagGroup":
 						// make sure we got a flaggroup def
 						if (!(entry.Value is TagLayouts.FlagGroup))
+						{
 							continue;
+						}
 
-						var fg = entry.Value as TagLayouts.FlagGroup;
+						TagLayouts.FlagGroup? fg = entry.Value as TagLayouts.FlagGroup;
 						TagFlagsGroup? tfg = new() { HorizontalAlignment = HorizontalAlignment.Left };
 						tfg.ValueDefinition = new TagEditorDefinition()
 						{
@@ -632,8 +638,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 		private void tagfilter_text_Changed(object sender, TextChangedEventArgs e)
 		{
-			var text = tagfilter_text.Text;
-			var children = tagview_panels.Children;
+			string? text = tagfilter_text.Text;
+			UIElementCollection? children = tagview_panels.Children;
 			const int all = 0, titles = 1, datatypes = 2, values = 3;
 
 			if (string.IsNullOrWhiteSpace(tagfilter_text.Text))
@@ -669,7 +675,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			{
 				if (control is TagBlock)
 				{
-					var tb = (TagBlock) control;
+					TagBlock? tb = (TagBlock) control;
 					filterTags_SetVisibility(tb.dockpanel.Children, vis);
 				}
 
@@ -684,7 +690,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			{
 				if (control is TagBlock)
 				{
-					var trb = (TagBlock) control;
+					TagBlock? trb = (TagBlock) control;
 					if (((string) trb.tagblock_title.Text).Contains(filterText, StringComparison.OrdinalIgnoreCase))
 					{
 						control.Visibility = Visibility.Visible;
@@ -694,10 +700,14 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 				else if (control is TagBlock)
 				{
-					var tb = (TagBlock) control;
-					var dp = tb.dockpanel;
-					if (dp == null) continue;
-					var f = filterTags_Titles(dp.Children, filterText);
+					TagBlock? tb = (TagBlock) control;
+					StackPanel? dp = tb.dockpanel;
+					if (dp == null)
+					{
+						continue;
+					}
+
+					bool f = filterTags_Titles(dp.Children, filterText);
 					if (f)
 					{
 						found = true;
@@ -716,9 +726,12 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			{
 				if (control is TagRefBlock)
 				{
-					var trb = (TagRefBlock) control;
+					TagRefBlock? trb = (TagRefBlock) control;
 					ComboBoxItem? cbxi = trb.taggroup.SelectedItem as ComboBoxItem;
-					if (cbxi == null) continue;
+					if (cbxi == null)
+					{
+						continue;
+					}
 
 					string? str = cbxi.Content as string;
 					if (str != null && str.Contains(filterText, StringComparison.OrdinalIgnoreCase))
@@ -730,7 +743,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 				else if (control is TagValueBlock)
 				{
-					var trb = (TagValueBlock) control;
+					TagValueBlock? trb = (TagValueBlock) control;
 					string str = (string) trb.value_type.Text;
 					if (str != null && str.Contains(filterText, StringComparison.OrdinalIgnoreCase))
 					{
@@ -741,10 +754,14 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 				else if (control is TagBlock)
 				{
-					var tb = (TagBlock) control;
-					var dp = tb.dockpanel;
-					if (dp == null) continue;
-					var f = filterTags_Datatypes(dp.Children, filterText);
+					TagBlock? tb = (TagBlock) control;
+					StackPanel? dp = tb.dockpanel;
+					if (dp == null)
+					{
+						continue;
+					}
+
+					bool f = filterTags_Datatypes(dp.Children, filterText);
 					if (f)
 					{
 						found = true;
@@ -762,8 +779,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			{
 				if (control is TagValueBlock)
 				{
-					var tvb = (TagValueBlock) control;
-					var val = tvb.value.Text.ToString();
+					TagValueBlock? tvb = (TagValueBlock) control;
+					string? val = tvb.value.Text.ToString();
 					if (val != null && val.Contains(filterText, StringComparison.OrdinalIgnoreCase))
 					{
 						control.Visibility = Visibility.Visible;
@@ -773,8 +790,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 				else if (control is TagRefBlock)
 				{
-					var trb = (TagRefBlock) control;
-					var val = (string) trb.tag_button.Content;
+					TagRefBlock? trb = (TagRefBlock) control;
+					string? val = (string) trb.tag_button.Content;
 					if (val != null && val.Contains(filterText, StringComparison.OrdinalIgnoreCase))
 					{
 						control.Visibility = Visibility.Visible;
@@ -784,10 +801,14 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 				else if (control is TagBlock)
 				{
-					var tb = (TagBlock) control;
-					var dp = tb.dockpanel;
-					if (dp == null) continue;
-					var f = filterTags_Values(dp.Children, filterText);
+					TagBlock? tb = (TagBlock) control;
+					StackPanel? dp = tb.dockpanel;
+					if (dp == null)
+					{
+						continue;
+					}
+
+					bool f = filterTags_Values(dp.Children, filterText);
 					if (f)
 					{
 						found = true;
