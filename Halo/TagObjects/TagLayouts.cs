@@ -79,7 +79,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 					{ 92, new C { T = "Tagblock" } }, // SidecarPathDefinition
 
-					{ 112, new C { T = "Float" } },
+					{ 112, new C { T = "mmr3Hash" } }, // default variant
 					{ 116, new C { T = "Float" } },
 
 					{ 120, new C { T = "TagRef" } }, // vehicle model
@@ -110,22 +110,15 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 552, new C { T = "4Byte" } },
 					{ 556, new C { T = "Tagblock" } }, // i343::Objects::AmmoRefillVariant
 					{ 576, new C { T = "4Byte" } },
+					{ 0x248,new C{T = "Tagblock",B = new Dictionary<long, C> // object_attachment_definition
 					{
-						0x248,
-						new C
-						{
-							T = "Tagblock",
-							B = new Dictionary<long, C> // object_attachment_definition
-							{
-								{ 4, new C{ T="TagRef"}}, // effe
-							    { 32, new C{ T="TagRef"}}, // effe
-							    { 64, new C{ T="Tagblock"}},
-								{ 84, new C{ T="TagRef"}}, //
-							    { 112, new C{ T="Tagblock"}}
-							},
-							S = 148
-						}
-					},
+						{ 4, new C{ T="TagRef"}}, // effe
+						{ 32, new C{ T="TagRef"}}, // effe
+						{ 64, new C{ T="Tagblock"}},
+						{ 84, new C{ T="TagRef"}}, //
+						{ 112, new C{ T="Tagblock"}}
+					},S = 148}},
+
 					{ 604, new C { T = "Tagblock" } }, // object_indirect_lighting_settings_definition
 					{ 624, new C { T = "Tagblock" } }, // s_water_physics_hull_surface_definition
 					{ 644, new C { T = "Tagblock" } }, // s_jetwash_definition
@@ -508,6 +501,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				"weap",
 				new() {
 					{ 0x05C, new C { T = "Tagblock" } },
+					{ 112, new C { T = "mmr3Hash" } }, // default variant
+
 					{ 0x078, new C { T = "TagRef" } }, // HLMT
 					{ 0x094, new C { T = "TagRef" } },
 					{ 0x0B0, new C { T = "TagRef" } },
@@ -798,30 +793,24 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x64, new C { T = "TagRef" } }, // PHMO
 
 					{ 0xAC, new C { T = "Tagblock" } },
+					{0xF4,new C{T = "Tagblock",B = new Dictionary<long, C> // object variant
 					{
-						0xF4,
-						new C
+						{ 0x0, new C { T = "mmr3Hash" } }, // variant
+						{ 0x34, new C{ T="Tagblock"}},
+						{ 0x48, new C{ T="Tagblock", B=new Dictionary<long, C> // object block
 						{
-							T = "Tagblock",
-							B = new Dictionary<long, C> // object variant
-						{
-							{ 0x34, new C{ T="Tagblock"}},
-							{ 0x48, new C{ T="Tagblock", B=new Dictionary<long, C> // object block
-						    {
-								{ 12, new C{ T="TagRef"}}, //
-						        { 40, new C{ T="TagRef"}}, //
-						    }, S=72}},
-							{ 0x5C, new C{ T="Tagblock"}},
-							{ 0x70, new C{ T="Tagblock"}},
-							{ 0x104, new C{ T="TagRef"}},
-							{ 0x120, new C{ T="TagRef"}},
-							{ 0x13C, new C{ T="TagRef"}},
-							{ 0x158, new C{ T="TagRef"}},
-							{ 0x174, new C{ T="Tagblock"}},
-						},
-							S = 392
-						}
-					},
+							{ 12, new C{ T="TagRef"}}, //
+						    { 40, new C{ T="TagRef"}}, //
+						}, S=72}},
+						{ 0x5C, new C{ T="Tagblock"}},
+						{ 0x70, new C{ T="Tagblock"}},
+						{ 0x104, new C{ T="TagRef"}},
+						{ 0x120, new C{ T="TagRef"}},
+						{ 0x13C, new C{ T="TagRef"}},
+						{ 0x158, new C{ T="TagRef"}},
+						{ 0x174, new C{ T="Tagblock"}},
+					},S = 392}},
+
 					{ 0x108, new C { T = "Tagblock" } },
 					{ 0x11C, new C { T = "Tagblock" } },
 					{ 0x130, new C { T = "Tagblock" } },

@@ -46,16 +46,16 @@ namespace InfiniteRuntimeTagViewer
         {
             InitializeComponent();
             StateChanged += MainWindowStateChangeRaised;
-			_t = new Timer();
-			_t.Elapsed += OnTimedEvent;
-			_t.Interval = 2000;
-			_t.AutoReset = true;
+			//_t = new Timer();
+			//_t.Elapsed += OnTimedEvent;
+			//_t.Interval = 2000;
+			//_t.AutoReset = true;
 			inhale_tagnames();
         }
 
 		private bool loadedTags = false;
 		private bool hooked = false;
-		private void OnTimedEvent(object source, ElapsedEventArgs e)
+		private void OnTimedEvent(object source, ElapsedEventArgs e) // what
 		{
 			Dispatcher.Invoke(new Action(async () =>
 			{
@@ -75,7 +75,7 @@ namespace InfiniteRuntimeTagViewer
 				if (hooked == false)
 					{
 						// Get the base address
-						BaseAddress = M.ReadLong("HaloInfinite.exe+0x3E952A0");
+						BaseAddress = M.ReadLong("HaloInfinite.exe+4879758");
 						string validtest = M.ReadString(BaseAddress.ToString("X"));
 
 						if (validtest == "tag instances")
@@ -216,12 +216,13 @@ namespace InfiniteRuntimeTagViewer
 			if (hooked == false)
 			{
 				// Get the base address
-				BaseAddress = M.ReadLong("HaloInfinite.exe+0x3E952A0");
+				BaseAddress = M.ReadLong("HaloInfinite.exe+4879758");
 				string validtest = M.ReadString(BaseAddress.ToString("X"));
 
 				if (validtest == "tag instances")
 				{
 					hook_text.Text = "Process Hooked: " + M.theProc.Id;
+					hooked = true;
 				}
 				else
 				{
@@ -305,7 +306,7 @@ namespace InfiniteRuntimeTagViewer
 						TagsList.Add(currentTag.ObjectId, currentTag);
 					}
 				}
-				if (hooked == true)
+				if (hooked == true) // apparently we dont hook if we *have* the address :frown
 				{
 
 					Loadtags();
@@ -640,7 +641,13 @@ namespace InfiniteRuntimeTagViewer
                         temp = temp.TrimEnd();
                         M.WriteMemory(address.ToString("X"), "bytes", temp);
                         break;
-                }
+
+					case "mmr3Hash":
+						string temp2 = Regex.Replace(value, @"(.{2})", "$1 ");
+						temp = temp2.TrimEnd();
+						M.WriteMemory(address.ToString("X"), "bytes", temp);
+						break;
+				}
             }
 
             poke_text.Text = Pokelist.Count + " changes poked";

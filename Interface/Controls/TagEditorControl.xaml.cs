@@ -628,6 +628,22 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tfg.generateBits(address + entry.Key, fg.A, fg.MB, fg.STR);
 
 						break;
+					case "mmr3Hash":
+						TagValueBlock? vb5 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						vb5.value_type.Text = "mmr3Hash";
+						vb5.value.Text = BitConverter.ToString(_m.ReadBytes((address + entry.Key).ToString("X"), 4)).Replace("-", string.Empty);
+						parentpanel.Children.Add(vb5);
+
+						//vb4.value.Tag = address + entry.Key + ":String";
+						vb5.value.Tag = new TagEditorDefinition()
+						{
+							MemoryAddress = address + entry.Key,
+							MemoryType = "mmr3Hash",
+							TagDef = entry.Value,
+							TagStruct = tagStruct
+						};
+						vb5.value.TextChanged += value_TextChanged;
+						break;
 				}
 
 				prevEntry = entry;
