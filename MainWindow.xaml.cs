@@ -823,5 +823,11 @@ namespace InfiniteRuntimeTagViewer
 		{
 			SystemCommands.CloseWindow(this);
 		}
-    }
+
+		public void SettingsControl(object sender, RoutedEventArgs e)
+		{
+			SettingsControl win2 = new();
+			win2.Show();
+		}
+	}
 }

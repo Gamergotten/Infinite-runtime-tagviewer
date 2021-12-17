@@ -1,4 +1,4 @@
-<Window xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+<Window
                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -136,11 +136,16 @@
                                 </MenuItem.ToolTip>
                                     </MenuItem>
                                 <MenuItem Header="Specific">
-                                <MenuItem.ToolTip>
-                                    <TextBlock Foreground="Black">Hook specific Halo process.</TextBlock>
-                                </MenuItem.ToolTip>
+                                    <MenuItem.ToolTip>
+                                        <TextBlock Foreground="Black">Hook specific Halo process.</TextBlock>
+                                    </MenuItem.ToolTip>
                                 </MenuItem>
                             </MenuItem>
+                            <MenuItem Header="Settings..." Click="SettingsControl">
+                                    <MenuItem.ToolTip>
+                                        <TextBlock Foreground="Black">Personalization Settings</TextBlock>
+                                    </MenuItem.ToolTip>
+                                </MenuItem>
                         </MenuItem>
 
                     </Menu>
