@@ -92,6 +92,59 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <TextBlock Text="{Binding Title, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:MainWindow}}}" FontFamily="Arial" Margin="15 0 0 0" />
                 </StackPanel>
+                <DockPanel>
+                    <Menu x:Name="DockPanel" IsMainMenu="True" Padding="10 0">
+                        <MenuItem Header="_File" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" Height="32" FontSize="12">
+                            <MenuItem Header="_Open">
+                                <!--TODO-->
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Open a file.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+                            <MenuItem Header="_Save" >
+                            <!--TODO-->
+                            <MenuItem.ToolTip>
+                                <TextBlock Foreground="Black">Save a file.</TextBlock>
+                            </MenuItem.ToolTip>
+                        </MenuItem>
+                        <Separator />
+                            <MenuItem Header="_Exit" Click="ClickExit" >
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Exit the program.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+                        </MenuItem>
+                        <MenuItem Header="Options" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" Height="30" FontSize="12">
+                            <MenuItem x:Name="cbxFilterOnlyMapped" Header="Filter Only Mapped" IsCheckable="True" IsChecked="True" Checked="cbxFilterOnlyMapped_Changed" Unchecked="cbxFilterOnlyMapped_Changed">
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Filter only mapped tags.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+                            <MenuItem x:Name="CbxSearchProcess" Header="Auto Hook" IsCheckable="True" IsChecked="False" Checked="CheckBoxProcessCheck" Unchecked="CheckBoxProcessCheck" >
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Automatically search and hook Halo process.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+                            <MenuItem Header="Process Selecter">
+                                <!--Added this here for process selecter in the future.-->
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Select a Halo process.</TextBlock>
+                                </MenuItem.ToolTip>
+                                <MenuItem Header="Any" >
+                                <MenuItem.ToolTip>
+                                        <TextBlock Foreground="Black">Hook any Halo process.</TextBlock>
+                                </MenuItem.ToolTip>
+                                    </MenuItem>
+                                <MenuItem Header="Specific">
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Hook specific Halo process.</TextBlock>
+                                </MenuItem.ToolTip>
+                                </MenuItem>
+                            </MenuItem>
+                        </MenuItem>
+
+                    </Menu>
+                </DockPanel>
 
                 <!--Caption buttons-->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
@@ -202,13 +255,6 @@
                             <Label   Content="Search"   Grid.Column="0" Width="auto" Margin="0,0,10,0" />
                             <TextBox x:Name="Searchbox" Grid.Column="1" TextChanged="Searchbox_TextChanged" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
 
-                            <CheckBox Grid.Column="2" VerticalAlignment="Center" Margin="5,0,0,0"
-                                      x:Name="cbxFilterOnlyMapped"
-                                      Checked="cbxFilterOnlyMapped_Changed" Unchecked="cbxFilterOnlyMapped_Changed" IsChecked="True">
-                                <CheckBox.ToolTip>
-                                    <TextBlock Foreground="Black">Only show mapped tags</TextBlock>
-                                </CheckBox.ToolTip>
-                            </CheckBox>
                         </Grid>
                     </Grid>
                     <!-- < Search Box -->
@@ -232,13 +278,6 @@
                             <RowDefinition Height="auto" />
                         </Grid.RowDefinitions>
                         <TextBlock x:Name="hook_text" Text="Not hooked" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" />
-                        <CheckBox Grid.Column="1" VerticalAlignment="Top" Margin="211,12,5,0"
-                                      x:Name="CbxSearchProcess"
-                                      Checked="CheckBoxProcessCheck" Unchecked="CheckBoxProcessCheck" IsChecked="False">
-                            <CheckBox.ToolTip>
-                                <TextBlock Foreground="Black">Auto Hook And Load</TextBlock>
-                            </CheckBox.ToolTip>
-                        </CheckBox>
                         <Button Content="Load" Grid.Column="2" Click="BtnLoadTags_ClickAsync" Padding="4,4,4,4" />
 
                         <controls:ProcessSelector x:Name="processSelector" Grid.Row="1" Grid.ColumnSpan="3" Margin="00,2,0,0" />
