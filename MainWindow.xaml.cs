@@ -46,22 +46,21 @@ namespace InfiniteRuntimeTagViewer
         {
             InitializeComponent();
             StateChanged += MainWindowStateChangeRaised;
-			//_t = new Timer();
-			//_t.Elapsed += OnTimedEvent;
-			//_t.Interval = 2000;
-			//_t.AutoReset = true;
+			_t = new Timer();
+			_t.Elapsed += OnTimedEvent;
+			_t.Interval = 2000;
+			_t.AutoReset = true;
 			inhale_tagnames();
         }
 
 		private bool loadedTags = false;
 		private bool hooked = false;
-		private void OnTimedEvent(object source, ElapsedEventArgs e) // what
+		private void OnTimedEvent(object source, ElapsedEventArgs e)
 		{
 			Dispatcher.Invoke(new Action(async () =>
 			{
 				//hook_text.Text = "Opening process...";
 				processSelector.hookProcess(M);
-				System.Diagnostics.Debug.WriteLine(processSelector.selected);
 					if (M.pHandle == IntPtr.Zero || processSelector.selected == false || loadedTags == false)
 					{
 						// Could not find the process
@@ -75,12 +74,13 @@ namespace InfiniteRuntimeTagViewer
 				if (hooked == false)
 					{
 						// Get the base address
-						BaseAddress = M.ReadLong("HaloInfinite.exe+4879758");
+						BaseAddress = M.ReadLong("HaloInfinite.exe+0x4879758");
 						string validtest = M.ReadString(BaseAddress.ToString("X"));
 
 						if (validtest == "tag instances")
 						{
 							hook_text.Text = "Process Hooked: " + M.theProc.Id;
+						    hooked = true;
 						}
 						else
 						{
@@ -216,7 +216,7 @@ namespace InfiniteRuntimeTagViewer
 			if (hooked == false)
 			{
 				// Get the base address
-				BaseAddress = M.ReadLong("HaloInfinite.exe+4879758");
+				BaseAddress = M.ReadLong("HaloInfinite.exe+0x4879758");
 				string validtest = M.ReadString(BaseAddress.ToString("X"));
 
 				if (validtest == "tag instances")
@@ -306,7 +306,7 @@ namespace InfiniteRuntimeTagViewer
 						TagsList.Add(currentTag.ObjectId, currentTag);
 					}
 				}
-				if (hooked == true) // apparently we dont hook if we *have* the address :frown
+				if (hooked == true) // apparently we dont hook if we *have* the address :frown //This is to load the tags, we only load the tags if we are already hooked.
 				{
 
 					Loadtags();
@@ -792,29 +792,36 @@ namespace InfiniteRuntimeTagViewer
         private void cbxFilterOnlyMapped_Changed(object sender, RoutedEventArgs e)
         {
             string[] supportedTags = Halo.TagObjects.TagLayouts.Tags.Keys.ToArray();
-            string search = Searchbox.Text;
+			if (Searchbox != null)
+			{
+				string search = Searchbox.Text;
 
-            // If we have a filter just call the search function
-            if (!string.IsNullOrEmpty(search))
-            {
-                Searchbox_TextChanged(null, null);
-                return;
-            }
-            if (TagsTree != null)
-            { 
-				foreach (TreeViewItem tv in TagsTree.Items)
+				// If we have a filter just call the search function
+				if (!string.IsNullOrEmpty(search))
 				{
-				    // Ignore tags that are not implemented
-				    if ((bool) cbxFilterOnlyMapped.IsChecked)
-				    {
-				        tv.Visibility = supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower()) ? Visibility.Visible : Visibility.Collapsed;
+					Searchbox_TextChanged(null, null);
+					return;
+				}
+				if (TagsTree != null)
+				{
+					foreach (TreeViewItem tv in TagsTree.Items)
+					{
+						// Ignore tags that are not implemented
+						if ((bool) cbxFilterOnlyMapped.IsChecked)
+						{
+							tv.Visibility = supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower()) ? Visibility.Visible : Visibility.Collapsed;
+						}
+						else
+						{
+							tv.Visibility = Visibility.Visible;
+						}
 					}
-				    else
-				    {
-				        tv.Visibility = Visibility.Visible;
-				    }
-                }
-            }
+				}
+			}
         }
+		public void ClickExit(object sender, RoutedEventArgs e)
+		{
+			SystemCommands.CloseWindow(this);
+		}
     }
 }
