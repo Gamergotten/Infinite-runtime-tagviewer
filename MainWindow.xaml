@@ -81,6 +81,11 @@
 
     <Border x:Name="MainWindowBorder" BorderBrush="Transparent" BorderThickness="0" >
         <Grid x:Name="parentContainer" Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="527*"/>
+            </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height ="Auto"/>
@@ -88,12 +93,10 @@
             </Grid.RowDefinitions>
 
             <!--Window chrome-->
-            <Grid Grid.Row="0" Height="30" Background="#252526">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <TextBlock Text="{Binding Title, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:MainWindow}}}" FontFamily="Arial" Margin="15 0 0 0" />
-                </StackPanel>
+            <Grid Grid.Row="0" Height="30" Background="#252526" Grid.ColumnSpan="3">
+
                 <DockPanel>
-                    <Menu x:Name="DockPanel" IsMainMenu="True" Padding="10 0">
+                    <Menu x:Name="DockPanel" IsMainMenu="True" Padding="10 0" Background="#252526">
                         <MenuItem Header="_File" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" Height="32" FontSize="12">
                             <MenuItem Header="_Open">
                                 <!--TODO-->
@@ -102,12 +105,12 @@
                                 </MenuItem.ToolTip>
                             </MenuItem>
                             <MenuItem Header="_Save" >
-                            <!--TODO-->
-                            <MenuItem.ToolTip>
-                                <TextBlock Foreground="Black">Save a file.</TextBlock>
-                            </MenuItem.ToolTip>
-                        </MenuItem>
-                        <Separator />
+                                <!--TODO-->
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Save a file.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+                            <Separator />
                             <MenuItem Header="_Exit" Click="ClickExit" >
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Exit the program.</TextBlock>
@@ -131,10 +134,10 @@
                                     <TextBlock Foreground="Black">Select a Halo process.</TextBlock>
                                 </MenuItem.ToolTip>
                                 <MenuItem Header="Any" >
-                                <MenuItem.ToolTip>
+                                    <MenuItem.ToolTip>
                                         <TextBlock Foreground="Black">Hook any Halo process.</TextBlock>
-                                </MenuItem.ToolTip>
-                                    </MenuItem>
+                                    </MenuItem.ToolTip>
+                                </MenuItem>
                                 <MenuItem Header="Specific">
                                     <MenuItem.ToolTip>
                                         <TextBlock Foreground="Black">Hook specific Halo process.</TextBlock>
@@ -142,14 +145,17 @@
                                 </MenuItem>
                             </MenuItem>
                             <MenuItem Header="Settings..." Click="SettingsControl">
-                                    <MenuItem.ToolTip>
-                                        <TextBlock Foreground="Black">Personalization Settings</TextBlock>
-                                    </MenuItem.ToolTip>
-                                </MenuItem>
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Personalization Settings</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
                         </MenuItem>
 
                     </Menu>
                 </DockPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="{Binding Title, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:MainWindow}}}" FontFamily="Arial" Margin="15 0 0 0" />
+                </StackPanel>
 
                 <!--Caption buttons-->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
@@ -165,8 +171,8 @@
             </Grid>
 
             <!-- App content -->
-            <Grid Grid.Row="1" x:Name="AppArea" LayoutTransform="{StaticResource windowScaleTransform}">
-
+            <Grid Grid.Row="1" x:Name="AppArea" LayoutTransform="{StaticResource windowScaleTransform}" Grid.ColumnSpan="3">
+                
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="5*" />
                     <ColumnDefinition Width="16*"/>
