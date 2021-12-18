@@ -133,12 +133,12 @@
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Select a Halo process.</TextBlock>
                                 </MenuItem.ToolTip>
-                                <MenuItem Header="Any" >
+                                <MenuItem x:Name="CbxAnyProcess" Header="Any" Click="AnyProcess" IsChecked="True">
                                     <MenuItem.ToolTip>
                                         <TextBlock Foreground="Black">Hook any Halo process.</TextBlock>
                                     </MenuItem.ToolTip>
                                 </MenuItem>
-                                <MenuItem Header="Specific">
+                                <MenuItem x:Name="CbxSpecificProcess" Header="Specific" Click="SpecificProcess">
                                     <MenuItem.ToolTip>
                                         <TextBlock Foreground="Black">Hook specific Halo process.</TextBlock>
                                     </MenuItem.ToolTip>
