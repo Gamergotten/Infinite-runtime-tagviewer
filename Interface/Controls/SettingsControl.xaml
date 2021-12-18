@@ -3,9 +3,11 @@
                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:wpfx="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls" xmlns:controls="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls" x:Name="window"
                  mc:Ignorable="d"
                  Background="#333333"
-                 Title="Infinite Runtime Tagviewer" Height="650" Width="1100">
+                 Title="Settings" Height="650" Width="1100">
     <Window.Resources>
         <TransformGroup x:Key="windowScaleTransform">
             <ScaleTransform
@@ -40,6 +42,11 @@
             </Setter>
         </Style>
 
+        <!--Minimize-->
+        <Style x:Key="MinimizeButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource CaptionButtonStyle}">
+            <Setter Property="Content" Value="&#xE949;"/>
+        </Style>
+        
         <!--Maximize-->
         <Style x:Key="MaximizeButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource CaptionButtonStyle}">
             <Setter Property="Content" Value="&#xE739;"/>
@@ -67,10 +74,136 @@
     <Window.CommandBindings>
         <CommandBinding Command="{x:Static SystemCommands.CloseWindowCommand}" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed_Close" />
         <CommandBinding Command="{x:Static SystemCommands.MaximizeWindowCommand}" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed_Maximize" />
+        <CommandBinding Command="{x:Static SystemCommands.MinimizeWindowCommand}" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed_Minimize" />
         <CommandBinding Command="{x:Static SystemCommands.RestoreWindowCommand}" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed_Restore" />
     </Window.CommandBindings>
+    <Border x:Name="MainWindowBorder" BorderBrush="Transparent" BorderThickness="0" >
+        <Grid x:Name="parentContainer" Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="527*"/>
+            </Grid.ColumnDefinitions>
 
-    <Grid>
-        
-    </Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height ="Auto"/>
+                <RowDefinition Height ="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Window chrome-->
+            <Grid Grid.Row="0" Height="30" Background="#252526" Grid.ColumnSpan="3">
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="{Binding Title, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:SettingsControl}}}" FontFamily="Arial" Margin="15 0 0 0" />
+                </StackPanel>
+
+                <!--Caption buttons-->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                    <Button Style="{StaticResource MinimizeButtonStyle}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Minimize"
+                            Command="{x:Static SystemCommands.MinimizeWindowCommand}" />
+                    <Button x:Name="RestoreButton" Visibility="Collapsed" Style="{StaticResource RestoreButtonStyle}" 
+                            Command="{x:Static SystemCommands.RestoreWindowCommand}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Restore"/>
+                    <Button x:Name="MaximizeButton" Visibility="Visible" Style="{StaticResource MaximizeButtonStyle}" 
+                            Command="{x:Static SystemCommands.MaximizeWindowCommand}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Maximize" />
+                    <Button Style="{StaticResource CloseButtonStyle}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Close"
+                            Command="{x:Static SystemCommands.CloseWindowCommand}"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- App content -->
+            <Grid Grid.Row="1" x:Name="AppArea" LayoutTransform="{StaticResource windowScaleTransform}" Grid.ColumnSpan="3">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="16*"/>
+                    <ColumnDefinition Width="8" />
+                    <ColumnDefinition Width="63*" />
+                </Grid.ColumnDefinitions>
+
+                <GridSplitter Grid.Column="2"
+                    HorizontalAlignment="Stretch"
+                    Background="#555"
+                    ShowsPreview="true" />
+
+                <Grid Grid.Column="3" Background="#252526">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+
+                    <DockingManager x:Name="dockManager" Grid.Row="0"
+                            Background="#333333"
+                            AllowMixedOrientation="True"
+                            AutoWindowSizeWhenOpened="True"
+                            Margin="0,0,0,6">
+
+                        <DockingManager.Theme>
+                            <Vs2013DarkTheme />
+                        </DockingManager.Theme>
+
+                        <DockingManager.DocumentHeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Title}" TextTrimming="CharacterEllipsis" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </DockingManager.DocumentHeaderTemplate>
+
+
+
+                        <LayoutRoot x:Name="dockLayoutRoot">
+                            <LayoutPanel x:Name="dockLayoutPanel">
+                                <LayoutDocumentPaneGroup>
+                                    <LayoutDocumentPane x:Name="dockLayoutDocPane" />
+                                </LayoutDocumentPaneGroup>
+                            </LayoutPanel>
+                        </LayoutRoot>
+                    </DockingManager>
+                    
+                    <Grid Grid.Row="1" Margin="0,0,0,0" Background="#252526">
+                        <Grid Margin="5,5,5,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40" />
+                                <ColumnDefinition Width="110" />
+                                <ColumnDefinition Width="110" />
+                                <ColumnDefinition Width="40" />
+                                <ColumnDefinition Width="150" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                        </Grid>
+                    </Grid>
+
+                    <ScrollViewer x:Name="changes_panel_container" MinHeight="100" MaxHeight="200" Grid.Row="3" Grid.ColumnSpan="5" Margin="0,10,0,10" Background="#252526" Visibility="Collapsed" >
+                        <StackPanel x:Name="changes_panel" Background="#252526" />
+                    </ScrollViewer>
+                </Grid>
+
+                <Grid Grid.Column="0" Margin="0,0,2,0" Background="#252526" Grid.ColumnSpan="2">
+                    <TreeView x:Name="TagsTree" Grid.Row="2">
+                        <TreeViewItem Header="Colors">
+                            <TreeViewItem Header="General" />
+                            <TreeViewItem Header="Theme" />
+                        </TreeViewItem>
+
+
+                    </TreeView>
+
+                    <Grid Grid.Row="3" Grid.ColumnSpan="1" Margin="5,5,5,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
 </Window>
