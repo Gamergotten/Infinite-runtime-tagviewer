@@ -6,11 +6,15 @@
              mc:Ignorable="d">
     <Grid Background="#3F3F46" Margin="5,5,0,0" Height="20">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition MinWidth="70" Width="1*" />
+            <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="200" />
+            <ColumnDefinition MinWidth="70" Width="1*" />
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="0" x:Name="value_type" Foreground="#fff"
-                   Text="Tag Value test one two three" HorizontalAlignment="Stretch" Margin="10,0,5,0" />
+        <TextBlock Grid.Column="2" x:Name="value_type" Foreground="#fff"
+                   Text="Tag Value test one two three" HorizontalAlignment="Stretch" Margin="5,0,5,0" />
         <TextBox x:Name="value" Grid.Column="1" BorderThickness="1" BorderBrush="#505050" />
+
+        <TextBlock Grid.Column="0" x:Name="value_name" Foreground="#fff"
+                   Text="name test" HorizontalAlignment="Stretch" Margin="5,0,5,0" />
     </Grid>
 </UserControl>

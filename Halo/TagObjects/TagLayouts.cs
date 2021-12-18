@@ -18,6 +18,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			/// </summary>
 			public long S { get; set; } // S = size // length of tagblock
 
+			public string? N { get; set; } // N = name // our name for the block 
+
 
 			/// <summary>
 			/// Set during load, will be used when I add netcode 
@@ -79,10 +81,10 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 					{ 92, new C { T = "Tagblock" } }, // SidecarPathDefinition
 
-					{ 112, new C { T = "mmr3Hash" } }, // default variant
+					{ 112, new C { T = "mmr3Hash", N = "Default Variant" } }, // default variant
 					{ 116, new C { T = "Float" } },
 
-					{ 120, new C { T = "TagRef" } }, // vehicle model
+					{ 120, new C { T = "TagRef", N = "Model" } }, // vehicle model 
 					{ 148, new C { T = "TagRef" } }, // aset tag ref
 					{ 176, new C { T = "TagRef" } },
 					{ 204, new C { T = "TagRef" } },
@@ -244,123 +246,107 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0xA38, new C { T = "Float" } },
 
 					{ 0xA64, new C { T = "Tagblock" } }, // powered_seat_definition
+					{0xA78,new C{T = "Tagblock",B = new Dictionary<long, C> // unit_initial_weapon
 					{
-						0xA78,
-						new C
-						{
-							T = "Tagblock",
-							B = new Dictionary<long, C> // unit_initial_weapon
-							{
-								{ 0, new C{ T="TagRef"}}, // weap
-							    { 40, new C{ T="Float"}},
-								{ 48, new C{ T="Float"}},
-								{ 148, new C{ T="TagRef"}}, //
-							    { 188, new C{ T="Tagblock"}}
-							},
-							S = 212
-						}
-					},
+						{ 0, new C{ T="TagRef", N = "Weapon"}}, // weap
+						{ 40, new C{ T="Float"}},
+						{ 48, new C{ T="Float"}},
+						{ 148, new C{ T="TagRef"}}, //
+						{ 188, new C{ T="Tagblock"}}
+					},S = 212}},
 
 					{ 0xA8C, new C { T = "Tagblock" } }, // s_target_tracking_parameters
 
-					{ 0xAA0, new C {
-							T = "Tagblock",
-							B = new Dictionary<long, C>  // unit_seat
-							{
-								{ 0x0, new FlagGroup {
-									A = 4,
-									STR = new Dictionary<int, string>() {
-										{ 0,  "invisible"  },
-										{ 1,  "locked"  },
-										{ 2,  "driver"  },
-										{ 3,  "gunner"  },
-										{ 4,  "third person camera"  },
-										{ 5,  "allows weapons"  },
-										{ 6,  "third person on enter"  },
-										{ 7,  "first person camera slaved to gun."  },
-										{ 8,  "not valid without driver"  },
-										{ 9,  "allow AI noncombatants"  },
-										{ 10, "boarding seat"  },
-										{ 11, "ai firing disabled by max acceleration"  },
-										{ 12, "boarding enters seat"  },
-										{ 13, "boarding need any passenger"  },
-										{ 14, "invalid for player"  },
-										{ 15, "invalid for non-player"  },
-										{ 16, "invalid for hero"  },
-										{ 17, "gunner (player only)"  },
-										{ 18, "invisible under major damage"  },
-										{ 19, "melee instant killable"  },
-										{ 20, "leader preference"  },
-										{ 21, "allows exit and detach"  },
-										{ 22, "blocks headshots"  },
-										{ 23, "exits to ground"  },
-										{ 24, "forward from attachment"  },
-										{ 25, "disallow AI shooting"  },
-										{ 26, "prevents weapon stowing"  },
-										{ 27, "takes top level aoe damage"  },
-										{ 28, "disallow exit"  },
-										{ 29, "local aiming"  },
-										{ 30, "pelvis relative attachment"  },
-										{ 31, "apply velocity on death exit"  }
-									}
-								} },
+					{ 0xAA0, new C {T = "Tagblock",B = new Dictionary<long, C>  // unit_seat
+					{
+						{ 0x0, new FlagGroup {A = 4,STR = new Dictionary<int, string>() {
+							{ 0,  "invisible"  },
+							{ 1,  "locked"  },
+							{ 2,  "driver"  },
+							{ 3,  "gunner"  },
+							{ 4,  "third person camera"  },
+							{ 5,  "allows weapons"  },
+							{ 6,  "third person on enter"  },
+							{ 7,  "first person camera slaved to gun."  },
+							{ 8,  "not valid without driver"  },
+							{ 9,  "allow AI noncombatants"  },
+							{ 10, "boarding seat"  },
+							{ 11, "ai firing disabled by max acceleration"  },
+							{ 12, "boarding enters seat"  },
+							{ 13, "boarding need any passenger"  },
+							{ 14, "invalid for player"  },
+							{ 15, "invalid for non-player"  },
+							{ 16, "invalid for hero"  },
+							{ 17, "gunner (player only)"  },
+							{ 18, "invisible under major damage"  },
+							{ 19, "melee instant killable"  },
+							{ 20, "leader preference"  },
+							{ 21, "allows exit and detach"  },
+							{ 22, "blocks headshots"  },
+							{ 23, "exits to ground"  },
+							{ 24, "forward from attachment"  },
+							{ 25, "disallow AI shooting"  },
+							{ 26, "prevents weapon stowing"  },
+							{ 27, "takes top level aoe damage"  },
+							{ 28, "disallow exit"  },
+							{ 29, "local aiming"  },
+							{ 30, "pelvis relative attachment"  },
+							{ 31, "apply velocity on death exit"  }
+						}} },
 
-								{ 0x3, new FlagGroup {
-									A = 4,
-									STR = new Dictionary<int, string>() {
-										{ 0, "skip obstacle check"  },
-										{ 1, "search parent for entry marker"  },
-										{ 2, "gunner release aim on exit"  },
-										{ 3, "fully open before allowing exit"  },
-										{ 4, "finish melee before allowing exit"  },
-										{ 5, "kill parent if unit in seat dies"  },
-										{ 6, "co-pilot"  },
-										{ 7, "ejectable seat"  },
-										{ 8, "kill on ejection"  },
-										{ 9, "use head marker for navpoint"  },
-										{ 10, "allows equipment and grenade switching"  },
-									} 
-								} },
+						{ 0x3, new FlagGroup {A = 4, STR = new Dictionary<int, string>() 
+						{
+							{ 0, "skip obstacle check"  },
+							{ 1, "search parent for entry marker"  },
+							{ 2, "gunner release aim on exit"  },
+							{ 3, "fully open before allowing exit"  },
+							{ 4, "finish melee before allowing exit"  },
+							{ 5, "kill parent if unit in seat dies"  },
+							{ 6, "co-pilot"  },
+							{ 7, "ejectable seat"  },
+							{ 8, "kill on ejection"  },
+							{ 9, "use head marker for navpoint"  },
+							{ 10, "allows equipment and grenade switching"  },
+						} } },
 
-								{ 0x14, new C{ T="String"}},
-								{ 0x58, new C{ T="Tagblock"}},
-								{ 0x06C, new C { T = "Float" }},
+						{ 0x10, new C{ T="mmr3Hash", N = "Animation Hash"}},
 
-								{ 0x074, new C{ T="TagRef"}},
+						{ 0x14, new C{ T="String"}},
+						{ 0x58, new C{ T="Tagblock"}},
+						{ 0x06C, new C { T = "Float" }},
 
-								{ 0x90, new C { T = "Float" }},
+						{ 0x074, new C{ T="TagRef"}},
 
-								{ 0x98, new C{ T="Tagblock"}},
+						{ 0x90, new C { T = "Float" }},
 
-								{ 0xE8, new C { T = "Float" }},
-								{ 0xEC, new C { T = "Float" }},
-								{ 0xF0, new C { T = "Float" }},
-								{ 0xF4, new C { T = "Float" }},
-								{ 0xF8, new C { T = "Float" }},
-								{ 0xFC, new C { T = "Float" }},
-								{ 0x100, new C { T = "Float" }},
+						{ 0x98, new C{ T="Tagblock"}},
 
-								{ 0x11C, new C{ T="Tagblock"}},
+						{ 0xE8, new C { T = "Float" }},
+						{ 0xEC, new C { T = "Float" }},
+						{ 0xF0, new C { T = "Float" }},
+						{ 0xF4, new C { T = "Float" }},
+						{ 0xF8, new C { T = "Float" }},
+						{ 0xFC, new C { T = "Float" }},
+						{ 0x100, new C { T = "Float" }},
 
-								{ 0x130, new C { T = "Float" }},
-								{ 0x134, new C { T = "Float" }},
-								{ 0x138, new C { T = "Float" }},
+						{ 0x11C, new C{ T="Tagblock"}},
 
-								{ 0x148, new C{ T="Float"}},
+						{ 0x130, new C { T = "Float" }},
+						{ 0x134, new C { T = "Float" }},
+						{ 0x138, new C { T = "Float" }},
 
-								{ 0x164, new C{ T="Tagblock"}},
-								{ 0x178, new C{ T="TagRef"}},
-								{ 0x194, new C{ T="TagRef"}},
-								{ 0x1B4, new C{ T="Tagblock"}},
+						{ 0x148, new C{ T="Float"}},
 
-								{ 0x1E8, new C{ T="TagRef"}},
-								{ 0x212, new C{ T="TagRef"}},
-								{ 0x24C, new C{ T="TagRef"}},
+						{ 0x164, new C{ T="Tagblock"}},
+						{ 0x178, new C{ T="TagRef"}},
+						{ 0x194, new C{ T="TagRef"}},
+						{ 0x1B4, new C{ T="Tagblock"}},
 
-							},
-							S = 632
-						}
-					},
+						{ 0x1E8, new C{ T="TagRef"}},
+						{ 0x212, new C{ T="TagRef"}},
+						{ 0x24C, new C{ T="TagRef"}},
+
+					},S = 632}},
 
 					{ 0xAB4, new C { T = "Float" } },
 					{ 0xAB8, new C { T = "Float" } },
@@ -501,9 +487,9 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				"weap",
 				new() {
 					{ 0x05C, new C { T = "Tagblock" } },
-					{ 112, new C { T = "mmr3Hash" } }, // default variant
+					{ 112, new C { T = "mmr3Hash" , N = "Default variant" } }, // default variant
 
-					{ 0x078, new C { T = "TagRef" } }, // HLMT
+					{ 0x078, new C { T = "TagRef", N = "Model" } }, // HLMT
 					{ 0x094, new C { T = "TagRef" } },
 					{ 0x0B0, new C { T = "TagRef" } },
 					{ 0x0CC, new C { T = "TagRef" } },
@@ -524,13 +510,13 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x214, new C { T = "Tagblock" } },
 					{ 0x22C, new C { T = "Tagblock" } },
 					{ 0x248,new C {T = "Tagblock", B = new Dictionary<long, C> // attachment block
-						{
-							{ 4, new C{ T="TagRef"}}, // effe
-							{ 32, new C{ T="TagRef"}}, // effe
-							{ 64, new C{ T="Tagblock"}},
-							{ 84, new C{ T="TagRef"}}, //
-							{ 112, new C{ T="Tagblock"}}
-						},S = 148} },
+					{
+						{ 4, new C{ T="TagRef"}}, // effe
+						{ 32, new C{ T="TagRef"}}, // effe
+						{ 64, new C{ T="Tagblock"}},
+						{ 84, new C{ T="TagRef"}}, //
+						{ 112, new C{ T="Tagblock"}}
+					},S = 148} },
 
 					{ 0x25C, new C { T = "Tagblock" } },
 					{ 0x270, new C { T = "Tagblock" } },
@@ -636,120 +622,118 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0xC30, new C { T = "TagRef" } }, // BITM
 
 					{ 0xC4C,new C {T = "Tagblock", B = new Dictionary<long, C> // magazine block
+					{
+						{ 0x6, new C { T = "2Byte" } },
+						{ 0x8, new C { T = "2Byte" } },
+						{ 0xA, new C { T = "2Byte" } },
+						{ 0xC, new C { T = "2Byte" } },
+						{ 0xE, new C { T = "2Byte" } },
+						{ 0x10, new C { T = "2Byte" } },
+						{ 0x12, new C { T = "2Byte" } },
+						{ 0x14, new C { T = "2Byte" } },
+						{ 0x16, new C { T = "2Byte" } },
+						{ 0x18, new C { T = "2Byte" } },
+						{ 0x1A, new C { T = "2Byte" } },
+						{ 0x1C, new C { T = "TagRef" } },
+						{ 0x38, new C { T = "TagRef" } },
+						{ 0x54, new C { T = "TagRef" } },
+						{ 0x70, new C { T = "TagRef" } },
+						{ 0x8C, new C{ T="Tagblock", B=new Dictionary<long, C> // object block
 						{
-							{ 0x6, new C { T = "2Byte" } },
-							{ 0x8, new C { T = "2Byte" } },
-							{ 0xA, new C { T = "2Byte" } },
-							{ 0xC, new C { T = "2Byte" } },
-							{ 0xE, new C { T = "2Byte" } },
-							{ 0x10, new C { T = "2Byte" } },
-							{ 0x12, new C { T = "2Byte" } },
-							{ 0x14, new C { T = "2Byte" } },
-							{ 0x16, new C { T = "2Byte" } },
-							{ 0x18, new C { T = "2Byte" } },
-							{ 0x1A, new C { T = "2Byte" } },
-							{ 0x1C, new C { T = "TagRef" } },
-							{ 0x38, new C { T = "TagRef" } },
-							{ 0x54, new C { T = "TagRef" } },
-							{ 0x70, new C { T = "TagRef" } },
-							{ 0x8C, new C{ T="Tagblock", B=new Dictionary<long, C> // object block
-							{
-								{ 0x4, new C{ T="TagRef"}}, //
-							}, S=32}},
-						}, S = 160}},
+							{ 0x4, new C{ T="TagRef"}}, //
+						}, S=32}},
+					}, S = 160}},
 
 					{ 0xC60, new C { T = "TagRef" } },
 					{ 0xC7C, new C { T = "Tagblock" } },
 					{ 0xC90, new C {T = "Tagblock", B = new Dictionary<long, C> // barrel block
+					{
+						{ 4, new C{ T="Float", N = "Minimum Rounds per Minute"}},
+						{ 8, new C{ T="Float", N = "Maximum Rounds per Minute"}},
+
+						{ 60, new C{ T="Float", N = "Fire Recovery Time"}},
+						{ 64, new C{ T="Float"}},
+
+						{ 76, new C{ T="Float"}},
+						{ 80, new C{ T="Float"}},
+
+						{ 92, new C{ T="Float"}},
+
+						{ 0x64, new C{ T="4Byte"}},
+						{ 0x68, new C{ T="Float"}},
+
+						{ 0x84, new C{ T="Tagblock"}},
+						{ 0x98, new C{ T="Tagblock"}},
+						{ 0xB8, new C{ T="Float"}},
+						{ 0xBC, new C{ T="Float"}},
+						{ 0xFC, new C{ T="Tagblock" } },
+
+						{ 0x110, new C{ T="Tagblock"}},
+						{ 0x124, new C{ T="Tagblock"}},
+						{ 0x138, new C{ T="Tagblock"}},
+						{ 0x150, new C{ T="Tagblock"}},
+						{ 0x164, new C{ T="Tagblock"}},
+						{ 0x178, new C{ T="Tagblock"}},
+						{ 0x18C, new C{ T="Tagblock"}},
+						{ 0x1A4, new C{ T="Tagblock"}},
+
+						{ 0x1B8, new C{ T="TagRef"}}, // PROJ
+						{ 0x1D4, new C{ T="TagRef", N = "Projectile"}}, // PROJ
+
+						{ 0x1F4, new C{ T="Tagblock"}},
+						{ 0x208, new C{ T="TagRef"}},
+						{ 0x224, new C{ T="TagRef"}},
+						{ 0x240, new C{ T="TagRef", N = "Crate Projectile"}},
+
+						{ 0x25C, new C{ T="Float", N = "Crate Velocity"}},
+						{ 0x260, new C{ T="Float"}},
+						{ 0x264, new C{ T="Float"}},
+						{ 0x268, new C{ T="Float"}},
+						{ 0x26C, new C{ T="Float"}},
+						{ 0x270, new C{ T="Float"}},
+						{ 0x274, new C{ T="Float"}},
+						{ 0x2B0, new C{ T="Tagblock", B = new Dictionary<long, C> // THE FIRING EFFECTS
 						{
-							{ 4, new C{ T="Float"}},
-							{ 8, new C{ T="Float"}},
+							{ 0x04, new C{ T="TagRef"}},
 
-							{ 60, new C{ T="Float"}},
-							{ 64, new C{ T="Float"}},
+							{ 0x24, new C{ T="Tagblock"}},
+							{ 0x38, new C{ T="Tagblock"}},
 
-							{ 76, new C{ T="Float"}},
-							{ 80, new C{ T="Float"}},
+							{ 0x4C, new C{ T="TagRef"}},
+							{ 0x6C, new C{ T="Tagblock"}},
+							{ 0x80, new C{ T="Tagblock"}},
 
-							{ 92, new C{ T="Float"}},
+							{ 0x94, new C{ T="TagRef"}},
+							{ 0xB4, new C{ T="Tagblock"}},
+							{ 0xC8, new C{ T="Tagblock"}},
 
-							{ 0x64, new C{ T="4Byte"}},
-							{ 0x68, new C{ T="Float"}},
-
-							{ 0x84, new C{ T="Tagblock"}},
-							{ 0x98, new C{ T="Tagblock"}},
-							{ 0xB8, new C{ T="Float"}},
-							{ 0xBC, new C{ T="Float"}},
-							{ 0xFC, new C{ T="Tagblock" } },
-
+							{ 0xDC, new C{ T="TagRef"}},
+							{ 0xFC, new C{ T="Tagblock"}},
 							{ 0x110, new C{ T="Tagblock"}},
-							{ 0x124, new C{ T="Tagblock"}},
-							{ 0x138, new C{ T="Tagblock"}},
-							{ 0x150, new C{ T="Tagblock"}},
-							{ 0x164, new C{ T="Tagblock"}},
-							{ 0x178, new C{ T="Tagblock"}},
-							{ 0x18C, new C{ T="Tagblock"}},
-							{ 0x1A4, new C{ T="Tagblock"}},
 
-							{ 0x1B8, new C{ T="TagRef"}}, // PROJ
-							{ 0x1D4, new C{ T="TagRef"}}, // PROJ
+							{ 0x124, new C{ T="TagRef"}},
+							{ 0x144, new C{ T="Tagblock"}},
+							{ 0x158, new C{ T="Tagblock"}},
 
-							{ 0x1F4, new C{ T="Tagblock"}},
-							{ 0x208, new C{ T="TagRef"}},
-							{ 0x224, new C{ T="TagRef"}},
-							{ 0x240, new C{ T="TagRef"}},
-
-							{ 0x25C, new C{ T="Float"}},
-							{ 0x260, new C{ T="Float"}},
-							{ 0x264, new C{ T="Float"}},
-							{ 0x268, new C{ T="Float"}},
-							{ 0x26C, new C{ T="Float"}},
-							{ 0x270, new C{ T="Float"}},
-							{ 0x274, new C{ T="Float"}},
-							{ 0x2B0, new C{ T="Tagblock", B = new Dictionary<long, C> // THE FIRING EFFECTS
-								{
-									{ 0x04, new C{ T="TagRef"}},
-
-									{ 0x24, new C{ T="Tagblock"}},
-									{ 0x38, new C{ T="Tagblock"}},
-
-									{ 0x4C, new C{ T="TagRef"}},
-									{ 0x6C, new C{ T="Tagblock"}},
-									{ 0x80, new C{ T="Tagblock"}},
-
-									{ 0x94, new C{ T="TagRef"}},
-									{ 0xB4, new C{ T="Tagblock"}},
-									{ 0xC8, new C{ T="Tagblock"}},
-
-									{ 0xDC, new C{ T="TagRef"}},
-									{ 0xFC, new C{ T="Tagblock"}},
-									{ 0x110, new C{ T="Tagblock"}},
-
-									{ 0x124, new C{ T="TagRef"}},
-									{ 0x144, new C{ T="Tagblock"}},
-									{ 0x158, new C{ T="Tagblock"}},
-
-									{ 0x16C, new C{ T="TagRef"}},
-									{ 0x188, new C{ T="TagRef"}},
-									{ 0x1A4, new C{ T="TagRef"}},
-									{ 0x1C0, new C{ T="TagRef"}},
-									{ 0x1DC, new C{ T="TagRef"}},
-									{ 0x1F8, new C{ T="TagRef"}},
-									{ 0x214, new C{ T="TagRef"}},
-									{ 0x230, new C{ T="TagRef"}},
-									{ 0x24C, new C{ T="TagRef"}},
-									{ 0x268, new C{ T="TagRef"}},
-									{ 0x284, new C{ T="TagRef"}},
-									{ 0x2A0, new C{ T="TagRef"}},
-									{ 0x2BC, new C{ T="TagRef"}},
-									{ 0x2D8, new C{ T="TagRef"}},
-									{ 0x2F4, new C{ T="TagRef"}}
-								},
-								S=784
-							} },
-							{ 0x2E8, new C{ T="Tagblock"}},
-							{ 0x320, new C{ T="Tagblock"}},
-						},S = 848}},
+							{ 0x16C, new C{ T="TagRef"}},
+							{ 0x188, new C{ T="TagRef"}},
+							{ 0x1A4, new C{ T="TagRef"}},
+							{ 0x1C0, new C{ T="TagRef"}},
+							{ 0x1DC, new C{ T="TagRef"}},
+							{ 0x1F8, new C{ T="TagRef"}},
+							{ 0x214, new C{ T="TagRef"}},
+							{ 0x230, new C{ T="TagRef"}},
+							{ 0x24C, new C{ T="TagRef"}},
+							{ 0x268, new C{ T="TagRef"}},
+							{ 0x284, new C{ T="TagRef"}},
+							{ 0x2A0, new C{ T="TagRef"}},
+							{ 0x2BC, new C{ T="TagRef"}},
+							{ 0x2D8, new C{ T="TagRef"}},
+							{ 0x2F4, new C{ T="TagRef"}}
+						},S=784} },
+						{ 0x2E8, new C{ T="Tagblock"}},
+						{ 0x320, new C{ T="Tagblock"}},
+					},S = 848}},
 
 					{ 0xCBC, new C { T = "TagRef" } },
 					{ 0xCD8, new C { T = "TagRef" } },
@@ -787,19 +771,19 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			{
 				"hlmt",
 				new() {
-					{ 0x10, new C { T = "TagRef" } }, // mode
-					{ 0x2C, new C { T = "TagRef" } }, // COLL
-					{ 0x48, new C { T = "TagRef" } }, // JMAD
-					{ 0x64, new C { T = "TagRef" } }, // PHMO
+					{ 0x10, new C { T = "TagRef", N = "Model" } }, // mode
+					{ 0x2C, new C { T = "TagRef", N = "Collision model" } }, // COLL
+					{ 0x48, new C { T = "TagRef", N = "Animations" } }, // JMAD
+					{ 0x64, new C { T = "TagRef", N = "Physics model" } }, // PHMO
 
 					{ 0xAC, new C { T = "Tagblock" } },
 					{0xF4,new C{T = "Tagblock",B = new Dictionary<long, C> // object variant
 					{
-						{ 0x0, new C { T = "mmr3Hash" } }, // variant
+						{ 0x0, new C { T = "mmr3Hash", N = "Variant Hash" } }, // variant
 						{ 0x34, new C{ T="Tagblock"}},
 						{ 0x48, new C{ T="Tagblock", B=new Dictionary<long, C> // object block
 						{
-							{ 12, new C{ T="TagRef"}}, //
+							{ 12, new C{ T="TagRef", N = "Attached Object"}}, //
 						    { 40, new C{ T="TagRef"}}, //
 						}, S=72}},
 						{ 0x5C, new C{ T="Tagblock"}},
@@ -1239,20 +1223,20 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{
 
 					{ 0x10, new C{ T="Tagblock"}},
-					{ 0x5C, new C{ T="Tagblock", B = new Dictionary<long, C> // object_attachment_definition
+					{ 0x5C, new C{ T="Tagblock", B = new Dictionary<long, C> // 
 						{
 							{ 0x2A, new C{ T="TagRef"}},
 
 							{ 0x50, new C{ T="Tagblock"}},
-							{ 0x64, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
+							{ 0x64, new C{ T="Tagblock", B=new Dictionary<long, C> // 
 						    {
 								{ 0x14, new C { T = "Float" } },
 								{ 0x18, new C { T = "Float" } },
 
-								{ 0x20, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
+								{ 0x20, new C{ T="Tagblock", B=new Dictionary<long, C> // 
 						        {
-									{ -8, new C{ T="TagRef"}}, // we should probably create a special class for this but whatev
-						            { 0x30, new C{ T="TagRef"}},
+									{ -8, new C{ T="TagRef", N = "Tag Group"}}, // we should probably create a special class for this but whatev
+						            { 0x30, new C{ T="TagRef", N = "Spawned Tag"}},
 
 								}, S=140}},
 								{ 0x34, new C{ T="Tagblock"}},
@@ -1449,7 +1433,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			}
 			,
 			{
-				"ccgd",
+				"ocgd", // ocgd* no wonder why i couldn't find it 
 				new()  
 				{
 					{ 0x10, new C{ T="Tagblock", B= new Dictionary<long, C>
