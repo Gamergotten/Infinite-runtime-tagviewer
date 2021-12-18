@@ -18,6 +18,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			/// </summary>
 			public long S { get; set; } // S = size // length of tagblock
 
+			public string? N { get; set; } // N = name // our name for the block 
+
 
 			/// <summary>
 			/// Set during load, will be used when I add netcode 
@@ -79,10 +81,10 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 					{ 92, new C { T = "Tagblock" } }, // SidecarPathDefinition
 
-					{ 112, new C { T = "mmr3Hash" } }, // default variant
+					{ 112, new C { T = "mmr3Hash", N = "Default Variant" } }, // default variant
 					{ 116, new C { T = "Float" } },
 
-					{ 120, new C { T = "TagRef" } }, // vehicle model
+					{ 120, new C { T = "TagRef", N = "Model" } }, // vehicle model 
 					{ 148, new C { T = "TagRef" } }, // aset tag ref
 					{ 176, new C { T = "TagRef" } },
 					{ 204, new C { T = "TagRef" } },
@@ -244,22 +246,14 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0xA38, new C { T = "Float" } },
 
 					{ 0xA64, new C { T = "Tagblock" } }, // powered_seat_definition
+					{0xA78,new C{T = "Tagblock",B = new Dictionary<long, C> // unit_initial_weapon
 					{
-						0xA78,
-						new C
-						{
-							T = "Tagblock",
-							B = new Dictionary<long, C> // unit_initial_weapon
-							{
-								{ 0, new C{ T="TagRef"}}, // weap
-							    { 40, new C{ T="Float"}},
-								{ 48, new C{ T="Float"}},
-								{ 148, new C{ T="TagRef"}}, //
-							    { 188, new C{ T="Tagblock"}}
-							},
-							S = 212
-						}
-					},
+						{ 0, new C{ T="TagRef", N = "Weapon"}}, // weap
+						{ 40, new C{ T="Float"}},
+						{ 48, new C{ T="Float"}},
+						{ 148, new C{ T="TagRef"}}, //
+						{ 188, new C{ T="Tagblock"}}
+					},S = 212}},
 
 					{ 0xA8C, new C { T = "Tagblock" } }, // s_target_tracking_parameters
 
@@ -315,7 +309,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 							{ 10, "allows equipment and grenade switching"  },
 						} } },
 
-						{ 0x10, new C{ T="mmr3Hash"}},
+						{ 0x10, new C{ T="mmr3Hash", N = "Animation Hash"}},
 
 						{ 0x14, new C{ T="String"}},
 						{ 0x58, new C{ T="Tagblock"}},
@@ -493,9 +487,9 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				"weap",
 				new() {
 					{ 0x05C, new C { T = "Tagblock" } },
-					{ 112, new C { T = "mmr3Hash" } }, // default variant
+					{ 112, new C { T = "mmr3Hash" , N = "Default variant" } }, // default variant
 
-					{ 0x078, new C { T = "TagRef" } }, // HLMT
+					{ 0x078, new C { T = "TagRef", N = "Model" } }, // HLMT
 					{ 0x094, new C { T = "TagRef" } },
 					{ 0x0B0, new C { T = "TagRef" } },
 					{ 0x0CC, new C { T = "TagRef" } },
@@ -516,13 +510,13 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x214, new C { T = "Tagblock" } },
 					{ 0x22C, new C { T = "Tagblock" } },
 					{ 0x248,new C {T = "Tagblock", B = new Dictionary<long, C> // attachment block
-						{
-							{ 4, new C{ T="TagRef"}}, // effe
-							{ 32, new C{ T="TagRef"}}, // effe
-							{ 64, new C{ T="Tagblock"}},
-							{ 84, new C{ T="TagRef"}}, //
-							{ 112, new C{ T="Tagblock"}}
-						},S = 148} },
+					{
+						{ 4, new C{ T="TagRef"}}, // effe
+						{ 32, new C{ T="TagRef"}}, // effe
+						{ 64, new C{ T="Tagblock"}},
+						{ 84, new C{ T="TagRef"}}, //
+						{ 112, new C{ T="Tagblock"}}
+					},S = 148} },
 
 					{ 0x25C, new C { T = "Tagblock" } },
 					{ 0x270, new C { T = "Tagblock" } },
@@ -654,10 +648,10 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0xC7C, new C { T = "Tagblock" } },
 					{ 0xC90, new C {T = "Tagblock", B = new Dictionary<long, C> // barrel block
 					{
-						{ 4, new C{ T="Float"}},
-						{ 8, new C{ T="Float"}},
+						{ 4, new C{ T="Float", N = "Minimum Rounds per Minute"}},
+						{ 8, new C{ T="Float", N = "Maximum Rounds per Minute"}},
 
-						{ 60, new C{ T="Float"}},
+						{ 60, new C{ T="Float", N = "Fire Recovery Time"}},
 						{ 64, new C{ T="Float"}},
 
 						{ 76, new C{ T="Float"}},
@@ -684,14 +678,14 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						{ 0x1A4, new C{ T="Tagblock"}},
 
 						{ 0x1B8, new C{ T="TagRef"}}, // PROJ
-						{ 0x1D4, new C{ T="TagRef"}}, // PROJ
+						{ 0x1D4, new C{ T="TagRef", N = "Projectile"}}, // PROJ
 
 						{ 0x1F4, new C{ T="Tagblock"}},
 						{ 0x208, new C{ T="TagRef"}},
 						{ 0x224, new C{ T="TagRef"}},
-						{ 0x240, new C{ T="TagRef"}},
+						{ 0x240, new C{ T="TagRef", N = "Crate Projectile"}},
 
-						{ 0x25C, new C{ T="Float"}},
+						{ 0x25C, new C{ T="Float", N = "Crate Velocity"}},
 						{ 0x260, new C{ T="Float"}},
 						{ 0x264, new C{ T="Float"}},
 						{ 0x268, new C{ T="Float"}},
@@ -777,19 +771,19 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			{
 				"hlmt",
 				new() {
-					{ 0x10, new C { T = "TagRef" } }, // mode
-					{ 0x2C, new C { T = "TagRef" } }, // COLL
-					{ 0x48, new C { T = "TagRef" } }, // JMAD
-					{ 0x64, new C { T = "TagRef" } }, // PHMO
+					{ 0x10, new C { T = "TagRef", N = "Model" } }, // mode
+					{ 0x2C, new C { T = "TagRef", N = "Collision model" } }, // COLL
+					{ 0x48, new C { T = "TagRef", N = "Animations" } }, // JMAD
+					{ 0x64, new C { T = "TagRef", N = "Physics model" } }, // PHMO
 
 					{ 0xAC, new C { T = "Tagblock" } },
 					{0xF4,new C{T = "Tagblock",B = new Dictionary<long, C> // object variant
 					{
-						{ 0x0, new C { T = "mmr3Hash" } }, // variant
+						{ 0x0, new C { T = "mmr3Hash", N = "Variant Hash" } }, // variant
 						{ 0x34, new C{ T="Tagblock"}},
 						{ 0x48, new C{ T="Tagblock", B=new Dictionary<long, C> // object block
 						{
-							{ 12, new C{ T="TagRef"}}, //
+							{ 12, new C{ T="TagRef", N = "Attached Object"}}, //
 						    { 40, new C{ T="TagRef"}}, //
 						}, S=72}},
 						{ 0x5C, new C{ T="Tagblock"}},
@@ -1229,20 +1223,20 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{
 
 					{ 0x10, new C{ T="Tagblock"}},
-					{ 0x5C, new C{ T="Tagblock", B = new Dictionary<long, C> // object_attachment_definition
+					{ 0x5C, new C{ T="Tagblock", B = new Dictionary<long, C> // 
 						{
 							{ 0x2A, new C{ T="TagRef"}},
 
 							{ 0x50, new C{ T="Tagblock"}},
-							{ 0x64, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
+							{ 0x64, new C{ T="Tagblock", B=new Dictionary<long, C> // 
 						    {
 								{ 0x14, new C { T = "Float" } },
 								{ 0x18, new C { T = "Float" } },
 
-								{ 0x20, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
+								{ 0x20, new C{ T="Tagblock", B=new Dictionary<long, C> // 
 						        {
-									{ -8, new C{ T="TagRef"}}, // we should probably create a special class for this but whatev
-						            { 0x30, new C{ T="TagRef"}},
+									{ -8, new C{ T="TagRef", N = "Tag Group"}}, // we should probably create a special class for this but whatev
+						            { 0x30, new C{ T="TagRef", N = "Spawned Tag"}},
 
 								}, S=140}},
 								{ 0x34, new C{ T="Tagblock"}},
@@ -1439,7 +1433,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			}
 			,
 			{
-				"ccgd",
+				"ocgd", // ocgd* no wonder why i couldn't find it 
 				new()  
 				{
 					{ 0x10, new C{ T="Tagblock", B= new Dictionary<long, C>

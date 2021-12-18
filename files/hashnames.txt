@@ -1,4 +1,16 @@
-﻿9F67C942:default
+﻿im too lazy to implement this, cause if you're interested enough to want to change variant&whatever strings, then you'll probably have found yourself here anyway
+
+basically any block that says "mmr3Hash" derives a string from a Murmur3 Hash
+
+in most cases you can look through another tag to find the hash you're after
+eg. the possible valid hashes for "default variant" can be found in that objects' hlmt, under variants (its the first block in that tagblock)
+
+but since you're here, these are some hashes that i did map, 
+_ at the start denotes that i guessed it,
+no underscore means that is the original string (or one of) derived from the hash
+
+
+9F67C942:default
 
 2A3FD198:gungoose
 

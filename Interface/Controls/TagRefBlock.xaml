@@ -7,16 +7,21 @@
              d:DesignHeight="25">
     <Grid x:Name="parent_element" Background="#606060" Margin="5,5,0,0">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="80*" MinWidth="80" />
             <ColumnDefinition Width="250*" MinWidth="250" />
             <ColumnDefinition Width="50" />
         </Grid.ColumnDefinitions>
-        
-        <ComboBox x:Name="taggroup" SelectedIndex="0" BorderBrush="#fff" Margin="1">
+
+        <ComboBox x:Name="taggroup" Grid.Column="1" SelectedIndex="0" BorderBrush="#fff" Margin="1">
             <ComboBoxItem Content="Null" IsSelected="True" />
         </ComboBox>
 
-        <Button x:Name="tag_button" Grid.Column="1" Content="tag\wahtever\test\amongus\sussy" Margin="1" />
-        <Button x:Name="goto_button" Grid.Column="2" Content="goto" Margin="1" />
+        <Button x:Name="tag_button" Grid.Column="2" Content="tag\wahtever\test\amongus\sussy" Margin="1" />
+        <Button x:Name="goto_button" Grid.Column="4" Content="goto" Margin="1" />
+
+        <TextBlock Grid.Column="0" x:Name="value_name" Foreground="#fff"
+                   Text="name test" HorizontalAlignment="Stretch" Margin="5,0,5,0" />
+
     </Grid>
 </UserControl>

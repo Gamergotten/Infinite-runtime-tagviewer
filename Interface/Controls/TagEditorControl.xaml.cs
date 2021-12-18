@@ -373,6 +373,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						};
 
 						vb1.value.TextChanged += value_TextChanged;
+
+						vb1.value_name.Text = entry.Value.N;
 						break;
 					case "2Byte":
 						TagValueBlock? vb6 = new() { HorizontalAlignment = HorizontalAlignment.Left };
@@ -389,6 +391,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						};
 
 						vb6.value.TextChanged += value_TextChanged;
+
+						vb6.value_name.Text = entry.Value.N;
+
 						break;
 
 					case "Float":
@@ -406,6 +411,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						};
 
 						vb2.value.TextChanged += value_TextChanged;
+
+
+						vb2.value_name.Text = entry.Value.N;
 
 						break;
 
@@ -464,6 +472,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							// tag
 							tfb1.goto_button.Tag = id; // 
 							tfb1.goto_button.Click += Gotobutton;
+
+							tfb1.value_name.Text = entry.Value.N;
+
 						}
 						catch
 						{
@@ -487,6 +498,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						vb3.value.TextChanged += value_TextChanged;
 
+						vb3.value_name.Text = entry.Value.N;
+
 						break;
 
 					case "Tagblock": // need to find some kinda "whoops that tag isnt actually loaded"; keep erroring with the hlmt tag
@@ -500,7 +513,16 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						long stringAddress = _m.ReadLong((address + entry.Key + 8).ToString("X"));
 
-						tb1.tagblock_title.Text = _m.ReadString((address + entry.Key + 8).ToString("X") + ",0,0", "", 100); // this is the only thing that causes errors with unloaded tags
+						// switch either reading from mem or reading OUR tagblock name, just incase someone has to rename something for convienience or whatever
+						string our_name = entry.Value.N;
+						if (our_name == null)
+						{
+							tb1.tagblock_title.Text = _m.ReadString((address + entry.Key + 8).ToString("X") + ",0,0", "", 100); // this is the only thing that causes errors with unloaded tags
+						}
+						else
+						{
+							tb1.tagblock_title.Text = our_name;
+						}
 
 						//tb1.tagblock_title.Text = "Error: tag Unloaded";
 						//parentpanel.Children.Add(tb1);
@@ -555,7 +577,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							tb1.indexbox.IsEnabled = false;
 
 						}
-
 						//recall_blockloop(entry, new_address, tb1.dockpanel);
 						break;
 
@@ -574,6 +595,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							TagStruct = tagStruct
 						};
 						vb4.value.TextChanged += value_TextChanged;
+
+						vb4.value_name.Text = entry.Value.N;
+
 						break;
 
 					case "Flags":
@@ -643,6 +667,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							TagStruct = tagStruct
 						};
 						vb5.value.TextChanged += value_TextChanged;
+
+						vb5.value_name.Text = entry.Value.N;
+
 						break;
 				}
 
