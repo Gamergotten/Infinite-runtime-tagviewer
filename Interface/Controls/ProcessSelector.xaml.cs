@@ -31,7 +31,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
     /// </summary>
     public partial class ProcessSelector : UserControl
     {
-        public ProcessInformation? SelectedProcess { get; private set; } = null;
+        public ProcessInformation? SelectedProcess { get; set; } = null;
         public ComboBoxItem? cbxiChooseAny { get; private set; }
 		public bool selected = false;
         public bool hookProcess(Memory.Mem m)

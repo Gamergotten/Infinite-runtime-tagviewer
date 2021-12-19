@@ -162,6 +162,8 @@
                         </LayoutRoot>
                     </DockingManager>
                     
+                    <!--Insert code here to put items into settings right side menu.-->
+                    
                     <Grid Grid.Row="1" Margin="0,0,0,0" Background="#252526">
                         <Grid Margin="5,5,5,5">
                             <Grid.ColumnDefinitions>
@@ -183,9 +185,14 @@
 
                 <Grid Grid.Column="0" Margin="0,0,2,0" Background="#252526" Grid.ColumnSpan="2">
                     <TreeView x:Name="TagsTree" Grid.Row="2">
-                        <TreeViewItem Header="Colors">
+                        <TreeViewItem Header="Window">
                             <TreeViewItem Header="General" />
+                            <TreeViewItem Header="Colors" />
                             <TreeViewItem Header="Theme" />
+                        </TreeViewItem>
+                        <TreeViewItem Header="Text">
+                            <TreeViewItem Header="General" />
+                            <TreeViewItem Header="Colors" />
                         </TreeViewItem>
 
 

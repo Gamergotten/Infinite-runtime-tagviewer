@@ -133,12 +133,12 @@
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Select a Halo process.</TextBlock>
                                 </MenuItem.ToolTip>
-                                <MenuItem Header="Any" >
+                                <MenuItem x:Name="CbxAnyProcess" Header="Any" Click="AnyProcess" IsChecked="True">
                                     <MenuItem.ToolTip>
                                         <TextBlock Foreground="Black">Hook any Halo process.</TextBlock>
                                     </MenuItem.ToolTip>
                                 </MenuItem>
-                                <MenuItem Header="Specific">
+                                <MenuItem x:Name="CbxSpecificProcess" Header="Specific" Click="SpecificProcess">
                                     <MenuItem.ToolTip>
                                         <TextBlock Foreground="Black">Hook specific Halo process.</TextBlock>
                                     </MenuItem.ToolTip>
@@ -148,6 +148,9 @@
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Personalization Settings</TextBlock>
                                 </MenuItem.ToolTip>
+                            </MenuItem>
+                            <MenuItem Header="Debug">
+                                <MenuItem Header="Unload Tags" Click="UnloadTags" />
                             </MenuItem>
                         </MenuItem>
 
@@ -270,11 +273,9 @@
                     </Grid>
                     <!-- < Search Box -->
 
-                    <TreeView x:Name="TagsTree" Grid.Row="2">
+                    <TreeView x:Name="TagsTree" Grid.Row="2" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling">
                         <TreeViewItem Header="Hook and load to get started!" />
                         <TreeViewItem Header="reload the tags whenever the map changes" />
-
-
                     </TreeView>
                     <!-- < #TagsTree -->
 
@@ -289,7 +290,7 @@
                             <RowDefinition Height="auto" />
                         </Grid.RowDefinitions>
                         <TextBlock x:Name="hook_text" Text="Not hooked" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" />
-                        <Button Content="Load" Grid.Column="2" Click="BtnLoadTags_ClickAsync" Padding="4,4,4,4" />
+                        <Button Content="Load" Grid.Column="2" Click="BtnLoadTags_Click" Padding="4,4,4,4" />
 
                         <controls:ProcessSelector x:Name="processSelector" Grid.Row="1" Grid.ColumnSpan="3" Margin="00,2,0,0" />
                     </Grid>
