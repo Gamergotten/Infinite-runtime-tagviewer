@@ -1497,7 +1497,95 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x160, new C{ T="Tagblock"}},
 					{ 0x174, new C{ T="Tagblock"}},
 				}
+			},
+
+			{
+				"mode",
+				new()
+				{
+
+					{ 0x28, new C{ T="Tagblock"}},
+					{ 0x40, new C{ T="Tagblock"}},
+					{ 0x54, new C{ T="Tagblock"}},
+					{ 0x68, new C{ T="Tagblock"}},
+					{ 0x7C, new C{ T="Tagblock"}},
+					{ 0x90, new C{ T="Tagblock"}},
+
+					{ 0xA8, new C{ T="4Byte"}},
+
+					{ 0xAC, new C{ T="Tagblock"}},
+					{ 0xC0, new C{ T="Tagblock"}},
+					{ 0xD4, new C{ T="Tagblock"}},
+					{ 0xE8, new C{ T="Tagblock"}},
+					{ 0xFC, new C{ T="Tagblock"}},
+					{ 0x110, new C{ T="Tagblock"}},
+					{ 0x124, new C{ T="Tagblock"}},
+					{ 0x140, new C{ T="Tagblock"}},
+					{ 0x154, new C{ T="Tagblock"}},
+					{ 0x168, new C{ T="Tagblock"}},
+					{ 0x17C, new C{ T="Tagblock"}},
+					{ 0x190, new C{ T="Tagblock"}},
+					{ 0x1A4, new C{ T="Tagblock"}},
+					{ 0x1B8, new C{ T="Tagblock"}},
+					{ 0x1D8, new C{ T="Tagblock"}},
+					{ 0x1EC, new C{ T="Tagblock", B= new Dictionary<long, C>
+					{
+						{ 0x0, new C{ T="Float", N = "Quaternion_1"} },
+						{ 0x4, new C{ T="Float", N = "Quaternion_2"} },
+						{ 0x8, new C{ T="Float", N = "Quaternion_3"} },
+						{ 0xC, new C{ T="Float", N = "Quaternion_4"} },
+						{ 0x10, new C{ T="Float", N = "Location_X"} },
+						{ 0x14, new C{ T="Float", N = "Location_Y"} },
+						{ 0x18, new C{ T="Float", N = "Location_Z"} },
+						{ 0x1C, new C{ T="Float", N = "Scale"} },
+					}, S=32 }},
+
+
+
+					{ 0x200, new C{ T="Tagblock"}},
+					{ 0x214, new C{ T="Tagblock"}},
+					{ 0x228, new C{ T="Tagblock"}},
+					{ 0x23C, new C{ T="TagRef"}},
+					{ 0x258, new C{ T="Tagblock"}},
+
+
+				}
+
+			},
+
+			{
+				"wgtz",
+				new()
+				{
+					{ 0x10, new C{ T="Tagblock"}},
+					{ 0x24, new C{ T="Tagblock"}},
+					{ 0x38, new C{ T="Tagblock", B= new Dictionary<long, C>
+					{
+						{ 0x0, new C{ T="TagRef"}},
+					}, S=28 }},
+					{ 0x4C, new C{ T="Tagblock"}},
+					{ 0x60, new C{ T="Tagblock"}},
+					{ 0x78, new C{ T="Tagblock"}},
+					{ 0x8C, new C{ T="Tagblock"}},
+					{ 0xA0, new C{ T="Tagblock"}},
+					{ 0xB4, new C{ T="Tagblock"}},
+					{ 0xC8, new C{ T="Tagblock"}},
+					{ 0xDC, new C{ T="Tagblock"}},
+					{ 0xF0, new C{ T="Tagblock"}},
+					{ 0x104, new C{ T="Tagblock"}},
+					{ 0x118, new C{ T="Tagblock"}},
+					{ 0x12C, new C{ T="Tagblock"}},
+					{ 0x140, new C{ T="Tagblock"}},
+					{ 0x154, new C{ T="Tagblock"}},
+					{ 0x168, new C{ T="Tagblock"}},
+					{ 0x17C, new C{ T="Tagblock"}},
+
+					{ 0x190, new C{ T="TagRef"}},
+					{ 0x1A4, new C{ T="TagRef"}},
+				}
+
 			}
+
 		};
 
 	}
