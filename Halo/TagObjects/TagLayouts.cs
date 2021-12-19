@@ -571,8 +571,76 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x7F4, new C { T = "TagRef" } },
 					{ 0x850, new C { T = "TagRef" } }, // WEAP
 
-					{ 0x86C, new FlagGroup { A = 4, STR = new Dictionary<int, string>() { { 20, "Third Person" } } } },
-					{ 0x870, new FlagGroup { A = 4 } },
+					{ 0x86C, new FlagGroup { A = 4, STR = new Dictionary<int, string>() 
+					{ 
+						{ 0,  "Vertical Heat Display"  },
+						{ 1,  "Mutually Exclusive Triggers"  },
+						{ 2,  "Attacks Automatically On Bump"  },
+						{ 3,  "Must Be Readied"  },
+						{ 4,  "Doesn't Count Toward Maximum"  },
+						{ 5,  "Aim Assists Only When Zoomed"  },
+						{ 6,  "Prevents Grenade Throwing"  },
+						{ 7,  "Must Be Picked Up"  },
+						{ 8,  "Holds Triggers When Dropped"  },
+						{ 9,  "Prevents Melee Attack"  },
+						{ 10, "Detonates When Dropped"  },
+						{ 11, "Cannot Fire At Maximum Age"  },
+						{ 12, "Secondary Trigger Overrides Grenades"  },
+						{ 13, "Support Weapon"  },
+						{ 14, "Hide FP Weapon When In Iron Sights"  },
+						{ 15, "AIs Use Weapon Melee Damage"  },
+						{ 16, "Allows Binoculars"  },
+						{ 17, "Loop FP Firing Animation"  },
+						{ 18, "Prevents Crouching"  },
+						{ 19, "Use Empty Melee On Empty"  }, // Cannot Fire While Boosting // cut out this value as it doesn't allign with infinites things
+						{ 20, "Uses 3rd Person Camera"  }, // thrid person
+						{ 21, "Can Be Dual Wielded"  },
+						{ 22, "Can Only Be Dual Wielded"  },
+						{ 23, "Melee Only"  },
+						{ 24, "Can't Fire If Parent Dead"  },
+						{ 25, "Weapon Ages With Each Kill"  },
+						{ 26, "Allows Unaimed Lunge"  },
+						{ 27, "Cannot Be Used By Player"  },
+						{ 28, "Hold FP Firing Animation"  },
+						{ 29, "Strict Deviation Angle"  },
+						{ 30, "Notifies Target Units"  },
+						{ 31, "flag 31"  }
+					} } },
+					{ 0x870, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
+					{
+						{ 0,  "i just copied these from H2A lol, not all apply as intended"  }, // Magnetizes Only When Zoomed
+						{ 1,  "Force Enable Equipment Tossing"  },
+						{ 2,  "Non-Lunge Melee Dash Disabled"  },
+						{ 3,  "Don't Drop On Dual Wield Melee"  },
+						{ 4,  "Is Equipment Special Weapon"  },
+						{ 5,  "Uses Ghost Reticle"  },
+						{ 6,  "Never Overheats"  },
+						{ 7,  "Force Tracers To Come From Weapon Barrel"  },
+						{ 8,  "Cannot Fire During EMP"  },
+						{ 9,  "Weapon Can Headshot"  },
+						{ 10, "AI Cannot Fire Tracking Projectiles"  },
+						{ 11, "Second Barrel Fires If Friend Is Targeted"  },
+						{ 12, "Weapon Unzooms On Damage"  },
+						{ 13, "Do Not Drop On Equipment Activation"  },
+						{ 14, "Weapon Can Not Be Dropped"  },
+						{ 15, "Disable Function Overlays During Reload"  },
+						{ 16, "Throw Weapon Instead Of Grenade"  },
+						{ 17, "Do Not Drop 'Must Be Readied' On Primary Trigger"  },
+						{ 18, "Delete On Drop"  },
+						{ 19, "Allow Melee When Using Device"  },
+						{ 20, "Do Not Lower Weapon When Using Device"  },
+						{ 21, "Cannot Fire While Zooming"  },
+						{ 22, "Weapon Ages When Damage Is Inflicted"  },
+						{ 23, "Apply Gunner Armor Mod Abilites"  },
+						{ 24, "Weapon Drops Further Away"  }, //Wielders Sprint Is Unaffected By Soft Ping // swapped with weapon drops further away
+						{ 25, "flag 25"  }, 
+						{ 26, "Use Automatic Firing Looping Sounds"  },
+						{ 27, "Do Not Drop On Assassination"  },
+						{ 28, "Is Part Of Body"  },
+						{ 29, "Force Deny Equipment Use"  },
+						{ 30, "Hide Pickup Prompt Unless Special Pickup Priority"  },
+						{ 31, "Weapon Ignores Player Pickup Allowed Trait"  }
+					} } },
 
 					// { 0x86C, new C { T = "Flags" } },
 					// { 0x86D, new C { T = "Flags" } },
@@ -1381,57 +1449,54 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				new()
 				{
 					{ 0x014, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
+					{
+						{ 0x0C, new C{ T="TagRef"}},
+						{ 0x2C, new C{ T="TagRef"}},
+						{ 0x4C, new C{ T="TagRef"}},
+						{ 0x6C, new C{ T="TagRef"}},
+						{ 0x8C, new C{ T="TagRef"}},
+						{ 0xA8, new C{ T="TagRef"}},
+						{ 0xCC, new C{ T="Tagblock", B=new Dictionary<long, C>
 						{
-							{ 0x0C, new C{ T="TagRef"}},
-							{ 0x2C, new C{ T="TagRef"}},
-							{ 0x4C, new C{ T="TagRef"}},
-							{ 0x6C, new C{ T="TagRef"}},
-							{ 0x8C, new C{ T="TagRef"}},
-							{ 0xA8, new C{ T="TagRef"}},
-							{ 0xCC, new C{ T="Tagblock", B=new Dictionary<long, C>
-							{
-								{ 0x0, new C{ T="4Byte"}}, // datnum
-						        { 0x4, new C{ T="4Byte"}}, // datnum
-						    }, S=8}},
-							{ 0x0E4, new C{ T="TagRef"}},
-							{ 0x100, new C{ T="TagRef"}},
-							{ 0x11C, new C{ T="TagRef"}},
-							{ 0x138, new C{ T="TagRef"}},
-							{ 0x154, new C{ T="TagRef"}},
-							{ 0x170, new C{ T="TagRef"}},
-							{ 0x18C, new C{ T="TagRef"}},
-							{ 0x1A8, new C{ T="TagRef"}},
-							{ 0x1C4, new C{ T="TagRef"}},
-							{ 0x1E0, new C{ T="TagRef"}},
-							{ 0x1FC, new C{ T="TagRef"}},
-						}, S=536}},
+							{ 0x0, new C{ T="4Byte"}}, // datnum
+						    { 0x4, new C{ T="4Byte"}}, // datnum
+						}, S=8}},
+						{ 0x0E4, new C{ T="TagRef"}},
+						{ 0x100, new C{ T="TagRef"}},
+						{ 0x11C, new C{ T="TagRef"}},
+						{ 0x138, new C{ T="TagRef"}},
+						{ 0x154, new C{ T="TagRef"}},
+						{ 0x170, new C{ T="TagRef"}},
+						{ 0x18C, new C{ T="TagRef"}},
+						{ 0x1A8, new C{ T="TagRef"}},
+						{ 0x1C4, new C{ T="TagRef"}},
+						{ 0x1E0, new C{ T="TagRef"}},
+						{ 0x1FC, new C{ T="TagRef"}},
+					}, S=536}},
 					{ 0x028, new C{ T="Tagblock"}},
 					{ 0x03C, new C{ T="Tagblock"}},
 					{ 0x050, new C{ T="Tagblock"}},
 					{ 0x064, new C{ T="Tagblock"}},
 				}
-			}
-			,
+			},
+
+			{"foot",new()
 			{
-				"foot",
-				new()
+				{ 0x10, new C{ T="Tagblock", B=new Dictionary<long, C> // 
 				{
-					{ 0x10, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
-						{
-							{ 0x0, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
-						    {
-								{ 0x00, new C{ T="TagRef"}},
-								{ 0x1C, new C{ T="TagRef"}}
-							}, S=72 } },
-							{ 0x14, new C{ T="Tagblock", B=new Dictionary<long, C> // object_attachment_definition
-						    {
-								{ 0x00, new C{ T="TagRef"}},
-								{ 0x1C, new C{ T="TagRef"}}
-							}, S=72 } }
-						}, S=40 } }
-				}
-			}
-			,
+					{ 0x0, new C{ T="Tagblock", B=new Dictionary<long, C> // 
+					{
+						{ 0x00, new C{ T="TagRef"}},
+						{ 0x1C, new C{ T="TagRef"}}
+					}, S=72 } },
+					{ 0x14, new C{ T="Tagblock", B=new Dictionary<long, C> // 
+					{
+						{ 0x00, new C{ T="TagRef"}},
+						{ 0x1C, new C{ T="TagRef"}}
+					}, S=72 } }
+				}, S=40 } }
+			}},
+
 			{
 				"ocgd", // ocgd* no wonder why i couldn't find it 
 				new()  
@@ -1499,94 +1564,719 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				}
 			},
 
+			{"mode",new()
 			{
-				"mode",
-				new()
+
+				{ 0x28, new C{ T="Tagblock"}},
+				{ 0x40, new C{ T="Tagblock"}},
+				{ 0x54, new C{ T="Tagblock"}},
+				{ 0x68, new C{ T="Tagblock"}},
+				{ 0x7C, new C{ T="Tagblock"}},
+				{ 0x90, new C{ T="Tagblock"}},
+
+				{ 0xA8, new C{ T="4Byte"}},
+
+				{ 0xAC, new C{ T="Tagblock"}},
+				{ 0xC0, new C{ T="Tagblock"}},
+				{ 0xD4, new C{ T="Tagblock"}},
+				{ 0xE8, new C{ T="Tagblock"}},
+				{ 0xFC, new C{ T="Tagblock"}},
+				{ 0x110, new C{ T="Tagblock"}},
+				{ 0x124, new C{ T="Tagblock"}},
+				{ 0x140, new C{ T="Tagblock"}},
+				{ 0x154, new C{ T="Tagblock"}},
+				{ 0x168, new C{ T="Tagblock"}},
+				{ 0x17C, new C{ T="Tagblock"}},
+				{ 0x190, new C{ T="Tagblock"}},
+				{ 0x1A4, new C{ T="Tagblock"}},
+				{ 0x1B8, new C{ T="Tagblock"}},
+				{ 0x1D8, new C{ T="Tagblock"}},
+				{ 0x1EC, new C{ T="Tagblock", B= new Dictionary<long, C>
 				{
+					{ 0x0, new C{ T="Float", N = "Quaternion_1"} },
+					{ 0x4, new C{ T="Float", N = "Quaternion_2"} },
+					{ 0x8, new C{ T="Float", N = "Quaternion_3"} },
+					{ 0xC, new C{ T="Float", N = "Quaternion_4"} },
+					{ 0x10, new C{ T="Float", N = "Location_X"} },
+					{ 0x14, new C{ T="Float", N = "Location_Y"} },
+					{ 0x18, new C{ T="Float", N = "Location_Z"} },
+					{ 0x1C, new C{ T="Float", N = "Scale"} },
+				}, S=32 }},
+				{ 0x200, new C{ T="Tagblock"}},
+				{ 0x214, new C{ T="Tagblock"}},
+				{ 0x228, new C{ T="Tagblock"}},
+				{ 0x23C, new C{ T="TagRef"}},
+				{ 0x258, new C{ T="Tagblock"}},
+			}},
 
-					{ 0x28, new C{ T="Tagblock"}},
-					{ 0x40, new C{ T="Tagblock"}},
-					{ 0x54, new C{ T="Tagblock"}},
-					{ 0x68, new C{ T="Tagblock"}},
-					{ 0x7C, new C{ T="Tagblock"}},
-					{ 0x90, new C{ T="Tagblock"}},
-
-					{ 0xA8, new C{ T="4Byte"}},
-
-					{ 0xAC, new C{ T="Tagblock"}},
-					{ 0xC0, new C{ T="Tagblock"}},
-					{ 0xD4, new C{ T="Tagblock"}},
-					{ 0xE8, new C{ T="Tagblock"}},
-					{ 0xFC, new C{ T="Tagblock"}},
-					{ 0x110, new C{ T="Tagblock"}},
-					{ 0x124, new C{ T="Tagblock"}},
-					{ 0x140, new C{ T="Tagblock"}},
-					{ 0x154, new C{ T="Tagblock"}},
-					{ 0x168, new C{ T="Tagblock"}},
-					{ 0x17C, new C{ T="Tagblock"}},
-					{ 0x190, new C{ T="Tagblock"}},
-					{ 0x1A4, new C{ T="Tagblock"}},
-					{ 0x1B8, new C{ T="Tagblock"}},
-					{ 0x1D8, new C{ T="Tagblock"}},
-					{ 0x1EC, new C{ T="Tagblock", B= new Dictionary<long, C>
-					{
-						{ 0x0, new C{ T="Float", N = "Quaternion_1"} },
-						{ 0x4, new C{ T="Float", N = "Quaternion_2"} },
-						{ 0x8, new C{ T="Float", N = "Quaternion_3"} },
-						{ 0xC, new C{ T="Float", N = "Quaternion_4"} },
-						{ 0x10, new C{ T="Float", N = "Location_X"} },
-						{ 0x14, new C{ T="Float", N = "Location_Y"} },
-						{ 0x18, new C{ T="Float", N = "Location_Z"} },
-						{ 0x1C, new C{ T="Float", N = "Scale"} },
-					}, S=32 }},
-
-
-
-					{ 0x200, new C{ T="Tagblock"}},
-					{ 0x214, new C{ T="Tagblock"}},
-					{ 0x228, new C{ T="Tagblock"}},
-					{ 0x23C, new C{ T="TagRef"}},
-					{ 0x258, new C{ T="Tagblock"}},
-
-
-				}
-
-			},
-
+			{"wgtz",new()
 			{
-				"wgtz",
-				new()
+				{ 0x10, new C{ T="Tagblock"}},
+				{ 0x24, new C{ T="Tagblock"}},
+				{ 0x38, new C{ T="Tagblock", B= new Dictionary<long, C>
 				{
-					{ 0x10, new C{ T="Tagblock"}},
-					{ 0x24, new C{ T="Tagblock"}},
-					{ 0x38, new C{ T="Tagblock", B= new Dictionary<long, C>
-					{
-						{ 0x0, new C{ T="TagRef"}},
-					}, S=28 }},
-					{ 0x4C, new C{ T="Tagblock"}},
-					{ 0x60, new C{ T="Tagblock"}},
-					{ 0x78, new C{ T="Tagblock"}},
-					{ 0x8C, new C{ T="Tagblock"}},
-					{ 0xA0, new C{ T="Tagblock"}},
-					{ 0xB4, new C{ T="Tagblock"}},
-					{ 0xC8, new C{ T="Tagblock"}},
-					{ 0xDC, new C{ T="Tagblock"}},
-					{ 0xF0, new C{ T="Tagblock"}},
-					{ 0x104, new C{ T="Tagblock"}},
-					{ 0x118, new C{ T="Tagblock"}},
-					{ 0x12C, new C{ T="Tagblock"}},
-					{ 0x140, new C{ T="Tagblock"}},
-					{ 0x154, new C{ T="Tagblock"}},
-					{ 0x168, new C{ T="Tagblock"}},
-					{ 0x17C, new C{ T="Tagblock"}},
+					{ 0x0, new C{ T="TagRef"}},
+				}, S=28 }},
+				{ 0x4C, new C{ T="Tagblock"}},
+				{ 0x60, new C{ T="Tagblock"}},
+				{ 0x78, new C{ T="Tagblock"}},
+				{ 0x8C, new C{ T="Tagblock"}},
+				{ 0xA0, new C{ T="Tagblock"}},
+				{ 0xB4, new C{ T="Tagblock"}},
+				{ 0xC8, new C{ T="Tagblock"}},
+				{ 0xDC, new C{ T="Tagblock"}},
+				{ 0xF0, new C{ T="Tagblock"}},
+				{ 0x104, new C{ T="Tagblock"}},
+				{ 0x118, new C{ T="Tagblock"}},
+				{ 0x12C, new C{ T="Tagblock"}},
+				{ 0x140, new C{ T="Tagblock"}},
+				{ 0x154, new C{ T="Tagblock"}},
+				{ 0x168, new C{ T="Tagblock"}},
+				{ 0x17C, new C{ T="Tagblock"}},
 
-					{ 0x190, new C{ T="TagRef"}},
-					{ 0x1A4, new C{ T="TagRef"}},
-				}
+				{ 0x190, new C{ T="TagRef"}},
+				{ 0x1A4, new C{ T="TagRef"}},
+			}},
 
-			}
+			{"char",new()
+			{
+				{ 0x14, new C{ T="TagRef", N="Parent"}},
+				{ 0x30, new C{ T="TagRef", N="Biped"}},
+				{ 0x4C, new C{ T="TagRef", N="Creature"}},
+				{ 0x68, new C{ T="TagRef", N="Style"}},
+				{ 0x84, new C{ T="TagRef", N="Major"}},
+				{ 0xA0, new C{ T="TagRef"}},
+
+				{ 0xBC + 0x14*0, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*1, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*2, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*3, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*4, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*5, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*6, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*7, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*8, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*9, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*10, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*11, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*12, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*13, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*14, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*15, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*16, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*17, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*18, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*19, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*20, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*21, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*22, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*23, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*24, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*25, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*26, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*27, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*28, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*29, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*30, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*31, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*32, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*33, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*34, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*35, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*36, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*37, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*38, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*39, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*40, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*41, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*42, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*43, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*44, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*45, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*46, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*47, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*48, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*49, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*50, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*51, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*52, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*53, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*54, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*55, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*56, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*57, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*58, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*59, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*60, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*61, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*62, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*63, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*64, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*65, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*66, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*67, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*68, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*69, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*70, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*71, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*72, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*73, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*74, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*75, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*76, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*77, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*78, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*79, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*80, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*81, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*82, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*83, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*84, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*85, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*86, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*87, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*88, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*89, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*90, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*91, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*92, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*93, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*94, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*95, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*96, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*97, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*98, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*99, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*100, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*101, new C{ T="Tagblock"}},
+			}},
+
+			{"bipd",new()
+			{
+				{ 40, new C { T = "Float" } },
+				{ 44, new C { T = "Float" } },
+				{ 48, new C { T = "Float" } },
+				{ 52, new C { T = "Float" } },
+				{ 56, new C { T = "Float" } },
+				{ 60, new C { T = "Float" } },
+				{ 64, new C { T = "Float" } },
+				{ 76, new C { T = "Float" } },
+				{ 80, new C { T = "Float" } },
+				{ 84, new C { T = "Float" } },
+
+				{ 92, new C { T = "Tagblock" } }, // SidecarPathDefinition
+
+				{ 112, new C { T = "mmr3Hash", N = "Default Variant" } }, // default variant
+				{ 116, new C { T = "Float" } },
+
+				{ 120, new C { T = "TagRef", N = "Model" } }, // vehicle model 
+				{ 148, new C { T = "TagRef" } }, // aset tag ref
+				{ 176, new C { T = "TagRef" } },
+				{ 204, new C { T = "TagRef" } },
+
+				{ 232, new C { T = "4Byte" } },
+
+				{ 240, new C { T = "TagRef" } },
+
+				{ 276, new C { T = "Float" } },
+
+				{ 288, new C { T = "TagRef" } },
+				{ 316, new C { T = "TagRef" } }, // foot tag ref
+				{ 344, new C { T = "TagRef" } }, // vemd tag ref
+				{ 372, new C { T = "TagRef" } }, // smed tag ref
+				{ 400, new C { T = "TagRef" } },
+
+				{ 432, new C { T = "Float" } },
+
+				{ 448, new C { T = "Tagblock" } }, // object_ai_properties
+				{ 468, new C { T = "Tagblock" } }, // s_object_function_definition
+				{ 488, new C { T = "4Byte" } },
+				{ 492, new C { T = "Tagblock" } }, // ObjectRuntimeInterpolatorFunctionsBlock
+				{ 512, new C { T = "Tagblock" } }, // ObjectFunctionSwitchDefinition
+				{ 532, new C { T = "Tagblock" } }, // i343::Objects::ObjectFunctionForwarding
+				{ 552, new C { T = "4Byte" } },
+				{ 556, new C { T = "Tagblock" } }, // i343::Objects::AmmoRefillVariant
+				{ 576, new C { T = "4Byte" } },
+				{ 0x248,new C{T = "Tagblock",B = new Dictionary<long, C> // object_attachment_definition
+				{
+					{ 4, new C{ T="TagRef"}}, // effe
+					{ 32, new C{ T="TagRef"}}, // effe
+					{ 64, new C{ T="Tagblock"}},
+					{ 84, new C{ T="TagRef"}}, //
+					{ 112, new C{ T="Tagblock"}}
+				},S = 148}},
+
+				{ 604, new C { T = "Tagblock" } }, // object_indirect_lighting_settings_definition
+				{ 624, new C { T = "Tagblock" } }, // s_water_physics_hull_surface_definition
+				{ 644, new C { T = "Tagblock" } }, // s_jetwash_definition
+				{ 664, new C { T = "Tagblock" } }, // object_definition_widget
+				{ 684, new C { T = "Tagblock" } }, // object_change_color_definition
+				{ 704, new C { T = "Tagblock" } }, // s_multiplayer_object_properties_definition
+				{ 724, new C { T = "Tagblock" } }, // i343::Objects::ForgeObjectEntryDefinition
+
+				{ 744, new C { T = "TagRef" } },
+				{ 772, new C { T = "TagRef" } },
+
+				{ 800, new C { T = "Tagblock" } }, // s_object_spawn_effects
+				{ 820, new C { T = "Tagblock" } }, // ModelDissolveDataBlock
+
+
+				{ 0x348, new C { T = "String" } },
+				{ 0x45C, new C { T = "TagRef" } },
+
+				{ 0x484, new C { T = "Tagblock" } },
+				{ 0x498, new C { T = "Tagblock" } },
+				{ 0x4AC, new C { T = "Tagblock" } },
+				{ 0x4C8, new C { T = "Tagblock" } },
+				{ 0x4E0, new C { T = "Float" } },
+
+				{ 0x4E4, new C { T = "TagRef" } },
+				{ 0x500, new C { T = "Tagblock" } },
+				{ 0x514, new C { T = "TagRef" } },
+
+				{ 0x530, new C { T = "Tagblock" } },
+				{ 0x548, new C { T = "Tagblock" } },
+				{ 0x55C, new C { T = "TagRef" } },
+				{ 0x578, new C { T = "Tagblock" } },
+				{ 0x58C, new C { T = "Tagblock" } },
+
+				{ 0x5A0, new C { T = "Float" } },
+				{ 0x5A4, new C { T = "Float" } },
+				{ 0x5A8, new C { T = "Float" } },
+				{ 0x5AC, new C { T = "Float" } },
+				{ 0x5B0, new C { T = "Float" } },
+				{ 0x5B4, new C { T = "Float" } },
+				{ 0x5B8, new C { T = "Float" } },
+				{ 0x5BC, new C { T = "Float" } },
+				{ 0x5C0, new C { T = "Float" } },
+				{ 0x5C4, new C { T = "Float" } },
+				{ 0x5C8, new C { T = "Float" } },
+				{ 0x5CC, new C { T = "Float" } },
+				{ 0x5E0, new C { T = "Float" } },
+
+				{ 0x5E8, new C { T = "Tagblock" } },
+
+				{ 0x5FC, new C { T = "Float" } },
+				{ 0x600, new C { T = "Float" } },
+				{ 0x604, new C { T = "Float" } },
+
+				{ 0x60C, new C { T = "Tagblock" } },
+				{ 0x620, new C { T = "Tagblock" } },
+				{ 0x638, new C { T = "Tagblock" } },
+
+				{ 0x64C, new C { T = "Float" } },
+
+				{ 0x650, new C { T = "Tagblock" } },
+				{ 0x664, new C { T = "Tagblock" } },
+				{ 0x678, new C { T = "Tagblock" } },
+				{ 0x68C, new C { T = "Tagblock" } },
+				{ 0x6A0, new C { T = "Tagblock" } },
+
+				{ 0x6B8, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0,  "Circular Aiming"  },
+					{ 1,  "Destroyed After Dying"  },
+					{ 2,  "Half-Speed Interpolation"  },
+					{ 3,  "Fires From Camera"  },
+					{ 4,  "Entrance Inside Bounding Sphere"  },
+					{ 5,  "Doesn't Show Readied Weapon"  },
+					{ 6,  "Causes Passenger Dialogue"  },
+					{ 7,  "Resists Pings"  },
+					{ 8,  "Melee Attack Is Fatal"  },
+					{ 9,  "Don't Reface During Pings"  },
+					{ 10, "Has No Aiming"  },
+					{ 11, "Impact Melee Attaches To Unit"  },
+					{ 12, "Impact Melee Dies On Shields"  },
+					{ 13, "Cannot Open Doors Automatically"  },
+					{ 14, "Melee Attackers Cannot Attach"  },
+					{ 15, "Not Instantly Killed By Melee"  },
+					{ 16, "Flashlight Power Doesnt Transfer To Weapon"  },
+					{ 17, "Runs Around Flaming"  },
+					{ 18, "Top Level For AOE Damage"  },
+					{ 19, "Special Cinematic Unit"  },
+					{ 20, "Ignored By Autoaiming"  },
+					{ 21, "Shields Fry Infection Forms"  },
+					{ 22, "Use Velocity As Acceleration"  },
+					{ 23, "Can Dual Wield"  },
+					{ 24, "Acts As Gunner For Parent"  },
+					{ 25, "Controlled By Parent Gunner"  },
+					{ 26, "Parent's Primary Weapon"  },
+					{ 27, "Parent's Secondary Weapon"  },
+					{ 28, "Unit Has Boost"  },
+					{ 29, "Unit Has Vectored Thrust"  },
+					{ 30, "Allow Aim While Opening Or Closing"  },
+					{ 31, "Compute Acceleration From Aiming"  }
+				} } },
+				{ 0x6BC, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0,  "Override All Pings"  },
+					{ 1,  "Unit Supports Bailout"  },
+					{ 2,  "Flying Or Vehicle Hard Pings Allowed"  },
+					{ 3,  "Attempt To Fire From Weapon Matching Camera"  },
+					{ 4,  "Treat As Vehicle"  },
+					{ 5,  "Dropped Weapons Can Dissolve"  },
+					{ 6,  "Hard Pings Not Allowed For Driver-Less Vehicle"  },
+					{ 7,  "No Friendly Bump Damage"  },
+					{ 8,  "Ignores Attachment Feedback Forced Hard Pings"  },
+					{ 9,  "Unit Appears On Radar As Dot Not Sprite"  },
+					{ 10, "Suppress Radar Blip"  },
+					{ 11, "Do Not Ignore Parents For Line Of Sight Tests"  },
+					{ 12, "Do Not Pass Attached AOE Damage To Children"  },
+					{ 13, "Do Not Generate AI Line Of Fire Pill For Unit"  }
+				} } },
+
+				{ 0x6C0, new C { T = "2Byte", N="Unit Team Enum" } },
+
+				{ 0x6C4, new C { T = "TagRef", N="Hologram Unit" } },
+
+				{ 0x6E0, new C { T = "Tagblock" } }, // metagame bucket
+				{ 0x6F4, new C { T = "Tagblock" } },
+				{ 0x720, new C { T = "Tagblock", B = new Dictionary<long, C> // camera tracks
+				{
+					{ 0x0, new C{ T="TagRef", N="3rdperson cam"}},
+					{ 0x1C, new C{ T="TagRef", N = "Screen effect"}},
+
+				},S = 64}},
+				{ 0x768, new C { T = "Tagblock" } },
+				{ 0x790, new C { T = "Tagblock", B = new Dictionary<long, C> // 
+				{
+					{ 0x0, new C{ T="TagRef", N="3rdperson cam"}},
+					{ 0x1C, new C{ T="TagRef", N = "Screen effect"}},
+
+				},S = 64}},
+				{ 0x7D8, new C { T = "Tagblock" } },
+
+				{ 0x7F0, new C { T = "TagRef" } },
+
+				{ 0x80C, new C { T = "Float" } },
+				{ 0x810, new C { T = "Float" } },
+				{ 0x814, new C { T = "Float" } },
+				{ 0x818, new C { T = "Float" } },
+				{ 0x820, new C { T = "Float" } },
+				{ 0x824, new C { T = "Float" } },
+				{ 0x830, new C { T = "Float" } },
+				{ 0x834, new C { T = "Float" } },
+				{ 0x838, new C { T = "Float" } },
+				{ 0x83C, new C { T = "Float" } },
+				{ 0x840, new C { T = "Float" } },
+				{ 0x854, new C { T = "Float" } },
+				{ 0x858, new C { T = "Float" } },
+				{ 0x864, new C { T = "Float" } },
+
+				{ 0x870, new C { T = "TagRef" } },
+
+				{ 0x898, new C { T = "Float" } },
+				{ 0x8A4, new C { T = "Float" } },
+
+				{ 0x8BC, new C { T = "Tagblock" } },
+
+				{ 0x8D0, new C { T = "TagRef" } },
+				{ 0x8EC, new C { T = "TagRef" } },
+				{ 0x908, new C { T = "TagRef" } },
+				{ 0x924, new C { T = "TagRef" } },
+				{ 0x940, new C { T = "TagRef" } },
+				{ 0x95C, new C { T = "TagRef" } },
+				{ 0x978, new C { T = "TagRef" } },
+				{ 0x994, new C { T = "TagRef" } },
+				{ 0x9B0, new C { T = "TagRef" } },
+
+				{ 0x9E0, new C { T = "Tagblock" } },
+				{ 0x9F4, new C { T = "Tagblock" } },
+
+				{ 0xA08, new C { T = "Float" } },
+				{ 0xA0C, new C { T = "Float" } },
+				{ 0xA10, new C { T = "Float" } },
+				{ 0xA30, new C { T = "Float" } },
+				{ 0xA34, new C { T = "Float" } },
+				{ 0xA38, new C { T = "Float" } },
+				{ 0xA3C, new C { T = "Float" } },
+				{ 0xA40, new C { T = "Float" } },
+				{ 0xA44, new C { T = "Float" } },
+				{ 0xA48, new C { T = "Float" } },
+
+				{ 0xA64, new C { T = "Tagblock" } },
+				{ 0xA78, new C { T = "Tagblock" } },
+				{ 0xA8C, new C { T = "Tagblock" } },
+				{ 0xAA0, new C { T = "Tagblock" } },
+
+				{ 0xAB4, new C { T = "Float" } },
+				{ 0xAB8, new C { T = "Float" } },
+
+				{ 0xAC8, new C { T = "TagRef" } },
+
+				{ 0xAE4, new C { T = "Tagblock" } },
+
+				{ 0xAF8, new C { T = "TagRef" } },
+				{ 0xB14, new C { T = "TagRef" } },
+				{ 0xB7C, new C { T = "TagRef" } },
+				{ 0xB98, new C { T = "TagRef" } },
+				{ 0xBB4, new C { T = "Tagblock" } },
+				{ 0xBE4, new C { T = "TagRef" } },
+
+				{ 0xC04, new C { T = "Float" } },
+				{ 0xC08, new C { T = "Float" } },
+				{ 0xC0C, new C { T = "Float" } },
+				{ 0xC10, new C { T = "Float" } },
+				{ 0xC14, new C { T = "Float" } },
+				{ 0xC18, new C { T = "Float" } },
+				{ 0xC1C, new C { T = "Float" } },
+				{ 0xC20, new C { T = "Float" } },
+				{ 0xC24, new C { T = "Float" } },
+				{ 0xC30, new C { T = "Float" } },
+				{ 0xC34, new C { T = "Float" } },
+				{ 0xC3C, new C { T = "Float" } },
+
+				{ 0xC40, new C { T = "TagRef" } },
+
+				{ 0xC5C, new C { T = "Float" } },
+				{ 0xC60, new C { T = "Float" } },
+				{ 0xC64, new C { T = "Float" } },
+				{ 0xC68, new C { T = "Float" } },
+				{ 0xC70, new C { T = "Float" } },
+				{ 0xC74, new C { T = "Float" } },
+				{ 0xC78, new C { T = "Float" } },
+				{ 0xC7C, new C { T = "Float" } },
+				{ 0xC80, new C { T = "Float" } },
+				{ 0xC8C, new C { T = "Float" } },
+
+				{ 0xC94, new C { T = "Float" } },
+				{ 0xC98, new C { T = "Float" } },
+				{ 0xCA0, new C { T = "Float" } },
+				{ 0xCAC, new C { T = "Float" } },
+				{ 0xCB8, new C { T = "Float" } },
+				{ 0xCBC, new C { T = "Float" } },
+				{ 0xCC4, new C { T = "Float" } },
+				{ 0xCC8, new C { T = "Float" } },
+				{ 0xCD0, new C { T = "Float" } },
+				{ 0xCD4, new C { T = "Float" } },
+				{ 0xCDC, new C { T = "Float" } },
+				{ 0xCE0, new C { T = "Float" } },
+				{ 0xCE8, new C { T = "Float" } },
+				{ 0xCEC, new C { T = "Float" } },
+				{ 0xCF8, new C { T = "Float" } },
+				{ 0xCFC, new C { T = "Float" } },
+				{ 0xD00, new C { T = "Float" } },
+				{ 0xD04, new C { T = "Float" } },
+				{ 0xD0C, new C { T = "Float" } },
+				{ 0xD10, new C { T = "Float" } },
+
+				{ 0xD18, new C { T = "Float" } },
+				{ 0xD24, new C { T = "Float" } },
+
+				{ 0xD28, new C { T = "TagRef" } },
+				{ 0xD44, new C { T = "TagRef" } },
+				{ 0xD64, new C { T = "TagRef" } },
+				{ 0xD80, new C { T = "TagRef" } },
+
+				{ 0xD9C, new C { T = "Float" } },
+				{ 0xDA4, new C { T = "Float" } },
+
+				{ 0xDAC, new C { T = "TagRef" } },
+
+				{ 0xDD0, new C { T = "Float", N = "Jump Velocity" } },
+
+				{ 0xDD4, new C { T = "Tagblock" } },
+
+				{ 0xDEC, new C { T = "Float" } },
+				{ 0xDF0, new C { T = "Float" } },
+				{ 0xDF4, new C { T = "Float" } },
+				{ 0xDF8, new C { T = "Float" } },
+				{ 0xDFC, new C { T = "Float" } },
+				{ 0xE00, new C { T = "Float" } },
+				{ 0xE04, new C { T = "Float" } },
+				{ 0xE08, new C { T = "Float" } },
+				{ 0xE0C, new C { T = "Float" } },
+				{ 0xE10, new C { T = "Float" } },
+				{ 0xE14, new C { T = "Float" } },
+				{ 0xE18, new C { T = "Float" } },
+				{ 0xE1C, new C { T = "Float" } },
+				{ 0xE24, new C { T = "Float" } },
+
+				{ 0xE64, new C { T = "Tagblock" } },
+
+				{ 0xE78, new C { T = "Float" } },
+				{ 0xE7C, new C { T = "Float" } },
+				{ 0xE80, new C { T = "Float" } },
+				{ 0xE88, new C { T = "Float" } },
+				{ 0xE8C, new C { T = "Float" } },
+				{ 0xE90, new C { T = "Float" } },
+				{ 0xE94, new C { T = "Float" } },
+				{ 0xE98, new C { T = "Float" } },
+				{ 0xE9C, new C { T = "Float" } },
+				{ 0xEA0, new C { T = "Float" } },
+
+				{ 0xEA4, new C { T = "TagRef" } },
+				{ 0xEC0, new C { T = "TagRef" } },
+
+				{ 0xEDC, new C { T = "Tagblock" } },
+				{ 0xEF0, new C { T = "Tagblock" } },
+
+				{ 0xF14, new FlagGroup {A = 4,STR = new Dictionary<int, string>() {
+					{ 0,  "Centered At origin"  },
+					{ 1,  "Shape Spherical"  },
+					{ 2,  "Use Player Physics"  },
+					{ 3,  "Climb Any Surface"  },
+					{ 4,  "Flying"  },
+					{ 5,  "Not Physical"  },
+					{ 6,  "Dead Character Collision Group"  },
+					{ 7,  "Suppress Ground Planes On Bipeds"  },
+					{ 8,  "Physical Ragdoll"  },
+					{ 9,  "Do Not Resize Dead Spheres"  },
+					{ 10, "Multiple Mantis Shapes"  },
+					{ 11, "I Am An Extreme Slipsurface"  },
+					{ 12, "Slips Off Movers"  },
+					//{ 13, "wwwww"  },
+					//{ 14, "wwwww"  },
+					//{ 15, "wwwww"  },
+					//{ 16, "wwwww"  },
+					//{ 17, "wwwww"  },
+					//{ 18, "wwwww"  },
+					//{ 19, "wwwww"  },
+					//{ 20, "wwwww"  },
+					//{ 21, "wwwww"  },
+					//{ 22, "wwwww"  },
+					//{ 23, "wwwww"  },
+					//{ 24, "wwwww"  },
+					//{ 25, "wwwww"  },
+					//{ 26, "wwwww"  },
+					//{ 27, "wwwww"  },
+					//{ 28, "wwwww"  },
+					//{ 29, "wwwww"  },
+					//{ 30, "wwwww"  },
+					//{ 31, "wwwww"  }
+				}} },
+
+
+				{ 0xF18, new C { T = "Float" } },
+				{ 0xF1C, new C { T = "Float" } },
+				{ 0xF20, new C { T = "Float" } },
+				{ 0xF24, new C { T = "Float" } },
+
+				{ 0xF38, new C { T = "Tagblock" } },
+				{ 0xF4C, new C { T = "Tagblock" } },
+				{ 0xF60, new C { T = "Tagblock" } },
+				{ 0xF74, new C { T = "Tagblock" } },
+				{ 0xF88, new C { T = "Tagblock" } },
+
+				{ 0xFA0, new C { T = "Float" } },
+				{ 0xFA4, new C { T = "Float" } },
+				{ 0xFA8, new C { T = "Float" } },
+				{ 0xFAC, new C { T = "Float" } },
+				{ 0xFB0, new C { T = "Float" } },
+				{ 0xFB4, new C { T = "Float" } },
+				{ 0xFB8, new C { T = "Float" } },
+				{ 0xFBC, new C { T = "Float" } },
+				{ 0xFC0, new C { T = "Float" } },
+				{ 0xFC4, new C { T = "Float" } },
+				{ 0xFC8, new C { T = "Float" } },
+				{ 0xFCC, new C { T = "Float" } },
+				{ 0xFD0, new C { T = "Float" } },
+				{ 0xFD4, new C { T = "Float" } },
+				{ 0xFD8, new C { T = "Float" } },
+				{ 0xFDC, new C { T = "Float" } },
+				{ 0xFF0, new C { T = "Float" } },
+				{ 0xFF4, new C { T = "Float" } },
+				{ 0xFF8, new C { T = "Float" } },
+				{ 0xFFC, new C { T = "Float" } },
+				{ 0x1000, new C { T = "Float" } },
+				{ 0x1004, new C { T = "Float" } },
+				{ 0x1008, new C { T = "Float" } },
+
+				{ 0x101C, new C { T = "TagRef" } },
+
+				{ 0x1038, new C { T = "Float" } },
+				{ 0x103C, new C { T = "Float" } },
+				{ 0x1040, new C { T = "Float" } },
+				{ 0x1044, new C { T = "Float" } },
+				{ 0x1048, new C { T = "Float" } },
+				{ 0x104C, new C { T = "Float" } },
+				{ 0x1050, new C { T = "Float" } },
+				{ 0x1054, new C { T = "Float" } },
+				{ 0x1058, new C { T = "Float" } },
+				{ 0x105C, new C { T = "Float" } },
+				{ 0x1060, new C { T = "Float" } },
+				{ 0x1064, new C { T = "Float" } },
+
+				{ 0x1068, new C { T = "TagRef" } },
+				{ 0x1084, new C { T = "Tagblock" } },
+
+				{ 0x1098, new C { T = "TagRef" } },
+				{ 0x10B4, new C { T = "TagRef" } },
+				{ 0x11B8, new C { T = "TagRef" } },
+				{ 0x11D4, new C { T = "TagRef" } },
+				{ 0x11F0, new C { T = "TagRef" } },
+				{ 0x120C, new C { T = "TagRef" } },
+				{ 0x1228, new C { T = "TagRef" } },
+
+				{ 0x1248, new C { T = "Tagblock" } },
+				{ 0x125C, new C { T = "Tagblock" } },
+				{ 0x1270, new C { T = "Tagblock" } },
+
+				{ 0x1284, new C { T = "TagRef" } },
+				{ 0x12A0, new C { T = "TagRef" } },
+
+				{ 0x13E8, new C { T = "Tagblock" } },
+
+				{ 0x150C, new C { T = "TagRef" } },
+				{ 0x1528, new C { T = "TagRef" } },
+
+				{ 0x1548, new C { T = "Tagblock" } }
+			}},
+
+			{"sqds",new()
+			{
+				{ 0x14, new C{ T="Tagblock", B= new Dictionary<long, C>
+				{
+					{ 0x10, new C{ T="TagRef"}},
+					{ 0x2C, new C{ T="TagRef"}},
+					{ 0x48, new C{ T="TagRef"}},
+				}, S=104 }},
+				{ 0x28, new C{ T="Tagblock"}},
+				{ 0x3C, new C{ T="Tagblock"}},
+			}},
 
 		};
+
+
+
+
+
+		// need this mf here so i can copy paste when doing more flag groups
+		//{ 0x 000, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
+		//{
+		//	{ 0,  "wwwww"  },
+		//	{ 1,  "wwwww"  },
+		//	{ 2,  "wwwww"  },
+		//	{ 3,  "wwwww"  },
+		//	{ 4,  "wwwww"  },
+		//	{ 5,  "wwwww"  },
+		//	{ 6,  "wwwww"  },
+		//	{ 7,  "wwwww"  },
+		//	{ 8,  "wwwww"  },
+		//	{ 9,  "wwwww"  },
+		//	{ 10, "wwwww"  },
+		//	{ 11, "wwwww"  },
+		//	{ 12, "wwwww"  },
+		//	{ 13, "wwwww"  },
+		//	{ 14, "wwwww"  },
+		//	{ 15, "wwwww"  },
+		//	{ 16, "wwwww"  },
+		//	{ 17, "wwwww"  },
+		//	{ 18, "wwwww"  },
+		//	{ 19, "wwwww"  },
+		//	{ 20, "wwwww"  },
+		//	{ 21, "wwwww"  },
+		//	{ 22, "wwwww"  },
+		//	{ 23, "wwwww"  },
+		//	{ 24, "wwwww"  },
+		//	{ 25, "wwwww"  },
+		//	{ 26, "wwwww"  },
+		//	{ 27, "wwwww"  },
+		//	{ 28, "wwwww"  },
+		//	{ 29, "wwwww"  },
+		//	{ 30, "wwwww"  },
+		//	{ 31, "wwwww"  }
+		//}}}
 
 	}
 }
