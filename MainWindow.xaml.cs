@@ -53,8 +53,8 @@ namespace InfiniteRuntimeTagViewer
 			inhale_tagnames();
 		}
 
-		private bool loadedTags = false;
-		private bool hooked = false;
+		public bool loadedTags = false;
+		public bool hooked = false;
 		private void OnTimedEvent(object source, ElapsedEventArgs e)
 		{
 			Dispatcher.Invoke(new Action(async () =>
@@ -179,7 +179,7 @@ namespace InfiniteRuntimeTagViewer
 		private async void BtnLoadTags_Click(object sender, RoutedEventArgs e)
 		{
 			//hook_text.Text = "Opening process...";
-			processSelector.hookProcess(M);
+		    bool reset = processSelector.hookProcess(M); 
 			//System.Diagnostics.Debug.WriteLine(processSelector.selected);
 			if (M.pHandle == IntPtr.Zero || processSelector.selected == false || loadedTags == false)
 			{
@@ -191,7 +191,7 @@ namespace InfiniteRuntimeTagViewer
 				//return;
 			}
 
-			if (hooked == false)
+			if (hooked == false || reset)
 			{
 				// Get the base address
 				BaseAddress = M.ReadLong("HaloInfinite.exe+0x4879758");
@@ -212,7 +212,7 @@ namespace InfiniteRuntimeTagViewer
 			if (BaseAddress != -1)
 			{
 				LoadTagsMem();
-				if (hooked == true) // apparently we dont hook if we *have* the address :frown //This is to load the tags, we only load the tags if we are already hooked.
+				if (hooked == true) // apparently we dont hook if we *have* the address :frown //This is to load the tags, we only load the tags if we are already hooked. // i put that comment when i was fixing it ya goober
 				{
 
 					Loadtags();

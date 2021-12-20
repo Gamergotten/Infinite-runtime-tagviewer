@@ -34,8 +34,11 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
         public ProcessInformation? SelectedProcess { get; set; } = null;
         public ComboBoxItem? cbxiChooseAny { get; private set; }
 		public bool selected = false;
-        public bool hookProcess(Memory.Mem m)
+        public bool hookProcess(Memory.Mem m) // ok since this was setup as a bool, imma use it as a bool
         {
+			// true: we reconnected to the process
+			// false: no new connection to process
+
             if (SelectedProcess == null)
             {
                 selected = m.OpenProcess("HaloInfinite.exe");
@@ -54,7 +57,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 			// Attempt to hook PID
 			selected = m.OpenProcess(SelectedProcess.ProcessId);
-			return selected;
+			return false;
 
 		}
 
