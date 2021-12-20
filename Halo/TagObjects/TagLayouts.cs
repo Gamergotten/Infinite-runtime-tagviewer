@@ -1278,6 +1278,14 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0xC48, new C { T = "TagRef" } },
 					{ 0xC64, new C { T = "TagRef" } },
 
+					{ 0xC9C, new C { T = "Float", N="Bounds X+" } },
+					{ 0xCA0, new C { T = "Float", N="Bounds Y+"  } },
+					{ 0xCA4, new C { T = "Float", N="Bounds Z+"  } },
+					{ 0xCA8, new C { T = "Float", N="Bounds X-"  } },
+					{ 0xCAC, new C { T = "Float", N="Bounds Y-"  } },
+					{ 0xCB0, new C { T = "Float", N="Bounds Z-"  } },
+
+
 					{ 0xC84, new C { T = "Tagblock" } },
 					{ 0xCB4, new C { T = "Tagblock" } },
 					{ 0xCC8, new C { T = "Tagblock" } },
@@ -2068,8 +2076,28 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0xD64, new C { T = "TagRef" } },
 				{ 0xD80, new C { T = "TagRef" } },
 
-				{ 0xD9C, new C { T = "Float" } },
-				{ 0xDA4, new C { T = "Float" } },
+				{ 0xD9C, new C { T = "Float", N="Moving Turning speed" } },
+
+				{ 0xDA0, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
+				{
+					//{ 0,  "Turns Without Animating"  },
+					//{ 1,  "Has Physical Rigid Bodies When Alive"  },
+					//{ 2,  "Immune To Falling Damage"  },
+					//{ 3,  "Has Animated Jetpack"  },
+					//{ 4,  "Flag 4"  },
+					//{ 5,  "Flag 5"  },
+					//{ 6,  "Random Speed Increase"  },
+					//{ 7,  "Flag 7"  },
+					//{ 8,  "Spawn Death Children On Destroy"  },
+					//{ 9,  "Stunned By EMP Damage"  },
+					//{ 10, "Dead Physics When Stunned"  },
+					//{ 11, "Always Ragdoll When Dead"  },
+					//{ 12, "Snaps Turns"  },
+					//{ 13, "Sync Action Always Projects On Ground"  },
+					//{ 14, "Orient Facing To Movement"  },
+				}}},
+
+				{ 0xDA4, new C { T = "Float", N="Stationary turning speed" } },
 
 				{ 0xDAC, new C { T = "TagRef" } },
 
@@ -2226,7 +2254,6 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			{"sqds",new()
 			{
 				{ 0x00, new C{ T="mmr3Hash"}},
-				{ 28, new C{ T="Float"}},
 				{ 0x14, new C{ T="Tagblock", B= new Dictionary<long, C>
 				{
 					{ 0x10, new C{ T="TagRef"}},
@@ -2237,18 +2264,23 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x3C, new C{ T="Tagblock", B= new Dictionary<long, C>
 				{
 					{ 0x00, new C{ T="mmr3Hash"}},
-					{ 0x0C, new C{ T="Float"}},
+					{ 0x04, new C{ T="Tagblock", B= new Dictionary<long, C>
+					{
+						{ 0x10, new C{ T="TagRef"}},
+						{ 0x2C, new C{ T="TagRef"}},
+						{ 0x48, new C{ T="TagRef"}},
+					}, S=104 }},
 					{ 0x18, new C{ T="Tagblock", B= new Dictionary<long, C>
 					{
 						{ 0x00, new C{ T="TagRef"}},
 						{ 0x1C, new C{ T="TagRef"}},
-						{ 0x38, new C{ T="mmr3Hash"}},
-						{ 0x40, new C{ T="Float"}},
-						{ 0x48, new C{ T="4Byte"}},
-						{ 0x60, new C{ T="TagRef"}},
-						{ 0x7C, new C{ T="TagRef"}},
-						{ 0x98, new C{ T="TagRef"}},
-					}, S=192 }},
+						{ 0x38, new C{ T="Tagblock", B= new Dictionary<long, C>
+						{
+							{ 0x10, new C{ T="TagRef"}},
+							{ 0x2C, new C{ T="TagRef"}},
+							{ 0x48, new C{ T="TagRef"}},
+						}, S=112 }},
+					}, S=76 }},
 				}, S=44 }},
 			}},
 

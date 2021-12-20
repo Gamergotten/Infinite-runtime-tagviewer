@@ -29,16 +29,19 @@ namespace InfiniteRuntimeTagViewer
 		// #### NOTES
 		//
 		// tagref dropdown actually gives the wrong tags, may be because some objects have the same datnums
-		//
-		// loading levl tag on campaign takes FOREVER + 3gigs RAM // fixed
-		//
-		// i think our "readstring" is capped to a specific amount of characters // fixed
-		//
+		// 
+
 		// something since the inital release is causing windows defender to act up
 		// my thoughts - either the AOB or .net 5.0? could just be random too tho
 		// - Callum : I believe its AOB, That kind of stuff always flags up the AV's.
 		//            They smell it like blood in the water.
 		//
+
+		//
+		// setting a taggroup to null actually cause problems in mem
+		// refer to the 'value' of the queued poke
+		//
+
 		private readonly Timer _t;
 		public Mem M = new();
 
