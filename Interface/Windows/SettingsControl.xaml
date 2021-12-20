@@ -161,9 +161,7 @@
                             </LayoutPanel>
                         </LayoutRoot>
                     </DockingManager>
-                    
-                    <!--Insert code here to put items into settings right side menu.-->
-                    
+
                     <Grid Grid.Row="1" Margin="0,0,0,0" Background="#252526">
                         <Grid Margin="5,5,5,5">
                             <Grid.ColumnDefinitions>
@@ -181,16 +179,22 @@
                     <ScrollViewer x:Name="changes_panel_container" MinHeight="100" MaxHeight="200" Grid.Row="3" Grid.ColumnSpan="5" Margin="0,10,0,10" Background="#252526" Visibility="Collapsed" >
                         <StackPanel x:Name="changes_panel" Background="#252526" />
                     </ScrollViewer>
+
+                    <StackPanel x:Name="TextGeneralLayout" Visibility="Hidden">
+                        <TextBlock TextWrapping="Wrap" Text="Text > General Settings" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Text Size" />
+                        <ComboBox Width="120" HorizontalAlignment="Left" SelectedIndex="0" />
+                    </StackPanel>
                 </Grid>
 
                 <Grid Grid.Column="0" Margin="0,0,2,0" Background="#252526" Grid.ColumnSpan="2">
-                    <TreeView x:Name="TagsTree" Grid.Row="2">
+                    <TreeView x:Name="SettingsTree" Grid.Row="2">
                         <TreeViewItem Header="Window">
-                            <TreeViewItem Header="General" />
-                            <TreeViewItem Header="Colors" />
-                            <TreeViewItem Header="Theme" />
+                            <TreeViewItem x:Name="WindowGeneral" Header="General" Selected="TreeViewItem_Selected" />
+                            <TreeViewItem x:Name="WindowColors" Header="Colors" Selected="TreeViewItem_Selected" />
+                            <TreeViewItem x:Name="WindowTheme" Header="Theme" Selected="TreeViewItem_Selected" />
                         </TreeViewItem>
-                        <TreeViewItem Header="Text">
+                        <TreeViewItem x:Name="TextGeneral" Header="Text">
                             <TreeViewItem Header="General" />
                             <TreeViewItem Header="Colors" />
                         </TreeViewItem>

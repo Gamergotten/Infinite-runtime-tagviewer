@@ -69,5 +69,31 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 				MaximizeButton.Visibility = Visibility.Visible;
 			}
 		}
+
+		private void TreeViewItem_Selected(object sender, RoutedEventArgs e)
+		{
+			//Ensure SettingsTree.SelectedItem has a value.
+			if (SettingsTree.SelectedItem != null)
+			{
+				//if selected item in tree is "General" under the window tree.
+				if (SettingsTree.SelectedItem == WindowGeneral)
+				{
+
+				}
+				else if (SettingsTree.SelectedItem == WindowColors)
+				{
+
+				}
+				else if (SettingsTree.SelectedItem == WindowTheme)
+				{
+
+				}
+				else if (SettingsTree.SelectedItem == TextGeneral)
+				{
+					TextGeneralLayout.Visibility = Visibility.Visible;
+				}
+			}
+
+		}
 	}
 }
