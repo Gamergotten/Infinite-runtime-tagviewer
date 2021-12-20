@@ -18,6 +18,7 @@ using InfiniteRuntimeTagViewer.Halo.TagObjects;
 using System.Windows.Media;
 using System.Timers;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace InfiniteRuntimeTagViewer
 {
@@ -48,6 +49,7 @@ namespace InfiniteRuntimeTagViewer
 		public MainWindow()
 		{
 			InitializeComponent();
+			GetAllMethods();
 			StateChanged += MainWindowStateChangeRaised;
 			_t = new Timer();
 			_t.Elapsed += OnTimedEvent;
@@ -816,6 +818,61 @@ namespace InfiniteRuntimeTagViewer
 		public void UnloadTags(object sender, RoutedEventArgs e)
 		{
 			TagsTree.Items.Clear();
+			//Need to unload memory items somehow here too!
 		}
+		public void GetAllMethods()
+		{
+			Type myType = (typeof(MainWindow));
+			// Get the public methods.
+			MethodInfo[] myArrayMethodInfo = myType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+			Console.WriteLine("\nThe number of public methods is {0}.", myArrayMethodInfo.Length);
+			// Add all public methods to menu.
+			DisplayMethodInfo(myArrayMethodInfo);
+			// Add all non-public methods to array.
+			MethodInfo[] myArrayMethodInfo1 = myType.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+			// Add all non-public methods to menu.
+			DisplayMethodInfo(myArrayMethodInfo1);
+		}
+
+
+		public void DisplayMethodInfo(MethodInfo[] myArrayMethodInfo)
+		{
+			// Display information for all methods.
+			for (int i = 0; i < myArrayMethodInfo.Length; i++)
+			{
+				MethodInfo myMethodInfo = (MethodInfo) myArrayMethodInfo[i];
+				//Console.WriteLine("\nThe name of the method is {0}.", myMethodInfo.Name);
+				MenuItem methods = new MenuItem();
+				MenuItem methodToAdd = (MenuItem) DebugMenu.Items[1];
+				methods.Header = myMethodInfo.Name;
+				methods.Click += CallMethod;
+				methodToAdd.Items.Add(methods);
+			}
+		}
+
+		public void CallMethod(object sender, RoutedEventArgs e)
+		{
+			//Code that will call the specified method.
+			MenuItem? MI = sender as MenuItem;
+			if (MI != null)
+			{
+				try
+				{
+					Type mainType = (typeof(MainWindow));
+					string? clickedMethod = MI.Header.ToString();
+					System.Diagnostics.Debug.WriteLine(clickedMethod);
+					MethodInfo? method = mainType.GetMethod(clickedMethod);
+					if (method != null)
+					{
+						int paramCount = method.GetParameters().Length;
+						method.Invoke(this, null);
+					}
+				}
+				catch (Exception)
+				{
+					System.Diagnostics.Debug.WriteLine("Invalid parameter count. Consider calling a method with no parameters.");
+				}
+			}
+	}
 	}
 }
