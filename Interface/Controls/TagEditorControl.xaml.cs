@@ -512,7 +512,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						break;
 
-					case "Tagblock": // need to find some kinda "whoops that tag isnt actually loaded"; keep erroring with the hlmt tag
+					case "Tagblock": // i dont know how long this has been an issue, but you couldn't poke tagblock counts
 						TagBlock? tb1 = new(this, startingTagOffset + entry.Key, tagStruct)
 						{
 							HorizontalAlignment = HorizontalAlignment.Left
@@ -554,7 +554,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						//tb1.tagblock_count.Tag = (address + entry.Key + 16) + ":4Byte";
 						tb1.tagblock_count.Tag = new TagEditorDefinition()
 						{
-							MemoryAddress = address + entry.Key,
+							MemoryAddress = address + entry.Key + 16,
 							MemoryType = "4Byte",
 							TagDef = entry.Value,
 							TagStruct = tagStruct

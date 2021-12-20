@@ -2225,6 +2225,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 			{"sqds",new()
 			{
+				{ 0x00, new C{ T="mmr3Hash"}},
+				{ 28, new C{ T="Float"}},
 				{ 0x14, new C{ T="Tagblock", B= new Dictionary<long, C>
 				{
 					{ 0x10, new C{ T="TagRef"}},
@@ -2232,7 +2234,22 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x48, new C{ T="TagRef"}},
 				}, S=104 }},
 				{ 0x28, new C{ T="Tagblock"}},
-				{ 0x3C, new C{ T="Tagblock"}},
+				{ 0x3C, new C{ T="Tagblock", B= new Dictionary<long, C>
+				{
+					{ 0x00, new C{ T="mmr3Hash"}},
+					{ 0x0C, new C{ T="Float"}},
+					{ 0x18, new C{ T="Tagblock", B= new Dictionary<long, C>
+					{
+						{ 0x00, new C{ T="TagRef"}},
+						{ 0x1C, new C{ T="TagRef"}},
+						{ 0x38, new C{ T="mmr3Hash"}},
+						{ 0x40, new C{ T="Float"}},
+						{ 0x48, new C{ T="4Byte"}},
+						{ 0x60, new C{ T="TagRef"}},
+						{ 0x7C, new C{ T="TagRef"}},
+						{ 0x98, new C{ T="TagRef"}},
+					}, S=192 }},
+				}, S=44 }},
 			}},
 
 		};
