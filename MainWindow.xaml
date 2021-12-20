@@ -96,8 +96,8 @@
             <Grid Grid.Row="0" Height="30" Background="#252526" Grid.ColumnSpan="3">
 
                 <DockPanel>
-                    <Menu x:Name="DockPanel" IsMainMenu="True" Padding="10 0" Background="#252526">
-                        <MenuItem Header="_File" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" Height="32" FontSize="12">
+                    <Menu x:Name="MainMenu" IsMainMenu="True" Padding="10 0" Background="#252526">
+                        <MenuItem Header="_File" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Height="30">
                             <MenuItem Header="_Open">
                                 <!--TODO-->
                                 <MenuItem.ToolTip>
@@ -117,7 +117,7 @@
                                 </MenuItem.ToolTip>
                             </MenuItem>
                         </MenuItem>
-                        <MenuItem Header="Options" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" Height="30" FontSize="12">
+                        <MenuItem Header="Options" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Height="28">
                             <MenuItem x:Name="cbxFilterOnlyMapped" Header="Filter Only Mapped" IsCheckable="True" IsChecked="True" Checked="cbxFilterOnlyMapped_Changed" Unchecked="cbxFilterOnlyMapped_Changed">
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Filter only mapped tags.</TextBlock>
@@ -149,8 +149,20 @@
                                     <TextBlock Foreground="Black">Personalization Settings</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
-                            <MenuItem Header="Debug">
-                                <MenuItem Header="Unload Tags" Click="UnloadTags" />
+
+                        </MenuItem>
+                        <MenuItem Header="Tools" WindowChrome.IsHitTestVisibleInChrome="True" FontFamily="Segoe UI Light" Height="28">
+                            <MenuItem x:Name="DebugMenu" Header="Debug">
+                                <MenuItem x:Name="UnloadAllTags" Header="Unload Tags" Click="UnloadTags" >
+                                    <MenuItem.ToolTip>
+                                        <TextBlock Foreground="Black">Unload Tags</TextBlock>
+                                    </MenuItem.ToolTip>
+                                </MenuItem>
+                                <MenuItem x:Name="CallMethods" Header="Call Method">
+                                    <MenuItem.ToolTip>
+                                        <TextBlock Foreground="Black">Call specific implemented method.</TextBlock>
+                                    </MenuItem.ToolTip>
+                                </MenuItem>
                             </MenuItem>
                         </MenuItem>
 
@@ -175,7 +187,7 @@
 
             <!-- App content -->
             <Grid Grid.Row="1" x:Name="AppArea" LayoutTransform="{StaticResource windowScaleTransform}" Grid.ColumnSpan="3">
-                
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="5*" />
                     <ColumnDefinition Width="16*"/>
