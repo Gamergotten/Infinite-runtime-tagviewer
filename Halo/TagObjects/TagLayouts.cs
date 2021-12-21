@@ -1049,11 +1049,11 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x9F4, new C { T = "TagRef" } }, //JPT
 					{ 0xA10, new C { T = "TagRef" } }, // JPT
 
-					{ 0xA2C, new C { T = "Float" } },
+					{ 0xA2C, new C { T = "Float", N = "Weight" } },
 					{ 0xA34, new C { T = "Float" } },
 					{ 0xA38, new C { T = "Float" } },
 					{ 0xA40, new C { T = "Float" } },
-					{ 0xA44, new C { T = "Float" } },
+					{ 0xA44, new C { T = "Float", N = "Velocity" } },
 					{ 0xA80, new C { T = "Float" } },
 
 					{ 0xAA0, new C { T = "TagRef" } },
