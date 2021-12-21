@@ -1003,7 +1003,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x650, new C { T = "Tagblock" } },
 					{ 0x664, new C { T = "Tagblock" } },
 					{ 0x678, new C { T = "Tagblock" } },
-					//{ 0x688, new C { T = "Tagblock" } }, errors and triggers the catch majority of the time. 
+					{ 0x68C, new C { T = "Tagblock" } }, // hm, that address was off by +0x4
 					{ 0x6A0, new C { T = "Tagblock" } },
 
 					{ 0x6B8, new C { T = "TagRef" } }, //PROJ
