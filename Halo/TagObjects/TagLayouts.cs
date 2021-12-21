@@ -6,6 +6,8 @@ using System.Xml.Serialization;
 
 namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 {
+	// ###### for anyone interested, check out https://github.com/Lord-Zedd/H5Tags/tree/master/tags // thank you lord zedd
+	// ###### its quite useful for mapping out descriptions and stuff
 	public class TagLayouts
 	{
 		public class C 
@@ -2284,6 +2286,147 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				}, S=44 }},
 			}},
 
+			{"jpt!",new()
+			{
+				{ 0x10, new C{ T="TagRef"}},
+
+				{ 0x2C, new C { T = "Float", N="Min Radius" } },
+				{ 0x30, new C { T = "Float", N="Max Radius" } },
+				{ 0x34, new C { T = "Float", N="Cutoff Scale" } },
+				{ 0x38, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0,  "Don't Scale Damage By Distance"  },
+					{ 1,  "Area Damage Players Only"  },
+					{ 2,  "Affects Model Targets"  },
+					{ 3,  "Explosive Area Of Effect"  },
+					{ 4,  "these flags probably aren't right lol"  },
+				}}},
+
+
+
+				{ 0x40, new C { T = "2Byte", N="side effect" } },
+				{ 0x42, new C { T = "2Byte", N="category" } },
+
+				{ 0x44, new C { T = "4Byte", N="death vocalization" } },
+
+				{ 0x48, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0,  "does not hurt owner"  },
+					{ 1,  "can cause headshots"  },
+					{ 2,  "ignores headshot obstructions"  },
+					{ 3,  "pings resistant units"  },
+					{ 4,  "does not hurt friends"  },
+					{ 5,  "does not ping units"  },
+					{ 6,  "detonates explosives"  },
+					{ 7,  "only hurts shields"  },
+					{ 8,  "causes flaming death"  },
+					{ 9,  "skips shields"  },
+					{ 10, "wwwww"  },
+					{ 11, "ignore seat scale for dir. dmg"  },
+					{ 12, "forces hard ping if body dmg"  },
+					{ 13, "forces hard ping always"  },
+					{ 14, "does not hurt players"  },
+					{ 15, "enables special death"  },
+					{ 16, "cannot cause betrayals"  },
+					{ 17, "uses old EMP behavior"  },
+					{ 18, "ignores damage resistance"  },
+					{ 19, "force s_kill on death"  },
+					{ 20, "cause magic deceleration"  },
+					{ 21, "aoe skip obstruction test"  },
+					{ 22, "does not spill over"  },
+					{ 23, "does not hurt boarders"  },
+					{ 24, "does not cause biped aoe effect"  },
+					{ 25, "DEPRECATED apply tree of life"  },
+					{ 26, "hurt only friends"  },
+					{ 27, "causes incineration dissolve"  },
+					{ 28, "causes incineration dissolve on headshot"  },
+					{ 29, "does not hurt damage source"  },
+					{ 30, "damage vehicles only"  },
+					{ 31, "triggers interact logi"  }
+				}}},
+				{ 0x4C, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0,  "causes incineration dissolve to dead units"  },
+					{ 1,  "force hard ping as attachment feedback"  },
+					{ 2,  "detaches object dispenser items"  },
+					{ 3,  "hard pings from this damage stun AI"  },
+					{ 4,  "deaths are non revivable"  },
+					{ 5,  "forces hard ping when available"  },
+				}}},
+
+				{ 0x50, new C{ T="TagRef"}},
+
+				{ 0x6C, new C { T = "Headshot Damage" } },
+				{ 0x70, new C { T = "Headshot Shielded Damage" } },
+
+				{ 0x74, new C { T = "Float", N="AOE core radius" } },
+				{ 0x78, new C { T = "Float" } },
+				{ 0x7C, new C { T = "Float", N="damage lower " } },
+				{ 0x80, new C { T = "Float", N="damage upper min" } },
+				{ 0x84, new C { T = "Float", N="damage upper max" } },
+				{ 0x88, new C { T = "Float"} },
+				{ 0x8C, new C { T = "Float"} },
+				{ 0x90, new C { T = "Float" } },
+				{ 0x94, new C { T = "Float" } },
+				{ 0x98, new C { T = "Float" } },
+				{ 0x9C, new C { T = "Float" } },
+				{ 0xA0, new C { T = "Float" } },
+				{ 0xA4, new C { T = "Float" } },
+				{ 0xA8, new C { T = "Float" } },
+				{ 0xAC, new C { T = "Float" } },
+				{ 0xB0, new C { T = "Float" } },
+				{ 0xB4, new C { T = "Float" } },
+				{ 0xB8, new C { T = "Float" } },
+				{ 0xBC, new C { T = "Float" } },
+				{ 0xC0, new C { T = "Float" } },
+				{ 0xC4, new C { T = "Float" } },
+				{ 0xC8, new C { T = "Float" } },
+				{ 0xCC, new C { T = "Float", N="Instantaneous Acceleration" } },
+				{ 0xD0, new C { T = "Float" } },
+				{ 0xD4, new C { T = "Float" } },
+
+				{ 0x114, new C{ T="TagRef"}},
+
+				{ 0x130, new C{ T="Tagblock"}},
+
+				{ 0x150, new C { T = "2Byte" } },
+
+				{ 0x154, new C { T = "Float" } },
+				{ 0x158, new C { T = "Float" } },
+				{ 0x15C, new C { T = "Float" } },
+				{ 0x160, new C { T = "Float" } },
+				{ 0x164, new C { T = "Float" } },
+				{ 0x168, new C { T = "Float" } },
+				{ 0x16C, new C { T = "Float" } },
+
+				{ 0x170, new C{ T="TagRef"}},
+				{ 0x18C, new C{ T="Tagblock"}},
+
+				{ 0x1A0, new C { T = "Float" } },
+				{ 0x1A4, new C { T = "Float" } },
+
+				{ 0x1A8, new C{ T="TagRef"}},
+				{ 0x1C4, new C{ T="TagRef"}},
+				{ 0x1E0, new C{ T="TagRef"}},
+				{ 0x1FC, new C{ T="TagRef"}},
+				{ 0x218, new C{ T="TagRef"}},
+				{ 0x234, new C{ T="TagRef"}},
+				{ 0x250, new C{ T="TagRef"}},
+				{ 0x26C, new C{ T="TagRef"}},
+				{ 0x288, new C{ T="TagRef"}},
+				{ 0x2A4, new C{ T="TagRef"}},
+				{ 0x2C0, new C{ T="TagRef"}},
+				{ 0x2DC, new C{ T="TagRef"}},
+				{ 0x2F8, new C{ T="TagRef"}},
+				{ 0x314, new C{ T="TagRef"}},
+				{ 0x330, new C{ T="TagRef"}},
+				{ 0x34C, new C{ T="TagRef"}},
+				{ 0x368, new C{ T="TagRef"}},
+
+				{ 0x384, new C { T = "Float" } },
+				{ 0x388, new C { T = "Float" } },
+
+			}},
 		};
 
 
