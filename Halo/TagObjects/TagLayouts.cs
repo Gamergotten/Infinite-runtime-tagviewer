@@ -726,9 +726,11 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 						{ 76, new C{ T="Float"}},
 						{ 80, new C{ T="Float"}},
-
+						{ 86, new C { T = "2Byte", N = "Rounds Per Shot" } },
+						
 						{ 92, new C{ T="Float"}},
-
+						{ 130, new C { T = "2Byte", N = "Projectiles Per Shot" } },
+						
 						{ 0x64, new C{ T="4Byte"}},
 						{ 0x68, new C{ T="Float"}},
 
