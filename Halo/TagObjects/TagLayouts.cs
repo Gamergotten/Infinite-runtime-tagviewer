@@ -434,7 +434,18 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0xDDC, new C { T = "Tagblock" } }, // s_vehicle_alien_scout_definition
 					{ 0xDF0, new C { T = "Tagblock" } }, // s_vehicle_alien_fighter_definition
 					{ 0xE04, new C { T = "Tagblock" } }, // s_vehicle_turret_definition
-					{ 0xE18, new C { T = "Tagblock" } }, // s_vehicle_vtol_definition
+										
+					{ 0xE18, new C { T = "Tagblock", B = new Dictionary<long, C>
+					{
+						{0x4C, new C { T="Float", N = "Up Acceleration" } },
+						{0x50, new C { T="Float", N = "Down Acceleration" } },
+						{0x60, new C { T="Float", N = "Turn Acceleration Min" } },
+						{0x64, new C { T="Float", N = "Turn Acceleration Max" } },
+						{0x208, new C { T="Float", N = "Left Acceleration" } },
+						{0x20C, new C { T="Float", N = "Reverse Acceleration" } },
+						{0x22C, new C { T="Float", N = "Forward Acceleration" } }
+					} } }, // s_vehicle_vtol_definition
+					
 					{ 0xE2C, new C { T = "Tagblock" } }, // s_vehicle_chopper_definition
 					{ 0xE40, new C { T = "Tagblock" } }, // s_vehicle_guardian_definition
 					{ 0xE54, new C { T = "Tagblock" } }, // s_vehicle_jackal_glider_definition
@@ -726,9 +737,11 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 						{ 76, new C{ T="Float"}},
 						{ 80, new C{ T="Float"}},
-
+						{ 86, new C { T = "2Byte", N = "Rounds Per Shot" } },
+						
 						{ 92, new C{ T="Float"}},
-
+						{ 130, new C { T = "2Byte", N = "Projectiles Per Shot" } },
+						
 						{ 0x64, new C{ T="4Byte"}},
 						{ 0x68, new C{ T="Float"}},
 
