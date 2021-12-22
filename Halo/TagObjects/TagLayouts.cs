@@ -2443,14 +2443,65 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			
 			{"sagh",new()
 			{
-				{ 0x18, new C { T = "Float", N = "Cost Per Shot" } },
+
+				{ 0x14, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "Use 3rd Person Camera When Active"  },
+							{ 1, "Hide Reticle When Active"  },
+							{ 2, "Is Motion Tracked (By Enemies) When Active"  },
+							{ 3, "One-Shot Activation Effect"  },
+							{ 4, "Can be activated when weapon state is relaxed"  },
+							{ 5, "Does Not Appear In Extended Motion Tracker Range"  },
+							{ 6, "Energy persists across deaths"  },
+							{ 7, "Activation interrupts weapon switching"  },
+							{ 8, "Allow activation during weapon throw"  },
+							{ 9, "Allow activation while sliding"  }
+				} } },
+				
+				{ 0x18, new C { T = "Float", N = "Activation Energy Cost" } },
 				{ 0x20, new C { T = "Float", N = "Recharge Duration" } },
-				{ 0x154, new C { T = "Float", N = "Animation Duration" } },
-				{ 0x15C, new C { T = "Float"} }, //Possibly Minimum Distance
-				{ 0x16C, new C { T = "Float", N = "Reticle Distance" } },
-				{ 0x1D0, new C { T = "Float", N = "Grapple Speed" } },
-				{ 0x20C, new C { T = "Float"} }, //Force? I think. 
-				{ 0x288, new C { T = "Float"} }, //Possibly Minimum Distance again
+				{ 0x24, new C { T = "Float", N = "Recharge Delay" } },
+				{ 0x28, new C { T = "Float", N = "Cooldown Delay" } },
+
+				{ 0x88, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "allow mount passenger to activate"  },
+							{ 1, "allow activation in mount if seat allows it"  },
+							{ 2, "suppressed by EMP"  },
+							{ 3, "drop support weapon when activated"  },
+							{ 4, "drop readied weapon when activated"  },
+							{ 5, "disable vehicle entering assist"  },
+							{ 6, "disable jump interruptions"  },
+							{ 7, "disable automelee"  },
+							{ 8, "disable crouch interruptions"  },
+							{ 9, "disable line of sight breaking"  },
+							{ 10, "enable bash"  },
+							{ 11, "show bash in first person"  },
+							{ 12, "owner uses crouched pill during pull"  },
+							{ 13, "owner uses crouched pill during bash"  },
+							{ 14, "suppress activation while holding support weapon"  },
+							{ 15, "suppress activation while holding must be readied weapon"  },
+							{ 16, "ignore soft ceilings"  }
+				} } },
+
+				{ 0x154, new C { T = "Float", N = "Warmup Time" } },
+				{ 0x16C, new C { T = "Float", N = "Line of Sight Testing" } },
+				
+				{ 0x1D0, new C { T = "Float", N = "Target Velocity" } },
+				{ 0x1D4, new C { T = "Float", N = "Max Exit Velocity" } },
+				{ 0x20C, new C { T = "Float", N = "Aim Influence" } },
+
+				{ 0x284, new C { T = "Float", N = "Completion Distance (Level Geo)" } },
+				{ 0x288, new C { T = "Float", N = "Completion Distance (Ceilings)" } },
+				{ 0x28C, new C { T = "Float", N = "Completion Distance (Floors)" } },
+				{ 0x290, new C { T = "Float", N = "Completion Distance (Biped)" } },
+				{ 0x294, new C { T = "Float", N = "Completion Distance (Vehicles)" } },
+				{ 0x298, new C { T = "Float", N = "Vehicle Interaction Distance" } },
+				{ 0x29C, new C { T = "Float", N = "Vehicle Interaction Time" } },
+				{ 0x2A0, new C { T = "Float", N = "Automelee Max Angle" } },
+				{ 0x2A4, new C { T = "Float", N = "Max Allowed Angle Deviation (Ceiling)" } },
+				{ 0x2A8, new C { T = "Float", N = "Max Allowed Angle Deviation (Floor)" } },
+				{ 0x2AC, new C { T = "Float", N = "Line of Sight Break Time" } },
 			}},
 		};
 
