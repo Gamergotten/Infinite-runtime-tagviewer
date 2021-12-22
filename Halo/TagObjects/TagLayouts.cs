@@ -429,7 +429,21 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0xD80, new C { T = "TagRef" } }, // VEHI TAG REF
 
 					{ 0xDA0, new C { T = "Tagblock" } }, // s_vehicle_human_tank_definition
-					{ 0xDB4, new C { T = "Tagblock" } }, // s_vehicle_human_jeep_definition
+					
+					{ 0xDB4, new C { T = "Tagblock" , B = new Dictionary<long, C>
+					{
+						{0x10, new C { T="Float", N = "Overdampen Cusp Angle" } },
+						{0x14, new C { T="Float", N = "Overdampen Cusp Exponent" } },
+						
+						{0x18, new C { T="Float", N = "Maximum Left Turn" } },
+						{0x1C, new C { T="Float", N = "Maximum Right Turn" } },
+						{0x20, new C { T="Float", N = "Turn Rate" } },
+						
+						{0x24, new C { T="Float", N = "Engine Momentum" } },
+						{0x28, new C { T="Float", N = "Min Velocity" } },
+						{0x2C, new C { T="Float", N = "Max Velocity" } },
+					} } }, // s_vehicle_human_jeep_definition
+					
 					{ 0xDC8, new C { T = "Tagblock" } }, // s_vehicle_human_plane_definition
 					
 					{ 0xDDC, new C { T = "Tagblock", B = new Dictionary<long, C>
