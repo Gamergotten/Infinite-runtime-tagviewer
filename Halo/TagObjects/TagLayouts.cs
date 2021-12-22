@@ -2440,6 +2440,18 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x388, new C { T = "Float" } },
 
 			}},
+			
+			{"sagh",new()
+			{
+				{ 0x18, new C { T = "Float", N = "Cost Per Shot" } },
+				{ 0x20, new C { T = "Float", N = "Recharge Duration" } },
+				{ 0x154, new C { T = "Float", N = "Animation Duration" } },
+				{ 0x15C, new C { T = "Float"} }, //Possibly Minimum Distance
+				{ 0x16C, new C { T = "Float", N = "Reticle Distance" } },
+				{ 0x1D0, new C { T = "Float", N = "Grapple Speed" } },
+				{ 0x20C, new C { T = "Float"} }, //Force? I think. 
+				{ 0x288, new C { T = "Float"} }, //Possibly Minimum Distance again
+			}},
 		};
 
 
