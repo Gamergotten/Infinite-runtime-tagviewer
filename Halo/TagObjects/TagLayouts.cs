@@ -431,7 +431,31 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0xDA0, new C { T = "Tagblock" } }, // s_vehicle_human_tank_definition
 					{ 0xDB4, new C { T = "Tagblock" } }, // s_vehicle_human_jeep_definition
 					{ 0xDC8, new C { T = "Tagblock" } }, // s_vehicle_human_plane_definition
-					{ 0xDDC, new C { T = "Tagblock" } }, // s_vehicle_alien_scout_definition
+					
+					{ 0xDDC, new C { T = "Tagblock", B = new Dictionary<long, C>
+					{
+						{0x18, new C { T="Float", N = "Max Forward Speed" } },
+						{0x1C, new C { T="Float", N = "Max Reverse Speed" } },
+						{0x20, new C { T="Float", N = "Speed Acceleration" } },
+						{0x24, new C { T="Float", N = "Speed Deceleration" } },
+						{0x28, new C { T="Float", N = "Max Left Slide" } },
+						{0x2C, new C { T="Float", N = "Max Right Slide" } },
+						{0x30, new C { T="Float", N = "Slide Acceleration" } },
+						{0x34, new C { T="Float", N = "Slide Deceleration" } },
+						{0x50, new C { T="Float", N = "Torque Scale" } },
+
+						{0x54, new C { T = "mmr3Hash", N = "Engine Object Function Region" } },
+						{0x58, new C { T="Float", N = "Min Anti Gravity Engine Speed" } },
+						{0x5C, new C { T="Float", N = "Max Anti Gravity Engine Speed" } },
+						{0x60, new C { T="Float", N = "Engine Speed Acceleration" } },
+						{0x64, new C { T="Float", N = "Maximum Vehicle Speed" } },
+
+						{0x68, new C { T = "mmr3Hash", N = "Contrail Object Function Region" } },
+						{0x6C, new C { T="Float", N = "Min Anti Gravity Engine Speed" } },
+						{0x70, new C { T="Float", N = "Max Anti Gravity Engine Speed" } },
+						{0x74, new C { T="Float", N = "Engine Speed Acceleration" } },
+						{0x78, new C { T="Float", N = "Maximum Vehicle Speed" } },
+					} } }, // s_vehicle_alien_scout_definition
 					
 					{ 0xDF0, new C { T = "Tagblock", B = new Dictionary<long, C>
 					{
