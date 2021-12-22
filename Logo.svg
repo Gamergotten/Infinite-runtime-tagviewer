@@ -1,80 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   width="183.40669mm"
-   height="159.10281mm"
-   viewBox="0 0 183.40669 159.10281"
-   version="1.1"
-   id="svg5"
-   sodipodi:docname="Logo.svg"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview7"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:document-units="mm"
-     showgrid="false"
-     inkscape:zoom="0.5"
-     inkscape:cx="131"
-     inkscape:cy="459"
-     inkscape:window-width="1920"
-     inkscape:window-height="1057"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1"
-     fit-margin-top="1"
-     fit-margin-left="1"
-     fit-margin-right="1"
-     fit-margin-bottom="1" />
-  <defs
-     id="defs2" />
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-13.296647,-68.948593)">
-    <g
-       id="g8410">
-      <path
-         sodipodi:type="star"
-         style="fill:#4d4d4d;stroke:#00deff;stroke-width:11.3386;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="path1706"
-         inkscape:flatsided="true"
-         sodipodi:sides="6"
-         sodipodi:cx="317.96143"
-         sodipodi:cy="478.87308"
-         sodipodi:r1="336.26947"
-         sodipodi:r2="291.2179"
-         sodipodi:arg1="1.0471976"
-         sodipodi:arg2="1.5707963"
-         inkscape:rounded="0"
-         inkscape:randomized="0"
-         d="m 486.09615,770.09099 -336.26947,-2e-5 L -18.308044,478.87306 149.8267,187.65517 l 336.26948,1e-5 168.13472,291.21791 z"
-         transform="matrix(-0.26458333,0,0,0.26458333,189.12729,21.798167)"
-         inkscape:transform-center-x="1.6296306e-06"
-         inkscape:transform-center-y="-1.5962436e-06" />
-      <path
-         style="fill:none;stroke:#00e1ff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 60.514348,225.5514 149.48565,71.448598"
-         id="path6856" />
-      <path
-         style="fill:none;stroke:#00e1ff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 193.97129,148.5 -177.942587,-1e-5"
-         id="path6858" />
-      <path
-         style="fill:none;stroke:#00e1ff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 60.514354,71.448596 149.48564,225.5514"
-         id="path6860" />
-    </g>
-  </g>
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="256" height="256">
+	<title>Logo</title>
+	<defs>
+		<image  width="1024" height="1024" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQAAQMAAABF07nAAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAAAF0Uk5TAEDm2GYAAACWSURBVHic7cEBAQAAAIIg/69uSEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GBB4AAZ8h0uYAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.s0 { fill: #d6d6d6;stroke: #393b3d;stroke-width: 13 } 
+	</style>
+	<use id="Background" href="#img1" x="0" y="0" />
+	<g id="HexagonPillars">
+		<path id="Center" class="s0" d="m351.08 604.67v-184.55l159.83-92.28l159.83 92.28v184.55l-159.83 92.28l-159.83-92.28z" />
+		<path id="HexagonPillar" class="s0" d="m511.7 140.63v184.55l-159.83 92.28l-159.83-92.28l0-184.55l159.83-92.28l159.83 92.28z" />
+		<path id="HexagonPillar" class="s0" d="m354.66 419.29v184.55l-159.83 92.28l-159.83-92.28l0-184.55l159.83-92.28l159.83 92.28z" />
+		<path id="HexagonPillar" class="s0" d="m511.7 699.13v184.55l-159.83 92.28l-159.83-92.28v-184.55l159.83-92.28l159.83 92.28z" />
+		<path id="HexagonPillar" class="s0" d="m511.67 883.33v-184.55l159.83-92.28l159.83 92.28l0 184.55l-159.83 92.28l-159.83-92.28z" />
+		<path id="HexagonPillar" class="s0" d="m668.71 604.67l0-184.55l159.83-92.28l159.83 92.28v184.55l-159.83 92.28l-159.83-92.28z" />
+		<path id="HexagonPillar" class="s0" d="m511.67 324.83v-184.55l159.83-92.28l159.83 92.28l0 184.55l-159.83 92.28l-159.83-92.28z" />
+	</g>
+	<path id="TITLE" fill="#000000" aria-label="IRTV"  d="m215.5 411.9h-49.2v200.1h49.2zm220.5 42.9c0-27.6-15.3-42.9-42.9-42.9h-127.5v200.1h49.2v-72.9h12.6l65.7 72.9h61.8l-68.7-73.8h6.9c24.9 0 42.9-13.2 42.9-42.9zm-49.2 29.7c0 7.2-3.3 11.4-11.7 11.4h-60.3v-40.8h60.3c9.3 0 11.7 3.9 11.7 12.3zm257.7-29.4v-43.2h-186.3v43.2h68.4v156.9h49.2v-156.9zm213.3-43.2h-53.4l-49.8 138l-46.8-138h-56.4l79.2 200.1h42.6z" />
 </svg>
