@@ -432,7 +432,16 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0xDB4, new C { T = "Tagblock" } }, // s_vehicle_human_jeep_definition
 					{ 0xDC8, new C { T = "Tagblock" } }, // s_vehicle_human_plane_definition
 					{ 0xDDC, new C { T = "Tagblock" } }, // s_vehicle_alien_scout_definition
-					{ 0xDF0, new C { T = "Tagblock" } }, // s_vehicle_alien_fighter_definition
+					
+					{ 0xDF0, new C { T = "Tagblock", B = new Dictionary<long, C>
+					{
+						{0x20, new C { T="Float", N = "Turn Rate" } },
+						{0x24, new C { T="Float", N = "Forward Speed" } },
+						{0x28, new C { T="Float", N = "Reverse Speed" } },
+						{0x2C, new C { T="Float", N = "Speed Acceleration" } },
+						{0x30, new C { T="Float", N = "Speed Deceleration" } }
+					} } }, // s_vehicle_alien_fighter_definition
+					
 					{ 0xE04, new C { T = "Tagblock" } }, // s_vehicle_turret_definition
 										
 					{ 0xE18, new C { T = "Tagblock", B = new Dictionary<long, C>
