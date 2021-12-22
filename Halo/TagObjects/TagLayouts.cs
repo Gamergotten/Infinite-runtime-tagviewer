@@ -967,13 +967,13 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 80, new C { T = "Float" } },
 					{ 84, new C { T = "Float" } },
 
-					{ 92, new C { T = "Tagblock" } }, // SidecarPathDefinition
+					{ 92, new C { T = "Tagblock", N = "Source Sidecar" } }, // SidecarPathDefinition
 
 					{ 112, new C { T = "Float" } },
 					{ 116, new C { T = "Float" } },
 
-					{ 120, new C { T = "TagRef" } }, // vehicle model
-					{ 148, new C { T = "TagRef" } }, // aset tag ref
+					{ 120, new C { T = "TagRef", N = "Model" } }, // vehicle model
+					{ 148, new C { T = "TagRef", N = "Asset" } }, // aset tag ref
 					{ 176, new C { T = "TagRef" } },
 					{ 204, new C { T = "TagRef" } },
 
@@ -991,8 +991,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 					{ 432, new C { T = "Float" } },
 
-					{ 448, new C { T = "Tagblock" } }, // object_ai_properties
-					{ 468, new C { T = "Tagblock" } }, // s_object_function_definition
+					{ 448, new C { T = "Tagblock", N = "AI Properties" } }, // object_ai_properties
+					{ 468, new C { T = "Tagblock", N = "Functions" } }, // s_object_function_definition
 					{ 488, new C { T = "4Byte" } },
 					{ 492, new C { T = "Tagblock" } }, // ObjectRuntimeInterpolatorFunctionsBlock
 					{ 512, new C { T = "Tagblock" } }, // ObjectFunctionSwitchDefinition
@@ -1088,12 +1088,12 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 					{ 0x83C, new C { T = "Tagblock" } },
 
-					{ 0x850, new C { T = "TagRef" } },
-					{ 0x86C, new C { T = "TagRef" } },
-					{ 0x888, new C { T = "TagRef" } }, // SND
-					{ 0x8A4, new C { T = "TagRef" } },
-					{ 0x8C0, new C { T = "TagRef" } }, // SND
-					{ 0x8DC, new C { T = "TagRef" } },
+					{ 0x850, new C { T = "TagRef", N = "Super Detonation" } },
+					{ 0x86C, new C { T = "TagRef", N = "Super Detonation Damage" } },
+					{ 0x888, new C { T = "TagRef", N = "Detonation Sound" } }, // SND
+					{ 0x8A4, new C { T = "TagRef", N = "Super Detonation Sound" } },
+					{ 0x8C0, new C { T = "TagRef", N = "Submerged Detonation Sound" } }, // SND
+					{ 0x8DC, new C { T = "TagRef", N = "Super Detonation Object Types" } },
 
 					{ 0x8FC, new C { T = "Float" } },
 
@@ -1104,27 +1104,27 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x9A0, new C { T = "TagRef" } }, // JPT
 					{ 0x9BC, new C { T = "TagRef" } }, // JPT
 
-					{ 0x9DC, new C { T = "Tagblock" } },
+					{ 0x9DC, new C { T = "Tagblock", N = "Boarding Fields" } },
 
-					{ 0x9F0, new C { T = "Float" } },
+					{ 0x9F0, new C { T = "Float", N = "Boarding Detonation Time" } },
 
-					{ 0x9F4, new C { T = "TagRef" } }, //JPT
-					{ 0xA10, new C { T = "TagRef" } }, // JPT
+					{ 0x9F4, new C { T = "TagRef", N = "Boarding Detonation Damage" } }, //JPT
+					{ 0xA10, new C { T = "TagRef", N = "Boarding Attached Detonation Damage" } }, // JPT
 
-					{ 0xA2C, new C { T = "Float", N = "Weight" } },
-					{ 0xA34, new C { T = "Float" } },
-					{ 0xA38, new C { T = "Float" } },
-					{ 0xA40, new C { T = "Float" } },
-					{ 0xA44, new C { T = "Float", N = "Velocity" } },
-					{ 0xA80, new C { T = "Float" } },
+					{ 0xA2C, new C { T = "Float", N = "Air Gravity Scale" } },
+					{ 0xA34, new C { T = "Float", N = "Air Damage Range" } },
+					{ 0xA38, new C { T = "Float", N = "Water Gravity Scale" } },
+					{ 0xA40, new C { T = "Float", N = "Water Damage Range" } },
+					{ 0xA44, new C { T = "Float", N = "Initial Velocity" } },
+					{ 0xA80, new C { T = "Float", N = "Final Velocity" } },
 
-					{ 0xAA0, new C { T = "TagRef" } },
+					{ 0xAA0, new C { T = "TagRef", N = "Material Response Reference" } },
 
-					{ 0xABC, new C { T = "Tagblock" } },
-					{ 0xAD0, new C { T = "Tagblock" } },
-					{ 0xAE4, new C { T = "Tagblock" } },
-					{ 0xAF8, new C { T = "Tagblock" } },
-					{ 0xB0C, new C { T = "Tagblock" } },
+					{ 0xABC, new C { T = "Tagblock", N = "Old Material Response Reference" } },
+					{ 0xAD0, new C { T = "Tagblock", N = "Material Response" } },
+					{ 0xAE4, new C { T = "Tagblock", N = "Brute Grenade" } },
+					{ 0xAF8, new C { T = "Tagblock", N = "Fire Bomb Grenade" } },
+					{ 0xB0C, new C { T = "Tagblock", N = "Conical Spread" } },
 
 					{ 0xB20, new C { T = "TagRef" } },
 
@@ -1132,16 +1132,16 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0xB40, new C { T = "Float" } },
 					{ 0xB44, new C { T = "Float" } },
 
-					{ 0xB48, new C { T = "Tagblock" } },
-					{ 0xB60, new C { T = "Tagblock" } },
+					{ 0xB48, new C { T = "Tagblock", N = "Sound RTPCs" } },
+					{ 0xB60, new C { T = "Tagblock", N = "Submunition Events" } },
 
 					{ 0xB8C, new C { T = "Float" } },
 					{ 0xB90, new C { T = "Float" } },
 
-					{ 0xBA0, new C { T = "TagRef" } }, // JPT
-					{ 0xBBC, new C { T = "TagRef" } },
-					{ 0xBDC, new C { T = "TagRef" } }, // EFFE
-					{ 0xBF5, new C { T = "TagRef" } }, // EFFE
+					{ 0xBA0, new C { T = "TagRef", N = "Charged Detonation Damage" } }, // JPT
+					{ 0xBBC, new C { T = "TagRef", N = "Charged Impact Damage" } },
+					{ 0xBDC, new C { T = "TagRef", N = "Charged Visual Effect" } }, // EFFE
+					{ 0xBF5, new C { T = "TagRef", N = "Charged Detonation Effect" } }, // EFFE
 				}
 			}
 			,
