@@ -1834,13 +1834,13 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 80, new C { T = "Float" } },
 				{ 84, new C { T = "Float" } },
 
-				{ 92, new C { T = "Tagblock" } }, // SidecarPathDefinition
+				{ 92, new C { T = "Tagblock", N = "Source Sidecar" } }, // SidecarPathDefinition
 
-				{ 112, new C { T = "mmr3Hash", N = "Default Variant" } }, // default variant
-				{ 116, new C { T = "Float" } },
+				{ 112, new C { T = "mmr3Hash", N = "Default Model Variant" } }, // default variant
+				{ 116, new C { T = "Float", N = "Default Style ID" } },
 
 				{ 120, new C { T = "TagRef", N = "Model" } }, // vehicle model 
-				{ 148, new C { T = "TagRef" } }, // aset tag ref
+				{ 148, new C { T = "TagRef", N = "Asset" } }, // aset tag ref
 				{ 176, new C { T = "TagRef" } },
 				{ 204, new C { T = "TagRef" } },
 
@@ -1851,63 +1851,63 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 276, new C { T = "Float" } },
 
 				{ 288, new C { T = "TagRef" } },
-				{ 316, new C { T = "TagRef" } }, // foot tag ref
-				{ 344, new C { T = "TagRef" } }, // vemd tag ref
-				{ 372, new C { T = "TagRef" } }, // smed tag ref
+				{ 316, new C { T = "TagRef", N = "Material Effects" } }, // foot tag ref
+				{ 344, new C { T = "TagRef", N = "Visual Material Effects" } }, // vemd tag ref
+				{ 372, new C { T = "TagRef", N = "Sound Material Effects" } }, // smed tag ref
 				{ 400, new C { T = "TagRef" } },
 
 				{ 432, new C { T = "Float" } },
 
-				{ 448, new C { T = "Tagblock" } }, // object_ai_properties
-				{ 468, new C { T = "Tagblock" } }, // s_object_function_definition
+				{ 448, new C { T = "Tagblock", N = "AI Properties" } }, // object_ai_properties
+				{ 468, new C { T = "Tagblock", N = "Functions" } }, // s_object_function_definition
 				{ 488, new C { T = "4Byte" } },
-				{ 492, new C { T = "Tagblock" } }, // ObjectRuntimeInterpolatorFunctionsBlock
-				{ 512, new C { T = "Tagblock" } }, // ObjectFunctionSwitchDefinition
-				{ 532, new C { T = "Tagblock" } }, // i343::Objects::ObjectFunctionForwarding
+				{ 492, new C { T = "Tagblock", N = "Runtime Interpolator Functions" } }, // ObjectRuntimeInterpolatorFunctionsBlock
+				{ 512, new C { T = "Tagblock", N = "Function Switches" } }, // ObjectFunctionSwitchDefinition
+				{ 532, new C { T = "Tagblock", N = "Functions Forwarded To Parent" } }, // i343::Objects::ObjectFunctionForwarding
 				{ 552, new C { T = "4Byte" } },
-				{ 556, new C { T = "Tagblock" } }, // i343::Objects::AmmoRefillVariant
-				{ 576, new C { T = "4Byte" } },
-				{ 0x248,new C{T = "Tagblock",B = new Dictionary<long, C> // object_attachment_definition
+				{ 556, new C { T = "Tagblock", N = "Ammo Refill Variant Flags" } }, // i343::Objects::AmmoRefillVariant
+				{ 576, new C { T = "4Byte", N = "Variant Name" } },
+				{ 0x248,new C{T = "Tagblock", N = "Attachments",B = new Dictionary<long, C>  // object_attachment_definition
 				{
-					{ 4, new C{ T="TagRef"}}, // effe
-					{ 32, new C{ T="TagRef"}}, // effe
-					{ 64, new C{ T="Tagblock"}},
-					{ 84, new C{ T="TagRef"}}, //
-					{ 112, new C{ T="Tagblock"}}
+					{ 4, new C{ T="TagRef", N = "Type"}}, // effe
+					{ 32, new C{ T="TagRef", N = "Tag Graph Output"}}, // effe
+					{ 64, new C{ T="Tagblock", N = "Tag Graph Float Params"}},
+					{ 84, new C{ T="TagRef", N = "Override Type"}}, //
+					{ 112, new C{ T="Tagblock", N = "Variant Names"}}
 				},S = 148}},
 
-				{ 604, new C { T = "Tagblock" } }, // object_indirect_lighting_settings_definition
-				{ 624, new C { T = "Tagblock" } }, // s_water_physics_hull_surface_definition
-				{ 644, new C { T = "Tagblock" } }, // s_jetwash_definition
-				{ 664, new C { T = "Tagblock" } }, // object_definition_widget
-				{ 684, new C { T = "Tagblock" } }, // object_change_color_definition
-				{ 704, new C { T = "Tagblock" } }, // s_multiplayer_object_properties_definition
-				{ 724, new C { T = "Tagblock" } }, // i343::Objects::ForgeObjectEntryDefinition
+				{ 604, new C { T = "Tagblock", N = "Indirect Lighting Data" } }, // object_indirect_lighting_settings_definition
+				{ 624, new C { T = "Tagblock", N = "Hull Surfaces" } }, // s_water_physics_hull_surface_definition
+				{ 644, new C { T = "Tagblock", N = "Jetwash" } }, // s_jetwash_definition
+				{ 664, new C { T = "Tagblock", N = "Widgets" } }, // object_definition_widget
+				{ 684, new C { T = "Tagblock", N = "Change Colors" } }, // object_change_color_definition
+				{ 704, new C { T = "Tagblock", N = "Multiplayer Object" } }, // s_multiplayer_object_properties_definition
+				{ 724, new C { T = "Tagblock", N = "Forge Data" } }, // i343::Objects::ForgeObjectEntryDefinition
 
 				{ 744, new C { T = "TagRef" } },
 				{ 772, new C { T = "TagRef" } },
 
-				{ 800, new C { T = "Tagblock" } }, // s_object_spawn_effects
-				{ 820, new C { T = "Tagblock" } }, // ModelDissolveDataBlock
+				{ 800, new C { T = "Tagblock", N = "Spawn Effects" } }, // s_object_spawn_effects
+				{ 820, new C { T = "Tagblock", N = "Model Dissolve Data" } }, // ModelDissolveDataBlock
 
 
-				{ 0x348, new C { T = "String" } },
-				{ 0x45C, new C { T = "TagRef" } },
+				{ 0x348, new C { T = "String", N = "Class Name" } },
+				{ 0x45C, new C { T = "TagRef", N = "Prototype Script" } },
 
-				{ 0x484, new C { T = "Tagblock" } },
-				{ 0x498, new C { T = "Tagblock" } },
-				{ 0x4AC, new C { T = "Tagblock" } },
-				{ 0x4C8, new C { T = "Tagblock" } },
+				{ 0x484, new C { T = "Tagblock", N = "Designer Metadata" } },
+				{ 0x498, new C { T = "Tagblock", N = "Object Sound RTPCs" } },
+				{ 0x4AC, new C { T = "Tagblock", N = "Object Sound Sweeteners" } },
+				{ 0x4C8, new C { T = "Tagblock", N = "Object Function Smoothing" } },
 				{ 0x4E0, new C { T = "Float" } },
 
 				{ 0x4E4, new C { T = "TagRef" } },
-				{ 0x500, new C { T = "Tagblock" } },
-				{ 0x514, new C { T = "TagRef" } },
+				{ 0x500, new C { T = "Tagblock", N = "Tracking Info" } },
+				{ 0x514, new C { T = "TagRef", N = "Property Based Effects" } },
 
-				{ 0x530, new C { T = "Tagblock" } },
-				{ 0x548, new C { T = "Tagblock" } },
-				{ 0x55C, new C { T = "TagRef" } },
-				{ 0x578, new C { T = "Tagblock" } },
+				{ 0x530, new C { T = "Tagblock", N = "Interactions" } },
+				{ 0x548, new C { T = "Tagblock", N = "Data Driven Scripted Sequence Action Defenitions" } },
+				{ 0x55C, new C { T = "TagRef", N = "Channels" } },
+				{ 0x578, new C { T = "Tagblock", N = "Table Entries" } },
 				{ 0x58C, new C { T = "Tagblock" } },
 
 				{ 0x5A0, new C { T = "Float" } },
@@ -1924,23 +1924,23 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x5CC, new C { T = "Float" } },
 				{ 0x5E0, new C { T = "Float" } },
 
-				{ 0x5E8, new C { T = "Tagblock" } },
+				{ 0x5E8, new C { T = "Tagblock", N = "Leg Grounding Settings" } },
 
 				{ 0x5FC, new C { T = "Float" } },
 				{ 0x600, new C { T = "Float" } },
 				{ 0x604, new C { T = "Float" } },
 
-				{ 0x60C, new C { T = "Tagblock" } },
-				{ 0x620, new C { T = "Tagblock" } },
-				{ 0x638, new C { T = "Tagblock" } },
+				{ 0x60C, new C { T = "Tagblock", N = "Object Node Graphs" } },
+				{ 0x620, new C { T = "Tagblock", N = "Parent Animation Matching" } },
+				{ 0x638, new C { T = "Tagblock", N = "Model Variant Switching Table" } },
 
 				{ 0x64C, new C { T = "Float" } },
 
-				{ 0x650, new C { T = "Tagblock" } },
-				{ 0x664, new C { T = "Tagblock" } },
-				{ 0x678, new C { T = "Tagblock" } },
-				{ 0x68C, new C { T = "Tagblock" } },
-				{ 0x6A0, new C { T = "Tagblock" } },
+				{ 0x650, new C { T = "Tagblock", N = "Location Sensor" } },
+				{ 0x664, new C { T = "Tagblock", N = "Shroud Generator" } },
+				{ 0x678, new C { T = "Tagblock", N = "Power Component" } },
+				{ 0x68C, new C { T = "Tagblock", N = "Self Destruct Handler" } },
+				{ 0x6A0, new C { T = "Tagblock", N = "Indirect Lighting Component" } },
 
 				{ 0x6B8, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
 				{
@@ -1997,14 +1997,14 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 				{ 0x6C0, new C { T = "2Byte", N="Unit Team Enum" } },
 
-				{ 0x6C4, new C { T = "TagRef", N="Hologram Unit" } },
+				{ 0x6C4, new C { T = "TagRef", N="Hologram Unit Reference" } },
 
-				{ 0x6E0, new C { T = "Tagblock" } }, // metagame bucket
+				{ 0x6E0, new C { T = "Tagblock", N = "Campaign Metagame Bucket" } }, // metagame bucket
 				{ 0x6F4, new C { T = "Tagblock" } },
 				{ 0x720, new C { T = "Tagblock", B = new Dictionary<long, C> // camera tracks
 				{
 					{ 0x0, new C{ T="TagRef", N="3rdperson cam"}},
-					{ 0x1C, new C{ T="TagRef", N = "Screen effect"}},
+					{ 0x1C, new C{ T="TagRef", N = "Screen Effects"}},
 
 				},S = 64}},
 				{ 0x768, new C { T = "Tagblock" } },
@@ -2159,13 +2159,13 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					//{ 14, "Orient Facing To Movement"  },
 				}}},
 
-				{ 0xDA4, new C { T = "Float", N="Stationary turning speed" } },
+				{ 0xDA4, new C { T = "Float", N="Stationary Turning Threshold" } },
 
 				{ 0xDAC, new C { T = "TagRef" } },
 
 				{ 0xDD0, new C { T = "Float", N = "Jump Velocity" } },
 
-				{ 0xDD4, new C { T = "Tagblock" } },
+				{ 0xDD4, new C { T = "Tagblock", N = "Tricks" } }, //s_unit_trick_definition
 
 				{ 0xDEC, new C { T = "Float" } },
 				{ 0xDF0, new C { T = "Float" } },
