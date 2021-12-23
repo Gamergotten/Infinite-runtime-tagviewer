@@ -773,7 +773,17 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					}, S = 160}},
 
 					{ 0xC60, new C { T = "TagRef" } },
-					{ 0xC7C, new C { T = "Tagblock" } },
+					
+					{ 0xC7C, new C { T = "Tagblock", B = new Dictionary<long, C> // trigger block
+					{
+
+						{ 0x6, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0,  "Spew/Latch"  } // I don't think this is actaully a flag block
+						} } },
+
+					} } },
+					
 					{ 0xC90, new C {T = "Tagblock", B = new Dictionary<long, C> // barrel block
 					{
 						{ 4, new C{ T="Float", N = "Minimum Rounds per Minute"}},
