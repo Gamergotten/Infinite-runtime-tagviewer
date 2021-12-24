@@ -444,7 +444,21 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						{0x2C, new C { T="Float", N = "Max Velocity" } },
 					} } }, // s_vehicle_human_jeep_definition
 					
-					{ 0xDC8, new C { T = "Tagblock" } }, // s_vehicle_human_plane_definition
+					{ 0xDC8, new C { T = "Tagblock", B = new Dictionary<long, C>
+					{
+						{0x0, new C { T="Float", N = "Max Forward Speed" } },
+						{0x4, new C { T="Float", N = "Max Reverse Speed" } },
+						{0x8, new C { T="Float", N = "Speed Acceleration" } },
+						{0xC, new C { T="Float", N = "Speed Deceleration" } },
+						{0x18, new C { T="Float", N = "Max Left Slide" } },
+						{0x1C, new C { T="Float", N = "Max Right Slide" } },
+						{0x20, new C { T="Float", N = "Slide Acceleration" } },
+						{0x24, new C { T="Float", N = "Slide Deceleration" } },
+						{0x30, new C { T="Float", N = "Maximum Up Rise" } },
+						{0x34, new C { T="Float", N = "Maximum Down Rise" } },
+						{0x38, new C { T="Float", N = "Rise Acceleration" } },
+						{0x3C, new C { T="Float", N = "Rise Deceleration" } },
+					} } }, // s_vehicle_human_plane_definition
 					
 					{ 0xDDC, new C { T = "Tagblock", B = new Dictionary<long, C>
 					{
