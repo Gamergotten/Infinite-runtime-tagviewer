@@ -444,7 +444,21 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						{0x2C, new C { T="Float", N = "Max Velocity" } },
 					} } }, // s_vehicle_human_jeep_definition
 					
-					{ 0xDC8, new C { T = "Tagblock" } }, // s_vehicle_human_plane_definition
+					{ 0xDC8, new C { T = "Tagblock", B = new Dictionary<long, C>
+					{
+						{0x0, new C { T="Float", N = "Max Forward Speed" } },
+						{0x4, new C { T="Float", N = "Max Reverse Speed" } },
+						{0x8, new C { T="Float", N = "Speed Acceleration" } },
+						{0xC, new C { T="Float", N = "Speed Deceleration" } },
+						{0x18, new C { T="Float", N = "Max Left Slide" } },
+						{0x1C, new C { T="Float", N = "Max Right Slide" } },
+						{0x20, new C { T="Float", N = "Slide Acceleration" } },
+						{0x24, new C { T="Float", N = "Slide Deceleration" } },
+						{0x30, new C { T="Float", N = "Maximum Up Rise" } },
+						{0x34, new C { T="Float", N = "Maximum Down Rise" } },
+						{0x38, new C { T="Float", N = "Rise Acceleration" } },
+						{0x3C, new C { T="Float", N = "Rise Deceleration" } },
+					} } }, // s_vehicle_human_plane_definition
 					
 					{ 0xDDC, new C { T = "Tagblock", B = new Dictionary<long, C>
 					{
@@ -773,7 +787,17 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					}, S = 160}},
 
 					{ 0xC60, new C { T = "TagRef" } },
-					{ 0xC7C, new C { T = "Tagblock" } },
+					
+					{ 0xC7C, new C { T = "Tagblock", B = new Dictionary<long, C> // trigger block
+					{
+
+						{ 0x6, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0,  "Spew/Latch"  } // I don't think this is actaully a flag block
+						} } },
+
+					} } },
+					
 					{ 0xC90, new C {T = "Tagblock", B = new Dictionary<long, C> // barrel block
 					{
 						{ 4, new C{ T="Float", N = "Minimum Rounds per Minute"}},
@@ -2490,7 +2514,6 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			
 			{"sagh",new()
 			{
-
 				{ 0x14, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
 						{
 							{ 0, "Use 3rd Person Camera When Active"  },
@@ -2504,11 +2527,15 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 							{ 8, "Allow activation during weapon throw"  },
 							{ 9, "Allow activation while sliding"  }
 				} } },
-				
+
 				{ 0x18, new C { T = "Float", N = "Activation Energy Cost" } },
 				{ 0x20, new C { T = "Float", N = "Recharge Duration" } },
 				{ 0x24, new C { T = "Float", N = "Recharge Delay" } },
 				{ 0x28, new C { T = "Float", N = "Cooldown Delay" } },
+
+				{ 0x2C, new C { T="TagRef", N = "Activation Effect"} },
+				{ 0x50, new C { T="TagRef", N = "Active Malleable Properties Modifier"} },
+				{ 0x6C, new C { T="TagRef", N = "Timed Malleable Properties Modifier"} },
 
 				{ 0x88, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
 						{
@@ -2531,13 +2558,18 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 							{ 16, "ignore soft ceilings"  }
 				} } },
 
+				{ 0x98, new C { T="TagRef", N = "Rope Effect"} },
+				{ 0xB8, new C { T="TagRef", N = "Pulling Effect"} },
+				{ 0xD4, new C { T="TagRef", N = "Reeling Effect"} },
+				{ 0xF0, new C { T="TagRef", N = "Deactivation Effect"} },
+				{ 0x10C, new C { T="TagRef", N = "Projectile"} },
+				{ 0x12C, new C { T="TagRef", N = "Object"} },
+
 				{ 0x154, new C { T = "Float", N = "Warmup Time" } },
 				{ 0x16C, new C { T = "Float", N = "Line of Sight Testing" } },
-				
 				{ 0x1D0, new C { T = "Float", N = "Target Velocity" } },
-				{ 0x1D4, new C { T = "Float", N = "Max Exit Velocity" } },
-				{ 0x20C, new C { T = "Float", N = "Aim Influence" } },
-
+				{ 0x1D4, new C { T = "Float", N = "Max Exit Velocity" } },			
+				{ 0x20C, new C { T = "Float", N = "Aim Influence" } },				
 				{ 0x284, new C { T = "Float", N = "Completion Distance (Level Geo)" } },
 				{ 0x288, new C { T = "Float", N = "Completion Distance (Ceilings)" } },
 				{ 0x28C, new C { T = "Float", N = "Completion Distance (Floors)" } },
@@ -2549,6 +2581,23 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x2A4, new C { T = "Float", N = "Max Allowed Angle Deviation (Ceiling)" } },
 				{ 0x2A8, new C { T = "Float", N = "Max Allowed Angle Deviation (Floor)" } },
 				{ 0x2AC, new C { T = "Float", N = "Line of Sight Break Time" } },
+
+				{ 0x380, new C { T = "Float", N = "Bash Activation Hold Time" } },
+				{ 0x384, new C { T = "Float", N = "Bash Max Aim Angle" } },
+				{ 0x388, new C { T = "Float", N = "Bash Aim Lock Rate of Change" } },
+				{ 0x38C, new C { T = "Float", N = "Bash Peak Velocity" } },
+				{ 0x390, new C { T = "Float", N = "Bash Charge Up Duration" } },
+				{ 0x3AC, new C { T = "Float", N = "Bash Acceleration Duration" } },				
+
+				{ 0x400, new C { T="TagRef", N = "BashCharge Up Effect"} },
+				{ 0x41C, new C { T="TagRef", N = "Bash Launch Effect"} },
+				{ 0x438, new C { T="TagRef", N = "Bash Active Effect"} },
+				{ 0x454, new C { T="TagRef", N = "Bash Completion Effect"} },
+				
+				{ 0x470, new C { T="TagRef", N = "Owner Damage"} },
+				{ 0x48C, new C { T="TagRef", N = "AOE Damage"} },
+
+				{ 0x4B4, new C { T = "Float", N = "Miss Cooldown Delay" } },
 			}},
 		};
 
