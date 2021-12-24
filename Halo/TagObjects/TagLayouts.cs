@@ -2538,51 +2538,17 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x1D4, new C { T = "Float", N = "Max Exit Velocity" } },
 				{ 0x20C, new C { T = "Float", N = "Aim Influence" } },
 
-				{ 0x284, new C { T = "Float", N = "Pull Completion Distance (Level Geo)" } },
-				{ 0x288, new C { T = "Float", N = "Pull Completion Distance (Ceilings)" } },
-				{ 0x28C, new C { T = "Float", N = "Pull Completion Distance (Floors)" } },
-				{ 0x290, new C { T = "Float", N = "Pull Completion Distance (Biped)" } },
-				{ 0x294, new C { T = "Float", N = "Pull Completion Distance (Vehicles)" } },
+				{ 0x284, new C { T = "Float", N = "Completion Distance (Level Geo)" } },
+				{ 0x288, new C { T = "Float", N = "Completion Distance (Ceilings)" } },
+				{ 0x28C, new C { T = "Float", N = "Completion Distance (Floors)" } },
+				{ 0x290, new C { T = "Float", N = "Completion Distance (Biped)" } },
+				{ 0x294, new C { T = "Float", N = "Completion Distance (Vehicles)" } },
 				{ 0x298, new C { T = "Float", N = "Vehicle Interaction Distance" } },
 				{ 0x29C, new C { T = "Float", N = "Vehicle Interaction Time" } },
 				{ 0x2A0, new C { T = "Float", N = "Automelee Max Angle" } },
 				{ 0x2A4, new C { T = "Float", N = "Max Allowed Angle Deviation (Ceiling)" } },
 				{ 0x2A8, new C { T = "Float", N = "Max Allowed Angle Deviation (Floor)" } },
-				{ 0x2AC, new C { T = "Float", N = "Pull Line of Sight Break Time" } },
-
-
-				{ 0x308, new C { T = "Float", N = "Reel In Launch Grounded Slope" } },
-				{ 0x30C, new C { T = "Float", N = "Reel In Launch Vertical Impulse Duration" } },
-				{ 0x310, new C { T = "Float", N = "Reel In Lauch Vertical Impulse Grounded" } },
-				{ 0x314, new C { T = "Float", N = "Reel In Launch Vertical Impulse Airborne" } },
-				{ 0x318, new C { T = "Float", N = "Reel In Launch Roll Impulse Airborne" } },
-				{ 0x31C, new C { T = "Float", N = "Reel In Launch Roll Rotation Impulse Grounded" } },
-				{ 0x320, new C { T = "Float", N = "Reel In Launch Pitch Impulse Airborne" } },
-				{ 0x324, new C { T = "Float", N = "Reel In Launch Pitch Rotation Impulse Grounded" } },
-				{ 0x328, new C { T = "Float", N = "Reel In Exit Velocity" } },
-				{ 0x32C, new C { T = "Float", N = "Reel In Grab Distance" } },
-				{ 0x330, new C { T = "Float", N = "Reel In Grab Vertical Offset" } },
-				{ 0x334, new C { T = "Float", N = "Reel In Time To Detach Allowed" } },
-				{ 0x338, new C { T = "Float", N = "Reel In Detach Damage Threshold" } },
-				{ 0x340, new C { T = "Float", N = "Reel In Line Of Sight Break Time" } },
-				{ 0x344, new C { T = "Float", N = "Reel In Min Acceleration Percentage To Break" } },
-				{ 0x348, new C { T = "String", N = "Reel In Animation" } },
-				{ 0x350, new C { T = "TagRef", N = "Reel In Acceleration Function" } },
-
-
-
-
-				{ 0x4B4, new C { T = "Float", N = "Miss Cooldown Delay" } },
-				{ 0x4B8, new C { T = "Float", N = "Aim Assist Range" } },
-				{ 0x4BC, new C { T = "Float", N = "Aim Assist Cone Angle At Projectile Launch" } },
-				{ 0x4C0, new C { T = "Float", N = "Aim Assist Cone Angle While Flying" } },
-				{ 0x4C4, new C { T = "Float", N = "Aim Assist Weight (Angle)" } },
-				{ 0x4C8, new C { T = "Float", N = "Aim Assist Weight (Distance)" } },
-				{ 0x4CC, new C { T = "Float", N = "Aim Assist Weight (Biped)" } },
-				{ 0x4D0, new C { T = "Float", N = "Aim Assist Weight (Vehicle)" } },
-				{ 0x4D4, new C { T = "Float", N = "Aim Assist Weight (Weapon)" } },
-
-
+				{ 0x2AC, new C { T = "Float", N = "Line of Sight Break Time" } },
 			}},
 		};
 
