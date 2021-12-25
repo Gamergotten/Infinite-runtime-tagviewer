@@ -581,6 +581,9 @@ namespace InfiniteRuntimeTagViewer
 					case "2Byte":
 						M.WriteMemory(address.ToString("X"), "2bytes", value);
 						break;
+					case "Byte":
+						M.WriteMemory(address.ToString("X"), "byte", value);
+						break;
 					case "Flags":
 						M.WriteMemory(address.ToString("X"), "byte", Convert.ToByte(value).ToString("X"));
 						break;

@@ -910,7 +910,25 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{0xF4,new C{T = "Tagblock",B = new Dictionary<long, C> // object variant
 					{
 						{ 0x0, new C { T = "mmr3Hash", N = "Variant Hash" } }, // variant
-						{ 0x34, new C{ T="Tagblock"}},
+
+						{ 0x34, new C{ T="Tagblock", B=new Dictionary<long, C> // region block
+						{
+							{ 0x0, new C{ T="mmr3Hash"}},
+							{ 0x4, new C{ T="Byte", N="Model Region Index"}},
+							{ 0x5, new C{ T="Flags"}},
+							{ 0x6, new C{ T="2Byte", N="Parent Variant"}},
+							{ 0x8, new C{ T="Tagblock", B=new Dictionary<long, C> // permutation block
+							{
+								{ 0x0, new C{ T="mmr3Hash"}},
+								{ 0x4, new C{ T="Byte", N="Model Permutation Index"}},
+								{ 0xC, new C{ T="Float",N="Probability"}},
+								{ 0x10, new C{ T="Tagblock"}},
+							}, S=44}},
+
+						}, S=32}},
+
+
+
 						{ 0x48, new C{ T="Tagblock", B=new Dictionary<long, C> // object block
 						{
 							{ 12, new C{ T="TagRef", N = "Attached Object"}}, //
@@ -1637,7 +1655,12 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			{"mode",new()
 			{
 
-				{ 0x28, new C{ T="Tagblock"}},
+				{ 0x28, new C{ T="Tagblock", B= new Dictionary<long, C>
+				{
+					{ 0x0, new C{ T="mmr3Hash", N = "Hash"} },
+					{ 0x4, new C{ T="Tagblock"} },
+
+				}, S=24 }},
 				{ 0x40, new C{ T="Tagblock"}},
 				{ 0x54, new C{ T="Tagblock"}},
 				{ 0x68, new C{ T="Tagblock"}},
