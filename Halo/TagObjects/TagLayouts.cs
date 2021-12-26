@@ -356,7 +356,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 					{ 0xAC8, new C { T = "TagRef" } },
 					{ 0xAE4, new C { T = "Tagblock" } }, // i343::Objects::PowerComponentDefinition
-					{ 0xAF8, new C { T = "TagRef" } },
+					{ 0xAF8, new C { T = "TagRef", N = "Boost" } },
 					{ 0xB14, new C { T = "TagRef" } },
 
 					{ 0xB38, new C { T = "Float" } },
