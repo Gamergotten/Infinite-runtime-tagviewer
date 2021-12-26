@@ -934,7 +934,25 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{0xF4,new C{T = "Tagblock",B = new Dictionary<long, C> // object variant
 					{
 						{ 0x0, new C { T = "mmr3Hash", N = "Variant Hash" } }, // variant
-						{ 0x34, new C{ T="Tagblock"}},
+
+						{ 0x34, new C{ T="Tagblock", B=new Dictionary<long, C> // region block
+						{
+							{ 0x0, new C{ T="mmr3Hash"}},
+							{ 0x4, new C{ T="Byte", N="Model Region Index"}},
+							{ 0x5, new C{ T="Flags"}},
+							{ 0x6, new C{ T="2Byte", N="Parent Variant"}},
+							{ 0x8, new C{ T="Tagblock", B=new Dictionary<long, C> // permutation block
+							{
+								{ 0x0, new C{ T="mmr3Hash"}},
+								{ 0x4, new C{ T="Byte", N="Model Permutation Index"}},
+								{ 0xC, new C{ T="Float",N="Probability"}},
+								{ 0x10, new C{ T="Tagblock"}},
+							}, S=44}},
+
+						}, S=32}},
+
+
+
 						{ 0x48, new C{ T="Tagblock", B=new Dictionary<long, C> // object block
 						{
 							{ 12, new C{ T="TagRef", N = "Attached Object"}}, //
@@ -1661,7 +1679,12 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			{"mode",new()
 			{
 
-				{ 0x28, new C{ T="Tagblock"}},
+				{ 0x28, new C{ T="Tagblock", B= new Dictionary<long, C>
+				{
+					{ 0x0, new C{ T="mmr3Hash", N = "Hash"} },
+					{ 0x4, new C{ T="Tagblock"} },
+
+				}, S=24 }},
 				{ 0x40, new C{ T="Tagblock"}},
 				{ 0x54, new C{ T="Tagblock"}},
 				{ 0x68, new C{ T="Tagblock"}},
@@ -2598,6 +2621,93 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x48C, new C { T="TagRef", N = "AOE Damage"} },
 
 				{ 0x4B4, new C { T = "Float", N = "Miss Cooldown Delay" } },
+			}},
+			
+			{"eqip",new()
+			{					
+				{ 0xF0, new C { T = "TagRef", N  = "Collision Damage" } },					
+				{ 0x13C, new C { T = "TagRef", N = "Material Effect" } },
+				{ 0x190, new C { T = "TagRef", N = "Sound" } },
+				{ 0x2C0, new C { T = "Tagblock", B= new Dictionary<long, C>
+				{
+					{ 0x44, new C { T = "TagRef"} },
+					{ 0x64, new C { T = "TagRef"} },
+					{ 0x80, new C { T = "TagRef"} },
+					{ 0x9C, new C { T = "TagRef"} },
+					{ 0xB8, new C { T = "TagRef"} },
+
+					{ 0x13C, new C { T = "Float" } },
+					{ 0x140, new C { T = "Float" } },
+					{ 0x150, new C { T = "Float" } },
+
+					{ 0x158, new C { T = "TagRef", N = "Sound"} },
+
+					{ 0x168, new C { T = "Float" } },
+				} } }, //s_multiplayer_object_properties_definition		
+				{ 0x45C, new C { T = "TagRef", N = "Script" } },
+					
+				{ 0x500, new C { T = "Tagblock", B= new Dictionary<long, C>
+				{
+					{ 0x118, new C { T = "Float" } }, //Something to do with how many rounds you have/recharge times
+					{ 0x11C, new C { T = "Float" } },
+				} } }, //i343::SpartanTracking::ObjectDefinition
+					
+				{ 0x77C, new C { T = "TagRef", N = "Effect" } },
+				{ 0x7D8, new C { T = "TagRef", N = "Grounded Friction" } },
+					
+				{ 0x8C4, new C { T = "Tagblock", B= new Dictionary<long, C>
+				{
+					{ 0x4C, new C { T = "Tagblock"} }, //EquipmentAbilityDeactivationOverrideSettings
+					{ 0x6C, new C { T = "Tagblock"} }, //ControlStateUIInfo
+						
+					{ 0x88, new C { T = "Tagblock", B= new Dictionary<long, C>
+					{
+						{ 0x4, new C { T = "Float" } },
+						{ 0x8, new C { T = "Float" } },
+						{ 0x54, new C { T = "Float" } },
+						{ 0x64, new C { T = "TagRef" } },
+						{ 0x6C, new C { T = "Float" } },
+						{ 0x70, new C { T = "Float" } },
+						{ 0x80, new C { T = "TagRef" } },
+						{ 0xB0, new C { T = "TagRef" } },
+						{ 0xD0, new C { T = "TagRef" } },
+						{ 0xF4, new C { T = "TagRef" } },
+					} } }, //EquipmentAbilityTypeSpawner
+						
+					{ 0x9C, new C { T = "Tagblock"} }, // EquipmentAbilityTypeProximityMine
+					{ 0xB0, new C { T = "Tagblock"} }, // EquipmentAbilityTypeMotionTrackerNoise
+					{ 0xC4, new C { T = "Tagblock"} }, // EquipmentAbilityTypeTreeOfLife
+					{ 0xD8, new C { T = "Tagblock"} }, // EquipmentAbilityTypeRepulsorField
+					{ 0xEC, new C { T = "Tagblock"} }, // EquipmentAbilityTypeDaddy
+					{ 0x100, new C { T = "Tagblock"} }, // EquipmentAbilityTypeAmmoPack
+					{ 0x114, new C { T = "Tagblock"} }, // EquipmentAbilityTypeHealthPack
+					{ 0x128, new C { T = "Tagblock"} }, // EquipmentAbilityTypeJetPack
+					{ 0x13C, new C { T = "Tagblock"} }, // EquipmentAbilityTypeHologram
+					{ 0x150, new C { T = "Tagblock"} }, // EquipmentAbilityTypeSpecialWeapon
+					{ 0x164, new C { T = "Tagblock"} }, // EquipmentAbilityTypeSpecialMove
+					{ 0x178, new C { T = "Tagblock"} }, // EquipmentAbilityTypeEngineerShields
+					{ 0x18C, new C { T = "Tagblock"} }, // EquipmentAbilityTypeAutoTurret
+					{ 0x1A0, new C { T = "Tagblock"} }, // EquipmentAbilityTypeShieldProjector
+					{ 0x1B4, new C { T = "Tagblock"} }, // EquipmentAbilityTypeProctileCollector
+					{ 0x1C8, new C { T = "Tagblock"} }, // EquipmentAbilityTypeActiveShield
+					{ 0x1DC, new C { T = "Tagblock"} }, // EquipmentAbilityTypeFortificationShield
+					{ 0x1F0, new C { T = "Tagblock"} }, // EquipmentAbilityTypeGenericPowerup
+					{ 0x204, new C { T = "Tagblock"} }, // EquipmentAbilityTypeMalleableProperties						
+					{ 0x218, new C { T = "Tagblock"} }, // EquipmentAbilityTypeSpartanCustomTracking
+					{ 0x22C, new C { T = "Tagblock"} }, // EquipmentAbilityTypeTeleporter
+					{ 0x240, new C { T = "Tagblock"} }, // EquipmentAbilityTypeFrameAbilityItem
+					{ 0x254, new C { T = "Tagblock"} }, // EquipmentAbilityTypeEquipmentRecharger
+					{ 0x268, new C { T = "Tagblock"} }, // EquipmentAbilityTypeKnockback
+					{ 0x27C, new C { T = "Tagblock"} }, // EquipmentAbilityTypeActiveCamo
+
+				} } }, //EquipmentAbility					
+					
+				{ 0x8F4, new C { T = "Tagblock" } }, //Interface::UIItemInfo					
+				{ 0x908, new C { T = "TagRef", N = "Sound" } },
+				{ 0xDA0, new C { T = "TagRef", N = "Activation Effect" } },
+				{ 0xE78, new C { T = "TagRef", N = "Object" } },
+				{ 0xEC4, new C { T = "TagRef", N = "Bitmap" } },
+				{ 0xEE4, new C { T = "TagRef", N = "Bitmap" } },
 			}},
 		};
 

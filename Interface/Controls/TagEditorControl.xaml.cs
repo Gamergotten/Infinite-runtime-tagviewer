@@ -405,7 +405,25 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						vb6.value_name.Text = entry.Value.N;
 
 						break;
+					case "Byte":
+						TagValueBlock? vb19 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						vb19.value_type.Text = "Byte";
+						vb19.value.Text = _m.ReadByte((address + entry.Key).ToString("X")).ToString();
+						parentpanel.Children.Add(vb19);
 
+						vb19.value.Tag = new TagEditorDefinition()
+						{
+							MemoryAddress = address + entry.Key,
+							MemoryType = "Byte",
+							TagDef = entry.Value,
+							TagStruct = tagStruct
+						};
+
+						vb19.value.TextChanged += value_TextChanged;
+
+						vb19.value_name.Text = entry.Value.N;
+
+						break;
 					case "Float":
 						TagValueBlock? vb2 = new() { HorizontalAlignment = HorizontalAlignment.Left };
 						vb2.value_type.Text = "Float";
