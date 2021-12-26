@@ -151,8 +151,18 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			ComboBox? cb = sender as ComboBox;
 			TagEditorDefinition ted = cb.Tag as TagEditorDefinition;
 			System.Diagnostics.Debug.Assert(ted != null);
+			string new_group = cb.SelectedValue.ToString();
+			if (new_group != "Null")
+			{
+				ted.MemoryType = "TagrefGroup";
+				_mainWindow.AddPokeChange(ted, new_group);
+			}
+			else
+			{
+				ted.MemoryType = "4Byte";
+				_mainWindow.AddPokeChange(ted, "-1");
 
-			_mainWindow.AddPokeChange(ted, cb.SelectedValue.ToString());
+			}
 			//_mainWindow.AddPokeChange(long.Parse(s: cb.Tag.ToString()), "TagrefGroup", value: cb.SelectedValue.ToString());
 
 			// What the actual fuck is all of this? 
@@ -405,7 +415,25 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						vb6.value_name.Text = entry.Value.N;
 
 						break;
+					case "Byte":
+						TagValueBlock? vb19 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						vb19.value_type.Text = "Byte";
+						vb19.value.Text = _m.ReadByte((address + entry.Key).ToString("X")).ToString();
+						parentpanel.Children.Add(vb19);
 
+						vb19.value.Tag = new TagEditorDefinition()
+						{
+							MemoryAddress = address + entry.Key,
+							MemoryType = "Byte",
+							TagDef = entry.Value,
+							TagStruct = tagStruct
+						};
+
+						vb19.value.TextChanged += value_TextChanged;
+
+						vb19.value_name.Text = entry.Value.N;
+
+						break;
 					case "Float":
 						TagValueBlock? vb2 = new() { HorizontalAlignment = HorizontalAlignment.Left };
 						vb2.value_type.Text = "Float";
@@ -429,6 +457,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 					case "TagRef":
 						TagRefBlock? tfb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						tfb1.taggroup.Items.Add("Null");
 						foreach (string s in _mainWindow.TagGroups.Keys)
 						{
 							tfb1.taggroup.Items.Add(s);

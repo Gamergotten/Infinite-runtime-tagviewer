@@ -56,6 +56,7 @@ namespace InfiniteRuntimeTagViewer
 			_t.Interval = 2000;
 			_t.AutoReset = true;
 			inhale_tagnames();
+
 		}
 
 		public bool loadedTags = false;
@@ -95,6 +96,9 @@ namespace InfiniteRuntimeTagViewer
 						{
 							loadedTags = true;
 						}
+
+						
+
 					}
 				}
 			}));
@@ -229,6 +233,7 @@ namespace InfiniteRuntimeTagViewer
 					{
 						loadedTags = true;
 					}
+
 				}
 			}
 
@@ -581,6 +586,9 @@ namespace InfiniteRuntimeTagViewer
 					case "2Byte":
 						M.WriteMemory(address.ToString("X"), "2bytes", value);
 						break;
+					case "Byte":
+						M.WriteMemory(address.ToString("X"), "byte", value);
+						break;
 					case "Flags":
 						M.WriteMemory(address.ToString("X"), "byte", Convert.ToByte(value).ToString("X"));
 						break;
@@ -873,6 +881,7 @@ namespace InfiniteRuntimeTagViewer
 					System.Diagnostics.Debug.WriteLine("Invalid parameter count. Consider calling a method with no parameters.");
 				}
 			}
-	}
+		}
+
 	}
 }
