@@ -14,7 +14,7 @@
         </Grid.ColumnDefinitions>
 
         <ComboBox x:Name="taggroup" Grid.Column="1" SelectedIndex="0" BorderBrush="#fff" Margin="1">
-            <ComboBoxItem Content="Null" IsSelected="True" />
+            <!--ComboBoxItem Content="Null" IsSelected="True" /-->
         </ComboBox>
 
         <Button x:Name="tag_button" Grid.Column="2" Content="tag\wahtever\test\amongus\sussy" Margin="1" />
