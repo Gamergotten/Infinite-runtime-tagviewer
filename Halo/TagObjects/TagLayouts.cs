@@ -2601,10 +2601,19 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			}},
 			
 			{"eqip",new()
-			{					
-				{ 0xF0, new C { T = "TagRef", N  = "Collision Damage" } },					
+			{
+				{ 0x78, new C { T = "TagRef", N = "Model" } },
+				{ 0xF0, new C { T = "TagRef", N  = "Collision Damage" } },
 				{ 0x13C, new C { T = "TagRef", N = "Material Effect" } },
 				{ 0x190, new C { T = "TagRef", N = "Sound" } },
+
+				{ 0x248, new C { T = "Tagblock", B= new Dictionary<long, C>
+				{
+					{ 0x4, new C { T = "TagRef" } },
+					{ 0x20, new C { T = "TagRef" } },
+					{ 0x54, new C { T = "TagRef" } },
+				} } }, // object_attachment_definition
+
 				{ 0x2C0, new C { T = "Tagblock", B= new Dictionary<long, C>
 				{
 					{ 0x44, new C { T = "TagRef"} },
@@ -2622,16 +2631,17 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x168, new C { T = "Float" } },
 				} } }, //s_multiplayer_object_properties_definition		
 				{ 0x45C, new C { T = "TagRef", N = "Script" } },
-					
-				{ 0x500, new C { T = "Tagblock", B= new Dictionary<long, C>
-				{
-					{ 0x118, new C { T = "Float" } }, //Something to do with how many rounds you have/recharge times
-					{ 0x11C, new C { T = "Float" } },
-				} } }, //i343::SpartanTracking::ObjectDefinition
-					
+
+				{ 0xD88, new C { T = "Float" } }, //Something to do with how many rounds you have/recharge times
+				{ 0xD8C, new C { T = "Float" } },
+
+				{ 0x500, new C { T = "Tagblock" } },
+
+				{ 0x758, new C { T = "TagRef", N = "Damage Effect" } },
 				{ 0x77C, new C { T = "TagRef", N = "Effect" } },
 				{ 0x7D8, new C { T = "TagRef", N = "Grounded Friction" } },
-					
+				{ 0x850, new C { T = "TagRef", N = "Equipment" } },
+
 				{ 0x8C4, new C { T = "Tagblock", B= new Dictionary<long, C>
 				{
 					{ 0x4C, new C { T = "Tagblock"} }, //EquipmentAbilityDeactivationOverrideSettings
@@ -2681,10 +2691,15 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					
 				{ 0x8F4, new C { T = "Tagblock" } }, //Interface::UIItemInfo					
 				{ 0x908, new C { T = "TagRef", N = "Sound" } },
+				{ 0x9BC, new C { T = "TagRef", N = "Effect" } },
+				{ 0x9D8, new C { T = "TagRef", N = "Effect" } },
+				{ 0xC14, new C { T = "TagRef", N = "Effect" } },
+				{ 0xC30, new C { T = "TagRef", N = "Effect" } },
+				{ 0xD70, new C { T = "TagRef", N = "Effect" } },
 				{ 0xDA0, new C { T = "TagRef", N = "Activation Effect" } },
 				{ 0xE78, new C { T = "TagRef", N = "Object" } },
 				{ 0xEC4, new C { T = "TagRef", N = "Bitmap" } },
-				{ 0xEE4, new C { T = "TagRef", N = "Bitmap" } },
+				{ 0xEE4, new C { T = "TagRef" } },
 			}},
 		};
 
