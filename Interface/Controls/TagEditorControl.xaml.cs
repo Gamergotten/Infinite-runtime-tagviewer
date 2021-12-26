@@ -151,8 +151,18 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			ComboBox? cb = sender as ComboBox;
 			TagEditorDefinition ted = cb.Tag as TagEditorDefinition;
 			System.Diagnostics.Debug.Assert(ted != null);
+			string new_group = cb.SelectedValue.ToString();
+			if (new_group != "Null")
+			{
+				ted.MemoryType = "TagrefGroup";
+				_mainWindow.AddPokeChange(ted, new_group);
+			}
+			else
+			{
+				ted.MemoryType = "4Byte";
+				_mainWindow.AddPokeChange(ted, "-1");
 
-			_mainWindow.AddPokeChange(ted, cb.SelectedValue.ToString());
+			}
 			//_mainWindow.AddPokeChange(long.Parse(s: cb.Tag.ToString()), "TagrefGroup", value: cb.SelectedValue.ToString());
 
 			// What the actual fuck is all of this? 
@@ -447,6 +457,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 					case "TagRef":
 						TagRefBlock? tfb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						tfb1.taggroup.Items.Add("Null");
 						foreach (string s in _mainWindow.TagGroups.Keys)
 						{
 							tfb1.taggroup.Items.Add(s);

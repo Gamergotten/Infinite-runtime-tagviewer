@@ -1682,7 +1682,14 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x28, new C{ T="Tagblock", B= new Dictionary<long, C>
 				{
 					{ 0x0, new C{ T="mmr3Hash", N = "Hash"} },
-					{ 0x4, new C{ T="Tagblock"} },
+					{ 0x4, new C{ T="Tagblock", B= new Dictionary<long, C>
+					{
+						{ 0x0, new C{ T="mmr3Hash", N = "Name"} },
+						{ 0x4, new C{ T="2Byte", N = "Mesh Index"} },
+						{ 0x6, new C{ T="2Byte", N = "Mesh Count"} },
+						{ 0x8, new C{ T="mmr3Hash", N = "Clone Name"} },
+
+					}, S=12 }},
 
 				}, S=24 }},
 				{ 0x40, new C{ T="Tagblock"}},
