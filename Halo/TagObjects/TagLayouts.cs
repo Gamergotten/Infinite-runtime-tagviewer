@@ -2731,6 +2731,42 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0xEC4, new C { T = "TagRef", N = "Bitmap" } },
 				{ 0xEE4, new C { T = "TagRef" } },
 			}},
+			
+			{"bloc",new()
+			{
+				{ 0x10, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+				
+					{
+							{ 0, "Does Not Cast Shadow." },
+				} } },
+
+				{ 0x78, new C { T = "TagRef", N = "Model" } },
+				{ 0x13C, new C { T = "TagRef", N = "Material Effects" } },
+
+				{ 0x248, new C { T = "Tagblock", B= new Dictionary<long, C>
+				{
+					{ 0x04, new C { T = "TagRef" } },
+					{ 0x20, new C { T = "TagRef" } },
+				} } }, // Object_attachment_definition
+			}},
+
+			{"scen",new()
+			{
+				{ 0x10, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+
+					{
+							{ 0, "Does Not Cast Shadow." },
+				} } },
+
+				{ 0x78, new C { T = "TagRef", N = "Model" } },
+				{ 0x13C, new C { T = "TagRef", N = "Material Effects" } },
+
+				{ 0x248, new C { T = "Tagblock", B= new Dictionary<long, C>
+				{
+					{ 0x04, new C { T = "TagRef" } },
+					{ 0x20, new C { T = "TagRef" } },
+				} } }, // Object_attachment_definition
+			}},
 		};
 
 
