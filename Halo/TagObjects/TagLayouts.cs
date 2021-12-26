@@ -2767,6 +2767,32 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x20, new C { T = "TagRef" } },
 				} } }, // Object_attachment_definition
 			}},
+			
+			{"bost",new()
+			{
+				{ 0x10, new C { T = "TagRef", N = "Collision Damage" } },
+
+				{ 0x2C, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+
+					{
+							{ 0, "Constant boost while active" }, // Don't know what the actual name is, but this is what it does
+				} } },
+				{ 0x30, new C { T = "Float", N = "Boost Speed" } }, //Doesn't seem to work for the banshee, works on ghost though.
+				{ 0x34, new C { T = "Float" } },
+				{ 0x38, new C { T = "Float" } },
+				{ 0x3C, new C { T = "Float", N = "Boost Cost" } }, //Works on banshee and ghost.			
+				{ 0x40, new C { T = "Float" } },
+				{ 0x44, new C { T = "Float", N = "Boost Recharge Rate" } },
+				{ 0x48, new C { T = "Float" } },
+				{ 0x4dC, new C { T = "Float" } },
+				{ 0x74, new C { T = "Float", N = "Power Scale" } },
+				{ 0x78, new C { T = "Float" } },
+				{ 0x7C, new C { T = "Float" } },
+				{ 0x80, new C { T = "Float" } },
+				{ 0x84, new C { T = "Float" } },
+				{ 0x88, new C { T = "Float" } },
+				{ 0x8C, new C { T = "Float" } },					
+			}},
 		};
 
 
