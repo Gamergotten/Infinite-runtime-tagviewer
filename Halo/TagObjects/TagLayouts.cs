@@ -2884,6 +2884,15 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x88, new C { T = "Float" } },
 				{ 0x8C, new C { T = "Float" } },					
 			}},
+			
+			{"saev",new()
+			{
+				{ 0x18, new C { T = "Float", N = "Recharge Cost" } },
+				{ 0x20, new C { T = "Float", N = "Recharge Duration" } },
+				{ 0x2C, new C { T = "TagRef" } },
+				{ 0xA0, new C { T = "Float" } },
+				{ 0x198, new C { T = "Float", N = "Thrust Power" } },
+			}},
 		};
 
 
