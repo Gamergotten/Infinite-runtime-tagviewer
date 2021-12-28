@@ -963,7 +963,15 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 							{ 0x2D8, new C{ T="TagRef"}},
 							{ 0x2F4, new C{ T="TagRef"}}
 						},S=784} },
-						{ 0x2E8, new C{ T="Tagblock"}},
+						
+						{ 0x2E8, new C { T= "Tagblock" , B = new Dictionary<long, C>
+						{
+							{ 0x0, new C { T = "Float", N = "Horizontal" } },
+							{ 0x04, new C { T = "Float" } },
+							{ 0x0C, new C { T = "Float", N = "Vertical" } },
+							{ 0x10, new C { T = "Float" } },
+						} } },
+						
 						{ 0x320, new C{ T="Tagblock"}},
 					},S = 848}},
 
