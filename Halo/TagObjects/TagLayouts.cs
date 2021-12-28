@@ -2894,7 +2894,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x198, new C { T = "Float", N = "Thrust Power" } },
 			}},
 			
-			{"",new()
+			{"sasp",new()
 			{
 				{ 0x14, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
 					{
@@ -2906,6 +2906,14 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				
 				{ 0xC8, new C { T = "Float", N = "Sprint Speed" } },
 				{ 0xD0, new C { T = "Float", N = "Sprint Acceleration" } },
+			}},
+			
+			{"gmpm",new() // Extremely small tag, but contains modifiers for abilities.
+			{
+				{ 0x10, new C { T = "Tagblock", B= new Dictionary<long, C>
+				{
+					{ 0x8, new C { T = "Float", N = "Modifier" } }, // Only value that seems to do anything.
+				} } },
 			}},
 		};
 
