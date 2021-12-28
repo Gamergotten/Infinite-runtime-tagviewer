@@ -898,6 +898,11 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						{ 0x98, new C{ T="Tagblock"}},
 						{ 0xB8, new C{ T="Float"}},
 						{ 0xBC, new C{ T="Float"}},
+						
+						{ 0xC8, new C{ T="Float", N = "Minimum Error"}},
+						{ 0xCC, new C{ T="Float", N = "Minimum Error Angle"}},
+						{ 0xD0, new C{ T="Float", N = "Maximum Error Angle"}},
+						
 						{ 0xFC, new C{ T="Tagblock" } },
 
 						{ 0x110, new C{ T="Tagblock"}},
