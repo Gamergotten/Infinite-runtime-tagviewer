@@ -789,13 +789,88 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0xC60, new C { T = "TagRef" } },
 					
 					{ 0xC7C, new C { T = "Tagblock", B = new Dictionary<long, C> // trigger block
-					{
-
-						{ 0x6, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
+					{ 
+					// IMPORTANT NOTE: THESE FLAG GROUPS ARE DROPBOXES
+					// WE DON'T HAVE SUPPORT FOR IT YET, SO THEY'RE FLAG BLOCKS INSTEAD FOR NOW
+						{ 0x4, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //INPUT
 						{
-							{ 0,  "Spew/Latch"  } // I don't think this is actaully a flag block
+							{ 7,  "All Unchecked = Right Trigger"  },
+							{ 0,  "Left Trigger"  },
+							{ 1,  "Melee Attack"  },
 						} } },
 
+						{ 0x6, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //BEHAVIOR
+						{
+							{ 7,  "All Unchecked = Spew"  }, 
+							{ 0,  "Latch"  },
+							{ 1,  "Latch-Autofire"  },
+							{ 2,  "Charge"  },
+							{ 3,  "Latch-Zoom"  },
+							{ 4,  "Latch-RocketLauncher"  },
+							{ 5,  "Spew-Charge"  },
+							{ 6,  "Sword-Charge"  },
+						} } },
+
+						{ 0x8, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //PRIMARY BARREL
+						{
+							{ 6,  "All Unchecked = Primary Barrel"  }, 
+							{ 7,  "All Checked = None"  },
+							{ 0,  "Secondary Barrel"  },
+						} } },
+
+						{ 0xA, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //SECONDARY BARREL
+						{
+							{ 6,  "All Unchecked = Primary Barrel"  }, 
+							{ 7,  "All Checked = None"  },
+							{ 0,  "Secondary Barrel"  },
+						} } },
+
+						{ 0xC, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //PREDICTION
+						{
+							{ 7,  "All Unchecked = None"  }, 
+							{ 0,  "Spew"  },
+							{ 1,  "Charge"  },
+						} } },
+
+						{ 0x10, new C{ T="Float", N = "Autofire Time" }},
+						{ 0x14, new C{ T="Float", N = "Autofire Throw" }},
+
+						{ 0x18, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //SECONDARY ACTION
+						{
+							{ 7,  "All Unchecked = Fire"  }, 
+							{ 0,  "Charge"  },
+							{ 1,  "Track"  },
+							{ 2,  "Fire Other"  },
+						} } },
+
+						{ 0x1C, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //PRIMARY ACTION
+						{
+							{ 7,  "All Unchecked = Fire"  }, 
+							{ 0,  "Charge"  },
+							{ 1,  "Track"  },
+							{ 2,  "Fire Other"  },
+						} } },
+
+						{ 0x20, new C{ T="Float", N = "Charging Time" }},
+						{ 0x24, new C{ T="Float", N = "Charged Time" }}, //- DOESN"T DO ANYTHING
+
+						{ 0x28, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //OVERCHARGE ACTION - DOESN"T DO ANYTHING
+						{
+							{ 7,  "All Unchecked = None"  }, 
+							{ 0,  "Explode"  },
+							{ 1,  "Discharge"  },
+						} } },
+
+						{ 0x30, new C{ T="TagRef"}},
+						{ 0x4C, new C{ T="TagRef"}},
+						{ 0x68, new C{ T="TagRef"}},
+
+						{ 0x84, new C{ T="Float", N = "Charged Drain Rate" }}, //THIS WORKS
+
+						{ 0x88, new C{ T="TagRef"}},
+						{ 0xA4, new C{ T="TagRef"}},
+						{ 0xD4, new C{ T="TagRef"}},
+						{ 0xF0, new C{ T="TagRef"}},
 					} } },
 					
 					{ 0xC90, new C {T = "Tagblock", B = new Dictionary<long, C> // barrel block
@@ -803,6 +878,9 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						{ 4, new C{ T="Float", N = "Minimum Rounds per Minute"}},
 						{ 8, new C{ T="Float", N = "Maximum Rounds per Minute"}},
 
+						{ 56, new C { T = "2Byte", N = "Rounds per Burst" } },
+						{ 58, new C { T = "2Byte" } }, //Relates to the one above
+						
 						{ 60, new C{ T="Float", N = "Fire Recovery Time"}},
 						{ 64, new C{ T="Float"}},
 
@@ -820,6 +898,11 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						{ 0x98, new C{ T="Tagblock"}},
 						{ 0xB8, new C{ T="Float"}},
 						{ 0xBC, new C{ T="Float"}},
+						
+						{ 0xC8, new C{ T="Float", N = "Minimum Error"}},
+						{ 0xCC, new C{ T="Float", N = "Minimum Error Angle"}},
+						{ 0xD0, new C{ T="Float", N = "Maximum Error Angle"}},
+						
 						{ 0xFC, new C{ T="Tagblock" } },
 
 						{ 0x110, new C{ T="Tagblock"}},
@@ -885,7 +968,15 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 							{ 0x2D8, new C{ T="TagRef"}},
 							{ 0x2F4, new C{ T="TagRef"}}
 						},S=784} },
-						{ 0x2E8, new C{ T="Tagblock"}},
+						
+						{ 0x2E8, new C { T= "Tagblock" , B = new Dictionary<long, C>
+						{
+							{ 0x0, new C { T = "Float", N = "Horizontal" } },
+							{ 0x04, new C { T = "Float" } },
+							{ 0x0C, new C { T = "Float", N = "Vertical" } },
+							{ 0x10, new C { T = "Float" } },
+						} } },
+						
 						{ 0x320, new C{ T="Tagblock"}},
 					},S = 848}},
 
@@ -2792,6 +2883,37 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x84, new C { T = "Float" } },
 				{ 0x88, new C { T = "Float" } },
 				{ 0x8C, new C { T = "Float" } },					
+			}},
+			
+			{"saev",new()
+			{
+				{ 0x18, new C { T = "Float", N = "Recharge Cost" } },
+				{ 0x20, new C { T = "Float", N = "Recharge Duration" } },
+				{ 0x2C, new C { T = "TagRef" } },
+				{ 0xA0, new C { T = "Float" } },
+				{ 0x198, new C { T = "Float", N = "Thrust Power" } },
+			}},
+			
+			{"sasp",new()
+			{
+				{ 0x14, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0, "Third Person on Activation" },
+				} } },
+
+				{ 0x2C, new C { T = "TagRef" } },
+				{ 0x50, new C { T = "TagRef" } },
+				
+				{ 0xC8, new C { T = "Float", N = "Sprint Speed" } },
+				{ 0xD0, new C { T = "Float", N = "Sprint Acceleration" } },
+			}},
+			
+			{"gmpm",new() // Extremely small tag, but contains modifiers for abilities.
+			{
+				{ 0x10, new C { T = "Tagblock", B= new Dictionary<long, C>
+				{
+					{ 0x8, new C { T = "Float", N = "Modifier" } }, // Only value that seems to do anything.
+				} } },
 			}},
 		};
 
