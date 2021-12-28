@@ -2897,8 +2897,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			{"sasp",new()
 			{
 				{ 0x14, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
-					{
-							{ 0, "Third Person on Activation" },
+				{
+					{ 0, "Third Person on Activation" },
 				} } },
 
 				{ 0x2C, new C { T = "TagRef" } },
