@@ -46,6 +46,7 @@ List of tags that are kinda mapped out so far (DM me or something if whatever's 
 - bost
 - saev 
 - sasp
+- gmpm
 
 enormous thanks to Krevil for his tool (https://github.com/Krevil/InfiniteModuleReader) that allows us to dump the tag names&IDs, so we can see the correct names of each tag and easily redump the info anytime theres a change in the module information
 
