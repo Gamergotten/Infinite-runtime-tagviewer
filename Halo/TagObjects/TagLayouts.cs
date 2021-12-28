@@ -2893,6 +2893,20 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0xA0, new C { T = "Float" } },
 				{ 0x198, new C { T = "Float", N = "Thrust Power" } },
 			}},
+			
+			{"",new()
+			{
+				{ 0x14, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+					{
+							{ 0, "Third Person on Activation" },
+				} } },
+
+				{ 0x2C, new C { T = "TagRef" } },
+				{ 0x50, new C { T = "TagRef" } },
+				
+				{ 0xC8, new C { T = "Float", N = "Sprint Speed" } },
+				{ 0xD0, new C { T = "Float", N = "Sprint Acceleration" } },
+			}},
 		};
 
 
