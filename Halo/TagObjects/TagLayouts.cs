@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Xml.Linq;
 using System.Xml.Schema;
 using System.Xml;
@@ -296,7 +296,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 							{ 31, "apply velocity on death exit"  }
 						}} },
 
-						{ 0x3, new FlagGroup {A = 4, STR = new Dictionary<int, string>() 
+						{ 0x3, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
 						{
 							{ 0, "skip obstacle check"  },
 							{ 1, "search parent for entry marker"  },
@@ -434,11 +434,11 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{
 						{0x10, new C { T="Float", N = "Overdampen Cusp Angle" } },
 						{0x14, new C { T="Float", N = "Overdampen Cusp Exponent" } },
-						
+
 						{0x18, new C { T="Float", N = "Maximum Left Turn" } },
 						{0x1C, new C { T="Float", N = "Maximum Right Turn" } },
 						{0x20, new C { T="Float", N = "Turn Rate" } },
-						
+
 						{0x24, new C { T="Float", N = "Engine Momentum" } },
 						{0x28, new C { T="Float", N = "Min Velocity" } },
 						{0x2C, new C { T="Float", N = "Max Velocity" } },
@@ -645,8 +645,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x7F4, new C { T = "TagRef" } },
 					{ 0x850, new C { T = "TagRef" } }, // WEAP
 
-					{ 0x86C, new FlagGroup { A = 4, STR = new Dictionary<int, string>() 
-					{ 
+					{ 0x86C, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
+					{
 						{ 0,  "Vertical Heat Display"  },
 						{ 1,  "Mutually Exclusive Triggers"  },
 						{ 2,  "Attacks Automatically On Bump"  },
@@ -707,7 +707,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						{ 22, "Weapon Ages When Damage Is Inflicted"  },
 						{ 23, "Apply Gunner Armor Mod Abilites"  },
 						{ 24, "Weapon Drops Further Away"  }, //Wielders Sprint Is Unaffected By Soft Ping // swapped with weapon drops further away
-						{ 25, "flag 25"  }, 
+						{ 25, "flag 25"  },
 						{ 26, "Use Automatic Firing Looping Sounds"  },
 						{ 27, "Do Not Drop On Assassination"  },
 						{ 28, "Is Part Of Body"  },
@@ -787,7 +787,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					}, S = 160}},
 
 					{ 0xC60, new C { T = "TagRef" } },
-					
+
 					{ 0xC7C, new C { T = "Tagblock", B = new Dictionary<long, C> // trigger block
 					{ 
 					// IMPORTANT NOTE: THESE FLAG GROUPS ARE DROPBOXES
@@ -801,7 +801,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 						{ 0x6, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //BEHAVIOR
 						{
-							{ 7,  "All Unchecked = Spew"  }, 
+							{ 7,  "All Unchecked = Spew"  },
 							{ 0,  "Latch"  },
 							{ 1,  "Latch-Autofire"  },
 							{ 2,  "Charge"  },
@@ -813,21 +813,21 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 						{ 0x8, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //PRIMARY BARREL
 						{
-							{ 6,  "All Unchecked = Primary Barrel"  }, 
+							{ 6,  "All Unchecked = Primary Barrel"  },
 							{ 7,  "All Checked = None"  },
 							{ 0,  "Secondary Barrel"  },
 						} } },
 
 						{ 0xA, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //SECONDARY BARREL
 						{
-							{ 6,  "All Unchecked = Primary Barrel"  }, 
+							{ 6,  "All Unchecked = Primary Barrel"  },
 							{ 7,  "All Checked = None"  },
 							{ 0,  "Secondary Barrel"  },
 						} } },
 
 						{ 0xC, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //PREDICTION
 						{
-							{ 7,  "All Unchecked = None"  }, 
+							{ 7,  "All Unchecked = None"  },
 							{ 0,  "Spew"  },
 							{ 1,  "Charge"  },
 						} } },
@@ -837,7 +837,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 						{ 0x18, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //SECONDARY ACTION
 						{
-							{ 7,  "All Unchecked = Fire"  }, 
+							{ 7,  "All Unchecked = Fire"  },
 							{ 0,  "Charge"  },
 							{ 1,  "Track"  },
 							{ 2,  "Fire Other"  },
@@ -845,7 +845,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 						{ 0x1C, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //PRIMARY ACTION
 						{
-							{ 7,  "All Unchecked = Fire"  }, 
+							{ 7,  "All Unchecked = Fire"  },
 							{ 0,  "Charge"  },
 							{ 1,  "Track"  },
 							{ 2,  "Fire Other"  },
@@ -856,7 +856,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 						{ 0x28, new FlagGroup { A = 1, STR = new Dictionary<int, string>() //OVERCHARGE ACTION - DOESN"T DO ANYTHING
 						{
-							{ 7,  "All Unchecked = None"  }, 
+							{ 7,  "All Unchecked = None"  },
 							{ 0,  "Explode"  },
 							{ 1,  "Discharge"  },
 						} } },
@@ -872,7 +872,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						{ 0xD4, new C{ T="TagRef"}},
 						{ 0xF0, new C{ T="TagRef"}},
 					} } },
-					
+
 					{ 0xC90, new C {T = "Tagblock", B = new Dictionary<long, C> // barrel block
 					{
 						{ 4, new C{ T="Float", N = "Minimum Rounds per Minute"}},
@@ -887,10 +887,10 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						{ 76, new C{ T="Float"}},
 						{ 80, new C{ T="Float"}},
 						{ 86, new C { T = "2Byte", N = "Rounds Per Shot" } },
-						
+
 						{ 92, new C{ T="Float"}},
 						{ 130, new C { T = "2Byte", N = "Projectiles Per Shot" } },
-						
+
 						{ 0x64, new C{ T="4Byte"}},
 						{ 0x68, new C{ T="Float"}},
 
@@ -898,11 +898,11 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						{ 0x98, new C{ T="Tagblock"}},
 						{ 0xB8, new C{ T="Float"}},
 						{ 0xBC, new C{ T="Float"}},
-						
+
 						{ 0xC8, new C{ T="Float", N = "Minimum Error"}},
 						{ 0xCC, new C{ T="Float", N = "Minimum Error Angle"}},
 						{ 0xD0, new C{ T="Float", N = "Maximum Error Angle"}},
-						
+
 						{ 0xFC, new C{ T="Tagblock" } },
 
 						{ 0x110, new C{ T="Tagblock"}},
@@ -968,7 +968,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 							{ 0x2D8, new C{ T="TagRef"}},
 							{ 0x2F4, new C{ T="TagRef"}}
 						},S=784} },
-						
+
 						{ 0x2E8, new C { T= "Tagblock" , B = new Dictionary<long, C>
 						{
 							{ 0x0, new C { T = "Float", N = "Horizontal" } },
@@ -976,7 +976,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 							{ 0x0C, new C { T = "Float", N = "Vertical" } },
 							{ 0x10, new C { T = "Float" } },
 						} } },
-						
+
 						{ 0x320, new C{ T="Tagblock"}},
 					},S = 848}},
 
@@ -1205,7 +1205,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x6F8, new C { T = "Float" } },
 					{ 0x704, new C { T = "Float" } },
 					{ 0x708, new C { T = "Float" } },
-					{ 0x710, new C { T = "Float" } },
+					{ 0x710, new C { T = "Float", N = "Max Range" } },
 					{ 0x720, new C { T = "Float" } },
 					{ 0x72C, new C { T = "Float" } },
 
@@ -1519,12 +1519,12 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						}, S=140}
 					},
 				}
-			
+
 			}
 			,
 			{
 				"matg",
-				new() 
+				new()
 				{
 					{ 0x10, new C { T = "TagRef" } },
 					{ 0x2C, new C { T = "TagRef" } },
@@ -1702,7 +1702,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 			{
 				"ocgd", // ocgd* no wonder why i couldn't find it 
-				new()  
+				new()
 				{
 					{ 0x10, new C{ T="Tagblock", B= new Dictionary<long, C>
 						{
@@ -2632,7 +2632,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x388, new C { T = "Float" } },
 
 			}},
-			
+
 			{"sagh",new()
 			{
 				{ 0x14, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
@@ -2689,8 +2689,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x154, new C { T = "Float", N = "Warmup Time" } },
 				{ 0x16C, new C { T = "Float", N = "Line of Sight Testing" } },
 				{ 0x1D0, new C { T = "Float", N = "Target Velocity" } },
-				{ 0x1D4, new C { T = "Float", N = "Max Exit Velocity" } },			
-				{ 0x20C, new C { T = "Float", N = "Aim Influence" } },				
+				{ 0x1D4, new C { T = "Float", N = "Max Exit Velocity" } },
+				{ 0x20C, new C { T = "Float", N = "Aim Influence" } },
 				{ 0x284, new C { T = "Float", N = "Completion Distance (Level Geo)" } },
 				{ 0x288, new C { T = "Float", N = "Completion Distance (Ceilings)" } },
 				{ 0x28C, new C { T = "Float", N = "Completion Distance (Floors)" } },
@@ -2708,19 +2708,19 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x388, new C { T = "Float", N = "Bash Aim Lock Rate of Change" } },
 				{ 0x38C, new C { T = "Float", N = "Bash Peak Velocity" } },
 				{ 0x390, new C { T = "Float", N = "Bash Charge Up Duration" } },
-				{ 0x3AC, new C { T = "Float", N = "Bash Acceleration Duration" } },				
+				{ 0x3AC, new C { T = "Float", N = "Bash Acceleration Duration" } },
 
 				{ 0x400, new C { T="TagRef", N = "BashCharge Up Effect"} },
 				{ 0x41C, new C { T="TagRef", N = "Bash Launch Effect"} },
 				{ 0x438, new C { T="TagRef", N = "Bash Active Effect"} },
 				{ 0x454, new C { T="TagRef", N = "Bash Completion Effect"} },
-				
+
 				{ 0x470, new C { T="TagRef", N = "Owner Damage"} },
 				{ 0x48C, new C { T="TagRef", N = "AOE Damage"} },
 
 				{ 0x4B4, new C { T = "Float", N = "Miss Cooldown Delay" } },
 			}},
-			
+
 			{"eqip",new()
 			{
 				{ 0x78, new C { T = "TagRef", N = "Model" } },
@@ -2822,11 +2822,11 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0xEC4, new C { T = "TagRef", N = "Bitmap" } },
 				{ 0xEE4, new C { T = "TagRef" } },
 			}},
-			
+
 			{"bloc",new()
 			{
 				{ 0x10, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
-				
+
 					{
 							{ 0, "Does Not Cast Shadow." },
 				} } },
@@ -2858,7 +2858,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x20, new C { T = "TagRef" } },
 				} } }, // Object_attachment_definition
 			}},
-			
+
 			{"bost",new()
 			{
 				{ 0x10, new C { T = "TagRef", N = "Collision Damage" } },
@@ -2882,9 +2882,9 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x80, new C { T = "Float" } },
 				{ 0x84, new C { T = "Float" } },
 				{ 0x88, new C { T = "Float" } },
-				{ 0x8C, new C { T = "Float" } },					
+				{ 0x8C, new C { T = "Float" } },
 			}},
-			
+
 			{"saev",new()
 			{
 				{ 0x18, new C { T = "Float", N = "Recharge Cost" } },
@@ -2893,7 +2893,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0xA0, new C { T = "Float" } },
 				{ 0x198, new C { T = "Float", N = "Thrust Power" } },
 			}},
-			
+
 			{"sasp",new()
 			{
 				{ 0x14, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
@@ -2903,11 +2903,11 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 				{ 0x2C, new C { T = "TagRef" } },
 				{ 0x50, new C { T = "TagRef" } },
-				
+
 				{ 0xC8, new C { T = "Float", N = "Sprint Speed" } },
 				{ 0xD0, new C { T = "Float", N = "Sprint Acceleration" } },
 			}},
-			
+
 			{"gmpm",new() // Extremely small tag, but contains modifiers for abilities.
 			{
 				{ 0x10, new C { T = "Tagblock", B= new Dictionary<long, C>
@@ -2915,6 +2915,52 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0x8, new C { T = "Float", N = "Modifier" } }, // Only value that seems to do anything.
 				} } },
 			}},
+
+			{"valu",new() // Mapped some values, Not useful rn. 
+			{
+				{ 0x70, new C { T = "Float"  } },
+				{ 0x74, new C { T = "TagRef" } },
+				{ 0xA0, new C { T = "Float"  } },
+				{ 0xC8, new C { T = "Float"  } },
+
+				{ 0x10, new C { T = "Tagblock", B= new Dictionary<long, C> // no idea if these change anything useful
+				{
+				{ 0x10, new C { T = "Float"  } },
+				{ 0x14, new C { T = "TagRef" } },
+				{ 0x40, new C { T = "Float"  } },
+				{ 0x4C, new C { T = "TagRef" } },
+				{ 0x68, new C { T = "Float"  } },
+				{ 0x78, new C { T = "Float"  } },
+				{ 0xE0, new C { T = "Float"  } },
+				{ 0x148, new C { T = "Float"  } },
+				{ 0x1B0, new C { T = "Float"  } },
+				{ 0x218, new C { T = "Float"  } },
+				{ 0x280, new C { T = "Float"  } },
+				{ 0x2DC, new C { T = "Float"  } },
+				{ 0x2E8, new C { T = "Float"  } },
+				{ 0x350, new C { T = "Float"  } },
+				{ 0x3A8, new C { T = "Float"  } },
+				{ 0x3B8, new C { T = "Float"  } },
+				{ 0x420, new C { T = "Float"  } },
+				{ 0x488, new C { T = "Float"  } },
+				{ 0x4E0, new C { T = "Float"  } },
+				{ 0x4f0, new C { T = "Float"  } },
+				{ 0x558, new C { T = "Float"  } },
+				{ 0x5C0, new C { T = "Float"  } },
+				{ 0x618, new C { T = "Float"  } },
+				{ 0x6EC, new C { T = "Float"  } },
+
+				{ 0xEB0, new C { T = "Tagblock", B= new Dictionary<long, C>
+				{
+				{ 0xF9C, new C { T = "TagRef" } }, // material
+
+				} } } } } },
+				{ 0x90, new C { T = "TagRef" } },
+				{ 0xAC, new C { T = "TagRef" } },
+
+			}},
+
+
 		};
 
 
