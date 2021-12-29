@@ -15,23 +15,23 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
     {
         public TagEditorControl EditorControl { get; }
 
-		public TagBlock(TagEditorControl editorControl, long blockOffset, TagStruct tagStruct)
+		public TagBlock(TagEditorControl editorControl, TagStruct tagStruct)
 		{
 			InitializeComponent();
 			EditorControl = editorControl;
-			BlockOffset = blockOffset;	
 			TagStruct = tagStruct;
 		}
 
 		public KeyValuePair<long, TagLayouts.C> Children { get; set; }
 		public long BlockAddress { get; set; }
-		public long BlockOffset { get; set; }
 		public TagStruct TagStruct { get; set; }
 
         private void indexbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            EditorControl.recall_blockloop(TagStruct, BlockOffset + (indexbox.SelectedIndex * Children.Value.S), 
-				Children, BlockAddress + (indexbox.SelectedIndex * Children.Value.S), dockpanel);
+            EditorControl.recall_blockloop(TagStruct, (indexbox.SelectedIndex * Children.Value.S), 
+				Children, BlockAddress + (indexbox.SelectedIndex * Children.Value.S), dockpanel, Children.Value.AbsoluteTagOffset); // bro
+
+			// OK WE HAVE A PROBLEM HERE, + (indexbox.SelectedIndex * Children.Value.S)
         }
 
 		Random rand = new Random();

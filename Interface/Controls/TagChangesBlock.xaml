@@ -7,27 +7,33 @@
              d:DesignHeight="20">
     <Grid Margin="1,1,1,1">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80" />
-            <ColumnDefinition Width="120" />
-            <ColumnDefinition Width="60" />
-            <ColumnDefinition Width="120" />
-            <ColumnDefinition Width="60" />
-            <ColumnDefinition Width="120" />
-            <ColumnDefinition Width="60" />
-            <ColumnDefinition Width="*" MinWidth="120" />
             <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="*" MinWidth="120" />
+            <ColumnDefinition Width="2" />
         </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Content="P" Click="Button_Click"/>
+        <Button Grid.Column="1" Content="X" Click="Button_Click_1"/>
 
-        <TextBlock HorizontalAlignment="Right" Text="Address" VerticalAlignment="Center" Margin="0,0,5,0" />
-        <TextBox x:Name="address" Grid.Column="1" Text="0x00000" VerticalAlignment="Stretch" />
 
-        <TextBlock Grid.Column="2" HorizontalAlignment="Right" Text="Type" VerticalAlignment="Center" Margin="0,0,5,0" />
-        <TextBox x:Name="type" Grid.Column="3" Text="None" VerticalAlignment="Stretch" />
 
-        <TextBlock Grid.Column="4" HorizontalAlignment="Right" Text="Value" VerticalAlignment="Center" Margin="0,0,5,0" />
-        <TextBox x:Name="value" Grid.Column="5" Text="None" VerticalAlignment="Stretch" />
+        <TextBlock Grid.Column="2" HorizontalAlignment="Right" Text="Address" VerticalAlignment="Center" Margin="0,0,5,0" />
+        <TextBox x:Name="address" Grid.Column="3" Text="0x00000" VerticalAlignment="Stretch" />
 
-        <TextBlock Grid.Column="6" HorizontalAlignment="Right" Text="Source" VerticalAlignment="Center" Margin="0,0,5,0" />
-        <TextBox x:Name="tagSource" Grid.Column="7" Text="" VerticalAlignment="Stretch" />
+        <TextBlock Grid.Column="4" HorizontalAlignment="Right" Text="Type" VerticalAlignment="Center" Margin="0,0,5,0" />
+        <TextBox x:Name="type" Grid.Column="5" Text="None" VerticalAlignment="Stretch" />
+
+        <TextBlock Grid.Column="6" HorizontalAlignment="Right" Text="Value" VerticalAlignment="Center" Margin="0,0,5,0" />
+        <TextBox x:Name="value" Grid.Column="7" Text="None" VerticalAlignment="Stretch" />
+
+        <TextBlock Grid.Column="8" HorizontalAlignment="Right" Text="Source" VerticalAlignment="Center" Margin="0,0,5,0" />
+        <TextBox x:Name="tagSource" Grid.Column="9" Text="" VerticalAlignment="Stretch" />
     </Grid>
 </UserControl>

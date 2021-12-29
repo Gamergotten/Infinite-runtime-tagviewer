@@ -107,7 +107,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 			mainWindow.AddPokeChange(new TagEditorDefinition(ValueDefinition)
 			{
-				MemoryAddress  = startAddress + byteNo,
 				OffsetOverride = ValueDefinition.GetTagOffset() + byteNo
 			}, output.ToString());
 

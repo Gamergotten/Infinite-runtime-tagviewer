@@ -469,71 +469,205 @@ namespace InfiniteRuntimeTagViewer
 		}
 
 		// list of changes to ammend to the memory when we phit the poke button
-		public Dictionary<long, KeyValuePair<string, string>> Pokelist = new();
+		// i think it goes: address, type, value
+		public Dictionary<string, KeyValuePair<string, string>> Pokelist = new();
 
 		// to keep track of the UI elements we're gonna use a dictionary, will probably be better
-		public Dictionary<long, TagChangesBlock> UIpokelist = new();
+		public Dictionary<string, TagChangesBlock> UIpokelist = new();
 
 		// type (TagrefGroup, TagrefTag)
 		// address,
 		// WARNING: Please note if something calls this function it wont be replicated
 		// in the future when saving or netcode is added!!!
-		public void AddPokeChange(long offset, string type, string value)
+		//public void AddPokeChange(string offset, string type, string value)
+		//{
+
+
+		//	// hmm we need to change this so we either update or add a new UI element
+		//	Pokelist[offset] = new KeyValuePair<string, string>(type, value);
+
+		//	// there we go, now we aren't touching the pokelist code
+		//	if (UIpokelist.ContainsKey(offset))
+		//	{
+		//		TagChangesBlock updateElement = UIpokelist[offset];
+		//		updateElement.address.Text = offset;
+		//		updateElement.type.Text = type;
+		//		updateElement.value.Text = value;
+		//	}
+		//	else
+		//	{
+		//		TagChangesBlock newBlock = new() {
+		//			address = { Text = offset },
+		//			type = { Text = type },
+		//			value = { Text = value },
+		//		};
+
+		//		changes_panel.Children.Add(newBlock);
+		//		UIpokelist.Add(offset, newBlock);
+		//	}
+
+		//	change_text.Text = Pokelist.Count + " changes queued";
+		//}
+
+		private void Save_pokes(object sender, RoutedEventArgs e)
 		{
-
-
-			// hmm we need to change this so we either update or add a new UI element
-			Pokelist[offset] = new KeyValuePair<string, string>(type, value);
-
-			// there we go, now we aren't touching the pokelist code
-			if (UIpokelist.ContainsKey(offset))
+			if (loadedTags)
 			{
-				TagChangesBlock updateElement = UIpokelist[offset];
-				updateElement.address.Text = "0x" + offset.ToString("X");
-				updateElement.type.Text = type;
-				updateElement.value.Text = value;
+				if (Pokelist.Count > 0)
+				{
+					var sfd = new Microsoft.Win32.SaveFileDialog
+					{
+						Filter = "IRTV Files (*.irtv)|*.irtv|All files (*.*)|*.*",
+						// Set other options depending on your needs ...
+					};
+					if (sfd.ShowDialog() == true)
+					{
+						string filename = sfd.FileName;
+						// save the file
+						//File.WriteAllText(filename, contents);
+
+						//KeyValuePair<string, KeyValuePair<string, string>>
+						using (StreamWriter outputFile = new StreamWriter(filename))
+						{
+							foreach (var k in Pokelist)
+							{
+								if (k.Value.Key != "TagrefTag")
+								{
+									outputFile.WriteLine(k.Key + ";" + k.Value.Key + ";" + k.Value.Value);
+								}
+								else
+								{
+									outputFile.WriteLine(k.Key + ";" + k.Value.Key + ";" + get_tagID_by_datnum(k.Value.Value));
+
+								}
+							}
+						}
+						poke_text.Text = Pokelist.Count + " Pokes Saved!";
+					}
+
+				}
+				else
+				{
+					poke_text.Text = "no pokes to save";
+				}
 			}
 			else
 			{
-				TagChangesBlock newBlock = new() {
-					address = { Text = "0x" + offset.ToString("X") },
-					type = { Text = type },
-					value = { Text = value },
-				};
-
-				changes_panel.Children.Add(newBlock);
-				UIpokelist.Add(offset, newBlock);
+				poke_text.Text = "You MUST 'load' first";
 			}
 
-			change_text.Text = Pokelist.Count + " changes queued";
 		}
+
+		private void Open_pokes(object sender, RoutedEventArgs e)
+		{
+			if (loadedTags)
+			{
+				// Create OpenFileDialog 
+				Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+
+				// Set filter for file extension and default file extension 
+				dlg.DefaultExt = ".irtv";
+				dlg.Filter = "IRTV Files (*.irtv)|*.irtv";
+
+				// Display OpenFileDialog by calling ShowDialog method 
+				Nullable<bool> result = dlg.ShowDialog();
+
+				// Get the selected file name and display in a TextBox 
+				if (result == true)
+				{
+					int prev = 0;
+					int fails = 0;
+					// Open document 
+					string filename = dlg.FileName;
+					using (StreamReader inputFile = new StreamReader(filename))
+					{
+						string line;
+						while ((line = inputFile.ReadLine()) != null)
+						{
+							string[] parts = line.Split(";");
+							if (parts.Length == 3)
+							{
+								prev++;
+								if (parts[1] != "TagrefTag")
+								{
+									AddPokeChange(new TagEditorDefinition { OffsetOverride = parts[0], MemoryType = parts[1], }, parts[2]);
+								}
+								else
+								{
+									if (TagsList.Keys.Contains(parts[2]))
+										AddPokeChange(new TagEditorDefinition { OffsetOverride = parts[0], MemoryType = parts[1], }, TagsList[parts[2]].Datnum);
+									else
+									{
+										fails++;
+										prev--;
+									}
+								}
+
+							}
+						}
+					}
+					if (fails < 1)
+					{
+						poke_text.Text = prev + " Loaded!";
+					}
+					else
+					{
+						poke_text.Text = prev + " Loaded, "+ fails + " Failed";
+					}
+				}
+			}
+			else
+			{
+				poke_text.Text = "You MUST 'load' first";
+			}
+
+		}
+
+		//var lines = File.ReadLines(filename);
+		//              foreach (var line in lines)
+		//              {
+		//                  string[] parts = line.Split(":");
+
+		//Hashedstrings[parts[1]] = parts[0];
+		//              }
 
 		public void AddPokeChange(TagEditorDefinition def, string value)
 		{
 			// Hmm we need to change this so we either update or add a new UI element
-			Pokelist[def.MemoryAddress] = new KeyValuePair<string, string>(def.MemoryType, value);
+
+			//used things
+			// offset override
+			// memory type
+			// value
+			// tagname
+			Pokelist[def.OffsetOverride] = new KeyValuePair<string, string>(def.MemoryType, value);
 
 			// there we go, now we aren't touching the pokelist code
-			if (UIpokelist.ContainsKey(def.MemoryAddress))
+			if (UIpokelist.ContainsKey(def.OffsetOverride))
 			{
-				TagChangesBlock updateElement = UIpokelist[def.MemoryAddress];
-				updateElement.address.Text = "0x" + def.MemoryAddress.ToString("X");
+				TagChangesBlock updateElement = UIpokelist[def.OffsetOverride];
+				updateElement.address.Text = def.OffsetOverride;
+				updateElement.sig_address_path = def.OffsetOverride;
 				updateElement.type.Text = def.MemoryType;
 				updateElement.value.Text = value;
-				updateElement.tagSource.Text = def.TagStruct.TagFile + " + " + def.GetTagOffset();
+				//updateElement.tagSource.Text = def.TagStruct.TagFile + " + " + def.GetTagOffset();
 			}
 			else
 			{
 				TagChangesBlock newBlock = new()
 				{
-					address = { Text = "0x" + def.MemoryAddress.ToString("X") },
+					address = { Text = def.OffsetOverride },
 					type = { Text = def.MemoryType },
 					value = { Text = value },
-					tagSource = { Text = def.TagStruct.TagFile + " + " + def.GetTagOffset() }
+					// uncomment this at your own risk, it would probably take
+					// an extra step or two to get this working again 
+					// i don't save the tag name so it has a null reference
+					//tagSource = { Text = def.TagStruct.TagFile + " + " + def.GetTagOffset() } 
 				};
-
+				newBlock.sig_address_path = def.OffsetOverride;
+				newBlock.main = this;
 				changes_panel.Children.Add(newBlock);
-				UIpokelist.Add(def.MemoryAddress, newBlock);
+				UIpokelist.Add(def.OffsetOverride, newBlock);
 			}
 
 			change_text.Text = Pokelist.Count + " changes queued";
@@ -553,7 +687,8 @@ namespace InfiniteRuntimeTagViewer
 
 			return "Tag not present(" + datnum + ")";
 		}
-
+		// wtf is this one for
+		// WHY ARE THEY BOTH USED HAHAHAHA
 		public string get_tagID_by_datnum(string datnum)
 		{
 			//tag_struct t in Tags_List
@@ -567,67 +702,157 @@ namespace InfiniteRuntimeTagViewer
 
 			return "wtf does this even do";
 		}
-
+		
 
 		// POKE OUR CHANGES LETSGOOOO
 		private void BtnPokeChanges_Click(object sender, RoutedEventArgs e)
 		{
-			foreach (KeyValuePair<long, KeyValuePair<string, string>> pair in Pokelist)
+			int fails = 0;
+			int pokes = 0;
+			foreach (KeyValuePair<string, KeyValuePair<string, string>> pair in Pokelist)
 			{
-				long address = pair.Key;
-				string type = pair.Value.Key;
-				string value = pair.Value.Value;
+				//pokesingle(pair.Key, pair.Value.Key, pair.Value.Value);
+				pokes++;
 
-				switch (type)
+				string do_the_thing = SUSSY_BALLS_2(pair.Key);
+				if (do_the_thing != "")
 				{
-					case "4Byte":
-						M.WriteMemory(address.ToString("X"), "int", value);
-						break;
-					case "2Byte":
-						M.WriteMemory(address.ToString("X"), "2bytes", value);
-						break;
-					case "Byte":
-						M.WriteMemory(address.ToString("X"), "byte", value);
-						break;
-					case "Flags":
-						M.WriteMemory(address.ToString("X"), "byte", Convert.ToByte(value).ToString("X"));
-						break;
-					case "Float":
-						M.WriteMemory(address.ToString("X"), "float", value);
-						break;
-
-					case "Pointer":
-						string? willThisWork = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
-						M.WriteMemory(address.ToString("X"), "long", willThisWork); // apparently it does
-						break;
-
-					case "String":
-						M.WriteMemory(address.ToString("X"), "string", value + "\0");
-						break;
-
-					case "TagrefGroup":
-						M.WriteMemory(address.ToString("X"), "string", ReverseString(value));
-						break;
-
-					case "TagrefTag":
-						string temp = Regex.Replace(value, @"(.{2})", "$1 ");
-						temp = temp.TrimEnd();
-						M.WriteMemory(address.ToString("X"), "bytes", temp);
-						break;
-
-					case "mmr3Hash":
-						string temp2 = Regex.Replace(value, @"(.{2})", "$1 ");
-						temp = temp2.TrimEnd();
-						M.WriteMemory(address.ToString("X"), "bytes", temp);
-						break;
+					if (!pokesingle(do_the_thing, pair.Value.Key, pair.Value.Value))
+					{
+						fails++;
+						pokes--;
+					}
+				}
+				else
+				{
+					fails++;
+					pokes--;
 				}
 			}
+			if (fails<1)
+			{
+				poke_text.Text = pokes + " changes poked!";
 
-			poke_text.Text = Pokelist.Count + " changes poked";
+			}
+			else
+			{
+				poke_text.Text = pokes + " poked, " +fails+ " failed";
 
-			changes_panel.Children.Clear();
-			Pokelist.Clear();
-			UIpokelist.Clear();
+			}
+
+			change_text.Text = Pokelist.Count + " changes queued";
+		}
+		public void tagchangesblock_fetchdata_by_ID(TagChangesBlock target)
+		{
+			KeyValuePair<string, string> pair = Pokelist[target.sig_address_path];
+			//pokesingle(target.sig_address_ID, pair.Key, pair.Value);
+			//SUSSY_BALLS_2
+			string do_the_thing = SUSSY_BALLS_2(target.sig_address_path);
+			if (do_the_thing != "")
+			{
+				if(!pokesingle(do_the_thing, pair.Key, pair.Value))
+				{
+					poke_text.Text = "poke error";
+				}
+				else
+				{
+					poke_text.Text = 1 + " change poked";
+				}
+			}
+			else
+			{
+				poke_text.Text = "poke error";
+			}
+		}
+
+		public bool pokesingle(string address, string type, string value)
+		{
+			switch (type)
+			{
+				case "4Byte":
+					try { M.WriteMemory(address, "int", value);}
+					catch{ return false; }
+					return true;
+				case "2Byte": // needs to cap value
+					try { M.WriteMemory(address, "2bytes", value);}
+					catch{ return false; }
+					return true;
+				case "Byte":
+					try { M.WriteMemory(address, "byte", value);}
+					catch{ return false; }
+					return true;
+				case "Flags":
+					try { M.WriteMemory(address, "byte", Convert.ToByte(value).ToString("X"));}
+					catch{ return false; }
+					return true;
+				case "Float":
+					try { M.WriteMemory(address, "float", value); }
+					catch { return false; }
+					return true;
+				case "Pointer":
+					try 
+					{ 
+						string? willThisWork = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
+						M.WriteMemory(address, "long", willThisWork); // apparently it does
+					}
+					catch { return false; }
+					return true;
+				case "String":
+					try { M.WriteMemory(address, "string", value + "\0"); }
+					catch { return false; }
+					return true;
+				case "TagrefGroup":
+					try { M.WriteMemory(address, "string", ReverseString(value)); }
+					catch { return false; }
+					return true;
+				case "TagrefTag":
+					try
+					{
+						string temp = Regex.Replace(value, @"(.{2})", "$1 ");
+						temp = temp.TrimEnd();
+						M.WriteMemory(address, "bytes", temp);
+					}
+					catch { return false; }
+					return true;
+				case "mmr3Hash":
+					try
+					{
+						string temp2 = Regex.Replace(value, @"(.{2})", "$1 ");
+						temp2 = temp2.TrimEnd();
+						M.WriteMemory(address, "bytes", temp2);
+					}
+					catch { return false; }
+					return true;
+			}
+			return false;
+		}
+
+		public string SUSSY_BALLS_2(string input)
+		{
+			//TAKE FIRST AND ADD INSTEAD OF LAST
+		 	string[] p = input.Split(":");
+
+			//p[0] = tagID
+			//p[1] = address
+
+			string[] last_offset = p[1].Split(",");
+			
+			for (int i5 = 2; i5 < last_offset.Length; i5++)
+				last_offset[i5] = "0x" + long.Parse(last_offset[i5]).ToString("X");
+
+			string joined = string.Join(",", last_offset.Skip(2));
+			long poop = long.Parse(last_offset.Skip(1).First());
+			var tag_thing = TagsList[p[0]];
+			if(tag_thing !=null)
+			return "0x" + (poop += tag_thing.TagData).ToString("X") + ((joined=="")? "" : "," + joined);
+			return "";
+		}
+
+		public void clearsingle(TagChangesBlock target)
+		{
+			Pokelist.Remove(target.sig_address_path);
+			UIpokelist.Remove(target.sig_address_path);
+			changes_panel.Children.Remove(target);
 			change_text.Text = Pokelist.Count + " changes queued";
 		}
 
@@ -882,6 +1107,7 @@ namespace InfiniteRuntimeTagViewer
 				}
 			}
 		}
+
 
 	}
 }

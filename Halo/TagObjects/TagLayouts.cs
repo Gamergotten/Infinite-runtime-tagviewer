@@ -38,7 +38,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			/// This will allow us to sync up changes across the server and client without
 			/// the need to re-resolve memory addresses.
 			/// </summary>
-			public long AbsoluteTagOffset { get; set; }
+			public string AbsoluteTagOffset { get; set; } // as a string we can append offsets rather than mathmatically adding them
 		}
 
 		public class FlagGroup : C
