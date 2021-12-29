@@ -719,7 +719,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			}
 		}
 
-		public string SUSSY_BALLS(string input, long add_to)
+		public static string SUSSY_BALLS(string input, long add_to)
 		{
 			//SUSSY BALLS
 			string[] last_offset = input.Split(",");
