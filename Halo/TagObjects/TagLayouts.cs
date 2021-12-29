@@ -2961,6 +2961,34 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 			}},
 
 
+			{"vcdd",new() // Vehicle Configuration
+			{
+				{ 0x10, new C { T = "TagRef" } },      // Vehi
+				{ 0x34, new C { T = "TagRef" } },      // Sofd
+				{ 0x70, new C { T = "Tagblock"} },     // i343::Vehicle::WeaponConfigurationGroup
+				{ 0xA8, new C { T = "Float" } },       // No clue What this does
+				{ 0xE8, new C { T = "TagRef" } },      // Sbnk
+
+
+			}},
+
+			{"weat",new() // Weapon Attachment
+			{
+				{ 0x18, new C { T = "Tagblock"} },     // i343::Weapon::AttachmentRegionPermutationDefinition
+				{ 0x58, new C { T = "Tagblock"} },     // i343::Weapon::AccuracyPropertyModifiersDefinition
+				{ 0x80, new C { T = "Tagblock"} },	   // i343::Weapon::UnitPropertyModifiersDefinition
+				{ 0xD8, new C { T = "Tagblock"} },     // i343::Weapon::RecoilGunkickPropertyModifiersDefinition
+				{ 0x100, new C { T = "Tagblock"} },    // i343::Weapon::HeatPropertyModifiersDefinition
+				{ 0x128, new C { T = "TagRef"} },	   // Bloc
+				{ 0x14C, new C { T = "Float" } },       // No clue What this does
+				{ 0x150, new C { T = "Float" } },       // No clue What this does
+				{ 0x164, new C { T = "Float" } },       // No clue What this does
+				{ 0x168, new C { T = "Float" } },       // No clue What this does
+				{ 0x16C, new C { T = "Float" } },       // No clue What this does
+				{ 0x170, new C { T = "Float" } },       // No clue What this does
+
+			}},
+
 		};
 
 
