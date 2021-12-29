@@ -49,9 +49,8 @@ namespace InfiniteRuntimeTagViewer.Halo
 	public class TagEditorDefinition
 	{
 		public TagEditorDefType TEDType = TagEditorDefType.TagEditorDefinition;
-		public long MemoryAddress;
 		public string MemoryType;
-		public long? OffsetOverride = null;
+		public string? OffsetOverride = null;
 
 		public TagLayouts.C TagDef;
 		public TagStruct TagStruct;
@@ -59,21 +58,20 @@ namespace InfiniteRuntimeTagViewer.Halo
 		public string DatNum;
 		public string TagId;
 
-		public long GetTagOffset()
+		public string GetTagOffset()
 		{
 			if (OffsetOverride != null)
 			{
-				return (long) OffsetOverride.Value;
+				return OffsetOverride;
 			}
 
-			return (long) TagDef.AbsoluteTagOffset;
+			return TagDef.AbsoluteTagOffset;
 		}
 
 		public TagEditorDefinition() { }
 
 		public TagEditorDefinition(TagEditorDefinition ted)
 		{
-			this.MemoryAddress = ted.MemoryAddress;
 			this.MemoryType = ted.MemoryType;
 			this.OffsetOverride = ted.OffsetOverride;
 			this.TagDef = ted.TagDef;

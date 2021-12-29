@@ -98,14 +98,14 @@
                 <DockPanel>
                     <Menu x:Name="MainMenu" IsMainMenu="True" Padding="10 0" Background="#252526">
                         <MenuItem Header="_File" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Height="30">
-                            <MenuItem Header="_Open">
-                                <!--TODO-->
+                            <MenuItem Header="_Open" Click="Open_pokes">
+                                <!--DONE ;)-->
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Open a file.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
-                            <MenuItem Header="_Save" >
-                                <!--TODO-->
+                            <MenuItem Header="_Save" Click="Save_pokes" >
+                                <!--DONE ;)-->
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Save a file.</TextBlock>
                                 </MenuItem.ToolTip>
@@ -190,7 +190,7 @@
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="5*" />
-                    <ColumnDefinition Width="16*"/>
+                    <ColumnDefinition Width="21*"/>
                     <ColumnDefinition Width="8" />
                     <ColumnDefinition Width="63*" />
                 </Grid.ColumnDefinitions>
@@ -239,19 +239,19 @@
                     <Grid Grid.Row="1" Margin="0,0,0,0" Background="#252526">
                         <Grid Margin="5,5,5,5">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="40" />
+                                <ColumnDefinition Width="50" />
                                 <ColumnDefinition Width="110" />
                                 <ColumnDefinition Width="110" />
-                                <ColumnDefinition Width="40" />
+                                <ColumnDefinition Width="50" />
                                 <ColumnDefinition Width="150" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
 
-                            <Button     Content="Poke" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BtnPokeChanges_Click" Padding="4,4,4,4" />
+                            <Button     Content="Poke All" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BtnPokeChanges_Click" Padding="4,4,4,4" />
                             <TextBlock  x:Name="poke_text" Grid.Column="1" HorizontalAlignment="Left" Text=". . ." VerticalAlignment="Center" Margin="5,0,0,0" />
 
                             <TextBlock  x:Name="change_text" Grid.Column="2" HorizontalAlignment="Right" Text="0 changes queued" VerticalAlignment="Center" Margin="0,0,5,0" />
-                            <Button     Grid.Column="3" Content="Clear" HorizontalAlignment="Stretch" Click="BtnClearQueue_Click" />
+                            <Button     Grid.Column="3" Content="Clear All" HorizontalAlignment="Stretch" Click="BtnClearQueue_Click" />
                             <Button     Grid.Column="4" Content="Show Queue" HorizontalAlignment="Stretch" Click="BtnShowHideQueue_Click" Margin="10,0,0,0" />
                         </Grid>
                     </Grid>
@@ -286,8 +286,12 @@
                     <!-- < Search Box -->
 
                     <TreeView x:Name="TagsTree" Grid.Row="2" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling">
-                        <TreeViewItem Header="Hook and load to get started!" />
-                        <TreeViewItem Header="reload the tags whenever the map changes" />
+                        <TreeViewItem Header="Press the load button to get started!" />
+                        <TreeViewItem Header="Press again whenever the map/zoneset changes" />
+                        <TreeViewItem Header="Make sure tags are loaded correctly when saving/loading" />
+                        <TreeViewItem Header="To save presets, make sure your changes are queued" />
+                        <TreeViewItem Header="" />
+                        <TreeViewItem Header="Gamergotten says hi" />
                     </TreeView>
                     <!-- < #TagsTree -->
 
