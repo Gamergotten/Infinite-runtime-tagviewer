@@ -18,7 +18,10 @@ using InfiniteRuntimeTagViewer.Halo.TagObjects;
 using System.Windows.Media;
 using System.Timers;
 using System.Threading.Tasks;
+using System.Threading;
+using System.Windows.Forms;
 using System.Reflection;
+using System.Windows.Threading;
 
 namespace InfiniteRuntimeTagViewer
 {
@@ -42,16 +45,17 @@ namespace InfiniteRuntimeTagViewer
 		// setting a taggroup to null actually cause problems in mem
 		// refer to the 'value' of the queued poke
 		//
-
-		private readonly Timer _t;
+		public delegate void HookAndLoadDelagate();
+		public delegate void LoadTagsDelagate();
+		private readonly System.Timers.Timer _t;
 		public Mem M = new();
 
 		public MainWindow()
 		{
 			InitializeComponent();
-			GetAllMethods();
+			//GetAllMethods();
 			StateChanged += MainWindowStateChangeRaised;
-			_t = new Timer();
+			_t = new System.Timers.Timer();
 			_t.Elapsed += OnTimedEvent;
 			_t.Interval = 2000;
 			_t.AutoReset = true;
@@ -59,47 +63,72 @@ namespace InfiniteRuntimeTagViewer
 
 		}
 
+		private async Task HookProcessAsync()
+		{
+			bool reset = processSelector.hookProcess(M);
+			if (M.pHandle == IntPtr.Zero || processSelector.selected == false || loadedTags == false)
+			{
+				// Could not find the process
+				hook_text.Text = "Cant find HaloInfinite.exe";
+				hooked = false;
+				loadedTags = false;
+				TagsTree.Items.Clear();
+			}
+
+			if (!hooked || reset)
+			{
+				// Get the base address
+				BaseAddress = M.ReadLong("HaloInfinite.exe+0x4879758");
+				string validtest = M.ReadString(BaseAddress.ToString("X"));
+				System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite.exe+0x3D13E38"));
+				if (validtest == "tag instances")
+				{
+					hook_text.Text = "Process Hooked: " + M.theProc.Id;
+					hooked = true;
+				}
+				else
+				{
+					hook_text.Text = "Offset failed, scanning...";
+					await ScanMem();
+				}
+			}
+		}
+
+		public void HookAndLoad()
+		{
+			_ = HookProcessAsync();
+			if (BaseAddress != -1 && !loadedTags)
+			{
+				Dispatcher.BeginInvoke(new Action(async () =>
+				{
+					await LoadTagsMem();
+				}), DispatcherPriority.SystemIdle);
+				
+				if (hooked == true)
+				{
+					Searchbox_TextChanged(null, null);
+
+					System.Diagnostics.Debugger.Log(0, "DBGTIMING", "Done loading tags");
+
+				}
+			}
+		}
+
+
 		public bool loadedTags = false;
 		public bool hooked = false;
 		private void OnTimedEvent(object source, ElapsedEventArgs e)
 		{
-			Dispatcher.Invoke(new Action(async () =>
+			Dispatcher.Invoke(new Action(() =>
 			{
-				//hook_text.Text = "Opening process...";
-				processSelector.hookProcess(M);
-				if (M.pHandle == IntPtr.Zero || processSelector.selected == false || loadedTags == false)
+				_ = HookProcessAsync();
+				if (CbxAutoLoadTags.IsChecked && !loadedTags)
 				{
-					// Could not find the process
-					hook_text.Text = "Cant find HaloInfinite.exe";
-					hooked = false;
-					loadedTags = false;
+					_ = LoadTagsMem();
 				}
-
-				if (hooked == false)
+				if (CbxAutoPokeChanges.IsChecked)
 				{
-					// Get the base address
-					await ScanMem();
-				}
-				if (BaseAddress != -1 && loadedTags == false)
-				{
-					LoadTagsMem();
-					if (hooked == true)
-					{
-
-
-						Loadtags();
-
-						Searchbox_TextChanged(null, null);
-
-						System.Diagnostics.Debugger.Log(0, "DBGTIMING", "Done loading tags");
-						if (TagsTree.Items.Count > 0)
-						{
-							loadedTags = true;
-						}
-
-						
-
-					}
+					PokeChanges();
 				}
 			}));
 		}
@@ -145,7 +174,7 @@ namespace InfiniteRuntimeTagViewer
 
 		private void CheckBoxProcessCheck(object sender, RoutedEventArgs e)
 		{
-			if (CbxSearchProcess.IsChecked != null && CbxSearchProcess.IsChecked == true)
+			if (CbxSearchProcess.IsChecked == true)
 			{
 				_t.Enabled = true;
 			}
@@ -157,89 +186,13 @@ namespace InfiniteRuntimeTagViewer
 		public Dictionary<string, TagStruct> TagsList { get; set; } = new(); // and now we can convert it back because we just sort it elsewhere
 		public SortedDictionary<string, GroupTagStruct> TagGroups { get; set; } = new();
 
-		public async Task ArrayOfByteScanAsync()
-		{
-			try
-			{
-				long? aobScan = (await M.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
-					.First(); // "tag instances"
-
-				// Failed to find base tag address
-				if (aobScan == null || aobScan == 0)
-				{
-					BaseAddress = -1;
-					loadedTags = false;
-					hook_text.Text = "Failed to locate base tag address";
-				}
-				else
-				{
-					BaseAddress = aobScan.Value;
-					hook_text.Text = "Process Hooked: " + M.theProc.Id + " (AOB)";
-					hooked = true;
-				}
-			}
-			catch (Exception)
-			{
-				hook_text.Text = "Cant find HaloInfinite.exe";
-			}
-		}
-
 		// load tags from Mem
-		private async void BtnLoadTags_Click(object sender, RoutedEventArgs e)
+		private void BtnLoadTags_Click(object sender, RoutedEventArgs e)
 		{
-			//hook_text.Text = "Opening process...";
-		    bool reset = processSelector.hookProcess(M); 
-			//System.Diagnostics.Debug.WriteLine(processSelector.selected);
-			if (M.pHandle == IntPtr.Zero || processSelector.selected == false || loadedTags == false)
-			{
-				// Could not find the process
-				hook_text.Text = "Cant find HaloInfinite.exe";
-				hooked = false;
-				loadedTags = false;
-				TagsTree.Items.Clear();
-				//return;
-			}
-
-			if (hooked == false || reset)
-			{
-				// Get the base address
-				BaseAddress = M.ReadLong("HaloInfinite.exe+0x4879758");
-				string validtest = M.ReadString(BaseAddress.ToString("X"));
-				System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite.exe+0x3D13E38"));
-				if (validtest == "tag instances")
-				{
-					hook_text.Text = "Process Hooked: " + M.theProc.Id;
-					hooked = true;
-				}
-				else
-				{
-					hook_text.Text = "Offset failed, scanning...";
-					await ScanMem();
-				}
-			}
-
-			if (BaseAddress != -1)
-			{
-				LoadTagsMem();
-				if (hooked == true) // apparently we dont hook if we *have* the address :frown //This is to load the tags, we only load the tags if we are already hooked. // i put that comment when i was fixing it ya goober
-				{
-
-					Loadtags();
-
-					Searchbox_TextChanged(null, null);
-
-					System.Diagnostics.Debugger.Log(0, "DBGTIMING", "Done loading tags");
-					if (TagsTree.Items.Count > 0)
-					{
-						loadedTags = true;
-					}
-
-				}
-			}
-
+			HookAndLoad();
 		}
 
-		public void LoadTagsMem()
+		public async Task LoadTagsMem()
 		{
 			if (TagCount != -1)
 			{
@@ -247,9 +200,6 @@ namespace InfiniteRuntimeTagViewer
 				TagGroups.Clear();
 				TagsList.Clear();
 			}
-
-			TagsTree.Items.Clear();
-
 			TagCount = M.ReadInt((BaseAddress + 0x6C).ToString("X"));
 			long tagsStart = M.ReadLong((BaseAddress + 0x78).ToString("X"));
 
@@ -292,6 +242,7 @@ namespace InfiniteRuntimeTagViewer
 					TagsList.Add(currentTag.ObjectId, currentTag);
 				}
 			}
+			await Loadtags();
 		}
 		public string? read_tag_group(long tagGroupAddress)
 		{
@@ -332,11 +283,16 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
-		public void Loadtags()
+		public async Task Loadtags()
 		{
+			TagsTree.Items.Clear();
 			// TagsTree
+			loadedTags = true;
 			for (int i = 0; i < TagGroups.Count; i++)
 			{
+				int tagsPercent = (int) (i / (double) TagGroups.Count * 100);
+				hook_text.Text = "Loading Tags..." + tagsPercent + "%";
+				await Task.Delay(1);
 				GroupTagStruct displayGroup = TagGroups.ElementAt(i).Value;
 
 				TreeViewItem sortheader = new()
@@ -352,7 +308,7 @@ namespace InfiniteRuntimeTagViewer
 				TagGroups[TagGroups.ElementAt(i).Key] = displayGroup;
 			}
 			// var sortedList = TagsList.OrderBy(x => x.TagFullName).ToList();
-
+			hook_text.Text = "Loaded Tags";
 			foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList.OrderBy(key => key.Value.TagFullName))
 			{
 				TreeViewItem t = new();
@@ -370,6 +326,14 @@ namespace InfiniteRuntimeTagViewer
 
 				dictTagGroup.TagCategory.Items.Add(t);
 			}
+			if (TagsTree.Items.Count < 1)
+			{
+				loadedTags = false;
+			}
+			//had to do this cause for whatever reason the multithreading prevented it from actually filtering the tags
+			cbxFilterOnlyMapped.IsChecked = false;
+			cbxFilterOnlyMapped.IsChecked = true;
+
 		}
 
 		public Dictionary<string, string> InhaledTagnames = new();
@@ -560,8 +524,10 @@ namespace InfiniteRuntimeTagViewer
 
 		private void Open_pokes(object sender, RoutedEventArgs e)
 		{
-			if (loadedTags)
+			if (!loadedTags)
 			{
+				HookAndLoad();
+			}
 				// Create OpenFileDialog 
 				Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
 
@@ -569,8 +535,8 @@ namespace InfiniteRuntimeTagViewer
 				dlg.DefaultExt = ".irtv";
 				dlg.Filter = "IRTV Files (*.irtv)|*.irtv";
 
-				// Display OpenFileDialog by calling ShowDialog method 
-				Nullable<bool> result = dlg.ShowDialog();
+			// Display OpenFileDialog by calling ShowDialog method 
+			bool? result = dlg.ShowDialog();
 
 				// Get the selected file name and display in a TextBox 
 				if (result == true)
@@ -615,15 +581,9 @@ namespace InfiniteRuntimeTagViewer
 					}
 					else
 					{
-						poke_text.Text = prev + " Loaded, "+ fails + " Failed";
+						poke_text.Text = prev + " Loaded, " + fails + " Failed";
 					}
 				}
-			}
-			else
-			{
-				poke_text.Text = "You MUST 'load' first";
-			}
-
 		}
 
 		//var lines = File.ReadLines(filename);
@@ -711,9 +671,7 @@ namespace InfiniteRuntimeTagViewer
 			return "wtf does this even do";
 		}
 		
-
-		// POKE OUR CHANGES LETSGOOOO
-		private void BtnPokeChanges_Click(object sender, RoutedEventArgs e)
+		public void PokeChanges()
 		{
 			int fails = 0;
 			int pokes = 0;
@@ -737,18 +695,25 @@ namespace InfiniteRuntimeTagViewer
 					pokes--;
 				}
 			}
-			if (fails<1)
+			if (fails < 1)
 			{
 				poke_text.Text = pokes + " changes poked!";
 
 			}
 			else
 			{
-				poke_text.Text = pokes + " poked, " +fails+ " failed";
+				poke_text.Text = pokes + " poked, " + fails + " failed";
 
 			}
 
 			change_text.Text = Pokelist.Count + " changes queued";
+		}
+
+
+		// POKE OUR CHANGES LETSGOOOO
+		private void BtnPokeChanges_Click(object sender, RoutedEventArgs e)
+		{
+			PokeChanges();
 		}
 		public void tagchangesblock_fetchdata_by_ID(TagChangesBlock target)
 		{
@@ -995,7 +960,7 @@ namespace InfiniteRuntimeTagViewer
 
 		private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e)
 		{
-			Button? btn = (Button) sender;
+			System.Windows.Controls.Button? btn = (System.Windows.Controls.Button) sender;
 
 			changes_panel_container.Visibility = changes_panel_container.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
 			btn.Content =
@@ -1138,6 +1103,8 @@ namespace InfiniteRuntimeTagViewer
 				}
 			}
 		}
+
+		#region MenuCommands
 		public void ClickExit(object sender, RoutedEventArgs e)
 		{
 			SystemCommands.CloseWindow(this);
@@ -1172,63 +1139,67 @@ namespace InfiniteRuntimeTagViewer
 		public void UnloadTags(object sender, RoutedEventArgs e)
 		{
 			TagsTree.Items.Clear();
+			loadedTags = false;
 			//Need to unload memory items somehow here too!
 		}
-		public void GetAllMethods()
-		{
-			Type myType = (typeof(MainWindow));
-			// Get the public methods.
-			MethodInfo[] myArrayMethodInfo = myType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
-			Console.WriteLine("\nThe number of public methods is {0}.", myArrayMethodInfo.Length);
-			// Add all public methods to menu.
-			DisplayMethodInfo(myArrayMethodInfo);
-			// Add all non-public methods to array.
-			MethodInfo[] myArrayMethodInfo1 = myType.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
-			// Add all non-public methods to menu.
-			DisplayMethodInfo(myArrayMethodInfo1);
-		}
+
+		//Commented out because mainly this has no function right now.
+
+		//public void GetAllMethods()
+		//{
+		//	Type myType = (typeof(MainWindow));
+		//	// Get the public methods.
+		//	MethodInfo[] myArrayMethodInfo = myType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+		//	Console.WriteLine("\nThe number of public methods is {0}.", myArrayMethodInfo.Length);
+		//	// Add all public methods to menu.
+		//	DisplayMethodInfo(myArrayMethodInfo);
+		//	// Add all non-public methods to array.
+		//	MethodInfo[] myArrayMethodInfo1 = myType.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+		//	// Add all non-public methods to menu.
+		//	DisplayMethodInfo(myArrayMethodInfo1);
+		//}
 
 
-		public void DisplayMethodInfo(MethodInfo[] myArrayMethodInfo)
-		{
-			// Display information for all methods.
-			for (int i = 0; i < myArrayMethodInfo.Length; i++)
-			{
-				MethodInfo myMethodInfo = (MethodInfo) myArrayMethodInfo[i];
-				//Console.WriteLine("\nThe name of the method is {0}.", myMethodInfo.Name);
-				MenuItem methods = new MenuItem();
-				MenuItem methodToAdd = (MenuItem) DebugMenu.Items[1];
-				methods.Header = myMethodInfo.Name;
-				methods.Click += CallMethod;
-				methodToAdd.Items.Add(methods);
-			}
-		}
+		//public void DisplayMethodInfo(MethodInfo[] myArrayMethodInfo)
+		//{
+		//	// Display information for all methods.
+		//	for (int i = 0; i < myArrayMethodInfo.Length; i++)
+		//	{
+		//		MethodInfo myMethodInfo = (MethodInfo) myArrayMethodInfo[i];
+		//		//Console.WriteLine("\nThe name of the method is {0}.", myMethodInfo.Name);
+		//		MenuItem methods = new MenuItem();
+		//		MenuItem methodToAdd = (MenuItem) DebugMenu.Items[1];
+		//		methods.Header = myMethodInfo.Name;
+		//		methods.Click += CallMethod;
+		//		methodToAdd.Items.Add(methods);
+		//	}
+		//}
 
-		public void CallMethod(object sender, RoutedEventArgs e)
-		{
-			//Code that will call the specified method.
-			MenuItem? MI = sender as MenuItem;
-			if (MI != null)
-			{
-				try
-				{
-					Type mainType = (typeof(MainWindow));
-					string? clickedMethod = MI.Header.ToString();
-					System.Diagnostics.Debug.WriteLine(clickedMethod);
-					MethodInfo? method = mainType.GetMethod(clickedMethod);
-					if (method != null)
-					{
-						int paramCount = method.GetParameters().Length;
-						method.Invoke(this, null);
-					}
-				}
-				catch (Exception)
-				{
-					System.Diagnostics.Debug.WriteLine("Invalid parameter count. Consider calling a method with no parameters.");
-				}
-			}
-		}
+		//public void CallMethod(object sender, RoutedEventArgs e)
+		//{
+		//	//Code that will call the specified method.
+		//	MenuItem? MI = sender as MenuItem;
+		//	if (MI != null)
+		//	{
+		//		try
+		//		{
+		//			Type mainType = (typeof(MainWindow));
+		//			string? clickedMethod = MI.Header.ToString();
+		//			System.Diagnostics.Debug.WriteLine(clickedMethod);
+		//			MethodInfo? method = mainType.GetMethod(clickedMethod);
+		//			if (method != null)
+		//			{
+		//				int paramCount = method.GetParameters().Length;
+		//				method.Invoke(this, null);
+		//			}
+		//		}
+		//		catch (Exception)
+		//		{
+		//			System.Diagnostics.Debug.WriteLine("Invalid parameter count. Consider calling a method with no parameters.");
+		//		}
+		//	}
+		//}
 
-
+		#endregion
 	}
 }

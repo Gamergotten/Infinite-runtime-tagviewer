@@ -11,12 +11,13 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace InfiniteRuntimeTagViewer.Interface.Controls
 {
-	/// <summary>
-	/// Interaction logic for Window1.xaml
-	/// </summary>
+
+
 	public partial class SettingsControl : Window
 	{
 		public SettingsControl()
@@ -25,6 +26,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			StateChanged += MainWindowStateChangeRaised;
 		}
 
+		#region TitleBar Commands
 		private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
 		{
 			e.CanExecute = true;
@@ -69,31 +71,59 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 				MaximizeButton.Visibility = Visibility.Visible;
 			}
 		}
+		#endregion
+
 
 		private void TreeViewItem_Selected(object sender, RoutedEventArgs e)
 		{
 			//Ensure SettingsTree.SelectedItem has a value.
 			if (SettingsTree.SelectedItem != null)
 			{
-				//if selected item in tree is "General" under the window tree.
-				if (SettingsTree.SelectedItem == WindowGeneral)
+				TreeViewItem? item = SettingsTree.SelectedItem as TreeViewItem;
+				if (item != null)
 				{
-
+					ItemsControl parent = GetSelectedTreeViewItemParent(item);
+					TreeViewItem? parentText = parent as TreeViewItem;
+					if (parentText != null)
+					{
+						SettingsTitleText.Text = "Settings > " + parentText.Header.ToString() + " > " + item.Header.ToString();
+					}
+					//SettingsTitle.Visibility = Visibility.Visible;
 				}
-				else if (SettingsTree.SelectedItem == WindowColors)
-				{
-
-				}
-				else if (SettingsTree.SelectedItem == WindowTheme)
-				{
-
-				}
-				else if (SettingsTree.SelectedItem == TextGeneral)
+				#region Text Settings
+				if (SettingsTree.SelectedItem == TextGeneral)
 				{
 					TextGeneralLayout.Visibility = Visibility.Visible;
 				}
+				else
+				{
+					TextGeneralLayout.Visibility = Visibility.Hidden;
+				}
+				#endregion
+
+				#region Window Settings
+				if (SettingsTree.SelectedItem == WindowGeneral)
+				{
+					WindowGeneralLayout.Visibility = Visibility.Visible;
+				}
+				else
+				{
+					WindowGeneralLayout.Visibility = Visibility.Hidden;
+				}
+				#endregion
 			}
 
+		}
+
+		public ItemsControl GetSelectedTreeViewItemParent(TreeViewItem item)
+		{
+			DependencyObject parent = VisualTreeHelper.GetParent(item);
+			while (!(parent is TreeViewItem || parent is TreeView))
+			{
+				parent = VisualTreeHelper.GetParent(parent);
+			}
+
+			return parent as ItemsControl;
 		}
 	}
 }
