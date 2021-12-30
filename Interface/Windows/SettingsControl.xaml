@@ -65,6 +65,7 @@
             <Setter Property="Foreground" Value="White"/>
         </Style>
 
+
     </Window.Resources>
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="34" />
@@ -180,23 +181,31 @@
                         <StackPanel x:Name="changes_panel" Background="#252526" />
                     </ScrollViewer>
 
-                    <StackPanel x:Name="TextGeneralLayout" Visibility="Hidden">
-                        <TextBlock TextWrapping="Wrap" Text="Text > General Settings" HorizontalAlignment="Center"/>
-                        <TextBlock Text="Text Size" />
-                        <ComboBox Width="120" HorizontalAlignment="Left" SelectedIndex="0" />
+                    <StackPanel x:Name="SettingsTitle">
+                        <TextBlock x:Name="SettingsTitleText" Text="Settings" HorizontalAlignment="Center" />
                     </StackPanel>
+                    
+                    <StackPanel x:Name="TextGeneralLayout" Visibility="Hidden">
+                        <TextBlock Text="Text Size" Margin="10 20" />
+                        <TextBox x:Name="TextSizeInput" HorizontalAlignment="Left" Width="50" Margin="10 0" />
+                    </StackPanel>
+
+                    <StackPanel x:Name="WindowGeneralLayout" >
+                        
+                    </StackPanel>
+
                 </Grid>
 
                 <Grid Grid.Column="0" Margin="0,0,2,0" Background="#252526" Grid.ColumnSpan="2">
                     <TreeView x:Name="SettingsTree" Grid.Row="2">
                         <TreeViewItem Header="Window">
                             <TreeViewItem x:Name="WindowGeneral" Header="General" Selected="TreeViewItem_Selected" />
-                            <TreeViewItem x:Name="WindowColors" Header="Colors" Selected="TreeViewItem_Selected" />
+                            <TreeViewItem x:Name="WindowColors" Header="Colors" Selected="TreeViewItem_Selected"  />
                             <TreeViewItem x:Name="WindowTheme" Header="Theme" Selected="TreeViewItem_Selected" />
                         </TreeViewItem>
-                        <TreeViewItem x:Name="TextGeneral" Header="Text">
-                            <TreeViewItem Header="General" />
-                            <TreeViewItem Header="Colors" />
+                        <TreeViewItem Header="Text">
+                            <TreeViewItem x:Name="TextGeneral" Header="General" Selected="TreeViewItem_Selected" />
+                            <TreeViewItem Header="Colors" Selected="TreeViewItem_Selected" />
                         </TreeViewItem>
 
 
