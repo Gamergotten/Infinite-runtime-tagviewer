@@ -1273,8 +1273,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 					{ 0xBA0, new C { T = "TagRef", N = "Charged Detonation Damage" } }, // JPT
 					{ 0xBBC, new C { T = "TagRef", N = "Charged Impact Damage" } },
-					{ 0xBDC, new C { T = "TagRef", N = "Charged Visual Effect" } }, // EFFE
-					{ 0xBF5, new C { T = "TagRef", N = "Charged Detonation Effect" } }, // EFFE
+					{ 0xBD8, new C { T = "TagRef", N = "Charged Visual Effect" } }, // EFFE
+					{ 0xBF4, new C { T = "TagRef", N = "Charged Detonation Effect" } }, // EFFE
 				}
 			}
 			,
