@@ -97,7 +97,7 @@ namespace InfiniteRuntimeTagViewer
 		public void HookAndLoad()
 		{
 			_ = HookProcessAsync();
-			if (BaseAddress != -1 && !loadedTags)
+			if (BaseAddress != -1 )
 			{
 				Dispatcher.BeginInvoke(new Action(async () =>
 				{
