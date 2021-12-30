@@ -23,5 +23,15 @@
 		{
 			main.clearsingle(this);
 		}
+
+		private void value_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+		{
+			if (main != null)
+			{
+				main.Update_poke_value(this, value.Text); // this literally causes it to double update the tag
+				// not an issue really, but we do this whenever we change the text
+				// which just so happens when we update the text from outside of this valueblock
+			}
+		}
 	}
 }
