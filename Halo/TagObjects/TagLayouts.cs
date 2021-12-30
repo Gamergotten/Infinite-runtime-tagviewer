@@ -2419,18 +2419,22 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 				{ 0x101C, new C { T = "TagRef" } },
 
-				{ 0x1038, new C { T = "Float" } },
-				{ 0x103C, new C { T = "Float" } },
-				{ 0x1040, new C { T = "Float" } },
-				{ 0x1044, new C { T = "Float" } },
-				{ 0x1048, new C { T = "Float" } },
-				{ 0x104C, new C { T = "Float" } },
-				{ 0x1050, new C { T = "Float" } },
-				{ 0x1054, new C { T = "Float" } },
-				{ 0x1058, new C { T = "Float" } },
-				{ 0x105C, new C { T = "Float" } },
-				{ 0x1060, new C { T = "Float" } },
-				{ 0x1064, new C { T = "Float" } },
+				{ 0x1038, new C { T = "Float", N = "Bank Angle" } },
+				{ 0x103C, new C { T = "Float", N = "Bank Apply Time" } },
+				{ 0x1040, new C { T = "Float", N = "Bank Decay Time" } },
+				{ 0x1044, new C { T = "Float", N = "Pitch Ratio" } },
+				{ 0x1048, new C { T = "Float", N = "Max Velocity" } },
+				{ 0x104C, new C { T = "Float", N = "Max Sidestep Velocity" } },
+				{ 0x1050, new C { T = "Float", N = "Acceleration" } },
+				{ 0x1054, new C { T = "Float", N = "Deceleation" } },
+				{ 0x1058, new C { T = "Float", N = "Angular Velocity Maximum" } },
+				{ 0x105C, new C { T = "Float", N = "Angular Acceleration Maximum" } },
+				{ 0x1060, new C { T = "Float", N = "Crouch Velocity Modifier" } },
+
+				{ 0x1064, new FlagGroup { A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0,  "Use World Up"  },
+				} } },
 
 				{ 0x1068, new C { T = "TagRef" } },
 				{ 0x1084, new C { T = "Tagblock" } },
