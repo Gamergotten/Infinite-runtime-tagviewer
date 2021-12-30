@@ -595,7 +595,10 @@ namespace InfiniteRuntimeTagViewer
 								else
 								{
 									if (TagsList.Keys.Contains(parts[2]))
+									{
+
 										AddPokeChange(new TagEditorDefinition { OffsetOverride = parts[0], MemoryType = parts[1], }, TagsList[parts[2]].Datnum);
+									}
 									else
 									{
 										fails++;
@@ -651,6 +654,8 @@ namespace InfiniteRuntimeTagViewer
 				updateElement.type.Text = def.MemoryType;
 				updateElement.value.Text = value;
 				//updateElement.tagSource.Text = def.TagStruct.TagFile + " + " + def.GetTagOffset();
+				string dont_Be_null = convert_ID_to_tag_name(def.OffsetOverride.Split(":").FirstOrDefault());
+				updateElement.tagSource.Text = dont_Be_null;
 			}
 			else
 			{
@@ -663,7 +668,10 @@ namespace InfiniteRuntimeTagViewer
 					// an extra step or two to get this working again 
 					// i don't save the tag name so it has a null reference
 					//tagSource = { Text = def.TagStruct.TagFile + " + " + def.GetTagOffset() } 
+
 				};
+				string dont_Be_null = convert_ID_to_tag_name(def.OffsetOverride.Split(":").FirstOrDefault());
+				newBlock.tagSource.Text = dont_Be_null;
 				newBlock.sig_address_path = def.OffsetOverride;
 				newBlock.main = this;
 				changes_panel.Children.Add(newBlock);
@@ -767,64 +775,170 @@ namespace InfiniteRuntimeTagViewer
 
 		public bool pokesingle(string address, string type, string value)
 		{
+			if (value.Contains("`"))
+			{
+				string[] hooked_string = value.Split('`');
+				if (hooked_string.Length == 2)
+				{
+					string do_the_thing = SUSSY_BALLS_2(hooked_string[1]);
+					string read = readmem_for_1_very_specific_task(do_the_thing, type);
+					if (read != "")
+					{
+						pokesingle(address, type, read);
+					}
+					else
+					{
+						return false;
+					}
+				}
+				else
+				{
+					return false;
+				}
+				return true;
+
+			}
+			else
+			{
+				switch (type)
+				{
+					case "4Byte":
+						try { M.WriteMemory(address, "int", value); }
+						catch { return false; }
+						return true;
+					case "2Byte": // needs to cap value
+						try { M.WriteMemory(address, "2bytes", value); }
+						catch { return false; }
+						return true;
+					case "Byte":
+						try { M.WriteMemory(address, "byte", value); }
+						catch { return false; }
+						return true;
+					case "Flags":
+						try { M.WriteMemory(address, "byte", Convert.ToByte(value).ToString("X")); }
+						catch { return false; }
+						return true;
+					case "Float":
+						try { M.WriteMemory(address, "float", value); }
+						catch { return false; }
+						return true;
+					case "Pointer":
+						try
+						{
+							string? willThisWork = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
+							M.WriteMemory(address, "long", willThisWork); // apparently it does
+						}
+						catch { return false; }
+						return true;
+					case "String":
+						try { M.WriteMemory(address, "string", value + "\0"); }
+						catch { return false; }
+						return true;
+					case "TagrefGroup":
+						try { M.WriteMemory(address, "string", ReverseString(value)); }
+						catch { return false; }
+						return true;
+					case "TagrefTag":
+						try
+						{
+							string temp = Regex.Replace(value, @"(.{2})", "$1 ");
+							temp = temp.TrimEnd();
+							M.WriteMemory(address, "bytes", temp);
+						}
+						catch { return false; }
+						return true;
+					case "mmr3Hash":
+						try
+						{
+							string temp2 = Regex.Replace(value, @"(.{2})", "$1 ");
+							temp2 = temp2.TrimEnd();
+							M.WriteMemory(address, "bytes", temp2);
+						}
+						catch { return false; }
+						return true;
+				}
+			}
+			return false;
+		}
+
+		public string readmem_for_1_very_specific_task(string address, string type)
+		{
+			string output = "";
 			switch (type)
 			{
-				case "4Byte":
-					try { M.WriteMemory(address, "int", value);}
-					catch{ return false; }
-					return true;
-				case "2Byte": // needs to cap value
-					try { M.WriteMemory(address, "2bytes", value);}
-					catch{ return false; }
-					return true;
-				case "Byte":
-					try { M.WriteMemory(address, "byte", value);}
-					catch{ return false; }
-					return true;
-				case "Flags":
-					try { M.WriteMemory(address, "byte", Convert.ToByte(value).ToString("X"));}
-					catch{ return false; }
-					return true;
-				case "Float":
-					try { M.WriteMemory(address, "float", value); }
-					catch { return false; }
-					return true;
-				case "Pointer":
+				case "4Byte": 
 					try 
-					{ 
-						string? willThisWork = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
-						M.WriteMemory(address, "long", willThisWork); // apparently it does
+					{
+						output = M.ReadInt(address).ToString(); // (+entry.Key?) lmao, no wonder why it wasn't working
 					}
-					catch { return false; }
-					return true;
+					catch { }
+					return output;
+				case "2Byte": // needs to cap value
+					try
+					{
+						output = M.Read2Byte(address).ToString();
+					}
+					catch { }
+					return output;
+				case "Byte":
+					try 
+					{
+						output = M.ReadByte(address).ToString();
+					}
+					catch { }
+					return output;
+				case "Flags":
+					try 
+					{
+						output = M.ReadByte(address).ToString("X");
+					}
+					catch { }
+					return output;
+				case "Float":
+					try 
+					{
+						output = M.ReadFloat(address).ToString();
+
+					}
+					catch { }
+					return output;
+				case "Pointer":
+					try
+					{
+						output = M.ReadLong(address).ToString("X");
+					}
+					catch { }
+					return output;
 				case "String":
-					try { M.WriteMemory(address, "string", value + "\0"); }
-					catch { return false; }
-					return true;
+					try 
+					{
+						output = M.ReadString(address, "", 100).ToString();
+					}
+					catch { }
+					return output;
 				case "TagrefGroup":
-					try { M.WriteMemory(address, "string", ReverseString(value)); }
-					catch { return false; }
-					return true;
+					try 
+					{
+						output = ReverseString(M.ReadString(address, "", 4));
+					}
+					catch { }
+					return output;
 				case "TagrefTag":
 					try
 					{
-						string temp = Regex.Replace(value, @"(.{2})", "$1 ");
-						temp = temp.TrimEnd();
-						M.WriteMemory(address, "bytes", temp);
+						output = BitConverter.ToString(M.ReadBytes(address, 4)).Replace("-", string.Empty);
 					}
-					catch { return false; }
-					return true;
+					catch { }
+					return output;
 				case "mmr3Hash":
 					try
 					{
-						string temp2 = Regex.Replace(value, @"(.{2})", "$1 ");
-						temp2 = temp2.TrimEnd();
-						M.WriteMemory(address, "bytes", temp2);
+						output = BitConverter.ToString(M.ReadBytes(address, 4)).Replace("-", string.Empty);
 					}
-					catch { return false; }
-					return true;
+					catch { }
+					return output;
 			}
-			return false;
+			return output;
 		}
 
 		public string SUSSY_BALLS_2(string input)
@@ -846,6 +960,13 @@ namespace InfiniteRuntimeTagViewer
 			if(tag_thing !=null)
 			return "0x" + (poop += tag_thing.TagData).ToString("X") + ((joined=="")? "" : "," + joined);
 			return "";
+		}
+		public void Update_poke_value(TagChangesBlock target, string new_value)
+		{
+			KeyValuePair<string, string> pair = Pokelist[target.sig_address_path];
+			Pokelist[target.sig_address_path] = new KeyValuePair<string, string>(pair.Key, new_value);
+			poke_text.Text = "Poke Value Updated";
+
 		}
 
 		public void clearsingle(TagChangesBlock target)
