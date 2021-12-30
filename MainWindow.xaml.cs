@@ -793,7 +793,10 @@ namespace InfiniteRuntimeTagViewer
 							string? willThisWork = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
 							M.WriteMemory(address, "long", willThisWork); // apparently it does
 						}
-						catch { return false; }
+						catch 
+						{ 
+							return false; 
+						}
 						return true;
 					case "String":
 						try { M.WriteMemory(address, "string", value + "\0"); }
@@ -819,7 +822,9 @@ namespace InfiniteRuntimeTagViewer
 							temp2 = temp2.TrimEnd();
 							M.WriteMemory(address, "bytes", temp2);
 						}
-						catch { return false; }
+						catch 
+						{ 
+							return false; }
 						return true;
 				}
 			}
@@ -870,7 +875,7 @@ namespace InfiniteRuntimeTagViewer
 				case "Pointer":
 					try
 					{
-						output = M.ReadLong(address).ToString("X");
+						output = M.ReadLong(address).ToString();
 					}
 					catch { }
 					return output;
