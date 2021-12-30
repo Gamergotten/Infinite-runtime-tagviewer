@@ -2989,6 +2989,57 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 			}},
 
+			{"bitm",new() // Bitmap Mapped only a few things
+			{
+				{ 0x58, new C { T = "Tagblock"} },      // BitmapGroupSequence1
+				{ 0xC0, new C { T = "Tagblock"} },      // BitmapGroupSequence1
+				{ 0xF8, new C { T = "Tagblock"} },      // BitmapDataResource
+				{ 0x110, new C { T = "Tagblock"} },     // BitmapDataResource.pixels
+				{ 0x140, new C { T = "Tagblock"} },     // StreamingBitmapData
+			
+			}},
+
+			{"ant!",new() // Antenna Mapped what I could find 
+			{
+				{ 0x14, new C { T = "TagRef"} },	   // Bitm
+				{ 0x30, new C { T = "TagRef"} },	   // Pphy
+				{ 0x4C, new C { T = "Float" } },       // No clue What this does
+				{ 0x50, new C { T = "Float" } },       // No clue What this does
+				{ 0x54, new C { T = "Float" } },       // No clue What this does
+				{ 0x58, new C { T = "Float" } },       // No clue What this does
+				{ 0x5C, new C { T = "Float" } },       // No clue What this does
+				{ 0x60, new C { T = "Float" } },       // No clue What this does
+				{ 0x64, new C { T = "Float" } },       // No clue What this does
+				{ 0x68, new C { T = "Float" } },       // No clue What this does
+			}},
+
+			{"uihg",new() // User interface Hud Globals some stuff 
+			{
+				{ 0xA8, new C { T = "Tagblock"} },	   // NavPointPresentationTagBlock
+				{ 0xC8, new C { T = "TagRef"} },	   // bitm
+				{ 0x13C, new C { T = "TagRef"} },
+				{ 0x16C, new C { T = "TagRef"} },
+				{ 0x198, new C { T = "TagRef"} },
+			}},
+
+			{"cfxs",new() // Camera_fx_settings some stuff here
+			{
+				{ 0x18, new C { T = "Float" } },       // No clue What this does
+				{ 0x1C, new C { T = "Float" } },       // No clue What this does
+				{ 0x34, new C { T = "Float" } },       // No clue What this does
+				{ 0x3C, new C { T = "Float" } },       // No clue What this does
+				{ 0x60, new C { T = "TagRef"} },
+				{ 0x68, new C { T = "TagRef"} },
+				{ 0x130, new C { T = "TagRef"} },	   // TagRef EFEX
+				{ 0x138, new C { T = "TagRef"} },
+				{ 0x150, new C { T = "TagRef"} },	   // TagRef Bitm
+				{ 0x16C, new C { T = "TagRef"} },	   //
+				{ 0x278, new C { T = "TagRef"} },	   //
+				
+
+
+			}},
+
 		};
 
 
