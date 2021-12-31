@@ -60,7 +60,9 @@ namespace InfiniteRuntimeTagViewer
 			_t.Interval = 2000;
 			_t.AutoReset = true;
 			inhale_tagnames();
-
+			SettingsControl settings = new();
+			settings.SetGeneralSettingsFromConfig();
+			settings.Close();
 		}
 
 		private async Task HookProcessAsync()
