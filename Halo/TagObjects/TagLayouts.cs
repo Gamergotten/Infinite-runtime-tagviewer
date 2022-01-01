@@ -2727,104 +2727,371 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 			{"eqip",new()
 			{
-				{ 0x78, new C { T = "TagRef", N = "Model" } },
-				{ 0xF0, new C { T = "TagRef", N  = "Collision Damage" } },
-				{ 0x13C, new C { T = "TagRef", N = "Material Effect" } },
-				{ 0x190, new C { T = "TagRef", N = "Sound" } },
+				{ 0x10, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "Unknown Function"  },
+				} } },
 
-				{ 0x248, new C { T = "Tagblock", B= new Dictionary<long, C>
+				{ 0x14, new C { T = "Float" } },
+				{ 0x1C, new C { T = "Float" } },
+				{ 0x20, new C { T = "Float" } },
+				{ 0x24, new C { T = "Float" } },
+				{ 0x28, new C { T = "Float" } },
+				{ 0x2C, new C { T = "Float" } },
+				{ 0x30, new C { T = "Float" } },
+				{ 0x34, new C { T = "Float" } },
+				{ 0x38, new C { T = "Float" } },
+				{ 0x3C, new C { T = "Float" } },
+				{ 0x40, new C { T = "Float" } },
+
+				{ 0x44, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "Unknown Function"  },
+				} } },
+
+				{ 0x48, new C { T = "Float" } },
+				{ 0x4C, new C { T = "Float" } },
+				{ 0x50, new C { T = "Float" } },
+				{ 0x54, new C { T = "Float" } },
+				{ 0x58, new C { T = "Float" } },
+
+				{ 0x5C, new C{ T="Tagblock"}}, //SidecarPathDefinition
+				
+				{ 0x78, new C { T="TagRef", N = "Model" } },
+				{ 0x94, new C { T="TagRef" } },
+				{ 0xB0, new C { T="TagRef" } },
+				{ 0xCC, new C { T="TagRef" } },
+				{ 0xF0, new C { T="TagRef", N = "Collision Damage" } },
+
+				{ 0x10C, new C{ T="Tagblock"}}, //s_object_early_mover_obb_definition
+
+				{ 0x120, new C { T="TagRef" } },
+				{ 0x13C, new C { T="TagRef", N = "Material Effect" } },
+				{ 0x158, new C { T="TagRef" } },
+				{ 0x174, new C { T="TagRef" } },
+				{ 0x190, new C { T="TagRef", N = "Sound" } },
+
+				{ 0x1B0, new C { T = "Float" } },
+
+				{ 0x1C0, new C { T="Tagblock" } }, //object_ai_properties
+				{ 0x1D4, new C { T="Tagblock" } }, //s_object_function_definition
+
+				{ 0x1E4, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "Unknown Function"  },
+				} } },
+
+				{ 0x1EC, new C{ T="Tagblock"}}, //ObjectRuntimeInterpolatorFunctionsBlock
+				{ 0x200, new C{ T="Tagblock"}}, //ObjectFunctionSwitchDefinition
+				{ 0x214, new C{ T="Tagblock"}}, //i343::Objects::ObjectFunctionForwarding
+				{ 0x22C, new C{ T="Tagblock"}}, //i343::Objects::AmmoRefillVariant
+
+				{ 0x240, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "Unknown Function"  },
+				} } },
+
+				{ 0x248, new C{ T="Tagblock", B= new Dictionary<long, C>
 				{
-					{ 0x4, new C { T = "TagRef" } },
-					{ 0x20, new C { T = "TagRef" } },
-					{ 0x54, new C { T = "TagRef" } },
-				} } }, // object_attachment_definition
+					{ 0x4, new C { T="TagRef" } },
+					{ 0x20, new C { T="TagRef" } },
 
-				{ 0x2C0, new C { T = "Tagblock", B= new Dictionary<long, C>
-				{
-					{ 0x44, new C { T = "TagRef"} },
-					{ 0x64, new C { T = "TagRef"} },
-					{ 0x80, new C { T = "TagRef"} },
-					{ 0x9C, new C { T = "TagRef"} },
-					{ 0xB8, new C { T = "TagRef"} },
-
-					{ 0x13C, new C { T = "Float" } },
-					{ 0x140, new C { T = "Float" } },
-					{ 0x150, new C { T = "Float" } },
-
-					{ 0x158, new C { T = "TagRef", N = "Sound"} },
-
-					{ 0x168, new C { T = "Float" } },
-				} } }, //s_multiplayer_object_properties_definition		
-				{ 0x45C, new C { T = "TagRef", N = "Script" } },
-
-				{ 0xD88, new C { T = "Float" } }, //Something to do with how many rounds you have/recharge times
-				{ 0xD8C, new C { T = "Float" } },
-
-				{ 0x500, new C { T = "Tagblock" } },
-
-				{ 0x758, new C { T = "TagRef", N = "Damage Effect" } },
-				{ 0x77C, new C { T = "TagRef", N = "Effect" } },
-				{ 0x7D8, new C { T = "TagRef", N = "Grounded Friction" } },
-				{ 0x850, new C { T = "TagRef", N = "Equipment" } },
-
-				{ 0x8C4, new C { T = "Tagblock", B= new Dictionary<long, C>
-				{
-					{ 0x4C, new C { T = "Tagblock"} }, //EquipmentAbilityDeactivationOverrideSettings
-					{ 0x6C, new C { T = "Tagblock"} }, //ControlStateUIInfo
-						
-					{ 0x88, new C { T = "Tagblock", B= new Dictionary<long, C>
-					{
-						{ 0x4, new C { T = "Float" } },
-						{ 0x8, new C { T = "Float" } },
-						{ 0x54, new C { T = "Float" } },
-						{ 0x64, new C { T = "TagRef" } },
-						{ 0x6C, new C { T = "Float" } },
-						{ 0x70, new C { T = "Float" } },
-						{ 0x80, new C { T = "TagRef" } },
-						{ 0xB0, new C { T = "TagRef" } },
-						{ 0xD0, new C { T = "TagRef" } },
-						{ 0xF4, new C { T = "TagRef" } },
-					} } }, //EquipmentAbilityTypeSpawner
-						
-					{ 0x9C, new C { T = "Tagblock"} }, // EquipmentAbilityTypeProximityMine
-					{ 0xB0, new C { T = "Tagblock"} }, // EquipmentAbilityTypeMotionTrackerNoise
-					{ 0xC4, new C { T = "Tagblock"} }, // EquipmentAbilityTypeTreeOfLife
-					{ 0xD8, new C { T = "Tagblock"} }, // EquipmentAbilityTypeRepulsorField
-					{ 0xEC, new C { T = "Tagblock"} }, // EquipmentAbilityTypeDaddy
-					{ 0x100, new C { T = "Tagblock"} }, // EquipmentAbilityTypeAmmoPack
-					{ 0x114, new C { T = "Tagblock"} }, // EquipmentAbilityTypeHealthPack
-					{ 0x128, new C { T = "Tagblock"} }, // EquipmentAbilityTypeJetPack
-					{ 0x13C, new C { T = "Tagblock"} }, // EquipmentAbilityTypeHologram
-					{ 0x150, new C { T = "Tagblock"} }, // EquipmentAbilityTypeSpecialWeapon
-					{ 0x164, new C { T = "Tagblock"} }, // EquipmentAbilityTypeSpecialMove
-					{ 0x178, new C { T = "Tagblock"} }, // EquipmentAbilityTypeEngineerShields
-					{ 0x18C, new C { T = "Tagblock"} }, // EquipmentAbilityTypeAutoTurret
-					{ 0x1A0, new C { T = "Tagblock"} }, // EquipmentAbilityTypeShieldProjector
-					{ 0x1B4, new C { T = "Tagblock"} }, // EquipmentAbilityTypeProctileCollector
-					{ 0x1C8, new C { T = "Tagblock"} }, // EquipmentAbilityTypeActiveShield
-					{ 0x1DC, new C { T = "Tagblock"} }, // EquipmentAbilityTypeFortificationShield
-					{ 0x1F0, new C { T = "Tagblock"} }, // EquipmentAbilityTypeGenericPowerup
-					{ 0x204, new C { T = "Tagblock"} }, // EquipmentAbilityTypeMalleableProperties						
-					{ 0x218, new C { T = "Tagblock"} }, // EquipmentAbilityTypeSpartanCustomTracking
-					{ 0x22C, new C { T = "Tagblock"} }, // EquipmentAbilityTypeTeleporter
-					{ 0x240, new C { T = "Tagblock"} }, // EquipmentAbilityTypeFrameAbilityItem
-					{ 0x254, new C { T = "Tagblock"} }, // EquipmentAbilityTypeEquipmentRecharger
-					{ 0x268, new C { T = "Tagblock"} }, // EquipmentAbilityTypeKnockback
-					{ 0x27C, new C { T = "Tagblock"} }, // EquipmentAbilityTypeActiveCamo
-
-				} } }, //EquipmentAbility					
+					{ 0x40, new C{ T="Tagblock"}}, //TagGraph::TagGraphFloatParam
 					
-				{ 0x8F4, new C { T = "Tagblock" } }, //Interface::UIItemInfo					
-				{ 0x908, new C { T = "TagRef", N = "Sound" } },
-				{ 0x9BC, new C { T = "TagRef", N = "Effect" } },
-				{ 0x9D8, new C { T = "TagRef", N = "Effect" } },
-				{ 0xC14, new C { T = "TagRef", N = "Effect" } },
-				{ 0xC30, new C { T = "TagRef", N = "Effect" } },
-				{ 0xD70, new C { T = "TagRef", N = "Effect" } },
-				{ 0xDA0, new C { T = "TagRef", N = "Activation Effect" } },
-				{ 0xE78, new C { T = "TagRef", N = "Object" } },
-				{ 0xEC4, new C { T = "TagRef", N = "Bitmap" } },
-				{ 0xEE4, new C { T = "TagRef" } },
+					{ 0x54, new C { T="TagRef" } },
+
+					{ 0x70, new C{ T="Tagblock"}}, //i343::Objects::AttachmentVariantName
+					{ 0x94, new C{ T="Tagblock"}}, //i343::Objects::AttachmentVariantName
+					{ 0xA8, new C{ T="Tagblock"}}, //object_change_color_function
+				} } }, //object_attachment_definition
+				
+				{ 0x25C, new C{ T="Tagblock"}}, //object_indirect_lighting_settings_definition
+				{ 0x270, new C{ T="Tagblock"}}, //s_water_physics_hull_surface_definition
+				{ 0x284, new C{ T="Tagblock"}}, //s_jetwash_definition
+				{ 0x298, new C{ T="Tagblock"}}, //object_definition_widget
+				{ 0x2AC, new C{ T="Tagblock"}}, //object_change_color_definition
+				{ 0x2C0, new C{ T="Tagblock"}}, //s_multiplayer_object_properties_definition
+				{ 0x2D4, new C{ T="Tagblock"}}, //i343::Objects::ForgeObjectEntryDefinition
+
+				{ 0x2E4, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "Unknown Function"  },
+				} } },
+
+				{ 0x2E8, new C { T="TagRef" } },
+				{ 0x304, new C { T="TagRef" } },
+
+				{ 0x320, new C{ T="Tagblock"}}, //s_object_spawn_effects
+				{ 0x334, new C{ T="Tagblock"}}, //ModelDissolveDataBlock
+				{ 0x448, new C{ T="Tagblock"}}, //HsReferencesBlock
+
+				{ 0x45C, new C { T="TagRef" } },
+
+				{ 0x478, new C { T = "Float" } },
+				{ 0x47C, new C { T = "Float" } },
+				{ 0x480, new C { T = "Float" } },
+
+				{ 0x484, new C{ T="Tagblock"}}, //s_object_meta_label
+				{ 0x498, new C{ T="Tagblock"}}, //SoundRTPCBlockDefinition
+				{ 0x4AC, new C{ T="Tagblock"}}, //SoundSweetenerBlockDefinition
+				{ 0x4C8, new C{ T="Tagblock"}}, //i343::Objects::ComputeFunctionSmoothingBlockDefinition
+
+				{ 0x4E0, new C { T = "Float" } },
+
+				{ 0x4E4, new C { T="TagRef" } },
+
+				{ 0x500, new C{ T="Tagblock"}}, //i343::SpartanTracking::ObjectDefinition
+
+				{ 0x514, new C { T="TagRef" } },
+
+				{ 0x530, new C{ T="Tagblock"}}, //InteractionOpportunityDefinition
+				{ 0x548, new C{ T="Tagblock"}}, //ScriptedSequenceActionDefinition
+
+				{ 0x55C, new C { T="TagRef" } },
+
+				{ 0x578, new C{ T="Tagblock"}}, //AnimChannelEntry
+				{ 0x58C, new C{ T="Tagblock"}}, //AnimSetTableEntry
+
+				{ 0x5A0, new C { T = "Float" } },
+				{ 0x5A4, new C { T = "Float" } },
+				{ 0x5A8, new C { T = "Float" } },
+				{ 0x5AC, new C { T = "Float" } },
+				{ 0x5B0, new C { T = "Float" } },
+				{ 0x5B4, new C { T = "Float" } },
+				{ 0x5B8, new C { T = "Float" } },
+				{ 0x5BC, new C { T = "Float" } },
+				{ 0x5C0, new C { T = "Float" } },
+
+				{ 0x5C4, new C{ T="Tagblock"}}, //AnimationDefinition.Anim Set Nodegraph Metadata
+
+				{ 0x5E4, new C { T = "Float" } },
+
+				{ 0x5E8, new C{ T="Tagblock"}}, //LegGroundingSettings
+
+				{ 0x5FC, new C { T = "Float" } },
+				{ 0x600, new C { T = "Float" } },
+				{ 0x604, new C { T = "Float" } },
+				{ 0x608, new C { T = "Float" } },
+
+				{ 0x60C, new C{ T="Tagblock"}}, //i343::Objects::ObjectNodeGraphDefinition
+				{ 0x620, new C{ T="Tagblock"}}, //i343::Objects::AnimationMatchingTableEntry
+				{ 0x638, new C{ T="Tagblock"}}, //i343::Objects::ModelVariantSwappingTableEntry
+				{ 0x650, new C{ T="Tagblock"}}, //i343::Items::LocationSensorDefinition
+				{ 0x664, new C{ T="Tagblock"}}, //i343::Items::ShroudGeneratorDefinition
+				{ 0x678, new C{ T="Tagblock"}}, //i343::Objects::PowerComponentDefinition
+				{ 0x68C, new C{ T="Tagblock"}}, //i343::Objects::SelfDestructHandlerDefinition
+				{ 0x6A0, new C{ T="Tagblock"}}, //i343::Objects::IndirectLightingComponentDefinition
+
+				{ 0x6BC, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "Unknown Function"  },
+				} } },
+
+				{ 0x730, new C{ T="Tagblock"}}, //i343::Items::VariantHUDMessages
+				{ 0x744, new C{ T="Tagblock"}}, //PredictedBitmapsBlock
+
+				{ 0x758, new C { T="TagRef", N = "Damage Effect" } },
+				{ 0x77C, new C { T="TagRef", N = "Effect" } },
+				{ 0x798, new C { T="TagRef" } },
+
+				{ 0x7B4, new C { T = "Float" } },
+				{ 0x7B8, new C { T = "Float" } },
+				{ 0x7BC, new C { T = "Float" } },
+				{ 0x7C0, new C { T = "Float" } },
+				{ 0x7C4, new C { T = "Float" } },
+				{ 0x7C8, new C { T = "Float" } },
+				{ 0x7CC, new C { T = "Float" } },
+
+				{ 0x7D8, new C { T="TagRef", N = "Grounded Friction" } },
+				{ 0x7F4, new C { T="TagRef" } },
+				{ 0x850, new C { T="TagRef" } },
+
+				{ 0x86C, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "Unknown Function"  },
+				} } },
+
+				{ 0x874, new C { T = "Float" } },
+				{ 0x878, new C { T = "Float" } },
+				{ 0x87C, new C { T = "Float" } },
+				{ 0x880, new C { T = "Float" } },
+				{ 0x884, new C { T = "Float" } },
+				{ 0x888, new C { T = "Float" } },
+
+				{ 0x88C, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "Unknown Function"  },
+				} } },
+
+				{ 0x894, new C { T = "Float" } },
+				{ 0x898, new C { T = "Float" } },
+				{ 0x89C, new C { T = "Float" } },
+				{ 0x8A0, new C { T = "Float" } },
+				{ 0x8A4, new C { T = "Float" } },
+				{ 0x8AC, new C { T = "Float" } },
+
+				{ 0x8B0, new C{ T="Tagblock"}}, //OptionalUnitCameraBlock
+				{ 0x8C4, new C{ T="Tagblock", B= new Dictionary<long, C>
+				{
+					{ 0x0, new C { T = "Float" } },
+					{ 0x4, new C { T = "Float" } },
+					{ 0x8, new C { T = "Float" } },
+					{ 0xC, new C { T = "Float" } },
+					{ 0x10, new C { T = "Float" } },
+					{ 0x14, new C { T = "Float" } },
+					{ 0x18, new C { T = "Float" } },
+					{ 0x1C, new C { T = "Float", N = "Activation Cost" } },
+					{ 0x20, new C { T = "Float" } },
+					{ 0x24, new C { T = "Float" } },
+					{ 0x28, new C { T = "Float" } },
+					{ 0x2C, new C { T = "Float" } },
+
+					{ 0x30, new C{ T="Tagblock"}}, //function_definition_data
+
+					{ 0x44, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "Unknown Function"  },
+					} } },
+
+					{ 0x48, new C { T = "Float" } },
+
+					{ 0x4C, new C{ T="Tagblock"}}, //EquipmentAbilityDeactivationOverrideSettings
+					
+					{ 0x50, new C { T = "Float" } },
+					{ 0x54, new C { T = "Float" } },
+
+					{ 0x58, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "Unknown Function"  },
+					} } },
+
+					{ 0x5C, new C { T = "Float" } },
+					{ 0x60, new C { T = "Float" } },
+					{ 0x64, new C { T = "Float" } },
+					{ 0x68, new C { T = "Float" } },
+
+					{ 0x6C, new C{ T="Tagblock"}}, //ControlStateUIInfo
+					
+					{ 0x7C, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "Unknown Function"  },
+					} } },
+
+					{ 0x88, new C{ T="Tagblock", B= new Dictionary<long, C>
+					{
+							{ 0x0, new C { T = "Float", N = "Spawn X" } },
+							{ 0x4, new C { T = "Float", N = "Spawn Y" } },
+							{ 0x8, new C { T = "Float", N = "Spawn Z" } },
+							{ 0xC, new C { T = "Float" } },
+							{ 0x10, new C { T = "Float" } },
+							{ 0x14, new C { T = "Float" } },
+							{ 0x18, new C { T = "Float" } },
+							{ 0x1C, new C { T = "Float", N = "Spawn Velocity" } },
+							{ 0x20, new C { T = "Float" } },
+							{ 0x24, new C { T = "Float" } },
+							{ 0x28, new C { T = "Float" } },
+							{ 0x2C, new C { T = "Float" } },
+							{ 0x30, new C { T = "Float" } },
+
+							{ 0x34, new C { T="TagRef" } },
+							{ 0x64, new C { T="TagRef", N = "Projectile" } },
+							{ 0x80, new C { T="TagRef" } },
+							{ 0xB0, new C { T="TagRef", N = "Bitmap" } },
+							{ 0xD0, new C { T="TagRef", N = "Bitmap" } },
+							{ 0xF4, new C { T="TagRef" } },
+
+					} } },//EquipmentAbilityTypeSpawner
+
+
+					{ 0x9C, new C{ T="Tagblock"}}, //EquipmentAbilityTypeProximityMine
+					{ 0xB0, new C{ T="Tagblock"}}, //EquipmentAbilityTypeMotionTrackerNoise
+					{ 0xC4, new C{ T="Tagblock"}}, //EquipmentAbilityTypeTreeOfLife
+					{ 0xD8, new C{ T="Tagblock"}}, //EquipmentAbilityTypeRepulsorField
+					{ 0xEC, new C{ T="Tagblock"}}, //EquipmentAbilityTypeDaddy
+					{ 0x100, new C{ T="Tagblock"}}, //EquipmentAbilityTypeAmmoPack
+					
+					{ 0x114, new C{ T="Tagblock", B= new Dictionary<long, C>
+					{
+						{ 0xC, new C{ T="Tagblock", B= new Dictionary<long, C>
+						{
+							{ 0x0, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+							{
+								{ 0, "Unknown Function"  },
+							} } },
+
+							{ 0x08, new C { T = "Float" } },
+							{ 0x0C, new C { T = "Float" } },
+							{ 0x10, new C { T = "Float" } },
+							{ 0x14, new C { T = "Float" } },
+							{ 0x18, new C { T = "Float" } },
+							{ 0x1C, new C { T = "Float" } },
+
+							{ 0x20, new C { T="TagRef" } },
+							{ 0x3C, new C { T="TagRef", N = "Generic Modifier Definition Tag" } },
+						} } },
+
+						{ 0x20, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+						{
+							{ 0, "Unknown Function"  },
+						} } },
+					} } }, //EquipmentAbilityTypeHealthPack
+					
+					{ 0x128, new C{ T="Tagblock"}}, //EquipmentAbilityTypeJetPack
+					{ 0x13C, new C{ T="Tagblock"}}, //EquipmentAbilityTypeHologram
+					{ 0x150, new C{ T="Tagblock"}}, //EquipmentAbilityTypeSpecialWeapon
+					{ 0x164, new C{ T="Tagblock"}}, //EquipmentAbilityTypeSpecialMove
+					{ 0x178, new C{ T="Tagblock"}}, //EquipmentAbilityTypeEngineerShields
+					{ 0x18C, new C{ T="Tagblock"}}, //EquipmentAbilityTypeAutoTurret
+					{ 0x1A0, new C{ T="Tagblock"}}, //EquipmentAbilityTypeShieldProjector
+					{ 0x1B4, new C{ T="Tagblock"}}, //EquipmentAbilityTypeProjectileCollector
+					{ 0x1C8, new C{ T="Tagblock"}}, //EquipmentAbilityTypeActiveShield
+					{ 0x1DC, new C{ T="Tagblock"}}, //EquipmentAbilityTypeFortificationShield
+					{ 0x1F0, new C{ T="Tagblock", B= new Dictionary<long, C>
+					{
+						{ 0x0, new C { T="TagRef" } },
+						{ 0x1C, new C { T="TagRef", N = "Generic Modifier Definition Tag" } },
+					} } }, //EquipmentAbilityTypeGenericPowerup
+					
+					{ 0x204, new C{ T="Tagblock", B= new Dictionary<long, C>
+					{
+						{ 0x0, new C { T="TagRef", N = "Generic Modifier Definition Tag" } },
+					} } }, //EquipmentAbilityTypeMalleableProperties
+					
+					{ 0x218, new C{ T="Tagblock", B= new Dictionary<long, C>
+					{
+						{ 0x0, new C { T="TagRef", N = "Spartan Tracking Ping Definition" } },
+						{ 0x1C, new C { T="TagRef" } },
+					} } }, //EquipmentAbilityTypeSpartanCustomTracking
+					
+					{ 0x22C, new C{ T="Tagblock"}}, //EquipmentAbilityTypeTeleporter
+					{ 0x240, new C{ T="Tagblock"}}, //EquipmentAbilityTypeFrameAbilityItem
+					{ 0x254, new C{ T="Tagblock"}}, //EquipmentAbilityTypeEquipmentRecharger
+					{ 0x268, new C{ T="Tagblock"}}, //EquipmentAbilityTypeKnockback
+					{ 0x27C, new C{ T="Tagblock"}}, //EquipmentAbilityTypeActiveCamo
+
+					{ 0x290, new C { T="TagRef" } },
+					{ 0x2AC, new C { T="TagRef", N = "Effect" } },
+					{ 0x2C8, new C { T="TagRef", N = "Effect" } },
+					{ 0x2E4, new C { T="TagRef" } },
+
+					{ 0x330, new C { T = "Float" } },
+					{ 0x334, new C { T = "Float" } },
+
+
+				} } }, //EquipmentAbility
+
+				{ 0x8D8, new C { T="TagRef" } },
+
+				{ 0x8F4, new C{ T="Tagblock"}}, //Interface::UIItemInfo
+
+				{ 0x908, new C { T="TagRef", N = "Sound" } },
+				{ 0x924, new C { T="TagRef" } },
+				{ 0x940, new C { T="TagRef" } },
+				{ 0x95C, new C { T="TagRef" } },
+
+				{ 0x978, new C{ T="Tagblock"}}, //SoundRTPCBlockDefinition
+				{ 0x98C, new C{ T="Tagblock"}}, //SoundSweetenerBlockDefinition
+				{ 0x9A0, new C{ T="Tagblock"}}, //i343::Equipment::ObjectFunctionRemapping
 			}},
 
 			{"bloc",new()
