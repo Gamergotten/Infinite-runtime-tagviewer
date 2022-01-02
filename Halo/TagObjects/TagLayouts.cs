@@ -1025,6 +1025,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{0xF4,new C{T = "Tagblock",B = new Dictionary<long, C> // object variant
 					{
 						{ 0x0, new C { T = "mmr3Hash", N = "Variant Hash" } }, // variant
+						{ 0x4, new C { T = "mmr3Hash", N = "Coating Hash" } }, // coating
 
 						{ 0x34, new C{ T="Tagblock", B=new Dictionary<long, C> // region block
 						{
