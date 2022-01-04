@@ -3327,7 +3327,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x74, new C { T = "TagRef" } }, //mwvs MaterialVisorSwatch
 				{ 0x94, new C { T = "Tagblock",B = new Dictionary<long, C> // PreloadSwatchEntry
 				{
-					{ 0x0, new C { T = "TagRef" } },
+					{ 0x0, new C { T = "TagRef" } }, // mwsw MaterialSwatch
 				}, S=28 } },
 			}},
 
