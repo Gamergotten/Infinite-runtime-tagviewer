@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="RESEARCH NOTES\" />
     <Folder Include="Themes\" />
     <Folder Include="Utility\" />
   </ItemGroup>
@@ -49,6 +50,12 @@
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="RESEARCH NOTES\infinite_pelican_nodes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="RESEARCH NOTES\phantom_nodes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
