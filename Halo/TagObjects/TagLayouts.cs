@@ -3314,13 +3314,21 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 			{"mwsy",new() // Material Styles // Barely mapped, missing alot i think
 			{
-				{0x10, new C { T = "Tagblock" } }, // MaterialRegion
-				{0x30, new C { T = "Tagblock" } }, // CoatingMaterialSetReference
-				{0x50, new C { T = "Tagblock",B = new Dictionary<long, C> //MaterialStyle
+				{ 0x10, new C { T = "Tagblock" } }, // MaterialRegion
+				{ 0x30, new C { T = "Tagblock",B = new Dictionary<long, C> // CoatingMaterialSetReference
 				{
-					{ 0x5C, new C { T = "mmr3Hash", N = "Coating Hash" } }, // coating
+					{ 0x0, new C { T = "TagRef" } }, // cwms CoatingMaterialSet
+				}, S=28 } },
+				{ 0x50, new C { T = "Tagblock",B = new Dictionary<long, C> //MaterialStyle
+				{
+					{ 0x0, new C { T = "mmr3Hash", N = "Coating Hash" } }, // coating
+					{ 0x4, new C { T = "TagRef" } }, // mwpl MaterialPalette
 				}, S=92 } },
-				{0x94, new C { T = "Tagblock" } }, // PreloadSwatchEntry
+				{ 0x74, new C { T = "TagRef" } }, //mwvs MaterialVisorSwatch
+				{ 0x94, new C { T = "Tagblock",B = new Dictionary<long, C> // PreloadSwatchEntry
+				{
+					{ 0x0, new C { T = "TagRef" } },
+				}, S=28 } },
 			}},
 
 		};
