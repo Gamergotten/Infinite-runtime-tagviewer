@@ -3385,6 +3385,58 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0, "Combo box type" },
 				} } },
 			}},
+			
+			{"mwsw",new()
+			{
+				{ 0x10, new C { T = "Float" } },
+				{ 0x14, new C { T = "Float" } },
+				{ 0x18, new C { T = "Float" } },
+				{ 0x1C, new C { T = "Float" } },
+
+				{ 0x20, new C { T = "TagRef" } },
+
+				{ 0x3C, new C { T = "Float" } },
+				{ 0x40, new C { T = "Float" } },
+
+				{ 0x44, new C { T = "TagRef" } },
+
+				{ 0x60, new C { T = "Float" } },
+				{ 0x64, new C { T = "Float" } },
+				{ 0x68, new C { T = "Float" } },
+				{ 0x6C, new C { T = "Float" } },
+				{ 0x70, new C { T = "Float" } },
+				{ 0x74, new C { T = "Float" } },
+				{ 0x78, new C { T = "Float" } },
+				{ 0x7C, new C { T = "Float" } },
+				{ 0x80, new C { T = "Float" } },
+				{ 0x84, new C { T = "Float" } },
+				{ 0x88, new C { T = "Float" } },
+				{ 0x8C, new C { T = "Float" } },
+				{ 0x90, new C { T = "Float" } },
+
+				{ 0x94, new C { T = "Tagblock",B = new Dictionary<long, C> // MaterialColorVariants
+				{
+					{ 0x0, new C { T = "mmr3Hash" } },
+
+					{ 0x4, new C { T = "Float" } },
+					{ 0x8, new C { T = "Float" } },
+					{ 0xC, new C { T = "Float" } },
+					{ 0x10, new C { T = "Float" } },
+					{ 0x14, new C { T = "Float" } },
+					{ 0x18, new C { T = "Float" } },
+					{ 0x1C, new C { T = "Float" } },
+					{ 0x20, new C { T = "Float" } },
+					{ 0x24, new C { T = "Float" } },
+					{ 0x28, new C { T = "Float" } },
+					{ 0x2C, new C { T = "Float" } },
+
+				}, S=48 } },
+
+				{ 0xA4, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0, "Combo box type" },
+				} } },
+			}},
 
 		};
 
