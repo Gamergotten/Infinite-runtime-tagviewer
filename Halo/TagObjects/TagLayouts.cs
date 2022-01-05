@@ -3312,23 +3312,78 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 			}},
 
-			{"mwsy",new() // Material Styles // Barely mapped, missing alot i think
+			{"mwsy",new()
 			{
 				{ 0x10, new C { T = "Tagblock" } }, // MaterialRegion
+				
+				{ 0x20, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0, "Unknown Function" }, // Looks like a flag block. That or a combo box.
+				} } },
+
 				{ 0x30, new C { T = "Tagblock",B = new Dictionary<long, C> // CoatingMaterialSetReference
 				{
-					{ 0x0, new C { T = "TagRef" } }, // cwms CoatingMaterialSet
+					{ 0x0, new C { T = "TagRef", N = "Coating Material Set" } },
 				}, S=28 } },
+
+				{ 0x40, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0, "Unknown Function" }, //Most likely a combo box
+				} } },
+
 				{ 0x50, new C { T = "Tagblock",B = new Dictionary<long, C> //MaterialStyle
 				{
-					{ 0x0, new C { T = "mmr3Hash", N = "Coating Hash" } }, // coating
-					{ 0x4, new C { T = "TagRef" } }, // mwpl MaterialPalette
+					{ 0x0, new C { T = "mmr3Hash", N = "Coating Hash" } },
+					{ 0x4, new C { T = "TagRef", N = "Material Palette" } },
+
+					{ 0x1C, new C { T = "mmr3Hash", N = "MaterialStyle.palette" } },
+
+					{ 0x20, new C { T = "Float", N = "Global Damage" } },
+					{ 0x24, new C { T = "Float", N = "Hero Damage" } },
+					{ 0x28, new C { T = "Float", N = "Global Emissive" } },
+					{ 0x2C, new C { T = "Float", N = "Emissive Amount" } },
+					{ 0x30, new C { T = "Float", N = "Scratch Amount" } },
+					{ 0x34, new C { T = "Float", N = "Grime Type" } },
+					{ 0x38, new C { T = "Float", N = "Grime Amount" } },
+
+					{ 0x3C, new C { T = "Tagblock" } }, // MaterialStyleRegion
+
+					{ 0x4C, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+					{
+						{ 0, "Region Flags - Unknown Function" },
+					} } },
+
 				}, S=92 } },
-				{ 0x74, new C { T = "TagRef" } }, //mwvs MaterialVisorSwatch
+
+				{ 0x60, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0, "Unknown Function" },
+				} } },
+
+				{ 0x74, new C { T = "TagRef", N = "Material Visor Swatch" } },
+				
 				{ 0x94, new C { T = "Tagblock",B = new Dictionary<long, C> // PreloadSwatchEntry
 				{
-					{ 0x0, new C { T = "TagRef" } }, // mwsw MaterialSwatch
+					{ 0x0, new C { T = "TagRef", N = "Material Swatch" } },
 				}, S=28 } },
+
+				{ 0xA4, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0, "Unknown Function" },
+				} } },
+			}},
+
+			{"mwpl",new() // This seems useless in my opinion
+			{
+				{ 0x10, new C { T = "Tagblock",B = new Dictionary<long, C> // MaterialSwatchEntry
+				{
+					{ 0x4, new C { T = "TagRef" } },
+				}, S=56 } },
+
+				{ 0x20, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0, "Combo box type" },
+				} } },
 			}},
 
 		};
