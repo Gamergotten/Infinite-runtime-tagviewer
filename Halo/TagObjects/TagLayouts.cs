@@ -3437,6 +3437,44 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					{ 0, "Combo box type" },
 				} } },
 			}},
+			
+			{"mwvs",new()
+			{
+				{ 0x10, new C { T = "Tagblock",B = new Dictionary<long, C> // MaterialVisorPatternReference
+				{
+					{ 0x0, new C { T = "mmr3Hash" } },
+
+					{ 0x4, new C { T = "TagRef" } },
+				}, S=32 } },
+
+				{ 0x24, new C { T = "Tagblock",B = new Dictionary<long, C> // MaterialColorVariants
+				{
+					{ 0x0, new C { T = "mmr3Hash" } },
+
+					{ 0x4, new C { T = "Float" } },
+					{ 0x8, new C { T = "Float" } },
+					{ 0xC, new C { T = "Float" } },
+					{ 0x10, new C { T = "Float" } },
+					{ 0x14, new C { T = "Float" } },
+					{ 0x18, new C { T = "Float" } },
+					{ 0x1C, new C { T = "Float" } },
+					{ 0x20, new C { T = "Float" } },
+					{ 0x24, new C { T = "Float" } },
+					{ 0x28, new C { T = "Float" } },
+					{ 0x2C, new C { T = "Float" } },
+
+				}, S=48 } },
+
+				{ 0x30, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0, "Unknown Function" },
+				} } },
+
+				{ 0x34, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+				{
+					{ 0, "Unknown Function" },
+				} } },
+			}},
 
 		};
 
