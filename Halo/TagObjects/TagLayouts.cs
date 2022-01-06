@@ -1863,14 +1863,129 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ 0x84, new C{ T="TagRef", N="Major"}},
 				{ 0xA0, new C{ T="TagRef"}},
 
-				{ 0xBC + 0x14*0, new C{ T="Tagblock"}},
+				{ 0xBC + 0x14*0, new C{ T="Tagblock", N = "Variant", B= new Dictionary<long, C> // Variant
+				{
+					{ 0x0, new C{ T="mmr3Hash", N = "Variant Name"} },
+					{ 0x4, new C{ T="2Byte", N = "Variant Index"} },
+					{ 0x8, new C{ T="mmr3Hash", N = "Style ID"} },
+
+					{ 0xC, new C{ T="Tagblock" } }
+				} } },
+				
 				{ 0xBC + 0x14*1, new C{ T="Tagblock"}},
 				{ 0xBC + 0x14*2, new C{ T="Tagblock"}},
-				{ 0xBC + 0x14*3, new C{ T="Tagblock"}},
+
+				{ 0xBC + 0x14*3, new C{ T="Tagblock", N = "General Properties", B= new Dictionary<long, C> // General Properties
+				{
+					{ 0x0, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+					{
+						{ 0, "swarm" },
+						{ 1, "flying" },
+						{ 2, "dual wields" },
+						{ 3, "uses gravemind" },
+						{ 4, "gravemind chorus" },
+						{ 5, "don't trade weapon" },
+						{ 6, "don't stow weapon" },
+						{ 7, "hero character" },
+						{ 8, "leader independent positioning" },
+						{ 9, "has active camo" },
+						{ 10, "use head marker for looking" },
+						{ 11, "space character" },
+						{ 12, "do not drop equipment" },
+						{ 13, "do not allow crouch" },
+						{ 14, "do not allow moving crouch" },
+						{ 15, "critical betrayal" },
+						{ 16, "deathless critical betrayal" },
+						{ 17, "armor prevents assassination" },
+						{ 18, "drop all weapons on death" },
+						{ 19, "drop no weapons on death" },
+						{ 20, "shield prevents assassination" },
+						{ 21, "cannot be assassinated" },
+						{ 22, "infinite ammo" },
+						{ 23, "Use Aim At Feet Fallback" },
+						{ 24, "Effectiveness Token Override" },
+					} } },
+
+					{ 0x4, new C { T = "4Byte", N = "Type" } },
+
+					{ 0x8, new C { T = "TagRef", N = "Prototype Script" } },
+
+					{ 0x24, new C { T = "Float", N = "Max Leader Distance" } },
+					{ 0x28, new C { T = "Float", N = "Absolute Max Leader Distance" } },
+					{ 0x2C, new C { T = "Float", N = "Max Player Dialogue Distance" } },
+					{ 0x30, new C { T = "Float", N = "Scariness" } },
+
+					{ 0x38, new C { T = "TagRef", N = "Data Behavior Tree" } },
+
+					{ 0x54, new C{ T="Tagblock", N= "Weapons Disallowed From Trading", B= new Dictionary<long, C> // s_disallowed_weapons_from_trading
+					{
+						{ 0x0, new C { T = "TagRef", N = "Weapon" } },
+					}, S=28 } },
+
+					{ 0x68, new C { T = "TagRef", N = "Initial Primary Weapon" } },
+					{ 0x84, new C { T = "TagRef", N = "Primary Weapon Configuration" } },
+					{ 0xA0, new C { T = "TagRef", N = "Initial Secondary Weapon" } },
+					{ 0xBC, new C { T = "TagRef", N = "Secondary Weapon Configuration" } },
+					{ 0xD8, new C { T = "TagRef", N = "Initial Equipment" } },
+
+				} } },
+
 				{ 0xBC + 0x14*4, new C{ T="Tagblock"}},
 				{ 0xBC + 0x14*5, new C{ T="Tagblock"}},
 				{ 0xBC + 0x14*6, new C{ T="Tagblock"}},
-				{ 0xBC + 0x14*7, new C{ T="Tagblock"}},
+				
+				{ 0xBC + 0x14*7, new C{ T="Tagblock", N = "Vitality Properties", B= new Dictionary<long, C>
+				{
+					{ 0x0, new FlagGroup {A = 4, STR = new Dictionary<int, string>()
+					{
+						{ 0, "auto resurrect" },
+						{ 1, "disable vitality override" },
+						{ 2, "no friendly damage" },
+					} } },
+
+					{ 0x4, new C { T = "Float", N = "Normal Body Vitality" } },
+					{ 0x8, new C { T = "Float", N = "Normal Shield Vitality" } },
+					{ 0xC, new C { T = "Float", N = "Ledgendary Body Vitality" } },
+					{ 0x10, new C { T = "Float", N = "Ledgendary Shield Vitality" } },
+					{ 0x14, new C { T = "Float", N = "Body Recharge Fraction" } },
+					{ 0x18, new C { T = "Float", N = "Soft Ping Threshold (With Shields)" } },
+					{ 0x1C, new C { T = "Float", N = "Soft Ping Threshold (No Shields)" } },
+					{ 0x20, new C { T = "Float", N = "Medium Ping Threshold (With Shields)" } },
+					{ 0x24, new C { T = "Float", N = "Medium Ping Threshold (No Shields)" } },
+					{ 0x28, new C { T = "Float", N = "Medium Ping Cooldown Time" } },
+					{ 0x2C, new C { T = "Float", N = "Hard Ping Threshold (With Shields)" } },
+					{ 0x30, new C { T = "Float", N = "Hard Ping Threshold (No Shields)" } },
+					{ 0x34, new C { T = "Float", N = "Hard Ping Cooldown Time" } },
+					{ 0x38, new C { T = "Float", N = "Body Recharge Delay Time" } },
+					{ 0x3C, new C { T = "Float", N = "Body Recharge Time" } },
+					{ 0x40, new C { T = "Float", N = "Shield Recharge Delay Time" } },
+					{ 0x44, new C { T = "Float", N = "Shield Recharge Time" } },
+					{ 0x48, new C { T = "Float", N = "Extended Shield Damage Threshold" } },
+					{ 0x4C, new C { T = "Float", N = "Extended Body Damage Threshold" } },
+					{ 0x50, new C { T = "Float", N = "Runtime Body Recharge Velocity" } },
+					{ 0x54, new C { T = "Float", N = "Runtime Shield Recharge Velocity" } },
+
+					{ 0x58, new C { T = "TagRef", N = "Resurrect Weapon" } },
+
+					{ 0x74, new C { T = "Float", N = "Player Damage Scale" } },
+
+					{ 0x78, new C { T = "TagRef", N = "Collision Damage Override" } },
+					{ 0x94, new C { T = "TagRef", N = "Knockback Collision Damage Override" } },
+
+					{ 0xB0, new C { T = "Float", N = "Stun Threshold (Easy)" } },
+					{ 0xB4, new C { T = "Float", N = "Stun Threshold (Normal)" } },
+					{ 0xB8, new C { T = "Float", N = "Stun Threshold (Heroic)" } },
+					{ 0xBC, new C { T = "Float", N = "Stun Threshold (Legendary)" } },
+					{ 0xC0, new C { T = "Float", N = "Stun Time Scale (Easy)" } },
+					{ 0xC4, new C { T = "Float", N = "Stun Time Scale (Normal)" } },
+					{ 0xC8, new C { T = "Float", N = "Stun Time Scale (Heroic)" } },
+					{ 0xCC, new C { T = "Float", N = "Stun Time Scale (Legendary)" } },
+					{ 0xD0, new C { T = "Float", N = "Stun Cooldown (Easy)" } },
+					{ 0xD4, new C { T = "Float", N = "Stun Cooldown (Normal)" } },
+					{ 0xD8, new C { T = "Float", N = "Stun Cooldown (Heroic)" } },
+					{ 0xDC, new C { T = "Float", N = "Stun Cooldown (Legendary)" } },
+				} } },
+
 				{ 0xBC + 0x14*8, new C{ T="Tagblock"}},
 				{ 0xBC + 0x14*9, new C{ T="Tagblock"}},
 				{ 0xBC + 0x14*10, new C{ T="Tagblock"}},
