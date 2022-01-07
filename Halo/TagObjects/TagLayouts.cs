@@ -15678,12 +15678,15 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 }, S=2}},
 { 0x1EC, new C{ T="Tagblock", N = "runtime node orientations", B = new Dictionary<long, C>
 {
-{ 0x0, new C{ T="Unmapped", N = "rotation" }},
-{ 0xC, new C{ T="Float", N = "translation.X" }},
-{ 0x10, new C{ T="Float", N = "translation.Y" }},
-{ 0x14, new C{ T="Float", N = "translation.Z" }},
-{ 0x18, new C{ T="Float", N = "scale" }},
-}, S=28}},
+{ 0x0, new C{ T="Float", N = "Quaternion_1" }},
+{ 0x4, new C{ T="Float", N = "Quaternion_2" }},
+{ 0x8, new C{ T="Float", N = "Quaternion_3" }},
+{ 0xC, new C{ T="Float", N = "Quaternion_4" }},
+{ 0x10, new C{ T="Float", N = "translation.X" }},
+{ 0x14, new C{ T="Float", N = "translation.Y" }},
+{ 0x18, new C{ T="Float", N = "translation.Z" }},
+{ 0x1C, new C{ T="Float", N = "Scale" }},
+}, S=32}},
 { 0x200, new C{ T="Tagblock", N = "bone groups", B = new Dictionary<long, C>
 {
 { 0x0, new C{ T="mmr3Hash", N = "name" }},
