@@ -1,0 +1,7 @@
+0 - entire model
+1 - entire model?
+4 - cannon
+5 - cannon cover left
+6 - cannon cover right
+7 - cannon tip
+8 - cannon tip chamber

@@ -1,0 +1,7 @@
+1 - entire Cannon
+4 - top part of cannon
+5 - bottom part
+6 - wide wing part
+7 - under barrel left
+8 - under barrel right
+9 - tip of cannon
