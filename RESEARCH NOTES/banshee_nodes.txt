@@ -1,0 +1,24 @@
+1 = All 0.3
+2
+3
+4 = Left Gun
+5 = Right Fin Top = 5
+6 = Right Fin Bottom
+7 = Top Hull
+8 = Left Fin Top = 3
+9 = Left Fin Plate Out
+10  
+11 = Left Fin Plate In
+12 = Right Fin Plate
+13 = Left Wing Front 5 Q2 = 6
+14 = Right Wing Front 5
+15 = Right Wing Back
+16 = Left Fin Bottom
+17 = Right Gun
+18 = Right Fin Plate In
+19 = Top Hull Thingy
+20 = Left Wing Back
+21
+22
+23 = Right Gun (AGAIN)
+24 = Left Gun (AGAIN)
