@@ -1,0 +1,23 @@
+Wasp Nodes
+
+0 - Unknown
+1 - Full Model
+2 - Unknown
+3 - Unknown
+4 - Unknown
+5 - Cockpit Canopy
+6 - Rear Right VTOL Thruster
+7 - Rear Right Tail Flap
+8 - Rocket Launchers (both)
+9 - Right Main Thruster (whole)
+10 - Rear Left Tail Flap
+11 - Rear Left VTOL Thruster
+12 - Left Main Thruster (whole)
+13 - Guns (both)
+14 - Right Main Thruster (Turbine only)
+15 - Cockpit Canopy
+16 - Left Main Thruster (Turbine only)
+17 - Left Rocket Launcher
+18 - Right Rocket Launcher
+19 - Left Rocket Launcher (again?)
+20 - Right Rocket Launcher (again?)
