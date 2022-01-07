@@ -379,6 +379,83 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 				switch (entry.Value.T)
 				{
+					case "Comment":
+						CommentBlock? vb0 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						parentpanel.Children.Add(vb0);
+						vb0.comment.Text = entry.Value.N;
+						break;
+					case "EnumGroup":
+						// make sure we got a enumgroup def
+						if (!(entry.Value is TagLayouts.EnumGroup))
+						{
+							continue;
+						}
+						TagLayouts.EnumGroup? fg3 = entry.Value as TagLayouts.EnumGroup;
+						EnumBlock eb1 = new EnumBlock() { HorizontalAlignment = HorizontalAlignment.Left };
+
+						foreach (KeyValuePair<int, string> gvsdahb in fg3.STR)
+						{
+							ComboBoxItem cbi = new() { Content=gvsdahb.Value };
+							eb1.enums.Items.Add(cbi);
+						}
+
+						if (fg3.A == 1)
+						{
+							int test_this = _m.ReadByte((address + entry.Key).ToString("X"));
+							eb1.enums.SelectedIndex = test_this;
+							eb1.ValueDefinition = new TagEditorDefinition()
+							{
+								MemoryType = "Byte",
+								TagDef = entry.Value,
+								TagStruct = tagStruct,
+								OffsetOverride = entry.Value.AbsoluteTagOffset
+							};
+						}
+						else if (fg3.A == 2)
+						{
+							int test_this = _m.Read2Byte((address + entry.Key).ToString("X"));
+							eb1.enums.SelectedIndex = test_this;
+							eb1.ValueDefinition = new TagEditorDefinition()
+							{
+								MemoryType = "2Byte",
+								TagDef = entry.Value,
+								TagStruct = tagStruct,
+								OffsetOverride = entry.Value.AbsoluteTagOffset
+							};
+						}
+						else if (fg3.A == 4)
+						{
+							int test_this = _m.ReadInt((address + entry.Key).ToString("X"));
+							eb1.enums.SelectedIndex = test_this;
+							eb1.ValueDefinition = new TagEditorDefinition()
+							{
+								MemoryType = "4Byte",
+								TagDef = entry.Value,
+								TagStruct = tagStruct,
+								OffsetOverride = entry.Value.AbsoluteTagOffset
+							};
+						}
+						else
+						{
+							string put_breakpoint_here;
+							eb1.ValueDefinition = new TagEditorDefinition()
+							{
+								MemoryType = "Enums",
+								TagDef = entry.Value,
+								TagStruct = tagStruct,
+								OffsetOverride = entry.Value.AbsoluteTagOffset
+							};
+						}
+
+						// add appropriate values to combobox
+						// read selected
+
+
+
+						parentpanel.Children.Add(eb1);
+						eb1.value_name.Text = fg3.N;
+						eb1.main = _mainWindow;
+						break;
 					case "4Byte":
 						TagValueBlock? vb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
 						vb1.value_type.Text = "4 Byte";

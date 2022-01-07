@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="InfiniteRuntimeTagViewer.Interface.Controls.EnumBlock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="25">
+    <Grid x:Name="parent_element" Background="#606060" Margin="5,5,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="80*" MinWidth="80" />
+
+        </Grid.ColumnDefinitions>
+
+        <ComboBox x:Name="enums" Grid.Column="1" SelectedIndex="0" BorderBrush="#fff" Margin="1" SelectionChanged="enums_SelectionChanged">
+            
+        </ComboBox>
+
+        <TextBlock x:Name="value_name" Foreground="#fff" Text="name test" HorizontalAlignment="Stretch" Margin="5,0,5,0" />
+
+    </Grid>
+</UserControl>

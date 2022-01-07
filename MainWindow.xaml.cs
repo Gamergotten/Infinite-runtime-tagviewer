@@ -778,7 +778,7 @@ namespace InfiniteRuntimeTagViewer
 						catch { return false; }
 						return true;
 					case "Byte":
-						try { M.WriteMemory(address, "byte", value); }
+						try { M.WriteMemory(address, "byte", int.Parse(value).ToString("X")); }
 						catch { return false; }
 						return true;
 					case "Flags":

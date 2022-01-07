@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="InfiniteRuntimeTagViewer.Interface.Controls.CommentBlock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls"
+             mc:Ignorable="d" >
+    <Grid Background="#FF8400CA" Margin="5,5,0,0" Height="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*" MinWidth="200" />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="comment" Text="test in the middle" Foreground="#fff" HorizontalAlignment="Center"/>
+    </Grid>
+</UserControl>
