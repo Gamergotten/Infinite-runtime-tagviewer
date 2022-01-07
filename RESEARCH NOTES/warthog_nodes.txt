@@ -1,0 +1,38 @@
+1 - Warthog Exterior Shell
+4 - Back Wheels
+7 - Front Wheels
+8 - Steering Wheel
+10 - Hood
+12 - Gas Cans
+15 - Shift Knob
+17 - Back Left Suspension
+18 - Front Left Wheel
+20 - Back Right Suspension
+23 - Gas Tank 2
+25 - Gas Tank 3
+29 - Back Right Suspension
+30 - Back Right Suspension 2
+31 - Entire Right Side Suspension
+32 - Back Right Suspension 3
+33 - Back Right Suspension 4
+34 - Back Suspension 2
+35 - Back Left Wheel/Back Right Suspension 2
+36 - Back Gas Tank --
+37 - Back right suspension 3
+38 - Back right suspension 4
+39 - Back right suspension 5
+40 - Back right suspension 6
+41 - Back right suspension 7
+42 - Entire Right Side Suspension 2
+43 - Back Right Wheel and Back Right Suspension
+44 - Back right suspension 8
+45 - Back right suspension 8
+46 - Back Right Wheel and Back Right Suspension
+58 - Back Right Tire
+60 - Front Right Tire
+65 - Front Left Tire
+69 - Back Left Tire
+76 - Back Right Tire
+81 - Front Right wheel
+82 - Front Left Wheel
+92 - Front Left

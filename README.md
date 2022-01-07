@@ -2,9 +2,9 @@
 
 # Download
 
-In-development build (Click to download):
+In-development build (Click to download)(this is the one you want to download):
 
-[![Download latest build](https://github.com/Gamergotten/Infinite-runtime-tagviewer/actions/workflows/dotnet.yml/badge.svg)](https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/Binaries.zip)
+[![Download latest build](https://github.com/Gamergotten/Infinite-runtime-tagviewer/actions/workflows/dotnet.yml/badge.svg)](https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/Binaries.zip) <- (click to download)
 
 Stable (maybe) Releases:
 

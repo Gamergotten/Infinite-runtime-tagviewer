@@ -58,7 +58,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			int debugMeme = 0;
 		}
 
-		public void Inhale_tag(string tagID) // as in a literal index to the tag // get fucked, we're a dictionary now
+		public void Inhale_tag(string tagID) // i love dictionaries
 		{
 			TagStruct loadingTag = _mainWindow.TagsList[tagID];
 			Tagname_text.Text = _mainWindow.convert_ID_to_tag_name(loadingTag.ObjectId);
@@ -104,7 +104,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 				if (TagLayouts.Tags.ContainsKey(loadingTag.TagGroup))
 				{
 					Dictionary<long, TagLayouts.C> tags = TagLayouts.Tags[loadingTag.TagGroup];
-					readTagsAndCreateControls(loadingTag, 0, tags, loadingTag.TagData, tagview_panels);
+					readTagsAndCreateControls(loadingTag, 0, tags, loadingTag.TagData, tagview_panels, tagID+":");
 				}
 				else
 				{
@@ -123,12 +123,12 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 		// hmm we need a system that reads the pointer and adds it
 		// also, we need to beable to read multiple tag things but i may put that on hold
-		public void recall_blockloop(TagStruct tagStruct, long tagOffset, KeyValuePair<long, TagLayouts.C> entry, long loadingTag, StackPanel parentpanel)
+		public void recall_blockloop(TagStruct tagStruct, long tagOffset, KeyValuePair<long, TagLayouts.C> entry, long loadingTag, StackPanel parentpanel, string abso_whatever_it_was)
 		{
 			parentpanel.Children.Clear();
 			if (entry.Value.B != null)
 			{
-				readTagsAndCreateControls(tagStruct, tagOffset, entry.Value.B, loadingTag, parentpanel);
+				readTagsAndCreateControls(tagStruct, tagOffset, entry.Value.B, loadingTag, parentpanel, abso_whatever_it_was);
 			}
 		}
 
@@ -367,16 +367,95 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 		}
 
 		// had to adapt this to bealbe to read tagblocks and forgot to allow it to iterate through them *sigh* good enough for now
-		private void readTagsAndCreateControls(TagStruct tagStruct, long startingTagOffset, Dictionary<long, TagLayouts.C> tagDefinitions, long address, StackPanel parentpanel)
+		// second time this happened, i wish i had more time in a day to get this all done
+		private void readTagsAndCreateControls(TagStruct tagStruct, long startingTagOffset, Dictionary<long, TagLayouts.C> tagDefinitions, long address, StackPanel parentpanel, string absolute_address_chain)
 		{
+			// im hoping no one was using 'startingTagOffset' for anything spefic // repurposed
 			KeyValuePair<long, TagLayouts.C> prevEntry;
 			foreach (KeyValuePair<long, TagLayouts.C> entry in tagDefinitions)
 			{
 				entry.Value.MemoryAddress = address + entry.Key;
-				entry.Value.AbsoluteTagOffset = startingTagOffset + entry.Key;
+				entry.Value.AbsoluteTagOffset = absolute_address_chain +"," +(entry.Key + startingTagOffset);
 
 				switch (entry.Value.T)
 				{
+					case "Comment":
+						CommentBlock? vb0 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						parentpanel.Children.Add(vb0);
+						vb0.comment.Text = entry.Value.N;
+						break;
+					case "EnumGroup":
+						// make sure we got a enumgroup def
+						if (!(entry.Value is TagLayouts.EnumGroup))
+						{
+							continue;
+						}
+						TagLayouts.EnumGroup? fg3 = entry.Value as TagLayouts.EnumGroup;
+						EnumBlock eb1 = new EnumBlock() { HorizontalAlignment = HorizontalAlignment.Left };
+
+						foreach (KeyValuePair<int, string> gvsdahb in fg3.STR)
+						{
+							ComboBoxItem cbi = new() { Content=gvsdahb.Value };
+							eb1.enums.Items.Add(cbi);
+						}
+
+						if (fg3.A == 1)
+						{
+							int test_this = _m.ReadByte((address + entry.Key).ToString("X"));
+							eb1.enums.SelectedIndex = test_this;
+							eb1.ValueDefinition = new TagEditorDefinition()
+							{
+								MemoryType = "Byte",
+								TagDef = entry.Value,
+								TagStruct = tagStruct,
+								OffsetOverride = entry.Value.AbsoluteTagOffset
+							};
+						}
+						else if (fg3.A == 2)
+						{
+							int test_this = _m.Read2Byte((address + entry.Key).ToString("X"));
+							eb1.enums.SelectedIndex = test_this;
+							eb1.ValueDefinition = new TagEditorDefinition()
+							{
+								MemoryType = "2Byte",
+								TagDef = entry.Value,
+								TagStruct = tagStruct,
+								OffsetOverride = entry.Value.AbsoluteTagOffset
+							};
+						}
+						else if (fg3.A == 4)
+						{
+							int test_this = _m.ReadInt((address + entry.Key).ToString("X"));
+							eb1.enums.SelectedIndex = test_this;
+							eb1.ValueDefinition = new TagEditorDefinition()
+							{
+								MemoryType = "4Byte",
+								TagDef = entry.Value,
+								TagStruct = tagStruct,
+								OffsetOverride = entry.Value.AbsoluteTagOffset
+							};
+						}
+						else
+						{
+							string put_breakpoint_here;
+							eb1.ValueDefinition = new TagEditorDefinition()
+							{
+								MemoryType = "Enums",
+								TagDef = entry.Value,
+								TagStruct = tagStruct,
+								OffsetOverride = entry.Value.AbsoluteTagOffset
+							};
+						}
+
+						// add appropriate values to combobox
+						// read selected
+
+
+
+						parentpanel.Children.Add(eb1);
+						eb1.value_name.Text = fg3.N;
+						eb1.main = _mainWindow;
+						break;
 					case "4Byte":
 						TagValueBlock? vb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
 						vb1.value_type.Text = "4 Byte";
@@ -386,10 +465,10 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						//vb1.value.Tag = address + entry.Key + ":4Byte";
 						vb1.value.Tag = new TagEditorDefinition()
 						{
-							MemoryAddress = address + entry.Key,
 							MemoryType = "4Byte",
 							TagDef = entry.Value,
-							TagStruct = tagStruct
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
 						};
 
 						vb1.value.TextChanged += value_TextChanged;
@@ -404,10 +483,10 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						vb6.value.Tag = new TagEditorDefinition()
 						{
-							MemoryAddress = address + entry.Key,
 							MemoryType = "2Byte",
 							TagDef = entry.Value,
-							TagStruct = tagStruct
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
 						};
 
 						vb6.value.TextChanged += value_TextChanged;
@@ -423,10 +502,10 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						vb19.value.Tag = new TagEditorDefinition()
 						{
-							MemoryAddress = address + entry.Key,
 							MemoryType = "Byte",
 							TagDef = entry.Value,
-							TagStruct = tagStruct
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
 						};
 
 						vb19.value.TextChanged += value_TextChanged;
@@ -442,10 +521,10 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						vb2.value.Tag = new TagEditorDefinition()
 						{
-							MemoryAddress = address + entry.Key,
 							MemoryType = "Float",
 							TagDef = entry.Value,
-							TagStruct = tagStruct
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
 						};
 
 						vb2.value.TextChanged += value_TextChanged;
@@ -477,15 +556,16 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							parentpanel.Children.Add(tfb1);
 
 							//tfb1.taggroup.Tag = (address + entry.Key + 20);
+
+
 							tfb1.taggroup.Tag = new TED_TagRefGroup()
 							{
-								MemoryAddress = (address + entry.Key + 20),
 								MemoryType = "TagrefGroup",
 								TagId = tagId,
 								DatNum = datNum,
 								TagDef = entry.Value,
 								TagStruct = tagStruct,
-								OffsetOverride = entry.Value.AbsoluteTagOffset + 20,
+								OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 20),
 
 								TagGroup = tagGroup
 							};
@@ -494,13 +574,12 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							//tfb1.tag_button.Tag = (address + entry.Key + 24) + ":" + testGroup;
 							tfb1.tag_button.Tag = new TED_TagRefGroup()
 							{
-								MemoryAddress = (address + entry.Key + 24),
 								MemoryType = tagGroup,
 								TagId = tagId,
 								DatNum = datNum,
 								TagDef = entry.Value,
 								TagStruct = tagStruct,
-								OffsetOverride = entry.Value.AbsoluteTagOffset + 24,
+								OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 24),
 
 								TagGroup = tagGroup
 							};
@@ -529,10 +608,10 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						vb3.value.Tag = new TagEditorDefinition()
 						{
-							MemoryAddress = address + entry.Key,
 							MemoryType = "Pointer",
 							TagDef = entry.Value,
-							TagStruct = tagStruct
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
 						};
 
 						vb3.value.TextChanged += value_TextChanged;
@@ -541,8 +620,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						break;
 
-					case "Tagblock": // i dont know how long this has been an issue, but you couldn't poke tagblock counts
-						TagBlock? tb1 = new(this, startingTagOffset + entry.Key, tagStruct)
+					case "Tagblock": 
+						TagBlock? tb1 = new(this, tagStruct)
 						{
 							HorizontalAlignment = HorizontalAlignment.Left
 						};
@@ -573,20 +652,21 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						//tb1.tagblock_address.Tag = (address + entry.Key) + ":Pointer";
 						tb1.tagblock_address.Tag = new TagEditorDefinition()
 						{
-							MemoryAddress = address + entry.Key,
 							MemoryType = "Pointer",
 							TagDef = entry.Value,
-							TagStruct = tagStruct
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
 						};
 						tb1.tagblock_address.TextChanged += value_TextChanged;
 
 						//tb1.tagblock_count.Tag = (address + entry.Key + 16) + ":4Byte";
 						tb1.tagblock_count.Tag = new TagEditorDefinition()
 						{
-							MemoryAddress = address + entry.Key + 16,
 							MemoryType = "4Byte",
 							TagDef = entry.Value,
-							TagStruct = tagStruct
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 16),
+
 						};
 						tb1.tagblock_count.TextChanged += value_TextChanged;
 
@@ -628,10 +708,10 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						//vb4.value.Tag = address + entry.Key + ":String";
 						vb4.value.Tag = new TagEditorDefinition()
 						{
-							MemoryAddress = address + entry.Key,
 							MemoryType = "String",
 							TagDef = entry.Value,
-							TagStruct = tagStruct
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
 						};
 						vb4.value.TextChanged += value_TextChanged;
 
@@ -646,9 +726,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							ValueDefinition = new TagEditorDefinition()
 							{
 								MemoryType = "Flags",
-								MemoryAddress = (address + entry.Key),
 								TagDef = entry.Value,
-								TagStruct = tagStruct
+								TagStruct = tagStruct,
+								OffsetOverride = entry.Value.AbsoluteTagOffset
 							}
 						};
 						byte flags_value = (byte) _m.ReadByte((address + entry.Key).ToString("X"));
@@ -680,9 +760,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tfg.ValueDefinition = new TagEditorDefinition()
 						{
 							MemoryType = "Flags",
-							MemoryAddress = (address + entry.Key),
 							TagDef = entry.Value,
-							TagStruct = tagStruct
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
 						};
 						tfg.M = _mainWindow.M;
 						tfg.mainWindow = _mainWindow;
@@ -700,10 +780,10 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						//vb4.value.Tag = address + entry.Key + ":String";
 						vb5.value.Tag = new TagEditorDefinition()
 						{
-							MemoryAddress = address + entry.Key,
 							MemoryType = "mmr3Hash",
 							TagDef = entry.Value,
-							TagStruct = tagStruct
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
 						};
 						vb5.value.TextChanged += value_TextChanged;
 
@@ -716,6 +796,14 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			}
 		}
 
+		public static string SUSSY_BALLS(string input, long add_to)
+		{
+			//SUSSY BALLS
+			string[] last_offset = input.Split(",");
+			string joined = string.Join(",", last_offset.SkipLast(1));
+			long poop = long.Parse(last_offset.Last());
+			return joined +","+ (poop += add_to).ToString();
+		}
 
 
 		private void tagfilter_text_Changed(object sender, TextChangedEventArgs e)

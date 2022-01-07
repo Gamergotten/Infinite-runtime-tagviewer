@@ -18,7 +18,10 @@ using InfiniteRuntimeTagViewer.Halo.TagObjects;
 using System.Windows.Media;
 using System.Timers;
 using System.Threading.Tasks;
+using System.Threading;
+using System.Windows.Forms;
 using System.Reflection;
+using System.Windows.Threading;
 
 namespace InfiniteRuntimeTagViewer
 {
@@ -42,64 +45,92 @@ namespace InfiniteRuntimeTagViewer
 		// setting a taggroup to null actually cause problems in mem
 		// refer to the 'value' of the queued poke
 		//
-
-		private readonly Timer _t;
+		public delegate void HookAndLoadDelagate();
+		public delegate void LoadTagsDelagate();
+		private readonly System.Timers.Timer _t;
 		public Mem M = new();
 
 		public MainWindow()
 		{
 			InitializeComponent();
-			GetAllMethods();
+			//GetAllMethods();
 			StateChanged += MainWindowStateChangeRaised;
-			_t = new Timer();
+			_t = new System.Timers.Timer();
 			_t.Elapsed += OnTimedEvent;
 			_t.Interval = 2000;
 			_t.AutoReset = true;
 			inhale_tagnames();
-
+			SettingsControl settings = new();
+			settings.SetGeneralSettingsFromConfig();
+			settings.Close();
 		}
+
+		private async Task HookProcessAsync()
+		{
+			bool reset = processSelector.hookProcess(M);
+			if (M.pHandle == IntPtr.Zero || processSelector.selected == false || loadedTags == false)
+			{
+				// Could not find the process
+				hook_text.Text = "Cant find HaloInfinite.exe";
+				hooked = false;
+				loadedTags = false;
+				TagsTree.Items.Clear();
+			}
+
+			if (!hooked || reset)
+			{
+				// Get the base address
+				BaseAddress = M.ReadLong("HaloInfinite.exe+0x4879758");
+				string validtest = M.ReadString(BaseAddress.ToString("X"));
+				System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite.exe+0x3D13E38"));
+				if (validtest == "tag instances")
+				{
+					hook_text.Text = "Process Hooked: " + M.theProc.Id;
+					hooked = true;
+				}
+				else
+				{
+					hook_text.Text = "Offset failed, scanning...";
+					await ScanMem();
+				}
+			}
+		}
+
+		public void HookAndLoad()
+		{
+			_ = HookProcessAsync();
+			if (BaseAddress != -1 )
+			{
+				Dispatcher.BeginInvoke(new Action(async () =>
+				{
+					await LoadTagsMem();
+				}), DispatcherPriority.SystemIdle);
+				
+				if (hooked == true)
+				{
+					Searchbox_TextChanged(null, null);
+
+					System.Diagnostics.Debugger.Log(0, "DBGTIMING", "Done loading tags");
+
+				}
+			}
+		}
+
 
 		public bool loadedTags = false;
 		public bool hooked = false;
 		private void OnTimedEvent(object source, ElapsedEventArgs e)
 		{
-			Dispatcher.Invoke(new Action(async () =>
+			Dispatcher.Invoke(new Action(() =>
 			{
-				//hook_text.Text = "Opening process...";
-				processSelector.hookProcess(M);
-				if (M.pHandle == IntPtr.Zero || processSelector.selected == false || loadedTags == false)
+				_ = HookProcessAsync();
+				if (CbxAutoLoadTags.IsChecked && !loadedTags)
 				{
-					// Could not find the process
-					hook_text.Text = "Cant find HaloInfinite.exe";
-					hooked = false;
-					loadedTags = false;
+					_ = LoadTagsMem();
 				}
-
-				if (hooked == false)
+				if (CbxAutoPokeChanges.IsChecked)
 				{
-					// Get the base address
-					await ScanMem();
-				}
-				if (BaseAddress != -1 && loadedTags == false)
-				{
-					LoadTagsMem();
-					if (hooked == true)
-					{
-
-
-						Loadtags();
-
-						Searchbox_TextChanged(null, null);
-
-						System.Diagnostics.Debugger.Log(0, "DBGTIMING", "Done loading tags");
-						if (TagsTree.Items.Count > 0)
-						{
-							loadedTags = true;
-						}
-
-						
-
-					}
+					PokeChanges();
 				}
 			}));
 		}
@@ -145,7 +176,7 @@ namespace InfiniteRuntimeTagViewer
 
 		private void CheckBoxProcessCheck(object sender, RoutedEventArgs e)
 		{
-			if (CbxSearchProcess.IsChecked != null && CbxSearchProcess.IsChecked == true)
+			if (CbxSearchProcess.IsChecked == true)
 			{
 				_t.Enabled = true;
 			}
@@ -157,89 +188,13 @@ namespace InfiniteRuntimeTagViewer
 		public Dictionary<string, TagStruct> TagsList { get; set; } = new(); // and now we can convert it back because we just sort it elsewhere
 		public SortedDictionary<string, GroupTagStruct> TagGroups { get; set; } = new();
 
-		public async Task ArrayOfByteScanAsync()
-		{
-			try
-			{
-				long? aobScan = (await M.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
-					.First(); // "tag instances"
-
-				// Failed to find base tag address
-				if (aobScan == null || aobScan == 0)
-				{
-					BaseAddress = -1;
-					loadedTags = false;
-					hook_text.Text = "Failed to locate base tag address";
-				}
-				else
-				{
-					BaseAddress = aobScan.Value;
-					hook_text.Text = "Process Hooked: " + M.theProc.Id + " (AOB)";
-					hooked = true;
-				}
-			}
-			catch (Exception)
-			{
-				hook_text.Text = "Cant find HaloInfinite.exe";
-			}
-		}
-
 		// load tags from Mem
-		private async void BtnLoadTags_Click(object sender, RoutedEventArgs e)
+		private void BtnLoadTags_Click(object sender, RoutedEventArgs e)
 		{
-			//hook_text.Text = "Opening process...";
-		    bool reset = processSelector.hookProcess(M); 
-			//System.Diagnostics.Debug.WriteLine(processSelector.selected);
-			if (M.pHandle == IntPtr.Zero || processSelector.selected == false || loadedTags == false)
-			{
-				// Could not find the process
-				hook_text.Text = "Cant find HaloInfinite.exe";
-				hooked = false;
-				loadedTags = false;
-				TagsTree.Items.Clear();
-				//return;
-			}
-
-			if (hooked == false || reset)
-			{
-				// Get the base address
-				BaseAddress = M.ReadLong("HaloInfinite.exe+0x4879758");
-				string validtest = M.ReadString(BaseAddress.ToString("X"));
-				System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite.exe+0x3D13E38"));
-				if (validtest == "tag instances")
-				{
-					hook_text.Text = "Process Hooked: " + M.theProc.Id;
-					hooked = true;
-				}
-				else
-				{
-					hook_text.Text = "Offset failed, scanning...";
-					await ScanMem();
-				}
-			}
-
-			if (BaseAddress != -1)
-			{
-				LoadTagsMem();
-				if (hooked == true) // apparently we dont hook if we *have* the address :frown //This is to load the tags, we only load the tags if we are already hooked. // i put that comment when i was fixing it ya goober
-				{
-
-					Loadtags();
-
-					Searchbox_TextChanged(null, null);
-
-					System.Diagnostics.Debugger.Log(0, "DBGTIMING", "Done loading tags");
-					if (TagsTree.Items.Count > 0)
-					{
-						loadedTags = true;
-					}
-
-				}
-			}
-
+			HookAndLoad();
 		}
 
-		public void LoadTagsMem()
+		public async Task LoadTagsMem()
 		{
 			if (TagCount != -1)
 			{
@@ -247,9 +202,6 @@ namespace InfiniteRuntimeTagViewer
 				TagGroups.Clear();
 				TagsList.Clear();
 			}
-
-			TagsTree.Items.Clear();
-
 			TagCount = M.ReadInt((BaseAddress + 0x6C).ToString("X"));
 			long tagsStart = M.ReadLong((BaseAddress + 0x78).ToString("X"));
 
@@ -292,6 +244,7 @@ namespace InfiniteRuntimeTagViewer
 					TagsList.Add(currentTag.ObjectId, currentTag);
 				}
 			}
+			await Loadtags();
 		}
 		public string? read_tag_group(long tagGroupAddress)
 		{
@@ -332,11 +285,16 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
-		public void Loadtags()
+		public async Task Loadtags()
 		{
+			TagsTree.Items.Clear();
 			// TagsTree
+			loadedTags = true;
 			for (int i = 0; i < TagGroups.Count; i++)
 			{
+				int tagsPercent = (int) (i / (double) TagGroups.Count * 100);
+				hook_text.Text = "Loading Tags..." + tagsPercent + "%";
+				await Task.Delay(1);
 				GroupTagStruct displayGroup = TagGroups.ElementAt(i).Value;
 
 				TreeViewItem sortheader = new()
@@ -352,7 +310,7 @@ namespace InfiniteRuntimeTagViewer
 				TagGroups[TagGroups.ElementAt(i).Key] = displayGroup;
 			}
 			// var sortedList = TagsList.OrderBy(x => x.TagFullName).ToList();
-
+			hook_text.Text = "Loaded Tags";
 			foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList.OrderBy(key => key.Value.TagFullName))
 			{
 				TreeViewItem t = new();
@@ -370,6 +328,14 @@ namespace InfiniteRuntimeTagViewer
 
 				dictTagGroup.TagCategory.Items.Add(t);
 			}
+			if (TagsTree.Items.Count < 1)
+			{
+				loadedTags = false;
+			}
+			//had to do this cause for whatever reason the multithreading prevented it from actually filtering the tags
+			cbxFilterOnlyMapped.IsChecked = false;
+			cbxFilterOnlyMapped.IsChecked = true;
+
 		}
 
 		public Dictionary<string, string> InhaledTagnames = new();
@@ -469,71 +435,209 @@ namespace InfiniteRuntimeTagViewer
 		}
 
 		// list of changes to ammend to the memory when we phit the poke button
-		public Dictionary<long, KeyValuePair<string, string>> Pokelist = new();
+		// i think it goes: address, type, value
+		public Dictionary<string, KeyValuePair<string, string>> Pokelist = new();
 
 		// to keep track of the UI elements we're gonna use a dictionary, will probably be better
-		public Dictionary<long, TagChangesBlock> UIpokelist = new();
+		public Dictionary<string, TagChangesBlock> UIpokelist = new();
 
 		// type (TagrefGroup, TagrefTag)
 		// address,
 		// WARNING: Please note if something calls this function it wont be replicated
 		// in the future when saving or netcode is added!!!
-		public void AddPokeChange(long offset, string type, string value)
+		//public void AddPokeChange(string offset, string type, string value)
+		//{
+
+
+		//	// hmm we need to change this so we either update or add a new UI element
+		//	Pokelist[offset] = new KeyValuePair<string, string>(type, value);
+
+		//	// there we go, now we aren't touching the pokelist code
+		//	if (UIpokelist.ContainsKey(offset))
+		//	{
+		//		TagChangesBlock updateElement = UIpokelist[offset];
+		//		updateElement.address.Text = offset;
+		//		updateElement.type.Text = type;
+		//		updateElement.value.Text = value;
+		//	}
+		//	else
+		//	{
+		//		TagChangesBlock newBlock = new() {
+		//			address = { Text = offset },
+		//			type = { Text = type },
+		//			value = { Text = value },
+		//		};
+
+		//		changes_panel.Children.Add(newBlock);
+		//		UIpokelist.Add(offset, newBlock);
+		//	}
+
+		//	change_text.Text = Pokelist.Count + " changes queued";
+		//}
+
+		private void Save_pokes(object sender, RoutedEventArgs e)
 		{
-
-
-			// hmm we need to change this so we either update or add a new UI element
-			Pokelist[offset] = new KeyValuePair<string, string>(type, value);
-
-			// there we go, now we aren't touching the pokelist code
-			if (UIpokelist.ContainsKey(offset))
+			if (loadedTags)
 			{
-				TagChangesBlock updateElement = UIpokelist[offset];
-				updateElement.address.Text = "0x" + offset.ToString("X");
-				updateElement.type.Text = type;
-				updateElement.value.Text = value;
+				if (Pokelist.Count > 0)
+				{
+					var sfd = new Microsoft.Win32.SaveFileDialog
+					{
+						Filter = "IRTV Files (*.irtv)|*.irtv|All files (*.*)|*.*",
+						// Set other options depending on your needs ...
+					};
+					if (sfd.ShowDialog() == true)
+					{
+						string filename = sfd.FileName;
+						// save the file
+						//File.WriteAllText(filename, contents);
+
+						//KeyValuePair<string, KeyValuePair<string, string>>
+						using (StreamWriter outputFile = new StreamWriter(filename))
+						{
+							foreach (var k in Pokelist)
+							{
+								if (k.Value.Key != "TagrefTag")
+								{
+									outputFile.WriteLine(k.Key + ";" + k.Value.Key + ";" + k.Value.Value);
+								}
+								else
+								{
+									outputFile.WriteLine(k.Key + ";" + k.Value.Key + ";" + get_tagID_by_datnum(k.Value.Value));
+
+								}
+							}
+						}
+						poke_text.Text = Pokelist.Count + " Pokes Saved!";
+					}
+
+				}
+				else
+				{
+					poke_text.Text = "no pokes to save";
+				}
 			}
 			else
 			{
-				TagChangesBlock newBlock = new() {
-					address = { Text = "0x" + offset.ToString("X") },
-					type = { Text = type },
-					value = { Text = value },
-				};
-
-				changes_panel.Children.Add(newBlock);
-				UIpokelist.Add(offset, newBlock);
+				poke_text.Text = "You MUST 'load' first";
 			}
 
-			change_text.Text = Pokelist.Count + " changes queued";
 		}
+
+		private void Open_pokes(object sender, RoutedEventArgs e)
+		{
+			if (!loadedTags)
+			{
+				HookAndLoad();
+			}
+				// Create OpenFileDialog 
+				Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+
+				// Set filter for file extension and default file extension 
+				dlg.DefaultExt = ".irtv";
+				dlg.Filter = "IRTV Files (*.irtv)|*.irtv";
+
+			// Display OpenFileDialog by calling ShowDialog method 
+			bool? result = dlg.ShowDialog();
+
+				// Get the selected file name and display in a TextBox 
+				if (result == true)
+				{
+					int prev = 0;
+					int fails = 0;
+					// Open document 
+					string filename = dlg.FileName;
+					using (StreamReader inputFile = new StreamReader(filename))
+					{
+						string line;
+						while ((line = inputFile.ReadLine()) != null)
+						{
+							string[] parts = line.Split(";");
+							if (parts.Length == 3)
+							{
+								prev++;
+								if (parts[1] != "TagrefTag")
+								{
+									AddPokeChange(new TagEditorDefinition { OffsetOverride = parts[0], MemoryType = parts[1], }, parts[2]);
+								}
+								else
+								{
+									if (TagsList.Keys.Contains(parts[2]))
+									{
+
+										AddPokeChange(new TagEditorDefinition { OffsetOverride = parts[0], MemoryType = parts[1], }, TagsList[parts[2]].Datnum);
+									}
+									else
+									{
+										fails++;
+										prev--;
+									}
+								}
+
+							}
+						}
+					}
+					if (fails < 1)
+					{
+						poke_text.Text = prev + " Loaded!";
+					}
+					else
+					{
+						poke_text.Text = prev + " Loaded, " + fails + " Failed";
+					}
+				}
+		}
+
+		//var lines = File.ReadLines(filename);
+		//              foreach (var line in lines)
+		//              {
+		//                  string[] parts = line.Split(":");
+
+		//Hashedstrings[parts[1]] = parts[0];
+		//              }
 
 		public void AddPokeChange(TagEditorDefinition def, string value)
 		{
 			// Hmm we need to change this so we either update or add a new UI element
-			Pokelist[def.MemoryAddress] = new KeyValuePair<string, string>(def.MemoryType, value);
+
+			//used things
+			// offset override
+			// memory type
+			// value
+			// tagname
+			Pokelist[def.OffsetOverride] = new KeyValuePair<string, string>(def.MemoryType, value);
 
 			// there we go, now we aren't touching the pokelist code
-			if (UIpokelist.ContainsKey(def.MemoryAddress))
+			if (UIpokelist.ContainsKey(def.OffsetOverride))
 			{
-				TagChangesBlock updateElement = UIpokelist[def.MemoryAddress];
-				updateElement.address.Text = "0x" + def.MemoryAddress.ToString("X");
+				TagChangesBlock updateElement = UIpokelist[def.OffsetOverride];
+				updateElement.address.Text = def.OffsetOverride;
+				updateElement.sig_address_path = def.OffsetOverride;
 				updateElement.type.Text = def.MemoryType;
 				updateElement.value.Text = value;
-				updateElement.tagSource.Text = def.TagStruct.TagFile + " + " + def.GetTagOffset();
+				//updateElement.tagSource.Text = def.TagStruct.TagFile + " + " + def.GetTagOffset();
+				string dont_Be_null = convert_ID_to_tag_name(def.OffsetOverride.Split(":").FirstOrDefault());
+				updateElement.tagSource.Text = dont_Be_null;
 			}
 			else
 			{
 				TagChangesBlock newBlock = new()
 				{
-					address = { Text = "0x" + def.MemoryAddress.ToString("X") },
+					address = { Text = def.OffsetOverride },
 					type = { Text = def.MemoryType },
 					value = { Text = value },
-					tagSource = { Text = def.TagStruct.TagFile + " + " + def.GetTagOffset() }
-				};
+					// uncomment this at your own risk, it would probably take
+					// an extra step or two to get this working again 
+					// i don't save the tag name so it has a null reference
+					//tagSource = { Text = def.TagStruct.TagFile + " + " + def.GetTagOffset() } 
 
+				};
+				string dont_Be_null = convert_ID_to_tag_name(def.OffsetOverride.Split(":").FirstOrDefault());
+				newBlock.tagSource.Text = dont_Be_null;
+				newBlock.sig_address_path = def.OffsetOverride;
+				newBlock.main = this;
 				changes_panel.Children.Add(newBlock);
-				UIpokelist.Add(def.MemoryAddress, newBlock);
+				UIpokelist.Add(def.OffsetOverride, newBlock);
 			}
 
 			change_text.Text = Pokelist.Count + " changes queued";
@@ -553,7 +657,8 @@ namespace InfiniteRuntimeTagViewer
 
 			return "Tag not present(" + datnum + ")";
 		}
-
+		// wtf is this one for
+		// WHY ARE THEY BOTH USED HAHAHAHA
 		public string get_tagID_by_datnum(string datnum)
 		{
 			//tag_struct t in Tags_List
@@ -567,67 +672,280 @@ namespace InfiniteRuntimeTagViewer
 
 			return "wtf does this even do";
 		}
+		
+		public void PokeChanges()
+		{
+			int fails = 0;
+			int pokes = 0;
+			foreach (KeyValuePair<string, KeyValuePair<string, string>> pair in Pokelist)
+			{
+				//pokesingle(pair.Key, pair.Value.Key, pair.Value.Value);
+				pokes++;
+
+				string do_the_thing = SUSSY_BALLS_2(pair.Key);
+				if (do_the_thing != "")
+				{
+					if (!pokesingle(do_the_thing, pair.Value.Key, pair.Value.Value))
+					{
+						fails++;
+						pokes--;
+					}
+				}
+				else
+				{
+					fails++;
+					pokes--;
+				}
+			}
+			if (fails < 1)
+			{
+				poke_text.Text = pokes + " changes poked!";
+
+			}
+			else
+			{
+				poke_text.Text = pokes + " poked, " + fails + " failed";
+
+			}
+
+			change_text.Text = Pokelist.Count + " changes queued";
+		}
 
 
 		// POKE OUR CHANGES LETSGOOOO
 		private void BtnPokeChanges_Click(object sender, RoutedEventArgs e)
 		{
-			foreach (KeyValuePair<long, KeyValuePair<string, string>> pair in Pokelist)
+			PokeChanges();
+		}
+		public void tagchangesblock_fetchdata_by_ID(TagChangesBlock target)
+		{
+			KeyValuePair<string, string> pair = Pokelist[target.sig_address_path];
+			//pokesingle(target.sig_address_ID, pair.Key, pair.Value);
+			//SUSSY_BALLS_2
+			string do_the_thing = SUSSY_BALLS_2(target.sig_address_path);
+			if (do_the_thing != "")
 			{
-				long address = pair.Key;
-				string type = pair.Value.Key;
-				string value = pair.Value.Value;
+				if(!pokesingle(do_the_thing, pair.Key, pair.Value))
+				{
+					poke_text.Text = "poke error";
+				}
+				else
+				{
+					poke_text.Text = 1 + " change poked";
+				}
+			}
+			else
+			{
+				poke_text.Text = "poke error";
+			}
+		}
 
+		public bool pokesingle(string address, string type, string value)
+		{
+			if (value.Contains("`"))
+			{
+				string[] hooked_string = value.Split('`');
+				if (hooked_string.Length == 2)
+				{
+					string do_the_thing = SUSSY_BALLS_2(hooked_string[1]);
+					string read = readmem_for_1_very_specific_task(do_the_thing, type);
+					if (read != "")
+					{
+						pokesingle(address, type, read);
+					}
+					else
+					{
+						return false;
+					}
+				}
+				else
+				{
+					return false;
+				}
+				return true;
+
+			}
+			else
+			{
 				switch (type)
 				{
 					case "4Byte":
-						M.WriteMemory(address.ToString("X"), "int", value);
-						break;
-					case "2Byte":
-						M.WriteMemory(address.ToString("X"), "2bytes", value);
-						break;
+						try { M.WriteMemory(address, "int", value); }
+						catch { return false; }
+						return true;
+					case "2Byte": // needs to cap value
+						try { M.WriteMemory(address, "2bytes", value); }
+						catch { return false; }
+						return true;
 					case "Byte":
-						M.WriteMemory(address.ToString("X"), "byte", value);
-						break;
+						try { M.WriteMemory(address, "byte", int.Parse(value).ToString("X")); }
+						catch { return false; }
+						return true;
 					case "Flags":
-						M.WriteMemory(address.ToString("X"), "byte", Convert.ToByte(value).ToString("X"));
-						break;
+						try { M.WriteMemory(address, "byte", Convert.ToByte(value).ToString("X")); }
+						catch { return false; }
+						return true;
 					case "Float":
-						M.WriteMemory(address.ToString("X"), "float", value);
-						break;
-
+						try { M.WriteMemory(address, "float", value); }
+						catch { return false; }
+						return true;
 					case "Pointer":
-						string? willThisWork = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
-						M.WriteMemory(address.ToString("X"), "long", willThisWork); // apparently it does
-						break;
-
+						try
+						{
+							string? willThisWork = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
+							M.WriteMemory(address, "long", willThisWork); // apparently it does
+						}
+						catch 
+						{ 
+							return false; 
+						}
+						return true;
 					case "String":
-						M.WriteMemory(address.ToString("X"), "string", value + "\0");
-						break;
-
+						try { M.WriteMemory(address, "string", value + "\0"); }
+						catch { return false; }
+						return true;
 					case "TagrefGroup":
-						M.WriteMemory(address.ToString("X"), "string", ReverseString(value));
-						break;
-
+						try { M.WriteMemory(address, "string", ReverseString(value)); }
+						catch { return false; }
+						return true;
 					case "TagrefTag":
-						string temp = Regex.Replace(value, @"(.{2})", "$1 ");
-						temp = temp.TrimEnd();
-						M.WriteMemory(address.ToString("X"), "bytes", temp);
-						break;
-
+						try
+						{
+							string temp = Regex.Replace(value, @"(.{2})", "$1 ");
+							temp = temp.TrimEnd();
+							M.WriteMemory(address, "bytes", temp);
+						}
+						catch { return false; }
+						return true;
 					case "mmr3Hash":
-						string temp2 = Regex.Replace(value, @"(.{2})", "$1 ");
-						temp = temp2.TrimEnd();
-						M.WriteMemory(address.ToString("X"), "bytes", temp);
-						break;
+						try
+						{
+							string temp2 = Regex.Replace(value, @"(.{2})", "$1 ");
+							temp2 = temp2.TrimEnd();
+							M.WriteMemory(address, "bytes", temp2);
+						}
+						catch 
+						{ 
+							return false; }
+						return true;
 				}
 			}
+			return false;
+		}
 
-			poke_text.Text = Pokelist.Count + " changes poked";
+		public string readmem_for_1_very_specific_task(string address, string type)
+		{
+			string output = "";
+			switch (type)
+			{
+				case "4Byte": 
+					try 
+					{
+						output = M.ReadInt(address).ToString(); // (+entry.Key?) lmao, no wonder why it wasn't working
+					}
+					catch { }
+					return output;
+				case "2Byte": // needs to cap value
+					try
+					{
+						output = M.Read2Byte(address).ToString();
+					}
+					catch { }
+					return output;
+				case "Byte":
+					try 
+					{
+						output = M.ReadByte(address).ToString();
+					}
+					catch { }
+					return output;
+				case "Flags":
+					try 
+					{
+						output = M.ReadByte(address).ToString("X");
+					}
+					catch { }
+					return output;
+				case "Float":
+					try 
+					{
+						output = M.ReadFloat(address).ToString();
 
-			changes_panel.Children.Clear();
-			Pokelist.Clear();
-			UIpokelist.Clear();
+					}
+					catch { }
+					return output;
+				case "Pointer":
+					try
+					{
+						output = M.ReadLong(address).ToString();
+					}
+					catch { }
+					return output;
+				case "String":
+					try 
+					{
+						output = M.ReadString(address, "", 100).ToString();
+					}
+					catch { }
+					return output;
+				case "TagrefGroup":
+					try 
+					{
+						output = ReverseString(M.ReadString(address, "", 4));
+					}
+					catch { }
+					return output;
+				case "TagrefTag":
+					try
+					{
+						output = BitConverter.ToString(M.ReadBytes(address, 4)).Replace("-", string.Empty);
+					}
+					catch { }
+					return output;
+				case "mmr3Hash":
+					try
+					{
+						output = BitConverter.ToString(M.ReadBytes(address, 4)).Replace("-", string.Empty);
+					}
+					catch { }
+					return output;
+			}
+			return output;
+		}
+
+		public string SUSSY_BALLS_2(string input)
+		{
+			//TAKE FIRST AND ADD INSTEAD OF LAST
+		 	string[] p = input.Split(":");
+
+			//p[0] = tagID
+			//p[1] = address
+
+			string[] last_offset = p[1].Split(",");
+			
+			for (int i5 = 2; i5 < last_offset.Length; i5++)
+				last_offset[i5] = "0x" + long.Parse(last_offset[i5]).ToString("X");
+
+			string joined = string.Join(",", last_offset.Skip(2));
+			long poop = long.Parse(last_offset.Skip(1).First());
+			var tag_thing = TagsList[p[0]];
+			if(tag_thing !=null)
+			return "0x" + (poop += tag_thing.TagData).ToString("X") + ((joined=="")? "" : "," + joined);
+			return "";
+		}
+		public void Update_poke_value(TagChangesBlock target, string new_value)
+		{
+			KeyValuePair<string, string> pair = Pokelist[target.sig_address_path];
+			Pokelist[target.sig_address_path] = new KeyValuePair<string, string>(pair.Key, new_value);
+			poke_text.Text = "Poke Value Updated";
+
+		}
+
+		public void clearsingle(TagChangesBlock target)
+		{
+			Pokelist.Remove(target.sig_address_path);
+			UIpokelist.Remove(target.sig_address_path);
+			changes_panel.Children.Remove(target);
 			change_text.Text = Pokelist.Count + " changes queued";
 		}
 
@@ -649,7 +967,7 @@ namespace InfiniteRuntimeTagViewer
 
 		private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e)
 		{
-			Button? btn = (Button) sender;
+			System.Windows.Controls.Button? btn = (System.Windows.Controls.Button) sender;
 
 			changes_panel_container.Visibility = changes_panel_container.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
 			btn.Content =
@@ -792,6 +1110,8 @@ namespace InfiniteRuntimeTagViewer
 				}
 			}
 		}
+
+		#region MenuCommands
 		public void ClickExit(object sender, RoutedEventArgs e)
 		{
 			SystemCommands.CloseWindow(this);
@@ -826,62 +1146,67 @@ namespace InfiniteRuntimeTagViewer
 		public void UnloadTags(object sender, RoutedEventArgs e)
 		{
 			TagsTree.Items.Clear();
+			loadedTags = false;
 			//Need to unload memory items somehow here too!
 		}
-		public void GetAllMethods()
-		{
-			Type myType = (typeof(MainWindow));
-			// Get the public methods.
-			MethodInfo[] myArrayMethodInfo = myType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
-			Console.WriteLine("\nThe number of public methods is {0}.", myArrayMethodInfo.Length);
-			// Add all public methods to menu.
-			DisplayMethodInfo(myArrayMethodInfo);
-			// Add all non-public methods to array.
-			MethodInfo[] myArrayMethodInfo1 = myType.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
-			// Add all non-public methods to menu.
-			DisplayMethodInfo(myArrayMethodInfo1);
-		}
+
+		//Commented out because mainly this has no function right now.
+
+		//public void GetAllMethods()
+		//{
+		//	Type myType = (typeof(MainWindow));
+		//	// Get the public methods.
+		//	MethodInfo[] myArrayMethodInfo = myType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+		//	Console.WriteLine("\nThe number of public methods is {0}.", myArrayMethodInfo.Length);
+		//	// Add all public methods to menu.
+		//	DisplayMethodInfo(myArrayMethodInfo);
+		//	// Add all non-public methods to array.
+		//	MethodInfo[] myArrayMethodInfo1 = myType.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+		//	// Add all non-public methods to menu.
+		//	DisplayMethodInfo(myArrayMethodInfo1);
+		//}
 
 
-		public void DisplayMethodInfo(MethodInfo[] myArrayMethodInfo)
-		{
-			// Display information for all methods.
-			for (int i = 0; i < myArrayMethodInfo.Length; i++)
-			{
-				MethodInfo myMethodInfo = (MethodInfo) myArrayMethodInfo[i];
-				//Console.WriteLine("\nThe name of the method is {0}.", myMethodInfo.Name);
-				MenuItem methods = new MenuItem();
-				MenuItem methodToAdd = (MenuItem) DebugMenu.Items[1];
-				methods.Header = myMethodInfo.Name;
-				methods.Click += CallMethod;
-				methodToAdd.Items.Add(methods);
-			}
-		}
+		//public void DisplayMethodInfo(MethodInfo[] myArrayMethodInfo)
+		//{
+		//	// Display information for all methods.
+		//	for (int i = 0; i < myArrayMethodInfo.Length; i++)
+		//	{
+		//		MethodInfo myMethodInfo = (MethodInfo) myArrayMethodInfo[i];
+		//		//Console.WriteLine("\nThe name of the method is {0}.", myMethodInfo.Name);
+		//		MenuItem methods = new MenuItem();
+		//		MenuItem methodToAdd = (MenuItem) DebugMenu.Items[1];
+		//		methods.Header = myMethodInfo.Name;
+		//		methods.Click += CallMethod;
+		//		methodToAdd.Items.Add(methods);
+		//	}
+		//}
 
-		public void CallMethod(object sender, RoutedEventArgs e)
-		{
-			//Code that will call the specified method.
-			MenuItem? MI = sender as MenuItem;
-			if (MI != null)
-			{
-				try
-				{
-					Type mainType = (typeof(MainWindow));
-					string? clickedMethod = MI.Header.ToString();
-					System.Diagnostics.Debug.WriteLine(clickedMethod);
-					MethodInfo? method = mainType.GetMethod(clickedMethod);
-					if (method != null)
-					{
-						int paramCount = method.GetParameters().Length;
-						method.Invoke(this, null);
-					}
-				}
-				catch (Exception)
-				{
-					System.Diagnostics.Debug.WriteLine("Invalid parameter count. Consider calling a method with no parameters.");
-				}
-			}
-		}
+		//public void CallMethod(object sender, RoutedEventArgs e)
+		//{
+		//	//Code that will call the specified method.
+		//	MenuItem? MI = sender as MenuItem;
+		//	if (MI != null)
+		//	{
+		//		try
+		//		{
+		//			Type mainType = (typeof(MainWindow));
+		//			string? clickedMethod = MI.Header.ToString();
+		//			System.Diagnostics.Debug.WriteLine(clickedMethod);
+		//			MethodInfo? method = mainType.GetMethod(clickedMethod);
+		//			if (method != null)
+		//			{
+		//				int paramCount = method.GetParameters().Length;
+		//				method.Invoke(this, null);
+		//			}
+		//		}
+		//		catch (Exception)
+		//		{
+		//			System.Diagnostics.Debug.WriteLine("Invalid parameter count. Consider calling a method with no parameters.");
+		//		}
+		//	}
+		//}
 
+		#endregion
 	}
 }

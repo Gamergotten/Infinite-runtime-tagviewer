@@ -107,8 +107,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 			mainWindow.AddPokeChange(new TagEditorDefinition(ValueDefinition)
 			{
-				MemoryAddress  = startAddress + byteNo,
-				OffsetOverride = ValueDefinition.GetTagOffset() + byteNo
+				OffsetOverride = TagEditorControl.SUSSY_BALLS(ValueDefinition.GetTagOffset(), byteNo)
 			}, output.ToString());
 
             //mainWindow.AddPokeChange(targetAddress, "Flags", output.ToString());

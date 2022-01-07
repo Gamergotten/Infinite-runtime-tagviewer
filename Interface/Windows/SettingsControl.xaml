@@ -65,6 +65,7 @@
             <Setter Property="Foreground" Value="White"/>
         </Style>
 
+
     </Window.Resources>
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="34" />
@@ -180,24 +181,54 @@
                         <StackPanel x:Name="changes_panel" Background="#252526" />
                     </ScrollViewer>
 
-                    <StackPanel x:Name="TextGeneralLayout" Visibility="Hidden">
-                        <TextBlock TextWrapping="Wrap" Text="Text > General Settings" HorizontalAlignment="Center"/>
-                        <TextBlock Text="Text Size" />
-                        <ComboBox Width="120" HorizontalAlignment="Left" SelectedIndex="0" />
+                    <StackPanel x:Name="SettingsTitle">
+                        <TextBlock x:Name="SettingsTitleText" Text="Settings" HorizontalAlignment="Center" />
                     </StackPanel>
+                    
+                    <StackPanel x:Name="TextGeneralLayout" Visibility="Collapsed">
+                        <TextBlock Text="Text Size" Margin="10 20" />
+                        <TextBox x:Name="TextSizeInput" HorizontalAlignment="Left" Width="50" Margin="10 0" />
+                    </StackPanel>
+
+                    <StackPanel x:Name="WindowGeneralLayout" >
+                        
+                    </StackPanel>
+
+                    <StackPanel x:Name="GeneralGenLayout" Margin="10 20" Width="200" HorizontalAlignment="Left" Visibility="Collapsed">
+                        <TextBlock Text="Auto Hook" Width="100" HorizontalAlignment="Left" Margin="5 0" />
+                        <ComboBox x:Name="AutoHookComboBox" SelectedIndex="0" Width="100" HorizontalAlignment="Left" >
+                            <ComboBoxItem Content="Off" />
+                            <ComboBoxItem Content="On" />
+                        </ComboBox>
+                        <TextBlock Text="Auto Load" Width="100" HorizontalAlignment="Left" Margin="5 0" />
+                        <ComboBox x:Name="AutoLoadComboBox" SelectedIndex="0" Width="100" HorizontalAlignment="Left" >
+                            <ComboBoxItem Content="Off" />
+                            <ComboBoxItem Content="On" />
+                        </ComboBox>
+                        <TextBlock Text="Auto Poke" Width="100" HorizontalAlignment="Left" Margin=" 5 0" />
+                        <ComboBox x:Name="AutoPokeComboBox" SelectedIndex="0" Width="100" HorizontalAlignment="Left" >
+                            <ComboBoxItem Content="Off" />
+                            <ComboBoxItem Content="On" />
+                        </ComboBox>
+                        <TextBlock Text="Filter Only Mapped" Width="100" HorizontalAlignment="Left" Margin=" 5 0" />
+                        <ComboBox x:Name="FilterOnlyMappedComboBox" SelectedIndex="1" Width="100" HorizontalAlignment="Left" >
+                            <ComboBoxItem Content="Off" />
+                            <ComboBoxItem Content="On" />
+                        </ComboBox>
+                        <Button x:Name="ApplyGeneralChanges" Width="50" Height="20" HorizontalAlignment="Left" Content="Apply" Margin="0 10" Click="OnApplyChanges_Click" />
+                    </StackPanel>
+
                 </Grid>
 
                 <Grid Grid.Column="0" Margin="0,0,2,0" Background="#252526" Grid.ColumnSpan="2">
                     <TreeView x:Name="SettingsTree" Grid.Row="2">
-                        <TreeViewItem Header="Window">
-                            <TreeViewItem x:Name="WindowGeneral" Header="General" Selected="TreeViewItem_Selected" />
-                            <TreeViewItem x:Name="WindowColors" Header="Colors" Selected="TreeViewItem_Selected" />
-                            <TreeViewItem x:Name="WindowTheme" Header="Theme" Selected="TreeViewItem_Selected" />
+                        <TreeViewItem Header="General" >
+                            <TreeViewItem x:Name="GeneralGen" Header="General" Selected="TreeViewItem_Selected" />
                         </TreeViewItem>
-                        <TreeViewItem x:Name="TextGeneral" Header="Text">
-                            <TreeViewItem Header="General" />
-                            <TreeViewItem Header="Colors" />
-                        </TreeViewItem>
+                        <!--<TreeViewItem Header="Text">
+                            <TreeViewItem x:Name="TextGeneral" Header="General" Selected="TreeViewItem_Selected" />
+                            <TreeViewItem Header="Colors" Selected="TreeViewItem_Selected" />
+                        </TreeViewItem>-->
 
 
                     </TreeView>
