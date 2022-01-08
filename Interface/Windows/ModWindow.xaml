@@ -1,0 +1,174 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InfiniteRuntimeTagViewer.Interface.Windows"
+xmlns:Controls="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls" x:Class="InfiniteRuntimeTagViewer.Interface.Windows.ModWindow"
+mc:Ignorable="d"
+                 Background="#333333"
+                 Title="Settings" Height="650" Width="600" Closed="Window_Closed">
+    <Window.Resources>
+        <TransformGroup x:Key="windowScaleTransform">
+            <ScaleTransform
+                ScaleX="1"
+                ScaleY="1" />
+
+            <!-- <SkewTransform
+                AngleX="30" />
+
+            <RotateTransform Angle="6" /> -->
+        </TransformGroup>
+
+
+        <!--Base style for title bar buttons-->
+        <Style x:Key="CaptionButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="LayoutRoot" Background="Transparent" Width="44" Height="30">
+                            <TextBlock x:Name="txt" Text="{TemplateBinding Content}" FontFamily="Segoe MDL2 Assets" FontSize="10" 
+                                Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                RenderOptions.ClearTypeHint="Auto" TextOptions.TextRenderingMode="Aliased"  TextOptions.TextFormattingMode="Display"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="LayoutRoot" Property="Background" Value="#E5E5E5"/>
+                                <Setter TargetName="txt" Property="Foreground" Value="#000000"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--Minimize-->
+        <Style x:Key="MinimizeButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource CaptionButtonStyle}">
+            <Setter Property="Content" Value="&#xE949;"/>
+        </Style>
+
+        <!--Maximize-->
+        <Style x:Key="MaximizeButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource CaptionButtonStyle}">
+            <Setter Property="Content" Value="&#xE739;"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <!--Restore-->
+        <Style x:Key="RestoreButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource CaptionButtonStyle}">
+            <Setter Property="Content" Value="&#xE923;"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <!--Close-->
+        <Style x:Key="CloseButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource CaptionButtonStyle}">
+            <Setter Property="Content" Value="&#xE106;"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+
+    </Window.Resources>
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="34" />
+    </WindowChrome.WindowChrome>
+
+    <!--Title bar button commands-->
+
+    <Border x:Name="MainWindowBorder" BorderBrush="Transparent" BorderThickness="0" >
+        <Grid x:Name="parentContainer" Background="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="527*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height ="Auto"/>
+                <RowDefinition Height ="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Window chrome-->
+            <Grid Grid.Row="0" Height="30" Background="#252526" Grid.ColumnSpan="3">
+                <TextBlock x:Name="debug_text" Text="Welcome" FontSize="16" Margin="25,5,0,0" />
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <!--Caption buttons-->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                    <Button Style="{StaticResource MinimizeButtonStyle}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Minimize"
+                            Command="{x:Static SystemCommands.MinimizeWindowCommand}" />
+                    <Button x:Name="RestoreButton" Visibility="Collapsed" Style="{StaticResource RestoreButtonStyle}" 
+                            Command="{x:Static SystemCommands.RestoreWindowCommand}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Restore"/>
+                    <Button x:Name="MaximizeButton" Visibility="Visible" Style="{StaticResource MaximizeButtonStyle}" 
+                            Command="{x:Static SystemCommands.MaximizeWindowCommand}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Maximize" />
+                    <Button Style="{StaticResource CloseButtonStyle}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Close"
+                            Command="{x:Static SystemCommands.CloseWindowCommand}"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- App content -->
+            <Grid Grid.Row="1" x:Name="AppArea" LayoutTransform="{StaticResource windowScaleTransform}" Grid.ColumnSpan="3">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="16*"/>
+                    <ColumnDefinition Width="8" />
+                    <ColumnDefinition Width="63*" />
+                </Grid.ColumnDefinitions>
+
+                <GridSplitter Grid.Column="2"
+                    HorizontalAlignment="Stretch"
+                    Background="#555"
+                    ShowsPreview="true" />
+
+                <Grid Grid.Column="3" Background="#252526" Margin="2,0,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Search" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                    <TextBox x:Name="search_filter" Margin="40,0,0,0" TextChanged="search_filter_TextChanged" />
+                    <ScrollViewer Grid.Row="2">
+                        <StackPanel x:Name="mods_panel" >
+
+
+                        </StackPanel>
+                    </ScrollViewer>
+
+
+
+                </Grid>
+
+                <Grid Grid.Column="0" Margin="0,0,2,0" Background="#252526" Grid.ColumnSpan="2">
+                    <!-- i shoulda just used a stack panel lol-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Content="Halocustoms.com for mods" Click="Button_Click_1"/>
+                    <Button Content="import mods" Grid.Row="1" Click="Button_Click_2" />
+                    <Button Content="reload mods" Grid.Row="2" Click="Button_Click"/>
+                    <Button Content="game refresh" Grid.Row="3" Click="Button_Click_3" />
+                    <Button Content="Apply changes" Grid.Row="4" Click="Button_Click_4" />
+                    <Button Content="Clear changes" Grid.Row="5" Click="Button_Click_5"  />
+                    <TextBlock x:Name="test_changes" Text="0 changes queued" Grid.Row="6" Margin="5,0,0,0"/>
+                    
+                    <TextBlock Text="Filters" Grid.Row="7" Margin="5,0,0,0" VerticalAlignment="Bottom"/>
+                    <StackPanel x:Name="filterspanel" Grid.Row="8" Background="#FF191919" Margin="3,3,3,3">
+
+
+                    </StackPanel>
+
+
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

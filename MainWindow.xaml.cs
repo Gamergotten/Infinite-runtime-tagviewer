@@ -41,10 +41,6 @@ namespace InfiniteRuntimeTagViewer
 		//            They smell it like blood in the water.
 		//
 
-		//
-		// setting a taggroup to null actually cause problems in mem
-		// refer to the 'value' of the queued poke
-		//
 		public delegate void HookAndLoadDelagate();
 		public delegate void LoadTagsDelagate();
 		private readonly System.Timers.Timer _t;
@@ -194,6 +190,79 @@ namespace InfiniteRuntimeTagViewer
 			HookAndLoad();
 		}
 
+		// instead of using the other method i made a new one because the last one yucky,
+		public bool SlientHookAndLoad(bool load_tags_too)
+		{
+			_ = HookProcessAsync();
+			if (BaseAddress != -1 && BaseAddress != 0)
+			{
+				if (load_tags_too)
+				{
+					SlientLoadTagsMem();
+
+					if (hooked == true)
+					{
+						Searchbox_TextChanged(null, null);
+					}
+				}
+				return true;
+			}
+			return false;
+		}
+		public void SlientLoadTagsMem()
+		{
+			// silent denotes that we aren't loading anything into the UI // which slices off a significant load time
+			// which we'll be using this mainly for our mod loader because you really dont need to reload the goddamn ui everytime
+			if (TagCount != -1)
+			{
+				TagCount = -1;
+				TagGroups.Clear();
+				TagsList.Clear();
+			}
+			TagCount = M.ReadInt((BaseAddress + 0x6C).ToString("X"));
+			long tagsStart = M.ReadLong((BaseAddress + 0x78).ToString("X"));
+
+			// each tag is 52 bytes long // was it 52 or was it 0x52? whatever
+			// 0x0 datnum 4bytes
+			// 0x4 ObjectID 4bytes
+			// 0x8 Tag_group Pointer 8bytes
+			// 0x10 Tag_data Pointer 8bytes
+			// 0x18 Tag_type_desc Pointer 8bytes
+
+			TagsList = new Dictionary<string, TagStruct>();
+			for (int tagIndex = 0; tagIndex < TagCount; tagIndex++)
+			{
+				TagStruct currentTag = new();
+				long tagAddress = tagsStart + (tagIndex * 52);
+
+				byte[] test1 = M.ReadBytes(tagAddress.ToString("X"), 4);
+				try
+				{
+					currentTag.Datnum = BitConverter.ToString(test1).Replace("-", string.Empty);
+					loadedTags = false;
+				}
+				catch (System.ArgumentNullException)
+				{
+					hooked = false;
+					return;
+				}
+				byte[] test = (M.ReadBytes((tagAddress + 4).ToString("X"), 4));
+
+				// = String.Concat(bytes.Where(c => !Char.IsWhiteSpace(c)));
+				currentTag.ObjectId = BitConverter.ToString(test).Replace("-", string.Empty);
+				currentTag.TagGroup = read_tag_group(M.ReadLong((tagAddress + 0x8).ToString("X")));
+				currentTag.TagData = M.ReadLong((tagAddress + 0x10).ToString("X"));
+				currentTag.TagFullName = convert_ID_to_tag_name(currentTag.ObjectId).Trim();
+				currentTag.TagFile = currentTag.TagFullName.Split('\\').Last().Trim();
+
+				// do the tag definitition
+				if (!TagsList.ContainsKey(currentTag.ObjectId))
+				{
+					TagsList.Add(currentTag.ObjectId, currentTag);
+				}
+			}
+		}
+
 		public async Task LoadTagsMem()
 		{
 			if (TagCount != -1)
@@ -284,7 +353,7 @@ namespace InfiniteRuntimeTagViewer
 				return null;
 			}
 		}
-
+		// as far as im aware this is still running on the main thread :frown:
 		public async Task Loadtags()
 		{
 			TagsTree.Items.Clear();
@@ -294,7 +363,7 @@ namespace InfiniteRuntimeTagViewer
 			{
 				int tagsPercent = (int) (i / (double) TagGroups.Count * 100);
 				hook_text.Text = "Loading Tags..." + tagsPercent + "%";
-				await Task.Delay(1);
+				await Task.Delay(1); // overall this causes aprox 500 ms delay. that is half a second
 				GroupTagStruct displayGroup = TagGroups.ElementAt(i).Value;
 
 				TreeViewItem sortheader = new()
@@ -488,26 +557,32 @@ namespace InfiniteRuntimeTagViewer
 					};
 					if (sfd.ShowDialog() == true)
 					{
+
+
 						string filename = sfd.FileName;
 						// save the file
 						//File.WriteAllText(filename, contents);
 
 						//KeyValuePair<string, KeyValuePair<string, string>>
-						using (StreamWriter outputFile = new StreamWriter(filename))
+						string big_ol_poke_dump = "";
+						foreach (var k in Pokelist)
 						{
-							foreach (var k in Pokelist)
+							if (k.Value.Key != "TagrefTag")
 							{
-								if (k.Value.Key != "TagrefTag")
-								{
-									outputFile.WriteLine(k.Key + ";" + k.Value.Key + ";" + k.Value.Value);
-								}
-								else
-								{
-									outputFile.WriteLine(k.Key + ";" + k.Value.Key + ";" + get_tagID_by_datnum(k.Value.Value));
+								big_ol_poke_dump+=k.Key + ";" + k.Value.Key + ";" + k.Value.Value + "\r\n";
+							}
+							else
+							{
 
-								}
+								big_ol_poke_dump+=k.Key + ";" + k.Value.Key + ";" + get_tagID_by_datnum(k.Value.Value) + "\r\n";
+
 							}
 						}
+						Savewindow sw = new();
+						sw.Show();
+						sw.main = this;
+						sw.ill_take_it_from_here_mainwindow(filename, big_ol_poke_dump);
+
 						poke_text.Text = Pokelist.Count + " Pokes Saved!";
 					}
 
@@ -530,62 +605,82 @@ namespace InfiniteRuntimeTagViewer
 			{
 				HookAndLoad();
 			}
-				// Create OpenFileDialog 
-				Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+			// Create OpenFileDialog 
+			Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
 
-				// Set filter for file extension and default file extension 
-				dlg.DefaultExt = ".irtv";
-				dlg.Filter = "IRTV Files (*.irtv)|*.irtv";
+			// Set filter for file extension and default file extension 
+			dlg.DefaultExt = ".irtv";
+			dlg.Filter = "IRTV Files (*.irtv)|*.irtv";
 
 			// Display OpenFileDialog by calling ShowDialog method 
 			bool? result = dlg.ShowDialog();
 
-				// Get the selected file name and display in a TextBox 
-				if (result == true)
+			// Get the selected file name and display in a TextBox 
+			if (result == true)
+			{
+				recieve_file_to_inhalo_pokes(dlg.FileName);
+				string fullFileName = dlg.FileName;
+				string fileNameWithExt = Path.GetFileName(fullFileName);
+				string target_folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\IRTV";
+				if (!Directory.Exists(target_folder))
+					Directory.CreateDirectory(target_folder);
+				string destPath = Path.Combine(target_folder, fileNameWithExt);
+				if (File.Exists(destPath))
+					File.Delete(destPath);
+				File.Copy(dlg.FileName, destPath);
+			}
+		}
+		public void recieve_file_to_inhalo_pokes(string filename)
+		{
+			int prev = 0;
+			int fails = 0;
+			// Open document 
+			using (StreamReader inputFile = new StreamReader(filename))
+			{
+				string line;
+				while ((line = inputFile.ReadLine()) != null)
 				{
-					int prev = 0;
-					int fails = 0;
-					// Open document 
-					string filename = dlg.FileName;
-					using (StreamReader inputFile = new StreamReader(filename))
+					string[] parts = line.Split(";");
+					if (parts.Length == 3)
 					{
-						string line;
-						while ((line = inputFile.ReadLine()) != null)
+						prev++;
+						if (parts[1] != "TagrefTag")
 						{
-							string[] parts = line.Split(";");
-							if (parts.Length == 3)
+							AddPokeChange(new TagEditorDefinition { OffsetOverride = parts[0], MemoryType = parts[1], }, parts[2]);
+						}
+						else
+						{
+							if (TagsList.Keys.Contains(parts[2]))
 							{
-								prev++;
-								if (parts[1] != "TagrefTag")
-								{
-									AddPokeChange(new TagEditorDefinition { OffsetOverride = parts[0], MemoryType = parts[1], }, parts[2]);
-								}
-								else
-								{
-									if (TagsList.Keys.Contains(parts[2]))
-									{
 
-										AddPokeChange(new TagEditorDefinition { OffsetOverride = parts[0], MemoryType = parts[1], }, TagsList[parts[2]].Datnum);
-									}
-									else
-									{
-										fails++;
-										prev--;
-									}
-								}
-
+								AddPokeChange(new TagEditorDefinition { OffsetOverride = parts[0], MemoryType = parts[1], }, TagsList[parts[2]].Datnum);
+							}
+							else
+							{
+								fails++;
+								prev--;
 							}
 						}
-					}
-					if (fails < 1)
-					{
-						poke_text.Text = prev + " Loaded!";
-					}
-					else
-					{
-						poke_text.Text = prev + " Loaded, " + fails + " Failed";
+
 					}
 				}
+			}
+			if (fails < 1)
+			{
+				poke_text.Text = prev + " Loaded!";
+				if (mwidow != null)
+				{
+					mwidow.debug_text.Text = prev + " Changes Loaded!";
+				}
+			}
+			else
+			{
+				poke_text.Text = prev + " Loaded, " + fails + " Failed";
+				if (mwidow != null)
+				{
+					mwidow.debug_text.Text = prev + " Changes Loaded, " + fails + " Changes Failed";
+				}
+			}
 		}
 
 		//var lines = File.ReadLines(filename);
@@ -641,6 +736,10 @@ namespace InfiniteRuntimeTagViewer
 			}
 
 			change_text.Text = Pokelist.Count + " changes queued";
+			if (mwidow != null)
+			{
+				mwidow.test_changes.Text = Pokelist.Count + " changes queued";
+			}
 		}
 
 		// need this to read tagref blocks - because we only get a datnum to figure out the name with
@@ -700,12 +799,18 @@ namespace InfiniteRuntimeTagViewer
 			if (fails < 1)
 			{
 				poke_text.Text = pokes + " changes poked!";
-
+				if (mwidow != null)
+				{
+					mwidow.debug_text.Text = pokes + " changes poked!";
+				}
 			}
 			else
 			{
 				poke_text.Text = pokes + " poked, " + fails + " failed";
-
+				if (mwidow != null)
+				{
+					mwidow.debug_text.Text = pokes + " poked, " + fails + " failed";
+				}
 			}
 
 			change_text.Text = Pokelist.Count + " changes queued";
@@ -928,9 +1033,13 @@ namespace InfiniteRuntimeTagViewer
 
 			string joined = string.Join(",", last_offset.Skip(2));
 			long poop = long.Parse(last_offset.Skip(1).First());
-			var tag_thing = TagsList[p[0]];
-			if(tag_thing !=null)
-			return "0x" + (poop += tag_thing.TagData).ToString("X") + ((joined=="")? "" : "," + joined);
+			// exception handling required here
+			if (TagsList.Keys.Contains(p[0]))
+			{
+				var tag_thing = TagsList[p[0]];
+				return "0x" + (poop += tag_thing.TagData).ToString("X") + ((joined == "") ? "" : "," + joined);
+
+			}
 			return "";
 		}
 		public void Update_poke_value(TagChangesBlock target, string new_value)
@@ -951,12 +1060,19 @@ namespace InfiniteRuntimeTagViewer
 
 		private void BtnClearQueue_Click(object sender, RoutedEventArgs e)
 		{
+			clear_pokes_list();
+		}
+		public void clear_pokes_list()
+		{
 			changes_panel.Children.Clear();
 			Pokelist.Clear();
 			UIpokelist.Clear();
 			change_text.Text = Pokelist.Count + " changes queued";
+			if (mwidow != null)
+			{
+				mwidow.test_changes.Text = Pokelist.Count + " changes queued";
+			}
 		}
-
 		private void DockManager_DocumentClosing(object sender, AvalonDock.DocumentClosingEventArgs e)
 		{
 			// On tag window closing.
@@ -977,6 +1093,8 @@ namespace InfiniteRuntimeTagViewer
 		}
 
 		/* 4Byte
+		 * 2Byte
+		 * Byte
          * Float
          * TagRef
          * Pointer
@@ -1208,5 +1326,23 @@ namespace InfiniteRuntimeTagViewer
 		//}
 
 		#endregion
+
+		// open mods window
+		public ModWindow mwidow;
+		private void MenuItem_Click(object sender, RoutedEventArgs e)
+		{
+			if (mwidow == null)
+			{
+				mwidow = new ModWindow();
+				mwidow.Show();
+				mwidow.Focus();
+				mwidow.main = this;
+				mwidow.load_mods_from_directories();
+			}
+			else
+			{
+				mwidow.Focus();
+			}
+		}
 	}
 }

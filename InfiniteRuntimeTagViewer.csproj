@@ -34,6 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="MODS\" />
     <Folder Include="RESEARCH NOTES\" />
     <Folder Include="Themes\" />
     <Folder Include="Utility\" />
@@ -50,6 +51,9 @@
   <ItemGroup>
     <None Update="files\tagnames.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="MODS\IRTV Campaign Reticles FIX v1.irtv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

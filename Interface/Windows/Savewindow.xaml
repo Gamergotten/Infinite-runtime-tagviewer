@@ -1,0 +1,45 @@
+﻿<Window x:Class="InfiniteRuntimeTagViewer.Interface.Windows.Savewindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InfiniteRuntimeTagViewer.Interface.Windows"
+        mc:Ignorable="d"
+        Title="Savewindow" Height="250" Width="400">
+    <Grid Background="#FF3D3D3D">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="(file) name" VerticalAlignment="Center"/>
+        <TextBox TextWrapping="Wrap" AcceptsReturn="True" x:Name="NAME_FIELD" Grid.Column="1" Grid.RowSpan="2"/>
+        <TextBlock Text="mod description" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Center"/>
+        <TextBox TextWrapping="Wrap" AcceptsReturn="True" x:Name="DESC_FIELD" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3"/>
+
+        <TextBlock Text="Filters" Grid.Column="2" VerticalAlignment="Center" Margin="7,0,0,0"/>
+        <Button Grid.Column="3" Content="+" Click="Button_Click_2"  />
+        <Button Grid.Column="4" Content="-" Click="Button_Click_3"  />
+        <ScrollViewer Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <StackPanel x:Name="filters_panel" Margin="5,0,0,0">
+   
+            </StackPanel>
+        </ScrollViewer>
+
+        <CheckBox x:Name="copycheck" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="3" Content="Copy to mods folder" Margin="5,0,0,0" VerticalAlignment="Center" IsChecked="True"/>
+        <Button Grid.Column="2" Grid.Row="4" Content="Accept+Save" Margin="2,0,0,0" Click="Button_Click"/>
+        <Button Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="2" Content="Cancel" Click="Button_Click_1"/>
+        <GridSplitter Grid.Column="2"  HorizontalAlignment="Left"  Grid.RowSpan="5" VerticalAlignment="Stretch" Width="5" Margin="-3,0,0,0" Background="#FF828282"/>
+
+    </Grid>
+</Window>

@@ -175,6 +175,7 @@
                                 </MenuItem>-->
                             </MenuItem>
                         </MenuItem>
+                        <MenuItem Header="Mods" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Height="28" Click="MenuItem_Click"/>
 
                     </Menu>
                 </DockPanel>

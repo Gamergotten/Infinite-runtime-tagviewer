@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="InfiniteRuntimeTagViewer.Interface.Controls.modcheckfilter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls"
+             mc:Ignorable="d" HorizontalAlignment="Left">
+    <Grid VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="filtercount" Text="(0)" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0"/>
+        <CheckBox x:Name="filterbox" Grid.Column="1" Content="test filter" Margin="0,0,10,0" VerticalAlignment="Center" IsChecked="True" HorizontalAlignment="Stretch" Click="filterbox_Click"/>
+    </Grid>
+</UserControl>
