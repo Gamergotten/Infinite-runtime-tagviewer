@@ -215,9 +215,9 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 						return group_lengths_dict[xn.Name];
 
-
-					case "_10":
-						pairs.Add(offset, new C { T = "Unmapped", N = xn.Attributes.GetNamedItem("v").InnerText });
+					case "_10": // im not 100% on this one
+						pairs.Add(offset, new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText+".X" });
+						pairs.Add(offset+2, new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText+".Y" });
 						return group_lengths_dict[xn.Name];
 					case "_11":
 						pairs.Add(offset, new C { T = "Unmapped", N = xn.Attributes.GetNamedItem("v").InnerText });
@@ -243,8 +243,9 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Z" });
 						return group_lengths_dict[xn.Name];
 					case "_18":
-						pairs.Add(offset, new C { T = "Unmapped", N = xn.Attributes.GetNamedItem("v").InnerText });
-				return group_lengths_dict[xn.Name];
+						pairs.Add(offset, new C { T = "FLoat", N = xn.Attributes.GetNamedItem("v").InnerText +".X" });
+						pairs.Add(offset+4, new C { T = "FLoat", N = xn.Attributes.GetNamedItem("v").InnerText+".Y" });
+						return group_lengths_dict[xn.Name];
 					case "_19":
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".X" });
 						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Y" });
@@ -464,7 +465,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_17", 12 }, // _field_real_point_3d
 				{ "_18", 8 }, // _field_real_vector_2d -- 
 				{ "_19", 12 }, // _field_real_vector_3d
-				{ "_1A", 16 }, // quarternion 4
+				{ "_1A", 16 }, // _field_real_quaternion
 				{ "_1B", 12 },
 				{ "_1C", 12 }, // _field_real_euler_angles_3d
 				{ "_1D", 12 },
