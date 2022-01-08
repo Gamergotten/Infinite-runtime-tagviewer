@@ -72,8 +72,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 			// OK, now we do a proper check to see if this tag is loaded, finally looked into this
 
-			//try // never done this before and i hope im doing it terribly wrong
-			//{
+			try // never done this before and i hope im doing it terribly wrong
+			{
 				// pointer check
 				TagValueBlock p_block = new() { HorizontalAlignment = HorizontalAlignment.Left };
 				p_block.value_type.Text = "Pointer check";
@@ -111,12 +111,12 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 				//	TextBox tb = new TextBox { Text = "This tag isn't mapped out ):" };
 				//	tagview_panels.Children.Add(tb);
 				//}
-			//}
-			//catch
-			//{
-				//TextBox tb = new TextBox { Text = "ran into an oopsie woopsie, this tag is probably broken/unloaded right now" };
-				//tagview_panels.Children.Add(tb);
-			//}
+			}
+			catch
+			{
+				TextBox tb = new TextBox { Text = "ran into an oopsie woopsie, this tag is probably broken/unloaded right now" };
+				tagview_panels.Children.Add(tb);
+			}
 
 
 		}
@@ -676,6 +676,12 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tb1.BlockAddress = newAddress;
 
 						int childs = int.Parse(childrenCount);
+						if (childs > 2000000)
+						{
+							TextBox tb = new TextBox { Text = "ran into a major fucky wucky, some tagblock exceeded 2million entries" };
+							tagview_panels.Children.Add(tb);
+							return;
+						}
 						if (entry.Value.B != null) // this should optimize the hell outta opening tags // like we were literally instaniating 1million items for the levl tag
 						{
 							for (int y = 0; y < childs; y++)
