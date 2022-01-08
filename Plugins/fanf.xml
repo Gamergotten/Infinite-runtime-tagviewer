@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_A v="Type">
+		<Flag v="personal score" />
+		<Flag v="game score" />
+		<Flag v="game state" />
+		<Flag v="highlights" />
+		<Flag v="kill feed" />
+		<Flag v="quest feed" />
+		<Flag v="personal ai" />
+	</_A>
+	<_34 v="generated_pad07bd" length="3" />
+	<_6 v="Priority" />
+	<_2 v="String identifier" />
+	<_5 v="Sprite index" />
+	<_5 v="Display time in seconds" />
+	<_41 v="Screen" />
+	<_41 v="Sound" />
+	<_3B v="" />
+</root>

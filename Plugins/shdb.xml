@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_6 v="shader compiler version" />
+	<_D v="flags">
+		<Flag v="is_distortion" />
+		<Flag v="is_decal" />
+		<Flag v="is_water" />
+		<Flag v="is_hologram" />
+		<Flag v="is_wireframe_hologram" />
+		<Flag v="is_emblem" />
+		<Flag v="is_alpha_clip" />
+		<Flag v="is_explicit_shader" />
+		<Flag v="uses_fade_time" />
+		<Flag v="is_hologram_lofi" />
+		<Flag v="custom_deformer" />
+		<Flag v="has_compute" />
+		<Flag v="is_shield_generator" />
+		<Flag v="is_olympus_effect_lighting" />
+		<Flag v="is_skinned_tree" />
+		<Flag v="is_static_branching_shader" />
+		<Flag v="generator_uses_depth_buffer" />
+		<Flag v="has_subsurface_scattering" />
+		<Flag v="transparent_requires_scene_color" />
+		<Flag v="uses_point_input_patch" />
+		<Flag v="supports_packed_ovt" />
+		<Flag v="uses_deferred_shading" />
+		<Flag v="is_decorator" />
+		<Flag v="is_foliage" />
+		<Flag v="is_composited_card" />
+		<Flag v="is_low_res_lighting_eligible" />
+		<Flag v="is_fx_specular" />
+		<Flag v="is_two_sided_shader" />
+		<Flag v="decorator_requires_zpp" />
+		<Flag v="uses_terrain_sampling" />
+		<Flag v="decal_use_uav_normal" />
+	</_D>
+	<_D v="Compile Flags">
+		<Flag v="validation" />
+		<Flag v="debug" />
+		<Flag v="deoptimize" />
+	</_D>
+	<_40 v="emitter property names">
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="simulator property names">
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="renderer property names">
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_42 v="shader source data" />
+	<_3B v="" />
+</root>

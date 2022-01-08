@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="string references">
+		<_41 v="string list" />
+		<_41 v="new string list" />
+		<_3B v="" />
+	</_40>
+	<_40 v="resource references">
+		<_41 v="resources list" />
+		<_3B v="" />
+	</_40>
+	<_38 v="system">
+		<_40 v="template instantiations">
+			<_3F v="template instance id" />
+			<_41 v="screen reference" />
+			<_2 v="parent" />
+			<_3F v="parent id" />
+			<_6 v="child order" />
+			<_40 v="components">
+				<_3F v="component id" />
+				<_2 v="original name" />
+				<_2 v="name" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="components">
+			<_3F v="component id" />
+			<_2 v="type" />
+			<_2 v="name" />
+			<_2 v="parent" />
+			<_34 v="generated_padecfb" length="4" />
+			<_3F v="parent id" />
+			<_6 v="child order" />
+			<_E v="flags">
+				<Flag v="hidden to tools user" />
+			</_E>
+			<_34 v="generated_pada046" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="component indices">
+			<_3F v="component id" />
+			<_2 v="name" />
+			<_2E v="component definition index" />
+			<_34 v="generated_pad855c" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="do not create list">
+			<_3F v="component id" />
+			<_3B v="" />
+		</_40>
+		<_40 v="overlays">
+			<_2 v="resolution" />
+			<_2 v="theme" />
+			<_40 v="components">
+				<_3F v="component id" />
+				<_2 v="name" />
+				<_38 v="property values">
+					<_40 v="long properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_6 v="value" />
+						<_3B v="" />
+					</_40>
+					<_40 v="real properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_14 v="value" />
+						<_3B v="" />
+					</_40>
+					<_40 v="string_id properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_2 v="value" />
+						<_3B v="" />
+					</_40>
+					<_40 v="component ptr properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_3F v="component id" />
+						<_2 v="value" />
+						<_34 v="generated_padccc5" length="4" />
+						<_3B v="" />
+					</_40>
+					<_40 v="tag reference properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_41 v="value" />
+						<_3B v="" />
+					</_40>
+					<_40 v="string properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_1 v="value" />
+						<_3B v="" />
+					</_40>
+					<_40 v="argb color properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_20 v="value" />
+						<_3B v="" />
+					</_40>
+					<_40 v="event handlers">
+						<_2 v="event" />
+						<_2 v="filter" />
+						<_2 v="name" />
+						<_1 v="action" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_34 v="generated_pad00cf" length="4" />
+				<_3B v="" />
+			</_40>
+			<_40 v="animations">
+				<_2 v="name" />
+				<_14 v="time base offset" />
+				<_14 v="time exponential offset" />
+				<_A v="animation input">
+					<Flag v="time" />
+					<Flag v="binding" />
+				</_A>
+				<_34 v="generated_pad21f2" length="3" />
+				<_40 v="components">
+					<_3F v="component id" />
+					<_2 v="name" />
+					<_6 v="total milliseconds" />
+					<_40 v="real properties">
+						<_2 v="name" />
+						<_B v="composition">
+							<Flag v="relative to current" />
+							<Flag v="absolute to screen" />
+							<Flag v="absolute to parent" />
+						</_B>
+						<_A v="ending type">
+							<Flag v="stopping" />
+							<Flag v="looping" />
+						</_A>
+						<_34 v="generated_pad83f4" length="1" />
+						<_6 v="iteration count" />
+						<_6 v="total milliseconds" />
+						<_40 v="real keyframes">
+							<_6 v="duration" />
+							<_2 v="resourceName" />
+							<_14 v="value" />
+							<_38 v="transition function">
+								<_37 v="scalar function" />
+								<_38 v="scalar function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="argb color properties">
+						<_2 v="name" />
+						<_B v="composition">
+							<Flag v="relative to current" />
+							<Flag v="absolute to screen" />
+							<Flag v="absolute to parent" />
+						</_B>
+						<_A v="ending type">
+							<Flag v="stopping" />
+							<Flag v="looping" />
+						</_A>
+						<_34 v="generated_pad83f4" length="1" />
+						<_6 v="iteration count" />
+						<_6 v="total milliseconds" />
+						<_40 v="argb color keyframes">
+							<_6 v="duration" />
+							<_2 v="resourceName" />
+							<_20 v="color" />
+							<_38 v="transition function">
+								<_37 v="scalar function" />
+								<_38 v="scalar function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="stringId properties">
+						<_2 v="name" />
+						<_B v="composition">
+							<Flag v="relative to current" />
+							<Flag v="absolute to screen" />
+							<Flag v="absolute to parent" />
+						</_B>
+						<_A v="ending type">
+							<Flag v="stopping" />
+							<Flag v="looping" />
+						</_A>
+						<_34 v="generated_pad83f4" length="1" />
+						<_6 v="iteration count" />
+						<_6 v="total milliseconds" />
+						<_40 v="stringId keyframes">
+							<_6 v="duration" />
+							<_2 v="resourceName" />
+							<_2 v="stringId" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_34 v="generated_pad9eda" length="4" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="animated component lookup">
+				<_3F v="component id" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="overlays editor only">
+			<_2 v="resolution" />
+			<_2 v="theme" />
+			<_F v="flags">
+				<Flag v="exclude overlay" />
+			</_F>
+			<_34 v="generated_pade8bb" length="3" />
+			<_40 v="components editor only">
+				<_3F v="component id" />
+				<_2 v="name" />
+				<_40 v="properties editor only">
+					<_2 v="name" />
+					<_F v="flags">
+						<Flag v="default value" />
+					</_F>
+					<_34 v="generated_padd370" length="3" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="animations editor only">
+				<_2 v="name" />
+				<_40 v="components editor only">
+					<_3F v="component id" />
+					<_2 v="name" />
+					<_40 v="properties editor only">
+						<_2 v="name" />
+						<_F v="flags">
+							<Flag v="default value" />
+						</_F>
+						<_34 v="generated_padd370" length="3" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="property bindings">
+			<_E v="flags">
+				<Flag v="source is data context" />
+			</_E>
+			<_B v="conversion function">
+				<Flag v="none" />
+				<Flag v="negate bool" />
+				<Flag v="compare long" />
+			</_B>
+			<_2 v="source component typename" />
+			<_3F v="source component id" />
+			<_2 v="source component name" />
+			<_2 v="source property name" />
+			<_3F v="target component id" />
+			<_2 v="target component name" />
+			<_2 v="target property name" />
+			<_40 v="binding conversion long comparison">
+				<_A v="comparison operator">
+					<Flag v="equality" />
+					<Flag v="inequality" />
+					<Flag v="less than" />
+					<Flag v="less than or equal" />
+					<Flag v="greater than or equal" />
+					<Flag v="greater than" />
+				</_A>
+				<_34 v="generated_pad0669" length="3" />
+				<_6 v="comparison value" />
+				<_3B v="" />
+			</_40>
+			<_34 v="generated_padd9a1" length="4" />
+			<_3B v="" />
+		</_40>
+		<_40 v="static data tables">
+			<_3F v="definition id" />
+			<_2 v="name" />
+			<_2 v="mock data for component" />
+			<_38 v="static data">
+				<_40 v="columns">
+					<_2 v="name" />
+					<_B v="type">
+						<Flag v="boolean" />
+						<Flag v="long" />
+						<Flag v="real" />
+						<Flag v="string" />
+						<Flag v="component" />
+						<Flag v="tag reference" />
+						<Flag v="string id" />
+						<Flag v="argb color" />
+						<Flag v="emblem info" />
+					</_B>
+					<_34 v="generated_pad3684" length="2" />
+					<_3B v="" />
+				</_40>
+				<_40 v="rows">
+					<_40 v="long properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_6 v="value" />
+						<_3B v="" />
+					</_40>
+					<_40 v="real properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_14 v="value" />
+						<_3B v="" />
+					</_40>
+					<_40 v="string_id properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_2 v="value" />
+						<_3B v="" />
+					</_40>
+					<_40 v="component ptr properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_3F v="component id" />
+						<_2 v="value" />
+						<_34 v="generated_padccc5" length="4" />
+						<_3B v="" />
+					</_40>
+					<_40 v="tag reference properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_41 v="value" />
+						<_3B v="" />
+					</_40>
+					<_40 v="string properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_1 v="value" />
+						<_3B v="" />
+					</_40>
+					<_40 v="argb color properties">
+						<_2 v="name" />
+						<_2 v="resourceName" />
+						<_20 v="value" />
+						<_3B v="" />
+					</_40>
+					<_40 v="event handlers">
+						<_2 v="event" />
+						<_2 v="filter" />
+						<_2 v="name" />
+						<_1 v="action" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="expressions">
+			<_3F v="expression id" />
+			<_2 v="name" />
+			<_1 v="expression text" />
+			<_40 v="steps">
+				<_A v="step type">
+					<Flag v="operator" />
+					<Flag v="variable" />
+					<Flag v="real value" />
+					<Flag v="string id value" />
+				</_A>
+				<_A v="operator">
+					<Flag v="add" />
+					<Flag v="subtract" />
+					<Flag v="multiply" />
+					<Flag v="divide" />
+					<Flag v="negate" />
+					<Flag v="not" />
+					<Flag v="less than" />
+					<Flag v="less than or equal to" />
+					<Flag v="greater than" />
+					<Flag v="greater than or equal to" />
+					<Flag v="equals" />
+					<Flag v="not equals" />
+					<Flag v="and" />
+					<Flag v="or" />
+					<Flag v="mod" />
+				</_A>
+				<_A v="variable">
+					<Flag v="variable a" />
+					<Flag v="variable b" />
+					<Flag v="variable c" />
+					<Flag v="variable d" />
+					<Flag v="variable e" />
+					<Flag v="variable f" />
+					<Flag v="variable g" />
+					<Flag v="variable h" />
+				</_A>
+				<_34 v="generated_pad656d" length="1" />
+				<_14 v="value" />
+				<_2 v="string id value" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="visual state groups">
+			<_2 v="name" />
+			<_34 v="generated_pada5a8" length="4" />
+			<_3F v="visual state group id" />
+			<_3F v="context component id" />
+			<_40 v="visual states">
+				<_3F v="visual state id" />
+				<_36 v="Trigger Binding" />
+				<_38 v="Trigger Binding">
+					<_E v="flags">
+						<Flag v="source is data context" />
+					</_E>
+					<_B v="conversion function">
+						<Flag v="none" />
+						<Flag v="negate bool" />
+						<Flag v="compare long" />
+					</_B>
+					<_2 v="source component typename" />
+					<_3F v="source component id" />
+					<_2 v="source component name" />
+					<_2 v="source property name" />
+					<_3F v="target component id" />
+					<_2 v="target component name" />
+					<_2 v="target property name" />
+					<_40 v="binding conversion long comparison">
+						<_A v="comparison operator">
+							<Flag v="equality" />
+							<Flag v="inequality" />
+							<Flag v="less than" />
+							<Flag v="less than or equal" />
+							<Flag v="greater than or equal" />
+							<Flag v="greater than" />
+						</_A>
+						<_34 v="generated_pad0669" length="3" />
+						<_6 v="comparison value" />
+						<_3B v="" />
+					</_40>
+					<_34 v="generated_padd9a1" length="4" />
+					<_3B v="" />
+				</_38>
+				<_36 v="Animation" />
+				<_38 v="Animation">
+					<_2 v="name" />
+					<_14 v="time base offset" />
+					<_14 v="time exponential offset" />
+					<_A v="animation input">
+						<Flag v="time" />
+						<Flag v="binding" />
+					</_A>
+					<_34 v="generated_pad21f2" length="3" />
+					<_40 v="components">
+						<_3F v="component id" />
+						<_2 v="name" />
+						<_6 v="total milliseconds" />
+						<_40 v="real properties">
+							<_2 v="name" />
+							<_B v="composition">
+								<Flag v="relative to current" />
+								<Flag v="absolute to screen" />
+								<Flag v="absolute to parent" />
+							</_B>
+							<_A v="ending type">
+								<Flag v="stopping" />
+								<Flag v="looping" />
+							</_A>
+							<_34 v="generated_pad83f4" length="1" />
+							<_6 v="iteration count" />
+							<_6 v="total milliseconds" />
+							<_40 v="real keyframes">
+								<_6 v="duration" />
+								<_2 v="resourceName" />
+								<_14 v="value" />
+								<_38 v="transition function">
+									<_37 v="scalar function" />
+									<_38 v="scalar function">
+										<_37 v="" />
+										<_42 v="data" />
+										<_37 v="" />
+										<_3B v="" />
+									</_38>
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_40>
+						<_40 v="argb color properties">
+							<_2 v="name" />
+							<_B v="composition">
+								<Flag v="relative to current" />
+								<Flag v="absolute to screen" />
+								<Flag v="absolute to parent" />
+							</_B>
+							<_A v="ending type">
+								<Flag v="stopping" />
+								<Flag v="looping" />
+							</_A>
+							<_34 v="generated_pad83f4" length="1" />
+							<_6 v="iteration count" />
+							<_6 v="total milliseconds" />
+							<_40 v="argb color keyframes">
+								<_6 v="duration" />
+								<_2 v="resourceName" />
+								<_20 v="color" />
+								<_38 v="transition function">
+									<_37 v="scalar function" />
+									<_38 v="scalar function">
+										<_37 v="" />
+										<_42 v="data" />
+										<_37 v="" />
+										<_3B v="" />
+									</_38>
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_40>
+						<_40 v="stringId properties">
+							<_2 v="name" />
+							<_B v="composition">
+								<Flag v="relative to current" />
+								<Flag v="absolute to screen" />
+								<Flag v="absolute to parent" />
+							</_B>
+							<_A v="ending type">
+								<Flag v="stopping" />
+								<Flag v="looping" />
+							</_A>
+							<_34 v="generated_pad83f4" length="1" />
+							<_6 v="iteration count" />
+							<_6 v="total milliseconds" />
+							<_40 v="stringId keyframes">
+								<_6 v="duration" />
+								<_2 v="resourceName" />
+								<_2 v="stringId" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_40>
+						<_34 v="generated_pad9eda" length="4" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_34 v="generated_pad3137" length="4" />
+				<_3B v="" />
+			</_40>
+			<_34 v="generated_padbf89" length="4" />
+			<_3B v="" />
+		</_40>
+		<_40 v="visual state component lookup">
+			<_3F v="component id" />
+			<_3B v="" />
+		</_40>
+		<_41 v="sample data tag path" />
+		<_37 v="Telemetry Data" />
+		<_38 v="Telemetry Data">
+			<_F v="Should Track Telemetry">
+				<Flag v="enabled" />
+			</_F>
+			<_0 v="Telemetry Category Name" />
+			<_0 v="Telemetry Sub Category Name" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_A v="Layout Type">
+			<Flag v="Res1080p" />
+			<Flag v="Res4k" />
+		</_A>
+		<_34 v="generated_pad6c61" length="2" />
+		<_3B v="" />
+	</_38>
+	<_41 v="script" />
+	<_2 v="name" />
+	<_6 v="Object count budget" />
+	<_3B v="" />
+</root>

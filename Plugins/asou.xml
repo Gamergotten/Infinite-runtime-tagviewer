@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_A v="Use model hit">
+		<Flag v="Disabled" />
+		<Flag v="Enabled" />
+	</_A>
+	<_34 v="generated_padddab" length="3" />
+	<_40 v="Per-variant model hit">
+		<_2 v="Variant name" />
+		<_A v="Use model hit override">
+			<Flag v="Use default" />
+			<Flag v="Disabled" />
+			<Flag v="Enabled" />
+		</_A>
+		<_34 v="generated_padf148" length="3" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Effects markers">
+		<_0 v="marker name" />
+		<_1A v="rotation" />
+		<_17 v="position" />
+		<_41 v="optional attached effect" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Light Cones">
+		<_0 v="marker name" />
+		<_1A v="rotation" />
+		<_17 v="position" />
+		<_14 v="length" />
+		<_14 v="width" />
+		<_14 v="intensity" />
+		<_20 v="light color" />
+		<_41 v="light cone tag" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Object Palette">
+		<_41 v="definition" />
+		<_41 v="model" />
+		<_6 v="GVEYN" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Objects">
+		<_0 v="name" />
+		<_1A v="rotation" />
+		<_17 v="translation" />
+		<_14 v="scale" />
+		<_2E v="palette_index" />
+		<_F v="flags">
+			<Flag v="scripts always run" />
+		</_F>
+		<_34 v="generated_pad238b" length="1" />
+		<_6 v="unique id" />
+		<_9 v="exported object type" />
+		<_2 v="scenario object name" />
+		<_2 v="variant name" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

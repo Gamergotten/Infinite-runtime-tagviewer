@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="UCN AUTHORITY TRUST SETTINGS" />
+	<_25 v="velocity interpolation range" />
+	<_36 v="Lowest velocity values" />
+	<_38 v="interpolation min values">
+		<_14 v="position delta max" />
+		<_8 v="rotation delta max" />
+		<_14 v="linear velocity delta max" />
+		<_8 v="angular velocity delta max" />
+		<_3B v="" />
+	</_38>
+	<_36 v="Highest velocity values" />
+	<_38 v="interpolation max values">
+		<_14 v="position delta max" />
+		<_8 v="rotation delta max" />
+		<_14 v="linear velocity delta max" />
+		<_8 v="angular velocity delta max" />
+		<_3B v="" />
+	</_38>
+	<_15 v="cumulative limit fraction" />
+	<_40 v="situational overrides">
+		<_A v="Situation">
+			<Flag v="Player near physics volume" />
+		</_A>
+		<_34 v="generated_pad752f" length="3" />
+		<_14 v="Check distance" />
+		<_38 v="Override interpolation min values">
+			<_14 v="position delta max" />
+			<_8 v="rotation delta max" />
+			<_14 v="linear velocity delta max" />
+			<_8 v="angular velocity delta max" />
+			<_3B v="" />
+		</_38>
+		<_38 v="Override interpolation max values">
+			<_14 v="position delta max" />
+			<_8 v="rotation delta max" />
+			<_14 v="linear velocity delta max" />
+			<_8 v="angular velocity delta max" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

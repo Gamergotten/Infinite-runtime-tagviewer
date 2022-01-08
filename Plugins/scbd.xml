@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Default Effects" />
+	<_38 v="default super combine effects">
+		<_41 v="super detonation" />
+		<_41 v="super detonation damage" />
+		<_41 v="super detonation sound" />
+		<_41 v="super attached detonation damage" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Biped Effects" />
+	<_38 v="biped super combine effects">
+		<_41 v="super detonation" />
+		<_41 v="super detonation damage" />
+		<_41 v="super detonation sound" />
+		<_41 v="super attached detonation damage" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Vehicle Effects" />
+	<_38 v="vehicle super combine effects">
+		<_41 v="super detonation" />
+		<_41 v="super detonation damage" />
+		<_41 v="super detonation sound" />
+		<_41 v="super attached detonation damage" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_41 v="super detonation" />
+	<_41 v="super detonation damage" />
+	<_41 v="super detonation sound" />
+	<_41 v="super attached detonation damage" />
+	<_E v="super detonation object types">
+		<Flag v="biped" />
+		<Flag v="vehicle" />
+		<Flag v="weapon" />
+		<Flag v="equipment" />
+		<Flag v="terminal" />
+		<Flag v="projectile" />
+		<Flag v="scenery" />
+		<Flag v="machine" />
+		<Flag v="control" />
+		<Flag v="dispenser" />
+		<Flag v="crate" />
+		<Flag v="creature" />
+		<Flag v="giant" />
+		<Flag v="effect_scenery" />
+	</_E>
+	<_34 v="generated_padc196" length="2" />
+	<_6 v="default super combine amount" />
+	<_6 v="biped super combine amount" />
+	<_6 v="vehicle super combine amount" />
+	<_14 v="super det. time" />
+	<_34 v="generated_pad0e4b" length="4" />
+	<_3B v="" />
+</root>

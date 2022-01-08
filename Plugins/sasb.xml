@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="data">
+		<_38 v="common ability parameters">
+			<_37 v="common ability parameters" />
+			<_C v="input">
+				<Flag v="Default" />
+				<Flag v="Mobility" />
+				<Flag v="Suit" />
+				<Flag v="Jump" />
+				<Flag v="Equipment" />
+				<Flag v="Melee" />
+				<Flag v="PowerUp" />
+				<Flag v="Unmapped" />
+			</_C>
+			<_D v="flags">
+				<Flag v="Use 3rd Person Camera When Active" />
+				<Flag v="Hide Reticle When Active" />
+				<Flag v="Is Motion Tracked (By Enemies) When Active" />
+				<Flag v="One-Shot Activation Effect" />
+				<Flag v="Can be activated when weapon state is relaxed" />
+				<Flag v="Does Not Appear In Extended Motion Tracker Range" />
+				<Flag v="Energy persists across deaths" />
+				<Flag v="Activation interrupts weapon switching" />
+				<Flag v="Allow activation during weapon throw" />
+				<Flag v="Allow activation while sliding" />
+			</_D>
+			<_15 v="activation energy cost" />
+			<_14 v="active energy consumption" />
+			<_14 v="recharge duration" />
+			<_14 v="recharge delay" />
+			<_14 v="cooldown delay" />
+			<_41 v="activation effect" />
+			<_14 v="activation effect kill delay" />
+			<_A v="sprint preservation">
+				<Flag v="No" />
+				<Flag v="Zero fraction" />
+				<Flag v="Retain fraction" />
+				<Flag v="Decay (normal)" />
+				<Flag v="Decay (forced)" />
+			</_A>
+			<_34 v="generated_pad0aca" length="3" />
+			<_41 v="active malleable property modifiers" />
+			<_41 v="timed malleable property modifiers" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_D v="shoulder bash flags">
+			<Flag v="Lock Gaze" />
+			<Flag v="Custom Sprint Anim When Ready" />
+			<Flag v="Evading Breaks Aim Assist" />
+			<Flag v="Disable Soft Contacts" />
+		</_D>
+		<_15 v="sprint speed fraction threshold" />
+		<_14 v="sprint active minimum duration" />
+		<_14 v="bash speed" />
+		<_14 v="target speed scalar" />
+		<_14 v="bash duration" />
+		<_14 v="bash duration with target" />
+		<_37 v="target range scalar" />
+		<_38 v="target range scalar">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_14 v="yaw speed scale" />
+		<_14 v="pitch speed scale" />
+		<_14 v="off the ground tolerance" />
+		<_14 v="hit sphere offset x" />
+		<_14 v="hit sphere offset z" />
+		<_14 v="hit sphere radius" />
+		<_14 v="hit sphere start point offset" />
+		<_14 v="surface adhesion velocity" />
+		<_14 v="surface adhesion airborne time limit" />
+		<_8 v="maximum shoulder bash assist angular velocity" />
+		<_8 v="assist pitch angle min" />
+		<_8 v="assist pitch angle max" />
+		<_8 v="contact angle threshold for damage" />
+		<_14 v="contact ignore offset" />
+		<_8 v="bash direction pitch offset for damage" />
+		<_37 v="knockback scalar" />
+		<_38 v="knockback scalar">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_36 v="camera tilt pitch function" />
+		<_37 v="camera tilt pitch function" />
+		<_38 v="camera tilt pitch function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_36 v="camera forward offset function" />
+		<_37 v="camera forward offset function" />
+		<_38 v="camera forward offset function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_36 v="camera FOV delta function" />
+		<_37 v="camera FOV delta function" />
+		<_38 v="camera FOV delta function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_41 v="bash damage effect" />
+		<_41 v="bash clang damage effect" />
+		<_41 v="bash effect" />
+		<_41 v="bash response damage effect" />
+		<_41 v="bash response effect" />
+		<_37 v="damage scalar" />
+		<_38 v="damage scalar">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_2 v="shoulder bash animation" />
+		<_2 v="shoulder bash success follow-through" />
+		<_14 v="shoulder bash success follow-through duration" />
+		<_14 v="shoulder bash success follow-through FP camera restore time" />
+		<_2 v="shoulder bash success rebound" />
+		<_14 v="shoulder bash success rebound duration" />
+		<_14 v="shoulder bash success rebound FP camera restore time" />
+		<_14 v="shoulder bash success rebound speed duration" />
+		<_14 v="shoulder bash success rebound speed" />
+		<_36 v="no rebound surfaces" />
+		<_40 v="no rebound materials">
+			<_2 v="material name" />
+			<_3B v="" />
+		</_40>
+		<_2 v="shoulder bash miss follow-through" />
+		<_14 v="shoulder bash miss follow-through FP camera restore time" />
+		<_15 v="shoulder bash miss follow-through early out fraction" />
+		<_36 v="Aim Assist" />
+		<_8 v="auto aim angle" />
+		<_14 v="auto aim range" />
+		<_14 v="auto aim falloff range" />
+		<_14 v="auto aim near falloff range" />
+		<_36 v="AI Response" />
+		<_B v="bash AI sound level">
+			<Flag v="silent" />
+			<Flag v="quiet" />
+			<Flag v="medium" />
+			<Flag v="shout" />
+			<Flag v="loud" />
+		</_B>
+		<_34 v="generated_padf9a1" length="2" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

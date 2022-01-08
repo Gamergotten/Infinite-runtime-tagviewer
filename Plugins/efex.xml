@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Alpha-blend Override" />
+	<_38 v="Alpha-blend Override">
+		<_14 v="min exposure" />
+		<_14 v="max exposure" />
+		<_14 v="underexposed slope" />
+		<_14 v="overexposed slope" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Additive Override" />
+	<_38 v="Additive Override">
+		<_14 v="min exposure" />
+		<_14 v="max exposure" />
+		<_14 v="underexposed slope" />
+		<_14 v="overexposed slope" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Lit Alpha-blend Override" />
+	<_38 v="Lit Alpha-blend Override">
+		<_14 v="min exposure" />
+		<_14 v="max exposure" />
+		<_14 v="underexposed slope" />
+		<_14 v="overexposed slope" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Lit Additive Override" />
+	<_38 v="Lit Additive Override">
+		<_14 v="min exposure" />
+		<_14 v="max exposure" />
+		<_14 v="underexposed slope" />
+		<_14 v="overexposed slope" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Surface Alpha-blend Override" />
+	<_38 v="Surface Alpha-blend Override">
+		<_14 v="min exposure" />
+		<_14 v="max exposure" />
+		<_14 v="underexposed slope" />
+		<_14 v="overexposed slope" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Surface Additive Override" />
+	<_38 v="Surface Additive Override">
+		<_14 v="min exposure" />
+		<_14 v="max exposure" />
+		<_14 v="underexposed slope" />
+		<_14 v="overexposed slope" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Cheap Light Override" />
+	<_38 v="Cheap Light Override">
+		<_14 v="min exposure" />
+		<_14 v="max exposure" />
+		<_14 v="underexposed slope" />
+		<_14 v="overexposed slope" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_3B v="" />
+</root>

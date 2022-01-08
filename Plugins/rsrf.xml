@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Inputs">
+		<_A v="Type">
+			<Flag v="Mask" />
+			<Flag v="Bitmap" />
+		</_A>
+		<_34 v="generated_pad6a41" length="3" />
+		<_2 v="Id" />
+		<_14 v="Default Value" />
+		<_41 v="Bitmap Reference" />
+		<_18 v="UV Scale" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Material Layers">
+		<_2 v="Id" />
+		<_6 v="Index" />
+		<_6 v="GPU Interpreter Instructions" />
+		<_41 v="Material Preset" />
+		<_6 v="PhysicsMaterialId" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Placement Layers">
+		<_40 v="Placement Descriptions">
+			<_2 v="Id" />
+			<_6 v="GPU Interpreter Density Instructions" />
+			<_6 v="GPU Interpreter Scale Instructions" />
+			<_41 v="Runtime Tag Reference" />
+			<_41 v="Content Tag Reference" />
+			<_18 v="Position.z Offset Range" />
+			<_18 v="Scale Range" />
+			<_18 v="Rotation Range" />
+			<_A v="Orientation Alignment">
+				<Flag v="AlwaysUp" />
+				<Flag v="AlignToSlope" />
+				<Flag v="Random" />
+			</_A>
+			<_34 v="generated_pada2d4" length="3" />
+			<_38 v="Cull Distance Scale">
+				<_14 v="Very Low" />
+				<_14 v="Low" />
+				<_14 v="Medium" />
+				<_14 v="High" />
+				<_14 v="Ultra" />
+				<_14 v="2 Player Splitscreen" />
+				<_14 v="3 Player Splitscreen" />
+				<_14 v="4 Player Splitscreen" />
+				<_3B v="" />
+			</_38>
+			<_38 v="Density Multiplier">
+				<_14 v="Very Low" />
+				<_14 v="Low" />
+				<_14 v="Medium" />
+				<_14 v="High" />
+				<_14 v="Ultra" />
+				<_14 v="2 Player Splitscreen" />
+				<_14 v="3 Player Splitscreen" />
+				<_14 v="4 Player Splitscreen" />
+				<_3B v="" />
+			</_38>
+			<_2 v="Variant Name" />
+			<_20 v="Debug Color" />
+			<_6 v="Precompiled Technique Index" />
+			<_38 v="Distance Dither Start">
+				<_14 v="Very Low" />
+				<_14 v="Low" />
+				<_14 v="Medium" />
+				<_14 v="High" />
+				<_14 v="Ultra" />
+				<_14 v="2 Player Splitscreen" />
+				<_14 v="3 Player Splitscreen" />
+				<_14 v="4 Player Splitscreen" />
+				<_3B v="" />
+			</_38>
+			<_14 v="Distance Dither Transition Width" />
+			<_3B v="" />
+		</_40>
+		<_14 v="Footprint Radius" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Layers Bytecode">
+		<_3F v="Hash" />
+		<_40 v="GPU Interpreter Instructions">
+			<_6 v="Data" />
+			<_3B v="" />
+		</_40>
+		<_34 v="generated_pad5fcf" length="4" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

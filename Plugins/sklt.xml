@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Sky Lighting" />
+	<_1F v="Sky Color" />
+	<_14 v="Sky Color Intensity" />
+	<_1F v="Ground Color" />
+	<_14 v="Ground Color Intensity" />
+	<_14 v="Horizon Angle" />
+	<_14 v="Horizon Width" />
+	<_14 v="Direction 1" />
+	<_14 v="Front-Back 1" />
+	<_1F v="Color 1" />
+	<_14 v="Intensity 1" />
+	<_14 v="Width 1" />
+	<_14 v="Direction 2" />
+	<_14 v="Front-Back 2" />
+	<_1F v="Color 2" />
+	<_14 v="Intensity 2" />
+	<_14 v="Width 2" />
+	<_14 v="Direction 3" />
+	<_14 v="Front-Back 3" />
+	<_1F v="Color 3" />
+	<_14 v="Intensity 3" />
+	<_14 v="Width 3" />
+	<_34 v="generated_pad0693" length="4" />
+	<_3B v="" />
+</root>

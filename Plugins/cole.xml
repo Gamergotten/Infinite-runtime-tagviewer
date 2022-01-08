@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Collectible Entry">
+		<_A v="Collectible Type">
+			<Flag v="None" />
+			<Flag v="Halsey_DataPad" />
+			<Flag v="ArmorLocker" />
+			<Flag v="GameSkull" />
+			<Flag v="DeadSpartan" />
+			<Flag v="MemoryCore" />
+			<Flag v="UNSC_DataPad" />
+			<Flag v="Ban_DataPad" />
+			<Flag v="ForerunnerTotem" />
+			<Flag v="CommTower" />
+		</_A>
+		<_34 v="generated_padea46" length="3" />
+		<_2 v="Persistence Key" />
+		<_2E v="Codex List Entry Reference" />
+		<_34 v="generated_pad36fb" length="2" />
+		<_40 v="Quick Tip Override">
+			<_2 v="Title Id" />
+			<_2 v="Text Id" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Gameplay Unlocks">
+			<_40 v="Skull Unlock">
+				<_A v="Game Skull">
+					<Flag v="BlackEye" />
+					<Flag v="Catch" />
+					<Flag v="Fog" />
+					<Flag v="Famine" />
+					<Flag v="Thunderstorm" />
+					<Flag v="Mythic" />
+					<Flag v="Blind" />
+					<Flag v="Boom" />
+					<Flag v="Cowbell" />
+					<Flag v="GruntBirthdayParty" />
+					<Flag v="IWHBYD" />
+					<Flag v="Bandana" />
+				</_A>
+				<_3B v="" />
+			</_40>
+			<_40 v="Equipment Unlock">
+				<_2 v="Frame Attachment Name" />
+				<_6 v="Input Slot" />
+				<_3B v="" />
+			</_40>
+			<_40 v="POI Unlock">
+				<_2 v="Intel POI Key" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Codex Category Info">
+		<_A v="Codex Category">
+			<Flag v="Datapad" />
+			<Flag v="HighValueTarget" />
+			<Flag v="ForerunnerTotem" />
+			<Flag v="MemoryCore" />
+			<Flag v="Skull" />
+		</_A>
+		<_34 v="generated_pad598a" length="3" />
+		<_C v="unlock persistence key type">
+			<Flag v="Bool" />
+			<Flag v="Byte" />
+			<Flag v="Long" />
+		</_C>
+		<_C v="unlock function">
+			<Flag v="Equal" />
+			<Flag v="NotEqual" />
+			<Flag v="Less" />
+			<Flag v="LessThanOrEqual" />
+			<Flag v="Greater" />
+			<Flag v="GreaterThanOrEqual" />
+		</_C>
+		<_6 v="unlock compare value" />
+		<_41 v="Sprite" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Per Collectible Data">
+		<_A v="Collectible Type">
+			<Flag v="None" />
+			<Flag v="Halsey_DataPad" />
+			<Flag v="ArmorLocker" />
+			<Flag v="GameSkull" />
+			<Flag v="DeadSpartan" />
+			<Flag v="MemoryCore" />
+			<Flag v="UNSC_DataPad" />
+			<Flag v="Ban_DataPad" />
+			<Flag v="ForerunnerTotem" />
+			<Flag v="CommTower" />
+		</_A>
+		<_34 v="generated_pad2d83" length="3" />
+		<_36 v="Quick Tip Data" />
+		<_38 v="Defualt Tip Data">
+			<_2 v="Title Id" />
+			<_2 v="Text Id" />
+			<_3B v="" />
+		</_38>
+		<_36 v="First Acquisition Data" />
+		<_38 v="First Acquisition Data">
+			<_2 v="First-acquisition Persistence Key" />
+			<_2 v="Tutorial Title Id" />
+			<_2 v="Tutorial Text Id" />
+			<_3B v="" />
+		</_38>
+		<_36 v="Splash Banner Data" />
+		<_38 v="Splash Banner Data">
+			<_2 v="banner text override" />
+			<_3B v="" />
+		</_38>
+		<_40 v="Back Menu Screen Tab Index">
+			<_6 v="Back menu screen tab index" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_6 v="Codex Screen Index" />
+	<_6 v="Upgrade Screen Index" />
+	<_40 v="Codex Lists">
+		<_2 v="Name" />
+		<_A v="Codex Screen Category">
+			<Flag v="Datapad" />
+			<Flag v="HighValueTarget" />
+			<Flag v="ForerunnerTotem" />
+			<Flag v="MemoryCore" />
+			<Flag v="Skull" />
+		</_A>
+		<_34 v="generated_padc51f" length="3" />
+		<_2 v="Codex Screen Category Name" />
+		<_40 v="Codex Entries">
+			<_2 v="Title" />
+			<_2 v="Read Key Id" />
+			<_40 v="Description">
+				<_2 v="Paragraph Id" />
+				<_3B v="" />
+			</_40>
+			<_6 v="Sprite Index" />
+			<_1 v="Audio Log Id As String" />
+			<_2 v="Audio Log Id" />
+			<_6 v="Display Order" />
+			<_A v="Faction">
+				<Flag v="UNSC" />
+				<Flag v="Oni" />
+				<Flag v="Banished" />
+				<Flag v="Forerunner" />
+				<Flag v="Covenant" />
+				<Flag v="Lasky" />
+			</_A>
+			<_34 v="generated_padf1c7" length="3" />
+			<_37 v="UIItemInfo" />
+			<_38 v="uiItemInfo">
+				<_2 v="name" />
+				<_2 v="alt name " />
+				<_2 v="description" />
+				<_2 v="help text" />
+				<_2 v="icon string id" />
+				<_41 v="sprite" />
+				<_6 v="sprite index" />
+				<_41 v="alt sprite" />
+				<_6 v="alt sprite index" />
+				<_6 v="damage sprite index" />
+				<_41 v="ui vehicle screen reference" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Unlock Collectibles">
+			<_2E v="collectibleEntryIndex" />
+			<_3B v="" />
+		</_40>
+		<_3C v="Unlock Compare Value" />
+		<_A v="unlockMethod">
+			<Flag v="InOrder" />
+			<Flag v="Linear" />
+		</_A>
+		<_34 v="generated_pad786a" length="2" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Shot List">
+		<_41 v="Assembly" />
+		<_3B v="" />
+	</_40>
+	<_D v="Screenshot Flags">
+		<Flag v="Preview Mode" />
+		<Flag v="Debug Test" />
+	</_D>
+	<_14 v="Shot Pause Time" />
+	<_34 v="generated_pad702b" length="4" />
+	<_3B v="" />
+</root>

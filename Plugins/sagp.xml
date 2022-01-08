@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="data">
+		<_38 v="common ability parameters">
+			<_37 v="common ability parameters" />
+			<_C v="input">
+				<Flag v="Default" />
+				<Flag v="Mobility" />
+				<Flag v="Suit" />
+				<Flag v="Jump" />
+				<Flag v="Equipment" />
+				<Flag v="Melee" />
+				<Flag v="PowerUp" />
+				<Flag v="Unmapped" />
+			</_C>
+			<_D v="flags">
+				<Flag v="Use 3rd Person Camera When Active" />
+				<Flag v="Hide Reticle When Active" />
+				<Flag v="Is Motion Tracked (By Enemies) When Active" />
+				<Flag v="One-Shot Activation Effect" />
+				<Flag v="Can be activated when weapon state is relaxed" />
+				<Flag v="Does Not Appear In Extended Motion Tracker Range" />
+				<Flag v="Energy persists across deaths" />
+				<Flag v="Activation interrupts weapon switching" />
+				<Flag v="Allow activation during weapon throw" />
+				<Flag v="Allow activation while sliding" />
+			</_D>
+			<_15 v="activation energy cost" />
+			<_14 v="active energy consumption" />
+			<_14 v="recharge duration" />
+			<_14 v="recharge delay" />
+			<_14 v="cooldown delay" />
+			<_41 v="activation effect" />
+			<_14 v="activation effect kill delay" />
+			<_A v="sprint preservation">
+				<Flag v="No" />
+				<Flag v="Zero fraction" />
+				<Flag v="Retain fraction" />
+				<Flag v="Decay (normal)" />
+				<Flag v="Decay (forced)" />
+			</_A>
+			<_34 v="generated_pad0aca" length="3" />
+			<_41 v="active malleable property modifiers" />
+			<_41 v="timed malleable property modifiers" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_D v="ground pound flags">
+			<Flag v="Limit Aim Vector Pitch When Charging" />
+			<Flag v="Limit Aim Vector Pitch When Launching" />
+			<Flag v="Limit Aim Vector Pitch When Exiting" />
+			<Flag v="Aim At Biped Head" />
+			<Flag v="Evading Breaks Aim Assist" />
+			<Flag v="No Third Person Camera Until Valid Launch Position" />
+			<Flag v="Must Land Again After Activating" />
+			<Flag v="Always Cause AoE Damage" />
+			<Flag v="Ignore AoE Damage If Direct Damage Applied" />
+			<Flag v="Disable Soft Contacts" />
+			<Flag v="Enable Weak Attacks" />
+			<Flag v="Don't Render Aim Effect If RayCast Fails" />
+		</_D>
+		<_14 v="minimum height above floor" />
+		<_36 v="Stabilization/Charge up" />
+		<_38 v="stabilizer definition">
+			<_38 v="common ability parameters">
+				<_37 v="common ability parameters" />
+				<_C v="input">
+					<Flag v="Default" />
+					<Flag v="Mobility" />
+					<Flag v="Suit" />
+					<Flag v="Jump" />
+					<Flag v="Equipment" />
+					<Flag v="Melee" />
+					<Flag v="PowerUp" />
+					<Flag v="Unmapped" />
+				</_C>
+				<_D v="flags">
+					<Flag v="Use 3rd Person Camera When Active" />
+					<Flag v="Hide Reticle When Active" />
+					<Flag v="Is Motion Tracked (By Enemies) When Active" />
+					<Flag v="One-Shot Activation Effect" />
+					<Flag v="Can be activated when weapon state is relaxed" />
+					<Flag v="Does Not Appear In Extended Motion Tracker Range" />
+					<Flag v="Energy persists across deaths" />
+					<Flag v="Activation interrupts weapon switching" />
+					<Flag v="Allow activation during weapon throw" />
+					<Flag v="Allow activation while sliding" />
+				</_D>
+				<_15 v="activation energy cost" />
+				<_14 v="active energy consumption" />
+				<_14 v="recharge duration" />
+				<_14 v="recharge delay" />
+				<_14 v="cooldown delay" />
+				<_41 v="activation effect" />
+				<_14 v="activation effect kill delay" />
+				<_A v="sprint preservation">
+					<Flag v="No" />
+					<Flag v="Zero fraction" />
+					<Flag v="Retain fraction" />
+					<Flag v="Decay (normal)" />
+					<Flag v="Decay (forced)" />
+				</_A>
+				<_34 v="generated_pad0aca" length="3" />
+				<_41 v="active malleable property modifiers" />
+				<_41 v="timed malleable property modifiers" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_D v="flags">
+				<Flag v="Must land again after activating" />
+				<Flag v="Auto activate only if already in the air" />
+				<Flag v="Independent of ADS" />
+				<Flag v="Vertical only" />
+				<Flag v="Allow air control" />
+				<Flag v="Limit upwards motion post stall" />
+			</_D>
+			<_14 v="minimum height above floor" />
+			<_14 v="activation deceleration" />
+			<_14 v="stall duration" />
+			<_37 v="malleable time limit" />
+			<_38 v="malleable time limit">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_14 v="cooldown" />
+			<_37 v="malleable time scale" />
+			<_38 v="malleable time scale">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_14 v="max horizontal speed" />
+			<_38 v="vertical speed boost at exit">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_41 v="rumble" />
+			<_3B v="" />
+		</_38>
+		<_36 v="Charge Up Settings" />
+		<_14 v="charge up min time" />
+		<_14 v="charge up auto release time" />
+		<_37 v="charge up min time scale" />
+		<_38 v="charge up min time scale">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_37 v="charge up auto release time scale" />
+		<_38 v="charge up auto release time scale">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_15 v="charge up damage acceleration scalar" />
+		<_36 v="Launch" />
+		<_41 v="launch ready effect" />
+		<_41 v="launch post ready effect" />
+		<_15 v="launch post ready effect activation fraction" />
+		<_15 v="launch activation energy cost" />
+		<_41 v="launch effect" />
+		<_41 v="launch fail effect" />
+		<_14 v="launch continuous rumble loop time" />
+		<_41 v="launch continuous rumble" />
+		<_36 v="Aiming" />
+		<_41 v="aim effect" />
+		<_C v="aim vector fail selector">
+			<Flag v="Off" />
+			<Flag v="DistanceXYZ" />
+			<Flag v="DistanceZ" />
+		</_C>
+		<_14 v="aim effect min fail display time" />
+		<_14 v="aim vector fail distance" />
+		<_14 v="aim vector fail early time" />
+		<_14 v="aim vector ray cast distance" />
+		<_8 v="aim vector camera pitch limit" />
+		<_8 v="aim vector pitch limit" />
+		<_8 v="aim vector pitch adjustment limit" />
+		<_14 v="aim vector interpolation seconds (charging)" />
+		<_14 v="aim vector interpolation seconds (launching)" />
+		<_14 v="aim vector interpolation seconds (exiting)" />
+		<_14 v="aim vector interpolation exit stage time limit" />
+		<_36 v="Collision" />
+		<_14 v="hit sphere initial offset z" />
+		<_14 v="hit sphere offset" />
+		<_14 v="hit sphere radius" />
+		<_14 v="hit sphere start point offset" />
+		<_36 v="Motion" />
+		<_8 v="max slope angle" />
+		<_8 v="max opposing contact angle" />
+		<_37 v="pound fall speed (malleable)" />
+		<_38 v="pound fall speed (malleable)">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_14 v="pound fall duration" />
+		<_14 v="pound hit duration" />
+		<_14 v="pound exit no collision damage duration" />
+		<_36 v="Impact" />
+		<_14 v="aoe contact offset" />
+		<_37 v="knockback scalar" />
+		<_38 v="knockback scalar">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_37 v="pound ground damage scalar" />
+		<_38 v="pound ground damage scalar">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_37 v="pound ground aoe radius scalar" />
+		<_38 v="pound ground aoe radius scalar">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_36 v="Damage effects (regular)" />
+		<_41 v="pound object damage effect" />
+		<_41 v="pound object clang damage effect" />
+		<_41 v="pound ground damage effect" />
+		<_41 v="pound ground clang damage effect" />
+		<_41 v="pound object instigator effect" />
+		<_41 v="pound ground instigator effect" />
+		<_36 v="Damage effects (weak)" />
+		<_41 v="pound object damage effect (weak)" />
+		<_41 v="pound object clang damage effect (weak)" />
+		<_41 v="pound ground damage effect (weak)" />
+		<_41 v="pound ground clang damage effect (weak)" />
+		<_41 v="pound object instigator effect (weak)" />
+		<_41 v="pound ground instigator effect (weak)" />
+		<_14 v="time to switch from weak to regular" />
+		<_36 v="Animations" />
+		<_2 v="pound fall animation" />
+		<_2 v="pound fall exit animation" />
+		<_2 v="pound hit animation" />
+		<_2 v="pound hit exit animation" />
+		<_B v="pound hit AI sound level">
+			<Flag v="silent" />
+			<Flag v="quiet" />
+			<Flag v="medium" />
+			<Flag v="shout" />
+			<Flag v="loud" />
+		</_B>
+		<_34 v="generated_padba74" length="2" />
+		<_36 v="Aim Assist" />
+		<_8 v="auto aim angle" />
+		<_14 v="auto aim range" />
+		<_14 v="auto aim falloff range" />
+		<_14 v="auto aim near falloff range" />
+		<_8 v="magnetism angle" />
+		<_14 v="magnetism range" />
+		<_14 v="magnetism falloff range" />
+		<_14 v="magnetism near falloff range" />
+		<_8 v="maximum assist angular velocity" />
+		<_36 v="FOV delta function (charge up)" />
+		<_37 v="FOV delta function (charge up)" />
+		<_38 v="FOV delta function charge up">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_15 v="looks speed scalar (charge up)" />
+		<_15 v="looks speed scalar (launched)" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

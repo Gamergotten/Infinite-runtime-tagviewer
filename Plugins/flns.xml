@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="flinch system">
+		<_37 v="Gun Flinch" />
+		<_38 v="gun flinch">
+			<_24 v="yaw bounds" />
+			<_24 v="pitch bounds" />
+			<_40 v="recoil">
+				<_38 v="recoil return">
+					<_8 v="deceleration away from center" />
+					<_8 v="acceleration to center" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="spring damper">
+				<_38 v="spring damper">
+					<_14 v="spring constant" />
+					<_14 v="damping ratio" />
+					<_14 v="runtime damping constant" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="View Flinch" />
+		<_38 v="view flinch">
+			<_24 v="yaw bounds" />
+			<_24 v="pitch bounds" />
+			<_40 v="recoil">
+				<_38 v="recoil return">
+					<_8 v="deceleration away from center" />
+					<_8 v="acceleration to center" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="spring damper">
+				<_38 v="spring damper">
+					<_14 v="spring constant" />
+					<_14 v="damping ratio" />
+					<_14 v="runtime damping constant" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

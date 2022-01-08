@@ -1158,11 +1158,11 @@ namespace InfiniteRuntimeTagViewer
 		// Search filter
 		private void Searchbox_TextChanged(object? sender, TextChangedEventArgs? e)
 		{
-			string[] supportedTags = Halo.TagObjects.TagLayouts.Tags.Keys.ToArray();
+			//string[] supportedTags = Halo.TagObjects.TagLayouts.Tags.Keys.ToArray();
 			string search = Searchbox.Text;
 			foreach (TreeViewItem? tv in TagsTree.Items)
 			{
-				bool isSupportedTag = supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower());
+				bool isSupportedTag = true; // supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower());
 
 				// Ignore tags that are not implemented
 				if ((bool) cbxFilterOnlyMapped.IsChecked && !isSupportedTag)
@@ -1200,7 +1200,7 @@ namespace InfiniteRuntimeTagViewer
 
 		private void cbxFilterOnlyMapped_Changed(object sender, RoutedEventArgs e)
 		{
-			string[] supportedTags = Halo.TagObjects.TagLayouts.Tags.Keys.ToArray();
+			//string[] supportedTags = Halo.TagObjects.TagLayouts.Tags.Keys.ToArray();
 			if (Searchbox != null)
 			{
 				string search = Searchbox.Text;
@@ -1218,7 +1218,7 @@ namespace InfiniteRuntimeTagViewer
 						// Ignore tags that are not implemented
 						if ((bool) cbxFilterOnlyMapped.IsChecked)
 						{
-							tv.Visibility = supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower()) ? Visibility.Visible : Visibility.Collapsed;
+							tv.Visibility = Visibility.Visible;
 						}
 						else
 						{

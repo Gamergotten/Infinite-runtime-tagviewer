@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Marker Groups">
+		<_2 v="Group" />
+		<_40 v="Markers">
+			<_2 v="Visual region name" />
+			<_2 v="Name" />
+			<_2 v="Parent" />
+			<_17 v="Position" />
+			<_1C v="Rotation" />
+			<_19 v="Scale" />
+			<_19 v="Direction" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Hint Marker Groups">
+		<_C v="Hint Type">
+			<Flag v="Bunker" />
+			<Flag v="Corner Left" />
+			<Flag v="Corner Right" />
+			<Flag v="Vault Step" />
+			<Flag v="Vault Crouch" />
+			<Flag v="Hoist Stand" />
+			<Flag v="Hoist Crouch" />
+		</_C>
+		<_40 v="Hint Markers">
+			<_2 v="Visual region name" />
+			<_2 v="Name" />
+			<_2 v="Parent" />
+			<_17 v="Position" />
+			<_1C v="Rotation" />
+			<_19 v="Scale" />
+			<_14 v="Length" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Pathfinding Markers">
+		<_2 v="Name" />
+		<_2 v="Parent" />
+		<_17 v="Position" />
+		<_14 v="Radius" />
+		<_D v="Flags">
+			<Flag v="Vehicle Only" />
+			<Flag v="Remains When Open" />
+		</_D>
+		<_3B v="" />
+	</_40>
+	<_40 v="Target Marker Groups">
+		<_2 v="Group" />
+		<_40 v="Target Markers">
+			<_2 v="Visual region name" />
+			<_2 v="Name" />
+			<_2 v="Parent" />
+			<_17 v="Position" />
+			<_14 v="Radius" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_E v="options">
+		<Flag v="Array Texture Mip Skip" />
+		<Flag v="Use Required Resolution" />
+		<Flag v="Load Skipped Mips" />
+	</_E>
+	<_34 v="generated_pada88a" length="2" />
+	<_36 v="TEXTURE GROUPS" />
+	<_40 v="settings">
+		<_2 v="name" />
+		<_2 v="editor group" />
+		<_36 v="Mips to Drop" />
+		<_38 v="mip settings">
+			<_6 v="Very Low" />
+			<_6 v="Low" />
+			<_6 v="Medium" />
+			<_6 v="High" />
+			<_6 v="Ultra" />
+			<_14 v="2 Player Splitscreen" />
+			<_14 v="3 Player Splitscreen" />
+			<_14 v="4 Player Splitscreen" />
+			<_3B v="" />
+		</_38>
+		<_36 v="Required Resolution" />
+		<_A v="Use Required Resolution Policy">
+			<Flag v="Allow Spec Control Adjustment Of Required Resolution" />
+			<Flag v="Force Use Required Resolution" />
+		</_A>
+		<_34 v="generated_pad6823" length="3" />
+		<_38 v="required resolution settings">
+			<_6 v="Very Low" />
+			<_6 v="Low" />
+			<_6 v="Medium" />
+			<_6 v="High" />
+			<_6 v="Ultra" />
+			<_14 v="2 Player Splitscreen" />
+			<_14 v="3 Player Splitscreen" />
+			<_14 v="4 Player Splitscreen" />
+			<_3B v="" />
+		</_38>
+		<_36 v="Minimum Resolution" />
+		<_38 v="minimum resolution settings">
+			<_6 v="Very Low" />
+			<_6 v="Low" />
+			<_6 v="Medium" />
+			<_6 v="High" />
+			<_6 v="Ultra" />
+			<_14 v="2 Player Splitscreen" />
+			<_14 v="3 Player Splitscreen" />
+			<_14 v="4 Player Splitscreen" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Base" />
+	<_18 v="colorAndRoughnessTextureTransform" />
+	<_18 v="normalTextureTransform" />
+	<_41 v="color_gradient_map" />
+	<_14 v="roughness_white" />
+	<_14 v="roughness_black" />
+	<_41 v="normal_detail_map" />
+	<_14 v="metallic" />
+	<_14 v="ior" />
+	<_14 v="albedo_tint_spec" />
+	<_14 v="sss_strength" />
+	<_37 v="" />
+	<_37 v="Scratches" />
+	<_1F v="scratch_color" />
+	<_14 v="scratch_brightness" />
+	<_14 v="scratch_roughness" />
+	<_14 v="scratch_metallic" />
+	<_14 v="scratch_ior" />
+	<_14 v="scratch_albedo_tint_spec" />
+	<_37 v="" />
+	<_37 v="Subsurface" />
+	<_14 v="sss_intensity" />
+	<_37 v="" />
+	<_40 v="color_variants">
+		<_2 v="name" />
+		<_1F v="gradient_top_color" />
+		<_1F v="gradient_mid_color" />
+		<_1F v="gradient_bottom_color" />
+		<_2 v="notes" />
+		<_2 v="groupName" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

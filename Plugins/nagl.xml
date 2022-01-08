@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="data">
+		<_F v="Clearance Flags">
+			<Flag v="Small clearance enabled" />
+			<Flag v="Medium clearance enabled" />
+			<Flag v="Large clearance enabled" />
+		</_F>
+		<_34 v="generated_pad9bf6" length="3" />
+		<_14 v="clearance bucket radius - small" />
+		<_14 v="clearance bucket radius - medium" />
+		<_14 v="clearance bucket radius - large" />
+		<_14 v="Hoist path cost" />
+		<_14 v="Smash path cost" />
+		<_14 v="Destroy path cost" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padddbd" length="4" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="Links" />
+	<_41 v="RenderModel" />
+	<_41 v="AnimationGraph" />
+	<_D v="pcaFlags">
+		<Flag v="lookup table ready" />
+		<Flag v="resources generated" />
+		<Flag v="resources committed" />
+	</_D>
+	<_6 v="PCA Animation Count" />
+	<_6 v="PCA Checksum" />
+	<_36 v="Imported Data" />
+	<_40 v="frame data">
+		<_42 v="Coefficients" />
+		<_3B v="" />
+	</_40>
+	<_40 v="mesh data">
+		<_6 v="render mesh index" />
+		<_6 v="vertices per shape" />
+		<_6 v="position buffer index" />
+		<_6 v="normal buffer index" />
+		<_19 v="position scale" />
+		<_14 v="tension scale" />
+		<_19 v="position offset" />
+		<_14 v="tension offset" />
+		<_19 v="normal scale" />
+		<_14 v="stretch scale" />
+		<_19 v="normal offset" />
+		<_14 v="stretch offset" />
+		<_36 v="Animations" />
+		<_40 v="animations">
+			<_2 v="Name" />
+			<_6 v="Offset" />
+			<_6 v="Count" />
+			<_6 v="PCA Shape Offset" />
+			<_6 v="PCA coefficient Count" />
+			<_36 v="Resource Data" />
+			<_43 v="CoefficientResource" />
+			<_3B v="" />
+		</_40>
+		<_36 v="Vertices" />
+		<_40 v="raw blendshape verts">
+			<_19 v="position" />
+			<_19 v="normal" />
+			<_20 v="tension and ambient occlusion" />
+			<_3E v="target Id" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_36 v="Resource Data" />
+	<_43 v="api resource" />
+	<_34 v="generated_pad7a1a" length="4" />
+	<_3B v="" />
+</root>

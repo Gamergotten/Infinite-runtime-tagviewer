@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Hair Profiles">
+		<_2 v="Name" />
+		<_1F v="R Color" />
+		<_1F v="TT Color" />
+		<_1F v="TRT Color" />
+		<_19 v="Tangent" />
+		<_14 v="Shift" />
+		<_1F v="Scatter Color" />
+		<_14 v="Scatter Amount" />
+		<_14 v="Direct Scatter Amount" />
+		<_14 v="Indirect Scatter Amount" />
+		<_1F v="AO Color" />
+		<_14 v="AO Color Amount" />
+		<_14 v="Diffuse pow exponent" />
+		<_D v="Flags">
+			<Flag v="conserves energy" />
+		</_D>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad129f" length="4" />
+	<_7 v="shaderAddressableBuffer" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="forge colors">
+		<_2 v="name" />
+		<_1F v="color" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Forge Color References">
+		<_2C v="Default Value" />
+		<_34 v="generated_pad6d1d" length="3" />
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_36 v="Magnets" />
+	<_41 v="magnet effect scenery" />
+	<_2 v="parent magnet marker name" />
+	<_2 v="child magnet marker name" />
+	<_15 v="deprecated, delete me when systems team says it's okay (1)" />
+	<_14 v="deprecated, delete me when systems team says it's okay (2)" />
+	<_14 v="deprecated, delete me when systems team says it's okay (3)" />
+	<_14 v="deprecated, delete me when systems team says it's okay (4)" />
+	<_14 v="deprecated, delete me when systems team says it's okay (5)" />
+	<_14 v="deprecated, delete me when systems team says it's okay (6)" />
+	<_14 v="deprecated, delete me when systems team says it's okay (7)" />
+	<_15 v="deprecated, delete me when systems team says it's okay (8)" />
+	<_36 v="Forge Camera Manipulation" />
+	<_14 v="max object grab range" />
+	<_14 v="default grab distance mult" />
+	<_25 v="min-max grab distance mult" />
+	<_25 v="minimum grab distance threshold" />
+	<_25 v="maximum grab distance threshold" />
+	<_14 v="lock-on time" />
+	<_14 v="grab-cam soft ceiling movement speed" />
+	<_14 v="grab-cam inward spring constant" />
+	<_14 v="grab-cam outward spring constant" />
+	<_14 v="camera-object distance threshold" />
+	<_40 v="monitor speed multipliers">
+		<_2 v="name" />
+		<_14 v="translation speed" />
+		<_14 v="rotation speed" />
+		<_14 v="scale speed" />
+		<_3B v="" />
+	</_40>
+	<_2 v="monitor boost name" />
+	<_14 v="monitor boost translation speed" />
+	<_14 v="monitor boost rotation speed" />
+	<_14 v="monitor boost scale speed" />
+	<_40 v="jumbotron UI element">
+		<_41 v="jumbotron UI element" />
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_38 v="Forge DWS Constants">
+		<_14 v="Min Sun Intensity" />
+		<_14 v="Max Sun Intensity" />
+		<_14 v="Min Static Tint Intensity" />
+		<_14 v="Max Static Tint Intensity" />
+		<_14 v="Min Sky Tint Intensity" />
+		<_14 v="Max Sky Tint Intensity" />
+		<_14 v="Min Wind Speed" />
+		<_14 v="Max Wind Speed" />
+		<_14 v="Min Explicit Camera Exposure" />
+		<_14 v="Max Explicit Camera Exposure" />
+		<_14 v="Default Ranged Camera Exposure" />
+		<_14 v="Max Camera Exposure Range" />
+		<_14 v="Min Fog Distance" />
+		<_14 v="Max Fog Distance" />
+		<_14 v="Min Fog Thickness" />
+		<_14 v="Max Fog Thickness" />
+		<_14 v="Min Fog Color Intensity" />
+		<_14 v="Max Fog Color Intensity" />
+		<_3B v="" />
+	</_38>
+	<_40 v="forge gobo definitions">
+		<_41 v="gobo setting" />
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="forge light intensity function definitions">
+		<_38 v="Intensity Function">
+			<_2 v="Input Variable" />
+			<_2 v="Range Variable" />
+			<_B v="Output Modifier">
+				<Flag v=" " />
+				<Flag v="Plus" />
+				<Flag v="Times" />
+			</_B>
+			<_34 v="generated_padc7e0" length="2" />
+			<_2 v="Output Modifier Input" />
+			<_37 v="Mapping" />
+			<_38 v="Mapping">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="forge area screen effect definitions">
+		<_41 v="area screen effect" />
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="forge weather effect definitions">
+		<_41 v="Weather Effect" />
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="forge patchy fog bitmaps">
+		<_41 v="bitmap" />
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="forge cloud bitmaps">
+		<_41 v="bitmap" />
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="forge lens flares">
+		<_41 v="lens flare" />
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="forge light cones">
+		<_41 v="light cone" />
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="scale snap values">
+		<_2 v="name" />
+		<_14 v="scale snap amount (relative to default size)" />
+		<_3B v="" />
+	</_40>
+	<_40 v="rotation snap values">
+		<_2 v="name" />
+		<_14 v="rotation snap amount (degrees)" />
+		<_3B v="" />
+	</_40>
+	<_40 v="translation snap values">
+		<_2 v="name" />
+		<_14 v="translation snap amount (world units)" />
+		<_3B v="" />
+	</_40>
+	<_41 v="forge required resources" />
+	<_41 v="rotation handle shader" />
+	<_41 v="path preview shader" />
+	<_40 v="global label values">
+		<_2 v="name" />
+		<_2 v="label display name" />
+		<_2 v="label display description" />
+		<_A v="application rule">
+			<Flag v="AllObjects" />
+			<Flag v="OnlySpawnPointsAndZones" />
+			<Flag v="OnlySpawnPoints" />
+			<Flag v="OnlySpawnZones" />
+			<Flag v="OnlyTraitZones" />
+			<Flag v="OnlyFlagStands" />
+			<Flag v="OnlyCinematicObjects" />
+		</_A>
+		<_F v="side effects of label">
+			<Flag v="Only spawn if game mode requires" />
+		</_F>
+		<_34 v="generated_pad20ec" length="2" />
+		<_3B v="" />
+	</_40>
+	<_40 v="outline type definitions">
+		<_41 v="outline type" />
+		<_3B v="" />
+	</_40>
+	<_2 v="Forge Intro Composition Name" />
+	<_40 v="Forge Intro Compositions">
+		<_41 v="Composition Reference" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Forge Outro Composition Template" />
+	<_41 v="Forge Static View Composition Template" />
+	<_40 v="Game Type Cinematic Names">
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Cinematic Player Animations">
+		<_3C v="Player Index In Team" />
+		<_A v="Team Size">
+			<Flag v="FourPlayerTeamSize" />
+			<Flag v="FallbackTeamSize" />
+		</_A>
+		<_A v="Team Relation">
+			<Flag v="MyTeam" />
+			<Flag v="FirstTeamIAmSpectating" />
+			<Flag v="SecondTeamIAmSpectating" />
+		</_A>
+		<_A v="Cinematic Type">
+			<Flag v="Intro" />
+			<Flag v="Outro" />
+			<Flag v="StaticView" />
+		</_A>
+		<_41 v="Model Animation Graph" />
+		<_2 v="Animation Name" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Default Boundary Shader" />
+	<_34 v="generated_padd2ca" length="4" />
+	<_7 v="m_rotationHandlePipelineState" />
+	<_7 v="m_pathPreviewPipelineState" />
+	<_7 v="m_defaultBoundaryPipelineState" />
+	<_7 v="m_handleWithDepthTestState" />
+	<_41 v="Forge Object Manifest" />
+	<_41 v="Forge Named Tag Lists" />
+	<_40 v="Forge NodeGraph Schema">
+		<_42 v="graphSchema" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Forge Script Brain Tag Reference" />
+	<_41 v="Forge Bot Navigation Marker Tag Reference" />
+	<_41 v="Forge Sound Tag Reference" />
+	<_38 v="Forge Ambient Sounds">
+		<_37 v="Forge Ambient Sounds" />
+		<_40 v="Base Air Sounds">
+			<_41 v="Looping Sound Reference" />
+			<_2 v="name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Base Air Sweetener Sounds">
+			<_41 v="Looping Sound Reference" />
+			<_2 v="name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Reverb Environments">
+			<_41 v="Reverb Environment Reference" />
+			<_2 v="name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Mix States">
+			<_2 v="mix state group" />
+			<_2 v="mix state value" />
+			<_2 v="name" />
+			<_3B v="" />
+		</_40>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_41 v="Forge Looping Sound Categories" />
+	<_41 v="Forge Sound Response Sounds" />
+	<_3B v="" />
+</root>

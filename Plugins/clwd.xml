@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_D v="flags">
+		<Flag v="Doesn't use wind" />
+		<Flag v="Uses grid attach top" />
+	</_D>
+	<_2 v="marker attachment name" />
+	<_2 v="secondary axis attachment name" />
+	<_41 v="Shader" />
+	<_36 v="Default cloth vertices" />
+	<_5 v="grid x dimension" />
+	<_5 v="grid y dimension" />
+	<_14 v="grid spacing x" />
+	<_14 v="grid spacing y" />
+	<_40 v="collision spheres">
+		<_2 v="object marker name" />
+		<_14 v="radius" />
+		<_3B v="" />
+	</_40>
+	<_36 v="Cloth Properties" />
+	<_38 v="properties">
+		<_B v="Integration type">
+			<Flag v="verlet" />
+		</_B>
+		<_5 v="Number iterations" />
+		<_14 v="weight" />
+		<_14 v="drag" />
+		<_14 v="wind_scale" />
+		<_14 v="wind_flappiness_scale" />
+		<_14 v="longest_rod" />
+		<_3B v="" />
+	</_38>
+	<_36 v="Import or grid data" />
+	<_40 v="vertices">
+		<_17 v="initial position" />
+		<_18 v="uv" />
+		<_3B v="" />
+	</_40>
+	<_40 v="indices">
+		<_5 v="index" />
+		<_3B v="" />
+	</_40>
+	<_40 v="strip indices">
+		<_5 v="index" />
+		<_3B v="" />
+	</_40>
+	<_40 v="links">
+		<_14 v="default_distance" />
+		<_6 v="index1" />
+		<_6 v="index2" />
+		<_34 v="pad" length="4" />
+		<_3B v="" />
+	</_40>
+	<_7 v="m_pipelineStates" />
+	<_3B v="" />
+</root>

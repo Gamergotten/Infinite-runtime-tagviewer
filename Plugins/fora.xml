@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="$$$ General $$$" />
+	<_41 v="Undo Sound" />
+	<_41 v="Redo Sound" />
+	<_41 v="Monitor Speed Change Sound" />
+	<_41 v="Error Sound" />
+	<_41 v="Menu Opened Sound" />
+	<_41 v="Menu Closed Sound" />
+	<_37 v="" />
+	<_37 v="$$$ Objects $$$" />
+	<_41 v="Object Select Sound" />
+	<_41 v="Object Deselect Sound" />
+	<_41 v="Object Snap Sound" />
+	<_41 v="Object Place Sound" />
+	<_41 v="Object Place Error Sound" />
+	<_41 v="Object Duplicate Sound" />
+	<_41 v="Object Delete Sound" />
+	<_41 v="Object Lock Focus Sound" />
+	<_41 v="Object Hide Sound" />
+	<_41 v="Object Show Sound" />
+	<_41 v="Object Lock Sound" />
+	<_41 v="Object Unlock Sound" />
+	<_41 v="Object Group Sound" />
+	<_41 v="Object Ungroup Sound" />
+	<_41 v="Object Rotate Sound" />
+	<_41 v="Object Scale Sound" />
+	<_41 v="Save Prefab Sound" />
+	<_37 v="" />
+	<_37 v="$$$ Nodegraph $$$" />
+	<_41 v="Nodegraph Enter Editor Sound" />
+	<_41 v="Nodegraph Exit Editor Sound" />
+	<_41 v="Nodegraph Place Node Sound" />
+	<_41 v="Nodegraph Select Node Sound" />
+	<_41 v="Nodegraph Deselect Node Sound" />
+	<_41 v="Nodegraph Connect Nodes Sound" />
+	<_41 v="Nodegraph Disconnect Node Sound" />
+	<_41 v="Nodegraph Delete Node Sound" />
+	<_41 v="Nodegraph Duplicate Node Sound" />
+	<_37 v="" />
+	<_37 v="$$$ Script Validation $$$" />
+	<_41 v="Script Validation Success Sound" />
+	<_41 v="Script Validation Error Sound" />
+	<_37 v="" />
+	<_3B v="" />
+</root>

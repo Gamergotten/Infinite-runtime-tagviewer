@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="material parameters">
+		<_2 v="parameter name" />
+		<_C v="parameter type">
+			<Flag v="bitmap" />
+			<Flag v="real" />
+			<Flag v="int" />
+			<Flag v="bool" />
+			<Flag v="color" />
+			<Flag v="scalar gpu property" />
+			<Flag v="color gpu property" />
+			<Flag v="string" />
+			<Flag v="preset" />
+		</_C>
+		<_41 v="bitmap" />
+		<_20 v="color" />
+		<_14 v="real" />
+		<_19 v="vector" />
+		<_6 v="int/bool" />
+		<_42 v="string" />
+		<_3D v="bitmap flags" />
+		<_3D v="bitmap filter mode" />
+		<_3D v="bitmap address mode" />
+		<_3D v="bitmap address mode x" />
+		<_3D v="bitmap address mode y" />
+		<_3C v="bitmap extern mode" />
+		<_3C v="bitmap min mipmap" />
+		<_3C v="bitmap max mipmap" />
+		<_34 v="generated_padea44" length="3" />
+		<_14 v="bitmap blur and sharpen" />
+		<_F v="parameter flags">
+			<Flag v="texture array" />
+			<Flag v="force bitmap clamp" />
+			<Flag v="disabled" />
+			<Flag v="has transform function" />
+			<Flag v="bindless" />
+		</_F>
+		<_34 v="generated_pad0425" length="3" />
+		<_3E v="render phases used" />
+		<_3E v="shader types used" />
+		<_40 v="function parameters">
+			<_C v="type">
+				<Flag v="value" />
+				<Flag v="color" />
+				<Flag v="scale uniform" />
+				<Flag v="scale u" />
+				<Flag v="scale v" />
+				<Flag v="offset u" />
+				<Flag v="offset v" />
+				<Flag v="frame index" />
+				<Flag v="alpha" />
+			</_C>
+			<_2 v="input name" />
+			<_2 v="range name" />
+			<_A v="Output Modifier">
+				<Flag v=" " />
+				<Flag v="Add" />
+				<Flag v="Multiply" />
+			</_A>
+			<_34 v="generated_pad8305" length="3" />
+			<_2 v="Output Modifier Input" />
+			<_14 v="time period" />
+			<_36 v="FUNCTION" />
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_3D v="register offset" />
+		<_3D v="register size" />
+		<_3C v="bitmap extern index" />
+		<_34 v="generated_pad50da" length="3" />
+		<_3B v="" />
+	</_40>
+	<_40 v="decorator placement datas">
+		<_41 v="decorator asset" />
+		<_14 v="max density" />
+		<_18 v="Scale Range" />
+		<_18 v="Rotation Range" />
+		<_A v="Orientation Alignment">
+			<Flag v="AlwaysUp" />
+			<Flag v="AlignToSlope" />
+			<Flag v="Random" />
+		</_A>
+		<_34 v="generated_pada6fa" length="3" />
+		<_18 v="Vector Mask Angle" />
+		<_14 v="Cull Distance Scale" />
+		<_A v="Vector Mask Mode">
+			<Flag v="UpFacing" />
+			<Flag v="SideFacing" />
+		</_A>
+		<_34 v="generated_padf3af" length="3" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

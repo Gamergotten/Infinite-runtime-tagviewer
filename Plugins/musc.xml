@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_D v="flags">
+		<Flag v="Only play when all local players are aligned" />
+		<Flag v="Don't restore priority on load" />
+	</_D>
+	<_40 v="Music action list">
+		<_C v="Music action">
+			<Flag v="NoAction" />
+			<Flag v="StartEvent" />
+			<Flag v="StopEvent" />
+			<Flag v="TriggerEventTracked" />
+			<Flag v="SetState" />
+			<Flag v="SetSwitch" />
+			<Flag v="SetRTPC" />
+			<Flag v="ResetPriority" />
+		</_C>
+		<_2 v="Name" />
+		<_6 v="Event or Group Name hash" />
+		<_2 v="Group Value" />
+		<_6 v="Value" />
+		<_14 v="Delay Time" />
+		<_3B v="" />
+	</_40>
+	<_6 v="Event priority" />
+	<_37 v="Damage Listener" />
+	<_C v="Force Damage listener">
+		<Flag v="Not Set" />
+		<Flag v="Enabled" />
+		<Flag v="Disabled" />
+	</_C>
+	<_D v="Damage Listener Flags">
+		<Flag v="Use biped combat intensity bypass flags for encounter" />
+	</_D>
+	<_5 v="Damage Threshold" />
+	<_5 v="Enemy tracking proximity" />
+	<_37 v="" />
+	<_37 v="Combat Intensity" />
+	<_C v="Enable Comabat intensities">
+		<Flag v="Not Set" />
+		<Flag v="Enabled" />
+		<Flag v="Disabled" />
+	</_C>
+	<_5 v="Low Combat Threshold" />
+	<_5 v="Medium Combat Threshold" />
+	<_5 v="High Combat Threshold" />
+	<_5 v="Transition Up Slew" />
+	<_5 v="Transition Down Slew" />
+	<_5 v="Tracking Weighted Average Slew Time" />
+	<_37 v="" />
+	<_41 v="Sound Bank" />
+	<_34 v="generated_pad4359" length="4" />
+	<_3B v="" />
+</root>

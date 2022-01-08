@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="recording">
+		<_2 v="type" />
+		<_2 v="name" />
+		<_14 v="time per sample" />
+		<_6 v="num samples" />
+		<_6 v="unit recording version" />
+		<_42 v="recording data" />
+		<_A v="team">
+			<Flag v="Defender" />
+			<Flag v="Attacker" />
+			<Flag v="ThirdParty" />
+			<Flag v="FourthParty" />
+			<Flag v="FifthParty" />
+			<Flag v="SixthParty" />
+			<Flag v="SeventhParty" />
+			<Flag v="EighthParty" />
+			<Flag v="Neutral" />
+		</_A>
+		<_F v="flags">
+			<Flag v="Set Physics To Default On Completion" />
+			<Flag v="Is Player Spawn Intro Recording" />
+			<Flag v="Preserve Final Playback Motion" />
+		</_F>
+		<_34 v="generated_pade268" length="2" />
+		<_41 v="vehicle definition" />
+		<_19 v="finalAngularVelocity" />
+		<_19 v="finalLinearVelocity" />
+		<_3B v="" />
+	</_38>
+	<_34 v="generated_padacb9" length="4" />
+	<_3B v="" />
+</root>

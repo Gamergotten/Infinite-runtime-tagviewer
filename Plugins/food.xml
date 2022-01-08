@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="Static IO Representation" />
+	<_2 v="Asset variant to be used with the Static IO Representation." />
+	<_40 v="Object Representations">
+		<_2 v="Representation Name" />
+		<_2 v="Crate Variant" />
+		<_41 v="Configuration" />
+		<_41 v="Object Definition (Crate)" />
+		<_41 v="Menu Item Definitions" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Runtime Variants">
+		<_2 v="Variant Name" />
+		<_41 v="Runtime Underlying Geo (Static IO)" />
+		<_41 v="Runtime Underlying Collision Geo (Static IO)" />
+		<_41 v="Runtime Underlying Material Palette (Static IO)" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Runtime Telescoping Asset" />
+	<_41 v="Forge Kit" />
+	<_2 v="Default Representation (Asset Variant or Object Representation Name)" />
+	<_38 v="Configuration Options">
+		<_E v="Property Flags">
+			<Flag v="Yaw Rotation Only" />
+			<Flag v="Allow In-Game Variant Toggle" />
+			<Flag v="Disable Primary Color" />
+			<Flag v="Disable Secondary Color" />
+			<Flag v="Disable Teritary Color" />
+			<Flag v="Disable Normal Physics" />
+			<Flag v="Disable Fixed Physics" />
+			<Flag v="Disable Phased Physics" />
+		</_E>
+		<_34 v="generated_padffaf" length="2" />
+		<_19 v="Starting yaw/pitch/roll" />
+		<_B v="Default Physics Mode">
+			<Flag v="Phased" />
+			<Flag v="Fixed" />
+		</_B>
+		<_B v="Collision Mode">
+			<Flag v="Edit time (Forge) and Run Time (Game)" />
+			<Flag v="Edit Time (Forge)" />
+		</_B>
+		<_37 v="Scale Limits" />
+		<_B v="Scale Limit Type">
+			<Flag v="Unset" />
+			<Flag v="Scale Multiplier" />
+			<Flag v="World Size" />
+		</_B>
+		<_34 v="generated_padb2fa" length="2" />
+		<_19 v="Starting Scale" />
+		<_19 v="Minimum Scale" />
+		<_19 v="Maximum Scale" />
+		<_19 v="Unscaled Size" />
+		<_37 v="" />
+		<_37 v="Material Settings" />
+		<_37 v="Region 1" />
+		<_38 v="Settings (Region 1)">
+			<_40 v="Swatch Groups">
+				<_2 v="Swatch Group Name" />
+				<_3B v="" />
+			</_40>
+			<_A v="Force Region Always Visible">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Swatch Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Color Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Roughness Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Metalness  Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_34 v="generated_padc70f" length="3" />
+			<_2 v="Color Variant" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Region 2" />
+		<_38 v="Settings (Region 2)">
+			<_40 v="Swatch Groups">
+				<_2 v="Swatch Group Name" />
+				<_3B v="" />
+			</_40>
+			<_A v="Force Region Always Visible">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Swatch Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Color Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Roughness Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Metalness  Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_34 v="generated_padc70f" length="3" />
+			<_2 v="Color Variant" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Region 3" />
+		<_38 v="Settings (Region 3)">
+			<_40 v="Swatch Groups">
+				<_2 v="Swatch Group Name" />
+				<_3B v="" />
+			</_40>
+			<_A v="Force Region Always Visible">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Swatch Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Color Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Roughness Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Metalness  Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_34 v="generated_padc70f" length="3" />
+			<_2 v="Color Variant" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Overlay" />
+		<_38 v="Settings (Overlay)">
+			<_40 v="Swatch Groups">
+				<_2 v="Swatch Group Name" />
+				<_3B v="" />
+			</_40>
+			<_A v="Force Region Always Visible">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Swatch Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Color Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Roughness Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_A v="Is Metalness  Editable">
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_A>
+			<_34 v="generated_padc70f" length="3" />
+			<_2 v="Color Variant" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_34 v="generated_pad750f" length="4" />
+	<_3B v="" />
+</root>

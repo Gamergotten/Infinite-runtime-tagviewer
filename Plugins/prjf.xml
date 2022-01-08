@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="flyby enter sound" />
+	<_41 v="flyby exit sound" />
+	<_2 v="flyby switch container name" />
+	<_5 v="flyby sound variations" />
+	<_5 v="Avoid repeating the last" />
+	<_14 v="flyby sound stereo width/pan" />
+	<_14 v="flyby sound enter offset" />
+	<_14 v="flyby sound exit offset" />
+	<_34 v="generated_pad9d4f" length="4" />
+	<_3B v="" />
+</root>

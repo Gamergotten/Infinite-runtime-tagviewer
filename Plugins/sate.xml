@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="teleport">
+		<_38 v="common ability parameters">
+			<_37 v="common ability parameters" />
+			<_C v="input">
+				<Flag v="Default" />
+				<Flag v="Mobility" />
+				<Flag v="Suit" />
+				<Flag v="Jump" />
+				<Flag v="Equipment" />
+				<Flag v="Melee" />
+				<Flag v="PowerUp" />
+				<Flag v="Unmapped" />
+			</_C>
+			<_D v="flags">
+				<Flag v="Use 3rd Person Camera When Active" />
+				<Flag v="Hide Reticle When Active" />
+				<Flag v="Is Motion Tracked (By Enemies) When Active" />
+				<Flag v="One-Shot Activation Effect" />
+				<Flag v="Can be activated when weapon state is relaxed" />
+				<Flag v="Does Not Appear In Extended Motion Tracker Range" />
+				<Flag v="Energy persists across deaths" />
+				<Flag v="Activation interrupts weapon switching" />
+				<Flag v="Allow activation during weapon throw" />
+				<Flag v="Allow activation while sliding" />
+			</_D>
+			<_15 v="activation energy cost" />
+			<_14 v="active energy consumption" />
+			<_14 v="recharge duration" />
+			<_14 v="recharge delay" />
+			<_14 v="cooldown delay" />
+			<_41 v="activation effect" />
+			<_14 v="activation effect kill delay" />
+			<_A v="sprint preservation">
+				<Flag v="No" />
+				<Flag v="Zero fraction" />
+				<Flag v="Retain fraction" />
+				<Flag v="Decay (normal)" />
+				<Flag v="Decay (forced)" />
+			</_A>
+			<_34 v="generated_pad0aca" length="3" />
+			<_41 v="active malleable property modifiers" />
+			<_41 v="timed malleable property modifiers" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_D v="teleport flags">
+			<Flag v="Must be airborne to activate" />
+			<Flag v="Must land again after activating" />
+			<Flag v="Preserve relative velocity" />
+			<Flag v="Allow crouch" />
+			<Flag v="Allow jump" />
+			<Flag v="Latch input" />
+			<Flag v="Show aim effect to other players" />
+		</_D>
+		<_36 v="Stabilization/Charge up" />
+		<_40 v="stabilizer">
+			<_38 v="common ability parameters">
+				<_37 v="common ability parameters" />
+				<_C v="input">
+					<Flag v="Default" />
+					<Flag v="Mobility" />
+					<Flag v="Suit" />
+					<Flag v="Jump" />
+					<Flag v="Equipment" />
+					<Flag v="Melee" />
+					<Flag v="PowerUp" />
+					<Flag v="Unmapped" />
+				</_C>
+				<_D v="flags">
+					<Flag v="Use 3rd Person Camera When Active" />
+					<Flag v="Hide Reticle When Active" />
+					<Flag v="Is Motion Tracked (By Enemies) When Active" />
+					<Flag v="One-Shot Activation Effect" />
+					<Flag v="Can be activated when weapon state is relaxed" />
+					<Flag v="Does Not Appear In Extended Motion Tracker Range" />
+					<Flag v="Energy persists across deaths" />
+					<Flag v="Activation interrupts weapon switching" />
+					<Flag v="Allow activation during weapon throw" />
+					<Flag v="Allow activation while sliding" />
+				</_D>
+				<_15 v="activation energy cost" />
+				<_14 v="active energy consumption" />
+				<_14 v="recharge duration" />
+				<_14 v="recharge delay" />
+				<_14 v="cooldown delay" />
+				<_41 v="activation effect" />
+				<_14 v="activation effect kill delay" />
+				<_A v="sprint preservation">
+					<Flag v="No" />
+					<Flag v="Zero fraction" />
+					<Flag v="Retain fraction" />
+					<Flag v="Decay (normal)" />
+					<Flag v="Decay (forced)" />
+				</_A>
+				<_34 v="generated_pad0aca" length="3" />
+				<_41 v="active malleable property modifiers" />
+				<_41 v="timed malleable property modifiers" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_D v="flags">
+				<Flag v="Must land again after activating" />
+				<Flag v="Auto activate only if already in the air" />
+				<Flag v="Independent of ADS" />
+				<Flag v="Vertical only" />
+				<Flag v="Allow air control" />
+				<Flag v="Limit upwards motion post stall" />
+			</_D>
+			<_14 v="minimum height above floor" />
+			<_14 v="activation deceleration" />
+			<_14 v="stall duration" />
+			<_37 v="malleable time limit" />
+			<_38 v="malleable time limit">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_14 v="cooldown" />
+			<_37 v="malleable time scale" />
+			<_38 v="malleable time scale">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_14 v="max horizontal speed" />
+			<_38 v="vertical speed boost at exit">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_41 v="rumble" />
+			<_3B v="" />
+		</_40>
+		<_36 v="Charge Up Settings" />
+		<_14 v="charge up button down delay" />
+		<_14 v="charge up min time" />
+		<_14 v="charge up max distance time" />
+		<_14 v="charge up auto release time" />
+		<_36 v="Teleport" />
+		<_41 v="teleport ready effect" />
+		<_41 v="teleport post ready effect" />
+		<_15 v="teleport post ready effect activation fraction" />
+		<_15 v="teleport activation energy cost" />
+		<_41 v="teleport source effect" />
+		<_41 v="teleport destination effect" />
+		<_41 v="teleport fail effect" />
+		<_36 v="Aiming" />
+		<_A v="aim style">
+			<Flag v="Swept capsule" />
+			<Flag v="Swept sphere" />
+		</_A>
+		<_A v="capsule positioning">
+			<Flag v="Base" />
+			<Flag v="Center" />
+			<Flag v="Camera" />
+			<Flag v="Top" />
+		</_A>
+		<_34 v="generated_paddaca" length="2" />
+		<_41 v="aim effect" />
+		<_25 v="aim distance" />
+		<_14 v="swept shape pull back distance" />
+		<_14 v="swept sphere radius" />
+		<_36 v="Object function ids" />
+		<_2 v="overlay animation function id" />
+		<_2 v="charge up fraction function id" />
+		<_2 v="obstructed function id" />
+		<_36 v="FOV delta function (charge up)" />
+		<_37 v="FOV delta function (charge up)" />
+		<_38 v="FOV delta function charge up">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

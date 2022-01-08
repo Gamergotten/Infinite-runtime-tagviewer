@@ -1,0 +1,917 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_38 v="exposure">
+		<_37 v="" />
+		<_36 v="EXPOSURE" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="auto-adjust target" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad3d40" length="2" />
+		<_14 v="exposure" />
+		<_14 v="maximum change" />
+		<_14 v="blend speed (0-1)" />
+		<_14 v="minimum" />
+		<_14 v="maximum" />
+		<_37 v="" />
+		<_14 v="auto-exposure screen brightness" />
+		<_14 v="exposure offset" />
+		<_14 v="sky exposure offset (stops)" />
+		<_37 v="" />
+		<_14 v="prevent fluctuation time range" />
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_38 v="auto_exposure_sensitivity">
+		<_36 v="AUTO EXPOSURE SENSITIVITY" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_padf2eb" length="2" />
+		<_14 v="sensitivity (0-1)" />
+		<_3B v="" />
+	</_38>
+	<_38 v="exposure pitch influence">
+		<_36 v="EXPOSURE PITCH INFLUENCE" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad3993" length="2" />
+		<_36 v="INFLUENCE FUNCTION (GROUND -&gt; HORIZON -&gt; SKY)" />
+		<_37 v="function" />
+		<_38 v="function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="exposure compensation">
+		<_36 v="EXPOSURE COMPENSATION" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad19de" length="2" />
+		<_36 v="COMPENSATION FUNCTION (EXPOSURE MIN -&gt; EXPOSURE MAX)" />
+		<_37 v="function" />
+		<_38 v="function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="bloom_highlight">
+		<_36 v="HIGHLIGHT BLOOM" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_paddc8c" length="2" />
+		<_14 v="highlight bloom" />
+		<_14 v="maximum change" />
+		<_14 v="blend speed (0-1)" />
+		<_3B v="" />
+	</_38>
+	<_38 v="bloom_highlight_threshold">
+		<_36 v="HIGHLIGHT BLOOM THRESHOLD" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_padedb3" length="2" />
+		<_14 v="highlight bloom threshold" />
+		<_14 v="maximum change" />
+		<_14 v="blend speed (0-1)" />
+		<_3B v="" />
+	</_38>
+	<_38 v="bloom_inherent">
+		<_36 v="AMBIENT BLOOM" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_padfee3" length="2" />
+		<_14 v="ambient bloom" />
+		<_14 v="maximum change" />
+		<_14 v="blend speed (0-1)" />
+		<_3B v="" />
+	</_38>
+	<_38 v="bloom_intensity">
+		<_36 v="BLOOM INTENSITY" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad4287" length="2" />
+		<_14 v="bloom intensity" />
+		<_14 v="maximum change" />
+		<_14 v="blend speed (0-1)" />
+		<_3B v="" />
+	</_38>
+	<_38 v="bloom_layer_intensity">
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad8248" length="2" />
+		<_14 v="large layer intensity" />
+		<_14 v="medium layer intensity" />
+		<_14 v="small layer intensity" />
+		<_14 v="maximum change" />
+		<_14 v="blend speed (0-1)" />
+		<_3B v="" />
+	</_38>
+	<_38 v="bloom_tint_color">
+		<_36 v="BLOOM TINT COLOR" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad8bf4" length="2" />
+		<_1F v="tint color" />
+		<_3B v="" />
+	</_38>
+	<_38 v="self_illum_exposure_settings">
+		<_36 v="SELF ILLUM EXPOSURE" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad01be" length="2" />
+		<_14 v="preferred exposure" />
+		<_14 v="maximum change" />
+		<_14 v="blend speed (0-1)" />
+		<_3B v="" />
+	</_38>
+	<_38 v="self_illum_scale">
+		<_36 v="SELF ILLUM CHANGE" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad5a4a" length="2" />
+		<_14 v="exposure change" />
+		<_14 v="maximum change" />
+		<_14 v="blend speed (0-1)" />
+		<_3B v="" />
+	</_38>
+	<_36 v="SELF ILLUM MATERIAL SHADER FUNCTION PARAMETER - (UNSC)" />
+	<_38 v="self_illum_scale_unsc">
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad7166" length="2" />
+		<_14 v="parameter value" />
+		<_14 v="maximum change" />
+		<_14 v="blend speed (0-1)" />
+		<_3B v="" />
+	</_38>
+	<_36 v="SELF ILLUM MATERIAL SHADER FUNCTION PARAMETER - (Covenant)" />
+	<_38 v="self_illum_scale_covenant">
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad7166" length="2" />
+		<_14 v="parameter value" />
+		<_14 v="maximum change" />
+		<_14 v="blend speed (0-1)" />
+		<_3B v="" />
+	</_38>
+	<_36 v="SELF ILLUM MATERIAL SHADER FUNCTION PARAMETER - (Forerunner)" />
+	<_38 v="self_illum_scale_forerunner">
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad7166" length="2" />
+		<_14 v="parameter value" />
+		<_14 v="maximum change" />
+		<_14 v="blend speed (0-1)" />
+		<_3B v="" />
+	</_38>
+	<_36 v="EFFECT EXPOSURE OVERRIDE" />
+	<_41 v="effect exposure override" />
+	<_38 v="color_grading">
+		<_36 v="Color Grading" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="(unused2)" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad78c0" length="2" />
+		<_41 v="color grading texture" />
+		<_41 v="hdr color grading texture" />
+		<_14 v="blend time" />
+		<_3B v="" />
+	</_38>
+	<_38 v="ssao_settings">
+		<_36 v="SSAO settings" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="enabled" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad4870" length="2" />
+		<_E v="ssao flags">
+			<Flag v="SSAO enabled" />
+		</_E>
+		<_34 v="generated_pad76e4" length="2" />
+		<_14 v="Radius" />
+		<_3E v="Step size" />
+		<_14 v="Angle bias" />
+		<_14 v="Strength" />
+		<_14 v="Power exponent" />
+		<_3E v="Blur radius" />
+		<_14 v="Blur sharpness" />
+		<_14 v="Decorator apply darkening scaler" />
+		<_14 v="Hemi rejection falloff" />
+		<_14 v="GTAO Intensity" />
+		<_14 v="Sun AO" />
+		<_14 v="Spot Light AO" />
+		<_14 v="Omni Light AO" />
+		<_3B v="" />
+	</_38>
+	<_38 v="deferred_reflections_settings">
+		<_36 v="Deferred Reflections settings" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="enabled" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_padbf0e" length="2" />
+		<_D v="deferred reflection flags">
+			<Flag v="Enabled" />
+			<Flag v="Include Transparents" />
+		</_D>
+		<_14 v="Intensity" />
+		<_14 v="Intensity First Person" />
+		<_14 v="Fade to Cubemap" />
+		<_14 v="Border Fade Size" />
+		<_38 v="Ray Steps">
+			<_A v="Type">
+				<Flag v="Default" />
+				<Flag v="Sync" />
+				<Flag v="HDR" />
+				<Flag v="Reflections" />
+				<Flag v="VolumetricFog" />
+				<Flag v="Shadows" />
+				<Flag v="Sky" />
+				<Flag v="TAA" />
+				<Flag v="Ambient Occlusion" />
+				<Flag v="DOF" />
+				<Flag v="Aniso" />
+				<Flag v="Terrain" />
+				<Flag v="Tesselation" />
+				<Flag v="Lighting" />
+				<Flag v="Decorators" />
+				<Flag v="Asset Category" />
+				<Flag v="Dynamic Wind" />
+				<Flag v="Push Bending" />
+				<Flag v="Hlod" />
+				<Flag v="Visual Damage" />
+				<Flag v="Virtual Texturing" />
+				<Flag v="Effects" />
+				<Flag v="Emblem Quality" />
+				<Flag v="Texture Quality" />
+				<Flag v="Decals" />
+			</_A>
+			<_34 v="generated_pad11b5" length="3" />
+			<_D v="Flags">
+				<Flag v="Override Input" />
+			</_D>
+			<_6 v="Input" />
+			<_14 v="Very Low" />
+			<_14 v="Low" />
+			<_14 v="Medium" />
+			<_14 v="High" />
+			<_14 v="Ultra" />
+			<_A v="Splitscreen Logic">
+				<Flag v="Off" />
+				<Flag v="Multiply" />
+				<Flag v="Add" />
+			</_A>
+			<_34 v="generated_padf7d4" length="3" />
+			<_14 v="2 Player Splitscreen" />
+			<_14 v="3 Player Splitscreen" />
+			<_14 v="4 Player Splitscreen" />
+			<_3B v="" />
+		</_38>
+		<_14 v="Mip Blur Distance Scale" />
+		<_14 v="Depth thickness" />
+		<_14 v="SSR Near Fade Distance" />
+		<_14 v="SSR Far Fade Distance" />
+		<_14 v="SSR Roughness Threshold" />
+		<_14 v="SSR Tonemap Strength" />
+		<_14 v="SSR Tonemap Clamp" />
+		<_38 v="Resolution">
+			<_A v="Type">
+				<Flag v="Default" />
+				<Flag v="Sync" />
+				<Flag v="HDR" />
+				<Flag v="Reflections" />
+				<Flag v="VolumetricFog" />
+				<Flag v="Shadows" />
+				<Flag v="Sky" />
+				<Flag v="TAA" />
+				<Flag v="Ambient Occlusion" />
+				<Flag v="DOF" />
+				<Flag v="Aniso" />
+				<Flag v="Terrain" />
+				<Flag v="Tesselation" />
+				<Flag v="Lighting" />
+				<Flag v="Decorators" />
+				<Flag v="Asset Category" />
+				<Flag v="Dynamic Wind" />
+				<Flag v="Push Bending" />
+				<Flag v="Hlod" />
+				<Flag v="Visual Damage" />
+				<Flag v="Virtual Texturing" />
+				<Flag v="Effects" />
+				<Flag v="Emblem Quality" />
+				<Flag v="Texture Quality" />
+				<Flag v="Decals" />
+			</_A>
+			<_34 v="generated_padf78c" length="3" />
+			<_D v="Flags">
+				<Flag v="Override Input" />
+			</_D>
+			<_14 v="Input" />
+			<_14 v="Very Low" />
+			<_14 v="Low" />
+			<_14 v="Medium" />
+			<_14 v="High" />
+			<_14 v="Ultra" />
+			<_A v="Splitscreen Logic">
+				<Flag v="Off" />
+				<Flag v="Multiply" />
+				<Flag v="Add" />
+			</_A>
+			<_34 v="generated_pad116d" length="3" />
+			<_14 v="2 Player Splitscreen" />
+			<_14 v="3 Player Splitscreen" />
+			<_14 v="4 Player Splitscreen" />
+			<_3B v="" />
+		</_38>
+		<_38 v="SSR Enabled">
+			<_A v="Type">
+				<Flag v="Default" />
+				<Flag v="Sync" />
+				<Flag v="HDR" />
+				<Flag v="Reflections" />
+				<Flag v="VolumetricFog" />
+				<Flag v="Shadows" />
+				<Flag v="Sky" />
+				<Flag v="TAA" />
+				<Flag v="Ambient Occlusion" />
+				<Flag v="DOF" />
+				<Flag v="Aniso" />
+				<Flag v="Terrain" />
+				<Flag v="Tesselation" />
+				<Flag v="Lighting" />
+				<Flag v="Decorators" />
+				<Flag v="Asset Category" />
+				<Flag v="Dynamic Wind" />
+				<Flag v="Push Bending" />
+				<Flag v="Hlod" />
+				<Flag v="Visual Damage" />
+				<Flag v="Virtual Texturing" />
+				<Flag v="Effects" />
+				<Flag v="Emblem Quality" />
+				<Flag v="Texture Quality" />
+				<Flag v="Decals" />
+			</_A>
+			<_38 v="Low">
+				<_F v="Single Player">
+					<Flag v="True" />
+				</_F>
+				<_F v="2 Player Splitscreen">
+					<Flag v="True" />
+				</_F>
+				<_F v="3 Player Splitscreen">
+					<Flag v="True" />
+				</_F>
+				<_F v="4 Player Splitscreen">
+					<Flag v="True" />
+				</_F>
+				<_3B v="" />
+			</_38>
+			<_38 v="Medium">
+				<_F v="Single Player">
+					<Flag v="True" />
+				</_F>
+				<_F v="2 Player Splitscreen">
+					<Flag v="True" />
+				</_F>
+				<_F v="3 Player Splitscreen">
+					<Flag v="True" />
+				</_F>
+				<_F v="4 Player Splitscreen">
+					<Flag v="True" />
+				</_F>
+				<_3B v="" />
+			</_38>
+			<_38 v="High">
+				<_F v="Single Player">
+					<Flag v="True" />
+				</_F>
+				<_F v="2 Player Splitscreen">
+					<Flag v="True" />
+				</_F>
+				<_F v="3 Player Splitscreen">
+					<Flag v="True" />
+				</_F>
+				<_F v="4 Player Splitscreen">
+					<Flag v="True" />
+				</_F>
+				<_3B v="" />
+			</_38>
+			<_38 v="Ultra">
+				<_F v="Single Player">
+					<Flag v="True" />
+				</_F>
+				<_F v="2 Player Splitscreen">
+					<Flag v="True" />
+				</_F>
+				<_F v="3 Player Splitscreen">
+					<Flag v="True" />
+				</_F>
+				<_F v="4 Player Splitscreen">
+					<Flag v="True" />
+				</_F>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_34 v="generated_pad2316" length="3" />
+		<_3B v="" />
+	</_38>
+	<_38 v="camera lens dirt">
+		<_36 v="Camera Lens Dirt Settings" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="enabled" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad28b2" length="2" />
+		<_14 v="Intensity" />
+		<_41 v="dirt texture" />
+		<_A v="Dirt Type">
+			<Flag v="Apply at bloom res" />
+			<Flag v="Apply at full res" />
+		</_A>
+		<_34 v="generated_pad409c" length="3" />
+		<_3B v="" />
+	</_38>
+	<_38 v="contact shadows">
+		<_36 v="Sun Contact Shadow Settings" />
+		<_E v="flags">
+			<Flag v="use default (ignore these values)" />
+			<Flag v="maximum change is relative" />
+			<Flag v="(unused)" />
+			<Flag v="bit3" />
+			<Flag v="fixed" />
+			<Flag v="enabled" />
+			<Flag v="fixed2" />
+		</_E>
+		<_34 v="generated_pad3bce" length="2" />
+		<_D v="Contact Shadow Flags">
+			<Flag v="Enabled" />
+		</_D>
+		<_38 v="Enabled">
+			<_A v="Type">
+				<Flag v="Default" />
+				<Flag v="Sync" />
+				<Flag v="HDR" />
+				<Flag v="Reflections" />
+				<Flag v="VolumetricFog" />
+				<Flag v="Shadows" />
+				<Flag v="Sky" />
+				<Flag v="TAA" />
+				<Flag v="Ambient Occlusion" />
+				<Flag v="DOF" />
+				<Flag v="Aniso" />
+				<Flag v="Terrain" />
+				<Flag v="Tesselation" />
+				<Flag v="Lighting" />
+				<Flag v="Decorators" />
+				<Flag v="Asset Category" />
+				<Flag v="Dynamic Wind" />
+				<Flag v="Push Bending" />
+				<Flag v="Hlod" />
+				<Flag v="Visual Damage" />
+				<Flag v="Virtual Texturing" />
+				<Flag v="Effects" />
+				<Flag v="Emblem Quality" />
+				<Flag v="Texture Quality" />
+				<Flag v="Decals" />
+			</_A>
+			<_34 v="generated_padfbf4" length="1" />
+			<_E v="Flags">
+				<Flag v="Very Low" />
+				<Flag v="Low" />
+				<Flag v="Medium" />
+				<Flag v="High" />
+				<Flag v="Ultra" />
+			</_E>
+			<_3B v="" />
+		</_38>
+		<_38 v="Ray Steps">
+			<_A v="Type">
+				<Flag v="Default" />
+				<Flag v="Sync" />
+				<Flag v="HDR" />
+				<Flag v="Reflections" />
+				<Flag v="VolumetricFog" />
+				<Flag v="Shadows" />
+				<Flag v="Sky" />
+				<Flag v="TAA" />
+				<Flag v="Ambient Occlusion" />
+				<Flag v="DOF" />
+				<Flag v="Aniso" />
+				<Flag v="Terrain" />
+				<Flag v="Tesselation" />
+				<Flag v="Lighting" />
+				<Flag v="Decorators" />
+				<Flag v="Asset Category" />
+				<Flag v="Dynamic Wind" />
+				<Flag v="Push Bending" />
+				<Flag v="Hlod" />
+				<Flag v="Visual Damage" />
+				<Flag v="Virtual Texturing" />
+				<Flag v="Effects" />
+				<Flag v="Emblem Quality" />
+				<Flag v="Texture Quality" />
+				<Flag v="Decals" />
+			</_A>
+			<_34 v="generated_pad11b5" length="3" />
+			<_D v="Flags">
+				<Flag v="Override Input" />
+			</_D>
+			<_6 v="Input" />
+			<_14 v="Very Low" />
+			<_14 v="Low" />
+			<_14 v="Medium" />
+			<_14 v="High" />
+			<_14 v="Ultra" />
+			<_A v="Splitscreen Logic">
+				<Flag v="Off" />
+				<Flag v="Multiply" />
+				<Flag v="Add" />
+			</_A>
+			<_34 v="generated_padf7d4" length="3" />
+			<_14 v="2 Player Splitscreen" />
+			<_14 v="3 Player Splitscreen" />
+			<_14 v="4 Player Splitscreen" />
+			<_3B v="" />
+		</_38>
+		<_14 v="Ray Steps First Person Scalar" />
+		<_38 v="Maximum Shadow Ray Length">
+			<_A v="Type">
+				<Flag v="Default" />
+				<Flag v="Sync" />
+				<Flag v="HDR" />
+				<Flag v="Reflections" />
+				<Flag v="VolumetricFog" />
+				<Flag v="Shadows" />
+				<Flag v="Sky" />
+				<Flag v="TAA" />
+				<Flag v="Ambient Occlusion" />
+				<Flag v="DOF" />
+				<Flag v="Aniso" />
+				<Flag v="Terrain" />
+				<Flag v="Tesselation" />
+				<Flag v="Lighting" />
+				<Flag v="Decorators" />
+				<Flag v="Asset Category" />
+				<Flag v="Dynamic Wind" />
+				<Flag v="Push Bending" />
+				<Flag v="Hlod" />
+				<Flag v="Visual Damage" />
+				<Flag v="Virtual Texturing" />
+				<Flag v="Effects" />
+				<Flag v="Emblem Quality" />
+				<Flag v="Texture Quality" />
+				<Flag v="Decals" />
+			</_A>
+			<_34 v="generated_padf78c" length="3" />
+			<_D v="Flags">
+				<Flag v="Override Input" />
+			</_D>
+			<_14 v="Input" />
+			<_14 v="Very Low" />
+			<_14 v="Low" />
+			<_14 v="Medium" />
+			<_14 v="High" />
+			<_14 v="Ultra" />
+			<_A v="Splitscreen Logic">
+				<Flag v="Off" />
+				<Flag v="Multiply" />
+				<Flag v="Add" />
+			</_A>
+			<_34 v="generated_pad116d" length="3" />
+			<_14 v="2 Player Splitscreen" />
+			<_14 v="3 Player Splitscreen" />
+			<_14 v="4 Player Splitscreen" />
+			<_3B v="" />
+		</_38>
+		<_14 v="Maximum Shadow Ray Length First Person Scalar" />
+		<_38 v="Ray Pixel Stride">
+			<_A v="Type">
+				<Flag v="Default" />
+				<Flag v="Sync" />
+				<Flag v="HDR" />
+				<Flag v="Reflections" />
+				<Flag v="VolumetricFog" />
+				<Flag v="Shadows" />
+				<Flag v="Sky" />
+				<Flag v="TAA" />
+				<Flag v="Ambient Occlusion" />
+				<Flag v="DOF" />
+				<Flag v="Aniso" />
+				<Flag v="Terrain" />
+				<Flag v="Tesselation" />
+				<Flag v="Lighting" />
+				<Flag v="Decorators" />
+				<Flag v="Asset Category" />
+				<Flag v="Dynamic Wind" />
+				<Flag v="Push Bending" />
+				<Flag v="Hlod" />
+				<Flag v="Visual Damage" />
+				<Flag v="Virtual Texturing" />
+				<Flag v="Effects" />
+				<Flag v="Emblem Quality" />
+				<Flag v="Texture Quality" />
+				<Flag v="Decals" />
+			</_A>
+			<_34 v="generated_padf78c" length="3" />
+			<_D v="Flags">
+				<Flag v="Override Input" />
+			</_D>
+			<_14 v="Input" />
+			<_14 v="Very Low" />
+			<_14 v="Low" />
+			<_14 v="Medium" />
+			<_14 v="High" />
+			<_14 v="Ultra" />
+			<_A v="Splitscreen Logic">
+				<Flag v="Off" />
+				<Flag v="Multiply" />
+				<Flag v="Add" />
+			</_A>
+			<_34 v="generated_pad116d" length="3" />
+			<_14 v="2 Player Splitscreen" />
+			<_14 v="3 Player Splitscreen" />
+			<_14 v="4 Player Splitscreen" />
+			<_3B v="" />
+		</_38>
+		<_14 v="First Person Pixel Stride First Person Scalar" />
+		<_14 v="Average Occluder Thickness" />
+		<_14 v="Average Occluder Thickness First Person" />
+		<_14 v="Shadow Softness Scale" />
+		<_14 v="Shadow Softness Scale First Person" />
+		<_14 v="Shadow Fade Start Distance" />
+		<_14 v="Shadow Fade End Distance" />
+		<_14 v="Global Opacity" />
+		<_14 v="Global Opacity First Person" />
+		<_38 v="Global Opacity Fade Multiplier">
+			<_A v="Type">
+				<Flag v="Default" />
+				<Flag v="Sync" />
+				<Flag v="HDR" />
+				<Flag v="Reflections" />
+				<Flag v="VolumetricFog" />
+				<Flag v="Shadows" />
+				<Flag v="Sky" />
+				<Flag v="TAA" />
+				<Flag v="Ambient Occlusion" />
+				<Flag v="DOF" />
+				<Flag v="Aniso" />
+				<Flag v="Terrain" />
+				<Flag v="Tesselation" />
+				<Flag v="Lighting" />
+				<Flag v="Decorators" />
+				<Flag v="Asset Category" />
+				<Flag v="Dynamic Wind" />
+				<Flag v="Push Bending" />
+				<Flag v="Hlod" />
+				<Flag v="Visual Damage" />
+				<Flag v="Virtual Texturing" />
+				<Flag v="Effects" />
+				<Flag v="Emblem Quality" />
+				<Flag v="Texture Quality" />
+				<Flag v="Decals" />
+			</_A>
+			<_34 v="generated_pad4417" length="3" />
+			<_38 v="Low">
+				<_14 v="Single Player" />
+				<_14 v="2 Player Splitscreen" />
+				<_14 v="3 Player Splitscreen" />
+				<_14 v="4 Player Splitscreen" />
+				<_3B v="" />
+			</_38>
+			<_38 v="Medium">
+				<_14 v="Single Player" />
+				<_14 v="2 Player Splitscreen" />
+				<_14 v="3 Player Splitscreen" />
+				<_14 v="4 Player Splitscreen" />
+				<_3B v="" />
+			</_38>
+			<_38 v="High">
+				<_14 v="Single Player" />
+				<_14 v="2 Player Splitscreen" />
+				<_14 v="3 Player Splitscreen" />
+				<_14 v="4 Player Splitscreen" />
+				<_3B v="" />
+			</_38>
+			<_38 v="Ultra">
+				<_14 v="Single Player" />
+				<_14 v="2 Player Splitscreen" />
+				<_14 v="3 Player Splitscreen" />
+				<_14 v="4 Player Splitscreen" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_14 v="Ray Start Bias" />
+		<_14 v="Ray Start Bias Far Distance" />
+		<_14 v="Ray Start Bias Offset At Far Distance" />
+		<_14 v="Ray Start Bias First Person" />
+		<_14 v="First Person Transition Scalar" />
+		<_14 v="Normal Bias First Person" />
+		<_14 v="Normal Bias Near" />
+		<_14 v="Normal Bias Far" />
+		<_14 v="FOV Slope Near Bias Scalar" />
+		<_38 v="Per-Spec Near Bias Scalar">
+			<_A v="Type">
+				<Flag v="Default" />
+				<Flag v="Sync" />
+				<Flag v="HDR" />
+				<Flag v="Reflections" />
+				<Flag v="VolumetricFog" />
+				<Flag v="Shadows" />
+				<Flag v="Sky" />
+				<Flag v="TAA" />
+				<Flag v="Ambient Occlusion" />
+				<Flag v="DOF" />
+				<Flag v="Aniso" />
+				<Flag v="Terrain" />
+				<Flag v="Tesselation" />
+				<Flag v="Lighting" />
+				<Flag v="Decorators" />
+				<Flag v="Asset Category" />
+				<Flag v="Dynamic Wind" />
+				<Flag v="Push Bending" />
+				<Flag v="Hlod" />
+				<Flag v="Visual Damage" />
+				<Flag v="Virtual Texturing" />
+				<Flag v="Effects" />
+				<Flag v="Emblem Quality" />
+				<Flag v="Texture Quality" />
+				<Flag v="Decals" />
+			</_A>
+			<_34 v="generated_pad4417" length="3" />
+			<_38 v="Low">
+				<_14 v="Single Player" />
+				<_14 v="2 Player Splitscreen" />
+				<_14 v="3 Player Splitscreen" />
+				<_14 v="4 Player Splitscreen" />
+				<_3B v="" />
+			</_38>
+			<_38 v="Medium">
+				<_14 v="Single Player" />
+				<_14 v="2 Player Splitscreen" />
+				<_14 v="3 Player Splitscreen" />
+				<_14 v="4 Player Splitscreen" />
+				<_3B v="" />
+			</_38>
+			<_38 v="High">
+				<_14 v="Single Player" />
+				<_14 v="2 Player Splitscreen" />
+				<_14 v="3 Player Splitscreen" />
+				<_14 v="4 Player Splitscreen" />
+				<_3B v="" />
+			</_38>
+			<_38 v="Ultra">
+				<_14 v="Single Player" />
+				<_14 v="2 Player Splitscreen" />
+				<_14 v="3 Player Splitscreen" />
+				<_14 v="4 Player Splitscreen" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_34 v="generated_pad3e12" length="4" />
+	<_3B v="" />
+</root>

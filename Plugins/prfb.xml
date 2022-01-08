@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="bsp reference" />
+	<_40 v="material overrides">
+		<_2 v="material override variant name" />
+		<_40 v="material override entries">
+			<_41 v="Original material ref" />
+			<_41 v="Override material ref" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

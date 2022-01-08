@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="volume texture fog globals">
+		<_36 v="Volume Texture Fog Non-blending Parameters" />
+		<_41 v="Fog Bitmap" />
+		<_14 v="Texture repeat rate" />
+		<_14 v="Distance between sheets" />
+		<_14 v="Depth fade factor" />
+		<_14 v="Transparent sort distance" />
+		<_A v="Transparent sort layer">
+			<Flag v="invalid" />
+			<Flag v="pre-pass" />
+			<Flag v="normal" />
+			<Flag v="post-pass" />
+		</_A>
+		<_F v="Flags">
+			<Flag v="Disable Texture Rotation" />
+		</_F>
+		<_34 v="generated_pad2c77" length="2" />
+		<_38 v="wind strength across distance">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

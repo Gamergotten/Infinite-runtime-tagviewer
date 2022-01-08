@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Collision material overrides">
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_5 v="numCollisionMaterials" />
+	<_F v="flags">
+		<Flag v="Allow decals" />
+	</_F>
+	<_34 v="generated_pad05b3" length="1" />
+	<_40 v="Havok Collision Geometry Types">
+		<_7 v="field pointer skip" />
+		<_3E v="collision type" />
+		<_3E v="number of shapes" />
+		<_A v="who will reload the shape, the parent tag or this struct?">
+			<Flag v="Me" />
+			<Flag v="Parent tag" />
+		</_A>
+		<_34 v="generated_padb5d1" length="3" />
+		<_42 v="Havok Data" />
+		<_34 v="generated_pad9bf0" length="4" />
+		<_3B v="" />
+	</_40>
+	<_17 v="Shape bounds min" />
+	<_17 v="Shape bounds max" />
+	<_34 v="generated_padb8fe" length="4" />
+	<_3B v="" />
+</root>

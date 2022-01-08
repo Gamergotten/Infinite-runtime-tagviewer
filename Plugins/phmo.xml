@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_D v="flags">
+		<Flag v="serialized havok data converted to target platform" />
+		<Flag v="make physical children keyframed" />
+		<Flag v="use physics for collision" />
+		<Flag v="has damaging phantoms" />
+		<Flag v="force sight blocking" />
+		<Flag v="this physics model has phantoms that require the object to stay awake" />
+		<Flag v="use aggressive deactivation for havok bodies" />
+	</_D>
+	<_14 v="mass override" />
+	<_14 v="mass scale override" />
+	<_14 v="low freq. deactivation scale" />
+	<_14 v="high freq. deactivation scale" />
+	<_4 v="import version" />
+	<_34 v="generated_pad19c2" length="3" />
+	<_14 v="welding tolerance" />
+	<_40 v="damped spring motors">
+		<_2 v="name" />
+		<_14 v="maximum force" />
+		<_14 v="minimum force" />
+		<_14 v="spring k" />
+		<_14 v="damping" />
+		<_14 v="initial position" />
+		<_3B v="" />
+	</_40>
+	<_40 v="position motors">
+		<_2 v="name" />
+		<_14 v="maximum force" />
+		<_14 v="minimum force" />
+		<_14 v="tau" />
+		<_14 v="damping" />
+		<_14 v="proportion recover vel" />
+		<_14 v="constant recover vel" />
+		<_14 v="initial position" />
+		<_3B v="" />
+	</_40>
+	<_40 v="phantom types">
+		<_D v="flags">
+			<Flag v="UNUSED" />
+			<Flag v="use acc as force" />
+			<Flag v="negates gravity" />
+			<Flag v="ignores players" />
+			<Flag v="ignores nonplayers" />
+			<Flag v="ignores bipeds" />
+			<Flag v="ignores vehicles" />
+			<Flag v="ignores weapons" />
+			<Flag v="ignores equipment" />
+			<Flag v="ignores projectiles" />
+			<Flag v="ignores scenery" />
+			<Flag v="ignores devices" />
+			<Flag v="ignores crates" />
+			<Flag v="ignores creatures" />
+			<Flag v="ignores giants" />
+			<Flag v="ignores mechs" />
+			<Flag v="smart directional acceleration" />
+			<Flag v="ignores grounded bipeds" />
+			<Flag v="disable linear air drag" />
+			<Flag v="disable angular air drag" />
+			<Flag v="ignores dead bipeds" />
+			<Flag v="ignores live bipeds" />
+			<Flag v="latching disabled" />
+			<Flag v="mirrored axis" />
+			<Flag v="activate ragdolls" />
+			<Flag v="ignores forge editor" />
+			<Flag v="accelerate along input direction" />
+			<Flag v="ignores damage owner" />
+			<Flag v="ignores attached objects" />
+		</_D>
+		<_D v="team flags">
+			<Flag v="ignores allies" />
+			<Flag v="ignores enemies" />
+		</_D>
+		<_14 v="brittle timer" />
+		<_14 v="collision damage scale" />
+		<_A v="minimum size">
+			<Flag v="default" />
+			<Flag v="tiny" />
+			<Flag v="small" />
+			<Flag v="medium" />
+			<Flag v="large" />
+			<Flag v="huge" />
+			<Flag v="extra huge" />
+		</_A>
+		<_A v="maximum size">
+			<Flag v="default" />
+			<Flag v="tiny" />
+			<Flag v="small" />
+			<Flag v="medium" />
+			<Flag v="large" />
+			<Flag v="huge" />
+			<Flag v="extra huge" />
+		</_A>
+		<_34 v="generated_pad7e7c" length="2" />
+		<_37 v="" />
+		<_2 v="marker name" />
+		<_37 v="" />
+		<_2 v="mancannon launched object marker name" />
+		<_37 v="" />
+		<_2 v="alignment marker name" />
+		<_36 v="Linear Motion" />
+		<_14 v="hookes law e" />
+		<_14 v="linear dead radius" />
+		<_14 v="center acc" />
+		<_14 v="center max vel" />
+		<_14 v="axis acc" />
+		<_14 v="axis max vel" />
+		<_14 v="direction acc" />
+		<_14 v="direction max vel" />
+		<_14 v="orbit acc" />
+		<_14 v="orbit max vel" />
+		<_14 v="nearest unit acc" />
+		<_14 v="nearest unit max vel" />
+		<_36 v="Angular Motion" />
+		<_14 v="alignment hookes law e" />
+		<_14 v="alignment acc" />
+		<_14 v="alignment max vel" />
+		<_41 v="damage per second effect" />
+		<_41 v="damage per second combined material effects" />
+		<_41 v="damage per second visual material effects" />
+		<_41 v="damage per second sound material effects" />
+		<_2 v="damage per second object function" />
+		<_14 v="damage per second object function threshold" />
+		<_3B v="" />
+	</_40>
+	<_40 v="powered chains">
+		<_40 v="nodes">
+			<_30 v="node" />
+			<_3B v="" />
+		</_40>
+		<_40 v="constraints">
+			<_B v="constraint type">
+				<Flag v="hinge" />
+				<Flag v="limited hinge" />
+				<Flag v="ragdoll" />
+				<Flag v="stiff spring" />
+				<Flag v="ball and socket" />
+				<Flag v="prismatic" />
+				<Flag v="powered chain" />
+			</_B>
+			<_2F v="constraint index" />
+			<_38 v="motor x">
+				<_B v="motor type">
+					<Flag v="none" />
+					<Flag v="damped spring" />
+					<Flag v="stongest force" />
+				</_B>
+				<_2F v="index" />
+				<_3B v="" />
+			</_38>
+			<_38 v="motor y">
+				<_B v="motor type">
+					<Flag v="none" />
+					<Flag v="damped spring" />
+					<Flag v="stongest force" />
+				</_B>
+				<_2F v="index" />
+				<_3B v="" />
+			</_38>
+			<_38 v="motor z">
+				<_B v="motor type">
+					<Flag v="none" />
+					<Flag v="damped spring" />
+					<Flag v="stongest force" />
+				</_B>
+				<_2F v="index" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="node edges">
+		<_5 v="runtime material type a" />
+		<_5 v="runtime material type b" />
+		<_30 v="node a" />
+		<_30 v="node b" />
+		<_40 v="constraints">
+			<_B v="type">
+				<Flag v="hinge" />
+				<Flag v="limited hinge" />
+				<Flag v="ragdoll" />
+				<Flag v="stiff spring" />
+				<Flag v="ball and socket" />
+				<Flag v="prismatic" />
+				<Flag v="powered chain" />
+			</_B>
+			<_2F v="index" />
+			<_D v="flags">
+				<Flag v="is physical child" />
+				<Flag v="is rigid" />
+				<Flag v="disable effects" />
+				<Flag v="not created automatically" />
+			</_D>
+			<_14 v="friction" />
+			<_40 v="ragdoll motors">
+				<_36 v="twist" />
+				<_38 v="twist motor">
+					<_B v="motor type">
+						<Flag v="none" />
+						<Flag v="damped spring" />
+						<Flag v="stongest force" />
+					</_B>
+					<_2F v="index" />
+					<_3B v="" />
+				</_38>
+				<_36 v="cone" />
+				<_38 v="cone motor">
+					<_B v="motor type">
+						<Flag v="none" />
+						<Flag v="damped spring" />
+						<Flag v="stongest force" />
+					</_B>
+					<_2F v="index" />
+					<_3B v="" />
+				</_38>
+				<_36 v="plane" />
+				<_38 v="plane motor">
+					<_B v="motor type">
+						<Flag v="none" />
+						<Flag v="damped spring" />
+						<Flag v="stongest force" />
+					</_B>
+					<_2F v="index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="limited hinge motors">
+				<_38 v="motor">
+					<_B v="motor type">
+						<Flag v="none" />
+						<Flag v="damped spring" />
+						<Flag v="stongest force" />
+					</_B>
+					<_2F v="index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_2 v="node a material" />
+		<_2 v="node b material" />
+		<_3B v="" />
+	</_40>
+	<_40 v="rigid bodies">
+		<_30 v="node" />
+		<_30 v="region" />
+		<_31 v="permutation" />
+		<_17 v="bouding sphere offset" />
+		<_14 v="bounding sphere radius" />
+		<_F v="flags">
+			<Flag v="has no phantom power version" />
+			<Flag v="infinite intertia tensor" />
+			<Flag v="Havok rigid body" />
+			<Flag v="explicit mass" />
+			<Flag v="absolute center of mass" />
+			<Flag v="force keyframed" />
+			<Flag v="force not cut NavMesh" />
+		</_F>
+		<_A v="motion type">
+			<Flag v="Dynamic" />
+			<Flag v="Keyframed" />
+			<Flag v="Static" />
+		</_A>
+		<_A v="size">
+			<Flag v="default" />
+			<Flag v="tiny" />
+			<Flag v="small" />
+			<Flag v="medium" />
+			<Flag v="large" />
+			<Flag v="huge" />
+			<Flag v="extra huge" />
+		</_A>
+		<_34 v="generated_pad3d04" length="1" />
+		<_30 v="no phantom power alt" />
+		<_36 v="collision layer override" />
+		<_2 v="collision layer" />
+		<_14 v="inertia tensor scale" />
+		<_14 v="linear air drag" />
+		<_14 v="angular air drag" />
+		<_19 v="center off mass offset" />
+		<_36 v="water physics bounding box" />
+		<_14 v="water physics x0" />
+		<_14 v="water physics x1" />
+		<_14 v="water physics y0" />
+		<_14 v="water physics y1" />
+		<_14 v="water physics z0" />
+		<_14 v="water physics z1" />
+		<_19 v="center of mass" />
+		<_19 v="inertia tensor x" />
+		<_19 v="inertia tensor y" />
+		<_19 v="inertia tensor z" />
+		<_38 v="Shape">
+			<_C v="shape type">
+				<Flag v="Sphere" />
+				<Flag v="Pill" />
+				<Flag v="Box" />
+				<Flag v="Triangle" />
+				<Flag v="ConvexHull" />
+				<Flag v="Multi sphere" />
+				<Flag v="Triangle mesh" />
+				<Flag v="Compound shape" />
+			</_C>
+			<_31 v="shape" />
+			<_3B v="" />
+		</_38>
+		<_40 v="primitive collision layers">
+			<_2 v="name" />
+			<_3B v="" />
+		</_40>
+		<_14 v="mass" />
+		<_14 v="bounding sphere pad" />
+		<_36 v="Stupid mass override" />
+		<_14 v="Mass body override" />
+		<_19 v="mass distribution override" />
+		<_A v="collision quality override type">
+			<Flag v="None" />
+			<Flag v="Static" />
+			<Flag v="Debris" />
+			<Flag v="Dynamic" />
+			<Flag v="Critical" />
+			<Flag v="Character" />
+		</_A>
+		<_F v="runtime_flags">
+			<Flag v="Flag Has Phantom Bit" />
+			<Flag v="Apply Calculated Collision Layer" />
+			<Flag v="Flag Has Custom Water Physics Aabb Bit" />
+		</_F>
+		<_34 v="generated_pad56e5" length="2" />
+		<_3B v="" />
+	</_40>
+	<_40 v="materials">
+		<_2 v="name" />
+		<_F v="flags">
+			<Flag v="supresses effects" />
+			<Flag v="force enable collision with player" />
+		</_F>
+		<_34 v="generated_pad8900" length="3" />
+		<_2 v="global material name" />
+		<_30 v="phantom type" />
+		<_36 v="collision layer override" />
+		<_2 v="collision layer" />
+		<_2 v="runtime collision layer" />
+		<_3B v="" />
+	</_40>
+	<_40 v="convex hulls">
+		<_7 v="field pointer skip" />
+		<_40 v="primitive">
+			<_2 v="name" />
+			<_14 v="relative mass scale" />
+			<_15 v="friction" />
+			<_15 v="restitution" />
+			<_14 v="volume " />
+			<_14 v="mass" />
+			<_30 v="phantom" />
+			<_5 v="runtime material type" />
+			<_2C v="material" />
+			<_F v="material flags">
+				<Flag v="supresses effects" />
+				<Flag v="force enable collision with player" />
+			</_F>
+			<_5 v="mass distribution index" />
+			<_5 v="should use" />
+			<_36 v="collision layer override" />
+			<_2 v="collision layer" />
+			<_3B v="" />
+		</_40>
+		<_42 v="Havok Shape Data" />
+		<_34 v="generated_pad9227" length="4" />
+		<_3B v="" />
+	</_40>
+	<_40 v="spheres">
+		<_7 v="field pointer skip" />
+		<_40 v="primitive">
+			<_2 v="name" />
+			<_14 v="relative mass scale" />
+			<_15 v="friction" />
+			<_15 v="restitution" />
+			<_14 v="volume " />
+			<_14 v="mass" />
+			<_30 v="phantom" />
+			<_5 v="runtime material type" />
+			<_2C v="material" />
+			<_F v="material flags">
+				<Flag v="supresses effects" />
+				<Flag v="force enable collision with player" />
+			</_F>
+			<_5 v="mass distribution index" />
+			<_5 v="should use" />
+			<_36 v="collision layer override" />
+			<_2 v="collision layer" />
+			<_3B v="" />
+		</_40>
+		<_42 v="Havok Shape Data" />
+		<_34 v="generated_pad9227" length="4" />
+		<_3B v="" />
+	</_40>
+	<_40 v="multi spheres">
+		<_7 v="field pointer skip" />
+		<_40 v="primitive">
+			<_2 v="name" />
+			<_14 v="relative mass scale" />
+			<_15 v="friction" />
+			<_15 v="restitution" />
+			<_14 v="volume " />
+			<_14 v="mass" />
+			<_30 v="phantom" />
+			<_5 v="runtime material type" />
+			<_2C v="material" />
+			<_F v="material flags">
+				<Flag v="supresses effects" />
+				<Flag v="force enable collision with player" />
+			</_F>
+			<_5 v="mass distribution index" />
+			<_5 v="should use" />
+			<_36 v="collision layer override" />
+			<_2 v="collision layer" />
+			<_3B v="" />
+		</_40>
+		<_42 v="Havok Shape Data" />
+		<_34 v="generated_pad9227" length="4" />
+		<_3B v="" />
+	</_40>
+	<_40 v="pills">
+		<_7 v="field pointer skip" />
+		<_40 v="primitive">
+			<_2 v="name" />
+			<_14 v="relative mass scale" />
+			<_15 v="friction" />
+			<_15 v="restitution" />
+			<_14 v="volume " />
+			<_14 v="mass" />
+			<_30 v="phantom" />
+			<_5 v="runtime material type" />
+			<_2C v="material" />
+			<_F v="material flags">
+				<Flag v="supresses effects" />
+				<Flag v="force enable collision with player" />
+			</_F>
+			<_5 v="mass distribution index" />
+			<_5 v="should use" />
+			<_36 v="collision layer override" />
+			<_2 v="collision layer" />
+			<_3B v="" />
+		</_40>
+		<_42 v="Havok Shape Data" />
+		<_34 v="generated_pad9227" length="4" />
+		<_3B v="" />
+	</_40>
+	<_40 v="boxes">
+		<_7 v="field pointer skip" />
+		<_40 v="primitive">
+			<_2 v="name" />
+			<_14 v="relative mass scale" />
+			<_15 v="friction" />
+			<_15 v="restitution" />
+			<_14 v="volume " />
+			<_14 v="mass" />
+			<_30 v="phantom" />
+			<_5 v="runtime material type" />
+			<_2C v="material" />
+			<_F v="material flags">
+				<Flag v="supresses effects" />
+				<Flag v="force enable collision with player" />
+			</_F>
+			<_5 v="mass distribution index" />
+			<_5 v="should use" />
+			<_36 v="collision layer override" />
+			<_2 v="collision layer" />
+			<_3B v="" />
+		</_40>
+		<_42 v="Havok Shape Data" />
+		<_34 v="generated_pad9227" length="4" />
+		<_3B v="" />
+	</_40>
+	<_40 v="compound shapes">
+		<_7 v="field pointer skip" />
+		<_40 v="primitive">
+			<_2 v="name" />
+			<_14 v="relative mass scale" />
+			<_15 v="friction" />
+			<_15 v="restitution" />
+			<_14 v="volume " />
+			<_14 v="mass" />
+			<_30 v="phantom" />
+			<_5 v="runtime material type" />
+			<_2C v="material" />
+			<_F v="material flags">
+				<Flag v="supresses effects" />
+				<Flag v="force enable collision with player" />
+			</_F>
+			<_5 v="mass distribution index" />
+			<_5 v="should use" />
+			<_36 v="collision layer override" />
+			<_2 v="collision layer" />
+			<_3B v="" />
+		</_40>
+		<_42 v="Havok Shape Data" />
+		<_34 v="generated_pad9227" length="4" />
+		<_3B v="" />
+	</_40>
+	<_40 v="triangles">
+		<_7 v="field pointer skip" />
+		<_40 v="primitive">
+			<_2 v="name" />
+			<_14 v="relative mass scale" />
+			<_15 v="friction" />
+			<_15 v="restitution" />
+			<_14 v="volume " />
+			<_14 v="mass" />
+			<_30 v="phantom" />
+			<_5 v="runtime material type" />
+			<_2C v="material" />
+			<_F v="material flags">
+				<Flag v="supresses effects" />
+				<Flag v="force enable collision with player" />
+			</_F>
+			<_5 v="mass distribution index" />
+			<_5 v="should use" />
+			<_36 v="collision layer override" />
+			<_2 v="collision layer" />
+			<_3B v="" />
+		</_40>
+		<_42 v="Havok Shape Data" />
+		<_34 v="generated_pad9227" length="4" />
+		<_3B v="" />
+	</_40>
+	<_40 v="triangle meshs">
+		<_7 v="field pointer skip" />
+		<_40 v="primitive">
+			<_2 v="name" />
+			<_14 v="relative mass scale" />
+			<_15 v="friction" />
+			<_15 v="restitution" />
+			<_14 v="volume " />
+			<_14 v="mass" />
+			<_30 v="phantom" />
+			<_5 v="runtime material type" />
+			<_2C v="material" />
+			<_F v="material flags">
+				<Flag v="supresses effects" />
+				<Flag v="force enable collision with player" />
+			</_F>
+			<_5 v="mass distribution index" />
+			<_5 v="should use" />
+			<_36 v="collision layer override" />
+			<_2 v="collision layer" />
+			<_3B v="" />
+		</_40>
+		<_42 v="Havok Shape Data" />
+		<_34 v="generated_pad9227" length="4" />
+		<_3B v="" />
+	</_40>
+	<_40 v="mass_distributions">
+		<_7 v="field pointer skip" />
+		<_42 v="Havok Serialized Data" />
+		<_3B v="" />
+	</_40>
+	<_40 v="hinge constraints">
+		<_38 v="constraint bodies">
+			<_2 v="name" />
+			<_30 v="node a" />
+			<_30 v="node b" />
+			<_14 v="a scale" />
+			<_19 v="a forward" />
+			<_19 v="a left" />
+			<_19 v="a up" />
+			<_17 v="a position" />
+			<_14 v="b scale" />
+			<_19 v="b forward" />
+			<_19 v="b left" />
+			<_19 v="b up" />
+			<_17 v="b position" />
+			<_30 v="edge index" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="ragdoll constraints">
+		<_38 v="constraint bodies">
+			<_2 v="name" />
+			<_30 v="node a" />
+			<_30 v="node b" />
+			<_14 v="a scale" />
+			<_19 v="a forward" />
+			<_19 v="a left" />
+			<_19 v="a up" />
+			<_17 v="a position" />
+			<_14 v="b scale" />
+			<_19 v="b forward" />
+			<_19 v="b left" />
+			<_19 v="b up" />
+			<_17 v="b position" />
+			<_30 v="edge index" />
+			<_3B v="" />
+		</_38>
+		<_14 v="min twist" />
+		<_14 v="max twist" />
+		<_14 v="min cone" />
+		<_14 v="max cone" />
+		<_14 v="min plane" />
+		<_14 v="max plane" />
+		<_14 v="max friciton torque" />
+		<_3B v="" />
+	</_40>
+	<_40 v="ragdoll subgroups">
+		<_2 v="name" />
+		<_40 v="nodes">
+			<_30 v="node" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="self-collision pairs">
+		<_2C v="nodeA" />
+		<_2C v="nodeB" />
+		<_3B v="" />
+	</_40>
+	<_40 v="point to path curves">
+		<_2 v="name" />
+		<_30 v="node index" />
+		<_40 v="points">
+			<_17 v="position" />
+			<_14 v="t value" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="limited hinge constraints">
+		<_38 v="constraint bodies">
+			<_2 v="name" />
+			<_30 v="node a" />
+			<_30 v="node b" />
+			<_14 v="a scale" />
+			<_19 v="a forward" />
+			<_19 v="a left" />
+			<_19 v="a up" />
+			<_17 v="a position" />
+			<_14 v="b scale" />
+			<_19 v="b forward" />
+			<_19 v="b left" />
+			<_19 v="b up" />
+			<_17 v="b position" />
+			<_30 v="edge index" />
+			<_3B v="" />
+		</_38>
+		<_14 v="limit friction" />
+		<_14 v="limit min angle" />
+		<_14 v="limit max angle" />
+		<_3B v="" />
+	</_40>
+	<_40 v="ball and socket constraints">
+		<_38 v="constraint bodies">
+			<_2 v="name" />
+			<_30 v="node a" />
+			<_30 v="node b" />
+			<_14 v="a scale" />
+			<_19 v="a forward" />
+			<_19 v="a left" />
+			<_19 v="a up" />
+			<_17 v="a position" />
+			<_14 v="b scale" />
+			<_19 v="b forward" />
+			<_19 v="b left" />
+			<_19 v="b up" />
+			<_17 v="b position" />
+			<_30 v="edge index" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="stiff spring constraints">
+		<_38 v="constraint bodies">
+			<_2 v="name" />
+			<_30 v="node a" />
+			<_30 v="node b" />
+			<_14 v="a scale" />
+			<_19 v="a forward" />
+			<_19 v="a left" />
+			<_19 v="a up" />
+			<_17 v="a position" />
+			<_14 v="b scale" />
+			<_19 v="b forward" />
+			<_19 v="b left" />
+			<_19 v="b up" />
+			<_17 v="b position" />
+			<_30 v="edge index" />
+			<_3B v="" />
+		</_38>
+		<_14 v="spring_length" />
+		<_3B v="" />
+	</_40>
+	<_40 v="prismatic constraints">
+		<_38 v="constraint bodies">
+			<_2 v="name" />
+			<_30 v="node a" />
+			<_30 v="node b" />
+			<_14 v="a scale" />
+			<_19 v="a forward" />
+			<_19 v="a left" />
+			<_19 v="a up" />
+			<_17 v="a position" />
+			<_14 v="b scale" />
+			<_19 v="b forward" />
+			<_19 v="b left" />
+			<_19 v="b up" />
+			<_17 v="b position" />
+			<_30 v="edge index" />
+			<_3B v="" />
+		</_38>
+		<_14 v="min_limit" />
+		<_14 v="max_limit" />
+		<_14 v="max_friction_force" />
+		<_3B v="" />
+	</_40>
+	<_40 v="regions">
+		<_2 v="name" />
+		<_40 v="permutations">
+			<_2 v="name" />
+			<_40 v="rigid bodies">
+				<_30 v="rigid body" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="nodes">
+		<_2 v="name" />
+		<_D v="flags">
+			<Flag v="does not animate" />
+		</_D>
+		<_30 v="parent" />
+		<_30 v="sibling" />
+		<_30 v="child" />
+		<_3B v="" />
+	</_40>
+	<_40 v="errors">
+		<_1 v="name" />
+		<_A v="report type">
+			<Flag v="silent" />
+			<Flag v="comment" />
+			<Flag v="warning" />
+			<Flag v="error" />
+		</_A>
+		<_34 v="generated_padf276" length="1" />
+		<_E v="flags">
+			<Flag v="rendered" />
+			<Flag v="tangent-space" />
+			<Flag v="non-critical" />
+			<Flag v="lightmap light" />
+			<Flag v="report key is valid" />
+		</_E>
+		<_3D v="runtime generation flags" />
+		<_34 v="generated_pad3f2b" length="2" />
+		<_6 v="runtime something" />
+		<_40 v="reports">
+			<_A v="type">
+				<Flag v="silent" />
+				<Flag v="comment" />
+				<Flag v="warning" />
+				<Flag v="error" />
+			</_A>
+			<_A v="source">
+				<Flag v="none" />
+				<Flag v="structure" />
+				<Flag v="poop" />
+				<Flag v="lightmap" />
+				<Flag v="pathfinding" />
+			</_A>
+			<_E v="flags">
+				<Flag v="rendered" />
+				<Flag v="tangent-space" />
+				<Flag v="non-critical" />
+				<Flag v="lightmap light" />
+				<Flag v="report key is valid" />
+			</_E>
+			<_42 v="text" />
+			<_6 v="source identifier" />
+			<_0 v="source filename" />
+			<_6 v="source line number" />
+			<_40 v="vertices">
+				<_38 v="point">
+					<_17 v="position" />
+					<_39 v="node indices" />
+					<_39 v="node weights" />
+					<_3B v="" />
+				</_38>
+				<_20 v="color" />
+				<_14 v="screen size" />
+				<_3B v="" />
+			</_40>
+			<_40 v="vectors">
+				<_38 v="point">
+					<_17 v="position" />
+					<_39 v="node indices" />
+					<_39 v="node weights" />
+					<_3B v="" />
+				</_38>
+				<_20 v="color" />
+				<_19 v="normal" />
+				<_14 v="screen length" />
+				<_3B v="" />
+			</_40>
+			<_40 v="lines">
+				<_39 v="points" />
+				<_20 v="color" />
+				<_3B v="" />
+			</_40>
+			<_40 v="triangles">
+				<_39 v="points" />
+				<_20 v="color" />
+				<_3B v="" />
+			</_40>
+			<_40 v="quads">
+				<_39 v="points" />
+				<_20 v="color" />
+				<_3B v="" />
+			</_40>
+			<_40 v="comments">
+				<_42 v="text" />
+				<_38 v="point">
+					<_17 v="position" />
+					<_39 v="node indices" />
+					<_39 v="node weights" />
+					<_3B v="" />
+				</_38>
+				<_20 v="color" />
+				<_3B v="" />
+			</_40>
+			<_6 v="report key" />
+			<_6 v="node index" />
+			<_25 v="bounds x" />
+			<_25 v="bounds y" />
+			<_25 v="bounds z" />
+			<_20 v="color" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad6677" length="4" />
+	<_3B v="" />
+</root>

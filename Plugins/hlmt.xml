@@ -1,0 +1,1011 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="MODEL" />
+	<_37 v="" />
+	<_41 v="render model" />
+	<_41 v="collision model" />
+	<_41 v="animation" />
+	<_41 v="physics_model" />
+	<_6 v="runtime render checksum" />
+	<_6 v="runtime collision checksum" />
+	<_36 v="Optional Static Lightmap" />
+	<_D v="Lightmap Flags">
+		<Flag v="pvs enabled" />
+	</_D>
+	<_36 v="PVS" />
+	<_14 v="PVS bounding box extension factor " />
+	<_19 v="PVS block size " />
+	<_6 v="PVS sampling subdivision per axis " />
+	<_14 v="PVS visibility threshold " />
+	<_2 v="asset category name" />
+	<_6 v="asset category index" />
+	<_36 v="level of detail" />
+	<_40 v="lod levels">
+		<_14 v="lodTransitionDistance" />
+		<_3B v="" />
+	</_40>
+	<_14 v="Fade out after distance" />
+	<_14 v="disappear distance" />
+	<_14 v="begin fade distance" />
+	<_14 v="animation lod distance" />
+	<_14 v="shadow fade distance" />
+	<_14 v="instance disappear distance" />
+	<_14 v="midrange detail disappear distance" />
+	<_14 v="close detail disappear distance" />
+	<_14 v="tessellation max draw distance" />
+	<_D v="resource distance override flags">
+		<Flag v="override enabled" />
+	</_D>
+	<_14 v="medium priority distance" />
+	<_14 v="low priority distance" />
+	<_6 v="lod index override for damage draw" />
+	<_40 v="variants">
+		<_2 v="name" />
+		<_2 v="style" />
+		<_6 v="Damage Style Index" />
+		<_D v="model variant flags">
+			<Flag v="available in forge" />
+		</_D>
+		<_B v="Damage Effect Sounds - Enable Model Hit Override">
+			<Flag v="Same As Model" />
+			<Flag v="Disable" />
+			<Flag v="Enable" />
+		</_B>
+		<_39 v="runtime variant region indices" />
+		<_34 v="generated_pad364f" length="2" />
+		<_40 v="regions">
+			<_2 v="region name" />
+			<_4 v="runtime region index" />
+			<_3C v="runtime flags" />
+			<_2E v="parent variant" />
+			<_40 v="permutations">
+				<_2 v="permutation name" />
+				<_3E v="runtime permutation index" />
+				<_F v="flags">
+					<Flag v="copy states to all permutations" />
+				</_F>
+				<_34 v="generated_padd60a" length="3" />
+				<_14 v="probability" />
+				<_40 v="states">
+					<_2 v="permutation name" />
+					<_4 v="runtime permutation index" />
+					<_F v="property flags">
+						<Flag v="blurred" />
+						<Flag v="hella blurred" />
+						<Flag v="unshielded" />
+						<Flag v="battery depleted" />
+					</_F>
+					<_B v="state">
+						<Flag v="default" />
+						<Flag v="minor damage" />
+						<Flag v="medium damage" />
+						<Flag v="major damage" />
+						<Flag v="destroyed" />
+					</_B>
+					<_15 v="initial probability" />
+					<_3B v="" />
+				</_40>
+				<_39 v="runtime state permutation indices" />
+				<_34 v="generated_pad22bf" length="3" />
+				<_3B v="" />
+			</_40>
+			<_B v="sort order">
+				<Flag v="no sorting" />
+				<Flag v="-5 (closest)" />
+				<Flag v="-4" />
+				<Flag v="-3" />
+				<Flag v="-2" />
+				<Flag v="-1" />
+				<Flag v="0 (same as model)" />
+				<Flag v="1" />
+				<Flag v="2" />
+				<Flag v="3" />
+				<Flag v="4" />
+				<Flag v="5 (farthest)" />
+			</_B>
+			<_34 v="generated_pade9d0" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="objects">
+			<_37 v="" />
+			<_2 v="parent marker" />
+			<_37 v="" />
+			<_2 v="child marker" />
+			<_2 v="child variant name" />
+			<_41 v="child object" />
+			<_41 v="child configuration" />
+			<_2E v="damage section" />
+			<_F v="flags">
+				<Flag v="enable physics" />
+				<Flag v="share bones with parent" />
+			</_F>
+			<_34 v="generated_padd065" length="1" />
+			<_3B v="" />
+		</_40>
+		<_37 v="Object Node Graph Overrides" />
+		<_40 v="Object Node Graphs">
+			<_2 v="Name" />
+			<_41 v="Exported Node Graph" />
+			<_F v="Flags">
+				<Flag v="Runs on Server" />
+				<Flag v="Runs on Client" />
+				<Flag v="Start updating on the first frame" />
+			</_F>
+			<_A v="Enable Node Graph">
+				<Flag v="Default" />
+				<Flag v="Yes" />
+				<Flag v="No" />
+			</_A>
+			<_34 v="generated_pad8671" length="2" />
+			<_3B v="" />
+		</_40>
+		<_37 v="" />
+		<_40 v="muted nodes">
+			<_2 v="node name" />
+			<_3B v="" />
+		</_40>
+		<_39 v="muted flag" />
+		<_41 v="structure lighting_info" />
+		<_41 v="lighting volumes" />
+		<_41 v="scenario lighting volumes" />
+		<_41 v="Object Lightmap" />
+		<_40 v="Object Cubemap set">
+			<_2 v="Name" />
+			<_D v="Flags">
+				<Flag v="Enable Intensity Correction" />
+				<Flag v="Capture With Effects" />
+				<Flag v="Affects Adjacent Bsps" />
+				<Flag v="Capture Dynamic Objects" />
+			</_D>
+			<_38 v="Dumpling">
+				<_40 v="inner points">
+					<_17 v="position" />
+					<_3B v="" />
+				</_40>
+				<_40 v="outer points">
+					<_17 v="position" />
+					<_3B v="" />
+				</_40>
+				<_14 v="height" />
+				<_14 v="sink" />
+				<_14 v="inner value" />
+				<_14 v="outer value" />
+				<_17 v="center point" />
+				<_14 v="trivial cull radius squared" />
+				<_14 v="bound volume" />
+				<_3B v="" />
+			</_38>
+			<_41 v="Cubemap Bitmap" />
+			<_B v="Enable Parallax Correction">
+				<Flag v="Off" />
+				<Flag v="On" />
+			</_B>
+			<_5 v="Cubemap Volume Priority" />
+			<_17 v="Cubemap Origin" />
+			<_19 v="Depth Positive" />
+			<_19 v="Depth Negative" />
+			<_B v="Active Volume">
+				<Flag v="Off" />
+				<Flag v="On" />
+			</_B>
+			<_B v="Maximum cubemap size">
+				<Flag v="128x128" />
+				<Flag v="256x256" />
+				<Flag v="512x512" />
+			</_B>
+			<_17 v="Intensity" />
+			<_14 v="Self-illum Scale Down" />
+			<_40 v="EditorMetadata">
+				<_1 v="folder name" />
+				<_17 v="local space pivot point position" />
+				<_3B v="" />
+			</_40>
+			<_41 v="owner bsp" />
+			<_2 v="owner variant" />
+			<_5 v="runtime bsp index" />
+			<_5 v="runtime variant index" />
+			<_14 v="Blend Distance" />
+			<_C v="Cubemap Volume Type">
+				<Flag v="Prism" />
+				<Flag v="Sphere" />
+			</_C>
+			<_14 v="Orientation" />
+			<_41 v="Cubemap Depth Bitmap" />
+			<_14 v="Depth Blend Range" />
+			<_14 v="Intensity Scale" />
+			<_B v="Tintable">
+				<Flag v="Off" />
+				<Flag v="On" />
+			</_B>
+			<_34 v="generated_pad93d5" length="2" />
+			<_14 v="Relevancy Radius" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="region sort">
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="model materials">
+		<_2 v="material name" />
+		<_2E v="damage section" />
+		<_5 v="runtime collision material index" />
+		<_5 v="runtime damager material index" />
+		<_34 v="generated_pad5ad1" length="2" />
+		<_2 v="global material name" />
+		<_5 v="runtime global material index" />
+		<_34 v="generated_pad40f0" length="2" />
+		<_3B v="" />
+	</_40>
+	<_40 v="new damage info">
+		<_D v="flags">
+			<Flag v="takes shield damage for children" />
+			<Flag v="takes body damage for children" />
+			<Flag v="always shields friendly damage" />
+			<Flag v="passes area damage to children" />
+			<Flag v="parent never takes body damage for us" />
+			<Flag v="only damaged by explosives" />
+			<Flag v="parent never takes shield damage for us" />
+			<Flag v="cannot die from damage" />
+			<Flag v="passes attached damage to riders" />
+			<Flag v="shield depletion is permanent" />
+			<Flag v="shield depletion force hard ping" />
+			<Flag v="AI do not damage without player" />
+			<Flag v="health regrows while dead" />
+			<Flag v="shield recharge plays only when empty" />
+			<Flag v="IGNORE force minimum transfer" />
+			<Flag v="orphan from postprocess autogen" />
+			<Flag v="only damaged by boarding damage" />
+		</_D>
+		<_2 v="global indirect material name" />
+		<_2F v="indirect damage section" />
+		<_34 v="generated_pad0d7e" length="2" />
+		<_36 v="body" />
+		<_38 v="body">
+			<_14 v="maximum vitality" />
+			<_14 v="minimum stun damage" />
+			<_14 v="stun time" />
+			<_14 v="recharge time" />
+			<_15 v="recharge fraction" />
+			<_3B v="" />
+		</_38>
+		<_36 v="shield" />
+		<_38 v="shield">
+			<_14 v="maximum shield vitality" />
+			<_2 v="global shield material name" />
+			<_14 v="minimum stun damage" />
+			<_14 v="stun time" />
+			<_14 v="recharge time" />
+			<_14 v="shield overcharge fraction" />
+			<_14 v="shield overcharge time" />
+			<_14 v="shield damaged threshold" />
+			<_41 v="shield damaged effect" />
+			<_41 v="shield depleted effect" />
+			<_41 v="shield recharging effect" />
+			<_3B v="" />
+		</_38>
+		<_40 v="damage sections">
+			<_2 v="name" />
+			<_36 v="damage section flags" />
+			<_D v="flags">
+				<Flag v="absorbs body damage" />
+				<Flag v="takes full dmg when object dies" />
+				<Flag v="cannot die with riders" />
+				<Flag v="takes full dmg when obj dstryd" />
+				<Flag v="restored on ressurection" />
+				<Flag v="unused0" />
+				<Flag v="unused1" />
+				<Flag v="heatshottable" />
+				<Flag v="ignores shields" />
+				<Flag v="takes full dmg when shield depl" />
+				<Flag v="networked (e.g. armor lock)" />
+				<Flag v="allow damage response overflow" />
+			</_D>
+			<_15 v="vitality percentage" />
+			<_40 v="instant responses">
+				<_B v="response type">
+					<Flag v="receives all damage" />
+					<Flag v="receives area effect damage" />
+					<Flag v="receives local damage" />
+				</_B>
+				<_36 v="Constraint damage type" />
+				<_B v="constraint damage type">
+					<Flag v="none" />
+					<Flag v="destroy one of group" />
+					<Flag v="destroy entire group" />
+					<Flag v="loosen one of group" />
+					<Flag v="loosen entire group" />
+				</_B>
+				<_36 v="Constraint destruction" />
+				<_2 v="constraint/group name" />
+				<_36 v="Damage response flags" />
+				<_D v="flags">
+					<Flag v="kills object" />
+					<Flag v="inhibits melee attack" />
+					<Flag v="inhibits weapon attack" />
+					<Flag v="inhibits walking" />
+					<Flag v="forces drop weapon" />
+					<Flag v="kills weapon primary trigger" />
+					<Flag v="kills weapon secondary trigger" />
+					<Flag v="destroys object" />
+					<Flag v="damages weapon primary trigger" />
+					<Flag v="damages weapon secondary trigger" />
+					<Flag v="light damage left turn" />
+					<Flag v="major damage left turn" />
+					<Flag v="light damage right turn" />
+					<Flag v="major damage right turn" />
+					<Flag v="light damage engine" />
+					<Flag v="major damage engine" />
+					<Flag v="kills object (no player solo)" />
+					<Flag v="causes detonation" />
+					<Flag v="fires on creation" />
+					<Flag v="kills variant objects" />
+					<Flag v="force unattached effects" />
+					<Flag v="fires under threshold" />
+					<Flag v="triggers special death" />
+					<Flag v="only on special death" />
+					<Flag v="only NOT on special death" />
+					<Flag v="buckles giants" />
+					<Flag v="causes sp detonation" />
+					<Flag v="skip sounds on generic effect" />
+					<Flag v="kills giants" />
+					<Flag v="skip sounds on special death" />
+					<Flag v="cause head dismemberment" />
+					<Flag v="cause left leg dismemberment" />
+				</_D>
+				<_D v="flags2">
+					<Flag v="cause right leg dismemberment" />
+					<Flag v="cause left arm dismemberment" />
+					<Flag v="cause right arm dismemberment" />
+					<Flag v="allow damage recharge overflow" />
+				</_D>
+				<_15 v="damage threshold" />
+				<_D v="body threshold flags">
+					<Flag v="body threshold active" />
+				</_D>
+				<_14 v="body damage threshold" />
+				<_41 v="transition effect (generic)" />
+				<_41 v="transition effect (specific)" />
+				<_38 v="damage effect">
+					<_41 v="transition damage effect" />
+					<_3B v="" />
+				</_38>
+				<_2 v="region" />
+				<_B v="new state">
+					<Flag v="default" />
+					<Flag v="minor damage" />
+					<Flag v="medium damage" />
+					<Flag v="major damage" />
+					<Flag v="destroyed" />
+				</_B>
+				<_5 v="runtime region index" />
+				<_2 v="region (secondary)" />
+				<_B v="new state (secondary)">
+					<Flag v="default" />
+					<Flag v="minor damage" />
+					<Flag v="medium damage" />
+					<Flag v="major damage" />
+					<Flag v="destroyed" />
+				</_B>
+				<_5 v="runtime region index (secondary)" />
+				<_B v="custom response behavior">
+					<Flag v="plays always" />
+					<Flag v="plays if labels match" />
+					<Flag v="plays if labels differ" />
+				</_B>
+				<_34 v="generated_pad870e" length="2" />
+				<_2 v="custom response label" />
+				<_2 v="effect marker name" />
+				<_38 v="damage effect marker">
+					<_2 v="damage effect marker name" />
+					<_3B v="" />
+				</_38>
+				<_36 v="Response delay" />
+				<_14 v="response delay" />
+				<_41 v="delay effect" />
+				<_2 v="delay effect marker name" />
+				<_14 v="response delay premature damage threshold" />
+				<_36 v="seat ejaculation" />
+				<_2 v="ejecting seat label" />
+				<_36 v="skip fraction" />
+				<_15 v="skip fraction" />
+				<_36 v="destroyed child object marker name" />
+				<_2 v="destroyed child object marker name" />
+				<_36 v="total damage threshold" />
+				<_15 v="total damage threshold" />
+				<_3B v="" />
+			</_40>
+			<_14 v="stun time" />
+			<_14 v="recharge time" />
+			<_14 v="runtime recharge velocity" />
+			<_2 v="resurrection restored region name" />
+			<_5 v="runtime resurrection restored region index" />
+			<_34 v="generated_padab79" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="nodes">
+			<_5 v="runtime damage part" />
+			<_3B v="" />
+		</_40>
+		<_5 v="runtime shield material type" />
+		<_5 v="runtime indirect material type" />
+		<_14 v="runtime shield recharge velocity" />
+		<_14 v="runtime overcharge velocity" />
+		<_14 v="runtime health recharge velocity" />
+		<_40 v="damage seats">
+			<_2 v="seat label" />
+			<_15 v="direct damage scale" />
+			<_14 v="damage transfer fall-off radius" />
+			<_14 v="maximum transfer damage scale" />
+			<_14 v="minimum transfer damage scale" />
+			<_40 v="region-specific-damage">
+				<_36 v="region-state-specific-damage" />
+				<_2 v="damage region name" />
+				<_5 v="runtime damage region index" />
+				<_34 v="generated_padf8cd" length="2" />
+				<_14 v="direct damage scale (minor)" />
+				<_14 v="Max. transfer scale (minor)" />
+				<_14 v="min. transfer scale (minor)" />
+				<_14 v="direct damage scale (medium)" />
+				<_14 v="Max. transfer scale (medium)" />
+				<_14 v="min. transfer scale (medium)" />
+				<_14 v="direct damage scale (major)" />
+				<_14 v="Max. transfer scale (major)" />
+				<_14 v="min. transfer scale (major)" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="damage constraints">
+			<_2 v="physics model constraint name" />
+			<_2 v="damage constraint name" />
+			<_2 v="damage constraint group name" />
+			<_14 v="group probability scale" />
+			<_5 v="runtime constraint type" />
+			<_5 v="runtime constraint index" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_38 v="damage info">
+		<_36 v="Damage Info" />
+		<_D v="flags">
+			<Flag v="takes damage for children" />
+			<Flag v="parent never takes damage for us" />
+			<Flag v="cannot die from damage" />
+			<Flag v="dies with riders" />
+			<Flag v="passes area damage to children" />
+			<Flag v="Don't use region packing for visual damage mask" />
+		</_D>
+		<_2 v="indirect material name" />
+		<_2E v="indirect damage section" />
+		<_2E v="shielded state damage section" />
+		<_41 v="restoration effect" />
+		<_40 v="damage sections">
+			<_2 v="name" />
+			<_A v="damage part">
+				<Flag v="gut" />
+				<Flag v="chest" />
+				<Flag v="head" />
+				<Flag v="left shoulder" />
+				<Flag v="left arm" />
+				<Flag v="left leg" />
+				<Flag v="left foot" />
+				<Flag v="right shoulder" />
+				<Flag v="right arm" />
+				<Flag v="right leg" />
+				<Flag v="right foot" />
+			</_A>
+			<_34 v="generated_padaef0" length="3" />
+			<_D v="flags">
+				<Flag v="starts inactive" />
+				<Flag v="takes full dmg when object dies" />
+				<Flag v="takes full dmg when obj dstryd" />
+				<Flag v="restored on ressurection" />
+				<Flag v="headshot" />
+				<Flag v="depletion is permanent" />
+				<Flag v="recharges while dead" />
+				<Flag v="play recharge effect only when empty" />
+				<Flag v="networked (note that primary body and shield are always networked)" />
+				<Flag v="can recharge independently" />
+				<Flag v="depletion tracked by AI characters" />
+				<Flag v="DEPRECATED DO NOT USE 1" />
+				<Flag v="DEPRECATED DO NOT USE 2" />
+				<Flag v="DEPRECATED DO NOT USE 3" />
+				<Flag v="DEPRECATED DO NOT USE 4" />
+				<Flag v="DEPRECATED DO NOT USE 5" />
+				<Flag v="DEPRECATED DO NOT USE 6" />
+				<Flag v="blocks headshots" />
+				<Flag v="weak spot" />
+				<Flag v="trivial collision" />
+				<Flag v="disable additive player damage sound" />
+				<Flag v="strippable armor" />
+				<Flag v="takes visual damage" />
+			</_D>
+			<_6 v="runtime flags" />
+			<_37 v="" />
+			<_15 v="vitality percentage" />
+			<_37 v="" />
+			<_37 v="maximum vitality percentage" />
+			<_38 v="maximum vitality percentage">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_2 v="shield material name" />
+			<_36 v="stun" />
+			<_37 v="" />
+			<_14 v="stun time" />
+			<_37 v="" />
+			<_37 v="stun duration" />
+			<_38 v="stun duration">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_14 v="minimum stun damage" />
+			<_36 v="recharge" />
+			<_14 v="recharge time" />
+			<_37 v="recharge speed base scalar" />
+			<_38 v="recharge speed base scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_40 v="recharge speed curve">
+				<_37 v="Mapping" />
+				<_38 v="Mapping">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="recharge fractions">
+				<_15 v="vitality percentage" />
+				<_3B v="" />
+			</_40>
+			<_41 v="recharging effect" />
+			<_14 v="pre recharge effect warn time" />
+			<_41 v="pre recharge effect" />
+			<_2 v="pre recharge effect marker" />
+			<_41 v="pre recharge abort effect" />
+			<_2 v="pre recharge abort effect marker" />
+			<_36 v="overcharge" />
+			<_14 v="overcharge time" />
+			<_14 v="overcharge fraction" />
+			<_36 v="decay" />
+			<_14 v="pre decay time" />
+			<_14 v="decay time" />
+			<_36 v="resurrection" />
+			<_2 v="resurrection restored region name" />
+			<_14 v="anti spam timer duration" />
+			<_40 v="instant responses">
+				<_D v="flags">
+					<Flag v="kills object" />
+					<Flag v="inhibits melee attack" />
+					<Flag v="inhibits weapon attack" />
+					<Flag v="inhibits walking" />
+					<Flag v="forces drop weapon" />
+					<Flag v="kills weapon primary trigger" />
+					<Flag v="kills weapon secondary trigger" />
+					<Flag v="destroys object" />
+					<Flag v="damages weapon primary trigger" />
+					<Flag v="damages weapon secondary trigger" />
+					<Flag v="kills object (no player solo)" />
+					<Flag v="causes detonation" />
+					<Flag v="kills variant objects" />
+					<Flag v="force unattached effects" />
+					<Flag v="fires under threshold" />
+					<Flag v="triggers special death" />
+					<Flag v="only on special death" />
+					<Flag v="only NOT on special death" />
+					<Flag v="buckles giants" />
+					<Flag v="causes sp detonation" />
+					<Flag v="skip sounds on generic effect" />
+					<Flag v="kills giants" />
+					<Flag v="skip sounds on special death" />
+					<Flag v="force hard ping" />
+					<Flag v="can refire" />
+					<Flag v="can skip transition effects" />
+					<Flag v="dooms unit" />
+					<Flag v="can cause actor kamikaze" />
+					<Flag v="hides object if destroyed by response on predicted client" />
+					<Flag v="repeatable" />
+					<Flag v="use anti spam timer" />
+					<Flag v="ignores looping effects" />
+				</_D>
+				<_D v="flags2">
+					<Flag v="skip on incineration" />
+				</_D>
+				<_2 v="label" />
+				<_40 v="included variants">
+					<_2 v="name" />
+					<_3B v="" />
+				</_40>
+				<_40 v="excluded variants">
+					<_2 v="name" />
+					<_3B v="" />
+				</_40>
+				<_15 v="damage threshold" />
+				<_15 v="min damage threshold" />
+				<_2 v="forced hard ping anim " />
+				<_41 v="transition effect (generic)" />
+				<_2 v="generic effect marker" />
+				<_41 v="transition effect (specific)" />
+				<_2 v="specific effect marker" />
+				<_38 v="damage effect">
+					<_41 v="transition damage effect" />
+					<_3B v="" />
+				</_38>
+				<_38 v="damage effect marker">
+					<_2 v="damage effect marker name" />
+					<_3B v="" />
+				</_38>
+				<_41 v="looping effect" />
+				<_37 v="Contextual Effects" />
+				<_36 v="Contextual Transition Effects" />
+				<_2 v="ray cast marker" />
+				<_14 v="ray cast length" />
+				<_41 v="combined material effects" />
+				<_41 v="visual material effects" />
+				<_41 v="sound material effects" />
+				<_41 v="fallback effect" />
+				<_2 v="fallback effect marker" />
+				<_37 v="" />
+				<_40 v="region_transitions">
+					<_2 v="region" />
+					<_B v="new state">
+						<Flag v="default" />
+						<Flag v="minor damage" />
+						<Flag v="medium damage" />
+						<Flag v="major damage" />
+						<Flag v="destroyed" />
+					</_B>
+					<_5 v="runtime region index" />
+					<_3B v="" />
+				</_40>
+				<_40 v="response damage transfers">
+					<_D v="flags">
+						<Flag v="transfer damage to damage section" />
+						<Flag v="transfer damage to parent" />
+						<Flag v="transfer damage to children" />
+						<Flag v="transfer damage to seats" />
+						<Flag v="transfer direct damage" />
+						<Flag v="transfer AOE exposed damage" />
+						<Flag v="transfer AOE obstructed damage" />
+					</_D>
+					<_14 v="transfer amount" />
+					<_B v="transfer function">
+						<Flag v="percent" />
+						<Flag v="points" />
+						<Flag v="ceiling" />
+					</_B>
+					<_34 v="generated_pad53f9" length="2" />
+					<_14 v="Ai Stun Transfer Amount" />
+					<_B v="Ai Stun Transfer Function">
+						<Flag v="percent" />
+						<Flag v="points" />
+						<Flag v="ceiling" />
+					</_B>
+					<_2E v="damage section" />
+					<_2 v="seat label" />
+					<_3B v="" />
+				</_40>
+				<_B v="custom response behavior">
+					<Flag v="plays always" />
+					<Flag v="plays if labels match" />
+					<Flag v="plays if labels differ" />
+				</_B>
+				<_34 v="generated_padec95" length="2" />
+				<_2 v="custom response label" />
+				<_14 v="response delay" />
+				<_41 v="delay effect" />
+				<_2 v="delay effect marker name" />
+				<_40 v="seat eject">
+					<_2 v="seat label" />
+					<_3B v="" />
+				</_40>
+				<_15 v="skip fraction" />
+				<_2 v="destroyed child object marker name" />
+				<_15 v="total damage threshold" />
+				<_2 v="constraint or group name" />
+				<_B v="constraint damage type">
+					<Flag v="none" />
+					<Flag v="destroy one of group" />
+					<Flag v="destroy entire group" />
+					<Flag v="loosen one of group" />
+					<Flag v="loosen entire group" />
+				</_B>
+				<_34 v="generated_padd2b4" length="2" />
+				<_C v="ai dialog event">
+					<Flag v="none" />
+					<Flag v="armor broken" />
+					<Flag v="vehicle damage state worsens" />
+				</_C>
+				<_3B v="" />
+			</_40>
+			<_40 v="section damage transfers">
+				<_D v="flags">
+					<Flag v="transfer damage to damage section" />
+					<Flag v="transfer damage to parent" />
+					<Flag v="transfer damage to children" />
+					<Flag v="transfer damage to seats" />
+					<Flag v="transfer direct damage" />
+					<Flag v="transfer AOE exposed damage" />
+					<Flag v="transfer AOE obstructed damage" />
+				</_D>
+				<_14 v="transfer amount" />
+				<_B v="transfer function">
+					<Flag v="percent" />
+					<Flag v="points" />
+					<Flag v="ceiling" />
+				</_B>
+				<_34 v="generated_pad53f9" length="2" />
+				<_14 v="Ai Stun Transfer Amount" />
+				<_B v="Ai Stun Transfer Function">
+					<Flag v="percent" />
+					<Flag v="points" />
+					<Flag v="ceiling" />
+				</_B>
+				<_2E v="damage section" />
+				<_2 v="seat label" />
+				<_3B v="" />
+			</_40>
+			<_40 v="rendering">
+				<_41 v="3rd person impact parameters (Generator)" />
+				<_41 v="1st person impact parameters (Generator)" />
+				<_3B v="" />
+			</_40>
+			<_14 v="runtime recharge velocity" />
+			<_14 v="runtime overcharge velocity" />
+			<_5 v="runtime resurrection restored region index" />
+			<_5 v="runtime global shield material type" />
+			<_3B v="" />
+		</_40>
+		<_40 v="damage constraints">
+			<_2 v="physics model constraint name" />
+			<_2 v="damage constraint name" />
+			<_2 v="damage constraint group name" />
+			<_14 v="group probability scale" />
+			<_5 v="runtime constraint type" />
+			<_5 v="runtime constraint index" />
+			<_3B v="" />
+		</_40>
+		<_40 v="nodes">
+			<_5 v="runtime damage part" />
+			<_3B v="" />
+		</_40>
+		<_5 v="runtime indirect material type" />
+		<_34 v="generated_pad9f05" length="2" />
+		<_36 v="Malleable Properties" />
+		<_38 v="properties">
+			<_37 v="max overshield scalar" />
+			<_38 v="max overshield scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_14 v="body vitality" />
+			<_37 v="direct damage resistance" />
+			<_38 v="direct damage resistance">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="grenade damage resistance" />
+			<_38 v="grenade damage resistance">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="aoe damage resistance" />
+			<_38 v="aoe damage resistance">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_38 v="overshield information">
+				<_37 v="Overshield" />
+				<_14 v="decay rate " />
+				<_14 v="stun time scalar [0, n] " />
+				<_41 v="Generic modifiers" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="targets old">
+		<_F v="flags">
+			<Flag v="aoe top level" />
+			<Flag v="aoe test obstruction" />
+			<Flag v="shows tracking reticle" />
+			<Flag v="ignored on local physics" />
+			<Flag v="use for network lead vector only" />
+		</_F>
+		<_A v="type">
+			<Flag v="standard" />
+			<Flag v="head" />
+			<Flag v="weak spot" />
+		</_A>
+		<_A v="category">
+			<Flag v="Chassis" />
+			<Flag v="Traversal" />
+			<Flag v="Engine" />
+			<Flag v="Cover" />
+			<Flag v="Weapon" />
+			<Flag v="Occupant" />
+		</_A>
+		<_34 v="generated_padb298" length="1" />
+		<_37 v="" />
+		<_2 v="marker name" />
+		<_14 v="size" />
+		<_8 v="cone angle" />
+		<_2E v="damage section" />
+		<_2E v="variant" />
+		<_15 v="aim assist magnetism scale" />
+		<_15 v="ai selection priority scale" />
+		<_14 v="aoe exclusion radius" />
+		<_38 v="lock-on data">
+			<_36 v="lock-on fields" />
+			<_14 v="lock on distance" />
+			<_2 v="tracking type" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="model targets">
+		<_F v="flags">
+			<Flag v="aoe top level" />
+			<Flag v="aoe test obstruction" />
+			<Flag v="shows tracking reticle" />
+			<Flag v="ignored on local physics" />
+			<Flag v="use for network lead vector only" />
+		</_F>
+		<_A v="type">
+			<Flag v="standard" />
+			<Flag v="head" />
+			<Flag v="weak spot" />
+		</_A>
+		<_A v="category">
+			<Flag v="Chassis" />
+			<Flag v="Traversal" />
+			<Flag v="Engine" />
+			<Flag v="Cover" />
+			<Flag v="Weapon" />
+			<Flag v="Occupant" />
+		</_A>
+		<_34 v="generated_padb298" length="1" />
+		<_37 v="" />
+		<_2 v="marker name" />
+		<_14 v="size" />
+		<_8 v="cone angle" />
+		<_2E v="damage section" />
+		<_2E v="variant" />
+		<_15 v="aim assist magnetism scale" />
+		<_15 v="ai selection priority scale" />
+		<_14 v="aoe exclusion radius" />
+		<_38 v="lock-on data">
+			<_36 v="lock-on fields" />
+			<_14 v="lock on distance" />
+			<_2 v="tracking type" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="runtime regions">
+		<_2 v="name" />
+		<_4 v="collision region index" />
+		<_4 v="physics region index" />
+		<_34 v="generated_pad1fd6" length="2" />
+		<_40 v="permutations">
+			<_2 v="name" />
+			<_F v="flags">
+				<Flag v="cannot be chosen randomly" />
+			</_F>
+			<_4 v="collision permutation index" />
+			<_4 v="physics permutation index" />
+			<_34 v="generated_padf2b8" length="1" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="runtime nodes">
+		<_2 v="name" />
+		<_2E v="parent node" />
+		<_2E v="first child node" />
+		<_2E v="next sibling node" />
+		<_34 v="generated_pad1c9e" length="2" />
+		<_17 v="default translation" />
+		<_1A v="default rotation" />
+		<_14 v="default inverse scale" />
+		<_19 v="default inverse forward" />
+		<_19 v="default inverse left" />
+		<_19 v="default inverse up" />
+		<_17 v="default inverse position" />
+		<_3B v="" />
+	</_40>
+	<_6 v="runtime node list checksum" />
+	<_40 v="prepopulated runtime nodes">
+		<_2 v="name" />
+		<_2E v="parent node" />
+		<_2E v="first child node" />
+		<_2E v="next sibling node" />
+		<_34 v="generated_pad1c9e" length="2" />
+		<_17 v="default translation" />
+		<_1A v="default rotation" />
+		<_14 v="default inverse scale" />
+		<_19 v="default inverse forward" />
+		<_19 v="default inverse left" />
+		<_19 v="default inverse up" />
+		<_17 v="default inverse position" />
+		<_3B v="" />
+	</_40>
+	<_36 v="more stuff" />
+	<_40 v="variant overrides">
+		<_2 v="base variant" />
+		<_2 v="override a" />
+		<_2 v="override b" />
+		<_2 v="override c" />
+		<_3B v="" />
+	</_40>
+	<_41 v="default dialogue" />
+	<_41 v="default dialogue female" />
+	<_40 v="teammate chatter dialogue male">
+		<_41 v="teammate chatter dialogue" />
+		<_3B v="" />
+	</_40>
+	<_40 v="teammate chatter dialogue female">
+		<_41 v="teammate chatter dialogue" />
+		<_3B v="" />
+	</_40>
+	<_40 v="special dialogues">
+		<_2 v="identifier" />
+		<_41 v="special dialogue" />
+		<_3B v="" />
+	</_40>
+	<_D v="flags">
+		<Flag v="active camo always on" />
+		<Flag v="active camo never" />
+		<Flag v="inconsequential target" />
+		<Flag v="locked precomputed probes" />
+		<Flag v="If sky attaches to camera" />
+		<Flag v="model is big battle object" />
+		<Flag v="model never uses compressed vertex position" />
+		<Flag v="model is invisible, even attachments" />
+		<Flag v="DEPRECATED DO NOT USE 0" />
+		<Flag v="DEPRECATED DO NOT USE 1" />
+		<Flag v="DEPRECATED DO NOT USE 2" />
+		<Flag v="DEPRECATED DO NOT USE 3" />
+		<Flag v="DEPRECATED DO NOT USE 4" />
+		<Flag v="DEPRECATED DO NOT USE 5" />
+		<Flag v="DEPRECATED DO NOT USE 6" />
+		<Flag v="Damage Effect Sounds - Enable Model Hit" />
+		<Flag v="Do not validate skeleton" />
+	</_D>
+	<_6 v="runtime flags" />
+	<_39 v="render-only node flags" />
+	<_39 v="render-only section flags" />
+	<_15 v="Sky parallax percent" />
+	<_14 v="shadow depth compare bias" />
+	<_14 v="shadow slope scale bias" />
+	<_14 v="shadow depth compare bias (dynamic lights)" />
+	<_14 v="shadow slope scale bias (dynamic lights)" />
+	<_14 v="runtime bounding radius" />
+	<_17 v="runtime bounding offset" />
+	<_7 v="reload hash" />
+	<_3B v="" />
+</root>

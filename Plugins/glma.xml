@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="global material types" />
+	<_2 v="global water material" />
+	<_2 v="global air material" />
+	<_2 v="audio material switch group" />
+	<_5 v="global water material type" />
+	<_5 v="global air material type" />
+	<_40 v="runtime materials">
+		<_2 v="name" />
+		<_2 v="parent name" />
+		<_2 v="audio material name" />
+		<_2 v="audio fallback material name" />
+		<_5 v="audio fallback material index" />
+		<_5 v="runtime material index" />
+		<_E v="flags">
+			<Flag v="does not block spawning" />
+			<Flag v="does not block grapple line of sight" />
+			<Flag v="does not block callout raycasts" />
+			<Flag v="blocks grapple aim assist" />
+		</_E>
+		<_34 v="generated_pad3ced" length="2" />
+		<_2 v="general armor" />
+		<_2 v="specific armor" />
+		<_5 v="runtime dry base material index" />
+		<_34 v="generated_pad230c" length="2" />
+		<_38 v="physics properties">
+			<_3E v="flags" />
+			<_36 v="Friction" />
+			<_38 v="inheritable friction">
+				<_14 v="value" />
+				<_A v="inherit">
+					<Flag v="disabled" />
+					<Flag v="enabled" />
+				</_A>
+				<_34 v="generated_pad6e4b" length="3" />
+				<_3B v="" />
+			</_38>
+			<_36 v="Restitution" />
+			<_38 v="inheritable restitution">
+				<_14 v="value" />
+				<_A v="inherit">
+					<Flag v="disabled" />
+					<Flag v="enabled" />
+				</_A>
+				<_34 v="generated_pad6e4b" length="3" />
+				<_3B v="" />
+			</_38>
+			<_36 v="Density" />
+			<_38 v="inheritable density">
+				<_14 v="value" />
+				<_A v="inherit">
+					<Flag v="disabled" />
+					<Flag v="enabled" />
+				</_A>
+				<_34 v="generated_pad6e4b" length="3" />
+				<_3B v="" />
+			</_38>
+			<_36 v="Drag" />
+			<_41 v="water physics drag properties" />
+			<_40 v="drag overrides">
+				<_41 v="drag properties" />
+				<_3B v="" />
+			</_40>
+			<_36 v="Floatation" />
+			<_14 v="default" />
+			<_14 v="super floater" />
+			<_14 v="floater" />
+			<_14 v="neutral" />
+			<_14 v="sinker" />
+			<_14 v="super sinker" />
+			<_34 v="none" length="4" />
+			<_3B v="" />
+		</_38>
+		<_38 v="sweeteners">
+			<_41 v="sound sweetener (small)" />
+			<_41 v="sound sweetener (medium)" />
+			<_41 v="sound sweetener (large)" />
+			<_41 v="sound sweetener rolling" />
+			<_41 v="sound sweetener grinding" />
+			<_41 v="sound sweetener (melee small)" />
+			<_41 v="sound sweetener (melee)" />
+			<_41 v="sound sweetener (melee large)" />
+			<_41 v="effect sweetener (small)" />
+			<_41 v="effect sweetener (medium)" />
+			<_41 v="effect sweetener (large)" />
+			<_41 v="effect sweetener rolling" />
+			<_41 v="effect sweetener grinding" />
+			<_41 v="effect sweetener (melee)" />
+			<_41 v="water ripple (small)" />
+			<_41 v="water ripple (medium)" />
+			<_41 v="water ripple (large)" />
+			<_36 v="sweetener inheritance flags" />
+			<_D v="sweetener inheritance flags">
+				<Flag v="sound_small" />
+				<Flag v="sound_medium" />
+				<Flag v="sound_large" />
+				<Flag v="sound_rolling" />
+				<Flag v="sound_grinding" />
+				<Flag v="sound_melee_small" />
+				<Flag v="sound_melee" />
+				<Flag v="sound_melee_large" />
+				<Flag v="effect_small" />
+				<Flag v="effect_medium" />
+				<Flag v="effect_large" />
+				<Flag v="effect_rolling" />
+				<Flag v="effect_grinding" />
+				<Flag v="effect_melee" />
+				<Flag v="water_ripple_small" />
+				<Flag v="water_ripple_medium" />
+				<Flag v="water_ripple_large" />
+			</_D>
+			<_3B v="" />
+		</_38>
+		<_41 v="material effects" />
+		<_40 v="underwater proxies">
+			<_36 v="when this material is encounted under a material of this type ..." />
+			<_2 v="underwater material" />
+			<_36 v="... we report it as this material" />
+			<_2 v="proxy material" />
+			<_5 v="underwater material type" />
+			<_5 v="proxy material type" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="materials">
+		<_2 v="name" />
+		<_2 v="parent name" />
+		<_2 v="audio material name" />
+		<_2 v="audio fallback material name" />
+		<_5 v="audio fallback material index" />
+		<_5 v="runtime material index" />
+		<_E v="flags">
+			<Flag v="does not block spawning" />
+			<Flag v="does not block grapple line of sight" />
+			<Flag v="does not block callout raycasts" />
+			<Flag v="blocks grapple aim assist" />
+		</_E>
+		<_34 v="generated_pad3ced" length="2" />
+		<_2 v="general armor" />
+		<_2 v="specific armor" />
+		<_5 v="runtime dry base material index" />
+		<_34 v="generated_pad230c" length="2" />
+		<_38 v="physics properties">
+			<_3E v="flags" />
+			<_36 v="Friction" />
+			<_38 v="inheritable friction">
+				<_14 v="value" />
+				<_A v="inherit">
+					<Flag v="disabled" />
+					<Flag v="enabled" />
+				</_A>
+				<_34 v="generated_pad6e4b" length="3" />
+				<_3B v="" />
+			</_38>
+			<_36 v="Restitution" />
+			<_38 v="inheritable restitution">
+				<_14 v="value" />
+				<_A v="inherit">
+					<Flag v="disabled" />
+					<Flag v="enabled" />
+				</_A>
+				<_34 v="generated_pad6e4b" length="3" />
+				<_3B v="" />
+			</_38>
+			<_36 v="Density" />
+			<_38 v="inheritable density">
+				<_14 v="value" />
+				<_A v="inherit">
+					<Flag v="disabled" />
+					<Flag v="enabled" />
+				</_A>
+				<_34 v="generated_pad6e4b" length="3" />
+				<_3B v="" />
+			</_38>
+			<_36 v="Drag" />
+			<_41 v="water physics drag properties" />
+			<_40 v="drag overrides">
+				<_41 v="drag properties" />
+				<_3B v="" />
+			</_40>
+			<_36 v="Floatation" />
+			<_14 v="default" />
+			<_14 v="super floater" />
+			<_14 v="floater" />
+			<_14 v="neutral" />
+			<_14 v="sinker" />
+			<_14 v="super sinker" />
+			<_34 v="none" length="4" />
+			<_3B v="" />
+		</_38>
+		<_38 v="sweeteners">
+			<_41 v="sound sweetener (small)" />
+			<_41 v="sound sweetener (medium)" />
+			<_41 v="sound sweetener (large)" />
+			<_41 v="sound sweetener rolling" />
+			<_41 v="sound sweetener grinding" />
+			<_41 v="sound sweetener (melee small)" />
+			<_41 v="sound sweetener (melee)" />
+			<_41 v="sound sweetener (melee large)" />
+			<_41 v="effect sweetener (small)" />
+			<_41 v="effect sweetener (medium)" />
+			<_41 v="effect sweetener (large)" />
+			<_41 v="effect sweetener rolling" />
+			<_41 v="effect sweetener grinding" />
+			<_41 v="effect sweetener (melee)" />
+			<_41 v="water ripple (small)" />
+			<_41 v="water ripple (medium)" />
+			<_41 v="water ripple (large)" />
+			<_36 v="sweetener inheritance flags" />
+			<_D v="sweetener inheritance flags">
+				<Flag v="sound_small" />
+				<Flag v="sound_medium" />
+				<Flag v="sound_large" />
+				<Flag v="sound_rolling" />
+				<Flag v="sound_grinding" />
+				<Flag v="sound_melee_small" />
+				<Flag v="sound_melee" />
+				<Flag v="sound_melee_large" />
+				<Flag v="effect_small" />
+				<Flag v="effect_medium" />
+				<Flag v="effect_large" />
+				<Flag v="effect_rolling" />
+				<Flag v="effect_grinding" />
+				<Flag v="effect_melee" />
+				<Flag v="water_ripple_small" />
+				<Flag v="water_ripple_medium" />
+				<Flag v="water_ripple_large" />
+			</_D>
+			<_3B v="" />
+		</_38>
+		<_41 v="material effects" />
+		<_40 v="underwater proxies">
+			<_36 v="when this material is encounted under a material of this type ..." />
+			<_2 v="underwater material" />
+			<_36 v="... we report it as this material" />
+			<_2 v="proxy material" />
+			<_5 v="underwater material type" />
+			<_5 v="proxy material type" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

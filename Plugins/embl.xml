@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Shaders">
+		<_2 v="Name" />
+		<_41 v="Shader" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Emblems">
+		<_2 v="Name" />
+		<_41 v="SVG" />
+		<_41 v="SVG Geometry" />
+		<_41 v="SVGOutput" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Coatings">
+		<_2 v="Name" />
+		<_2E v="Shader" />
+		<_34 v="generated_pad0e9c" length="2" />
+		<_1F v="Text Color" />
+		<_40 v="Swatches">
+			<_41 v="Swatch" />
+			<_2 v="Color" />
+			<_A v="Roughness">
+				<Flag v="-100%" />
+				<Flag v="-75%" />
+				<Flag v="-50%" />
+				<Flag v="-25%" />
+				<Flag v="Default" />
+				<Flag v="+25%" />
+				<Flag v="+50%" />
+				<Flag v="+75%" />
+				<Flag v="+100%" />
+			</_A>
+			<_A v="Visibility">
+				<Flag v="Swatch Visible" />
+				<Flag v="Swatch Not Visible" />
+			</_A>
+			<_A v="Clipping">
+				<Flag v="Clipping Enabled" />
+				<Flag v="Clipping Disabled" />
+			</_A>
+			<_34 v="generated_pad2e68" length="1" />
+			<_18 v="Scale" />
+			<_18 v="Offset" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_paddebf" length="4" />
+	<_3B v="" />
+</root>

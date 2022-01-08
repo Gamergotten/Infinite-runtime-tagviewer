@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="font references">
+		<_41 v="font" />
+		<_D v="WPF All Languages">
+			<Flag v="All" />
+		</_D>
+		<_D v="WPF Flags">
+			<Flag v="English" />
+			<Flag v="Japanese" />
+			<Flag v="German" />
+			<Flag v="French" />
+			<Flag v="Spanish" />
+			<Flag v="Mexican-Spanish" />
+			<Flag v="Italian" />
+			<Flag v="Korean" />
+			<Flag v="Traditional-Chinese" />
+			<Flag v="Simplified-Chinese" />
+			<Flag v="Portuguese" />
+			<Flag v="Polish" />
+			<Flag v="Russian" />
+			<Flag v="Danish" />
+			<Flag v="Finnish" />
+			<Flag v="Dutch" />
+			<Flag v="Norwegian" />
+			<Flag v="Brazilian-Portuguese" />
+		</_D>
+		<_D v="FastHud All Languages">
+			<Flag v="All" />
+		</_D>
+		<_D v="FastHud Flags">
+			<Flag v="English" />
+			<Flag v="Japanese" />
+			<Flag v="German" />
+			<Flag v="French" />
+			<Flag v="Spanish" />
+			<Flag v="Mexican-Spanish" />
+			<Flag v="Italian" />
+			<Flag v="Korean" />
+			<Flag v="Traditional-Chinese" />
+			<Flag v="Simplified-Chinese" />
+			<Flag v="Portuguese" />
+			<Flag v="Polish" />
+			<Flag v="Russian" />
+			<Flag v="Danish" />
+			<Flag v="Finnish" />
+			<Flag v="Dutch" />
+			<Flag v="Norwegian" />
+			<Flag v="Brazilian-Portuguese" />
+		</_D>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padab5f" length="4" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_7 v="hash" />
+	<_F v="sourceDirectiveFlags">
+		<Flag v="Pre Process" />
+		<Flag v="Object Script" />
+		<Flag v="Debug" />
+	</_F>
+	<_38 v="objectScriptDefinition">
+		<_1 v="className" />
+		<_1 v="parentName" />
+		<_3B v="" />
+	</_38>
+	<_34 v="generated_pade272" length="3" />
+	<_40 v="references with variant">
+		<_41 v="reference" />
+		<_2 v="load variant" />
+		<_7 v="name hash" />
+		<_3B v="" />
+	</_40>
+	<_40 v="weak references with variant">
+		<_41 v="reference" />
+		<_2 v="load variant" />
+		<_7 v="name hash" />
+		<_3B v="" />
+	</_40>
+	<_40 v="server remotes">
+		<_42 v="function name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="client remotes">
+		<_42 v="function name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="hstructs">
+		<_1 v="name" />
+		<_40 v="Fields">
+			<_1 v="name" />
+			<_C v="Type">
+				<Flag v="Nil" />
+				<Flag v="Bool" />
+				<Flag v="LightUserData" />
+				<Flag v="Number" />
+				<Flag v="String" />
+				<Flag v="Table" />
+				<Flag v="Function" />
+				<Flag v="UserData" />
+				<Flag v="Thread" />
+				<Flag v="IFunction" />
+				<Flag v="CFunction" />
+				<Flag v="UI64" />
+				<Flag v="Struct" />
+				<Flag v="Tag" />
+			</_C>
+			<_1 v="TypeName" />
+			<_1 v="PrettyName" />
+			<_1 v="Tooltip" />
+			<_1 v="Group" />
+			<_C v="SourceType">
+				<Flag v="Nil" />
+				<Flag v="AllKits" />
+				<Flag v="UserDefinedStrings" />
+				<Flag v="AllChildren" />
+			</_C>
+			<_40 v="UserDefinedStrings">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_40 v="AllowedExtensions">
+				<_0 v="name" />
+				<_3B v="" />
+			</_40>
+			<_14 v="Min" />
+			<_14 v="Max" />
+			<_14 v="Step" />
+			<_1 v="ForgeTagListId" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Postprocess Error Messages">
+		<_1 v="error message" />
+		<_3B v="" />
+	</_40>
+	<_38 v="m_byteCode">
+		<_42 v="server" />
+		<_42 v="client" />
+		<_3B v="" />
+	</_38>
+	<_43 v="m_debugResource" />
+	<_34 v="generated_pad2f27" length="4" />
+	<_3B v="" />
+</root>

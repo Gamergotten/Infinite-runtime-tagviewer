@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="The following data pairs boolean malleable properties with full body effect tags.  It also assigns a priority to each pair. " />
+	<_40 v="Full Body Effects">
+		<_2 v="Id" />
+		<_14 v="Priority" />
+		<_41 v="Effect" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padb4c4" length="4" />
+	<_3B v="" />
+</root>

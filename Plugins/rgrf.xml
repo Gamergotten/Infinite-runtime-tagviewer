@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="Name" />
+	<_D v="Flags">
+		<Flag v="Allow as sub graph" />
+	</_D>
+	<_40 v="Nodes">
+		<_2 v="Name" />
+		<_C v="Type">
+			<Flag v="ExecuteGraph" />
+			<Flag v="GetTemporaryBuffer" />
+			<Flag v="GetTemporarySurface" />
+			<Flag v="CopyBuffer" />
+			<Flag v="CopySurface" />
+			<Flag v="DiscardTemporaryMemory" />
+			<Flag v="SetDrawOutput" />
+			<Flag v="DrawFullscreenQuad" />
+			<Flag v="DrawTerrain" />
+			<Flag v="DispatchCompute" />
+			<Flag v="GetGlobalSurface" />
+			<Flag v="DrawDrawableList" />
+			<Flag v="GetSurfaceComputeParameters" />
+			<Flag v="GetSurfaceDimensions" />
+			<Flag v="ClearBuffer" />
+			<Flag v="ClearSurface" />
+			<Flag v="GetShaderResourceBindlessIndex" />
+			<Flag v="GetUnorderedAccessBindlessIndex" />
+			<Flag v="InsertUavBarrier" />
+			<Flag v="SetVariable" />
+			<Flag v="GetVariable" />
+			<Flag v="Branch" />
+			<Flag v="Sequence" />
+			<Flag v="EntryPoint" />
+		</_C>
+		<_40 v="Parameters">
+			<_38 v="Parameter">
+				<_2 v="Name" />
+				<_C v="Type">
+					<Flag v="None" />
+					<Flag v="Any" />
+					<Flag v="Boolean" />
+					<Flag v="Integer" />
+					<Flag v="Float" />
+					<Flag v="Float2" />
+					<Flag v="Float3" />
+					<Flag v="Float4" />
+					<Flag v="Material" />
+					<Flag v="MaterialPreset" />
+					<Flag v="RenderGraph" />
+					<Flag v="Buffer" />
+					<Flag v="Surface" />
+					<Flag v="DataBlob" />
+					<Flag v="Viewport" />
+					<Flag v="Rect" />
+					<Flag v="DrawParameters" />
+					<Flag v="DispatchParameters" />
+					<Flag v="SamplerStateView" />
+					<Flag v="TerrainChunk" />
+					<Flag v="DrawableList" />
+					<Flag v="TextureDataPath" />
+				</_C>
+				<_6 v="Int" />
+				<_14 v="Float" />
+				<_19 v="Float3" />
+				<_41 v="Tag" />
+				<_42 v="DataPath" />
+				<_2 v="String" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="EditorMetadata">
+			<_18 v="UI Position" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Connections">
+		<_37 v="From..." />
+		<_36 v="Connection From Port" />
+		<_37 v="From Graph Input" />
+		<_30 v="From Graph Input" />
+		<_37 v="" />
+		<_37 v="From Graph Node" />
+		<_30 v="From Node" />
+		<_2 v="From Output Name" />
+		<_6 v="From Output Index" />
+		<_2 v="From Output Key" />
+		<_37 v="" />
+		<_37 v="From Graph Constant" />
+		<_30 v="From Graph Constant" />
+		<_37 v="" />
+		<_37 v="" />
+		<_37 v="To..." />
+		<_36 v="Connection To Port" />
+		<_37 v="To Graph Node" />
+		<_30 v="To Node" />
+		<_2 v="To Input Name" />
+		<_6 v="To Input Index" />
+		<_2 v="To Input Key" />
+		<_37 v="" />
+		<_37 v="To Graph Output" />
+		<_30 v="To Graph Output" />
+		<_37 v="" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Inputs">
+		<_2 v="Name" />
+		<_C v="Type">
+			<Flag v="None" />
+			<Flag v="Any" />
+			<Flag v="Boolean" />
+			<Flag v="Integer" />
+			<Flag v="Float" />
+			<Flag v="Float2" />
+			<Flag v="Float3" />
+			<Flag v="Float4" />
+			<Flag v="Material" />
+			<Flag v="MaterialPreset" />
+			<Flag v="RenderGraph" />
+			<Flag v="Buffer" />
+			<Flag v="Surface" />
+			<Flag v="DataBlob" />
+			<Flag v="Viewport" />
+			<Flag v="Rect" />
+			<Flag v="DrawParameters" />
+			<Flag v="DispatchParameters" />
+			<Flag v="SamplerStateView" />
+			<Flag v="TerrainChunk" />
+			<Flag v="DrawableList" />
+			<Flag v="TextureDataPath" />
+		</_C>
+		<_40 v="UI Property">
+			<_D v="Flags">
+				<Flag v="Hide from UI" />
+			</_D>
+			<_0 v="Display Name" />
+			<_1 v="Description" />
+			<_0 v="Category" />
+			<_6 v="Order" />
+			<_C v="Type">
+				<Flag v="None" />
+				<Flag v="Any" />
+				<Flag v="Boolean" />
+				<Flag v="Integer" />
+				<Flag v="Float" />
+				<Flag v="Float2" />
+				<Flag v="Float3" />
+				<Flag v="Float4" />
+				<Flag v="Material" />
+				<Flag v="MaterialPreset" />
+				<Flag v="RenderGraph" />
+				<Flag v="Buffer" />
+				<Flag v="Surface" />
+				<Flag v="DataBlob" />
+				<Flag v="Viewport" />
+				<Flag v="Rect" />
+				<Flag v="DrawParameters" />
+				<Flag v="DispatchParameters" />
+				<Flag v="SamplerStateView" />
+				<Flag v="TerrainChunk" />
+				<Flag v="DrawableList" />
+				<Flag v="TextureDataPath" />
+			</_C>
+			<_0 v="Range Min" />
+			<_C v="Range Min Setting">
+				<Flag v="None" />
+				<Flag v="Absolute" />
+				<Flag v="Flexible" />
+			</_C>
+			<_0 v="Range Max" />
+			<_C v="Range Max Setting">
+				<Flag v="None" />
+				<Flag v="Absolute" />
+				<Flag v="Flexible" />
+			</_C>
+			<_40 v="Enum Values">
+				<_0 v="Display Name" />
+				<_6 v="Value" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="EditorMetadata">
+			<_18 v="UI Position" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Outputs">
+		<_2 v="Name" />
+		<_C v="Type">
+			<Flag v="None" />
+			<Flag v="Any" />
+			<Flag v="Boolean" />
+			<Flag v="Integer" />
+			<Flag v="Float" />
+			<Flag v="Float2" />
+			<Flag v="Float3" />
+			<Flag v="Float4" />
+			<Flag v="Material" />
+			<Flag v="MaterialPreset" />
+			<Flag v="RenderGraph" />
+			<Flag v="Buffer" />
+			<Flag v="Surface" />
+			<Flag v="DataBlob" />
+			<Flag v="Viewport" />
+			<Flag v="Rect" />
+			<Flag v="DrawParameters" />
+			<Flag v="DispatchParameters" />
+			<Flag v="SamplerStateView" />
+			<Flag v="TerrainChunk" />
+			<Flag v="DrawableList" />
+			<Flag v="TextureDataPath" />
+		</_C>
+		<_40 v="EditorMetadata">
+			<_18 v="UI Position" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Constants">
+		<_38 v="Parameter">
+			<_2 v="Name" />
+			<_C v="Type">
+				<Flag v="None" />
+				<Flag v="Any" />
+				<Flag v="Boolean" />
+				<Flag v="Integer" />
+				<Flag v="Float" />
+				<Flag v="Float2" />
+				<Flag v="Float3" />
+				<Flag v="Float4" />
+				<Flag v="Material" />
+				<Flag v="MaterialPreset" />
+				<Flag v="RenderGraph" />
+				<Flag v="Buffer" />
+				<Flag v="Surface" />
+				<Flag v="DataBlob" />
+				<Flag v="Viewport" />
+				<Flag v="Rect" />
+				<Flag v="DrawParameters" />
+				<Flag v="DispatchParameters" />
+				<Flag v="SamplerStateView" />
+				<Flag v="TerrainChunk" />
+				<Flag v="DrawableList" />
+				<Flag v="TextureDataPath" />
+			</_C>
+			<_6 v="Int" />
+			<_14 v="Float" />
+			<_19 v="Float3" />
+			<_41 v="Tag" />
+			<_42 v="DataPath" />
+			<_2 v="String" />
+			<_3B v="" />
+		</_38>
+		<_40 v="EditorMetadata">
+			<_18 v="UI Position" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad0e69" length="4" />
+	<_7 v="RenderGraph" />
+	<_3B v="" />
+</root>

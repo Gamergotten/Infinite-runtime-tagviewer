@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_D v="flags">
+		<Flag v="random rotation" />
+		<Flag v="force planar" />
+		<Flag v="use new texture array" />
+	</_D>
+	<_14 v="material shader fade time" />
+	<_16 v="decal scale override" />
+	<_36 v="Decal bucket sharing" />
+	<_23 v="random sprite index bounds" />
+	<_40 v="decals">
+		<_41 v="albedo bitmap reference" />
+		<_41 v="normal bitmap reference" />
+		<_41 v="control bitmap reference" />
+		<_41 v="emissive bitmap reference" />
+		<_2 v="decal name" />
+		<_D v="flags">
+			<Flag v="render in transparents pass" />
+			<Flag v="use team color" />
+		</_D>
+		<_37 v="material" />
+		<_37 v="" />
+		<_38 v="actual material?">
+			<_41 v="material shader" />
+			<_40 v="material parameters">
+				<_2 v="parameter name" />
+				<_C v="parameter type">
+					<Flag v="bitmap" />
+					<Flag v="real" />
+					<Flag v="int" />
+					<Flag v="bool" />
+					<Flag v="color" />
+					<Flag v="scalar gpu property" />
+					<Flag v="color gpu property" />
+					<Flag v="string" />
+					<Flag v="preset" />
+				</_C>
+				<_41 v="bitmap" />
+				<_20 v="color" />
+				<_14 v="real" />
+				<_19 v="vector" />
+				<_6 v="int/bool" />
+				<_42 v="string" />
+				<_3D v="bitmap flags" />
+				<_3D v="bitmap filter mode" />
+				<_3D v="bitmap address mode" />
+				<_3D v="bitmap address mode x" />
+				<_3D v="bitmap address mode y" />
+				<_3C v="bitmap extern mode" />
+				<_3C v="bitmap min mipmap" />
+				<_3C v="bitmap max mipmap" />
+				<_34 v="generated_padea44" length="3" />
+				<_14 v="bitmap blur and sharpen" />
+				<_F v="parameter flags">
+					<Flag v="texture array" />
+					<Flag v="force bitmap clamp" />
+					<Flag v="disabled" />
+					<Flag v="has transform function" />
+					<Flag v="bindless" />
+				</_F>
+				<_34 v="generated_pad0425" length="3" />
+				<_3E v="render phases used" />
+				<_3E v="shader types used" />
+				<_40 v="function parameters">
+					<_C v="type">
+						<Flag v="value" />
+						<Flag v="color" />
+						<Flag v="scale uniform" />
+						<Flag v="scale u" />
+						<Flag v="scale v" />
+						<Flag v="offset u" />
+						<Flag v="offset v" />
+						<Flag v="frame index" />
+						<Flag v="alpha" />
+					</_C>
+					<_2 v="input name" />
+					<_2 v="range name" />
+					<_A v="Output Modifier">
+						<Flag v=" " />
+						<Flag v="Add" />
+						<Flag v="Multiply" />
+					</_A>
+					<_34 v="generated_pad8305" length="3" />
+					<_2 v="Output Modifier Input" />
+					<_14 v="time period" />
+					<_36 v="FUNCTION" />
+					<_37 v="function" />
+					<_38 v="function">
+						<_37 v="" />
+						<_42 v="data" />
+						<_37 v="" />
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_3D v="register offset" />
+				<_3D v="register size" />
+				<_3C v="bitmap extern index" />
+				<_34 v="generated_pad50da" length="3" />
+				<_3B v="" />
+			</_40>
+			<_40 v="postprocess definition">
+				<_40 v="textures">
+					<_41 v="bitmap reference" />
+					<_3E v="render phase mask" />
+					<_3E v="shader stage mask" />
+					<_3D v="frame index parameter" />
+					<_3D v="sampler index" />
+					<_3D v="transform register index" />
+					<_3D v="bindless parameter register offset" />
+					<_3C v="extern texture mode" />
+					<_3C v="extern texture index" />
+					<_34 v="generated_pad0c27" length="2" />
+					<_7 v="m_samplerStateView" />
+					<_3B v="" />
+				</_40>
+				<_6 v="textures to clear" />
+				<_40 v="functions">
+					<_C v="type">
+						<Flag v="value" />
+						<Flag v="color" />
+						<Flag v="scale uniform" />
+						<Flag v="scale u" />
+						<Flag v="scale v" />
+						<Flag v="offset u" />
+						<Flag v="offset v" />
+						<Flag v="frame index" />
+						<Flag v="alpha" />
+					</_C>
+					<_2 v="input name" />
+					<_2 v="range name" />
+					<_A v="Output Modifier">
+						<Flag v=" " />
+						<Flag v="Add" />
+						<Flag v="Multiply" />
+					</_A>
+					<_34 v="generated_pad8305" length="3" />
+					<_2 v="Output Modifier Input" />
+					<_14 v="time period" />
+					<_36 v="FUNCTION" />
+					<_37 v="function" />
+					<_38 v="function">
+						<_37 v="" />
+						<_42 v="data" />
+						<_37 v="" />
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_40 v="function parameters">
+					<_3C v="function index" />
+					<_3C v="register offset" />
+					<_3C v="parameter group" />
+					<_34 v="generated_padfe04" length="1" />
+					<_3E v="render phase mask" />
+					<_3B v="" />
+				</_40>
+				<_40 v="extern parameters">
+					<_3C v="extern index" />
+					<_3C v="extern offset" />
+					<_3C v="parameter group" />
+					<_34 v="generated_paddcf2" length="1" />
+					<_3D v="bindless parameter register offset" />
+					<_34 v="generated_pad29a7" length="2" />
+					<_3E v="render phase mask" />
+					<_3B v="" />
+				</_40>
+				<_A v="alpha blend mode">
+					<Flag v="opaque" />
+					<Flag v="additive" />
+					<Flag v="multiply" />
+					<Flag v="alpha_blend" />
+					<Flag v="double_multiply" />
+					<Flag v="pre_multiplied_alpha" />
+					<Flag v="maximum" />
+					<Flag v="multiply_add" />
+					<Flag v="add_src_times_dstalpha" />
+					<Flag v="add_src_times_srcalpha" />
+					<Flag v="inv_alpha_blend" />
+					<Flag v="overdraw_apply" />
+					<Flag v="decal" />
+					<Flag v="minimum" />
+					<Flag v="revsubtract" />
+					<Flag v="alpha_blend_max" />
+					<Flag v="opaque_alpha_blend" />
+					<Flag v="alpha_blend_additive_transparent" />
+					<Flag v="floating shadow" />
+					<Flag v="decal_alpha_blend" />
+					<Flag v="decal_add_src_times_src_alpha" />
+					<Flag v="decal_multiply_add" />
+					<Flag v="wpf_no_color_blend_mode" />
+					<Flag v="decal opaque" />
+					<Flag v="accumulate_pre_multiplied_alpha" />
+					<Flag v="wpf_blend_mode" />
+					<Flag v="accumulate_multiply_add" />
+					<Flag v="accumulate_alpha_blend" />
+					<Flag v="accumulate_inverse_alpha_blend" />
+					<Flag v="accumulate_additive" />
+					<Flag v="accumulate_additive_transparent" />
+					<Flag v="accumulate_add_src_times_srcalpha" />
+					<Flag v="accumulate_multiply" />
+					<Flag v="alpha_blend_for_display_planes" />
+					<Flag v="texturePainter_SrcAddDestMult" />
+					<Flag v="texturePainter_DestMultSubSrc" />
+					<Flag v="logical OR" />
+					<Flag v="logical AND" />
+					<Flag v="decal_multiply" />
+					<Flag v="decal_double_multiply" />
+					<Flag v="fourChannelAdditive" />
+					<Flag v="wpf_additive_blend_mode" />
+					<Flag v="cloud apply" />
+					<Flag v="subsurfaceScattering_convolution" />
+					<Flag v="reflectionOcclusionMask" />
+					<Flag v="TAA mask Additive" />
+					<Flag v="TAA mask RevSubtract" />
+					<Flag v="TAA mask Multiply" />
+					<Flag v="TAA mask DoubleMultiply" />
+					<Flag v="TAA mask PreMultipliedAlpha" />
+					<Flag v="TAA mask MultiplyAdd" />
+					<Flag v="TAA mask AlphaBlend" />
+					<Flag v="TAA mask AddSrcTimesDstAlpha" />
+					<Flag v="TAA mask AddSrcTimesSrcAlpha" />
+					<Flag v="TAA mask AdditiveTransparent" />
+					<Flag v="TAA mask Alpha Blend for Display Plane" />
+					<Flag v="TAA Velocity Additive" />
+					<Flag v="TAA Velocity RevSubtract" />
+					<Flag v="TAA Velocity Multiply" />
+					<Flag v="TAA Velocity DoubleMultiply" />
+					<Flag v="TAA Velocity PreMultipliedAlpha" />
+					<Flag v="TAA Velocity MultiplyAdd" />
+					<Flag v="TAA Velocity AlphaBlend" />
+					<Flag v="TAA Velocity AddSrcTimesDstAlpha" />
+					<Flag v="TAA Velocity AddSrcTimesSrcAlpha" />
+					<Flag v="TAA Velocity AdditiveTransparent" />
+					<Flag v="TAA Velocity Alpha Blend for Display Plane" />
+					<Flag v="DeferredDecalsResolve" />
+					<Flag v="decal_ao_opaque" />
+					<Flag v="decal_ao_alpha_blend" />
+					<Flag v="decal_sss_blend" />
+					<Flag v="Hud Damage Alpha Blend" />
+				</_A>
+				<_F v="runtime flags">
+					<Flag v="bindless indices are up to date" />
+				</_F>
+				<_E v="flags">
+					<Flag v="has material constant functions" />
+					<Flag v="has texture frame functions" />
+					<Flag v="disable atmosphere fog" />
+					<Flag v="material is variable" />
+					<Flag v="has variable material constant functions" />
+					<Flag v="has at least one extern texture used" />
+					<Flag v="is alpha clip" />
+					<Flag v="enable_taa_mask" />
+					<Flag v="has damage map" />
+				</_E>
+				<_40 v="material constants">
+					<_1A v="register" />
+					<_3B v="" />
+				</_40>
+				<_40 v="alternate constants">
+					<_1A v="register" />
+					<_3B v="" />
+				</_40>
+				<_7 v="materialConstantBuffer" />
+				<_7 v="alternateConstantBuffer" />
+				<_3E v="material constant shader stage mask" />
+				<_39 v="runtime queryable properties table" />
+				<_3B v="" />
+			</_40>
+			<_2 v="physics material name" />
+			<_2 v="physics material name 2" />
+			<_2 v="physics material name 3" />
+			<_2 v="physics material name 4" />
+			<_14 v="sort offset" />
+			<_A v="alpha blend mode">
+				<Flag v="opaque" />
+				<Flag v="additive" />
+				<Flag v="multiply" />
+				<Flag v="alpha_blend" />
+				<Flag v="double_multiply" />
+				<Flag v="pre_multiplied_alpha" />
+				<Flag v="maximum" />
+				<Flag v="multiply_add" />
+				<Flag v="add_src_times_dstalpha" />
+				<Flag v="add_src_times_srcalpha" />
+				<Flag v="inv_alpha_blend" />
+				<Flag v="overdraw_apply" />
+				<Flag v="decal" />
+				<Flag v="minimum" />
+				<Flag v="revsubtract" />
+				<Flag v="alpha_blend_max" />
+				<Flag v="opaque_alpha_blend" />
+				<Flag v="alpha_blend_additive_transparent" />
+				<Flag v="floating shadow" />
+				<Flag v="decal_alpha_blend" />
+				<Flag v="decal_add_src_times_src_alpha" />
+				<Flag v="decal_multiply_add" />
+				<Flag v="wpf_no_color_blend_mode" />
+				<Flag v="decal opaque" />
+				<Flag v="accumulate_pre_multiplied_alpha" />
+				<Flag v="wpf_blend_mode" />
+				<Flag v="accumulate_multiply_add" />
+				<Flag v="accumulate_alpha_blend" />
+				<Flag v="accumulate_inverse_alpha_blend" />
+				<Flag v="accumulate_additive" />
+				<Flag v="accumulate_additive_transparent" />
+				<Flag v="accumulate_add_src_times_srcalpha" />
+				<Flag v="accumulate_multiply" />
+				<Flag v="alpha_blend_for_display_planes" />
+				<Flag v="texturePainter_SrcAddDestMult" />
+				<Flag v="texturePainter_DestMultSubSrc" />
+				<Flag v="logical OR" />
+				<Flag v="logical AND" />
+				<Flag v="decal_multiply" />
+				<Flag v="decal_double_multiply" />
+				<Flag v="fourChannelAdditive" />
+				<Flag v="wpf_additive_blend_mode" />
+				<Flag v="cloud apply" />
+				<Flag v="subsurfaceScattering_convolution" />
+				<Flag v="reflectionOcclusionMask" />
+				<Flag v="TAA mask Additive" />
+				<Flag v="TAA mask RevSubtract" />
+				<Flag v="TAA mask Multiply" />
+				<Flag v="TAA mask DoubleMultiply" />
+				<Flag v="TAA mask PreMultipliedAlpha" />
+				<Flag v="TAA mask MultiplyAdd" />
+				<Flag v="TAA mask AlphaBlend" />
+				<Flag v="TAA mask AddSrcTimesDstAlpha" />
+				<Flag v="TAA mask AddSrcTimesSrcAlpha" />
+				<Flag v="TAA mask AdditiveTransparent" />
+				<Flag v="TAA mask Alpha Blend for Display Plane" />
+				<Flag v="TAA Velocity Additive" />
+				<Flag v="TAA Velocity RevSubtract" />
+				<Flag v="TAA Velocity Multiply" />
+				<Flag v="TAA Velocity DoubleMultiply" />
+				<Flag v="TAA Velocity PreMultipliedAlpha" />
+				<Flag v="TAA Velocity MultiplyAdd" />
+				<Flag v="TAA Velocity AlphaBlend" />
+				<Flag v="TAA Velocity AddSrcTimesDstAlpha" />
+				<Flag v="TAA Velocity AddSrcTimesSrcAlpha" />
+				<Flag v="TAA Velocity AdditiveTransparent" />
+				<Flag v="TAA Velocity Alpha Blend for Display Plane" />
+				<Flag v="DeferredDecalsResolve" />
+				<Flag v="decal_ao_opaque" />
+				<Flag v="decal_ao_alpha_blend" />
+				<Flag v="decal_sss_blend" />
+				<Flag v="Hud Damage Alpha Blend" />
+			</_A>
+			<_A v="sort layer">
+				<Flag v="invalid" />
+				<Flag v="pre-pass" />
+				<Flag v="normal" />
+				<Flag v="post-pass" />
+			</_A>
+			<_F v="flags">
+				<Flag v="converted from shader" />
+				<Flag v="decal post lighting" />
+				<Flag v="runtime generated" />
+			</_F>
+			<_F v="render flags">
+				<Flag v="no atmosphere fog" />
+				<Flag v="cull shields" />
+				<Flag v="cull active camo" />
+				<Flag v="mask TAA for transparents" />
+				<Flag v="force render velocity for TAA" />
+				<Flag v="render depth info when transparent" />
+				<Flag v="part material DOES NOT override depth write behavior" />
+			</_F>
+			<_14 v="taa mask threshold start" />
+			<_14 v="taa mask threshold end" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_25 v="radius" />
+		<_25 v="lifespan" />
+		<_14 v="clamp angle" />
+		<_14 v="cull angle" />
+		<_14 v="depth bias" />
+		<_14 v="runtime bitmap aspect" />
+		<_34 v="generated_padf6b1" length="4" />
+		<_7 v="m_pipelineStates" />
+		<_3B v="" />
+	</_40>
+	<_14 v="runtime max radius" />
+	<_34 v="generated_pad2745" length="4" />
+	<_7 v="decalDefinitionConstants" />
+	<_3B v="" />
+</root>

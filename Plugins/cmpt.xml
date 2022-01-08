@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="FADE OUT FROM GAME" />
+	<_38 v="Fade Out From Game">
+		<_F v="Flags">
+			<Flag v="Active" />
+		</_F>
+		<_34 v="generated_pad569d" length="1" />
+		<_5 v="Fade Hold" />
+		<_6 v="Fade Time" />
+		<_1F v="Fade Color" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="FADE IN" />
+	<_38 v="Fade In">
+		<_F v="Flags">
+			<Flag v="Active" />
+		</_F>
+		<_34 v="generated_pad569d" length="1" />
+		<_5 v="Fade Hold" />
+		<_6 v="Fade Time" />
+		<_1F v="Fade Color" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="FADE OUT" />
+	<_38 v="Fade Out">
+		<_F v="Flags">
+			<Flag v="Active" />
+		</_F>
+		<_34 v="generated_pad569d" length="1" />
+		<_5 v="Fade Hold" />
+		<_6 v="Fade Time" />
+		<_1F v="Fade Color" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="FADE POST LOAD" />
+	<_38 v="Fade Post Load">
+		<_F v="Flags">
+			<Flag v="Active" />
+		</_F>
+		<_34 v="generated_pad569d" length="1" />
+		<_5 v="Fade Hold" />
+		<_6 v="Fade Time" />
+		<_1F v="Fade Color" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="FADE IN TO GAME" />
+	<_38 v="Fade In To Game">
+		<_F v="Flags">
+			<Flag v="Active" />
+		</_F>
+		<_34 v="generated_pad569d" length="1" />
+		<_5 v="Fade Hold" />
+		<_6 v="Fade Time" />
+		<_1F v="Fade Color" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_34 v="generated_padb275" length="4" />
+	<_3B v="" />
+</root>

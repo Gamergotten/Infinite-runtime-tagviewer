@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="Sub Pickup Message" />
+	<_2 v="Sub Swap Message" />
+	<_2 v="Picked Up Message" />
+	<_2 v="Switch To Message" />
+	<_2 v="Switch To From AI Message" />
+	<_2 v="Low Ammo Message" />
+	<_2 v="Notify Empty Message" />
+	<_2 v="Notify Overheat Message" />
+	<_2 v="Heat Warning Message" />
+	<_2 v="Tint Color" />
+	<_40 v="UI Item Info">
+		<_2 v="name" />
+		<_2 v="alt name " />
+		<_2 v="description" />
+		<_2 v="help text" />
+		<_2 v="icon string id" />
+		<_41 v="sprite" />
+		<_6 v="sprite index" />
+		<_41 v="alt sprite" />
+		<_6 v="alt sprite index" />
+		<_6 v="damage sprite index" />
+		<_41 v="ui vehicle screen reference" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pada0bd" length="4" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="hip fire reticle default screen reference" />
+	<_41 v="reticle default screen reference" />
+	<_41 v="sight front default screen reference" />
+	<_41 v="sight back default screen reference" />
+	<_14 v="scale" />
+	<_34 v="generated_padbede" length="4" />
+	<_3B v="" />
+</root>

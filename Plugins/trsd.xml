@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Transition sounds">
+		<_2 v="Display Name" />
+		<_41 v="Sound" />
+		<_14 v="Transition sound time" />
+		<_B v="Platform type">
+			<Flag v="SpartanPlatform0" />
+			<Flag v="SpartanPlatform1" />
+			<Flag v="SpartanPlatform2" />
+			<Flag v="SpartanPlatform3" />
+			<Flag v="SpartanPlatform4" />
+			<Flag v="SpartanPlatform5" />
+			<Flag v="SpartanPlatform6" />
+			<Flag v="SpartanPlatform7" />
+			<Flag v="SpartanPlatformsCount" />
+			<Flag v="VehiclePlatform" />
+		</_B>
+		<_B v="Platform direction">
+			<Flag v="Raise" />
+			<Flag v="Lower" />
+		</_B>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pade975" length="4" />
+	<_3B v="" />
+</root>

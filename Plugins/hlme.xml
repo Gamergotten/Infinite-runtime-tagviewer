@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="name" />
+	<_6 v="GUID" />
+	<_19 v="Position" />
+	<_19 v="VolumeMin" />
+	<_19 v="VolumeMax" />
+	<_40 v="Child static geo">
+		<_6 v="Guid" />
+		<_41 v="Parent Layer Ref" />
+		<_A v="Included In Geo">
+			<Flag v="Include In Geo" />
+			<Flag v="Dont Include In Geo" />
+		</_A>
+		<_34 v="generated_pad944a" length="3" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Child HLOD Volumes">
+		<_6 v="Guid" />
+		<_41 v="Parent Layer Ref" />
+		<_A v="Included In Geo">
+			<Flag v="Include In Geo" />
+			<Flag v="Dont Include In Geo" />
+		</_A>
+		<_34 v="generated_pad944a" length="3" />
+		<_3B v="" />
+	</_40>
+	<_B v="Maximum LOD">
+		<Flag v="LOD0" />
+		<Flag v="LOD1" />
+		<Flag v="LOD2" />
+		<Flag v="LOD3" />
+		<Flag v="LOD4" />
+		<Flag v="LOD5" />
+		<Flag v="LOD6" />
+		<Flag v="LOD7" />
+		<Flag v="LOD8" />
+		<Flag v="LOD9" />
+		<Flag v="LOD10" />
+		<Flag v="LOD11" />
+		<Flag v="LOD12" />
+		<Flag v="LOD13" />
+		<Flag v="LOD14" />
+		<Flag v="LOD15" />
+		<Flag v="Use Distance" />
+	</_B>
+	<_34 v="generated_pad77b4" length="2" />
+	<_40 v="BSPs">
+		<_41 v="BSP" />
+		<_6 v="ioCount" />
+		<_3B v="" />
+	</_40>
+	<_40 v="BSPs involved by all children">
+		<_41 v="BSP" />
+		<_6 v="ioCount" />
+		<_3B v="" />
+	</_40>
+	<_14 v="SwitchDistance" />
+	<_41 v="HlodSettings" />
+	<_41 v="Asset" />
+	<_2 v="Asset Category" />
+	<_B v="Use Visibility">
+		<Flag v="Use Visibility" />
+		<Flag v="Do Not Use Visibility" />
+	</_B>
+	<_34 v="generated_pad9195" length="2" />
+	<_38 v="Visibility Camera Sphere Settings">
+		<_3E v="Quality" />
+		<_14 v="Semisphere Center Pitch Angle" />
+		<_14 v="Semisphere Center Yaw Angle" />
+		<_14 v="Sphere Coverage" />
+		<_3B v="" />
+	</_38>
+	<_34 v="generated_padde4a" length="4" />
+	<_3B v="" />
+</root>

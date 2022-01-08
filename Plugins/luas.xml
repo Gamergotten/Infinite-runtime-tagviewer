@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="import - directory" />
+	<_37 v="import - single file" />
+	<_2 v="luaFileName" />
+	<_42 v="luaFileData" />
+	<_1 v="luaFileNameString" />
+	<_40 v="referencedTags">
+		<_41 v="tagReference" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

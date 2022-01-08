@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="composer globals">
+		<_14 v="cinematic film aperture" />
+		<_14 v="cinematic skip ui up time" />
+		<_6 v="Max frames jumped to trigger sound" />
+		<_37 v="Start, End, Skip Scripts" />
+		<_38 v="Start Script">
+			<_F v="Flags">
+				<Flag v="Client" />
+				<Flag v="HasAssociatedScript" />
+				<Flag v="IgnoreInEditor" />
+			</_F>
+			<_34 v="generated_pad585d" length="3" />
+			<_42 v="Data" />
+			<_3C v="Boolean Expression" />
+			<_34 v="generated_pad3e7c" length="3" />
+			<_42 v="Runtime Script Binary" />
+			<_0 v="Runtime Script Name" />
+			<_3E v="Runtime Script CRC" />
+			<_3B v="" />
+		</_38>
+		<_38 v="End Script">
+			<_F v="Flags">
+				<Flag v="Client" />
+				<Flag v="HasAssociatedScript" />
+				<Flag v="IgnoreInEditor" />
+			</_F>
+			<_34 v="generated_pad585d" length="3" />
+			<_42 v="Data" />
+			<_3C v="Boolean Expression" />
+			<_34 v="generated_pad3e7c" length="3" />
+			<_42 v="Runtime Script Binary" />
+			<_0 v="Runtime Script Name" />
+			<_3E v="Runtime Script CRC" />
+			<_3B v="" />
+		</_38>
+		<_38 v="Skip Script">
+			<_F v="Flags">
+				<Flag v="Client" />
+				<Flag v="HasAssociatedScript" />
+				<Flag v="IgnoreInEditor" />
+			</_F>
+			<_34 v="generated_pad585d" length="3" />
+			<_42 v="Data" />
+			<_3C v="Boolean Expression" />
+			<_34 v="generated_pad3e7c" length="3" />
+			<_42 v="Runtime Script Binary" />
+			<_0 v="Runtime Script Name" />
+			<_3E v="Runtime Script CRC" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Start Next Show Script" />
+		<_38 v="Start Next Show Script">
+			<_F v="Flags">
+				<Flag v="Client" />
+				<Flag v="HasAssociatedScript" />
+				<Flag v="IgnoreInEditor" />
+			</_F>
+			<_34 v="generated_pad585d" length="3" />
+			<_42 v="Data" />
+			<_3C v="Boolean Expression" />
+			<_34 v="generated_pad3e7c" length="3" />
+			<_42 v="Runtime Script Binary" />
+			<_0 v="Runtime Script Name" />
+			<_3E v="Runtime Script CRC" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Kill Previous Show Script" />
+		<_38 v="Kill Previous Show Script">
+			<_F v="Flags">
+				<Flag v="Client" />
+				<Flag v="HasAssociatedScript" />
+				<Flag v="IgnoreInEditor" />
+			</_F>
+			<_34 v="generated_pad585d" length="3" />
+			<_42 v="Data" />
+			<_3C v="Boolean Expression" />
+			<_34 v="generated_pad3e7c" length="3" />
+			<_42 v="Runtime Script Binary" />
+			<_0 v="Runtime Script Name" />
+			<_3E v="Runtime Script CRC" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_40 v="Stage Cleanup Preserve">
+			<_41 v="Tag Reference" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Stage Cleanup Destroy">
+			<_41 v="Tag Reference" />
+			<_3B v="" />
+		</_40>
+		<_37 v="Streaming Ranges" />
+		<_14 v="Stream Composition Resources Radius" />
+		<_14 v="Stream Pinned Resources Radius" />
+		<_37 v="" />
+		<_37 v="Transition Fade Times" />
+		<_14 v="Default Vehicle Transition Fade Time" />
+		<_14 v="Default Support Transition Fade Time" />
+		<_14 v="Default Airborne Transition Fade Time" />
+		<_14 v="Default Composition Start Transition Fade Time" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pada30b" length="4" />
+	<_3B v="" />
+</root>

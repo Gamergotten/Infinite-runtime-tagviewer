@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_D v="flags">
+		<Flag v="Use Environment Acoustics" />
+	</_D>
+	<_40 v="Scenario sound bank list">
+		<_41 v="Sound bank" />
+		<_3B v="" />
+	</_40>
+	<_6 v="sound permutation mission id" />
+	<_34 v="generated_pad89d2" length="4" />
+	<_3B v="" />
+</root>

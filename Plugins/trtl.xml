@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_3E v="Tile X Index" />
+	<_3E v="Tile Y Index" />
+	<_40 v="Parameters">
+		<_38 v="Parameter">
+			<_2 v="Name" />
+			<_C v="Type">
+				<Flag v="None" />
+				<Flag v="Any" />
+				<Flag v="Boolean" />
+				<Flag v="Integer" />
+				<Flag v="Float" />
+				<Flag v="Float2" />
+				<Flag v="Float3" />
+				<Flag v="Float4" />
+				<Flag v="Material" />
+				<Flag v="MaterialPreset" />
+				<Flag v="RenderGraph" />
+				<Flag v="Buffer" />
+				<Flag v="Surface" />
+				<Flag v="DataBlob" />
+				<Flag v="Viewport" />
+				<Flag v="Rect" />
+				<Flag v="DrawParameters" />
+				<Flag v="DispatchParameters" />
+				<Flag v="SamplerStateView" />
+				<Flag v="TerrainChunk" />
+				<Flag v="DrawableList" />
+				<Flag v="TextureDataPath" />
+			</_C>
+			<_6 v="Int" />
+			<_14 v="Float" />
+			<_19 v="Float3" />
+			<_41 v="Tag" />
+			<_42 v="DataPath" />
+			<_2 v="String" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad4100" length="4" />
+	<_3B v="" />
+</root>

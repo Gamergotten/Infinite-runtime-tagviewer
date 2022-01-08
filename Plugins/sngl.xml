@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="Initial zone set preload event name" />
+	<_2 v="Level unloaded event name" />
+	<_2 v="Game preload event name" />
+	<_2 v="Game quit event name" />
+	<_2 v="Live theater scrub begin event" />
+	<_2 v="Live theater scrub end event" />
+	<_41 v="Init sound bank" />
+	<_40 v="Global sound banks">
+		<_41 v="Sound bank" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Extra sound banks">
+		<_41 v="Sound bank" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Campaign sound banks">
+		<_41 v="Sound bank" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Multiplayer sound banks">
+		<_41 v="Sound bank" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Streaming pack files">
+		<_D v="flags">
+			<Flag v="Language pack" />
+			<Flag v="Sound bank pack" />
+		</_D>
+		<_0 v="Streaming pck file" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Excluded streaming pack files">
+		<_D v="flags">
+			<Flag v="Language pack" />
+			<Flag v="Sound bank pack" />
+		</_D>
+		<_0 v="Streaming pck file" />
+		<_3B v="" />
+	</_40>
+	<_14 v="Radio For Voice Radius" />
+	<_40 v="Vehicle Surface Sound Info">
+		<_2 v="RTPC name" />
+		<_14 v="Sweetener threshold" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Forge sound events" />
+	<_14 v="Acoustic Zone transition speed" />
+	<_41 v="Root sound category reference" />
+	<_14 v="Camera to biped listener position blend" />
+	<_14 v="Camera to biped listener orientation blend" />
+	<_14 v="Listener to locked z axis orientation blend" />
+	<_14 v="Milliseconds between focus RTPC update" />
+	<_37 v="Quality Presets" />
+	<_38 v="Quality Presets">
+		<_37 v="XBoxOne" />
+		<_38 v="XBoxOne">
+			<_37 v="Acoustics" />
+			<_38 v="Acoustics">
+				<_F v="Audio Flags">
+					<Flag v="Acoustics Disable Voxel Pathfinding" />
+					<Flag v="Acoustics Disable Dynamic Object Obstruction" />
+					<Flag v="Acoustics Disable Portal Raycasting" />
+					<Flag v="Acoustics Enable Flood Fill Diagonals" />
+					<Flag v="Acoustics Enable Flood Fill Sorted Frontier" />
+					<Flag v="Acoustics Disable Dynamic Objects For Line-of-sight Raycasts" />
+				</_F>
+				<_34 v="generated_pad5f57" length="3" />
+				<_6 v="Acoustics Flood Fill Num String Pull Iterations" />
+				<_14 v="Acoustics Flood Fill Num String Pull Iteration scale" />
+				<_6 v="Acoustics Num Parallel Source Updates" />
+				<_14 v="Acoustics LOD Distance Multiplier" />
+				<_6 v="Max Listener Count To Enable Voxel Obstruction" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Scarlett" />
+		<_38 v="Scarlett">
+			<_37 v="Acoustics" />
+			<_38 v="Acoustics">
+				<_F v="Audio Flags">
+					<Flag v="Acoustics Disable Voxel Pathfinding" />
+					<Flag v="Acoustics Disable Dynamic Object Obstruction" />
+					<Flag v="Acoustics Disable Portal Raycasting" />
+					<Flag v="Acoustics Enable Flood Fill Diagonals" />
+					<Flag v="Acoustics Enable Flood Fill Sorted Frontier" />
+					<Flag v="Acoustics Disable Dynamic Objects For Line-of-sight Raycasts" />
+				</_F>
+				<_34 v="generated_pad5f57" length="3" />
+				<_6 v="Acoustics Flood Fill Num String Pull Iterations" />
+				<_14 v="Acoustics Flood Fill Num String Pull Iteration scale" />
+				<_6 v="Acoustics Num Parallel Source Updates" />
+				<_14 v="Acoustics LOD Distance Multiplier" />
+				<_6 v="Max Listener Count To Enable Voxel Obstruction" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="PC" />
+		<_38 v="PC">
+			<_37 v="Acoustics" />
+			<_38 v="Acoustics">
+				<_F v="Audio Flags">
+					<Flag v="Acoustics Disable Voxel Pathfinding" />
+					<Flag v="Acoustics Disable Dynamic Object Obstruction" />
+					<Flag v="Acoustics Disable Portal Raycasting" />
+					<Flag v="Acoustics Enable Flood Fill Diagonals" />
+					<Flag v="Acoustics Enable Flood Fill Sorted Frontier" />
+					<Flag v="Acoustics Disable Dynamic Objects For Line-of-sight Raycasts" />
+				</_F>
+				<_34 v="generated_pad5f57" length="3" />
+				<_6 v="Acoustics Flood Fill Num String Pull Iterations" />
+				<_14 v="Acoustics Flood Fill Num String Pull Iteration scale" />
+				<_6 v="Acoustics Num Parallel Source Updates" />
+				<_14 v="Acoustics LOD Distance Multiplier" />
+				<_6 v="Max Listener Count To Enable Voxel Obstruction" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Wwise Bus/Device Names" />
+	<_1 v="System device" />
+	<_1 v="Spatial device" />
+	<_1 v="Spatial bus" />
+	<_37 v="" />
+	<_3B v="" />
+</root>

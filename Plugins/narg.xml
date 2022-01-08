@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="First to First Transitions">
+		<_2 v="Name" />
+		<_14 v="Camera Blend-In Time" />
+		<_A v="Camera Blend In Curve">
+			<Flag v="None" />
+			<Flag v="Linear" />
+			<Flag v="Zero" />
+			<Flag v="One" />
+			<Flag v="EaseInQuad" />
+			<Flag v="EaseOutQuad" />
+			<Flag v="EaseInOutQuad" />
+			<Flag v="EaseInCubic" />
+			<Flag v="EaseOutCubic" />
+			<Flag v="EaseInOutCubic" />
+			<Flag v="EaseInQuart" />
+			<Flag v="EaseOutQuart" />
+			<Flag v="EaseInOutQuart" />
+			<Flag v="EaseInQuint" />
+			<Flag v="EaseOutQuint" />
+			<Flag v="EaseInOutQuint" />
+			<Flag v="EaseInSine" />
+			<Flag v="EaseOutSine" />
+			<Flag v="EaseInOutSine" />
+			<Flag v="EaseInExpo" />
+			<Flag v="EaseOutExpo" />
+			<Flag v="EaseInOutExpo" />
+			<Flag v="EaseInCirc" />
+			<Flag v="EaseOutCirc" />
+			<Flag v="EaseInOutCirc" />
+			<Flag v="EaseInOutLight" />
+			<Flag v="EaseInOutHeavy" />
+		</_A>
+		<_34 v="generated_pada170" length="3" />
+		<_14 v="Camera Blend-Out Time" />
+		<_A v="Camera Blend Out Curve">
+			<Flag v="None" />
+			<Flag v="Linear" />
+			<Flag v="Zero" />
+			<Flag v="One" />
+			<Flag v="EaseInQuad" />
+			<Flag v="EaseOutQuad" />
+			<Flag v="EaseInOutQuad" />
+			<Flag v="EaseInCubic" />
+			<Flag v="EaseOutCubic" />
+			<Flag v="EaseInOutCubic" />
+			<Flag v="EaseInQuart" />
+			<Flag v="EaseOutQuart" />
+			<Flag v="EaseInOutQuart" />
+			<Flag v="EaseInQuint" />
+			<Flag v="EaseOutQuint" />
+			<Flag v="EaseInOutQuint" />
+			<Flag v="EaseInSine" />
+			<Flag v="EaseOutSine" />
+			<Flag v="EaseInOutSine" />
+			<Flag v="EaseInExpo" />
+			<Flag v="EaseOutExpo" />
+			<Flag v="EaseInOutExpo" />
+			<Flag v="EaseInCirc" />
+			<Flag v="EaseOutCirc" />
+			<Flag v="EaseInOutCirc" />
+			<Flag v="EaseInOutLight" />
+			<Flag v="EaseInOutHeavy" />
+		</_A>
+		<_34 v="generated_padbb51" length="3" />
+		<_38 v="Transition Data">
+			<_2 v="Preset" />
+			<_E v="Override Flags">
+				<Flag v="Override Flags" />
+				<Flag v="Override Close Enough Distances" />
+				<Flag v="Override Close Enough Angles" />
+				<Flag v="Override Linear Velocities" />
+				<Flag v="Override Angular Velocities" />
+				<Flag v="Override Lower and Raise Weapon Times" />
+				<Flag v="Override Hide Player Time" />
+				<Flag v="Override Move To Slide Curve and Move To Time" />
+				<Flag v="Override Delays" />
+				<Flag v="Override Blend Times and Curves" />
+			</_E>
+			<_F v="Flags">
+				<Flag v="No Transition In" />
+				<Flag v="No Transition Out" />
+				<Flag v="No HUD Off" />
+				<Flag v="No HUD On" />
+				<Flag v="Use Time Instead" />
+				<Flag v="Transition Out Trigger on Event" />
+				<Flag v="Don't Wait for HUD" />
+				<Flag v="Don't Hide FPS HUD Elements" />
+			</_F>
+			<_34 v="generated_pad1960" length="1" />
+			<_14 v="Close Enough Distance Min" />
+			<_14 v="Close Enough Distance Max" />
+			<_8 v="Close Enough Angle Min" />
+			<_8 v="Close Enough Angle Max" />
+			<_14 v="Linear Velocity Min" />
+			<_14 v="Linear Velocity Max" />
+			<_8 v="Angular Velocity Min" />
+			<_8 v="Angular Velocity Max" />
+			<_14 v="Lower Weapon Time" />
+			<_14 v="Raise Weapon Time" />
+			<_14 v="Hide Player Time" />
+			<_A v="Move To Slide Curve">
+				<Flag v="None" />
+				<Flag v="Linear" />
+				<Flag v="Zero" />
+				<Flag v="One" />
+				<Flag v="EaseInQuad" />
+				<Flag v="EaseOutQuad" />
+				<Flag v="EaseInOutQuad" />
+				<Flag v="EaseInCubic" />
+				<Flag v="EaseOutCubic" />
+				<Flag v="EaseInOutCubic" />
+				<Flag v="EaseInQuart" />
+				<Flag v="EaseOutQuart" />
+				<Flag v="EaseInOutQuart" />
+				<Flag v="EaseInQuint" />
+				<Flag v="EaseOutQuint" />
+				<Flag v="EaseInOutQuint" />
+				<Flag v="EaseInSine" />
+				<Flag v="EaseOutSine" />
+				<Flag v="EaseInOutSine" />
+				<Flag v="EaseInExpo" />
+				<Flag v="EaseOutExpo" />
+				<Flag v="EaseInOutExpo" />
+				<Flag v="EaseInCirc" />
+				<Flag v="EaseOutCirc" />
+				<Flag v="EaseInOutCirc" />
+				<Flag v="EaseInOutLight" />
+				<Flag v="EaseInOutHeavy" />
+			</_A>
+			<_34 v="generated_pad3341" length="3" />
+			<_14 v="Move To Time" />
+			<_14 v="Lower Weapon Delay Override" />
+			<_14 v="Raise Weapon Delay Override" />
+			<_14 v="HUD Off Delay Override" />
+			<_14 v="HUD On Delay Override" />
+			<_14 v="Move To Delay Override" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad40b9" length="4" />
+	<_3B v="" />
+</root>

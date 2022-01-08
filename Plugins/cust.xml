@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="static data">
+		<_40 v="columns">
+			<_2 v="name" />
+			<_B v="type">
+				<Flag v="boolean" />
+				<Flag v="long" />
+				<Flag v="real" />
+				<Flag v="string" />
+				<Flag v="component" />
+				<Flag v="tag reference" />
+				<Flag v="string id" />
+				<Flag v="argb color" />
+				<Flag v="emblem info" />
+			</_B>
+			<_34 v="generated_pad3684" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="rows">
+			<_40 v="long properties">
+				<_2 v="name" />
+				<_2 v="resourceName" />
+				<_6 v="value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="real properties">
+				<_2 v="name" />
+				<_2 v="resourceName" />
+				<_14 v="value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="string_id properties">
+				<_2 v="name" />
+				<_2 v="resourceName" />
+				<_2 v="value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="component ptr properties">
+				<_2 v="name" />
+				<_2 v="resourceName" />
+				<_3F v="component id" />
+				<_2 v="value" />
+				<_34 v="generated_padccc5" length="4" />
+				<_3B v="" />
+			</_40>
+			<_40 v="tag reference properties">
+				<_2 v="name" />
+				<_2 v="resourceName" />
+				<_41 v="value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="string properties">
+				<_2 v="name" />
+				<_2 v="resourceName" />
+				<_1 v="value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="argb color properties">
+				<_2 v="name" />
+				<_2 v="resourceName" />
+				<_20 v="value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="event handlers">
+				<_2 v="event" />
+				<_2 v="filter" />
+				<_2 v="name" />
+				<_1 v="action" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

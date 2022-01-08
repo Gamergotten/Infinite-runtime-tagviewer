@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="responses">
+		<_F v="audience">
+			<Flag v="cause player" />
+			<Flag v="cause team" />
+			<Flag v="effect player" />
+			<Flag v="effect team" />
+			<Flag v="everyone" />
+		</_F>
+		<_F v="excluded audience">
+			<Flag v="cause player" />
+			<Flag v="cause team" />
+			<Flag v="effect player" />
+			<Flag v="effect team" />
+			<Flag v="everyone" />
+		</_F>
+		<_F v="split screen flags">
+			<Flag v="disable if split screen" />
+			<Flag v="disable if not split screen" />
+			<Flag v="disable if split screen on different teams" />
+			<Flag v="disable if split screen all on same team" />
+		</_F>
+		<_34 v="generated_padc0d1" length="1" />
+		<_41 v="response" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padb4ca" length="4" />
+	<_3B v="" />
+</root>

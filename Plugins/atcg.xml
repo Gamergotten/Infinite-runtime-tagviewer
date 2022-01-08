@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="parent" />
+	<_40 v="Asset Category Globals">
+		<_2 v="Name" />
+		<_2 v="editor group" />
+		<_37 v="Low Setting" />
+		<_38 v="Low Setting">
+			<_25 v="LOD Distance Multiplier" />
+			<_37 v="LOD Splitscreen Multipliers" />
+			<_14 v="LOD - 2 Player Splitscreen" />
+			<_14 v="LOD - 3 Player Splitscreen" />
+			<_14 v="LOD - 4 Player Splitscreen" />
+			<_37 v="" />
+			<_3E v="Number of LODs to skip" />
+			<_25 v="Hide After Distance Multiplier" />
+			<_37 v="Hide After Distance Splitscreen Multipliers" />
+			<_14 v="HAD - 2 Player Splitscreen" />
+			<_14 v="HAD - 3 Player Splitscreen" />
+			<_14 v="HAD - 4 Player Splitscreen" />
+			<_37 v="" />
+			<_14 v="Static IO Shadow Casting Maximum Distance" />
+			<_14 v="Dynamic Object Shadow Casting Maximum Distance" />
+			<_14 v="Dynamic Object Cast Shadow Outside of Camera Frustum Distance" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Medium Setting" />
+		<_38 v="Medium Setting">
+			<_25 v="LOD Distance Multiplier" />
+			<_37 v="LOD Splitscreen Multipliers" />
+			<_14 v="LOD - 2 Player Splitscreen" />
+			<_14 v="LOD - 3 Player Splitscreen" />
+			<_14 v="LOD - 4 Player Splitscreen" />
+			<_37 v="" />
+			<_3E v="Number of LODs to skip" />
+			<_25 v="Hide After Distance Multiplier" />
+			<_37 v="Hide After Distance Splitscreen Multipliers" />
+			<_14 v="HAD - 2 Player Splitscreen" />
+			<_14 v="HAD - 3 Player Splitscreen" />
+			<_14 v="HAD - 4 Player Splitscreen" />
+			<_37 v="" />
+			<_14 v="Static IO Shadow Casting Maximum Distance" />
+			<_14 v="Dynamic Object Shadow Casting Maximum Distance" />
+			<_14 v="Dynamic Object Cast Shadow Outside of Camera Frustum Distance" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="High Setting" />
+		<_38 v="High Setting">
+			<_25 v="LOD Distance Multiplier" />
+			<_37 v="LOD Splitscreen Multipliers" />
+			<_14 v="LOD - 2 Player Splitscreen" />
+			<_14 v="LOD - 3 Player Splitscreen" />
+			<_14 v="LOD - 4 Player Splitscreen" />
+			<_37 v="" />
+			<_3E v="Number of LODs to skip" />
+			<_25 v="Hide After Distance Multiplier" />
+			<_37 v="Hide After Distance Splitscreen Multipliers" />
+			<_14 v="HAD - 2 Player Splitscreen" />
+			<_14 v="HAD - 3 Player Splitscreen" />
+			<_14 v="HAD - 4 Player Splitscreen" />
+			<_37 v="" />
+			<_14 v="Static IO Shadow Casting Maximum Distance" />
+			<_14 v="Dynamic Object Shadow Casting Maximum Distance" />
+			<_14 v="Dynamic Object Cast Shadow Outside of Camera Frustum Distance" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Ultra Setting" />
+		<_38 v="Ultra Setting">
+			<_25 v="LOD Distance Multiplier" />
+			<_37 v="LOD Splitscreen Multipliers" />
+			<_14 v="LOD - 2 Player Splitscreen" />
+			<_14 v="LOD - 3 Player Splitscreen" />
+			<_14 v="LOD - 4 Player Splitscreen" />
+			<_37 v="" />
+			<_3E v="Number of LODs to skip" />
+			<_25 v="Hide After Distance Multiplier" />
+			<_37 v="Hide After Distance Splitscreen Multipliers" />
+			<_14 v="HAD - 2 Player Splitscreen" />
+			<_14 v="HAD - 3 Player Splitscreen" />
+			<_14 v="HAD - 4 Player Splitscreen" />
+			<_37 v="" />
+			<_14 v="Static IO Shadow Casting Maximum Distance" />
+			<_14 v="Dynamic Object Shadow Casting Maximum Distance" />
+			<_14 v="Dynamic Object Cast Shadow Outside of Camera Frustum Distance" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_A v="Shadow Casting">
+			<Flag v="Disabled" />
+			<Flag v="Enabled" />
+		</_A>
+		<_34 v="generated_pad4ade" length="3" />
+		<_14 v="Shadow Distance" />
+		<_A v="Exclude From DDGI">
+			<Flag v="Disabled" />
+			<Flag v="Enabled" />
+		</_A>
+		<_A v="Exclude From DXR">
+			<Flag v="Disabled" />
+			<Flag v="Enabled" />
+		</_A>
+		<_34 v="generated_pad9793" length="2" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

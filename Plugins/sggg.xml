@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="name" />
+	<_F v="flags">
+		<Flag v="starts active" />
+		<Flag v="starts when object spotted" />
+		<Flag v="disabled when weapon down" />
+		<Flag v="temporarily disable" />
+		<Flag v="grammar disabled in campaign" />
+		<Flag v="grammar disabled in multiplayer" />
+		<Flag v="grammar disabled in ui shell" />
+	</_F>
+	<_34 v="generated_padba5c" length="3" />
+	<_40 v="spotted objects load">
+		<_41 v="Spotted Object" />
+		<_3B v="" />
+	</_40>
+	<_36 v="load grammar condition" />
+	<_38 v="script condition">
+		<_6 v="script name" />
+		<_1 v="script source" />
+		<_3B v="" />
+	</_38>
+	<_F v="run time flags">
+		<Flag v="runtime load" />
+		<Flag v="callBack script contion result" />
+		<Flag v="forced off by flags" />
+	</_F>
+	<_34 v="generated_padd43d" length="1" />
+	<_5 v="absolute dynamic grammar index" />
+	<_40 v="lync'ed grammars">
+		<_41 v="Speech Grammar" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Speech Phrases">
+		<_2 v="VUI ID" />
+		<_36 v="Script Action" />
+		<_38 v="Script Action">
+			<_6 v="script name" />
+			<_1 v="script source" />
+			<_3B v="" />
+		</_38>
+		<_36 v="Script Condition" />
+		<_38 v="Script Condition">
+			<_6 v="script name" />
+			<_1 v="script source" />
+			<_3B v="" />
+		</_38>
+		<_42 v="Command" />
+		<_14 v="weight" />
+		<_F v="flags">
+			<Flag v="starts inactive" />
+		</_F>
+		<_34 v="generated_padd093" length="1" />
+		<_5 v="user level" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Speech Nodes">
+		<_42 v="Command" />
+		<_36 v="Script Condition" />
+		<_38 v="Script Condition">
+			<_6 v="script name" />
+			<_1 v="script source" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

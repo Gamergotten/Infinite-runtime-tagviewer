@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_5 v="UpRezFactor" />
+	<_1 v="OutputDirectory" />
+	<_34 v="generated_padd5ed" length="2" />
+	<_2 v="NamePrefix" />
+	<_2 v="NameSuffix" />
+	<_5 v="NamePadding" />
+	<_34 v="generated_padbc0c" length="2" />
+	<_D v="Flags">
+		<Flag v="CaptureWithDepthMask" />
+		<Flag v="CaptureWithLODEnabled" />
+		<Flag v="OverrideScreenshotNameWithAssetName" />
+	</_D>
+	<_34 v="generated_pad6f57" length="4" />
+	<_3B v="" />
+</root>

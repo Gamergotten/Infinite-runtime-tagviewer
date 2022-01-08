@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="spartan render model" />
+	<_41 v="elite render model" />
+	<_40 v="helmet selections">
+		<_2 v="selection name" />
+		<_40 v="customized bits">
+			<_2 v="region name" />
+			<_2 v="permutation name" />
+			<_F v="flags">
+				<Flag v="male_only" />
+				<Flag v="female_only" />
+			</_F>
+			<_34 v="generated_pad5691" length="3" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="chest selections">
+		<_2 v="selection name" />
+		<_40 v="customized bits">
+			<_2 v="region name" />
+			<_2 v="permutation name" />
+			<_F v="flags">
+				<Flag v="male_only" />
+				<Flag v="female_only" />
+			</_F>
+			<_34 v="generated_pad5691" length="3" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="elite selections">
+		<_2 v="selection name" />
+		<_40 v="customized bits">
+			<_2 v="region name" />
+			<_2 v="permutation name" />
+			<_F v="flags">
+				<Flag v="male_only" />
+				<Flag v="female_only" />
+			</_F>
+			<_34 v="generated_pad5691" length="3" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="left shoulder">
+		<_2 v="selection name" />
+		<_40 v="customized bits">
+			<_2 v="region name" />
+			<_2 v="permutation name" />
+			<_F v="flags">
+				<Flag v="male_only" />
+				<Flag v="female_only" />
+			</_F>
+			<_34 v="generated_pad5691" length="3" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="right shoulder">
+		<_2 v="selection name" />
+		<_40 v="customized bits">
+			<_2 v="region name" />
+			<_2 v="permutation name" />
+			<_F v="flags">
+				<Flag v="male_only" />
+				<Flag v="female_only" />
+			</_F>
+			<_34 v="generated_pad5691" length="3" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="arms">
+		<_2 v="selection name" />
+		<_40 v="customized bits">
+			<_2 v="region name" />
+			<_2 v="permutation name" />
+			<_F v="flags">
+				<Flag v="male_only" />
+				<Flag v="female_only" />
+			</_F>
+			<_34 v="generated_pad5691" length="3" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="legs">
+		<_2 v="selection name" />
+		<_40 v="customized bits">
+			<_2 v="region name" />
+			<_2 v="permutation name" />
+			<_F v="flags">
+				<Flag v="male_only" />
+				<Flag v="female_only" />
+			</_F>
+			<_34 v="generated_pad5691" length="3" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="unused 5">
+		<_2 v="selection name" />
+		<_40 v="customized bits">
+			<_2 v="region name" />
+			<_2 v="permutation name" />
+			<_F v="flags">
+				<Flag v="male_only" />
+				<Flag v="female_only" />
+			</_F>
+			<_34 v="generated_pad5691" length="3" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="spartan armor effect selections">
+		<_2 v="selection name" />
+		<_40 v="customized bits">
+			<_2 v="region name" />
+			<_2 v="permutation name" />
+			<_F v="flags">
+				<Flag v="male_only" />
+				<Flag v="female_only" />
+			</_F>
+			<_34 v="generated_pad5691" length="3" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="elite armor effect selections">
+		<_2 v="selection name" />
+		<_40 v="customized bits">
+			<_2 v="region name" />
+			<_2 v="permutation name" />
+			<_F v="flags">
+				<Flag v="male_only" />
+				<Flag v="female_only" />
+			</_F>
+			<_34 v="generated_pad5691" length="3" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="male spartan selections">
+		<_2 v="region name" />
+		<_2 v="permutation name" />
+		<_F v="flags">
+			<Flag v="male_only" />
+			<Flag v="female_only" />
+		</_F>
+		<_34 v="generated_pad5691" length="3" />
+		<_3B v="" />
+	</_40>
+	<_40 v="female spartan selections">
+		<_2 v="region name" />
+		<_2 v="permutation name" />
+		<_F v="flags">
+			<Flag v="male_only" />
+			<Flag v="female_only" />
+		</_F>
+		<_34 v="generated_pad5691" length="3" />
+		<_3B v="" />
+	</_40>
+	<_40 v="spartan model defaults">
+		<_2 v="Default Theme Name" />
+		<_2 v="Default variant id" />
+		<_2 v="Default style id" />
+		<_2 v="Title" />
+		<_2 v="Description" />
+		<_41 v="Default RenderModelDefinition" />
+		<_1 v="CMS Id" />
+		<_40 v="Permutation Regions">
+			<_2 v="Title" />
+			<_2 v="Description" />
+			<_6 v="CMS Customization Item Type" />
+			<_1 v="CMS Path" />
+			<_40 v="Permutation Regions">
+				<_2 v="Permutation Region" />
+				<_2 v="Default Permutation Name" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="elite model defaults">
+		<_2 v="region name" />
+		<_2 v="permutation name" />
+		<_F v="flags">
+			<Flag v="male_only" />
+			<Flag v="female_only" />
+		</_F>
+		<_34 v="generated_pad5691" length="3" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

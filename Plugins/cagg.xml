@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Global Default Cage Points">
+		<_2 v="Name" />
+		<_41 v="Cage Definition" />
+		<_2 v="Point Name" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Default Cage Definition" />
+	<_2 v="Default Position Point" />
+	<_2 v="Default Collision Resolution Point" />
+	<_2 v="Default Orbit Center Point" />
+	<_2 v="Default FPS Point" />
+	<_14 v="Default Blend-In Time" />
+	<_14 v="Default Blend-Out Time" />
+	<_14 v="Default Gaze Distance" />
+	<_8 v="Default Gaze Outer Angle" />
+	<_8 v="Default Gaze Inner Angle" />
+	<_8 v="Default Gaze Velocity" />
+	<_37 v="Gaze Velocity Curve" />
+	<_38 v="Default Gaze Velocity Curve">
+		<_A v="Curve Type">
+			<Flag v="None" />
+			<Flag v="Linear" />
+			<Flag v="Zero" />
+			<Flag v="One" />
+			<Flag v="EaseInQuad" />
+			<Flag v="EaseOutQuad" />
+			<Flag v="EaseInOutQuad" />
+			<Flag v="EaseInCubic" />
+			<Flag v="EaseOutCubic" />
+			<Flag v="EaseInOutCubic" />
+			<Flag v="EaseInQuart" />
+			<Flag v="EaseOutQuart" />
+			<Flag v="EaseInOutQuart" />
+			<Flag v="EaseInQuint" />
+			<Flag v="EaseOutQuint" />
+			<Flag v="EaseInOutQuint" />
+			<Flag v="EaseInSine" />
+			<Flag v="EaseOutSine" />
+			<Flag v="EaseInOutSine" />
+			<Flag v="EaseInExpo" />
+			<Flag v="EaseOutExpo" />
+			<Flag v="EaseInOutExpo" />
+			<Flag v="EaseInCirc" />
+			<Flag v="EaseOutCirc" />
+			<Flag v="EaseInOutCirc" />
+			<Flag v="EaseInOutLight" />
+			<Flag v="EaseInOutHeavy" />
+		</_A>
+		<_34 v="generated_pade4ec" length="3" />
+		<_41 v="Curve Definition" />
+		<_2 v="Curve Name" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Transform Blend Curve" />
+	<_38 v="Default Blend Curve (Transform)">
+		<_A v="Curve Type">
+			<Flag v="None" />
+			<Flag v="Linear" />
+			<Flag v="Zero" />
+			<Flag v="One" />
+			<Flag v="EaseInQuad" />
+			<Flag v="EaseOutQuad" />
+			<Flag v="EaseInOutQuad" />
+			<Flag v="EaseInCubic" />
+			<Flag v="EaseOutCubic" />
+			<Flag v="EaseInOutCubic" />
+			<Flag v="EaseInQuart" />
+			<Flag v="EaseOutQuart" />
+			<Flag v="EaseInOutQuart" />
+			<Flag v="EaseInQuint" />
+			<Flag v="EaseOutQuint" />
+			<Flag v="EaseInOutQuint" />
+			<Flag v="EaseInSine" />
+			<Flag v="EaseOutSine" />
+			<Flag v="EaseInOutSine" />
+			<Flag v="EaseInExpo" />
+			<Flag v="EaseOutExpo" />
+			<Flag v="EaseInOutExpo" />
+			<Flag v="EaseInCirc" />
+			<Flag v="EaseOutCirc" />
+			<Flag v="EaseInOutCirc" />
+			<Flag v="EaseInOutLight" />
+			<Flag v="EaseInOutHeavy" />
+		</_A>
+		<_34 v="generated_pade4ec" length="3" />
+		<_41 v="Curve Definition" />
+		<_2 v="Curve Name" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Properties Blend Curve" />
+	<_38 v="Default Blend Curve (Properties)">
+		<_A v="Curve Type">
+			<Flag v="None" />
+			<Flag v="Linear" />
+			<Flag v="Zero" />
+			<Flag v="One" />
+			<Flag v="EaseInQuad" />
+			<Flag v="EaseOutQuad" />
+			<Flag v="EaseInOutQuad" />
+			<Flag v="EaseInCubic" />
+			<Flag v="EaseOutCubic" />
+			<Flag v="EaseInOutCubic" />
+			<Flag v="EaseInQuart" />
+			<Flag v="EaseOutQuart" />
+			<Flag v="EaseInOutQuart" />
+			<Flag v="EaseInQuint" />
+			<Flag v="EaseOutQuint" />
+			<Flag v="EaseInOutQuint" />
+			<Flag v="EaseInSine" />
+			<Flag v="EaseOutSine" />
+			<Flag v="EaseInOutSine" />
+			<Flag v="EaseInExpo" />
+			<Flag v="EaseOutExpo" />
+			<Flag v="EaseInOutExpo" />
+			<Flag v="EaseInCirc" />
+			<Flag v="EaseOutCirc" />
+			<Flag v="EaseInOutCirc" />
+			<Flag v="EaseInOutLight" />
+			<Flag v="EaseInOutHeavy" />
+		</_A>
+		<_34 v="generated_pade4ec" length="3" />
+		<_41 v="Curve Definition" />
+		<_2 v="Curve Name" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="From Gameplay Transition" />
+	<_38 v="From Gameplay Transition">
+		<_41 v="Animation Curve" />
+		<_2 v="Transform Curve Name" />
+		<_2 v="Focal Length Curve Name" />
+		<_2 v="Focus Distance Curve Name" />
+		<_2 v="F-Stop Curve Name" />
+		<_2 v="Perspective Curve Name" />
+		<_2 v="Variant Curve Name" />
+		<_2 v="Variant Name" />
+		<_2 v="Invisible Curve Name" />
+		<_14 v="Animation Time" />
+		<_14 v="Animation Playback Scalar" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="To Gameplay Transition" />
+	<_38 v="To Gameplay Transition">
+		<_41 v="Animation Curve" />
+		<_2 v="Transform Curve Name" />
+		<_2 v="Focal Length Curve Name" />
+		<_2 v="Focus Distance Curve Name" />
+		<_2 v="F-Stop Curve Name" />
+		<_2 v="Perspective Curve Name" />
+		<_2 v="Variant Curve Name" />
+		<_2 v="Variant Name" />
+		<_2 v="Invisible Curve Name" />
+		<_14 v="Animation Time" />
+		<_14 v="Animation Playback Scalar" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Camera Properties - OLD" />
+	<_14 v="Default Focal Length" />
+	<_14 v="Default Focus Distance" />
+	<_14 v="Default F-Stop" />
+	<_37 v="" />
+	<_3B v="" />
+</root>

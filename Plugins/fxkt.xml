@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Effect Placements">
+		<_41 v="Effect" />
+		<_17 v="Position" />
+		<_1C v="Facing" />
+		<_14 v="Scale" />
+		<_3B v="" />
+	</_40>
+	<_37 v="Global Overrides" />
+	<_1F v="overrideColor" />
+	<_14 v="globalScale" />
+	<_14 v="globalEmissionAreaScale" />
+	<_14 v="globalEmissionRateScale" />
+	<_A v="overrideLoopState">
+		<Flag v="No Override" />
+		<Flag v="Force Enabled" />
+		<Flag v="Force Disabled" />
+	</_A>
+	<_A v="placementMode">
+		<Flag v="Use Placement" />
+		<Flag v="Use Origin" />
+	</_A>
+	<_34 v="generated_pad16d5" length="2" />
+	<_37 v="" />
+	<_41 v="Generated Effect" />
+	<_34 v="generated_padfcf4" length="4" />
+	<_3B v="" />
+</root>

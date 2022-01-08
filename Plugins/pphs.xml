@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Sound events">
+		<_A v="Object type">
+			<Flag v="Local player biped" />
+			<Flag v="Other biped" />
+			<Flag v="Vehicle" />
+			<Flag v="Projectile" />
+			<Flag v="Crate" />
+			<Flag v="Item" />
+		</_A>
+		<_34 v="generated_padad5f" length="3" />
+		<_2 v="Enter event" />
+		<_2 v="Exit event" />
+		<_40 v="Restrict to phantoms">
+			<_4 v="Phantom index" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_2 v="Biped travel event" />
+	<_40 v="(Legacy) Sound tags">
+		<_A v="Object type">
+			<Flag v="Local player biped" />
+			<Flag v="Other biped" />
+			<Flag v="Vehicle" />
+			<Flag v="Projectile" />
+			<Flag v="Crate" />
+			<Flag v="Item" />
+		</_A>
+		<_34 v="generated_pad7bb7" length="3" />
+		<_41 v="Enter sound tag" />
+		<_41 v="Exit sound tag" />
+		<_40 v="Restrict to phantoms">
+			<_4 v="Phantom index" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_41 v="(Legacy) Biped travel tag" />
+	<_41 v="Biped launch sound" />
+	<_41 v="Biped launch sound - player" />
+	<_41 v="Vehicle launch sound" />
+	<_41 v="Grenade launch sound" />
+	<_3B v="" />
+</root>

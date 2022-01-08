@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="import - directory" />
+	<_37 v="import - single file" />
+	<_40 v="string references">
+		<_2 v="string id" />
+		<_6 v="english offset" />
+		<_6 v="japanese offset" />
+		<_6 v="german offset" />
+		<_6 v="french offset" />
+		<_6 v="spanish offset" />
+		<_6 v="mexican spanish offset" />
+		<_6 v="italian offset" />
+		<_6 v="korean offset" />
+		<_6 v="traditional chinese offset" />
+		<_6 v="simplified chinese offset" />
+		<_6 v="portuguese offset" />
+		<_6 v="polish offset" />
+		<_6 v="russian offset" />
+		<_6 v="danish offset" />
+		<_6 v="finnish offset" />
+		<_6 v="dutch offset" />
+		<_6 v="norwegian offset" />
+		<_6 v="brazilian portuguese offset" />
+		<_3B v="" />
+	</_40>
+	<_40 v="substitution pairs">
+		<_2 v="first string id" />
+		<_2 v="second string id" />
+		<_6 v="associated value" />
+		<_3B v="" />
+	</_40>
+	<_42 v="string data utf8" />
+	<_3B v="" />
+</root>

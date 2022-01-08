@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="effects">
+		<_40 v="sounds">
+			<_41 v="tag (effect or sound)" />
+			<_41 v="secondary tag (effect or sound)" />
+			<_2 v="material name" />
+			<_5 v="runtime material index" />
+			<_A v="sweetener mode">
+				<Flag v="sweetener default" />
+				<Flag v="sweetener enabled" />
+				<Flag v="sweetener disabled" />
+			</_A>
+			<_34 v="generated_pad2bf3" length="1" />
+			<_14 v="max_visibility_distance" />
+			<_F v="material flags">
+				<Flag v="not inhibited by damage effect sounds" />
+			</_F>
+			<_34 v="generated_paddf3e" length="3" />
+			<_3B v="" />
+		</_40>
+		<_40 v="effects">
+			<_41 v="tag (effect or sound)" />
+			<_41 v="secondary tag (effect or sound)" />
+			<_2 v="material name" />
+			<_5 v="runtime material index" />
+			<_A v="sweetener mode">
+				<Flag v="sweetener default" />
+				<Flag v="sweetener enabled" />
+				<Flag v="sweetener disabled" />
+			</_A>
+			<_34 v="generated_pad2bf3" length="1" />
+			<_14 v="max_visibility_distance" />
+			<_F v="material flags">
+				<Flag v="not inhibited by damage effect sounds" />
+			</_F>
+			<_34 v="generated_paddf3e" length="3" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad3926" length="4" />
+	<_3B v="" />
+</root>

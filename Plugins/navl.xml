@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_14 v="morph fraction" />
+	<_16 v="anchor offset" />
+	<_16 v="center box width height" />
+	<_36 v="center sprite bg" />
+	<_38 v="center sprite bg">
+		<_16 v="width and height" />
+		<_14 v="alpha" />
+		<_3B v="" />
+	</_38>
+	<_36 v="center sprite fg" />
+	<_38 v="center sprite fg">
+		<_16 v="width and height" />
+		<_14 v="alpha" />
+		<_3B v="" />
+	</_38>
+	<_36 v="center radial progress bar" />
+	<_38 v="center radial progress bar">
+		<_16 v="width and height" />
+		<_14 v="alpha" />
+		<_3B v="" />
+	</_38>
+	<_36 v="top sprite" />
+	<_38 v="top sprite">
+		<_16 v="width and height" />
+		<_14 v="alpha" />
+		<_3B v="" />
+	</_38>
+	<_36 v="top center sprite" />
+	<_38 v="top center sprite">
+		<_16 v="width and height" />
+		<_14 v="alpha" />
+		<_3B v="" />
+	</_38>
+	<_36 v="top label" />
+	<_38 v="top label">
+		<_16 v="width and height" />
+		<_14 v="alpha" />
+		<_3B v="" />
+	</_38>
+	<_36 v="right progress bar" />
+	<_38 v="right progress bar">
+		<_16 v="width and height" />
+		<_14 v="alpha" />
+		<_3B v="" />
+	</_38>
+	<_36 v="right progress bar 2" />
+	<_38 v="right progress bar 2">
+		<_16 v="width and height" />
+		<_14 v="alpha" />
+		<_3B v="" />
+	</_38>
+	<_36 v="right label" />
+	<_38 v="right label">
+		<_16 v="width and height" />
+		<_14 v="alpha" />
+		<_3B v="" />
+	</_38>
+	<_36 v="right timer" />
+	<_38 v="right timer">
+		<_16 v="width and height" />
+		<_14 v="alpha" />
+		<_3B v="" />
+	</_38>
+	<_36 v="left timer" />
+	<_38 v="left timer">
+		<_16 v="width and height" />
+		<_14 v="alpha" />
+		<_3B v="" />
+	</_38>
+	<_36 v="yaw sprite" />
+	<_38 v="yaw sprite">
+		<_16 v="width and height" />
+		<_14 v="alpha" />
+		<_14 v="pivot offset" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

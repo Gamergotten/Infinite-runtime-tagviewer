@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="object dispenser component">
+		<_40 v="dispense slots">
+			<_2 v="slot name" />
+			<_2 v="slot marker" />
+			<_3B v="" />
+		</_40>
+		<_41 v="incoming creation effect" />
+		<_41 v="ready effect" />
+		<_2 v="action string incoming" />
+		<_A v="respawn type">
+			<Flag v="frequency" />
+			<Flag v="on object removed" />
+			<Flag v="script controlled" />
+		</_A>
+		<_F v="flags">
+			<Flag v="disable collision for readied objects" />
+		</_F>
+		<_34 v="generated_pad1e39" length="2" />
+		<_14 v="respawn time" />
+		<_14 v="incoming time mark" />
+		<_14 v="constructing time mark" />
+		<_14 v="damage acceleration scale horizontal" />
+		<_14 v="damage acceleration scale vertical" />
+		<_14 v="damage acceleration min horizontal" />
+		<_14 v="damage acceleration min vertical" />
+		<_2 v="incoming navpoint UI screen" />
+		<_14 v="navpoint visibility distance" />
+		<_37 v="Terminal" />
+		<_14 v="interaction radius" />
+		<_2 v="terminal navpoint UI screen" />
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

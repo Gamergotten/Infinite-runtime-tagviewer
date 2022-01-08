@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_B v="HlodGenerationPass">
+		<Flag v="AggregationReduction" />
+		<Flag v="AggregationRemeshing" />
+		<Flag v="ReductionAggregation" />
+		<Flag v="Aggregation" />
+		<Flag v="Remeshing" />
+		<Flag v="None" />
+	</_B>
+	<_34 v="generated_pad529c" length="2" />
+	<_6 v="BakingTextureResolution" />
+	<_14 v="Baking texture screen space multiplier" />
+	<_3E v="BakingTextureDilation" />
+	<_14 v="Minimum bounding sphere radius to include in hlod" />
+	<_37 v="Reduction Settings" />
+	<_38 v="Reduction">
+		<_38 v="RepairSettings">
+			<_14 v="TjuncDist" />
+			<_14 v="WeldDist" />
+			<_3E v="ProgressivePasses" />
+			<_3B v="" />
+		</_38>
+		<_D v="RepairStates">
+			<Flag v="UseWelding" />
+			<Flag v="UseTJunctionRemover" />
+		</_D>
+		<_38 v="NormalSettings">
+			<_14 v="HardEdgeAngleInRadians" />
+			<_3B v="" />
+		</_38>
+		<_D v="NormalStates">
+			<Flag v="ReplaceNormals" />
+		</_D>
+		<_38 v="MappingImageSettings">
+			<_14 v="ParameterizerMaxStretch" />
+			<_14 v="ParameterizerLargeChartsImportance" />
+			<_3E v="GutterSpace" />
+			<_3E v="TexCoordLevel" />
+			<_B v="TexCoordGeneratorType">
+				<Flag v="Parameterizer" />
+				<Flag v="ChartAggregator" />
+				<Flag v="Parameterizer_8_1" />
+			</_B>
+			<_34 v="generated_pad85f3" length="2" />
+			<_3E v="MultisamplingLevel" />
+			<_6 v="TextureSize" />
+			<_B v="ChartAggregationMode">
+				<Flag v="TextureSizeProportions" />
+				<Flag v="SurfaceArea" />
+				<Flag v="OriginalPixelDensity" />
+				<Flag v="UVSizeProportions" />
+			</_B>
+			<_B v="ChartAggregatorOriginalChartProportionsChannel">
+				<Flag v="Color" />
+				<Flag v="Normal" />
+				<Flag v="Control" />
+			</_B>
+			<_3B v="" />
+		</_38>
+		<_D v="MappingImageStates">
+			<Flag v="GenerateMappingImage" />
+			<Flag v="GenerateTexCoords" />
+			<Flag v="GenerateTangents" />
+			<Flag v="UseAutomaticTextureSize" />
+			<Flag v="ForcePower2Texture" />
+			<Flag v="UseFullRetexturing" />
+			<Flag v="ChartAggregatorSeparateOverlappingCharts" />
+			<Flag v="UseVertexWeights" />
+			<Flag v="AllowTransparencyMapping" />
+			<Flag v="ChartAggregatorLockUVRotation" />
+		</_D>
+		<_B v="DeviationMode">
+			<Flag v="SizeOnScreen" />
+			<Flag v="MaxDeviation" />
+		</_B>
+		<_34 v="generated_pad4c1d" length="2" />
+		<_14 v="MaxDeviation" />
+		<_6 v="ReductionOnScreenSize" />
+		<_14 v="Derive From Distance Scale" />
+		<_F v="ReductionStates">
+			<Flag v="KeepSymmetry" />
+			<Flag v="UseAutomaticSymmetryDetection" />
+			<Flag v="UseHighQualityNormalCalculation" />
+		</_F>
+		<_34 v="generated_pad323c" length="3" />
+		<_D v="WeldingSettingsSource">
+			<Flag v="UseRepairWeldingSettings" />
+		</_D>
+		<_38 v="WeldingSettings">
+			<_D v="UseWelding">
+				<Flag v="UseWelding" />
+			</_D>
+			<_14 v="WeldDistance" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Remeshing Settings" />
+	<_38 v="Remeshing">
+		<_6 v="RemeshingOnScreenSize" />
+		<_14 v="Derive From Distance Scale" />
+		<_3E v="MaxTriangleSize" />
+		<_3E v="MergeDistance" />
+		<_14 v="MergeBoldness" />
+		<_14 v="HardEdgeAngleInRadians" />
+		<_F v="RemeshingStates">
+			<Flag v="TransferColors" />
+			<Flag v="TransferNormals" />
+			<Flag v="UseTerrainCulling" />
+		</_F>
+		<_34 v="generated_pad1da2" length="3" />
+		<_38 v="MappingImageSettings">
+			<_14 v="ParameterizerMaxStretch" />
+			<_14 v="ParameterizerLargeChartsImportance" />
+			<_3E v="GutterSpace" />
+			<_3E v="TexCoordLevel" />
+			<_B v="TexCoordGeneratorType">
+				<Flag v="Parameterizer" />
+				<Flag v="ChartAggregator" />
+				<Flag v="Parameterizer_8_1" />
+			</_B>
+			<_34 v="generated_pad85f3" length="2" />
+			<_3E v="MultisamplingLevel" />
+			<_6 v="TextureSize" />
+			<_B v="ChartAggregationMode">
+				<Flag v="TextureSizeProportions" />
+				<Flag v="SurfaceArea" />
+				<Flag v="OriginalPixelDensity" />
+				<Flag v="UVSizeProportions" />
+			</_B>
+			<_B v="ChartAggregatorOriginalChartProportionsChannel">
+				<Flag v="Color" />
+				<Flag v="Normal" />
+				<Flag v="Control" />
+			</_B>
+			<_3B v="" />
+		</_38>
+		<_D v="MappingImageStates">
+			<Flag v="GenerateMappingImage" />
+			<Flag v="GenerateTexCoords" />
+			<Flag v="GenerateTangents" />
+			<Flag v="UseAutomaticTextureSize" />
+			<Flag v="ForcePower2Texture" />
+			<Flag v="UseFullRetexturing" />
+			<Flag v="ChartAggregatorSeparateOverlappingCharts" />
+			<Flag v="UseVertexWeights" />
+			<Flag v="AllowTransparencyMapping" />
+			<Flag v="ChartAggregatorLockUVRotation" />
+		</_D>
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Aggregation Settings" />
+	<_38 v="Aggregation">
+		<_38 v="MappingImageSettings">
+			<_14 v="ParameterizerMaxStretch" />
+			<_14 v="ParameterizerLargeChartsImportance" />
+			<_3E v="GutterSpace" />
+			<_3E v="TexCoordLevel" />
+			<_B v="TexCoordGeneratorType">
+				<Flag v="Parameterizer" />
+				<Flag v="ChartAggregator" />
+				<Flag v="Parameterizer_8_1" />
+			</_B>
+			<_34 v="generated_pad85f3" length="2" />
+			<_3E v="MultisamplingLevel" />
+			<_6 v="TextureSize" />
+			<_B v="ChartAggregationMode">
+				<Flag v="TextureSizeProportions" />
+				<Flag v="SurfaceArea" />
+				<Flag v="OriginalPixelDensity" />
+				<Flag v="UVSizeProportions" />
+			</_B>
+			<_B v="ChartAggregatorOriginalChartProportionsChannel">
+				<Flag v="Color" />
+				<Flag v="Normal" />
+				<Flag v="Control" />
+			</_B>
+			<_3B v="" />
+		</_38>
+		<_D v="MappingImageStates">
+			<Flag v="GenerateMappingImage" />
+			<Flag v="GenerateTexCoords" />
+			<Flag v="GenerateTangents" />
+			<Flag v="UseAutomaticTextureSize" />
+			<Flag v="ForcePower2Texture" />
+			<Flag v="UseFullRetexturing" />
+			<Flag v="ChartAggregatorSeparateOverlappingCharts" />
+			<Flag v="UseVertexWeights" />
+			<Flag v="AllowTransparencyMapping" />
+			<Flag v="ChartAggregatorLockUVRotation" />
+		</_D>
+		<_F v="AggregationStates">
+			<Flag v="BaseAtlasOnOriginalTexCoords" />
+			<Flag v="MergeGeometries" />
+		</_F>
+		<_34 v="generated_pad1668" length="3" />
+		<_38 v="WeldingSettings">
+			<_D v="UseWelding">
+				<Flag v="UseWelding" />
+			</_D>
+			<_14 v="WeldDistance" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Shadow Settings" />
+	<_38 v="Shadow">
+		<_6 v="Assumed shadow map resolution" />
+		<_14 v="Assumed shadow cascade transition distance" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Visibility Settings" />
+	<_38 v="Visibility">
+		<_B v="ComputeVisibilityMode">
+			<Flag v="DirectX" />
+			<Flag v="Software" />
+		</_B>
+		<_34 v="generated_pad69b8" length="2" />
+		<_14 v="FillNonVisibleAreaThreshold" />
+		<_14 v="VisibilityWeightsPower" />
+		<_D v="VisibilityStates">
+			<Flag v="CullOccludedGeometry" />
+			<Flag v="UseVisibilityWeightsInReducer" />
+			<Flag v="UseVisibilityWeightsInTexcoordGenerator" />
+			<Flag v="UseBackfaceCulling" />
+			<Flag v="ConservativeMode" />
+		</_D>
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Global Settings" />
+	<_38 v="SimplygonGlobalSettings">
+		<_F v="States">
+			<Flag v="ValidateProcessing" />
+			<Flag v="ValidateProcessingAssertOnError" />
+			<Flag v="CacheSimplygonMaterials" />
+			<Flag v="AllowGPUAcceleration" />
+		</_F>
+		<_34 v="generated_pad2b9f" length="1" />
+		<_B v="ValidateProcessingDebugLevel">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+		</_B>
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_40 v="HLOD Materials to cut off mesh parts">
+		<_41 v="Cut off mesh parts by this material" />
+		<_3B v="" />
+	</_40>
+	<_40 v="HLOD Materials to put the geo directly into the HLOD, bypassing simplygon">
+		<_41 v="Cut off mesh parts by this material" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Reference to a list of HLOD Materials to cut off mesh parts" />
+	<_3B v="" />
+</root>

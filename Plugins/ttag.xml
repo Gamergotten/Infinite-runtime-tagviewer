@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_0 v="string" />
+	<_1 v="long string" />
+	<_2 v="hashstring global namespace" />
+	<_2 v="hashstring test namespace" />
+	<_2 v="hashstring multi namespace" />
+	<_4 v="char" />
+	<_34 v="generated_pad5a87" length="1" />
+	<_5 v="short" />
+	<_7 v="int64" />
+	<_6 v="long" />
+	<_3C v="byte" />
+	<_34 v="generated_pad0dd2" length="1" />
+	<_3D v="word" />
+	<_3E v="dword" />
+	<_34 v="generated_padc11d" length="4" />
+	<_3F v="qword" />
+	<_8 v="angle" />
+	<_9 v="tag" />
+	<_A v="char enum">
+		<Flag v="CharEnumOne" />
+		<Flag v="CharEnumTwo" />
+		<Flag v="CharEnumThree" />
+	</_A>
+	<_34 v="generated_padda10" length="1" />
+	<_B v="short enum">
+		<Flag v="ShortEnumOne" />
+		<Flag v="ShortEnumTwo" />
+		<Flag v="ShortEnumThree" />
+	</_B>
+	<_C v="long enum">
+		<Flag v="LongEnumOne" />
+		<Flag v="LongEnumTwo" />
+		<Flag v="LongEnumThree" />
+	</_C>
+	<_F v="byte flags">
+		<Flag v="first byte flag" />
+		<Flag v="second byte flag" />
+		<Flag v="third byte flag" />
+	</_F>
+	<_34 v="generated_pad8d5b" length="1" />
+	<_E v="word flags">
+		<Flag v="first word flag" />
+		<Flag v="second word flag" />
+		<Flag v="third word flag" />
+	</_E>
+	<_D v="long flags">
+		<Flag v="first long flag" />
+		<Flag v="second long flag" />
+		<Flag v="third long flag" />
+	</_D>
+	<_10 v="short point 2d" />
+	<_11 v="short rectangle 2d" />
+	<_12 v="rgb pixel 32" />
+	<_13 v="argb pixel 32" />
+	<_14 v="real" />
+	<_15 v="fraction" />
+	<_16 v="real point 2d" />
+	<_17 v="real point 3d" />
+	<_18 v="real vector 2d" />
+	<_19 v="real vector 3d" />
+	<_1A v="real quaternion" />
+	<_1B v="real euler angles 2d" />
+	<_1C v="real euler angles 3d" />
+	<_1D v="plane 2d" />
+	<_1E v="plane 3d" />
+	<_1F v="real rgb color" />
+	<_20 v="real argb color" />
+	<_21 v="real hsv color" />
+	<_22 v="real ahsv color" />
+	<_23 v="short bounds" />
+	<_24 v="angle bounds" />
+	<_25 v="real bounds" />
+	<_26 v="fraction bounds" />
+	<_41 v="tag reference" />
+	<_40 v="basic block">
+		<_1 v="name" />
+		<_3B v="" />
+	</_40>
+	<_2B v="byte block flags" />
+	<_34 v="generated_pad40a6" length="1" />
+	<_2A v="word block flags" />
+	<_29 v="dword block flags" />
+	<_2C v="char block index" />
+	<_34 v="generated_padf3f1" length="1" />
+	<_2E v="short block index" />
+	<_30 v="long block index" />
+	<_2D v="char block index custom" />
+	<_34 v="generated_pad4194" length="1" />
+	<_2F v="short block index custom" />
+	<_31 v="long block index custom" />
+	<_42 v="data" />
+	<_36 v="explanation" />
+	<_38 v="basic struct">
+		<_6 v="long in struct" />
+		<_3B v="" />
+	</_38>
+	<_39 v="basic array" />
+	<_43 v="basic resource" />
+	<_40 v="block with struct">
+		<_38 v="struct in block">
+			<_6 v="long in struct" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="complex block">
+		<_40 v="foo">
+			<_1 v="name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="bar">
+			<_41 v="reference" />
+			<_40 v="raz">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_38 v="complex struct">
+		<_40 v="basic block">
+			<_1 v="name" />
+			<_3B v="" />
+		</_40>
+		<_20 v="color" />
+		<_40 v="complex block">
+			<_40 v="foo">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_40 v="bar">
+				<_41 v="reference" />
+				<_40 v="raz">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_39 v="complex array" />
+	<_38 v="motherload struct">
+		<_38 v="struct">
+			<_40 v="basic block">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_20 v="color" />
+			<_40 v="complex block">
+				<_40 v="foo">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_40 v="bar">
+					<_41 v="reference" />
+					<_40 v="raz">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_39 v="array" />
+		<_40 v="block">
+			<_40 v="foo">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_40 v="bar">
+				<_41 v="reference" />
+				<_40 v="raz">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

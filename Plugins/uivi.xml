@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="name" />
+	<_2 v="Vehicle Flip String" />
+	<_2 v="Tint Color" />
+	<_40 v="UI Info">
+		<_2 v="name" />
+		<_2 v="alt name " />
+		<_2 v="description" />
+		<_2 v="help text" />
+		<_2 v="icon string id" />
+		<_41 v="sprite" />
+		<_6 v="sprite index" />
+		<_41 v="alt sprite" />
+		<_6 v="alt sprite index" />
+		<_6 v="damage sprite index" />
+		<_41 v="ui vehicle screen reference" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Seats">
+		<_2 v="label" />
+		<_2 v="Boarding Grenade String" />
+		<_2 v="Boarding Melee String" />
+		<_2 v="In Seat String" />
+		<_2 v="Enter Seat String" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad1d69" length="4" />
+	<_3B v="" />
+</root>

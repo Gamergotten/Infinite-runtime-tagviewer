@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="name" />
+	<_40 v="cell templates">
+		<_2 v="name" />
+		<_38 v="place on">
+			<_E v="difficulty flags">
+				<Flag v="easy" />
+				<Flag v="normal" />
+				<Flag v="heroic" />
+				<Flag v="legendary" />
+			</_E>
+			<_34 v="pad0" length="2" />
+			<_3B v="" />
+		</_38>
+		<_5 v="normal diff count" />
+		<_B v="major upgrade">
+			<Flag v="normal" />
+			<Flag v="few" />
+			<Flag v="many" />
+			<Flag v="none" />
+			<Flag v="all" />
+		</_B>
+		<_36 v="Character Build" />
+		<_40 v="character type">
+			<_38 v="place on">
+				<_E v="difficulty flags">
+					<Flag v="easy" />
+					<Flag v="normal" />
+					<Flag v="heroic" />
+					<Flag v="legendary" />
+				</_E>
+				<_34 v="pad0" length="2" />
+				<_3B v="" />
+			</_38>
+			<_41 v="character type" />
+			<_5 v="chance" />
+			<_34 v="generated_padf39f" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="initial weapon">
+			<_38 v="place on">
+				<_E v="difficulty flags">
+					<Flag v="easy" />
+					<Flag v="normal" />
+					<Flag v="heroic" />
+					<Flag v="legendary" />
+				</_E>
+				<_34 v="pad0" length="2" />
+				<_3B v="" />
+			</_38>
+			<_41 v="weapon type" />
+			<_5 v="chance" />
+			<_34 v="generated_pad39d2" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="initial secondary weapon">
+			<_38 v="place on">
+				<_E v="difficulty flags">
+					<Flag v="easy" />
+					<Flag v="normal" />
+					<Flag v="heroic" />
+					<Flag v="legendary" />
+				</_E>
+				<_34 v="pad0" length="2" />
+				<_3B v="" />
+			</_38>
+			<_41 v="weapon type" />
+			<_5 v="chance" />
+			<_34 v="generated_pad39d2" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="initial equipment">
+			<_38 v="place on">
+				<_E v="difficulty flags">
+					<Flag v="easy" />
+					<Flag v="normal" />
+					<Flag v="heroic" />
+					<Flag v="legendary" />
+				</_E>
+				<_34 v="pad0" length="2" />
+				<_3B v="" />
+			</_38>
+			<_41 v="equipment type" />
+			<_5 v="chance" />
+			<_34 v="generated_pad84ac" length="2" />
+			<_3B v="" />
+		</_40>
+		<_A v="grenade type">
+			<Flag v="none" />
+			<Flag v="fragmentation grenade" />
+			<Flag v="plasma grenade" />
+			<Flag v="lightning grenade" />
+			<Flag v="spike grenade" />
+			<Flag v="sapper grenade" />
+			<Flag v="stasis grenade" />
+		</_A>
+		<_34 v="generated_padf847" length="3" />
+		<_41 v="vehicle type" />
+		<_2 v="vehicle variant" />
+		<_2 v="activity name" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

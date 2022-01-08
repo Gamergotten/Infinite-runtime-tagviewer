@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="channels">
+		<_2 v="channel" />
+		<_3B v="" />
+	</_40>
+	<_2 v="Internal_StringEditorProxy" />
+	<_2 v="Internal_IntControlParameterNameStringEditorProxy" />
+	<_2 v="Internal_FloatControlParameterNameStringEditorProxy" />
+	<_2 v="Internal_BoolControlParameterNameStringEditorProxy" />
+	<_2 v="Internal_StringControlParameterNameStringEditorProxy" />
+	<_2 v="Internal_VectorControlParameterNameStringEditorProxy" />
+	<_34 v="generated_padee72" length="4" />
+	<_3B v="" />
+</root>

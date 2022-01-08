@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="regions">
+		<_2 v="name" />
+		<_3B v="" />
+	</_40>
+	<_6 v="regions Flags" />
+	<_6 v="regions Vector1" />
+	<_6 v="regions Vector2" />
+	<_40 v="coatingMaterialSets">
+		<_41 v="coatingMaterialSet" />
+		<_3B v="" />
+	</_40>
+	<_6 v="coatingMaterialSets Flags" />
+	<_6 v="coatingMaterialSets Vector1" />
+	<_6 v="coatingMaterialSets Vector2" />
+	<_40 v="style">
+		<_2 v="name" />
+		<_41 v="palette" />
+		<_2 v="global_damage" />
+		<_2 v="hero_damage" />
+		<_2 v="global_emissive" />
+		<_14 v="emissive_amount" />
+		<_14 v="scratch_amount" />
+		<_2 v="grime_type" />
+		<_14 v="grime_amount" />
+		<_40 v="regions">
+			<_2 v="name" />
+			<_2E v="Coating Material Set" />
+			<_34 v="generated_pad4b96" length="2" />
+			<_40 v="layers">
+				<_2 v="name" />
+				<_A v="Hero_Reveal">
+					<Flag v="disabled" />
+					<Flag v="enabled" />
+				</_A>
+				<_A v="Color_Blend">
+					<Flag v="disabled" />
+					<Flag v="enabled" />
+				</_A>
+				<_A v="Normal_Blend">
+					<Flag v="disabled" />
+					<Flag v="enabled" />
+				</_A>
+				<_A v="Ignore_Texel_Density_Scalar">
+					<Flag v="disabled" />
+					<Flag v="enabled" />
+				</_A>
+				<_1F v="forge_color_top" />
+				<_1F v="forge_color_mid" />
+				<_1F v="forge_color_bottom" />
+				<_14 v="forge_color_intensity" />
+				<_14 v="forge_layer_opacity" />
+				<_14 v="forge_max_roughness" />
+				<_A v="forge_override_metallic">
+					<Flag v="disabled" />
+					<Flag v="enabled" />
+				</_A>
+				<_A v="forge_metallic">
+					<Flag v="disabled" />
+					<Flag v="enabled" />
+				</_A>
+				<_34 v="generated_pad910e" length="2" />
+				<_3B v="" />
+			</_40>
+			<_6 v="layers Flags" />
+			<_6 v="layers Vector1" />
+			<_6 v="layers Vector2" />
+			<_3B v="" />
+		</_40>
+		<_6 v="regions Flags" />
+		<_6 v="regions Vector1" />
+		<_6 v="regions Vector2" />
+		<_3B v="" />
+	</_40>
+	<_6 v="style Flags" />
+	<_6 v="style Vector1" />
+	<_6 v="style Vector2" />
+	<_2E v="defaultLookIndex" />
+	<_34 v="generated_pad7113" length="2" />
+	<_41 v="visorSwatch" />
+	<_F v="Preload Swatch Options">
+		<Flag v="Preload All Swatches" />
+		<Flag v="Dont Preload Swatches" />
+	</_F>
+	<_34 v="generated_pad245e" length="3" />
+	<_40 v="Preloaded Swatches">
+		<_41 v="swatch" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

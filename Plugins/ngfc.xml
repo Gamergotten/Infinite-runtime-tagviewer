@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_42 v="graphContent" />
+	<_40 v="Graph References">
+		<_41 v="Graph Reference" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Tag References">
+		<_41 v="Tag Reference" />
+		<_3B v="" />
+	</_40>
+	<_C v="Graph Export Status">
+		<Flag v="OutOfDate" />
+		<Flag v="Failed" />
+		<Flag v="Succeeded" />
+	</_C>
+	<_34 v="generated_padefa8" length="4" />
+	<_3B v="" />
+</root>

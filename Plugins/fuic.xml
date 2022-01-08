@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="name" />
+	<_0 v="class" />
+	<_38 v="resources">
+		<_40 v="entries">
+			<_2 v="name" />
+			<_38 v="handle">
+				<_3E v="resource type" />
+				<_6 v="resource index" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="booleans">
+			<_F v="value">
+				<Flag v="Enabled" />
+			</_F>
+			<_3B v="" />
+		</_40>
+		<_40 v="ints">
+			<_6 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="floats">
+			<_14 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="colors">
+			<_38 v="value">
+				<_2 v="name" />
+				<_20 v="value" />
+				<_3B v="" />
+			</_38>
+			<_20 v="value old " />
+			<_3B v="" />
+		</_40>
+		<_40 v="point2fs">
+			<_16 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="string ids">
+			<_2 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="bitmaps">
+			<_41 v="asset reference" />
+			<_3D v="sprite index" />
+			<_34 v="generated_padbdbe" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="floatanimations">
+			<_38 v="animation base">
+				<_2 v="target" />
+				<_38 v="repeat behavior">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_F v="flags">
+				<Flag v="From valid" />
+				<Flag v="To valid" />
+			</_F>
+			<_34 v="generated_padf997" length="3" />
+			<_14 v="from" />
+			<_14 v="to" />
+			<_14 v="duration" />
+			<_3B v="" />
+		</_40>
+		<_40 v="coloranimations">
+			<_38 v="animation base">
+				<_2 v="target" />
+				<_38 v="repeat behavior">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_F v="flags">
+				<Flag v="From valid" />
+				<Flag v="To valid" />
+			</_F>
+			<_34 v="generated_pada026" length="3" />
+			<_38 v="from">
+				<_2 v="name" />
+				<_20 v="value" />
+				<_3B v="" />
+			</_38>
+			<_20 v="from old " />
+			<_38 v="to">
+				<_2 v="name" />
+				<_20 v="value" />
+				<_3B v="" />
+			</_38>
+			<_20 v="to old " />
+			<_14 v="duration" />
+			<_3B v="" />
+		</_40>
+		<_40 v="point2fanimations">
+			<_38 v="animation base">
+				<_2 v="target" />
+				<_38 v="repeat behavior">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_F v="flags">
+				<Flag v="From valid" />
+				<Flag v="To valid" />
+			</_F>
+			<_34 v="generated_pad693f" length="3" />
+			<_16 v="from" />
+			<_16 v="to" />
+			<_14 v="duration" />
+			<_3B v="" />
+		</_40>
+		<_40 v="integeranimations">
+			<_38 v="animation base">
+				<_2 v="target" />
+				<_38 v="repeat behavior">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_F v="flags">
+				<Flag v="From valid" />
+				<Flag v="To valid" />
+			</_F>
+			<_34 v="generated_pad388f" length="3" />
+			<_6 v="from" />
+			<_6 v="to" />
+			<_14 v="duration" />
+			<_3B v="" />
+		</_40>
+		<_40 v="storyboards">
+			<_40 v="timelines">
+				<_38 v="handle">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="numericdisplay">
+			<_0 v="extra characters used in display in addition to 0 to 9" />
+			<_41 v="asset reference" />
+			<_38 v="tint color of the numeric display">
+				<_2 v="name" />
+				<_20 v="value" />
+				<_3B v="" />
+			</_38>
+			<_20 v="tint color old " />
+			<_16 v="alignment point on screen" />
+			<_B v="numeric display alignment based on alignment point given">
+				<Flag v="left alignment" />
+				<Flag v="right alignment" />
+				<Flag v="center alignment" />
+			</_B>
+			<_F v="flags">
+				<Flag v="Use additive blend" />
+			</_F>
+			<_34 v="generated_padc1d6" length="1" />
+			<_3B v="" />
+		</_40>
+		<_40 v="visualstates">
+			<_2 v="name" />
+			<_38 v="storyboard">
+				<_3E v="resource type" />
+				<_6 v="resource index" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="visualstategroups">
+			<_40 v="visual states">
+				<_38 v="handle">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="floatanimationusingkeyframes">
+			<_38 v="animation base">
+				<_2 v="target" />
+				<_38 v="repeat behavior">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_40 v="key frames">
+				<_38 v="handle">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="linearfloatkeyframes">
+			<_38 v="keyframebase">
+				<_14 v="key time" />
+				<_14 v="key value" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="discretefloatkeyframes">
+			<_38 v="keyframebase">
+				<_14 v="key time" />
+				<_14 v="key value" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="coloranimationusingkeyframes">
+			<_38 v="animation base">
+				<_2 v="target" />
+				<_38 v="repeat behavior">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_40 v="key frames">
+				<_38 v="handle">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="linearcolorkeyframes">
+			<_38 v="keyframebase">
+				<_14 v="key time" />
+				<_38 v="key value">
+					<_2 v="name" />
+					<_20 v="value" />
+					<_3B v="" />
+				</_38>
+				<_20 v="key value old " />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="discretecolorkeyframes">
+			<_38 v="keyframebase">
+				<_14 v="key time" />
+				<_38 v="key value">
+					<_2 v="name" />
+					<_20 v="value" />
+					<_3B v="" />
+				</_38>
+				<_20 v="key value old " />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="booleananimationusingkeyframes">
+			<_38 v="animation base">
+				<_2 v="target" />
+				<_38 v="repeat behavior">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_40 v="key frames">
+				<_38 v="handle">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="discretebooleankeyframes">
+			<_38 v="keyframebase">
+				<_14 v="key time" />
+				<_F v="key value">
+					<Flag v="Enabled" />
+				</_F>
+				<_34 v="generated_pad2322" length="3" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="point2fanimationusingkeyframes">
+			<_38 v="animation base">
+				<_2 v="target" />
+				<_38 v="repeat behavior">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_40 v="key frames">
+				<_38 v="handle">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="linearpoint2fkeyframes">
+			<_38 v="keyframebase">
+				<_14 v="key time" />
+				<_16 v="key value" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="discretepoint2fkeyframes">
+			<_38 v="keyframebase">
+				<_14 v="key time" />
+				<_16 v="key value" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="integeranimationusingkeyframes">
+			<_38 v="animation base">
+				<_2 v="target" />
+				<_38 v="repeat behavior">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_40 v="key frames">
+				<_38 v="handle">
+					<_3E v="resource type" />
+					<_6 v="resource index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="linearintegerkeyframes">
+			<_38 v="keyframebase">
+				<_14 v="key time" />
+				<_6 v="key value" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="discreteintegerkeyframes">
+			<_38 v="keyframebase">
+				<_14 v="key time" />
+				<_6 v="key value" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="repeatbehaviors">
+			<_F v="flags">
+				<Flag v="Count valid" />
+				<Flag v="Duration valid" />
+			</_F>
+			<_34 v="generated_padc8d8" length="3" />
+			<_6 v="count" />
+			<_14 v="duration" />
+			<_3B v="" />
+		</_40>
+		<_40 v="sound">
+			<_41 v="asset reference" />
+			<_3B v="" />
+		</_40>
+		<_40 v="soundloop">
+			<_41 v="asset reference" />
+			<_3B v="" />
+		</_40>
+		<_40 v="navpointlayouts">
+			<_41 v="tag reference" />
+			<_3B v="" />
+		</_40>
+		<_40 v="navpointanimations">
+			<_41 v="tag reference" />
+			<_3B v="" />
+		</_40>
+		<_40 v="stringtables">
+			<_40 v="entires">
+				<_41 v="data" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="subcomponents">
+			<_41 v="sub component reference" />
+			<_3B v="" />
+		</_40>
+		<_40 v="hudtwotonegradient">
+			<_38 v="left color">
+				<_2 v="name" />
+				<_20 v="value" />
+				<_3B v="" />
+			</_38>
+			<_20 v="left color old " />
+			<_38 v="right color">
+				<_2 v="name" />
+				<_20 v="value" />
+				<_3B v="" />
+			</_38>
+			<_20 v="right color old " />
+			<_14 v="edge filter amount" />
+			<_14 v="current meter value" />
+			<_14 v="min meter value" />
+			<_14 v="max meter value" />
+			<_F v="additive blend toggle">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad6488" length="3" />
+			<_3B v="" />
+		</_40>
+		<_40 v="font">
+			<_1 v="font family name" />
+			<_38 v="tint color">
+				<_2 v="name" />
+				<_20 v="value" />
+				<_3B v="" />
+			</_38>
+			<_20 v="tint color old " />
+			<_14 v="font size" />
+			<_3B v="" />
+		</_40>
+		<_40 v="highcontrastadditive">
+			<_14 v="dynamic threshold min" />
+			<_14 v="dynamic threshold max" />
+			<_14 v="dynamic threshold clamp" />
+			<_F v="high contrast enable">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad7bd5" length="3" />
+			<_3B v="" />
+		</_40>
+		<_40 v="vertexwarp">
+			<_17 v="ellipsoid scale" />
+			<_17 v="ellipsoid center" />
+			<_17 v="output offset" />
+			<_6 v="tessellation X" />
+			<_6 v="tessellation Y" />
+			<_F v="warp enabled">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad0073" length="3" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

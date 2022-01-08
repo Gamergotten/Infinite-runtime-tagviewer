@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Baked PVS Volumes">
+		<_2 v="Name" />
+		<_37 v="Volume settings" />
+		<_38 v="Volume">
+			<_40 v="Points">
+				<_17 v="position" />
+				<_3B v="" />
+			</_40>
+			<_14 v="height" />
+			<_14 v="sink" />
+			<_17 v="center point" />
+			<_14 v="trivial cull radius squared" />
+			<_17 v="aabbCenter" />
+			<_17 v="aabbExtents" />
+			<_40 v="nativePoints2D">
+				<_16 v="point" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_B v="Use vertical beam count override">
+			<Flag v="No" />
+			<Flag v="Yes" />
+		</_B>
+		<_B v="Use beam height overrides">
+			<Flag v="No" />
+			<Flag v="Yes" />
+		</_B>
+		<_B v="Pin the beams to the top of the volume">
+			<Flag v="No" />
+			<Flag v="Yes" />
+		</_B>
+		<_B v="Add beams even if there is no collision">
+			<Flag v="No" />
+			<Flag v="Yes" />
+		</_B>
+		<_6 v="Vertical beam count override" />
+		<_14 v="Beam 1 height override" />
+		<_14 v="Beam 2 height override" />
+		<_14 v="Beam 3 height override" />
+		<_14 v="Beam 4 and above height override" />
+		<_6 v="Volume importance override value" />
+		<_40 v="EditorMetadata">
+			<_1 v="folder name" />
+			<_17 v="local space pivot point position" />
+			<_3B v="" />
+		</_40>
+		<_41 v="owner bsp" />
+		<_5 v="runtime bsp index" />
+		<_34 v="generated_pad4130" length="2" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad512a" length="4" />
+	<_3B v="" />
+</root>

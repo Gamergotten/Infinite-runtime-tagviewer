@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="level" />
+	<_40 v="hlods">
+		<_2 v="name" />
+		<_14 v="switch distance" />
+		<_19 v="position" />
+		<_41 v="Geo" />
+		<_41 v="Materials" />
+		<_3E v="asset guid" />
+		<_25 v="volumeBounds x" />
+		<_25 v="volumeBounds y" />
+		<_25 v="volumeBounds z" />
+		<_38 v="active group">
+			<_3E v="visibility index" />
+			<_6 v="disabling bsp" />
+			<_40 v="io guids">
+				<_6 v="index" />
+				<_3B v="" />
+			</_40>
+			<_40 v="io bsps">
+				<_3D v="word" />
+				<_3B v="" />
+			</_40>
+			<_40 v="streaming bsps">
+				<_3D v="word" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_38 v="inactive group">
+			<_3E v="visibility index" />
+			<_6 v="disabling bsp" />
+			<_40 v="io guids">
+				<_6 v="index" />
+				<_3B v="" />
+			</_40>
+			<_40 v="io bsps">
+				<_3D v="word" />
+				<_3B v="" />
+			</_40>
+			<_40 v="streaming bsps">
+				<_3D v="word" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_40 v="inactive streaming groups">
+			<_3E v="visibility index" />
+			<_6 v="disabling bsp" />
+			<_40 v="io guids">
+				<_6 v="index" />
+				<_3B v="" />
+			</_40>
+			<_40 v="io bsps">
+				<_3D v="word" />
+				<_3B v="" />
+			</_40>
+			<_40 v="streaming bsps">
+				<_3D v="word" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="child hlods">
+			<_6 v="index" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="bsps">
+		<_41 v="bsp" />
+		<_40 v="placements">
+			<_6 v="bsp index" />
+			<_6 v="placement index" />
+			<_C v="geometry type">
+				<Flag v="Default" />
+				<Flag v="Foliage" />
+			</_C>
+			<_3E v="visibility index" />
+			<_3E v="hlod index" />
+			<_3B v="" />
+		</_40>
+		<_40 v="hlods">
+			<_6 v="index" />
+			<_3B v="" />
+		</_40>
+		<_E v="flags">
+			<Flag v="generated" />
+		</_E>
+		<_34 v="generated_padd48c" length="2" />
+		<_14 v="streaming distance" />
+		<_6 v="level bsp index" />
+		<_3B v="" />
+	</_40>
+	<_40 v="root nodes">
+		<_6 v="index" />
+		<_3B v="" />
+	</_40>
+	<_3E v="visibility group count" />
+	<_34 v="generated_pad3058" length="4" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Lighting Specs">
+		<_41 v="Lighting Specs" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Asset Specs">
+		<_41 v="Asset Spec" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Camera Specs">
+		<_41 v="Camera Spec" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Render Specs">
+		<_41 v="Render Spec" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Screenshot Specs">
+		<_41 v="Screenshot Spec" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Animation Specs">
+		<_41 v="Animation Specs" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

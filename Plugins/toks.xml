@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Threat Token Globals">
+		<_36 v="Threat Token Tuning Globals" />
+		<_8 v="Aiming Angle" />
+		<_36 v="Threat Score Modifiers" />
+		<_5 v="Aiming score modifier" />
+		<_5 v="Recently damaged score modifier" />
+		<_14 v="Recently damaged duration" />
+		<_5 v="Has clear LOS score modifier" />
+		<_5 v="Player close to enemy score modifier" />
+		<_5 v="Close player distance" />
+		<_5 v="Player within combat range of enemy score modifier" />
+		<_5 v="Hasn't acquired token in a while score modifier" />
+		<_5 v="Hasn't acquired token in a while time" />
+		<_5 v="Recently acquired token score modifier" />
+		<_5 v="Recently acquired token time" />
+		<_5 v="Fully Effective Score Modifier" />
+		<_5 v="Character type limit modifier" />
+		<_36 v="Threat Token Character Limits" />
+		<_40 v="Character Limits">
+			<_B v="Character Type">
+				<Flag v="none" />
+				<Flag v="player" />
+				<Flag v="marine" />
+				<Flag v="crew" />
+				<Flag v="spartan" />
+				<Flag v="elite" />
+				<Flag v="jackal" />
+				<Flag v="jackal sniper" />
+				<Flag v="grunt" />
+				<Flag v="hunter" />
+				<Flag v="prophet" />
+				<Flag v="bugger" />
+				<Flag v="scarab" />
+				<Flag v="engineer" />
+				<Flag v="skirmisher" />
+				<Flag v="bishop" />
+				<Flag v="knight" />
+				<Flag v="pawn" />
+				<Flag v="cavalier" />
+				<Flag v="packmaster" />
+				<Flag v="soldier" />
+				<Flag v="soldier sniper" />
+				<Flag v="soldier officer" />
+				<Flag v="rook" />
+				<Flag v="sentinel" />
+				<Flag v="brute" />
+				<Flag v="hoverer" />
+				<Flag v="crusher" />
+				<Flag v="mule" />
+				<Flag v="mounted_weapon" />
+				<Flag v="octopus" />
+				<Flag v="wildlife" />
+			</_B>
+			<_5 v="Max character instances" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Grenade Token Globals">
+		<_F v="flags">
+			<Flag v="Friendly actors need tokens" />
+		</_F>
+		<_34 v="generated_pad7795" length="1" />
+		<_5 v="Hasn't thrown a grenade recently score modifier" />
+		<_14 v="Hasn't thrown a grenade recently time" />
+		<_5 v="Has no ranged weapon score modifier" />
+		<_5 v="Recently damaged score modifier" />
+		<_14 v="Recently damaged duration" />
+		<_5 v="High Priority Behavior Score Modifier" />
+		<_34 v="generated_pad5db4" length="2" />
+		<_3B v="" />
+	</_40>
+	<_37 v="Effectiveness Token Globals" />
+	<_37 v="Scoring Criteria" />
+	<_36 v="" />
+	<_14 v="Recently Damaged Duration" />
+	<_8 v="Player Aiming Angle" />
+	<_14 v="Close Player Distance" />
+	<_14 v="Recently Acquired Duration" />
+	<_14 v="Aimed At Transition Time" />
+	<_37 v="" />
+	<_37 v="Score Modifiers" />
+	<_36 v="" />
+	<_5 v="Recently Damaged Score Modifier" />
+	<_5 v="Player Aiming At Score Modifier" />
+	<_5 v="Close Player Score Modifier" />
+	<_5 v="In Combat Range Score Modifier" />
+	<_5 v="Recently Acquired Score Modifier" />
+	<_5 v="Player Within EZ Score Modifier" />
+	<_5 v="First Character Type Score Modifier" />
+	<_5 v="Has clear LOS score modifier" />
+	<_37 v="" />
+	<_37 v="Override Parameters" />
+	<_36 v="" />
+	<_14 v="Recently Acquired Override Time" />
+	<_5 v="Score Override Threshold" />
+	<_5 v="Holding Score Override Threshold" />
+	<_14 v="Proximity Override Distance" />
+	<_37 v="" />
+	<_37 v="Effectivity Modifiers" />
+	<_36 v="" />
+	<_14 v="Damage Modifier" />
+	<_14 v="Burst Error Modifier" />
+	<_14 v="Burst Error Bonus" />
+	<_14 v="Burst Duration Modifier" />
+	<_14 v="Burst Radius Modifier" />
+	<_14 v="Grenade Miss Distance" />
+	<_14 v="Accuracy Time Modifier" />
+	<_37 v="" />
+	<_37 v="" />
+	<_34 v="generated_pada628" length="4" />
+	<_3B v="" />
+</root>

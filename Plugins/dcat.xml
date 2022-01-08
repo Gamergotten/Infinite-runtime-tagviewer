@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="General" />
+	<_41 v="Asset" />
+	<_41 v="Settings" />
+	<_37 v="" />
+	<_37 v="LOD Overrides" />
+	<_38 v="LOD Settings">
+		<_40 v="LOD Transitions">
+			<_14 v="Transition start" />
+			<_14 v="Transition end" />
+			<_3B v="" />
+		</_40>
+		<_14 v="Max Shadow Distance" />
+		<_3B v="" />
+	</_38>
+	<_14 v="First LOD Fade Factor" />
+	<_14 v="Last LOD Fade Factor" />
+	<_C v="Last LOD Designation">
+		<Flag v="Geometry" />
+		<Flag v="Billboard" />
+		<Flag v="Impostor" />
+	</_C>
+	<_37 v="Spec Control - LOD Multiplier" />
+	<_38 v="LOD Multiplier">
+		<_25 v="Very Low" />
+		<_25 v="Low" />
+		<_25 v="Medium" />
+		<_25 v="High" />
+		<_25 v="Ultra" />
+		<_14 v="2 Player Splitscreen" />
+		<_14 v="3 Player Splitscreen" />
+		<_14 v="4 Player Splitscreen" />
+		<_3B v="" />
+	</_38>
+	<_38 v="Distance Dither Start">
+		<_14 v="Very Low" />
+		<_14 v="Low" />
+		<_14 v="Medium" />
+		<_14 v="High" />
+		<_14 v="Ultra" />
+		<_14 v="2 Player Splitscreen" />
+		<_14 v="3 Player Splitscreen" />
+		<_14 v="4 Player Splitscreen" />
+		<_3B v="" />
+	</_38>
+	<_14 v="Distance Dither Transition Width" />
+	<_38 v="Distance Dither Density Multiplier">
+		<_14 v="Very Low" />
+		<_14 v="Low" />
+		<_14 v="Medium" />
+		<_14 v="High" />
+		<_14 v="Ultra" />
+		<_14 v="2 Player Splitscreen" />
+		<_14 v="3 Player Splitscreen" />
+		<_14 v="4 Player Splitscreen" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="" />
+	<_37 v="Terrain influence" />
+	<_14 v="Terrain albedo distance" />
+	<_14 v="Terrain normal distance" />
+	<_37 v="" />
+	<_40 v="Variants">
+		<_2 v="Visual Region name" />
+		<_2 v="Geometry name" />
+		<_2 v="Preset name" />
+		<_C v="Alignment">
+			<Flag v="default" />
+			<Flag v="normal" />
+			<Flag v="up" />
+			<Flag v="down" />
+			<Flag v="left" />
+			<Flag v="right" />
+			<Flag v="forward" />
+			<Flag v="backward" />
+			<Flag v="random" />
+		</_C>
+		<_C v="Random Rotate">
+			<Flag v="default" />
+			<Flag v="enabled" />
+			<Flag v="disabled" />
+		</_C>
+		<_37 v="Color Tint Triangle" />
+		<_1F v="Tint Scale0" />
+		<_1F v="Tint Scale1" />
+		<_1F v="Tint Scale2" />
+		<_37 v="" />
+		<_40 v="Parameter Overrides">
+			<_C v="Name">
+				<Flag v="Placement Weight" />
+				<Flag v="Separation Min" />
+				<Flag v="Scale Min" />
+				<Flag v="Scale Max" />
+				<Flag v="Tilt Min" />
+				<Flag v="Tilt Max" />
+				<Flag v="Stiffness Min" />
+				<Flag v="Stiffness Max" />
+				<Flag v="Ground Tint Min" />
+				<Flag v="Ground Tint Max" />
+				<Flag v="Hover Min" />
+				<Flag v="Hover Max" />
+				<Flag v="Roughness Min" />
+				<Flag v="Roughness Max" />
+				<Flag v="Slope Min" />
+				<Flag v="Slope Max" />
+				<Flag v="Rotation Min" />
+				<Flag v="Rotation Max" />
+			</_C>
+			<_14 v="Value" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_41 v="Reference to generated decorator" />
+	<_6 v="LoadError" />
+	<_3B v="" />
+</root>

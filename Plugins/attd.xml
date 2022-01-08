@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Audio Threat Globals" />
+	<_36 v="Audio Threat System Global Settings" />
+	<_40 v="Audio Threats">
+		<_2 v="RTPC Name" />
+		<_2 v="Multiplayer RTPC Name" />
+		<_2 v="BTB RTPC Name" />
+		<_40 v="buckets">
+			<_14 v="min threat value" />
+			<_5 v="character count" />
+			<_34 v="generated_pad482f" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="damage">
+			<_14 v="min" />
+			<_14 v="max" />
+			<_15 v="weight" />
+			<_14 v="time" />
+			<_F v="flags">
+				<Flag v="buffer events" />
+				<Flag v="require ai targeting to be firing" />
+				<Flag v="require player targeting to be firing" />
+			</_F>
+			<_A v="context">
+				<Flag v="Object" />
+				<Flag v="To Local Player" />
+				<Flag v="From Local Player" />
+			</_A>
+			<_34 v="generated_pad8e86" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="distance">
+			<_14 v="min" />
+			<_14 v="max" />
+			<_15 v="weight" />
+			<_14 v="time" />
+			<_F v="flags">
+				<Flag v="buffer events" />
+				<Flag v="require ai targeting to be firing" />
+				<Flag v="require player targeting to be firing" />
+			</_F>
+			<_A v="context">
+				<Flag v="Object" />
+				<Flag v="To Local Player" />
+				<Flag v="From Local Player" />
+			</_A>
+			<_34 v="generated_pad8e86" length="2" />
+			<_3B v="" />
+		</_40>
+		<_36 v="Aiming Min/Max settings" />
+		<_40 v="aiming">
+			<_14 v="min" />
+			<_14 v="max" />
+			<_15 v="weight" />
+			<_14 v="time" />
+			<_F v="flags">
+				<Flag v="buffer events" />
+				<Flag v="require ai targeting to be firing" />
+				<Flag v="require player targeting to be firing" />
+			</_F>
+			<_A v="context">
+				<Flag v="Object" />
+				<Flag v="To Local Player" />
+				<Flag v="From Local Player" />
+			</_A>
+			<_34 v="generated_pad8e86" length="2" />
+			<_3B v="" />
+		</_40>
+		<_36 v="Allegiance Min/Max settings" />
+		<_40 v="allegiance">
+			<_14 v="min" />
+			<_14 v="max" />
+			<_15 v="weight" />
+			<_14 v="time" />
+			<_F v="flags">
+				<Flag v="buffer events" />
+				<Flag v="require ai targeting to be firing" />
+				<Flag v="require player targeting to be firing" />
+			</_F>
+			<_A v="context">
+				<Flag v="Object" />
+				<Flag v="To Local Player" />
+				<Flag v="From Local Player" />
+			</_A>
+			<_34 v="generated_pad8e86" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="targeting">
+			<_14 v="min" />
+			<_14 v="max" />
+			<_15 v="weight" />
+			<_14 v="time" />
+			<_F v="flags">
+				<Flag v="buffer events" />
+				<Flag v="require ai targeting to be firing" />
+				<Flag v="require player targeting to be firing" />
+			</_F>
+			<_A v="context">
+				<Flag v="Object" />
+				<Flag v="To Local Player" />
+				<Flag v="From Local Player" />
+			</_A>
+			<_34 v="generated_pad8e86" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="scariness">
+			<_14 v="min" />
+			<_14 v="max" />
+			<_15 v="weight" />
+			<_14 v="time" />
+			<_F v="flags">
+				<Flag v="buffer events" />
+				<Flag v="require ai targeting to be firing" />
+				<Flag v="require player targeting to be firing" />
+			</_F>
+			<_A v="context">
+				<Flag v="Object" />
+				<Flag v="To Local Player" />
+				<Flag v="From Local Player" />
+			</_A>
+			<_34 v="generated_pad8e86" length="2" />
+			<_3B v="" />
+		</_40>
+		<_14 v="min threat value" />
+		<_3C v="default bucket" />
+		<_34 v="generated_pad688d" length="3" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_34 v="generated_pad25d5" length="4" />
+	<_3B v="" />
+</root>

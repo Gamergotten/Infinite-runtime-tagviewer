@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="System Priorities" />
+	<_14 v="Spartan Tracking (Active)" />
+	<_14 v="Spartan Tracking (Passive)" />
+	<_14 v="Custom Active Tracking" />
+	<_14 v="Spectator Team Coloring" />
+	<_14 v="Target Tracking" />
+	<_14 v="Enemy Identification" />
+	<_14 v="Scripting" />
+	<_14 v="Forge Outlining" />
+	<_14 v="Location Sensor" />
+	<_14 v="Polaris Outlining" />
+	<_37 v="" />
+	<_41 v="Default outline type" />
+	<_F v="flags">
+		<Flag v="Enable Deferred Outline Rendering" />
+	</_F>
+	<_34 v="generated_pada18e" length="3" />
+	<_14 v="Transparent Threshold" />
+	<_14 v="Transparent Alpha Influence" />
+	<_14 v="Transparent Luma Influence" />
+	<_14 v="Transparent Luma-Alpha Influence" />
+	<_41 v="Texture 1" />
+	<_18 v="Texture 1 Scale" />
+	<_18 v="Texture 1 Velocity" />
+	<_14 v="Texture 1 Resolution Scaling" />
+	<_14 v="Texture 1 Influence" />
+	<_14 v="Texture 1 Fill Influence" />
+	<_41 v="Texture 2" />
+	<_18 v="Texture 2 Scale" />
+	<_18 v="Texture 2 Velocity" />
+	<_14 v="Texture 2 Resolution Scaling" />
+	<_14 v="Texture 2 Influence" />
+	<_14 v="Texture 2 Fill Influence" />
+	<_41 v="Texture 3" />
+	<_18 v="Texture 3 Scale" />
+	<_18 v="Texture 3 Velocity" />
+	<_14 v="Texture 3 Resolution Scaling" />
+	<_14 v="Texture 3 Influence" />
+	<_14 v="Texture 3 Fill Influence" />
+	<_41 v="Texture 4" />
+	<_18 v="Texture 4 Scale" />
+	<_18 v="Texture 4 Velocity" />
+	<_14 v="Texture 4 Resolution Scaling" />
+	<_14 v="Texture 4 Influence" />
+	<_14 v="Texture 4 Fill Influence" />
+	<_3B v="" />
+</root>

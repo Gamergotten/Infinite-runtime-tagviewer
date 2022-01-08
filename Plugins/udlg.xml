@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_D v="flags">
+		<Flag v="female" />
+	</_D>
+	<_40 v="vocalizations">
+		<_2 v="vocalization" />
+		<_E v="flags">
+			<Flag v="no default stimulus" />
+		</_E>
+		<_34 v="generated_pad3ad5" length="2" />
+		<_40 v="stimuli">
+			<_E v="flags">
+				<Flag v="don't suppress" />
+				<Flag v="custom vocalization stimulus setup" />
+			</_E>
+			<_34 v="generated_pad22a6" length="2" />
+			<_2 v="stimulus" />
+			<_41 v="sound" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_2 v="mission dialogue designator" />
+	<_34 v="generated_pada3f0" length="4" />
+	<_7 v="vocalizationLookUp" />
+	<_3B v="" />
+</root>

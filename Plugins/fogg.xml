@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Depth Fog" />
+	<_37 v="Master Depth Fog Start" />
+	<_36 v="Start Bias" />
+	<_14 v="distance bias" />
+	<_37 v="" />
+	<_37 v="Depth Sky Fog" />
+	<_38 v="sky fog">
+		<_D v="flags">
+			<Flag v="Enabled" />
+			<Flag v="Camera-relative" />
+		</_D>
+		<_14 v="base height" />
+		<_14 v="fog height" />
+		<_14 v="fog thickness [0.0 to 1.0]" />
+		<_14 v="fog falloff end" />
+		<_1F v="fog color" />
+		<_14 v="fog color intensity" />
+		<_40 v="Function">
+			<_37 v="fog function" />
+			<_38 v="mapping">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Depth Ground Fog" />
+	<_38 v="ground fog">
+		<_D v="flags">
+			<Flag v="Enabled" />
+			<Flag v="Camera-relative" />
+		</_D>
+		<_14 v="base height" />
+		<_14 v="fog height" />
+		<_14 v="fog thickness [0.0 to 1.0]" />
+		<_14 v="fog falloff end" />
+		<_1F v="fog color" />
+		<_14 v="fog color intensity" />
+		<_40 v="Function">
+			<_37 v="fog function" />
+			<_38 v="mapping">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Depth Ceiling Fog" />
+	<_38 v="ceiling fog">
+		<_D v="flags">
+			<Flag v="Enabled" />
+		</_D>
+		<_14 v="base height" />
+		<_14 v="fog height" />
+		<_14 v="fog thickness [0.0 to 1.0]" />
+		<_14 v="fog falloff end" />
+		<_1F v="fog color" />
+		<_14 v="fog color intensity" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="" />
+	<_37 v="Fog Light" />
+	<_38 v="fog light">
+		<_D v="flags">
+			<Flag v="Enabled" />
+			<Flag v="Use sun direction for fog light" />
+		</_D>
+		<_14 v="pitch angle [-90 to 90]" />
+		<_14 v="yaw angle [0 to 360]" />
+		<_14 v="angular radius [0 to 180]" />
+		<_1F v="tint color" />
+		<_14 v="tint color intensity" />
+		<_14 v="angular falloff steepness" />
+		<_14 v="distance falloff steepness" />
+		<_14 v="nearby cutoff percentage" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_36 v="@@@ CAUTION @@@" />
+	<_38 v="fog globals">
+		<_36 v="Volume Texture Fog Non-blending Parameters" />
+		<_41 v="Fog Bitmap" />
+		<_14 v="Texture repeat rate" />
+		<_14 v="Distance between sheets" />
+		<_14 v="Depth fade factor" />
+		<_14 v="Transparent sort distance" />
+		<_A v="Transparent sort layer">
+			<Flag v="invalid" />
+			<Flag v="pre-pass" />
+			<Flag v="normal" />
+			<Flag v="post-pass" />
+		</_A>
+		<_F v="Flags">
+			<Flag v="Disable Texture Rotation" />
+		</_F>
+		<_34 v="generated_pad2c77" length="2" />
+		<_38 v="wind strength across distance">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="Volume Texture Fog Per-Cluster Parameters" />
+	<_D v="flags">
+		<Flag v="Enabled" />
+	</_D>
+	<_14 v="Sheet density" />
+	<_1F v="Color tint" />
+	<_1F v="Color tint inner" />
+	<_14 v="Intensity" />
+	<_14 v="Full intensity height" />
+	<_14 v="Half intensity height" />
+	<_14 v="Reference plane height" />
+	<_37 v="Volumetric Fog" />
+	<_D v="VolFog Flags">
+		<Flag v="Enabled" />
+		<Flag v="Sample Terrain" />
+	</_D>
+	<_1F v="VolFog Color 1" />
+	<_1F v="VolFog Color 2" />
+	<_14 v="VolFog Density" />
+	<_14 v="VolFog Indirect Light Intensity" />
+	<_14 v="VolFog Light Intensity" />
+	<_14 v="VolFog Ambient Intensity" />
+	<_14 v="VolFog Sun Intensity" />
+	<_14 v="VolFog Near Range" />
+	<_14 v="VolFog Far Range" />
+	<_14 v="VolFog Range Exponent" />
+	<_14 v="VolFog Reprojection Weight" />
+	<_14 v="VolFog Inscatter Scale" />
+	<_14 v="VolFog Terrain Density Low" />
+	<_14 v="VolFog Terrain Density High" />
+	<_14 v="VolFog Maximum Terrain Fog Height" />
+	<_14 v="VolFog Terrain Fog Falloff Exponent" />
+	<_14 v="VolFog Noise Scale" />
+	<_14 v="VolFog Noise Wind Influence" />
+	<_14 v="VolFog Noise Input Min" />
+	<_14 v="VolFog Noise Input Max" />
+	<_14 v="VolFog Noise Output Min" />
+	<_14 v="VolFog Noise Output Max" />
+	<_14 v="VolFog Noise Terrain Follow Intensity" />
+	<_14 v="VolFog Natural Light Near Intensity" />
+	<_14 v="VolFog Natural Light Far Intensity" />
+	<_14 v="VolFog Natural Light Range Near" />
+	<_14 v="VolFog Natural Light Range Far" />
+	<_14 v="VolFog Local Light Near Intensity" />
+	<_14 v="VolFog Local Light Far Intensity" />
+	<_14 v="VolFog Local Light Range Near" />
+	<_14 v="VolFog Local Light Range Far" />
+	<_14 v="VolFog Start Fade Distance" />
+	<_14 v="VolFog Fade Range" />
+	<_37 v="" />
+	<_37 v="Crepuscular Rays" />
+	<_38 v="crepuscular ray">
+		<_D v="flags">
+			<Flag v="Enabled" />
+			<Flag v="Use sun direction for crepuscular rays" />
+			<Flag v="Use world space position for the source of crepuscular rays" />
+		</_D>
+		<_14 v="pitch angle [-90 to 90]" />
+		<_14 v="yaw angle [0 to 360]" />
+		<_14 v="angular radius [0 to 180]" />
+		<_17 v="source position" />
+		<_1F v="light shaft tint color" />
+		<_14 v="light shaft intensity" />
+		<_14 v="saturation" />
+		<_14 v="time variation scale [0 to 1]" />
+		<_14 v="light shaft decay rate" />
+		<_14 v="maximum screen distance" />
+		<_14 v="sample density" />
+		<_14 v="minimum caster distance" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_3B v="" />
+</root>

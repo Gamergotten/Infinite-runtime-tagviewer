@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="Maximum Grenade Count" />
+	<_37 v="maximum count" />
+	<_38 v="maximum count">
+		<_5 v="Base Value" />
+		<_23 v="Value Bounds" />
+		<_3B v="" />
+	</_38>
+	<_36 v="Slot Count" />
+	<_37 v="slot count" />
+	<_38 v="slot count">
+		<_5 v="Base Value" />
+		<_23 v="Value Bounds" />
+		<_3B v="" />
+	</_38>
+	<_40 v="grenades">
+		<_36 v="UI" />
+		<_2 v="Display Text StringID" />
+		<_2 v="Description Text StringID" />
+		<_2 v="Help Text StringID" />
+		<_41 v="Grenade switching sound" />
+		<_36 v="Initial Grenade Count" />
+		<_37 v="initial count" />
+		<_38 v="initial count">
+			<_5 v="Base Value" />
+			<_23 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_34 v="generated_pad5ef2" length="2" />
+		<_41 v="throwing effect" />
+		<_41 v="equipment" />
+		<_41 v="projectile" />
+		<_41 v="equipment (PvE)" />
+		<_41 v="projectile (PvE)" />
+		<_40 v="UI display info">
+			<_2 v="name" />
+			<_2 v="alt name " />
+			<_2 v="description" />
+			<_2 v="help text" />
+			<_2 v="icon string id" />
+			<_41 v="sprite" />
+			<_6 v="sprite index" />
+			<_41 v="alt sprite" />
+			<_6 v="alt sprite index" />
+			<_6 v="damage sprite index" />
+			<_41 v="ui vehicle screen reference" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

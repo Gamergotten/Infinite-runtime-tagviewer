@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="dof">
+		<_36 v="depth of field" />
+		<_14 v="world blur aperture" />
+		<_14 v="world blur focus max distance" />
+		<_15 v="World blur focus smoothing value" />
+		<_15 v="World blur trend smoothing value" />
+		<_15 v="world blur half width ratio" />
+		<_14 v="weapon blur aperture" />
+		<_14 v="weapon blur focus distance" />
+		<_14 v="weapon blur half width" />
+		<_36 v="vignette" />
+		<_26 v="vignette radius bounds" />
+		<_15 v="vignette intensity" />
+		<_3B v="" />
+	</_38>
+	<_34 v="generated_paddff6" length="4" />
+	<_3B v="" />
+</root>

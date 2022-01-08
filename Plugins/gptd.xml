@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="entries">
+		<_38 v="filter">
+			<_6 v="minimum player count" />
+			<_3B v="" />
+		</_38>
+		<_38 v="profile">
+			<_6 v="maximum havok proxy count" />
+			<_6 v="maximum impact count" />
+			<_6 v="vehicle suspension update frequency" />
+			<_6 v="Actor LOD, AI actors to update fully each frame" />
+			<_6 v="Actor LOD, Number of frames to tick LODed AI" />
+			<_6 v="Actor LOD, Number of concurrent LOD actors to tick" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad2b25" length="4" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Explanation" />
+	<_36 v="Death Program Selection" />
+	<_37 v="" />
+	<_41 v="parent" />
+	<_40 v="special type">
+		<_C v="special type">
+			<Flag v="none" />
+			<Flag v="headshot" />
+			<Flag v="melee" />
+			<Flag v="collision" />
+			<Flag v="area of effect" />
+		</_C>
+		<_40 v="damage type">
+			<_36 v="Triggering Damage Source" />
+			<_38 v="damageSource">
+				<_2 v="Damage Source Name" />
+				<_3B v="" />
+			</_38>
+			<_36 v="Damaged Regions" />
+			<_40 v="damage regions">
+				<_A v="Damaged Region">
+					<Flag v="gut" />
+					<Flag v="chest" />
+					<Flag v="head" />
+					<Flag v="left shoulder" />
+					<Flag v="left arm" />
+					<Flag v="left leg" />
+					<Flag v="left foot" />
+					<Flag v="right shoulder" />
+					<Flag v="right arm" />
+					<Flag v="right leg" />
+					<Flag v="right foot" />
+				</_A>
+				<_3B v="" />
+			</_40>
+			<_40 v="velocity">
+				<_14 v="minimum velocity" />
+				<_C v="death program">
+					<Flag v="animate then ragdoll" />
+					<Flag v="default ragdoll program" />
+					<Flag v="explosion ragdoll program" />
+					<Flag v="headshot ragdoll program" />
+					<Flag v="melee ragdoll program" />
+					<Flag v="powered ragdoll program" />
+					<Flag v="vehicle ragdoll program" />
+					<Flag v="impaled ragdoll program" />
+				</_C>
+				<_14 v="death program scale" />
+				<_14 v="acceleration direction adjust z" />
+				<_14 v="fallback death program scale" />
+				<_14 v="fallback acceleration direction adjust z" />
+				<_14 v="powered ragdoll impact radius" />
+				<_2 v="death animation stance" />
+				<_F v="flags">
+					<Flag v="conservatively ragdoll" />
+					<Flag v="continue current animation" />
+					<Flag v="motor driven" />
+					<Flag v="use death ping" />
+					<Flag v="keyframe parentless rigidbodies" />
+				</_F>
+				<_34 v="generated_pad2cfd" length="3" />
+				<_37 v="Animate-then-ragdoll" />
+				<_8 v="ragdoll animation bypass angle" />
+				<_35 v="Cosine Angle" length="4" />
+				<_37 v="" />
+				<_37 v="Powered-ragdoll" />
+				<_14 v="Blend duration" />
+				<_36 v="Blend functions" />
+				<_40 v="Blend functions">
+					<_2 v="name" />
+					<_F v="flags">
+						<Flag v="affects translation" />
+						<Flag v="affects orientation" />
+					</_F>
+					<_34 v="generated_pad9986" length="3" />
+					<_38 v="blend function">
+						<_37 v="function" />
+						<_38 v="function">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_2 v="ragdoll subgroup" />
+					<_3B v="" />
+				</_40>
+				<_37 v="" />
+				<_37 v="Motor-driven-ragdoll" />
+				<_15 v="Keyframe threshold" />
+				<_37 v="" />
+				<_37 v="Explosion-ragdoll" />
+				<_14 v="explosion radius" />
+				<_38 v="explosion impulse curve">
+					<_37 v="function" />
+					<_38 v="function">
+						<_37 v="" />
+						<_42 v="data" />
+						<_37 v="" />
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_38>
+				<_37 v="" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

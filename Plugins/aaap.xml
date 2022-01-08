@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Ambient Info">
+		<_A v="desire type">
+			<Flag v="Scripted" />
+			<Flag v="Health" />
+			<Flag v="Defense" />
+			<Flag v="Attack Enemy" />
+			<Flag v="Weapon" />
+			<Flag v="Vehicle" />
+		</_A>
+		<_34 v="generated_pad5f2a" length="3" />
+		<_C v="action">
+			<Flag v="Base (Do not use)" />
+			<Flag v="Ground" />
+			<Flag v="Crouch" />
+			<Flag v="Melee" />
+			<Flag v="Turn" />
+			<Flag v="Shoot" />
+			<Flag v="Airborne" />
+			<Flag v="Jump" />
+			<Flag v="WeaponReady" />
+			<Flag v="WeaponSwitch" />
+			<Flag v="WeaponPickup" />
+			<Flag v="WeaponDrop" />
+			<Flag v="Grenade" />
+			<Flag v="Dead" />
+			<Flag v="AnimatedMove" />
+			<Flag v="InteractWeaponPickup" />
+			<Flag v="InteractDevice" />
+			<Flag v="InteractLaunchObject" />
+			<Flag v="HardPing" />
+			<Flag v="Align" />
+			<Flag v="ShieldRaise" />
+			<Flag v="ActivateEquipment" />
+			<Flag v="PhysicsImpulse" />
+			<Flag v="DeathPing" />
+			<Flag v="MediumPing" />
+			<Flag v="SoftPing" />
+			<Flag v="ScriptedSequence" />
+			<Flag v="CustomAnimation" />
+			<Flag v="DeflectProjectile" />
+			<Flag v="VehicleEnter" />
+			<Flag v="VehicleExit" />
+			<Flag v="Vehicle" />
+			<Flag v="Brace" />
+			<Flag v="WeaponDraw" />
+			<Flag v="WeaponStow" />
+			<Flag v="HardStop" />
+			<Flag v="Hoist" />
+			<Flag v="PreCombatPointActivity" />
+			<Flag v="Stunned" />
+			<Flag v="ObstacleSmash" />
+			<Flag v="WeaponVent" />
+			<Flag v="SoftPingDefenseScreen" />
+			<Flag v="ThrowEquipment" />
+			<Flag v="Hijack" />
+			<Flag v="Kamikaze" />
+			<Flag v="CloseQuartersDefenseBlast" />
+			<Flag v="Search" />
+			<Flag v="SearchFound" />
+			<Flag v="Surprise" />
+			<Flag v="Hover" />
+			<Flag v="Alert" />
+			<Flag v="AlertCallout" />
+			<Flag v="WeaponFidget" />
+			<Flag v="WeaponReload" />
+			<Flag v="FullbodyAnimation" />
+			<Flag v="ActivateCamo" />
+			<Flag v="TradeWeapon" />
+			<Flag v="Flying" />
+			<Flag v="MultiTargetTrackedAttack" />
+			<Flag v="Berserk" />
+			<Flag v="LeapWindup" />
+			<Flag v="AnimatedTell" />
+			<Flag v="TeleportArrive" />
+			<Flag v="JinkFire" />
+			<Flag v="DialogueAnimation" />
+			<Flag v="Swoop" />
+			<Flag v="AirborneMelee" />
+			<Flag v="Land" />
+			<Flag v="Hunker" />
+			<Flag v="Launching" />
+			<Flag v="PreAndPostFire" />
+			<Flag v="AnimatedPosture" />
+			<Flag v="Boarding" />
+		</_C>
+		<_2 v="Animation Token Override" />
+		<_14 v="Time playing animation" />
+		<_14 v="Cooldown time" />
+		<_2 v="composition name" />
+		<_41 v="composition definition" />
+		<_14 v="Max distance agents will consider this opp from" />
+		<_40 v="Ambient meta labels">
+			<_2 v="meta label" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Exclusion meta labels">
+			<_2 v="meta label" />
+			<_3B v="" />
+		</_40>
+		<_14 v="Min Danger to Activate" />
+		<_14 v="Max Danger to Activate" />
+		<_14 v="Abort Danger Level" />
+		<_14 v="Chance Per Second" />
+		<_14 v="Min Enemy Target Distance" />
+		<_14 v="Max Enemy Target Distance" />
+		<_14 v="Max Height Difference" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padc9b5" length="4" />
+	<_3B v="" />
+</root>

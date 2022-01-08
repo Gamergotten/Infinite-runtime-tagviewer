@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Curves 1D">
+		<_2 v="Name" />
+		<_38 v="Definition">
+			<_40 v="control points">
+				<_14 v="value" />
+				<_14 v="tangent in" />
+				<_14 v="tangent out" />
+				<_14 v="curviness" />
+				<_A v="segment type">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="tangent mode">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_34 v="generated_pad7103" length="2" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_40 v="Metadata">
+			<_14 v="input" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Curves 2D">
+		<_2 v="Name" />
+		<_38 v="Definition">
+			<_40 v="control points">
+				<_18 v="value" />
+				<_18 v="tangent in" />
+				<_18 v="tangent out" />
+				<_14 v="curviness" />
+				<_A v="segment type x">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="segment type y">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="tangent mode x">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_A v="tangent mode y">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_40 v="Metadata">
+			<_14 v="input" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Curves 3D">
+		<_2 v="Name" />
+		<_38 v="Definition">
+			<_40 v="control points">
+				<_19 v="value" />
+				<_19 v="tangent in" />
+				<_19 v="tangent out" />
+				<_14 v="curviness" />
+				<_A v="segment type x">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="segment type y">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="segment type z">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="tangent mode x">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_A v="tangent mode y">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_A v="tangent mode z">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_34 v="generated_pad30cd" length="2" />
+				<_40 v="pointMetadata">
+					<_40 v="spline road metadata">
+						<_14 v="width" />
+						<_14 v="opacity" />
+						<_14 v="falloffLeft" />
+						<_14 v="falloffRight" />
+						<_14 v="bank" />
+						<_3B v="" />
+					</_40>
+					<_40 v="road decal metadata">
+						<_40 v="Road Decal Textures">
+							<_41 v="Reference" />
+							<_3B v="" />
+						</_40>
+						<_18 v="Road Decal Scale" />
+						<_18 v="Road Decal Offset" />
+						<_14 v="Road Decal Tile Repeat Count" />
+						<_14 v="Road Decal Height Strength" />
+						<_14 v="Road Decal Mask Strength" />
+						<_14 v="Road Decal Height Contrast" />
+						<_14 v="Road Decal Mask Contrast" />
+						<_14 v="Road Decal Edge Fade" />
+						<_6 v="Road Decal Random Seed" />
+						<_3B v="" />
+					</_40>
+					<_40 v="animated spline metadata">
+						<_14 v="Time" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_40 v="Metadata">
+			<_14 v="input" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Curves Transform">
+		<_2 v="Name" />
+		<_38 v="Position Definition">
+			<_40 v="control points">
+				<_19 v="value" />
+				<_19 v="tangent in" />
+				<_19 v="tangent out" />
+				<_14 v="curviness" />
+				<_A v="segment type x">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="segment type y">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="segment type z">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="tangent mode x">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_A v="tangent mode y">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_A v="tangent mode z">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_34 v="generated_pad30cd" length="2" />
+				<_40 v="pointMetadata">
+					<_40 v="spline road metadata">
+						<_14 v="width" />
+						<_14 v="opacity" />
+						<_14 v="falloffLeft" />
+						<_14 v="falloffRight" />
+						<_14 v="bank" />
+						<_3B v="" />
+					</_40>
+					<_40 v="road decal metadata">
+						<_40 v="Road Decal Textures">
+							<_41 v="Reference" />
+							<_3B v="" />
+						</_40>
+						<_18 v="Road Decal Scale" />
+						<_18 v="Road Decal Offset" />
+						<_14 v="Road Decal Tile Repeat Count" />
+						<_14 v="Road Decal Height Strength" />
+						<_14 v="Road Decal Mask Strength" />
+						<_14 v="Road Decal Height Contrast" />
+						<_14 v="Road Decal Mask Contrast" />
+						<_14 v="Road Decal Edge Fade" />
+						<_6 v="Road Decal Random Seed" />
+						<_3B v="" />
+					</_40>
+					<_40 v="animated spline metadata">
+						<_14 v="Time" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_38 v="Orientation Definition">
+			<_40 v="control points">
+				<_19 v="value" />
+				<_19 v="tangent in" />
+				<_19 v="tangent out" />
+				<_14 v="curviness" />
+				<_A v="segment type x">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="segment type y">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="segment type z">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="tangent mode x">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_A v="tangent mode y">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_A v="tangent mode z">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_34 v="generated_pad30cd" length="2" />
+				<_40 v="pointMetadata">
+					<_40 v="spline road metadata">
+						<_14 v="width" />
+						<_14 v="opacity" />
+						<_14 v="falloffLeft" />
+						<_14 v="falloffRight" />
+						<_14 v="bank" />
+						<_3B v="" />
+					</_40>
+					<_40 v="road decal metadata">
+						<_40 v="Road Decal Textures">
+							<_41 v="Reference" />
+							<_3B v="" />
+						</_40>
+						<_18 v="Road Decal Scale" />
+						<_18 v="Road Decal Offset" />
+						<_14 v="Road Decal Tile Repeat Count" />
+						<_14 v="Road Decal Height Strength" />
+						<_14 v="Road Decal Mask Strength" />
+						<_14 v="Road Decal Height Contrast" />
+						<_14 v="Road Decal Mask Contrast" />
+						<_14 v="Road Decal Edge Fade" />
+						<_6 v="Road Decal Random Seed" />
+						<_3B v="" />
+					</_40>
+					<_40 v="animated spline metadata">
+						<_14 v="Time" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_40 v="Metadata">
+			<_14 v="input" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="ping group" />
+	<_14 v="ping display time" />
+	<_36 v="Per Priority Default Ranges" />
+	<_40 v="default range per priority">
+		<_14 v="default range" />
+		<_3B v="" />
+	</_40>
+	<_36 v="Per Priority Tracking Limits" />
+	<_40 v="max tracked per priority">
+		<_3C v="maximum number of tracked objects displayed" />
+		<_3B v="" />
+	</_40>
+	<_37 v="active ping properties" />
+	<_36 v="The following fields only apply to active tracking." />
+	<_41 v="ping effect" />
+	<_14 v="ping travel rate" />
+	<_37 v="" />
+	<_37 v="outline properties" />
+	<_41 v="Outline type" />
+	<_A v="Outline system ID">
+		<Flag v="SpartanTrackingActive" />
+		<Flag v="SpartanTrackingPassive" />
+		<Flag v="SpartanTrackingCustomActive" />
+		<Flag v="SpectatorTeamColoring" />
+		<Flag v="TargetTracking" />
+		<Flag v="EnemyIdentification" />
+		<Flag v="Scripting" />
+		<Flag v="ForgeOutlining" />
+		<Flag v="LocationSensor" />
+		<Flag v="PolarisOutlining" />
+	</_A>
+	<_34 v="generated_pada560" length="3" />
+	<_37 v="" />
+	<_37 v="Target-Marking" />
+	<_8 v="angle" />
+	<_14 v="distanceFactor" />
+	<_14 v="angleFactor" />
+	<_37 v="" />
+	<_34 v="generated_padbf41" length="4" />
+	<_3B v="" />
+</root>

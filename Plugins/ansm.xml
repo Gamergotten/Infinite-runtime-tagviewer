@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="Source Graph" />
+	<_40 v="Anim Node Subgraphs">
+		<_41 v="Anim Subgraph" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Transition Logic Subgraphs">
+		<_41 v="Transition Logic Subgraph" />
+		<_3B v="" />
+	</_40>
+	<_40 v="States">
+		<_2 v="Name" />
+		<_41 v="Animation Sub-Graph" />
+		<_E v="State Flags">
+			<Flag v="Is Default Fallback State" />
+			<Flag v="Opt Out Of Procedural Footsteps" />
+		</_E>
+		<_34 v="generated_padde0e" length="2" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Connections">
+		<_2E v="Start State" />
+		<_2E v="End State" />
+		<_41 v="Condition Graph" />
+		<_41 v="Transition Blend" />
+		<_6 v="Priority" />
+		<_14 v="Duration" />
+		<_E v="Inertialize">
+			<Flag v="Inertialize" />
+			<Flag v="Disable Inertialization Velocity" />
+		</_E>
+		<_E v="Process Events From Both States">
+			<Flag v="Apply All Events" />
+		</_E>
+		<_3B v="" />
+	</_40>
+	<_40 v="Start Transitions">
+		<_2E v="State" />
+		<_34 v="generated_paddb5f" length="2" />
+		<_41 v="Condition Graph" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Transition Blend" />
+	<_34 v="generated_pad2a58" length="4" />
+	<_3B v="" />
+</root>

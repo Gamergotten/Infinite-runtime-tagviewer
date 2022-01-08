@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="Template Navpoint" />
+	<_14 v="Alpha" />
+	<_14 v="Anchor Offset X" />
+	<_14 v="Anchor Offset Y" />
+	<_2 v="Show event name" />
+	<_2 v="Hide event name" />
+	<_14 v="Scale Far Override" />
+	<_40 v="Element Groups">
+		<_2 v="Group Name" />
+		<_2 v="Tint Color" />
+		<_14 v="Alpha" />
+		<_14 v="Anchor Offset X" />
+		<_14 v="Anchor Offset Y" />
+		<_B v="Anchor Justification">
+			<Flag v="Left" />
+			<Flag v="Center" />
+			<Flag v="Right" />
+		</_B>
+		<_B v="Anchor Alignment">
+			<Flag v="Top" />
+			<Flag v="Center" />
+			<Flag v="Bottom" />
+		</_B>
+		<_2 v="Anchor Element Name" />
+		<_C v="Element Layout">
+			<Flag v="Horizontal" />
+			<Flag v="Vertical" />
+			<Flag v="Stacked" />
+		</_C>
+		<_B v="Element Justification">
+			<Flag v="Left" />
+			<Flag v="Center" />
+			<Flag v="Right" />
+		</_B>
+		<_B v="Element Alignment">
+			<Flag v="Top" />
+			<Flag v="Center" />
+			<Flag v="Bottom" />
+		</_B>
+		<_14 v="Element Horizontal Spacing" />
+		<_14 v="Element Vertical Spacing" />
+		<_F v="Use Horizontal Flip Zone">
+			<Flag v=" " />
+		</_F>
+		<_34 v="generated_pad4787" length="3" />
+		<_40 v="Label Elements">
+			<_2 v="Element Name" />
+			<_2 v="Draw Flags Name" />
+			<_D v="Draw Flags">
+				<Flag v="Draw when onscreen" />
+				<Flag v="Draw when offscreen" />
+				<Flag v="Draw when center screen" />
+				<Flag v="Draw when aimed at" />
+				<Flag v="Draw when docked" />
+			</_D>
+			<_6 v="Draw Order" />
+			<_14 v="Width" />
+			<_14 v="Height" />
+			<_2 v="Color" />
+			<_14 v="Alpha" />
+			<_2 v="Tint Color" />
+			<_B v="Tint Blend Mode">
+				<Flag v="Modulated RGB" />
+				<Flag v="Linear RGB" />
+				<Flag v="Linear HSV" />
+				<Flag v="Override" />
+			</_B>
+			<_34 v="generated_pad4916" length="2" />
+			<_14 v="Tint Blend Interpolation" />
+			<_2 v="Show event name" />
+			<_2 v="Hide event name" />
+			<_14 v="Width Scale" />
+			<_14 v="Height Scale" />
+			<_B v="Justification">
+				<Flag v="Left" />
+				<Flag v="Center" />
+				<Flag v="Right" />
+			</_B>
+			<_B v="Alignment">
+				<Flag v="Top" />
+				<Flag v="Center" />
+				<Flag v="Bottom" />
+			</_B>
+			<_2 v="Typeface" />
+			<_6 v="Type Size" />
+			<_2 v="Text Source" />
+			<_2 v="Drop Shadow" />
+			<_F v="Upper Case">
+				<Flag v=" " />
+			</_F>
+			<_34 v="generated_pad54de" length="3" />
+			<_14 v="Tracking Horizontal" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Number Elements">
+			<_2 v="Element Name" />
+			<_2 v="Draw Flags Name" />
+			<_D v="Draw Flags">
+				<Flag v="Draw when onscreen" />
+				<Flag v="Draw when offscreen" />
+				<Flag v="Draw when center screen" />
+				<Flag v="Draw when aimed at" />
+				<Flag v="Draw when docked" />
+			</_D>
+			<_6 v="Draw Order" />
+			<_14 v="Width" />
+			<_14 v="Height" />
+			<_2 v="Color" />
+			<_14 v="Alpha" />
+			<_2 v="Tint Color" />
+			<_B v="Tint Blend Mode">
+				<Flag v="Modulated RGB" />
+				<Flag v="Linear RGB" />
+				<Flag v="Linear HSV" />
+				<Flag v="Override" />
+			</_B>
+			<_34 v="generated_pad4916" length="2" />
+			<_14 v="Tint Blend Interpolation" />
+			<_2 v="Show event name" />
+			<_2 v="Hide event name" />
+			<_14 v="Width Scale" />
+			<_14 v="Height Scale" />
+			<_B v="Justification">
+				<Flag v="Left" />
+				<Flag v="Center" />
+				<Flag v="Right" />
+			</_B>
+			<_B v="Alignment">
+				<Flag v="Top" />
+				<Flag v="Center" />
+				<Flag v="Bottom" />
+			</_B>
+			<_2 v="Typeface" />
+			<_6 v="Type Size" />
+			<_2 v="Text Source" />
+			<_2 v="Drop Shadow" />
+			<_F v="Upper Case">
+				<Flag v=" " />
+			</_F>
+			<_34 v="generated_pad54de" length="3" />
+			<_14 v="Tracking Horizontal" />
+			<_C v="Format">
+				<Flag v="Timer" />
+				<Flag v="Distance" />
+				<Flag v="Integer" />
+			</_C>
+			<_3B v="" />
+		</_40>
+		<_40 v="Image Elements">
+			<_2 v="Element Name" />
+			<_2 v="Draw Flags Name" />
+			<_D v="Draw Flags">
+				<Flag v="Draw when onscreen" />
+				<Flag v="Draw when offscreen" />
+				<Flag v="Draw when center screen" />
+				<Flag v="Draw when aimed at" />
+				<Flag v="Draw when docked" />
+			</_D>
+			<_6 v="Draw Order" />
+			<_14 v="Width" />
+			<_14 v="Height" />
+			<_2 v="Color" />
+			<_14 v="Alpha" />
+			<_2 v="Tint Color" />
+			<_B v="Tint Blend Mode">
+				<Flag v="Modulated RGB" />
+				<Flag v="Linear RGB" />
+				<Flag v="Linear HSV" />
+				<Flag v="Override" />
+			</_B>
+			<_34 v="generated_pad4916" length="2" />
+			<_14 v="Tint Blend Interpolation" />
+			<_2 v="Show event name" />
+			<_2 v="Hide event name" />
+			<_14 v="Width Scale" />
+			<_14 v="Height Scale" />
+			<_41 v="Bitmap" />
+			<_6 v="Frame Index" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Rotated Image Elements">
+			<_2 v="Element Name" />
+			<_2 v="Draw Flags Name" />
+			<_D v="Draw Flags">
+				<Flag v="Draw when onscreen" />
+				<Flag v="Draw when offscreen" />
+				<Flag v="Draw when center screen" />
+				<Flag v="Draw when aimed at" />
+				<Flag v="Draw when docked" />
+			</_D>
+			<_6 v="Draw Order" />
+			<_14 v="Width" />
+			<_14 v="Height" />
+			<_2 v="Color" />
+			<_14 v="Alpha" />
+			<_2 v="Tint Color" />
+			<_B v="Tint Blend Mode">
+				<Flag v="Modulated RGB" />
+				<Flag v="Linear RGB" />
+				<Flag v="Linear HSV" />
+				<Flag v="Override" />
+			</_B>
+			<_34 v="generated_pad4916" length="2" />
+			<_14 v="Tint Blend Interpolation" />
+			<_2 v="Show event name" />
+			<_2 v="Hide event name" />
+			<_14 v="Width Scale" />
+			<_14 v="Height Scale" />
+			<_41 v="Bitmap" />
+			<_6 v="Frame Index" />
+			<_14 v="Pivot Offset" />
+			<_2 v="Rotation Angle" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Gradient Meter Elements">
+			<_2 v="Element Name" />
+			<_2 v="Draw Flags Name" />
+			<_D v="Draw Flags">
+				<Flag v="Draw when onscreen" />
+				<Flag v="Draw when offscreen" />
+				<Flag v="Draw when center screen" />
+				<Flag v="Draw when aimed at" />
+				<Flag v="Draw when docked" />
+			</_D>
+			<_6 v="Draw Order" />
+			<_14 v="Width" />
+			<_14 v="Height" />
+			<_2 v="Color" />
+			<_14 v="Alpha" />
+			<_2 v="Tint Color" />
+			<_B v="Tint Blend Mode">
+				<Flag v="Modulated RGB" />
+				<Flag v="Linear RGB" />
+				<Flag v="Linear HSV" />
+				<Flag v="Override" />
+			</_B>
+			<_34 v="generated_pad4916" length="2" />
+			<_14 v="Tint Blend Interpolation" />
+			<_2 v="Show event name" />
+			<_2 v="Hide event name" />
+			<_14 v="Width Scale" />
+			<_14 v="Height Scale" />
+			<_41 v="Bitmap" />
+			<_6 v="Frame Index" />
+			<_2 v="Fill Color" />
+			<_2 v="Progress" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Radial Meter Elements">
+			<_2 v="Element Name" />
+			<_2 v="Draw Flags Name" />
+			<_D v="Draw Flags">
+				<Flag v="Draw when onscreen" />
+				<Flag v="Draw when offscreen" />
+				<Flag v="Draw when center screen" />
+				<Flag v="Draw when aimed at" />
+				<Flag v="Draw when docked" />
+			</_D>
+			<_6 v="Draw Order" />
+			<_14 v="Width" />
+			<_14 v="Height" />
+			<_2 v="Color" />
+			<_14 v="Alpha" />
+			<_2 v="Tint Color" />
+			<_B v="Tint Blend Mode">
+				<Flag v="Modulated RGB" />
+				<Flag v="Linear RGB" />
+				<Flag v="Linear HSV" />
+				<Flag v="Override" />
+			</_B>
+			<_34 v="generated_pad4916" length="2" />
+			<_14 v="Tint Blend Interpolation" />
+			<_2 v="Show event name" />
+			<_2 v="Hide event name" />
+			<_14 v="Width Scale" />
+			<_14 v="Height Scale" />
+			<_41 v="Bitmap" />
+			<_6 v="Frame Index" />
+			<_2 v="Fill Color" />
+			<_2 v="Progress" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="State Groups">
+		<_2 v="Visual State Group Name" />
+		<_40 v="Visual States">
+			<_2 v="Name" />
+			<_40 v="Color Animation Timelines">
+				<_2 v="Timeline Name" />
+				<_41 v="Animation Group" />
+				<_2 v="Animation Name" />
+				<_40 v="Target Properties">
+					<_2 v="Track Name" />
+					<_2 v="Element or Group Name" />
+					<_2 v="Property Name" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Float Animation Timelines">
+				<_2 v="Timeline Name" />
+				<_41 v="Animation Group" />
+				<_2 v="Animation Name" />
+				<_40 v="Target Properties">
+					<_2 v="Track Name" />
+					<_2 v="Element or Group Name" />
+					<_2 v="Property Name" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Image Animation Timelines">
+				<_2 v="Timeline Name" />
+				<_41 v="Animation Group" />
+				<_2 v="Animation Name" />
+				<_40 v="Target Properties">
+					<_2 v="Track Name" />
+					<_2 v="Element or Group Name" />
+					<_2 v="Property Name" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="StringId Animation Timelines">
+				<_2 v="Timeline Name" />
+				<_41 v="Animation Group" />
+				<_2 v="Animation Name" />
+				<_40 v="Target Properties">
+					<_2 v="Track Name" />
+					<_2 v="Element or Group Name" />
+					<_2 v="Property Name" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="External Events">
+		<_2 v="Name" />
+		<_40 v="Color Animation Timelines">
+			<_2 v="Timeline Name" />
+			<_41 v="Animation Group" />
+			<_2 v="Animation Name" />
+			<_40 v="Target Properties">
+				<_2 v="Track Name" />
+				<_2 v="Element or Group Name" />
+				<_2 v="Property Name" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="Float Animation Timelines">
+			<_2 v="Timeline Name" />
+			<_41 v="Animation Group" />
+			<_2 v="Animation Name" />
+			<_40 v="Target Properties">
+				<_2 v="Track Name" />
+				<_2 v="Element or Group Name" />
+				<_2 v="Property Name" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="Image Animation Timelines">
+			<_2 v="Timeline Name" />
+			<_41 v="Animation Group" />
+			<_2 v="Animation Name" />
+			<_40 v="Target Properties">
+				<_2 v="Track Name" />
+				<_2 v="Element or Group Name" />
+				<_2 v="Property Name" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="StringId Animation Timelines">
+			<_2 v="Timeline Name" />
+			<_41 v="Animation Group" />
+			<_2 v="Animation Name" />
+			<_40 v="Target Properties">
+				<_2 v="Track Name" />
+				<_2 v="Element or Group Name" />
+				<_2 v="Property Name" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Show and Hide Events">
+		<_2 v="Name" />
+		<_40 v="Color Animation Timelines">
+			<_2 v="Timeline Name" />
+			<_41 v="Animation Group" />
+			<_2 v="Animation Name" />
+			<_40 v="Target Properties">
+				<_2 v="Track Name" />
+				<_2 v="Element or Group Name" />
+				<_2 v="Property Name" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="Float Animation Timelines">
+			<_2 v="Timeline Name" />
+			<_41 v="Animation Group" />
+			<_2 v="Animation Name" />
+			<_40 v="Target Properties">
+				<_2 v="Track Name" />
+				<_2 v="Element or Group Name" />
+				<_2 v="Property Name" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="Image Animation Timelines">
+			<_2 v="Timeline Name" />
+			<_41 v="Animation Group" />
+			<_2 v="Animation Name" />
+			<_40 v="Target Properties">
+				<_2 v="Track Name" />
+				<_2 v="Element or Group Name" />
+				<_2 v="Property Name" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="StringId Animation Timelines">
+			<_2 v="Timeline Name" />
+			<_41 v="Animation Group" />
+			<_2 v="Animation Name" />
+			<_40 v="Target Properties">
+				<_2 v="Track Name" />
+				<_2 v="Element or Group Name" />
+				<_2 v="Property Name" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Sample data floats">
+		<_2 v="Variable name" />
+		<_14 v="Value" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Sample data string ids">
+		<_2 v="Variable name" />
+		<_2 v="Value" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Sample data strings">
+		<_2 v="Variable name" />
+		<_1 v="Value" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_6 v="Version" />
+	<_37 v="GLOBAL QUALITY SETTINGS" />
+	<_38 v="Global lightmapper settings">
+		<_D v="Global flags">
+			<Flag v="Use high resolution point shadows" />
+			<Flag v="Include Adjacent BSPs" />
+			<Flag v="Use 32-bit precision for direct pass" />
+			<Flag v="Enable subsampling indirect acceleration" />
+			<Flag v="Perform Repack" />
+			<Flag v="Is Farm Burn" />
+			<Flag v="Debug Bounce Reflection" />
+			<Flag v="Opt out of OPTIX" />
+		</_D>
+		<_C v="Mode">
+			<Flag v="Direct only" />
+			<Flag v="One bounce" />
+		</_C>
+		<_B v="Lightmap quality">
+			<Flag v="Draft" />
+			<Flag v="High" />
+		</_B>
+		<_B v="Indirect quality">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+		</_B>
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="LOCAL SETTINGS" />
+	<_38 v="Local lightmapper settings">
+		<_C v="size class">
+			<Flag v="32x32" />
+			<Flag v="64x64" />
+			<Flag v="128x128" />
+			<Flag v="256x256" />
+			<Flag v="512x512" />
+			<Flag v="768x768" />
+			<Flag v="1024x1024" />
+			<Flag v="1280x1280" />
+			<Flag v="1536x1536" />
+			<Flag v="1792x1792" />
+			<Flag v="2048x2048" />
+			<Flag v="3072x3072" />
+			<Flag v="4096x4096" />
+			<Flag v="6144x6144" />
+			<Flag v="8192x8192" />
+		</_C>
+		<_C v="static size class">
+			<Flag v="32x32" />
+			<Flag v="64x64" />
+			<Flag v="128x128" />
+			<Flag v="256x256" />
+			<Flag v="512x512" />
+			<Flag v="768x768" />
+			<Flag v="1024x1024" />
+			<Flag v="1280x1280" />
+			<Flag v="1536x1536" />
+			<Flag v="1792x1792" />
+			<Flag v="2048x2048" />
+			<Flag v="3072x3072" />
+			<Flag v="4096x4096" />
+			<Flag v="6144x6144" />
+			<Flag v="8192x8192" />
+		</_C>
+		<_C v="supersample factor class">
+			<Flag v="Disabled" />
+			<Flag v="2X" />
+			<Flag v="3X" />
+			<Flag v="4X" />
+		</_C>
+		<_C v="optix job size class">
+			<Flag v="1024 (Default)" />
+			<Flag v="768" />
+			<Flag v="512" />
+			<Flag v="256" />
+		</_C>
+		<_C v="adjacent BSP LOD clamp level">
+			<Flag v="No clamping (Default)" />
+			<Flag v="Clamp on LOD 1" />
+			<Flag v="Clamp on LOD 2" />
+			<Flag v="Clamp on LOD 3" />
+		</_C>
+		<_C v="Lightmap Compression">
+			<Flag v="Uncompressed" />
+			<Flag v="BC5/BC4" />
+		</_C>
+		<_D v="Local flags">
+			<Flag v="Enable floating shadows" />
+			<Flag v="Generate AO" />
+			<Flag v="Build packing lightmaps (for lighting forge objects)" />
+			<Flag v="Attempt to Use Diffuse UVs" />
+			<Flag v="Disable Hybrid Refinement" />
+			<Flag v="Allow Spot Suns" />
+			<Flag v="Probes Ignore Shadow Linking" />
+			<Flag v="Setup for Forge" />
+			<Flag v="Enable adjacent BSP bounce lighting" />
+			<Flag v="Skip Optional Airprobes" />
+			<Flag v="Do not fix airprobes inside geometry" />
+		</_D>
+		<_14 v="Skydome amplification factor" />
+		<_14 v="Indirect amplification factor" />
+		<_37 v="Ambient occlusion settings" />
+		<_38 v="AO settings">
+			<_14 v="Radius" />
+			<_14 v="Falloff Power" />
+			<_14 v="Multiplier" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Quality Overrides" />
+		<_38 v="Local lightmapper override settings">
+			<_6 v="High Quality Average Jitter Samples" />
+			<_6 v="Per Vertex Supersample Count" />
+			<_6 v="Indirect Quality Offset" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_C v="Required Aiprobe Density">
+			<Flag v="human scale (1.5 wu)" />
+			<Flag v="vehicle scale (4.0 wu)" />
+			<Flag v="space scale (10.0 wu)" />
+		</_C>
+		<_14 v="Airprobe Compression Threshold" />
+		<_41 v="Sky Lighting" />
+		<_41 v="Sky Lighting Cubemap" />
+		<_C v="forge lightmap size class">
+			<Flag v="32x32" />
+			<Flag v="64x64" />
+			<Flag v="128x128" />
+			<Flag v="256x256" />
+			<Flag v="512x512" />
+			<Flag v="768x768" />
+			<Flag v="1024x1024" />
+			<Flag v="1280x1280" />
+			<Flag v="1536x1536" />
+			<Flag v="1792x1792" />
+			<Flag v="2048x2048" />
+			<Flag v="3072x3072" />
+			<Flag v="4096x4096" />
+			<Flag v="6144x6144" />
+			<Flag v="8192x8192" />
+		</_C>
+		<_40 v="Adjacent BSPs">
+			<_2 v="name" />
+			<_2 v="lighting variant name" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="RUNTIME SETTINGS" />
+	<_38 v="Runtime settings">
+		<_38 v="visual environment">
+			<_41 v="Camera Settings" />
+			<_41 v="Fog Settings" />
+			<_38 v="Custom Object Lighting">
+				<_36 v="Character Lighting" />
+				<_40 v="Authored Light Probes">
+					<_40 v="Lights">
+						<_37 v="Authored Light Probe" />
+						<_37 v="Direction 1" />
+						<_14 v="Direction 1" />
+						<_37 v="Front-Back 1" />
+						<_14 v="Front-Back 1" />
+						<_1F v="Direct color 1" />
+						<_37 v="Direct intensity 1" />
+						<_14 v="Direct intensity 1" />
+						<_37 v="Direction 2" />
+						<_14 v="Direction 2" />
+						<_37 v="Front-Back 2" />
+						<_14 v="Front-Back 2" />
+						<_1F v="Direct color 2" />
+						<_37 v="Direct intensity 2" />
+						<_14 v="Direct intensity 2" />
+						<_1F v="Ambient Color" />
+						<_37 v="Ambient intensity" />
+						<_14 v="Ambient intensity" />
+						<_1F v="Sun Color" />
+						<_37 v="Sun intensity" />
+						<_14 v="Sun intensity" />
+						<_1F v="Cubemap Scale Color" />
+						<_37 v="Cubemap Scale intensity" />
+						<_14 v="Cubemap Scale intensity" />
+						<_37 v="Authored Light Probe Intensity Scale" />
+						<_14 v="Authored Light Probe Intensity Scale" />
+						<_37 v="Generated Air Probe Intensity Scale" />
+						<_14 v="Generated Air Probe Intensity Scale" />
+						<_3B v="" />
+					</_40>
+					<_37 v="Generated Air Probe Intensity Scale" />
+					<_14 v="Generated Air Probe Intensity Scale" />
+					<_39 v="raw sh data" />
+					<_39 v="per frame sh data" />
+					<_17 v="Sun Color" />
+					<_17 v="Cubemap Scale" />
+					<_36 v="" />
+					<_E v="Flags">
+						<Flag v="Characters" />
+						<Flag v="First Person Geometry" />
+						<Flag v="Vehicles" />
+					</_E>
+					<_34 v="generated_padb28a" length="2" />
+					<_3B v="" />
+				</_40>
+				<_A v="Is Camera-space">
+					<Flag v="Off" />
+					<Flag v="On" />
+				</_A>
+				<_F v="Flags">
+					<Flag v="Force Always Sun" />
+				</_F>
+				<_34 v="generated_pad79fe" length="2" />
+				<_41 v="cubemap override" />
+				<_3B v="" />
+			</_38>
+			<_41 v="Cubemap Bitmap DEPRECATED" />
+			<_3B v="" />
+		</_38>
+		<_41 v="Custom Fallback Airprobe" />
+		<_39 v="raw sh data" />
+		<_D v="custom fallback airprobe flags">
+			<Flag v="Has Sun" />
+		</_D>
+		<_37 v="Cubemaps" />
+		<_41 v="Cubemap Texture" />
+		<_D v="Cubemap Flags">
+			<Flag v="Enable Intensity Correction" />
+			<Flag v="Capture With Effects" />
+			<Flag v="Affects Adjacent Bsps" />
+			<Flag v="Capture Dynamic Objects" />
+		</_D>
+		<_17 v="Cubemap Sample Position" />
+		<_17 v="Cubemap Intensity" />
+		<_14 v="Self-illum Scale Down" />
+		<_37 v="" />
+		<_14 v="max shadow count scale" />
+		<_37 v="floating shadows" />
+		<_38 v="floating shadow settings">
+			<_38 v="number of cascades">
+				<_A v="Type">
+					<Flag v="Default" />
+					<Flag v="Sync" />
+					<Flag v="HDR" />
+					<Flag v="Reflections" />
+					<Flag v="VolumetricFog" />
+					<Flag v="Shadows" />
+					<Flag v="Sky" />
+					<Flag v="TAA" />
+					<Flag v="Ambient Occlusion" />
+					<Flag v="DOF" />
+					<Flag v="Aniso" />
+					<Flag v="Terrain" />
+					<Flag v="Tesselation" />
+					<Flag v="Lighting" />
+					<Flag v="Decorators" />
+					<Flag v="Asset Category" />
+					<Flag v="Dynamic Wind" />
+					<Flag v="Push Bending" />
+					<Flag v="Hlod" />
+					<Flag v="Visual Damage" />
+					<Flag v="Virtual Texturing" />
+					<Flag v="Effects" />
+					<Flag v="Emblem Quality" />
+					<Flag v="Texture Quality" />
+					<Flag v="Decals" />
+				</_A>
+				<_38 v="Low">
+					<_3C v="Single Player" />
+					<_3C v="2 Player Splitscreen" />
+					<_3C v="3 Player Splitscreen" />
+					<_3C v="4 Player Splitscreen" />
+					<_3B v="" />
+				</_38>
+				<_38 v="Medium">
+					<_3C v="Single Player" />
+					<_3C v="2 Player Splitscreen" />
+					<_3C v="3 Player Splitscreen" />
+					<_3C v="4 Player Splitscreen" />
+					<_3B v="" />
+				</_38>
+				<_38 v="High">
+					<_3C v="Single Player" />
+					<_3C v="2 Player Splitscreen" />
+					<_3C v="3 Player Splitscreen" />
+					<_3C v="4 Player Splitscreen" />
+					<_3B v="" />
+				</_38>
+				<_38 v="Ultra">
+					<_3C v="Single Player" />
+					<_3C v="2 Player Splitscreen" />
+					<_3C v="3 Player Splitscreen" />
+					<_3C v="4 Player Splitscreen" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_38 v="quality">
+				<_A v="Very Low">
+					<Flag v="8 tap" />
+					<Flag v="12 tap" />
+					<Flag v="6 tap" />
+					<Flag v="PCSS Low Quality" />
+					<Flag v="PCSS Medium Quality" />
+					<Flag v="PCSS High Quality" />
+				</_A>
+				<_A v="Low">
+					<Flag v="8 tap" />
+					<Flag v="12 tap" />
+					<Flag v="6 tap" />
+					<Flag v="PCSS Low Quality" />
+					<Flag v="PCSS Medium Quality" />
+					<Flag v="PCSS High Quality" />
+				</_A>
+				<_A v="Medium">
+					<Flag v="8 tap" />
+					<Flag v="12 tap" />
+					<Flag v="6 tap" />
+					<Flag v="PCSS Low Quality" />
+					<Flag v="PCSS Medium Quality" />
+					<Flag v="PCSS High Quality" />
+				</_A>
+				<_A v="High">
+					<Flag v="8 tap" />
+					<Flag v="12 tap" />
+					<Flag v="6 tap" />
+					<Flag v="PCSS Low Quality" />
+					<Flag v="PCSS Medium Quality" />
+					<Flag v="PCSS High Quality" />
+				</_A>
+				<_A v="Ultra">
+					<Flag v="8 tap" />
+					<Flag v="12 tap" />
+					<Flag v="6 tap" />
+					<Flag v="PCSS Low Quality" />
+					<Flag v="PCSS Medium Quality" />
+					<Flag v="PCSS High Quality" />
+				</_A>
+				<_3B v="" />
+			</_38>
+			<_A v="First Person Floating Shadow Mode">
+				<Flag v="No Shadow" />
+				<Flag v="Apply Everywhere" />
+			</_A>
+			<_34 v="generated_pad30c7" length="1" />
+			<_14 v="cascade overlap" />
+			<_14 v="min shadow caster pixel radius" />
+			<_19 v="Rotating Sun Axis" />
+			<_37 v="PCSS Settings" />
+			<_14 v="PCSS Light Size" />
+			<_14 v="PCSS Maximum Filter Width" />
+			<_37 v="" />
+			<_2 v="Rotating Sun Device Machine Driver Name" />
+			<_39 v="Dynamic Cascades" />
+			<_6 v="Number of Parallax Sampling Steps" />
+			<_14 v="Sun Direction Parallax Sampling Weight" />
+			<_14 v="First-Person Additional Depth Bias" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_38 v="Indirect irradiance probe settings">
+		<_A v="Auto-load neighboring BSPs">
+			<Flag v="Disabled" />
+			<Flag v="Enabled" />
+		</_A>
+		<_34 v="generated_pad8dc5" length="3" />
+		<_40 v="Additional BSPs to load for baking">
+			<_41 v="BSP reference" />
+			<_3B v="" />
+		</_40>
+		<_40 v="TOD Settings">
+			<_2 v="DWS event list to apply for baking" />
+			<_2 v="DWS state to apply for baking" />
+			<_A v="Lights on during bake">
+				<Flag v="Disabled" />
+				<Flag v="Enabled" />
+			</_A>
+			<_A v="Emissive material on during bake">
+				<Flag v="Disabled" />
+				<Flag v="Enabled" />
+			</_A>
+			<_34 v="generated_pad89a2" length="2" />
+			<_3B v="" />
+		</_40>
+		<_6 v="Number of bounces" />
+		<_14 v="Sky amplification factor" />
+		<_14 v="Bounce light amplification factor" />
+		<_14 v="Probe XY spacing factor" />
+		<_14 v="Probe Z spacing factor" />
+		<_A v="Deferred reflections during bake">
+			<Flag v="Disabled" />
+			<Flag v="Enabled" />
+		</_A>
+		<_34 v="generated_pad73e4" length="3" />
+		<_14 v="LOD scale during bake" />
+		<_6 v="Maximum texture size during bake" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

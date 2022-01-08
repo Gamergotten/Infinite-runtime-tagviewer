@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="IMPORTANT TAG NOTES" />
+	<_40 v="sound references">
+		<_2 v="name" />
+		<_40 v="sounds">
+			<_41 v="sound" />
+			<_E v="flags">
+				<Flag v="allow on player" />
+				<Flag v="left arm only" />
+				<Flag v="right arm only" />
+				<Flag v="first-person only" />
+				<Flag v="third-person only" />
+				<Flag v="forward only" />
+				<Flag v="reverse only" />
+				<Flag v="fp no aged weapons" />
+			</_E>
+			<_34 v="generated_padeb82" length="2" />
+			<_41 v="model" />
+			<_2 v="model variant" />
+			<_41 v="weapon" />
+			<_2 v="weapon variant" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="dialogue references">
+		<_2 v="vocalization name" />
+		<_A v="play restriction">
+			<Flag v="Unrestricted" />
+			<Flag v="Only With Shield" />
+			<Flag v="Only With Shield Empty" />
+		</_A>
+		<_34 v="generated_padf213" length="3" />
+		<_3B v="" />
+	</_40>
+	<_40 v="effect references">
+		<_2 v="name" />
+		<_40 v="effects">
+			<_41 v="effect" />
+			<_E v="flags">
+				<Flag v="allow on player" />
+				<Flag v="left arm only" />
+				<Flag v="right arm only" />
+				<Flag v="first-person only" />
+				<Flag v="third-person only" />
+				<Flag v="forward only" />
+				<Flag v="reverse only" />
+				<Flag v="fp no aged weapons" />
+			</_E>
+			<_34 v="generated_pad9456" length="2" />
+			<_41 v="model" />
+			<_2 v="model variant" />
+			<_41 v="weapon" />
+			<_2 v="weapon variant" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="frame events">
+		<_2 v="animation name" />
+		<_6 v="animation frame count" />
+		<_40 v="animation events">
+			<_2 v="event name" />
+			<_2 v="animation name" />
+			<_5 v="frame" />
+			<_5 v="frame offset" />
+			<_B v="type">
+				<Flag v="none" />
+				<Flag v="primary_keyframe" />
+				<Flag v="secondary_keyframe" />
+				<Flag v="tertiary_keyframe" />
+				<Flag v="left_foot" />
+				<Flag v="right_foot" />
+				<Flag v="allow_interruption" />
+				<Flag v="do_not_allow_interruption" />
+				<Flag v="both_feet_shuffle" />
+				<Flag v="body_impact" />
+				<Flag v="left_foot_lock" />
+				<Flag v="left_foot_unlock" />
+				<Flag v="right_foot_lock" />
+				<Flag v="right_foot_unlock" />
+				<Flag v="blend_range_marker" />
+				<Flag v="stride_expansion" />
+				<Flag v="stride_contraction" />
+				<Flag v="ragdoll_keyframe" />
+				<Flag v="drop_weapon_keyframe" />
+				<Flag v="match_a" />
+				<Flag v="match_b" />
+				<Flag v="match_c" />
+				<Flag v="match_d" />
+				<Flag v="jetpack_closed" />
+				<Flag v="jetpack_open" />
+				<Flag v="sound_event" />
+				<Flag v="effect_event" />
+				<Flag v="left_hand" />
+				<Flag v="right_hand" />
+				<Flag v="grenade" />
+				<Flag v="melee" />
+				<Flag v="interact_device" />
+				<Flag v="shield_raise" />
+				<Flag v="activate_equipment" />
+				<Flag v="aoe_attack" />
+				<Flag v="equipment" />
+				<Flag v="jink_fire" />
+				<Flag v="align_to_target" />
+				<Flag v="block_exiting" />
+				<Flag v="set_interruptable" />
+				<Flag v="disable_shooting" />
+				<Flag v="re_enable_shooting" />
+				<Flag v="skip_crouch_transition" />
+				<Flag v="start_bamf" />
+				<Flag v="end_bamf" />
+				<Flag v="hide" />
+				<Flag v="frame_attachment_objects_show" />
+				<Flag v="frame_attachment_objects_hide" />
+				<Flag v="creature_physics_mode_change" />
+				<Flag v="melee_range" />
+				<Flag v="frame_attachment_switch_to_secondary_parent_marker" />
+				<Flag v="frame_attachment_switch_to_default_parent_marker" />
+				<Flag v="allow_sprint_interrupt" />
+			</_B>
+			<_34 v="generated_pade518" length="2" />
+			<_6 v="unique ID" />
+			<_3B v="" />
+		</_40>
+		<_40 v="sound events">
+			<_2E v="frame event" />
+			<_2E v="sound" />
+			<_5 v="frame offset" />
+			<_34 v="generated_pad72c6" length="2" />
+			<_37 v="" />
+			<_2 v="marker name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="effect events">
+			<_2E v="frame event" />
+			<_2E v="effect" />
+			<_5 v="frame offset" />
+			<_34 v="generated_pad3d06" length="2" />
+			<_37 v="" />
+			<_2 v="marker name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="dialogue events">
+			<_2E v="frame event" />
+			<_2E v="dialogue reference" />
+			<_5 v="frame offset" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_41 v="Audio Frame Events Tag" />
+	<_41 v="Effect Frame Events Tag" />
+	<_3B v="" />
+</root>

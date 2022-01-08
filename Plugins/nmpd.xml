@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="Modifications">
+		<_41 v="Curve Definition" />
+		<_40 v="Malleable Properties">
+			<_2 v="Property Name" />
+			<_A v="Type">
+				<Flag v="Boolean" />
+				<Flag v="Decimal" />
+				<Flag v="Integer" />
+			</_A>
+			<_34 v="generated_pad67ba" length="3" />
+			<_2 v="Activate Curve Name" />
+			<_2 v="Deactivate Curve Name" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

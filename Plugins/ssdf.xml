@@ -1,0 +1,1064 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_14 v="Minimum spawn time" />
+	<_36 v="Unseen spawning settings" />
+	<_14 v="Hostile visibility cone length" />
+	<_14 v="Friendly visibility cone length" />
+	<_14 v="Visibility cone angle" />
+	<_14 v="Spawn point can see hostile cone length" />
+	<_14 v="Spawn point can see friendly cone length" />
+	<_36 v="Spawn weight settings" />
+	<_14 v="Quantization step" />
+	<_36 v="Unit Influencers" />
+	<_40 v="Unit influencers">
+		<_D v="Flags">
+			<Flag v="Does not stack" />
+		</_D>
+		<_38 v="Unit Influencer">
+			<_D v="Filter flags">
+				<Flag v="Player controlled" />
+				<Flag v="Not player controlled" />
+				<Flag v="In combat" />
+				<Flag v="Not in combat" />
+				<Flag v="AI controlled" />
+			</_D>
+			<_D v="Allowed dispositions">
+				<Flag v="Ally" />
+				<Flag v="Enemy" />
+				<Flag v="Neutral" />
+			</_D>
+			<_40 v="Influencer">
+				<_40 v="Sphere">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Radius" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="Box">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Width" />
+					<_14 v="Length" />
+					<_14 v="Height" />
+					<_14 v="Weight" />
+					<_3B v="" />
+				</_40>
+				<_40 v="Cylinder">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Radius" />
+					<_14 v="Height" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="Cone">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Length" />
+					<_14 v="Base radius" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Movement influencer">
+				<_14 v="Lead time" />
+				<_40 v="Cone">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Length" />
+					<_14 v="Base radius" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="Pill">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Length" />
+					<_14 v="Radius" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_36 v="Dead Unit Influencers" />
+	<_14 v="Active duration" />
+	<_40 v="Dead unit influencers">
+		<_38 v="Unit Influencer">
+			<_D v="Filter flags">
+				<Flag v="Player controlled" />
+				<Flag v="Not player controlled" />
+				<Flag v="In combat" />
+				<Flag v="Not in combat" />
+				<Flag v="AI controlled" />
+			</_D>
+			<_D v="Allowed dispositions">
+				<Flag v="Ally" />
+				<Flag v="Enemy" />
+				<Flag v="Neutral" />
+			</_D>
+			<_40 v="Influencer">
+				<_40 v="Sphere">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Radius" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="Box">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Width" />
+					<_14 v="Length" />
+					<_14 v="Height" />
+					<_14 v="Weight" />
+					<_3B v="" />
+				</_40>
+				<_40 v="Cylinder">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Radius" />
+					<_14 v="Height" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="Cone">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Length" />
+					<_14 v="Base radius" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Movement influencer">
+				<_14 v="Lead time" />
+				<_40 v="Cone">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Length" />
+					<_14 v="Base radius" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="Pill">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Length" />
+					<_14 v="Radius" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_36 v="Spawning Unit Influencers" />
+	<_40 v="Spawning unit influencers">
+		<_38 v="Unit Influencer">
+			<_D v="Filter flags">
+				<Flag v="Player controlled" />
+				<Flag v="Not player controlled" />
+				<Flag v="In combat" />
+				<Flag v="Not in combat" />
+				<Flag v="AI controlled" />
+			</_D>
+			<_D v="Allowed dispositions">
+				<Flag v="Ally" />
+				<Flag v="Enemy" />
+				<Flag v="Neutral" />
+			</_D>
+			<_40 v="Influencer">
+				<_40 v="Sphere">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Radius" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="Box">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Width" />
+					<_14 v="Length" />
+					<_14 v="Height" />
+					<_14 v="Weight" />
+					<_3B v="" />
+				</_40>
+				<_40 v="Cylinder">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Radius" />
+					<_14 v="Height" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="Cone">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Length" />
+					<_14 v="Base radius" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Movement influencer">
+				<_14 v="Lead time" />
+				<_40 v="Cone">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Length" />
+					<_14 v="Base radius" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="Pill">
+					<_D v="Flags">
+						<Flag v="Reject Spawn" />
+					</_D>
+					<_14 v="Length" />
+					<_14 v="Radius" />
+					<_14 v="Weight" />
+					<_40 v="Weight function">
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_36 v="Weapon Influencers" />
+	<_40 v="Weapon influencers">
+		<_41 v="Weapon" />
+		<_40 v="Unit influencer">
+			<_38 v="Unit Influencer">
+				<_D v="Filter flags">
+					<Flag v="Player controlled" />
+					<Flag v="Not player controlled" />
+					<Flag v="In combat" />
+					<Flag v="Not in combat" />
+					<Flag v="AI controlled" />
+				</_D>
+				<_D v="Allowed dispositions">
+					<Flag v="Ally" />
+					<Flag v="Enemy" />
+					<Flag v="Neutral" />
+				</_D>
+				<_40 v="Influencer">
+					<_40 v="Sphere">
+						<_D v="Flags">
+							<Flag v="Reject Spawn" />
+						</_D>
+						<_14 v="Radius" />
+						<_14 v="Weight" />
+						<_40 v="Weight function">
+							<_38 v="Function">
+								<_37 v="function" />
+								<_38 v="function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="Box">
+						<_D v="Flags">
+							<Flag v="Reject Spawn" />
+						</_D>
+						<_14 v="Width" />
+						<_14 v="Length" />
+						<_14 v="Height" />
+						<_14 v="Weight" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Cylinder">
+						<_D v="Flags">
+							<Flag v="Reject Spawn" />
+						</_D>
+						<_14 v="Radius" />
+						<_14 v="Height" />
+						<_14 v="Weight" />
+						<_40 v="Weight function">
+							<_38 v="Function">
+								<_37 v="function" />
+								<_38 v="function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="Cone">
+						<_D v="Flags">
+							<Flag v="Reject Spawn" />
+						</_D>
+						<_14 v="Length" />
+						<_14 v="Base radius" />
+						<_14 v="Weight" />
+						<_40 v="Weight function">
+							<_38 v="Function">
+								<_37 v="function" />
+								<_38 v="function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="Movement influencer">
+					<_14 v="Lead time" />
+					<_40 v="Cone">
+						<_D v="Flags">
+							<Flag v="Reject Spawn" />
+						</_D>
+						<_14 v="Length" />
+						<_14 v="Base radius" />
+						<_14 v="Weight" />
+						<_40 v="Weight function">
+							<_38 v="Function">
+								<_37 v="function" />
+								<_38 v="function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="Pill">
+						<_D v="Flags">
+							<Flag v="Reject Spawn" />
+						</_D>
+						<_14 v="Length" />
+						<_14 v="Radius" />
+						<_14 v="Weight" />
+						<_40 v="Weight function">
+							<_38 v="Function">
+								<_37 v="function" />
+								<_38 v="function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_14 v="Location unseen multiplier" />
+		<_3B v="" />
+	</_40>
+	<_36 v="Vehicle Influencers" />
+	<_40 v="Vehicle influencers">
+		<_41 v="Vehicle" />
+		<_40 v="Unit influencer">
+			<_38 v="Unit Influencer">
+				<_D v="Filter flags">
+					<Flag v="Player controlled" />
+					<Flag v="Not player controlled" />
+					<Flag v="In combat" />
+					<Flag v="Not in combat" />
+					<Flag v="AI controlled" />
+				</_D>
+				<_D v="Allowed dispositions">
+					<Flag v="Ally" />
+					<Flag v="Enemy" />
+					<Flag v="Neutral" />
+				</_D>
+				<_40 v="Influencer">
+					<_40 v="Sphere">
+						<_D v="Flags">
+							<Flag v="Reject Spawn" />
+						</_D>
+						<_14 v="Radius" />
+						<_14 v="Weight" />
+						<_40 v="Weight function">
+							<_38 v="Function">
+								<_37 v="function" />
+								<_38 v="function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="Box">
+						<_D v="Flags">
+							<Flag v="Reject Spawn" />
+						</_D>
+						<_14 v="Width" />
+						<_14 v="Length" />
+						<_14 v="Height" />
+						<_14 v="Weight" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Cylinder">
+						<_D v="Flags">
+							<Flag v="Reject Spawn" />
+						</_D>
+						<_14 v="Radius" />
+						<_14 v="Height" />
+						<_14 v="Weight" />
+						<_40 v="Weight function">
+							<_38 v="Function">
+								<_37 v="function" />
+								<_38 v="function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="Cone">
+						<_D v="Flags">
+							<Flag v="Reject Spawn" />
+						</_D>
+						<_14 v="Length" />
+						<_14 v="Base radius" />
+						<_14 v="Weight" />
+						<_40 v="Weight function">
+							<_38 v="Function">
+								<_37 v="function" />
+								<_38 v="function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="Movement influencer">
+					<_14 v="Lead time" />
+					<_40 v="Cone">
+						<_D v="Flags">
+							<Flag v="Reject Spawn" />
+						</_D>
+						<_14 v="Length" />
+						<_14 v="Base radius" />
+						<_14 v="Weight" />
+						<_40 v="Weight function">
+							<_38 v="Function">
+								<_37 v="function" />
+								<_38 v="function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="Pill">
+						<_D v="Flags">
+							<Flag v="Reject Spawn" />
+						</_D>
+						<_14 v="Length" />
+						<_14 v="Radius" />
+						<_14 v="Weight" />
+						<_40 v="Weight function">
+							<_38 v="Function">
+								<_37 v="function" />
+								<_38 v="function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_36 v="Projectile Influencers" />
+	<_40 v="Projectile influencers">
+		<_41 v="Projectile" />
+		<_40 v="Influencer">
+			<_40 v="Sphere">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Radius" />
+				<_14 v="Weight" />
+				<_40 v="Weight function">
+					<_38 v="Function">
+						<_37 v="function" />
+						<_38 v="function">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Box">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Width" />
+				<_14 v="Length" />
+				<_14 v="Height" />
+				<_14 v="Weight" />
+				<_3B v="" />
+			</_40>
+			<_40 v="Cylinder">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Radius" />
+				<_14 v="Height" />
+				<_14 v="Weight" />
+				<_40 v="Weight function">
+					<_38 v="Function">
+						<_37 v="function" />
+						<_38 v="function">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Cone">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Length" />
+				<_14 v="Base radius" />
+				<_14 v="Weight" />
+				<_40 v="Weight function">
+					<_38 v="Function">
+						<_37 v="function" />
+						<_38 v="function">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="Movement influencer">
+			<_14 v="Lead time" />
+			<_40 v="Cone">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Length" />
+				<_14 v="Base radius" />
+				<_14 v="Weight" />
+				<_40 v="Weight function">
+					<_38 v="Function">
+						<_37 v="function" />
+						<_38 v="function">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Pill">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Length" />
+				<_14 v="Radius" />
+				<_14 v="Weight" />
+				<_40 v="Weight function">
+					<_38 v="Function">
+						<_37 v="function" />
+						<_38 v="function">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_36 v="Equipment Influencers" />
+	<_40 v="Equipment influencers">
+		<_41 v="Equipment" />
+		<_40 v="Influencer">
+			<_40 v="Sphere">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Radius" />
+				<_14 v="Weight" />
+				<_40 v="Weight function">
+					<_38 v="Function">
+						<_37 v="function" />
+						<_38 v="function">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Box">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Width" />
+				<_14 v="Length" />
+				<_14 v="Height" />
+				<_14 v="Weight" />
+				<_3B v="" />
+			</_40>
+			<_40 v="Cylinder">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Radius" />
+				<_14 v="Height" />
+				<_14 v="Weight" />
+				<_40 v="Weight function">
+					<_38 v="Function">
+						<_37 v="function" />
+						<_38 v="function">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Cone">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Length" />
+				<_14 v="Base radius" />
+				<_14 v="Weight" />
+				<_40 v="Weight function">
+					<_38 v="Function">
+						<_37 v="function" />
+						<_38 v="function">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_36 v="Object Dispenser Influencers" />
+	<_40 v="Object dispenser influencers">
+		<_F v="Filter flags">
+			<Flag v="None" />
+			<Flag v="Weapon Incoming" />
+			<Flag v="Weapon Constructing" />
+			<Flag v="Weapon Ready" />
+			<Flag v="Weapon Respawning" />
+		</_F>
+		<_34 v="generated_pad3f4d" length="3" />
+		<_40 v="Influencer">
+			<_40 v="Sphere">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Radius" />
+				<_14 v="Weight" />
+				<_40 v="Weight function">
+					<_38 v="Function">
+						<_37 v="function" />
+						<_38 v="function">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Box">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Width" />
+				<_14 v="Length" />
+				<_14 v="Height" />
+				<_14 v="Weight" />
+				<_3B v="" />
+			</_40>
+			<_40 v="Cylinder">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Radius" />
+				<_14 v="Height" />
+				<_14 v="Weight" />
+				<_40 v="Weight function">
+					<_38 v="Function">
+						<_37 v="function" />
+						<_38 v="function">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Cone">
+				<_D v="Flags">
+					<Flag v="Reject Spawn" />
+				</_D>
+				<_14 v="Length" />
+				<_14 v="Base radius" />
+				<_14 v="Weight" />
+				<_40 v="Weight function">
+					<_38 v="Function">
+						<_37 v="function" />
+						<_38 v="function">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

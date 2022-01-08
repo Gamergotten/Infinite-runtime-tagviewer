@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="BSP index map">
+		<_6 v="Value" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Per BSP data">
+		<_40 v="Subregion array">
+			<_40 v="Visibility array">
+				<_3E v="Value" />
+				<_3B v="" />
+			</_40>
+			<_3D v="sx" />
+			<_3D v="sy" />
+			<_14 v="z min" />
+			<_14 v="z max" />
+			<_3B v="" />
+		</_40>
+		<_17 v="AABB min" />
+		<_17 v="AABB max" />
+		<_19 v="Block Size" />
+		<_6 v="Instance count" />
+		<_6 v="Block count X" />
+		<_6 v="Block count Y" />
+		<_6 v="BSP index" />
+		<_7 v="Instance Postprocess Checksum" />
+		<_3B v="" />
+	</_40>
+	<_43 v="resource data" />
+	<_3B v="" />
+</root>

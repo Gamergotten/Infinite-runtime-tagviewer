@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_A v="Simulation Type">
+		<Flag v="Hoist" />
+		<Flag v="Tractor Beam" />
+	</_A>
+	<_34 v="generated_padc4dc" length="3" />
+	<_36 v="Docking States" />
+	<_37 v="Docking State Timing" />
+	<_14 v="Connection Duration" />
+	<_14 v="Disconnection Duration" />
+	<_14 v="Attachment Duration" />
+	<_14 v="Detachment Duration" />
+	<_14 v="Docking Duration" />
+	<_37 v="" />
+	<_38 v="Alignment Points">
+		<_2 v="Slot Marker" />
+		<_2 v="Tab Marker" />
+		<_3B v="" />
+	</_38>
+	<_40 v="Connection Points">
+		<_2 v="Origin Marker" />
+		<_2 v="Target Marker" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Connection Effect" />
+	<_14 v="Attachment Linear Velocity Test" />
+	<_14 v="Attachment Angular Velocity Test" />
+	<_3B v="" />
+</root>

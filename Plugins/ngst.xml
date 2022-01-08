@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="name" />
+	<_C v="transform method">
+		<Flag v="Default 2D" />
+		<Flag v="Object Marker 3D" />
+		<Flag v="Primary Weapon Marker 3D" />
+		<Flag v="Primary Weapon Marker 2D" />
+		<Flag v="Inherited" />
+		<Flag v="Weapon Reticle" />
+	</_C>
+	<_C v="projection method">
+		<Flag v="Default 2D" />
+		<Flag v="Player View" />
+		<Flag v="Inherited" />
+	</_C>
+	<_C v="render mode">
+		<Flag v="2D" />
+		<Flag v="3D In World" />
+	</_C>
+	<_2 v="markerName" />
+	<_14 v="scale" />
+	<_C v="loading mode">
+		<Flag v="LoadWhenActive" />
+		<Flag v="Preload" />
+	</_C>
+	<_40 v="node graphs">
+		<_2 v="name" />
+		<_2 v="initial node" />
+		<_40 v="nodes">
+			<_2 v="name" />
+			<_2 v="Placement Node name" />
+			<_40 v="transitions">
+				<_2 v="event" />
+				<_2 v="target node" />
+				<_1 v="out animation name" />
+				<_1 v="in animation name" />
+				<_D v="flags">
+					<Flag v="Override Default" />
+				</_D>
+				<_14 v="editor from angle" />
+				<_14 v="editor to angle" />
+				<_14 v="editor bezier from x" />
+				<_14 v="editor bezier from y" />
+				<_14 v="editor bezier to x" />
+				<_14 v="editor bezier to y" />
+				<_14 v="editor caption x" />
+				<_14 v="editor caption y" />
+				<_3B v="" />
+			</_40>
+			<_C v="screen wrapper">
+				<Flag v="guess from screen tag" />
+				<Flag v="none" />
+				<Flag v="WPF" />
+				<Flag v="CUI" />
+				<Flag v="NodeGraph" />
+				<Flag v="SharedNodeGraph" />
+				<Flag v="ADSWeaponNode" />
+				<Flag v="VehicleNode" />
+				<Flag v="FUI" />
+				<Flag v="SLAMS" />
+			</_C>
+			<_41 v="screen reference" />
+			<_41 v="fui screen reference" />
+			<_2 v="uri name" />
+			<_C v="SLAMS node type">
+				<Flag v="Overlay" />
+				<Flag v="Content" />
+			</_C>
+			<_C v="loading mode">
+				<Flag v="LoadWhenActive" />
+				<Flag v="Preload" />
+			</_C>
+			<_40 v="child stacks">
+				<_41 v="child stack reference" />
+				<_3B v="" />
+			</_40>
+			<_D v="state flags">
+				<Flag v="Allow Input Fall Through" />
+				<Flag v="Matchmaking status should appear on top of this" />
+				<Flag v="Allow Input Fall Through Even When Handled" />
+				<Flag v="Fixed size screen which loads at the default canvas size, for eg. screens in world space" />
+				<Flag v="Does not suspend when the hud is suspended" />
+			</_D>
+			<_14 v="editor pos x" />
+			<_14 v="editor pos y" />
+			<_D v="editor flags">
+				<Flag v="locked" />
+			</_D>
+			<_C v="editor shape">
+				<Flag v="rectangle" />
+				<Flag v="hexagon" />
+				<Flag v="trapezoid" />
+				<Flag v="circle" />
+				<Flag v="diamond" />
+			</_C>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

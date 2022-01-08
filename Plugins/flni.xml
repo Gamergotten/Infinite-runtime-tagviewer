@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="flinch impulse">
+		<_37 v="Gun Flinch" />
+		<_38 v="gun flinch">
+			<_A v="flinch direction">
+				<Flag v="hit direction" />
+				<Flag v="inverse hit direction" />
+				<Flag v="attacker to victim" />
+				<Flag v="victim to attacker" />
+				<Flag v="absolute" />
+			</_A>
+			<_A v="flinch mapping">
+				<Flag v="top down" />
+				<Flag v="camera" />
+			</_A>
+			<_34 v="generated_pad3673" length="2" />
+			<_24 v="magnitude range" />
+			<_8 v="random rotation" />
+			<_8 v="absolute flinch angle" />
+			<_18 v="normalized screen relative absolute flinch" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="View Flinch" />
+		<_38 v="view flinch">
+			<_A v="flinch direction">
+				<Flag v="hit direction" />
+				<Flag v="inverse hit direction" />
+				<Flag v="attacker to victim" />
+				<Flag v="victim to attacker" />
+				<Flag v="absolute" />
+			</_A>
+			<_A v="flinch mapping">
+				<Flag v="top down" />
+				<Flag v="camera" />
+			</_A>
+			<_34 v="generated_pad3673" length="2" />
+			<_24 v="magnitude range" />
+			<_8 v="random rotation" />
+			<_8 v="absolute flinch angle" />
+			<_18 v="normalized screen relative absolute flinch" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

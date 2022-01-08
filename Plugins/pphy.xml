@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_D v="flags">
+		<Flag v="UNUSED" />
+		<Flag v="collides with structures" />
+		<Flag v="collides with water surface" />
+		<Flag v="uses simple wind" />
+		<Flag v="uses damped wind" />
+		<Flag v="no gravity" />
+	</_D>
+	<_14 v="runtime mass over radius cubed" />
+	<_14 v="runtime inverse density" />
+	<_6 v="IGNORE1" />
+	<_6 v="IGNORE2" />
+	<_6 v="IGNORE3" />
+	<_6 v="IGNORE4" />
+	<_6 v="IGNORE5" />
+	<_14 v="density" />
+	<_14 v="air friction" />
+	<_14 v="water friction" />
+	<_14 v="surface friction" />
+	<_14 v="elasticity" />
+	<_36 v="Densities (g/mL)" />
+	<_34 v="generated_pad1ff6" length="4" />
+	<_3B v="" />
+</root>

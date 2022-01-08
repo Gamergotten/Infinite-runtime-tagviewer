@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="campaign globals">
+		<_40 v="maps">
+			<_6 v="map id" />
+			<_2 v="map name" />
+			<_3B v="" />
+		</_40>
+		<_2 v="mission name" />
+		<_2 v="mission description" />
+		<_2 v="mission background image uri" />
+		<_2 v="mission CMS guid" />
+		<_2 v="mission team" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Influencer default spawn settings" />
+	<_41 v="Campaign Upgrades Definition" />
+	<_41 v="Collectibles" />
+	<_41 v="Valor Rewards Definition" />
+	<_41 v="Gameplay Menu UI Info" />
+	<_3B v="" />
+</root>

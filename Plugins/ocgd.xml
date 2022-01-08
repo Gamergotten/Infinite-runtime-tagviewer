@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Armor properties" />
+	<_40 v="Themes">
+		<_2 v="Asset Name" />
+		<_41 v="Model" />
+		<_41 v="Object Reference" />
+		<_40 v="Theme Configurations">
+			<_2 v="Theme Name" />
+			<_2 v="Theme Variant Name" />
+			<_41 v="Theme Configs" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Shared Armor Emblems">
+		<_40 v="Theme Ids">
+			<_2 v="id" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Markers">
+			<_2 v="Marker" />
+			<_3B v="" />
+		</_40>
+		<_40 v="BigEmblems">
+			<_2 v="Theme Id" />
+			<_2 v="Marker" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Effect Overrides">
+		<_41 v="Effect Override Definition" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Object Attachments">
+		<_41 v="Attachments" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_37 v="Weapon properties" />
+	<_40 v="Weapon Themes">
+		<_2 v="Asset Name" />
+		<_41 v="Model" />
+		<_41 v="Object Reference" />
+		<_40 v="Theme Configurations">
+			<_2 v="Theme Name" />
+			<_2 v="Theme Variant Name" />
+			<_41 v="Object Configuration" />
+			<_41 v="Theme Configs" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Shared Weapon Emblems">
+		<_40 v="Theme Ids">
+			<_2 v="id" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Markers">
+			<_2 v="Marker" />
+			<_3B v="" />
+		</_40>
+		<_40 v="BigEmblems">
+			<_2 v="Theme Id" />
+			<_2 v="Marker" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Player kill effects">
+		<_41 v="Weapon definition" />
+		<_41 v="Player kill effects" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Shared Weapon Charms">
+		<_41 v="Charm" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_37 v="Vehicle properties" />
+	<_40 v="Vehicle Themes">
+		<_2 v="Asset Name" />
+		<_41 v="Model" />
+		<_41 v="Object Reference" />
+		<_40 v="Theme Configurations">
+			<_2 v="Theme Name" />
+			<_2 v="Theme Variant Name" />
+			<_41 v="Object Configuration" />
+			<_41 v="Theme Configs" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Shared Vehicle Emblems">
+		<_40 v="Theme Ids">
+			<_2 v="id" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Markers">
+			<_2 v="Marker" />
+			<_3B v="" />
+		</_40>
+		<_40 v="BigEmblems">
+			<_2 v="Theme Id" />
+			<_2 v="Marker" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Shared Vehicle Charms">
+		<_41 v="Charm" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_37 v="Spartan properties" />
+	<_40 v="Stances">
+		<_2 v="Animation" />
+		<_41 v="Weapon Reference" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Action poses">
+		<_2 v="Animation" />
+		<_41 v="Weapon Reference" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_37 v="Ai properties" />
+	<_41 v="Ai Object Reference" />
+	<_41 v="Ai Device Reference" />
+	<_37 v="" />
+	<_37 v="Other properties" />
+	<_40 v="XpBoosts">
+		<_41 v="Object Reference" />
+		<_3B v="" />
+	</_40>
+	<_40 v="XpGrants">
+		<_41 v="Object Reference" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Rerolls">
+		<_41 v="Object Reference" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

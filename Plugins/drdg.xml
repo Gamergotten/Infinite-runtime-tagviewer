@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="Damage Reporting Display Map" />
+	<_40 v="damageDisplayMap">
+		<_37 v="Damage Source" />
+		<_36 v="Explanation" />
+		<_38 v="damageSource">
+			<_36 v="NOTE" />
+			<_2 v="Damage Source Name" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_40 v="displayByAttachmentList">
+			<_37 v="Attachment List" />
+			<_36 v="Explanation" />
+			<_40 v="attachmentList">
+				<_37 v="Attachment Name" />
+				<_36 v="Explanation" />
+				<_38 v="attachmentName">
+					<_36 v="NOTE" />
+					<_2 v="Attachment Name" />
+					<_3B v="" />
+				</_38>
+				<_37 v="" />
+				<_3B v="" />
+			</_40>
+			<_37 v="" />
+			<_40 v="displayByDamageType">
+				<_37 v="Damage Type" />
+				<_36 v="Explanation" />
+				<_38 v="damageType">
+					<_36 v="NOTE" />
+					<_2 v="Damage Type Name" />
+					<_3B v="" />
+				</_38>
+				<_37 v="" />
+				<_38 v="displayDefinition">
+					<_2 v="display name" />
+					<_41 v="sprite sheet" />
+					<_6 v="sprite index" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padfae4" length="4" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="WIND DIRECTION" />
+	<_18 v="wind_direction_radian" />
+	<_38 v="speed">
+		<_37 v="Mapping" />
+		<_38 v="Mapping">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="DECORATOR WIND MOTION" />
+	<_38 v="bend">
+		<_37 v="Mapping" />
+		<_38 v="Mapping">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="oscillation">
+		<_37 v="Mapping" />
+		<_38 v="Mapping">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_14 v="gust size" />
+	<_41 v="gust noise bitmap" />
+	<_14 v="cloud influence" />
+	<_14 v="fog influence" />
+	<_14 v="materials speed influence" />
+	<_38 v="materials gust breakup">
+		<_37 v="Mapping" />
+		<_38 v="Mapping">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="materials gust strength">
+		<_37 v="Mapping" />
+		<_38 v="Mapping">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="materials world uv max x">
+		<_37 v="Mapping" />
+		<_38 v="Mapping">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="materials world uv max y">
+		<_37 v="Mapping" />
+		<_38 v="Mapping">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="materials world uv max z">
+		<_37 v="Mapping" />
+		<_38 v="Mapping">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_34 v="generated_padb4ac" length="4" />
+	<_3B v="" />
+</root>

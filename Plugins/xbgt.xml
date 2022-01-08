@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="Source Graph" />
+	<_C v="Blend Type">
+		<Flag v="Blend1d" />
+		<Flag v="Blend2d" />
+		<Flag v="RadialBlend" />
+		<Flag v="AimScreen" />
+		<Flag v="RadialLocomotion" />
+	</_C>
+	<_40 v="Animation Tokens">
+		<_2 v="Animation Name" />
+		<_C v="Mode">
+			<Flag v="Frame" />
+			<Flag v="Seconds" />
+			<Flag v="Frame Ratio" />
+		</_C>
+		<_2 v="Group Name" />
+		<_14 v="Playback Rate" />
+		<_E v="Animation Token Flags">
+			<Flag v="Looping" />
+			<Flag v="Play Loops From Start" />
+			<Flag v="Auto Detect Speed" />
+			<Flag v="Auto Detect Angle" />
+			<Flag v="Root Motion" />
+		</_E>
+		<_34 v="generated_pad8928" length="2" />
+		<_14 v="Alpha" />
+		<_14 v="Beta" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Subgraph Nodes">
+		<_2 v="Coordinate Source Token" />
+		<_14 v="Alpha" />
+		<_14 v="Beta" />
+		<_38 v="Subgraph Reference">
+			<_41 v="Anim Subgraph" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_14 v="Alpha Min" />
+	<_14 v="Alpha Max" />
+	<_14 v="Beta Min" />
+	<_14 v="Beta Max" />
+	<_6 v="Partition Count" />
+	<_34 v="generated_pad9fc6" length="4" />
+	<_3B v="" />
+</root>

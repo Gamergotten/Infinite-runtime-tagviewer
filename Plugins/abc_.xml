@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="ptr">
+		<_7 v="Archive read pointer" />
+		<_1 v="Name" />
+		<_3B v="" />
+	</_38>
+	<_44 v="dccSourcePath" />
+	<_41 v="asset" />
+	<_1 v="DCC instance name" />
+	<_14 v="DCC start frame" />
+	<_6 v="frame count" />
+	<_14 v="frames per second" />
+	<_40 v="statistics">
+		<_2 v="Name" />
+		<_2 v="Value" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad18e1" length="4" />
+	<_3B v="" />
+</root>

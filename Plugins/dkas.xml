@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_D v="AssetSpecFlags">
+		<Flag v="CanEquipWeapon" />
+		<Flag v="InheritTransforms" />
+		<Flag v="OverrideTransforms" />
+	</_D>
+	<_41 v="Object" />
+	<_2 v="Variant" />
+	<_2 v="External Name" />
+	<_41 v="Configuration" />
+	<_41 v="Equipped Weapon" />
+	<_14 v="Weapon Scale" />
+	<_41 v="Inherit Transforms" />
+	<_19 v="Position" />
+	<_19 v="Rotation" />
+	<_14 v="Scale" />
+	<_34 v="generated_pad7450" length="4" />
+	<_3B v="" />
+</root>

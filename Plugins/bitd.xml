@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="entries">
+		<_2 v="identifier" />
+		<_41 v="bitmap" />
+		<_5 v="bitmap index" />
+		<_34 v="generated_pade5bc" length="2" />
+		<_3B v="" />
+	</_40>
+	<_40 v="multi actions">
+		<_36 v="Multi actions" />
+		<_2 v="identifier" />
+		<_2 v="action 1" />
+		<_2 v="action 2" />
+		<_2 v="action 3" />
+		<_2 v="action 4" />
+		<_36 v="Invalid multi action flags" />
+		<_E v="Invalidation flags">
+			<Flag v="Controller" />
+			<Flag v="Keyboard/Mouse" />
+			<Flag v="TextChat/PushToTalk on Enter" />
+		</_E>
+		<_34 v="generated_pad2033" length="2" />
+		<_3B v="" />
+	</_40>
+	<_40 v="combined bitmaps">
+		<_36 v="Combined bitmaps" />
+		<_2 v="bitmap 1" />
+		<_2 v="bitmap 2" />
+		<_2 v="bitmap 3" />
+		<_2 v="bitmap 4" />
+		<_2 v="combined" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad39d8" length="4" />
+	<_3B v="" />
+</root>

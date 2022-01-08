@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="import" />
+	<_1 v="font name" />
+	<_C v="render mode">
+		<Flag v="Bitmap" />
+		<Flag v="Vector" />
+	</_C>
+	<_36 v="Vector Font Antialiasing Tweakables" />
+	<_39 v="anti alias data" />
+	<_43 v="font file resource" />
+	<_34 v="generated_padbe8d" length="4" />
+	<_3B v="" />
+</root>

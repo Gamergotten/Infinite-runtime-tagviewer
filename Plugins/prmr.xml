@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="material response">
+		<_36 v="matching criteria" />
+		<_2 v="material name" />
+		<_5 v="runtime material index" />
+		<_E v="response flags">
+			<Flag v="only against units (except giants)" />
+			<Flag v="never against units (except giants)" />
+			<Flag v="only against bipeds" />
+			<Flag v="only against vehicles" />
+			<Flag v="never against wuss players" />
+			<Flag v="only when tethered" />
+			<Flag v="only when not tethered" />
+			<Flag v="only against dead bipeds" />
+			<Flag v="never against dead bipeds" />
+			<Flag v="only AI projectiles" />
+			<Flag v="never AI projectiles" />
+			<Flag v="only friendly targets" />
+			<Flag v="never friendly targets" />
+		</_E>
+		<_15 v="chance fraction" />
+		<_24 v="between" />
+		<_25 v="and" />
+		<_36 v="response" />
+		<_B v="response">
+			<Flag v="impact (detonate)" />
+			<Flag v="fizzle" />
+			<Flag v="overpenetrate" />
+			<Flag v="attach" />
+			<Flag v="bounce" />
+			<Flag v="bounce (dud)" />
+			<Flag v="fizzle (ricochet)" />
+			<Flag v="turn physical" />
+			<Flag v="charge self" />
+		</_B>
+		<_36 v="misc" />
+		<_B v="scale effects by">
+			<Flag v="damage" />
+			<Flag v="angle" />
+		</_B>
+		<_8 v="angular noise" />
+		<_14 v="velocity noise" />
+		<_36 v="overpenetration" />
+		<_14 v="initial friction" />
+		<_36 v="reflection" />
+		<_14 v="parallel friction" />
+		<_14 v="perpendicular friction" />
+		<_36 v="flags" />
+		<_F v="misc flags">
+			<Flag v="orient along normal at rest" />
+		</_F>
+		<_34 v="generated_pad3f48" length="3" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padf741" length="4" />
+	<_3B v="" />
+</root>

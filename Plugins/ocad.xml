@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Model Attachments">
+		<_41 v="Attachment Model" />
+		<_2 v="Variant" />
+		<_40 v="Markers">
+			<_2 v="Marker Name" />
+			<_19 v="Translation" />
+			<_19 v="Rotation" />
+			<_19 v="Scale" />
+			<_3B v="" />
+		</_40>
+		<_B v="CMS Customization Item Type">
+			<Flag v="None" />
+			<Flag v="ChestAttachment" />
+			<Flag v="HelmetAttachment" />
+			<Flag v="HipAttachment" />
+			<Flag v="WristAttachment" />
+			<Flag v="WeaponCharm" />
+			<Flag v="VehicleCharm" />
+		</_B>
+		<_B v="Attachment Location">
+			<Flag v="Unknown" />
+			<Flag v="Left" />
+			<Flag v="Right" />
+			<Flag v="Front" />
+			<Flag v="Back" />
+			<Flag v="Top" />
+			<Flag v="Bottom" />
+		</_B>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad5112" length="4" />
+	<_3B v="" />
+</root>

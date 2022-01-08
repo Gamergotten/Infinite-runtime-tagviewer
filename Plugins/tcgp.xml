@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_F v="flags">
+		<Flag v="enabled" />
+		<Flag v="protect naked boundaries" />
+		<Flag v="protect material boundaries" />
+	</_F>
+	<_34 v="generated_pad7b4e" length="3" />
+	<_14 v="max distance" />
+	<_14 v="max shrink" />
+	<_34 v="generated_padc803" length="4" />
+	<_3B v="" />
+</root>

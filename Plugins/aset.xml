@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Regions" />
+	<_40 v="Visual region names">
+		<_2 v="Name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Property regions">
+		<_2 v="Name" />
+		<_D v="Flags">
+			<Flag v="Casts shadow" />
+			<Flag v="Blocks AOE" />
+			<Flag v="Use uncompressed vertex format" />
+			<Flag v="Don't use virtual texturing" />
+			<Flag v="Virtual texturing UV shell skirt" />
+		</_D>
+		<_C v="Static geometry merge mode">
+			<Flag v="Merge on visual regions" />
+			<Flag v="Split on visual regions" />
+			<Flag v="Split on visual regions, and re-center pivots" />
+		</_C>
+		<_C v="Number of sides">
+			<Flag v="single-sided" />
+			<Flag v="double-sided" />
+			<Flag v="double-sided (keep normals)" />
+			<Flag v="double-sided (mirror normals)" />
+		</_C>
+		<_A v="Lightmapping policy">
+			<Flag v="automatic" />
+			<Flag v="per-pixel" />
+			<Flag v="per-vertex" />
+			<Flag v="single-probe" />
+			<Flag v="exclude" />
+			<Flag v="per-pixel ao" />
+			<Flag v="per-vertex ao" />
+			<Flag v="probe grid" />
+		</_A>
+		<_34 v="generated_pad5489" length="3" />
+		<_19 v="Probe-grid capture offset" />
+		<_2 v="Physics material name" />
+		<_2 v="Damage section" />
+		<_37 v="Blendshapes" />
+		<_C v="Tension backing data">
+			<Flag v="Don't Generate backing data" />
+			<Flag v="Generate backing data for the first LODs" />
+			<Flag v="Generate backing data for the first 2 LODs" />
+			<Flag v="Generate backing data for the first 3 LODs" />
+			<Flag v="Generate backing data for the first 4 LODs" />
+			<Flag v="Generate backing data for the first 5 LODs" />
+			<Flag v="Generate backing data for the first 6 LODs" />
+			<Flag v="Generate backing data for the first 7 LODs" />
+			<Flag v="Generate backing data for the first 8 LODs" />
+			<Flag v="Generate backing data for all LODs" />
+		</_C>
+		<_14 v="Prune threshold" />
+		<_C v="Recomputed Normal Blend Mode">
+			<Flag v="Whole mesh" />
+			<Flag v="Vertex color mask" />
+		</_C>
+		<_37 v="" />
+		<_37 v="Emblem Data" />
+		<_6 v="Emblem Layer Depth" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_37 v="Component Tags/Files" />
+	<_40 v="Geometry tags">
+		<_2 v="Name" />
+		<_2 v="GroupName" />
+		<_41 v="Reference" />
+		<_40 v="Relative source paths">
+			<_44 v="Path" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Damage States">
+			<_C v="State">
+				<Flag v="minor" />
+				<Flag v="medium" />
+				<Flag v="major" />
+				<Flag v="destroyed" />
+			</_C>
+			<_2 v="Geometry name" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Skeleton">
+		<_41 v="Reference" />
+		<_44 v="Alembic source path" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Additional content paths">
+		<_2 v="Name" />
+		<_44 v="Path" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Marker tags">
+		<_2 v="Name" />
+		<_2 v="GroupName" />
+		<_41 v="Reference" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Asset physics tag" />
+	<_41 v="Damage tag" />
+	<_41 v="Legacy animset tag" />
+	<_41 v="Asset sound tag" />
+	<_41 v="Asset dialogue tag" />
+	<_37 v="" />
+	<_2 v="Asset category" />
+	<_37 v="LODs" />
+	<_37 v="Automatically Generated LOD Settings" />
+	<_41 v="LOD settings tag" />
+	<_2 v="LOD settings name" />
+	<_14 v="LOD distance bias" />
+	<_37 v="" />
+	<_40 v="LOD transition distances">
+		<_14 v="Transition distance" />
+		<_3B v="" />
+	</_40>
+	<_14 v="LOD fade out after distance" />
+	<_A v="HLOD policy">
+		<Flag v="include in HLODs normally, exclude from level distant geo" />
+		<Flag v="switch with HLODs but do not include geo in HLOD, exclude from level distant geo" />
+		<Flag v="exclude from HLODs, include in level distant geo normally" />
+		<Flag v="exclude from HLODs, force include in level distant geo always" />
+	</_A>
+	<_34 v="generated_padebca" length="3" />
+	<_37 v="Streaming Settings" />
+	<_6 v="Number of LODS to make required" />
+	<_A v="Default Load Variant Policy">
+		<Flag v="All Variants" />
+		<Flag v="First Variant" />
+	</_A>
+	<_34 v="generated_pad387f" length="3" />
+	<_37 v="" />
+	<_6 v="LOD index override for damage draw" />
+	<_37 v="" />
+	<_37 v="Variants" />
+	<_2 v="Default variant name" />
+	<_40 v="Asset variants">
+		<_2 v="Name" />
+		<_2 v="Style" />
+		<_6 v="Damage Style Index" />
+		<_2 v="All visual region" />
+		<_40 v="Visual region overrides">
+			<_2 v="Region name" />
+			<_2 v="Geometry name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Material overrides">
+			<_41 v="Original material ref" />
+			<_41 v="Override material ref" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Child objects">
+			<_2 v="Parent marker" />
+			<_2 v="Child marker" />
+			<_2 v="Child variant name" />
+			<_41 v="Child object" />
+			<_41 v="Child configuration" />
+			<_2 v="Damage section" />
+			<_F v="Flags">
+				<Flag v="enable physics" />
+				<Flag v="share bones with parent" />
+			</_F>
+			<_34 v="generated_padb3ad" length="3" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Muted joints">
+			<_2 v="Joint name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Object Node Graphs Overrides">
+			<_2 v="Name" />
+			<_41 v="Exported Node Graph" />
+			<_F v="Flags">
+				<Flag v="Runs on Server" />
+				<Flag v="Runs on Client" />
+				<Flag v="Start updating on the first frame" />
+			</_F>
+			<_A v="Enable Node Graph">
+				<Flag v="Default" />
+				<Flag v="Yes" />
+				<Flag v="No" />
+			</_A>
+			<_34 v="generated_pad8671" length="2" />
+			<_3B v="" />
+		</_40>
+		<_41 v="Reference to material palette tag" />
+		<_41 v="Reference to generated vector art" />
+		<_41 v="Reference round trip ABC tag from a render model" />
+		<_41 v="Reference round trip ABC tag from a runtimegeo" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Unique geometry">
+		<_3F v="UUID" />
+		<_40 v="Explicit visual region list">
+			<_2 v="Region name" />
+			<_2 v="Geometry name" />
+			<_3B v="" />
+		</_40>
+		<_41 v="Reference to generated prefab" />
+		<_41 v="Reference to raw triangle data" />
+		<_41 v="Reference to generated static collision geometry" />
+		<_41 v="Reference to generated lightweight fixed-depth quadtree" />
+		<_34 v="generated_pada40c" length="4" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_37 v="Static Collision Generation Settings" />
+	<_A v="Static collision build policy">
+		<Flag v="Auto" />
+		<Flag v="Maximum precision" />
+	</_A>
+	<_A v="Static collision decals policy">
+		<Flag v="Allow decals" />
+		<Flag v="Do not allow decals" />
+	</_A>
+	<_34 v="generated_pad8534" length="2" />
+	<_37 v="" />
+	<_37 v="Static Render Generation Settings" />
+	<_C v="Convert Collision to Shadow Geometry">
+		<Flag v="auto" />
+		<Flag v="enabled" />
+		<Flag v="disabled" />
+	</_C>
+	<_E v="Converted Bullet Collision LOD flags">
+		<Flag v="LOD 0" />
+		<Flag v="LOD 1" />
+		<Flag v="LOD 2" />
+		<Flag v="LOD 3" />
+		<Flag v="LOD 4" />
+		<Flag v="LOD 5" />
+		<Flag v="LOD 6" />
+		<Flag v="LOD 7" />
+		<Flag v="LOD 8" />
+		<Flag v="LOD 9" />
+		<Flag v="LOD 10" />
+		<Flag v="LOD 11" />
+		<Flag v="LOD 12" />
+		<Flag v="LOD 13" />
+		<Flag v="LOD 14" />
+		<Flag v="LOD 15" />
+	</_E>
+	<_E v="Converted Play Collision LOD flags">
+		<Flag v="LOD 0" />
+		<Flag v="LOD 1" />
+		<Flag v="LOD 2" />
+		<Flag v="LOD 3" />
+		<Flag v="LOD 4" />
+		<Flag v="LOD 5" />
+		<Flag v="LOD 6" />
+		<Flag v="LOD 7" />
+		<Flag v="LOD 8" />
+		<Flag v="LOD 9" />
+		<Flag v="LOD 10" />
+		<Flag v="LOD 11" />
+		<Flag v="LOD 12" />
+		<Flag v="LOD 13" />
+		<Flag v="LOD 14" />
+		<Flag v="LOD 15" />
+	</_E>
+	<_37 v="" />
+	<_37 v="Model Generation Settings" />
+	<_C v="Generate Customization Damage Variant">
+		<Flag v="auto" />
+		<Flag v="enabled" />
+		<Flag v="disabled" />
+	</_C>
+	<_37 v="" />
+	<_37 v="Generated Tags" />
+	<_41 v="Model tag" />
+	<_41 v="Render model tag" />
+	<_41 v="Physics model tag" />
+	<_41 v="Collision model tag" />
+	<_41 v="Legacy model animation graph tag" />
+	<_37 v="Impostor" />
+	<_41 v="Impostor tag" />
+	<_37 v="" />
+	<_37 v="Validation" />
+	<_38 v="Validation">
+		<_36 v="Content validation tests" />
+		<_D v="Validation status">
+			<Flag v="Performance (performance will be effected)" />
+			<Flag v="Functionality (functionality will be impaired)" />
+			<Flag v="Critical (will cause crashes or instability if processed)" />
+			<Flag v="Not Run (this test has not been run as of the last pass)" />
+		</_D>
+		<_40 v="Validation test batteries">
+			<_1 v="Group name" />
+			<_6 v="Group ID" />
+			<_D v="Validation status">
+				<Flag v="Performance (performance will be effected)" />
+				<Flag v="Functionality (functionality will be impaired)" />
+				<Flag v="Critical (will cause crashes or instability if processed)" />
+				<Flag v="Not Run (this test has not been run as of the last pass)" />
+			</_D>
+			<_40 v="Validation Tests">
+				<_1 v="Test name" />
+				<_D v="Test status">
+					<Flag v="Performance (performance will be effected)" />
+					<Flag v="Functionality (functionality will be impaired)" />
+					<Flag v="Critical (will cause crashes or instability if processed)" />
+					<Flag v="Not Run (this test has not been run as of the last pass)" />
+				</_D>
+				<_40 v="Comments">
+					<_1 v="Comment" />
+					<_D v="Status">
+						<Flag v="Performance (performance will be effected)" />
+						<Flag v="Functionality (functionality will be impaired)" />
+						<Flag v="Critical (will cause crashes or instability if processed)" />
+						<Flag v="Not Run (this test has not been run as of the last pass)" />
+					</_D>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_3B v="" />
+</root>

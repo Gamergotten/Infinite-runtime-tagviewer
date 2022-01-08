@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Assets">
+		<_41 v="Asset" />
+		<_3B v="" />
+	</_40>
+	<_A v="queryMode">
+		<Flag v="Enabled" />
+		<Flag v="Disabled" />
+	</_A>
+	<_34 v="generated_padd9ee" length="3" />
+	<_40 v="Keyword queries">
+		<_2 v="Query" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad26a3" length="4" />
+	<_3B v="" />
+</root>

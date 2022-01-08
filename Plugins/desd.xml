@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_14 v="dealt cooldown" />
+	<_14 v="received cooldown" />
+	<_37 v="Player Dealt Damage" />
+	<_41 v="dealt normal hit" />
+	<_41 v="dealt weakpoint hit" />
+	<_41 v="dealt stuck" />
+	<_41 v="dealt ineffective hit" />
+	<_41 v="dealt vehicle hit" />
+	<_41 v="dealt vehicle weakpoint hit" />
+	<_41 v="dealt vehicle stuck" />
+	<_41 v="dealt friendly hit" />
+	<_41 v="dealt lethal hit" />
+	<_41 v="dealt lethal weakpoint hit" />
+	<_41 v="dealt aoe hit" />
+	<_41 v="dealt aoe vehicle hit" />
+	<_41 v="dealt vehicle passenger hit" />
+	<_41 v="dealt shield break" />
+	<_41 v="model hit" />
+	<_41 v="dealt lethal minor" />
+	<_41 v="dealt boss hit" />
+	<_37 v="" />
+	<_37 v="Player Received Damage" />
+	<_41 v="received normal hit" />
+	<_41 v="received weakpoint hit" />
+	<_41 v="received stuck" />
+	<_41 v="received ineffective hit" />
+	<_41 v="received vehicle hit" />
+	<_41 v="received vehicle weakpoint hit" />
+	<_41 v="received vehicle stuck" />
+	<_41 v="received friendly hit" />
+	<_41 v="received lethal hit" />
+	<_41 v="received lethal weakpoint hit" />
+	<_41 v="received aoe hit" />
+	<_41 v="received aoe vehicle hit" />
+	<_37 v="" />
+	<_34 v="generated_pad82f1" length="4" />
+	<_3B v="" />
+</root>

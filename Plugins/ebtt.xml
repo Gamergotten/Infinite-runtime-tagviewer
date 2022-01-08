@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="Source Graph" />
+	<_40 v="Links">
+		<_38 v="Source Node Identifier">
+			<_A v="Type">
+				<Flag v="Root" />
+				<Flag v="Input" />
+				<Flag v="FollowPlayerOrder" />
+				<Flag v="Selector" />
+				<Flag v="Sequence" />
+				<Flag v="Bool Condition" />
+				<Flag v="Priority Sorter" />
+				<Flag v="Assignment Limit" />
+				<Flag v="Body Count" />
+				<Flag v="Combat Status Filter" />
+				<Flag v="Keyword Filter" />
+				<Flag v="Living Count" />
+				<Flag v="Vehicle Filter" />
+				<Flag v="Script Trigger" />
+				<Flag v="Player Trigger Volume" />
+				<Flag v="Min Relevance" />
+			</_A>
+			<_34 v="generated_padc09a" length="3" />
+			<_6 v="Block Index" />
+			<_3B v="" />
+		</_38>
+		<_38 v="Destination Node Identifier">
+			<_A v="Type">
+				<Flag v="Root" />
+				<Flag v="Input" />
+				<Flag v="FollowPlayerOrder" />
+				<Flag v="Selector" />
+				<Flag v="Sequence" />
+				<Flag v="Bool Condition" />
+				<Flag v="Priority Sorter" />
+				<Flag v="Assignment Limit" />
+				<Flag v="Body Count" />
+				<Flag v="Combat Status Filter" />
+				<Flag v="Keyword Filter" />
+				<Flag v="Living Count" />
+				<Flag v="Vehicle Filter" />
+				<Flag v="Script Trigger" />
+				<Flag v="Player Trigger Volume" />
+				<Flag v="Min Relevance" />
+			</_A>
+			<_34 v="generated_padc09a" length="3" />
+			<_6 v="Block Index" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="Root Nodes">
+		<_2 v="Pretty Name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Input Nodes">
+		<_2 v="Pretty Name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Follow Player Order Nodes">
+		<_2 v="Bounding EZ Pretty Name" />
+		<_14 v="Follow Radius" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Selector Nodes">
+		<_6 v="Respects Initial Placement" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Sequence Nodes">
+		<_6 v="Respects Initial Placement" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Bool Condition Nodes">
+		<_A v="Bool Operation">
+			<Flag v="And" />
+			<Flag v="Or" />
+			<Flag v="Nand" />
+			<Flag v="Nor" />
+			<Flag v="Xor" />
+		</_A>
+		<_34 v="generated_padd184" length="3" />
+		<_38 v="Action Node Identifier">
+			<_A v="Type">
+				<Flag v="Root" />
+				<Flag v="Input" />
+				<Flag v="FollowPlayerOrder" />
+				<Flag v="Selector" />
+				<Flag v="Sequence" />
+				<Flag v="Bool Condition" />
+				<Flag v="Priority Sorter" />
+				<Flag v="Assignment Limit" />
+				<Flag v="Body Count" />
+				<Flag v="Combat Status Filter" />
+				<Flag v="Keyword Filter" />
+				<Flag v="Living Count" />
+				<Flag v="Vehicle Filter" />
+				<Flag v="Script Trigger" />
+				<Flag v="Player Trigger Volume" />
+				<Flag v="Min Relevance" />
+			</_A>
+			<_34 v="generated_padc09a" length="3" />
+			<_6 v="Block Index" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="Priority Sorter Nodes">
+		<_A v="Sort Property">
+			<Flag v="Relevance" />
+			<Flag v="Location" />
+		</_A>
+		<_A v="Sort Type">
+			<Flag v="Highest" />
+			<Flag v="Lowest" />
+			<Flag v="Within Range" />
+		</_A>
+		<_3B v="" />
+	</_40>
+	<_40 v="Assignment Limit Nodes">
+		<_E v="Flags">
+			<Flag v="Invert" />
+			<Flag v="LatchToTrue" />
+			<Flag v="LatchToFalse" />
+		</_E>
+		<_34 v="generated_pad1df7" length="2" />
+		<_6 v="Max Limit" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Body Count Nodes">
+		<_E v="Flags">
+			<Flag v="Invert" />
+			<Flag v="LatchToTrue" />
+			<Flag v="LatchToFalse" />
+		</_E>
+		<_34 v="generated_padff86" length="2" />
+		<_6 v="Max Count" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Combat Status Filter Nodes">
+		<_E v="Flags">
+			<Flag v="Invert" />
+			<Flag v="LatchToTrue" />
+			<Flag v="LatchToFalse" />
+		</_E>
+		<_A v="Comparison">
+			<Flag v="Less Than" />
+			<Flag v="Less Than Equals" />
+			<Flag v="Greater Than" />
+			<Flag v="Greater Than Equals" />
+			<Flag v="Equal" />
+			<Flag v="Not Equal" />
+		</_A>
+		<_34 v="generated_pad4a13" length="1" />
+		<_B v="Combat Status">
+			<Flag v="asleep" />
+			<Flag v="idle" />
+			<Flag v="alert" />
+			<Flag v="uninspected orphan" />
+			<Flag v="active" />
+			<Flag v="definite orphan" />
+			<Flag v="certain orphan" />
+			<Flag v="visible enemy" />
+			<Flag v="clear enemy los" />
+			<Flag v="dangerous enemy" />
+		</_B>
+		<_3B v="" />
+	</_40>
+	<_40 v="Keyword Filter Nodes">
+		<_E v="Flags">
+			<Flag v="Invert" />
+			<Flag v="LatchToTrue" />
+			<Flag v="LatchToFalse" />
+		</_E>
+		<_34 v="generated_pad6ddc" length="2" />
+		<_2 v="Keyword" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Living Count Nodes">
+		<_E v="Flags">
+			<Flag v="Invert" />
+			<Flag v="LatchToTrue" />
+			<Flag v="LatchToFalse" />
+		</_E>
+		<_34 v="generated_pad574b" length="2" />
+		<_6 v="Min Count" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Vehicle Type Filter Nodes">
+		<_E v="Flags">
+			<Flag v="Invert" />
+			<Flag v="LatchToTrue" />
+			<Flag v="LatchToFalse" />
+		</_E>
+		<_34 v="generated_pad41e5" length="2" />
+		<_6 v="Check Vehicle" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Script Trigger Nodes">
+		<_E v="Flags">
+			<Flag v="Invert" />
+			<Flag v="LatchToTrue" />
+			<Flag v="LatchToFalse" />
+		</_E>
+		<_34 v="generated_padc36c" length="2" />
+		<_2 v="Label" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Trigger Volume Nodes">
+		<_E v="Flags">
+			<Flag v="Invert" />
+			<Flag v="LatchToTrue" />
+			<Flag v="LatchToFalse" />
+		</_E>
+		<_34 v="generated_pad426c" length="2" />
+		<_2 v="Volume Pretty Name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Min Relevance Nodes">
+		<_E v="Flags">
+			<Flag v="Invert" />
+			<Flag v="LatchToTrue" />
+			<Flag v="LatchToFalse" />
+		</_E>
+		<_A v="Min Relevance">
+			<Flag v="Low" />
+			<Flag v="High" />
+		</_A>
+		<_34 v="generated_pad8fa2" length="1" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

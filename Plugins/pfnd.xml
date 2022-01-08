@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="navMeshes">
+		<_43 v="resource data" />
+		<_5 v="major version" />
+		<_5 v="minor version" />
+		<_6 v="structure checksum" />
+		<_3B v="" />
+	</_40>
+	<_40 v="mobileNavMeshes">
+		<_43 v="resource data" />
+		<_5 v="major version" />
+		<_5 v="minor version" />
+		<_38 v="object id">
+			<_6 v="unique id" />
+			<_5 v="origin bsp index" />
+			<_A v="type">
+				<Flag v="biped" />
+				<Flag v="vehicle" />
+				<Flag v="weapon" />
+				<Flag v="equipment" />
+				<Flag v="terminal" />
+				<Flag v="projectile" />
+				<Flag v="scenery" />
+				<Flag v="machine" />
+				<Flag v="control" />
+				<Flag v="dispenser" />
+				<Flag v="crate" />
+				<Flag v="creature" />
+				<Flag v="giant" />
+				<Flag v="effect_scenery" />
+			</_A>
+			<_A v="source">
+				<Flag v="structure" />
+				<Flag v="editor" />
+				<Flag v="dynamic" />
+				<Flag v="legacy" />
+				<Flag v="sky" />
+				<Flag v="parent" />
+			</_A>
+			<_3B v="" />
+		</_38>
+		<_6 v="nodeIndex" />
+		<_F v="flags">
+			<Flag v="always loaded" />
+		</_F>
+		<_34 v="generated_pad5c22" length="3" />
+		<_3B v="" />
+	</_40>
+	<_40 v="navVolumes">
+		<_6 v="navMeshAreaIndex" />
+		<_19 v="navMeshAreaPosition" />
+		<_14 v="navMeshAreaHeight" />
+		<_14 v="navMeshAreaSink" />
+		<_5 v="major version" />
+		<_5 v="minor version" />
+		<_40 v="buckets">
+			<_43 v="resource data" />
+			<_4 v="bucketID" />
+			<_34 v="generated_padfba7" length="3" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="hints">
+		<_40 v="nav links">
+			<_B v="link type">
+				<Flag v="jump link" />
+				<Flag v="force walk link" />
+				<Flag v="force movement link" />
+				<Flag v="vehicle link" />
+				<Flag v="crouch link" />
+			</_B>
+			<_2E v="Squad group filter" />
+			<_6 v="hint data 0" />
+			<_5 v="hint data 1" />
+			<_3C v="hint data 2" />
+			<_3C v="pad1" />
+			<_2 v="name" />
+			<_E v="Flags">
+				<Flag v="bidirectional" />
+			</_E>
+			<_B v="force jump height">
+				<Flag v="NONE" />
+				<Flag v="very short" />
+				<Flag v="short" />
+				<Flag v="medium short" />
+				<Flag v="medium long" />
+				<Flag v="long" />
+				<Flag v="very long" />
+				<Flag v="infinite" />
+			</_B>
+			<_E v="control flags">
+				<Flag v="walk down" />
+				<Flag v="bots can't use if slowed" />
+			</_E>
+			<_34 v="generated_pad04d0" length="2" />
+			<_38 v="geometry">
+				<_17 v="Point 0" />
+				<_17 v="Point 1" />
+				<_17 v="Point 2" />
+				<_17 v="Point 3" />
+				<_E v="invalid_points">
+					<Flag v="1" />
+					<Flag v="2" />
+					<Flag v="3" />
+					<Flag v="4" />
+				</_E>
+				<_34 v="generated_pad733f" length="2" />
+				<_3B v="" />
+			</_38>
+			<_40 v="EditorMetadata">
+				<_1 v="folder name" />
+				<_17 v="local space pivot point position" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="cookie cutters">
+			<_40 v="points">
+				<_17 v="point" />
+				<_6 v="_navMeshUIDOffaceref" />
+				<_6 v="_packedKeyOffaceref" />
+				<_3B v="" />
+			</_40>
+			<_40 v="pointsObjectIds">
+				<_38 v="object ID">
+					<_6 v="unique id" />
+					<_5 v="origin bsp index" />
+					<_A v="type">
+						<Flag v="biped" />
+						<Flag v="vehicle" />
+						<Flag v="weapon" />
+						<Flag v="equipment" />
+						<Flag v="terminal" />
+						<Flag v="projectile" />
+						<Flag v="scenery" />
+						<Flag v="machine" />
+						<Flag v="control" />
+						<Flag v="dispenser" />
+						<Flag v="crate" />
+						<Flag v="creature" />
+						<Flag v="giant" />
+						<Flag v="effect_scenery" />
+					</_A>
+					<_A v="source">
+						<Flag v="structure" />
+						<Flag v="editor" />
+						<Flag v="dynamic" />
+						<Flag v="legacy" />
+						<Flag v="sky" />
+						<Flag v="parent" />
+					</_A>
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_14 v="z height" />
+			<_14 v="z sink" />
+			<_B v="type">
+				<Flag v="carve out" />
+				<Flag v="carve air volume" />
+				<Flag v="Remove Auto-Generated Hints" />
+				<Flag v="preserve" />
+			</_B>
+			<_5 v="pad" />
+			<_40 v="EditorMetadata">
+				<_1 v="folder name" />
+				<_17 v="local space pivot point position" />
+				<_3B v="" />
+			</_40>
+			<_4 v="invalid" />
+			<_34 v="generated_pad8e8a" length="3" />
+			<_3B v="" />
+		</_40>
+		<_40 v="navmesh areas">
+			<_40 v="points">
+				<_17 v="point" />
+				<_6 v="_navMeshUIDOffaceref" />
+				<_6 v="_packedKeyOffaceref" />
+				<_3B v="" />
+			</_40>
+			<_14 v="z height" />
+			<_14 v="z sink" />
+			<_C v="type">
+				<Flag v="Generate Ground" />
+				<Flag v="Generate Air" />
+				<Flag v="No Bunkering" />
+				<Flag v="Generate Climb" />
+				<Flag v="Generate Custom Air" />
+				<Flag v="Navmesh Low Res" />
+				<Flag v="Navmesh 2" />
+				<Flag v="Navmesh 3" />
+				<Flag v="Navmesh 4" />
+				<Flag v="Navmesh 5" />
+				<Flag v="Navmesh 6" />
+				<Flag v="Navmesh 7" />
+				<Flag v="Navmesh 8" />
+				<Flag v="Navmesh High Res" />
+				<Flag v="CUSTOM (Recommended)" />
+			</_C>
+			<_3C v="isValid" />
+			<_34 v="generated_pad7d37" length="3" />
+			<_40 v="EditorMetadata">
+				<_1 v="folder name" />
+				<_17 v="local space pivot point position" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

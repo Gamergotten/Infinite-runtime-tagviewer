@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="parent" />
+	<_36 v="Simple flocking" />
+	<_15 v="forward weight" />
+	<_15 v="leveling force weight" />
+	<_15 v="destination weight" />
+	<_15 v="movement weight threshold" />
+	<_15 v="target weight" />
+	<_14 v="target distance" />
+	<_14 v="target delay time" />
+	<_15 v="target kill chance" />
+	<_15 v="ai destroy chance" />
+	<_36 v="Perlin noise parameters" />
+	<_15 v="random offset weight" />
+	<_25 v="random offset period" />
+	<_36 v="Complex Flocking" />
+	<_14 v="neighborhood radius" />
+	<_8 v="perception angle" />
+	<_15 v="avoidance weight" />
+	<_14 v="avoidance radius" />
+	<_15 v="alignment weight" />
+	<_15 v="position weight" />
+	<_25 v="position radius" />
+	<_41 v="Battle projectile effect" />
+	<_41 v="Battle projectile effect (expensive)" />
+	<_25 v="Battle projectile effect cooldown" />
+	<_17 v="Battle effect offset" />
+	<_40 v="EditorMetadata">
+		<_1 v="folder name" />
+		<_17 v="local space pivot point position" />
+		<_3B v="" />
+	</_40>
+	<_25 v="Boid Scale Range" />
+	<_F v="Perception Flags">
+		<Flag v="Check Player Proximity" />
+		<Flag v="Check AI Proximity" />
+	</_F>
+	<_34 v="generated_pad41f9" length="3" />
+	<_14 v="Object Perception Radius" />
+	<_14 v="Vehicle Perception Radius" />
+	<_14 v="Danger Event Perception Radius" />
+	<_F v="Spawn Flags">
+		<Flag v="Always replenish boids" />
+		<Flag v="Randomize Spawn Point Height" />
+		<Flag v="Used in kits (allow name duplication)" />
+		<Flag v="Randomize Creature Variant" />
+	</_F>
+	<_F v="Generate Spawn Point for Each Boid">
+		<Flag v="Enable" />
+	</_F>
+	<_34 v="generated_padd75d" length="2" />
+	<_6 v="Number of Spawn Points" />
+	<_14 v="Distance of Importance" />
+	<_14 v="Despawn Distance" />
+	<_14 v="Spawn Distance" />
+	<_14 v="Minimum Respawn Delay" />
+	<_25 v="Time Before Dehydration Hide is Forced" />
+	<_14 v="Distance Enough for Dehydration Hide" />
+	<_A v="Spawn Priority">
+		<Flag v="Procedurally generated" />
+		<Flag v="Regular" />
+		<Flag v="Important" />
+		<Flag v="Critical" />
+		<Flag v="Regular Distant" />
+		<Flag v="Important Distant" />
+	</_A>
+	<_F v="Disable Backward Flock Relevancy Reduce">
+		<Flag v="Enable" />
+	</_F>
+	<_34 v="generated_padbd7c" length="2" />
+	<_25 v="Production Frequency Bounds" />
+	<_14 v="High LOD Distance" />
+	<_41 v="Creature Asset" />
+	<_2 v="Creature Variant Name" />
+	<_6 v="Boid Count" />
+	<_A v="Initial Behavior">
+		<Flag v="None" />
+		<Flag v="Perching" />
+		<Flag v="Circling" />
+		<Flag v="Traveling" />
+		<Flag v="Wandering" />
+		<Flag v="Reaction" />
+		<Flag v="Move Away Helper" />
+	</_A>
+	<_A v="Second Behavior">
+		<Flag v="None" />
+		<Flag v="Perching" />
+		<Flag v="Circling" />
+		<Flag v="Traveling" />
+		<Flag v="Wandering" />
+		<Flag v="Reaction" />
+		<Flag v="Move Away Helper" />
+	</_A>
+	<_A v="Reaction Behavior">
+		<Flag v="None" />
+		<Flag v="Afraid" />
+		<Flag v="Evasion" />
+		<Flag v="Hide" />
+	</_A>
+	<_A v="Reaction Navigation Behavior">
+		<Flag v="None" />
+		<Flag v="Perching" />
+		<Flag v="Circling" />
+		<Flag v="Traveling" />
+		<Flag v="Wandering" />
+		<Flag v="Reaction" />
+		<Flag v="Move Away Helper" />
+	</_A>
+	<_A v="Second Reaction Behavior">
+		<Flag v="None" />
+		<Flag v="Afraid" />
+		<Flag v="Evasion" />
+		<Flag v="Hide" />
+	</_A>
+	<_A v="Second Reaction Navigation Behavior">
+		<Flag v="None" />
+		<Flag v="Perching" />
+		<Flag v="Circling" />
+		<Flag v="Traveling" />
+		<Flag v="Wandering" />
+		<Flag v="Reaction" />
+		<Flag v="Move Away Helper" />
+	</_A>
+	<_A v="Despawn Reaction Behavior">
+		<Flag v="None" />
+		<Flag v="Afraid" />
+		<Flag v="Evasion" />
+		<Flag v="Hide" />
+	</_A>
+	<_A v="Despawn Reaction Navigation Behavior">
+		<Flag v="None" />
+		<Flag v="Perching" />
+		<Flag v="Circling" />
+		<Flag v="Traveling" />
+		<Flag v="Wandering" />
+		<Flag v="Reaction" />
+		<Flag v="Move Away Helper" />
+	</_A>
+	<_14 v="Event Memory Time" />
+	<_14 v="Return after Disrupt Time" />
+	<_E v="Flee Flags">
+		<Flag v="Flee Together" />
+		<Flag v="Return After Flee" />
+		<Flag v="Return after fleeing (if a boid is killed)" />
+		<Flag v="Skip evasion phase when a boid is killed" />
+	</_E>
+	<_34 v="generated_padfcfe" length="2" />
+	<_14 v="Danger Weight" />
+	<_15 v="Additional Throttle" />
+	<_25 v="Time before Hide or Fly Away" />
+	<_14 v="Max hide time" />
+	<_A v="Volume Containment Mode (Evasion)">
+		<Flag v="None" />
+		<Flag v="Navigation Adjustment" />
+		<Flag v="Hard Volume Containment" />
+	</_A>
+	<_34 v="generated_pad49b3" length="3" />
+	<_14 v="Torus Inner Radius" />
+	<_14 v="Torus Cross Section Radius" />
+	<_A v="Circling Direction">
+		<Flag v="Clockwise" />
+		<Flag v="Counterclockwise" />
+		<Flag v="Random" />
+	</_A>
+	<_34 v="generated_padf423" length="3" />
+	<_14 v="Leveling Coefficient" />
+	<_14 v="Traveling Spawn Radius" />
+	<_36 v="Runtime-generated path settings" />
+	<_14 v="Distance to the initial destination" />
+	<_14 v="Distance to the final destination" />
+	<_14 v="Spawn Cylinder Radius" />
+	<_14 v="Spawn Cylinder Height" />
+	<_25 v="Wandering Time" />
+	<_25 v="Grazing Time" />
+	<_14 v="Change of Direction Time" />
+	<_F v="Flags">
+		<Flag v="Wander Randomly" />
+	</_F>
+	<_F v="Wandering to same source point is allowed">
+		<Flag v="Enable" />
+	</_F>
+	<_34 v="generated_pad094b" length="2" />
+	<_F v="Fly On Fixed Height Flags">
+		<Flag v="Fly On Fixed Height Enabled" />
+	</_F>
+	<_34 v="generated_padbdf6" length="3" />
+	<_14 v="Fixed Height From Ground" />
+	<_14 v="Height ReChecking Distance" />
+	<_14 v="Maximum Height Difference" />
+	<_F v="Override facing">
+		<Flag v="Enable" />
+	</_F>
+	<_F v="Use Flock Formations">
+		<Flag v="Enable" />
+	</_F>
+	<_F v="Ground Alignment">
+		<Flag v="Align Idle" />
+		<Flag v="Align Navigation" />
+		<Flag v="Align Grazing" />
+	</_F>
+	<_34 v="generated_pad6ca6" length="1" />
+	<_15 v="Default Throttle" />
+	<_14 v="Start Slowing Distance" />
+	<_15 v="Slowing To Fraction" />
+	<_14 v="Desired Start Descending Height" />
+	<_14 v="Start Descending Distance" />
+	<_25 v="Descending Throttle Bounds" />
+	<_14 v="Stop Distance" />
+	<_14 v="Start Parking Height" />
+	<_14 v="Increased Noise Distance" />
+	<_14 v="Noise Increase Multiplier" />
+	<_25 v="Time between one-off random boid sounds (default)" />
+	<_14 v="Density scaler for one-off sounds (default)" />
+	<_25 v="Time between one-off random boid sounds (fleeing)" />
+	<_14 v="Density scaler for one-off sounds (fleeing)" />
+	<_41 v="single shot sound for killed by the player" />
+	<_41 v="single shot sound for non-player death" />
+	<_41 v="single shot sound for despawn" />
+	<_41 v="looping sound for idle" />
+	<_41 v="single shot sound for idle (randomly plays)" />
+	<_41 v="looping sound for moving" />
+	<_41 v="single shot sound for moving (randomly plays)" />
+	<_41 v="single shot sound for reacting to danger" />
+	<_41 v="single shot sound for shooting" />
+	<_41 v="Proxy Object Asset" />
+	<_40 v="Proxy Object Node Graphs">
+		<_2 v="Name" />
+		<_41 v="Exported Node Graph" />
+		<_F v="Flags">
+			<Flag v="Runs on Server" />
+			<Flag v="Runs on Client" />
+			<Flag v="Start updating on the first frame" />
+		</_F>
+		<_A v="Enable Node Graph">
+			<Flag v="Default" />
+			<Flag v="Yes" />
+			<Flag v="No" />
+		</_A>
+		<_34 v="generated_pad8671" length="2" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

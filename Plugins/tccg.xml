@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Serialized Havok Geometry">
+		<_7 v="field pointer skip" />
+		<_3E v="collision type" />
+		<_3E v="number of shapes" />
+		<_A v="who will reload the shape, the parent tag or this struct?">
+			<Flag v="Me" />
+			<Flag v="Parent tag" />
+		</_A>
+		<_34 v="generated_padb5d1" length="3" />
+		<_42 v="Havok Data" />
+		<_34 v="generated_pad9bf0" length="4" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_paddcaa" length="4" />
+	<_3B v="" />
+</root>

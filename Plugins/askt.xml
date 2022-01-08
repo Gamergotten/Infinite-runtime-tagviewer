@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="skeleton">
+		<_6 v="skeleton checksum" />
+		<_40 v="skeleton bones">
+			<_2 v="name" />
+			<_2E v="next sibling node index" />
+			<_2E v="first child node index" />
+			<_2E v="parent node index" />
+			<_E v="model flags">
+				<Flag v="primary model" />
+				<Flag v="secondary model" />
+				<Flag v="local root" />
+				<Flag v="left hand" />
+				<Flag v="right hand" />
+				<Flag v="left arm member" />
+				<Flag v="detail joint" />
+			</_E>
+			<_14 v="z_pos" />
+			<_6 v="frame_ID1" />
+			<_6 v="frame_ID2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="bone usage">
+			<_B v="usage">
+				<Flag v="physics control" />
+				<Flag v="camera control" />
+				<Flag v="origin marker" />
+				<Flag v="left clavicle" />
+				<Flag v="left upperarm" />
+				<Flag v="pose blend pitch" />
+				<Flag v="pose blend yaw" />
+				<Flag v="pedestal" />
+				<Flag v="pelvis" />
+				<Flag v="left foot" />
+				<Flag v="right foot" />
+				<Flag v="damage root gut" />
+				<Flag v="damage root chest" />
+				<Flag v="damage root head" />
+				<Flag v="damage root left shoulder" />
+				<Flag v="damage root left arm" />
+				<Flag v="damage root left leg" />
+				<Flag v="damage root left foot" />
+				<Flag v="damage root right shoulder" />
+				<Flag v="damage root right arm" />
+				<Flag v="damage root right leg" />
+				<Flag v="damage root right foot" />
+				<Flag v="left hand" />
+				<Flag v="right hand" />
+				<Flag v="weapon ik" />
+				<Flag v="head" />
+				<Flag v="helmet" />
+				<Flag v="right clavicle" />
+				<Flag v="left forearm" />
+				<Flag v="right forearm" />
+				<Flag v="left front foot" />
+				<Flag v="right front foot" />
+				<Flag v="left eye" />
+				<Flag v="right eye" />
+				<Flag v="overlay object space parent" />
+			</_B>
+			<_2E v="node to use" />
+			<_3B v="" />
+		</_40>
+		<_40 v="bone masks">
+			<_2 v="name" />
+			<_E v="flags">
+				<Flag v="invert" />
+			</_E>
+			<_2E v="chain start" />
+			<_40 v="chain ends">
+				<_2E v="node" />
+				<_3B v="" />
+			</_40>
+			<_40 v="nodes">
+				<_2E v="node" />
+				<_3B v="" />
+			</_40>
+			<_2E v="add nodes" />
+			<_2E v="remove nodes" />
+			<_39 v="node flags" />
+			<_3B v="" />
+		</_40>
+		<_40 v="user parameters">
+			<_2 v="name" />
+			<_14 v="default value" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_38 v="ik">
+		<_36 v="IK Junctions" />
+		<_40 v="ik junctions">
+			<_2 v="name" />
+			<_2E v="pivot node" />
+			<_2E v="parent junction" />
+			<_5 v="supporting chain" />
+			<_2E v="supporting node" />
+			<_15 v="pull passthrough" />
+			<_3B v="" />
+		</_40>
+		<_36 v="IK Chains" />
+		<_40 v="ik chains">
+			<_2 v="name" />
+			<_B v="type">
+				<Flag v="standard" />
+				<Flag v="spine" />
+				<Flag v="spline driven spine" />
+			</_B>
+			<_2E v="start node" />
+			<_2E v="effector node" />
+			<_2E v="parent junction" />
+			<_5 v="rank" />
+			<_5 v="antecedents" />
+			<_40 v="special joints">
+				<_2E v="joint index" />
+				<_E v="flags">
+					<Flag v="static" />
+					<Flag v="hinge" />
+				</_E>
+				<_3B v="" />
+			</_40>
+			<_36 v="Pull settings" />
+			<_15 v="native pull strength" />
+			<_15 v="native push strength" />
+			<_15 v="over extent pull strength" />
+			<_15 v="under extent push strength" />
+			<_36 v="Effector Cone Limits" />
+			<_15 v="effector cone limit power" />
+			<_24 v="pitch bounds" />
+			<_24 v="yaw bounds" />
+			<_25 v="offset bounds" />
+			<_40 v="full joint chain">
+				<_2E v="joint index" />
+				<_E v="flags">
+					<Flag v="static" />
+					<Flag v="hinge" />
+				</_E>
+				<_3B v="" />
+			</_40>
+			<_15 v="spline reversal strength" />
+			<_3B v="" />
+		</_40>
+		<_40 v="ik leg definitions">
+			<_30 v="leg ik chain" />
+			<_25 v="standing compression limits" />
+			<_25 v="crouching compression limits" />
+			<_25 v="foot pitch limits" />
+			<_25 v="foot yaw limits" />
+			<_3B v="" />
+		</_40>
+		<_40 v="ik arm definitions">
+			<_30 v="arm ik chain" />
+			<_14 v="wrist break threshold" />
+			<_2 v="fixup axis marker" />
+			<_14 v="ik wrist break acceptable min angle" />
+			<_3B v="" />
+		</_40>
+		<_36 v="Points and Sets" />
+		<_40 v="ik point">
+			<_2 v="name" />
+			<_2 v="source marker" />
+			<_C v="attach to">
+				<Flag v="parent" />
+				<Flag v="NYI any child" />
+				<Flag v="primary weapon" />
+				<Flag v="secondary weapon" />
+			</_C>
+			<_2 v="destination marker" />
+			<_17 v="pole marker" />
+			<_30 v="chain to use" />
+			<_37 v="" />
+			<_2 v="weight source object function" />
+			<_37 v="" />
+			<_2 v="priority source object function" />
+			<_3B v="" />
+		</_40>
+		<_40 v="ik sets">
+			<_2 v="name" />
+			<_D v="flags">
+				<Flag v="Disable Quadruped Footlocking" />
+				<Flag v="Enable Biped Handlocking" />
+			</_D>
+			<_40 v="ik points">
+				<_2E v="ik point" />
+				<_E v="flags">
+					<Flag v="disable" />
+				</_E>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_36 v="Ground-fit chains" />
+		<_40 v="groundfit ik chains">
+			<_36 v="Chain Drivers" />
+			<_30 v="start junction" />
+			<_30 v="end junction" />
+			<_14 v="probe distance" />
+			<_14 v="angle threshold" />
+			<_14 v="maximum rate" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

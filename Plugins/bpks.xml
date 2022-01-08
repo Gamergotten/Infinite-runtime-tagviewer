@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="settings">
+		<_2 v="name" />
+		<_2 v="editor group" />
+		<_D v="flags">
+			<Flag v="single mipmap" />
+			<Flag v="ui texture" />
+		</_D>
+		<_A v="reduction rate">
+			<Flag v="100" />
+			<Flag v="50" />
+			<Flag v="25" />
+		</_A>
+		<_34 v="generated_padbb20" length="3" />
+		<_6 v="minimum texture size" />
+		<_3B v="" />
+	</_40>
+	<_36 v="TEXTURE GROUPS" />
+	<_40 v="texture groups">
+		<_2 v="name" />
+		<_2 v="Package" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

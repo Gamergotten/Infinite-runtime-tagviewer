@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="wallJump">
+		<_38 v="common ability parameters">
+			<_37 v="common ability parameters" />
+			<_C v="input">
+				<Flag v="Default" />
+				<Flag v="Mobility" />
+				<Flag v="Suit" />
+				<Flag v="Jump" />
+				<Flag v="Equipment" />
+				<Flag v="Melee" />
+				<Flag v="PowerUp" />
+				<Flag v="Unmapped" />
+			</_C>
+			<_D v="flags">
+				<Flag v="Use 3rd Person Camera When Active" />
+				<Flag v="Hide Reticle When Active" />
+				<Flag v="Is Motion Tracked (By Enemies) When Active" />
+				<Flag v="One-Shot Activation Effect" />
+				<Flag v="Can be activated when weapon state is relaxed" />
+				<Flag v="Does Not Appear In Extended Motion Tracker Range" />
+				<Flag v="Energy persists across deaths" />
+				<Flag v="Activation interrupts weapon switching" />
+				<Flag v="Allow activation during weapon throw" />
+				<Flag v="Allow activation while sliding" />
+			</_D>
+			<_15 v="activation energy cost" />
+			<_14 v="active energy consumption" />
+			<_14 v="recharge duration" />
+			<_14 v="recharge delay" />
+			<_14 v="cooldown delay" />
+			<_41 v="activation effect" />
+			<_14 v="activation effect kill delay" />
+			<_A v="sprint preservation">
+				<Flag v="No" />
+				<Flag v="Zero fraction" />
+				<Flag v="Retain fraction" />
+				<Flag v="Decay (normal)" />
+				<Flag v="Decay (forced)" />
+			</_A>
+			<_34 v="generated_pad0aca" length="3" />
+			<_41 v="active malleable property modifiers" />
+			<_41 v="timed malleable property modifiers" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_D v="flags">
+			<Flag v="Must land again after activating" />
+		</_D>
+		<_36 v="Contact point checks" />
+		<_14 v="hit sphere offset z" />
+		<_14 v="gap to wall tolerance" />
+		<_15 v="contact normal threshold z" />
+		<_36 v="Jump parameters" />
+		<_15 v="throttle threshold" />
+		<_15 v="default throttle xy" />
+		<_14 v="velocity z" />
+		<_14 v="velocity xy" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

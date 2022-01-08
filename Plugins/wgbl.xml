@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_24 v="gunkick yaw mapping bounds" />
+	<_38 v="gunkick yaw to roll">
+		<_37 v="function" />
+		<_38 v="function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_24 v="viewkick yaw mapping bounds" />
+	<_38 v="viewkick yaw to roll">
+		<_37 v="function" />
+		<_38 v="function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_14 v="max player additive velocity for flag throw" />
+	<_14 v="descope magnetism transition time" />
+	<_38 v="descope magnetism transition">
+		<_37 v="function" />
+		<_38 v="function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="flag throw forward additive velocity ">
+		<_37 v="function" />
+		<_38 v="function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="flag throw backward additive velocity ">
+		<_37 v="function" />
+		<_38 v="function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="flag throw pitch">
+		<_37 v="function" />
+		<_38 v="function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="ads reticle movement thresholds">
+		<_0 v="ads reticle movement threshold name" />
+		<_8 v="ads reticle movement threshold angle" />
+		<_1F v="ads reticle movement threshold color" />
+		<_3B v="" />
+	</_40>
+	<_F v="suppression flags">
+		<Flag v="supppression zeros aim assist cones" />
+	</_F>
+	<_34 v="generated_pad7ec6" length="3" />
+	<_40 v="First Person Weapon Offset Controls">
+		<_B v="First Person Weapon Group">
+			<Flag v="Undefined" />
+			<Flag v="Melee" />
+			<Flag v="Pistols" />
+			<Flag v="Rifles" />
+			<Flag v="Heavy" />
+		</_B>
+		<_34 v="generated_padfc06" length="2" />
+		<_2 v="Weapon Group Header String" />
+		<_25 v="Depth Offset Bounds" />
+		<_25 v="Horizontal Offset Bounds" />
+		<_25 v="Vertical Offset Bounds" />
+		<_19 v="Maximum Computed Offset Extents" />
+		<_F v="Depth Axis Flags">
+			<Flag v="Inverted Axis" />
+		</_F>
+		<_F v="Horizontal Axis Flags">
+			<Flag v="Inverted Axis" />
+		</_F>
+		<_F v="Vertical Axis Flags">
+			<Flag v="Inverted Axis" />
+		</_F>
+		<_34 v="generated_pad48bb" length="1" />
+		<_3B v="" />
+	</_40>
+	<_39 v="First Person Weapon Offset Controls Index Cache" />
+	<_14 v="game options - weapon offset scaling factor" />
+	<_34 v="generated_padcb7b" length="4" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="material name" />
+	<_D v="flags">
+		<Flag v="Vertical Fade" />
+		<Flag v="Scale Outline Distance With Zoom" />
+	</_D>
+	<_A v="child outlining behaviour">
+		<Flag v="do not outline children" />
+		<Flag v="only children created with parent" />
+		<Flag v="all children" />
+	</_A>
+	<_34 v="generated_pada225" length="3" />
+	<_14 v="fade in duration" />
+	<_14 v="fade out duration" />
+	<_1F v="Color" />
+	<_14 v="Opacity" />
+	<_14 v="Additiveness" />
+	<_14 v="Intensity" />
+	<_14 v="Outline Weight" />
+	<_14 v="Inline Weight" />
+	<_14 v="Distance Fade Start" />
+	<_14 v="Distance Fade End" />
+	<_14 v="Distance Fade End Value" />
+	<_14 v="Distance Thin Start" />
+	<_14 v="Distance Thin End" />
+	<_14 v="Distance Thin End Value" />
+	<_A v="Occlusion Mode">
+		<Flag v="draw outline where object is occluded AND visible" />
+		<Flag v="draw outline where object is visible" />
+		<Flag v="draw outline where object is occluded" />
+		<Flag v="do not draw" />
+	</_A>
+	<_34 v="generated_pad8844" length="3" />
+	<_14 v="Occlusion Bias" />
+	<_14 v="Occlusion Fade Range" />
+	<_14 v="Occlusion Fade Multiplier" />
+	<_1F v="Fill Color" />
+	<_14 v="Fill Opacity" />
+	<_14 v="Fill Intensity" />
+	<_14 v="Fill Distance Fade Start" />
+	<_14 v="Fill Distance Fade End" />
+	<_14 v="Fill Distance Fade End Value" />
+	<_A v="Fill Occlusion Mode">
+		<Flag v="draw outline where object is occluded AND visible" />
+		<Flag v="draw outline where object is visible" />
+		<Flag v="draw outline where object is occluded" />
+		<Flag v="do not draw" />
+	</_A>
+	<_34 v="generated_pad3b8f" length="3" />
+	<_14 v="Vertical Fade Start" />
+	<_14 v="Vertical Fade End" />
+	<_14 v="Vertical Fade End Value" />
+	<_14 v="Transition To Duration" />
+	<_41 v="Outline Override Protanopia" />
+	<_41 v="Outline Override Deuteranopia" />
+	<_41 v="Outline Override Tritanopia" />
+	<_34 v="generated_pad21ae" length="4" />
+	<_3B v="" />
+</root>

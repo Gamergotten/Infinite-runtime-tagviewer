@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="Bitmap" />
+	<_41 v="TerrainRuntime" />
+	<_41 v="OptimizationParams" />
+	<_40 v="Cell Outputs">
+		<_41 v="TerrainCollisionCellGeoTag" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Input Cache">
+		<_19 v="size" />
+		<_42 v="pixels" />
+		<_42 v="materials" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Cell Inputs">
+		<_41 v="Cell Input" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

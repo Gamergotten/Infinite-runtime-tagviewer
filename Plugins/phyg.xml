@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Shape density configuration" />
+	<_36 v="Shape density configuration" />
+	<_36 v="Play collision density thresholds for assets" />
+	<_38 v="Play collision thresholds for assets">
+		<_14 v="Shape density error threshold" />
+		<_14 v="Shape density warning threshold" />
+		<_3B v="" />
+	</_38>
+	<_36 v="Bullet collision density thresholds for assets" />
+	<_38 v="Bullet collision thresholds for assets">
+		<_14 v="Shape density error threshold" />
+		<_14 v="Shape density warning threshold" />
+		<_3B v="" />
+	</_38>
+	<_36 v="Play collision density thresholds for levels" />
+	<_38 v="Play collision thresholds for levels">
+		<_14 v="Shape density error threshold" />
+		<_14 v="Shape density warning threshold" />
+		<_3B v="" />
+	</_38>
+	<_36 v="Bullet collision density thresholds for levels" />
+	<_38 v="Bullet collision thresholds for levels">
+		<_14 v="Shape density error threshold" />
+		<_14 v="Shape density warning threshold" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_3B v="" />
+</root>

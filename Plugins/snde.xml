@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_A v="Type">
+		<Flag v="Exterior" />
+		<Flag v="Interior" />
+	</_A>
+	<_34 v="generated_pad0fb7" length="3" />
+	<_36 v="Reverb Settings" />
+	<_38 v="reverb settings">
+		<_36 v="WWise Environment" />
+		<_2 v="Environment name" />
+		<_C v="weapon environment">
+			<Flag v="default" />
+			<Flag v="InteriorNarrow" />
+			<Flag v="InteriorSmall" />
+			<Flag v="InteriorMed" />
+			<Flag v="InteriorLarge" />
+			<Flag v="ExteriorSmall" />
+			<Flag v="ExteriorMed" />
+			<Flag v="ExteriorLarge" />
+			<Flag v="ExteriorHalfOpen" />
+			<Flag v="ExteriorOpen" />
+		</_C>
+		<_3B v="" />
+	</_38>
+	<_41 v="Sound Bank" />
+	<_3B v="" />
+</root>

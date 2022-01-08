@@ -1,0 +1,4218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="unit">
+		<_38 v="object">
+			<_38 v="AnyTag">
+				<_7 v="vtable space" />
+				<_38 v="internal struct">
+					<_6 v="global tag ID" />
+					<_34 v="local tag handle" length="4" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_37 v="OBJECT" />
+			<_5 v="runtime object type" />
+			<_A v="Nav Mesh Cutting">
+				<Flag v="Default" />
+				<Flag v="Cut" />
+				<Flag v="NotCut" />
+			</_A>
+			<_A v="Nav Mesh Cutting mode">
+				<Flag v="Default" />
+				<Flag v="Full" />
+				<Flag v="Convex" />
+				<Flag v="OBB" />
+			</_A>
+			<_14 v="Nav Mesh Silhouette Expansion" />
+			<_A v="navmesh collision node opt in">
+				<Flag v="Default" />
+				<Flag v="Yes" />
+				<Flag v="No" />
+			</_A>
+			<_34 v="generated_pad19c8" length="3" />
+			<_37 v="Nav Dangerous Objects" />
+			<_36 v="Avoidance" />
+			<_14 v="Avoidance Multiplier" />
+			<_14 v="Avoidance Radius" />
+			<_37 v="" />
+			<_D v="object flags">
+				<Flag v="always render in floating shadow" />
+				<Flag v="preserves initial damage owner" />
+				<Flag v="not a pathfinding obstacle" />
+				<Flag v="extension of parent" />
+				<Flag v="does not cause collision damage" />
+				<Flag v="early mover" />
+				<Flag v="early mover localized physics" />
+				<Flag v="object scales attachments" />
+				<Flag v="non physical in map editor" />
+				<Flag v="effects created by this object do not spawn objects in multiplayer" />
+				<Flag v="does not collide with camera" />
+				<Flag v="force collide with camera" />
+				<Flag v="damage not blocked by obstructions" />
+				<Flag v="early mover localize projectiles" />
+				<Flag v="grab parent object in forge editing" />
+				<Flag v="Hoistable from stand" />
+				<Flag v="Destroyable obstacle" />
+				<Flag v="vaultable" />
+				<Flag v="collides with own projectiles" />
+				<Flag v="object rejects dynamic decals" />
+				<Flag v="Do not network" />
+				<Flag v="Wake when visible to player" />
+				<Flag v="Sleep when not visible to player" />
+				<Flag v="Does not accept active camouflage" />
+				<Flag v="Killed on first contact or damage" />
+				<Flag v="Self-destruct timer kills instead of destroying" />
+				<Flag v="is permeable to projectiles" />
+				<Flag v="Destroy on player contact" />
+				<Flag v="Use the new action and animation system" />
+				<Flag v="Allow delayed placement and deletion" />
+			</_D>
+			<_14 v="bounding radius" />
+			<_17 v="bounding offset" />
+			<_14 v="horizontal acceleration scale" />
+			<_14 v="vertical acceleration scale" />
+			<_14 v="angular acceleration scale" />
+			<_A v="lightmap shadow mode">
+				<Flag v="default" />
+				<Flag v="never" />
+				<Flag v="always" />
+				<Flag v="blur" />
+			</_A>
+			<_A v="multiple airprobe mode">
+				<Flag v="default" />
+				<Flag v="always" />
+			</_A>
+			<_A v="water density">
+				<Flag v="default" />
+				<Flag v="super_floater" />
+				<Flag v="floater" />
+				<Flag v="neutral" />
+				<Flag v="sinker" />
+				<Flag v="super_sinker" />
+				<Flag v="none" />
+			</_A>
+			<_37 v="Streaming" />
+			<_36 v="Streaming" />
+			<_F v="Streaming control flags">
+				<Flag v="High priority" />
+				<Flag v="Apply delay on stream out" />
+				<Flag v="Ignore overlapping active objects for collision" />
+			</_F>
+			<_37 v="" />
+			<_38 v="impact audio">
+				<_37 v="IMPACT AUDIO" />
+				<_14 v="small impact minimum speed" />
+				<_14 v="medium impact minimum speed" />
+				<_14 v="large impact minimum speed" />
+				<_14 v="large impact maximum speed" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3E v="runtime flags" />
+			<_40 v="source sidecar">
+				<_1 v="sidecar path" />
+				<_3B v="" />
+			</_40>
+			<_2 v="default model variant" />
+			<_2 v="default style id" />
+			<_41 v="model" />
+			<_41 v="asset" />
+			<_41 v="frame" />
+			<_41 v="crate object" />
+			<_36 v="Damage Source" />
+			<_38 v="damageSource">
+				<_2 v="Damage Source Name" />
+				<_3B v="" />
+			</_38>
+			<_14 v="navpoint vertical offset" />
+			<_36 v="only set this tag if you want to override the default collision damage values in globals.globals" />
+			<_41 v="collision damage" />
+			<_40 v="early mover OBB">
+				<_2 v="node name" />
+				<_6 v="runtime node index" />
+				<_14 v="x0" />
+				<_14 v="x1" />
+				<_14 v="y0" />
+				<_14 v="y1" />
+				<_14 v="z0" />
+				<_14 v="z1" />
+				<_1C v="angles" />
+				<_3B v="" />
+			</_40>
+			<_41 v="creation effect" />
+			<_37 v="material effect references" />
+			<_36 v="Material Effects Section" />
+			<_41 v="material effects" />
+			<_41 v="visual material effects" />
+			<_41 v="sound material effects" />
+			<_37 v="" />
+			<_41 v="melee sound" />
+			<_14 v="Damage Shader Min Vitality" />
+			<_14 v="Damage Shader Intensity Scalar" />
+			<_14 v="kill on first contact or damage after time" />
+			<_14 v="self-destruct time" />
+			<_14 v="self-destruct time max" />
+			<_40 v="ai properties">
+				<_D v="ai flags">
+					<Flag v="detroyable cover" />
+					<Flag v="pathfinding ignore when dead" />
+					<Flag v="dynamic cover" />
+					<Flag v="non flight-blocking" />
+					<Flag v="dynamic cover from centre" />
+					<Flag v="has corner markers" />
+					<Flag v="idle when flying" />
+					<Flag v="consider for interaction" />
+					<Flag v="leap on cover target" />
+				</_D>
+				<_2 v="ai type name" />
+				<_2 v="interaction name" />
+				<_B v="ai size">
+					<Flag v="default" />
+					<Flag v="tiny" />
+					<Flag v="small" />
+					<Flag v="medium" />
+					<Flag v="large" />
+					<Flag v="immobile" />
+				</_B>
+				<_B v="leap jump speed">
+					<Flag v="NONE" />
+					<Flag v="very short" />
+					<Flag v="short" />
+					<Flag v="medium short" />
+					<Flag v="medium long" />
+					<Flag v="long" />
+					<Flag v="very long" />
+					<Flag v="infinite" />
+				</_B>
+				<_14 v="unattached damage modifier" />
+				<_F v="Bot markup flags">
+					<Flag v="Interact object" />
+					<Flag v="Objective pickup" />
+					<Flag v="Deliver location" />
+					<Flag v="Ammo replenisher" />
+					<Flag v="Health replenisher" />
+				</_F>
+				<_34 v="generated_pad9518" length="3" />
+				<_36 v="Heat Override" />
+				<_40 v="override heat generated per round">
+					<_14 v="heat generated per round override (easy)" />
+					<_14 v="heat generated per round override (normal)" />
+					<_14 v="heat generated per round override (heroic)" />
+					<_14 v="heat generated per round override (legendary)" />
+					<_3B v="" />
+				</_40>
+				<_14 v="Actor LOD cost" />
+				<_3B v="" />
+			</_40>
+			<_40 v="functions">
+				<_D v="flags">
+					<Flag v="invert" />
+					<Flag v="mapping does not controls active" />
+					<Flag v="always active" />
+					<Flag v="random time offset" />
+					<Flag v="always exports value" />
+					<Flag v="turn off with uses magnitude" />
+					<Flag v="cannot be predicted" />
+				</_D>
+				<_2 v="import name" />
+				<_14 v="no import default" />
+				<_2 v="export name" />
+				<_2 v="turn off with" />
+				<_2 v="ranged interpolation name" />
+				<_14 v="min value" />
+				<_37 v="default function" />
+				<_38 v="default function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_2 v="scale by" />
+				<_A v="interpolation point of view">
+					<Flag v="any" />
+					<Flag v="first person" />
+					<Flag v="third person" />
+				</_A>
+				<_34 v="generated_pad73a4" length="3" />
+				<_40 v="interpolation">
+					<_C v="interpolation mode">
+						<Flag v="constant velocity" />
+						<Flag v="linear acceleration" />
+						<Flag v="damped spring" />
+						<Flag v="fractional" />
+					</_C>
+					<_14 v="linear travel time" />
+					<_14 v="acceleration" />
+					<_36 v="springs" />
+					<_14 v="spring k" />
+					<_14 v="spring c" />
+					<_14 v="fraction" />
+					<_3B v="" />
+				</_40>
+				<_30 v="runtime interpolator index" />
+				<_3B v="" />
+			</_40>
+			<_6 v="num predicted runtime interpolator functions" />
+			<_40 v="runtime interpolator functions">
+				<_6 v="runtime interpolator to object function mapping" />
+				<_3B v="" />
+			</_40>
+			<_40 v="function switches">
+				<_2 v="switch function name" />
+				<_2 v="export name" />
+				<_40 v="switched functions">
+					<_25 v="selection bounds" />
+					<_2 v="function name" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="functions forwarded to parent">
+				<_36 v="Object Function Forwarding" />
+				<_2 v="function to forward" />
+				<_3B v="" />
+			</_40>
+			<_E v="Ammo Refill Flags">
+				<Flag v="None" />
+				<Flag v="Kinetic" />
+				<Flag v="Plasma" />
+				<Flag v="Hard light" />
+				<Flag v="Shock" />
+				<Flag v="Power weapon" />
+			</_E>
+			<_F v="Ammo Refill Behavior Flags">
+				<Flag v="No automatic refill" />
+			</_F>
+			<_34 v="generated_pad33a9" length="1" />
+			<_40 v="Ammo Refill Variant Flags">
+				<_2 v="variant name" />
+				<_E v="Ammo Refill Flags">
+					<Flag v="None" />
+					<Flag v="Kinetic" />
+					<Flag v="Plasma" />
+					<Flag v="Hard light" />
+					<Flag v="Shock" />
+					<Flag v="Power weapon" />
+				</_E>
+				<_F v="Ammo Refill Behavior Flags">
+					<Flag v="No automatic refill" />
+				</_F>
+				<_34 v="generated_pad055c" length="1" />
+				<_3B v="" />
+			</_40>
+			<_D v="object secondary flags">
+				<Flag v="does not affect projectile aiming" />
+				<Flag v="never delete on bsp transition" />
+				<Flag v="Aim assist raycast does not ignore parents" />
+				<Flag v="Provides an override motion tracker blip sprite" />
+				<Flag v="Use the new animation system only" />
+				<Flag v="Detach children when the destroyed" />
+				<Flag v="Force projectile overpenetration" />
+				<Flag v="Create the Object Node Graph Component" />
+				<Flag v="Use inertialization" />
+				<Flag v="Cannot be grappled" />
+				<Flag v="Can be pulled to the player by the grapple hook" />
+				<Flag v="Damage Effect Sounds - Play Ineffective Hit" />
+				<Flag v="Always forward unhandled object functions to the parent" />
+				<Flag v="is valid submunition target" />
+				<Flag v="allow repeated bouncing projectile overpenetration" />
+				<Flag v="inconsequential target" />
+				<Flag v="active camo always on" />
+				<Flag v="object is invisible, even attachments" />
+				<Flag v="navmesh collision node opt in" />
+				<Flag v="Disable CVW Lighting" />
+				<Flag v="All Markers Use Unique Acoustic Sound Sources" />
+				<Flag v="Damage ignores owning unit" />
+				<Flag v="Enable doppler audio" />
+				<Flag v="blocks AOE if the AOE's epicenter is blocked" />
+				<Flag v="Enable Damage Hit Ticks" />
+				<Flag v="Blocks grapple aim assist" />
+				<Flag v="Send Damage Aftermath to Parent" />
+			</_D>
+			<_37 v="Customization" />
+			<_2 v="customization set" />
+			<_37 v="" />
+			<_40 v="attachments">
+				<_2 v="name" />
+				<_41 v="type" />
+				<_41 v="tag graph output" />
+				<_2 v="output node name" />
+				<_40 v="tag graph float params">
+					<_2 v="name" />
+					<_14 v="value" />
+					<_3B v="" />
+				</_40>
+				<_41 v="override type" />
+				<_36 v="variant names" />
+				<_40 v="variant names">
+					<_2 v="variant name" />
+					<_3B v="" />
+				</_40>
+				<_37 v="" />
+				<_2 v="marker" />
+				<_A v="change color">
+					<Flag v="none" />
+					<Flag v="primary" />
+					<Flag v="secondary" />
+					<Flag v="tertiary" />
+					<Flag v="quaternary" />
+				</_A>
+				<_F v="flags">
+					<Flag v="always create" />
+					<Flag v="effect size scale from object scale" />
+					<Flag v="update on create" />
+					<Flag v="always update" />
+				</_F>
+				<_34 v="generated_padbd3f" length="2" />
+				<_2 v="primary scale" />
+				<_2 v="secondary scale" />
+				<_3B v="" />
+			</_40>
+			<_40 v="indirect lighting data">
+				<_2 v="Name" />
+				<_40 v="Variant names">
+					<_2 v="variant name" />
+					<_3B v="" />
+				</_40>
+				<_41 v="Object Lightmap" />
+				<_40 v="Object Cubemap set">
+					<_2 v="Name" />
+					<_D v="Flags">
+						<Flag v="Enable Intensity Correction" />
+						<Flag v="Capture With Effects" />
+						<Flag v="Affects Adjacent Bsps" />
+						<Flag v="Capture Dynamic Objects" />
+					</_D>
+					<_38 v="Dumpling">
+						<_40 v="inner points">
+							<_17 v="position" />
+							<_3B v="" />
+						</_40>
+						<_40 v="outer points">
+							<_17 v="position" />
+							<_3B v="" />
+						</_40>
+						<_14 v="height" />
+						<_14 v="sink" />
+						<_14 v="inner value" />
+						<_14 v="outer value" />
+						<_17 v="center point" />
+						<_14 v="trivial cull radius squared" />
+						<_14 v="bound volume" />
+						<_3B v="" />
+					</_38>
+					<_41 v="Cubemap Bitmap" />
+					<_B v="Enable Parallax Correction">
+						<Flag v="Off" />
+						<Flag v="On" />
+					</_B>
+					<_5 v="Cubemap Volume Priority" />
+					<_17 v="Cubemap Origin" />
+					<_19 v="Depth Positive" />
+					<_19 v="Depth Negative" />
+					<_B v="Active Volume">
+						<Flag v="Off" />
+						<Flag v="On" />
+					</_B>
+					<_B v="Maximum cubemap size">
+						<Flag v="128x128" />
+						<Flag v="256x256" />
+						<Flag v="512x512" />
+					</_B>
+					<_17 v="Intensity" />
+					<_14 v="Self-illum Scale Down" />
+					<_40 v="EditorMetadata">
+						<_1 v="folder name" />
+						<_17 v="local space pivot point position" />
+						<_3B v="" />
+					</_40>
+					<_41 v="owner bsp" />
+					<_2 v="owner variant" />
+					<_5 v="runtime bsp index" />
+					<_5 v="runtime variant index" />
+					<_14 v="Blend Distance" />
+					<_C v="Cubemap Volume Type">
+						<Flag v="Prism" />
+						<Flag v="Sphere" />
+					</_C>
+					<_14 v="Orientation" />
+					<_41 v="Cubemap Depth Bitmap" />
+					<_14 v="Depth Blend Range" />
+					<_14 v="Intensity Scale" />
+					<_B v="Tintable">
+						<Flag v="Off" />
+						<Flag v="On" />
+					</_B>
+					<_34 v="generated_pad93d5" length="2" />
+					<_14 v="Relevancy Radius" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="hull surfaces">
+				<_E v="flags">
+					<Flag v="works on land" />
+					<Flag v="effects only" />
+				</_E>
+				<_34 v="generated_pad978b" length="2" />
+				<_37 v="" />
+				<_2 v="marker name" />
+				<_14 v="radius" />
+				<_40 v="drag">
+					<_2 v="material" />
+					<_38 v="drag">
+						<_37 v="Pressure" />
+						<_38 v="pressure">
+							<_37 v="velocity to force" />
+							<_38 v="velocity to pressure">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_14 v="max velocity" />
+							<_3B v="" />
+						</_38>
+						<_37 v="" />
+						<_37 v="Suction" />
+						<_38 v="suction">
+							<_37 v="velocity to force" />
+							<_38 v="velocity to pressure">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_14 v="max velocity" />
+							<_3B v="" />
+						</_38>
+						<_37 v="" />
+						<_14 v="linear damping" />
+						<_14 v="angular damping" />
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="jetwash">
+				<_37 v="" />
+				<_2 v="marker name" />
+				<_14 v="radius" />
+				<_6 v="maximum traces" />
+				<_14 v="maximum emission length" />
+				<_24 v="trace yaw angle" />
+				<_24 v="trace pitch angle" />
+				<_14 v="particle offset" />
+				<_3B v="" />
+			</_40>
+			<_40 v="widgets">
+				<_41 v="type" />
+				<_3B v="" />
+			</_40>
+			<_40 v="change colors">
+				<_40 v="initial permutations">
+					<_14 v="weight" />
+					<_1F v="color lower bound" />
+					<_1F v="color upper bound" />
+					<_2 v="variant name" />
+					<_3B v="" />
+				</_40>
+				<_40 v="functions">
+					<_D v="scale flags">
+						<Flag v="blend in hsv" />
+						<Flag v="...more colors" />
+					</_D>
+					<_1F v="color lower bound" />
+					<_1F v="color upper bound" />
+					<_2 v="darken by" />
+					<_2 v="scale by" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="multiplayer object">
+				<_36 v="TYPE AND FLAGS" />
+				<_A v="type">
+					<Flag v="ordinary" />
+					<Flag v="weapon" />
+					<Flag v="grenade" />
+					<Flag v="projectile" />
+					<Flag v="powerup" />
+					<Flag v="equipment" />
+					<Flag v="ammo pack" />
+					<Flag v="light land vehicle" />
+					<Flag v="heavy land vehicle" />
+					<Flag v="flying vehicle" />
+					<Flag v="turret" />
+					<Flag v="device" />
+					<Flag v="dispenser" />
+					<Flag v="teleporter 2way" />
+					<Flag v="teleporter sender" />
+					<Flag v="teleporter receiver" />
+					<Flag v="player spawn location" />
+					<Flag v="player respawn zone" />
+					<Flag v="named location area" />
+					<Flag v="danger zone" />
+					<Flag v="safe volume" />
+					<Flag v="kill volume" />
+					<Flag v="cinematic camera" />
+					<Flag v="trait zone" />
+					<Flag v="powerup pad - deprecated" />
+					<Flag v="weapon pad" />
+					<Flag v="light" />
+					<Flag v="jumbotron" />
+					<Flag v="man cannon" />
+					<Flag v="cinematic marker" />
+					<Flag v="script brain" />
+					<Flag v="static io" />
+					<Flag v="fx" />
+					<Flag v="bot navigation marker" />
+					<Flag v="jump hint volume" />
+				</_A>
+				<_F v="teleporter passability">
+					<Flag v="disallow players" />
+					<Flag v="allow light land vehicles" />
+					<Flag v="allow heavy land vehicles" />
+					<Flag v="allow flying vehicles" />
+					<Flag v="allow projectiles" />
+				</_F>
+				<_A v="spawn timer type">
+					<Flag v="starts on death" />
+					<Flag v="starts on disturbance" />
+				</_A>
+				<_34 v="generated_padd1ba" length="1" />
+				<_5 v="number of fx color overrides" />
+				<_34 v="generated_pad1e6f" length="2" />
+				<_36 v="GOAL AND RESPAWN ZONE OBJECT BOUNDARY" />
+				<_14 v="boundary width/radius" />
+				<_14 v="boundary box length" />
+				<_14 v="boundary +height" />
+				<_14 v="boundary -height" />
+				<_A v="boundary shape">
+					<Flag v="unused" />
+					<Flag v="sphere" />
+					<Flag v="cylinder" />
+					<Flag v="box" />
+				</_A>
+				<_34 v="pad_shape1" length="1" />
+				<_34 v="pad_shape2" length="2" />
+				<_36 v="SPAWNING DATA" />
+				<_5 v="default spawn time" />
+				<_5 v="default abandonment time" />
+				<_D v="flags">
+					<Flag v="Only render if editable" />
+					<Flag v="DEPRECATED phased physics in forge" />
+					<Flag v="valid initial player spawn" />
+					<Flag v="fixed boundary orientation" />
+					<Flag v="candy monitor should ignore" />
+					<Flag v="inherit owning team color" />
+					<Flag v="boundary volume doesn't kill immediately" />
+					<Flag v="Only collision if editable" />
+					<Flag v="Only physics if editable" />
+					<Flag v="Force render in Forge" />
+					<Flag v="respawn player spawn" />
+					<Flag v="fallback player spawn" />
+					<Flag v="jump hint volume is one-way" />
+				</_D>
+				<_36 v="RESPAWN ZONE DATA" />
+				<_14 v="normal weight" />
+				<_40 v="falloff function">
+					<_38 v="function">
+						<_37 v="function" />
+						<_38 v="function">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_36 v="MARKER DATA" />
+				<_37 v="" />
+				<_2 v="boundary center marker" />
+				<_37 v="" />
+				<_2 v="spawned object marker name" />
+				<_36 v="SPAWNED OBJECT" />
+				<_41 v="spawned object" />
+				<_2 v="NYI boundary material" />
+				<_36 v="BOUNDARY SHADER - DEFAULT" />
+				<_41 v="boundary standard shader" />
+				<_36 v="BOUNDARY SHADER - SPHERE" />
+				<_41 v="sphere standard shader" />
+				<_36 v="BOUNDARY SHADER - CYLINDER" />
+				<_41 v="cylinder standard shader" />
+				<_36 v="BOUNDARY SHADER - BOX" />
+				<_41 v="box standard shader" />
+				<_36 v="FORGE DATA" />
+				<_E v="Forge Property Flags">
+					<Flag v="Disable yaw" />
+					<Flag v="Can Only Be Rotated On Yaw" />
+					<Flag v="Allow In Game Variant Toggle" />
+					<Flag v="Disable primary color change" />
+					<Flag v="Disable secondary color change" />
+					<Flag v="Disable tertiary color change" />
+					<Flag v="Disable normal physics" />
+					<Flag v="Disable fixed physics" />
+					<Flag v="Disable phased physics" />
+				</_E>
+				<_A v="Default Physics Type">
+					<Flag v="Normal" />
+					<Flag v="Fixed" />
+					<Flag v="Phased" />
+				</_A>
+				<_34 v="generated_pad6b24" length="1" />
+				<_2 v="Default Primary Color" />
+				<_2 v="Default Secondary Color" />
+				<_2 v="Default Tertiary Color" />
+				<_3C v="Default Primary Glossiness" />
+				<_3C v="Default Secondary Glossiness" />
+				<_3C v="Default Tertiary Glossiness" />
+				<_34 v="generated_padb7d9" length="1" />
+				<_2 v="Default Label [1]" />
+				<_2 v="Default Label [2]" />
+				<_2 v="Default Label [3]" />
+				<_2 v="Default Label [4]" />
+				<_7 v="m_defaultBoundaryPipelineState" />
+				<_7 v="m_sphereBoundaryPipelineStates" />
+				<_7 v="m_cylinderBoundaryPipelineStates" />
+				<_7 v="m_boxBoundaryPipelineStates" />
+				<_14 v="Callout Radius" />
+				<_34 v="generated_pad048e" length="4" />
+				<_3B v="" />
+			</_40>
+			<_40 v="Forge data">
+				<_41 v="Palette" />
+				<_2 v="Name" />
+				<_2 v="Description" />
+				<_14 v="Placement Priority" />
+				<_2 v="Variant Name" />
+				<_41 v="Configuration" />
+				<_19 v="Starting yaw/pitch/roll" />
+				<_3B v="" />
+			</_40>
+			<_41 v="simulation_interpolation" />
+			<_41 v="authority trust settings" />
+			<_40 v="spawn effects">
+				<_36 v="Spawn Effects" />
+				<_41 v="multiplayer spawn effect" />
+				<_41 v="campaign spawn effect" />
+				<_3B v="" />
+			</_40>
+			<_40 v="model dissolve data">
+				<_41 v="model dissolve data" />
+				<_3B v="" />
+			</_40>
+			<_1 v="class name" />
+			<_40 v="script tagalongs">
+				<_41 v="reference" />
+				<_3B v="" />
+			</_40>
+			<_41 v="prototype script" />
+			<_36 v="Object Abandoment" />
+			<_38 v="object abandonment">
+				<_14 v="Vitality Limit To Start Countdown" />
+				<_14 v="Countdown Time In Seconds" />
+				<_F v="flags">
+					<Flag v="Enable In Multiplayer" />
+					<Flag v="Enable In Single Player" />
+				</_F>
+				<_34 v="generated_pade8bf" length="3" />
+				<_3B v="" />
+			</_38>
+			<_40 v="Designer Metadata">
+				<_2 v="meta label" />
+				<_3B v="" />
+			</_40>
+			<_36 v="Object Function Smoothing" />
+			<_40 v="Object Sound RTPCs">
+				<_30 v="Attachment Index" />
+				<_2 v="Function" />
+				<_2 v="RTPC Name" />
+				<_6 v="RTPC name hash value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="Object Sound Sweeteners">
+				<_2 v="Function" />
+				<_41 v="sound" />
+				<_14 v="Switch point" />
+				<_6 v="Mode" />
+				<_3B v="" />
+			</_40>
+			<_2 v="Audio acoustics root marker override" />
+			<_14 v="Audio Acoustics Transparency" />
+			<_40 v="Object function smoothing">
+				<_2 v="id" />
+				<_2 v="alias of" />
+				<_15 v="smoothing factor" />
+				<_3B v="" />
+			</_40>
+			<_A v="Animated mesh animation type">
+				<Flag v="None" />
+				<Flag v="One Time" />
+				<Flag v="Looping" />
+			</_A>
+			<_34 v="generated_pad805e" length="3" />
+			<_14 v="Placement cost multiplier" />
+			<_41 v="Trigger volume component info" />
+			<_40 v="Tracking Info">
+				<_36 v="Map these settings to a ping type" />
+				<_F v="flags">
+					<Flag v="trackable" />
+					<Flag v="enabled by default" />
+					<Flag v="outline" />
+					<Flag v="immediate response" />
+					<Flag v="follow offscreen" />
+					<Flag v="do not track children" />
+					<Flag v="do not outline children" />
+				</_F>
+				<_A v="ping type">
+					<Flag v="active" />
+					<Flag v="passive" />
+					<Flag v="custom active" />
+					<Flag v="target marking" />
+				</_A>
+				<_A v="team visibility">
+					<Flag v="visible to everyone" />
+					<Flag v="hidden from enemies" />
+					<Flag v="hidden from friends" />
+				</_A>
+				<_37 v="Misc" />
+				<_A v="priority">
+					<Flag v="critical" />
+					<Flag v="high" />
+					<Flag v="normal" />
+					<Flag v="low" />
+				</_A>
+				<_37 v="" />
+				<_2 v="ping group" />
+				<_37 v="Nav Point" />
+				<_2 v="nav point screen" />
+				<_2 v="nav point label" />
+				<_14 v="nav point vertical offset" />
+				<_37 v="" />
+				<_36 v="Range Override" />
+				<_14 v="range" />
+				<_37 v="Effects" />
+				<_41 v="ping hit instigator effect" />
+				<_41 v="ping hit effect" />
+				<_41 v="outline override" />
+				<_37 v="" />
+				<_3B v="" />
+			</_40>
+			<_41 v="Property Based Effects" />
+			<_40 v="Interactions">
+				<_2 v="Marker" />
+				<_40 v="Ambient Info">
+					<_A v="desire type">
+						<Flag v="Scripted" />
+						<Flag v="Health" />
+						<Flag v="Defense" />
+						<Flag v="Attack Enemy" />
+						<Flag v="Weapon" />
+						<Flag v="Vehicle" />
+					</_A>
+					<_34 v="generated_pad5f2a" length="3" />
+					<_C v="action">
+						<Flag v="Base (Do not use)" />
+						<Flag v="Ground" />
+						<Flag v="Crouch" />
+						<Flag v="Melee" />
+						<Flag v="Turn" />
+						<Flag v="Shoot" />
+						<Flag v="Airborne" />
+						<Flag v="Jump" />
+						<Flag v="WeaponReady" />
+						<Flag v="WeaponSwitch" />
+						<Flag v="WeaponPickup" />
+						<Flag v="WeaponDrop" />
+						<Flag v="Grenade" />
+						<Flag v="Dead" />
+						<Flag v="AnimatedMove" />
+						<Flag v="InteractWeaponPickup" />
+						<Flag v="InteractDevice" />
+						<Flag v="InteractLaunchObject" />
+						<Flag v="HardPing" />
+						<Flag v="Align" />
+						<Flag v="ShieldRaise" />
+						<Flag v="ActivateEquipment" />
+						<Flag v="PhysicsImpulse" />
+						<Flag v="DeathPing" />
+						<Flag v="MediumPing" />
+						<Flag v="SoftPing" />
+						<Flag v="ScriptedSequence" />
+						<Flag v="CustomAnimation" />
+						<Flag v="DeflectProjectile" />
+						<Flag v="VehicleEnter" />
+						<Flag v="VehicleExit" />
+						<Flag v="Vehicle" />
+						<Flag v="Brace" />
+						<Flag v="WeaponDraw" />
+						<Flag v="WeaponStow" />
+						<Flag v="HardStop" />
+						<Flag v="Hoist" />
+						<Flag v="PreCombatPointActivity" />
+						<Flag v="Stunned" />
+						<Flag v="ObstacleSmash" />
+						<Flag v="WeaponVent" />
+						<Flag v="SoftPingDefenseScreen" />
+						<Flag v="ThrowEquipment" />
+						<Flag v="Hijack" />
+						<Flag v="Kamikaze" />
+						<Flag v="CloseQuartersDefenseBlast" />
+						<Flag v="Search" />
+						<Flag v="SearchFound" />
+						<Flag v="Surprise" />
+						<Flag v="Hover" />
+						<Flag v="Alert" />
+						<Flag v="AlertCallout" />
+						<Flag v="WeaponFidget" />
+						<Flag v="WeaponReload" />
+						<Flag v="FullbodyAnimation" />
+						<Flag v="ActivateCamo" />
+						<Flag v="TradeWeapon" />
+						<Flag v="Flying" />
+						<Flag v="MultiTargetTrackedAttack" />
+						<Flag v="Berserk" />
+						<Flag v="LeapWindup" />
+						<Flag v="AnimatedTell" />
+						<Flag v="TeleportArrive" />
+						<Flag v="JinkFire" />
+						<Flag v="DialogueAnimation" />
+						<Flag v="Swoop" />
+						<Flag v="AirborneMelee" />
+						<Flag v="Land" />
+						<Flag v="Hunker" />
+						<Flag v="Launching" />
+						<Flag v="PreAndPostFire" />
+						<Flag v="AnimatedPosture" />
+						<Flag v="Boarding" />
+					</_C>
+					<_2 v="Animation Token Override" />
+					<_14 v="Time playing animation" />
+					<_14 v="Cooldown time" />
+					<_2 v="composition name" />
+					<_41 v="composition definition" />
+					<_14 v="Max distance agents will consider this opp from" />
+					<_40 v="Ambient meta labels">
+						<_2 v="meta label" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Exclusion meta labels">
+						<_2 v="meta label" />
+						<_3B v="" />
+					</_40>
+					<_14 v="Min Danger to Activate" />
+					<_14 v="Max Danger to Activate" />
+					<_14 v="Abort Danger Level" />
+					<_14 v="Chance Per Second" />
+					<_14 v="Min Enemy Target Distance" />
+					<_14 v="Max Enemy Target Distance" />
+					<_14 v="Max Height Difference" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_37 v="Motion tracker blips" />
+			<_A v="blip sprite index override">
+				<Flag v="Self" />
+				<Flag v="Vehicle Ally" />
+				<Flag v="Vehicle Enemy" />
+				<Flag v="Vehicle Ally Gutter" />
+				<Flag v="Vehicle Enemy Gutter" />
+				<Flag v="Vehicle Ally Vertical" />
+				<Flag v="Vehicle Enemy Vertical" />
+				<Flag v="Vehicle Ally Gutter Vertical" />
+				<Flag v="Vehicle Enemy Gutter Vertical" />
+				<Flag v="Human Ally" />
+				<Flag v="Human Enemy" />
+				<Flag v="Human Ally Gutter" />
+				<Flag v="Human Enemy Gutter" />
+				<Flag v="Human Ally Vertical" />
+				<Flag v="Human Enemy Vertical" />
+				<Flag v="Human Ally Gutter Vertical" />
+				<Flag v="Human Enemy Gutter Vertical" />
+				<Flag v="Major AI Ally" />
+				<Flag v="Major AI Enemy" />
+				<Flag v="Major AI Ally Gutter" />
+				<Flag v="Major AI Enemy Gutter" />
+				<Flag v="Major AI Ally Vertical" />
+				<Flag v="Major AI Enemy Vertical" />
+				<Flag v="Major AI Ally Gutter Vertical" />
+				<Flag v="Major AI Enemy Gutter Vertical" />
+				<Flag v="Minor AI Ally" />
+				<Flag v="Minor AI Enemy" />
+				<Flag v="Minor AI Ally Vertical" />
+				<Flag v="Minor AI Enemy Vertical" />
+				<Flag v="Unnamed sprite index29" />
+				<Flag v="Unnamed sprite index30" />
+				<Flag v="Unnamed sprite index31" />
+			</_A>
+			<_34 v="generated_pad9a3f" length="3" />
+			<_37 v="" />
+			<_40 v="data driven scripted sequence actions definitions.">
+				<_0 v="Prototype trigger lua function name" />
+				<_40 v="Component Actions">
+					<_0 v="Request action lua function name" />
+					<_0 v="Go to next action condition lua function name" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_41 v="Animation Node Graph" />
+			<_38 v="Anim Set Table">
+				<_40 v="channels">
+					<_2 v="channel" />
+					<_3B v="" />
+				</_40>
+				<_40 v="table entries">
+					<_2 v="token" />
+					<_41 v="animset" />
+					<_41 v="Runtime animset (used by code only)" />
+					<_3C v="is default" />
+					<_34 v="generated_padca09" length="1" />
+					<_E v="flags">
+						<Flag v="is default" />
+					</_E>
+					<_40 v="Variants">
+						<_2 v="Variant" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_14 v="Inertialization Duration" />
+			<_14 v="Pill Offset Blend Rate For Ground IK" />
+			<_25 v="Stationary Root Offset Limit" />
+			<_25 v="Moving Root Offset Limit" />
+			<_14 v="Ground IK marker above ground tolerance" />
+			<_14 v="Ground Probe Start Position Height Scale for Ground IK" />
+			<_14 v="Ground Probe Additional Height Distance" />
+			<_42 v="Anim Set Nodegraph Metadata" />
+			<_37 v="Root Bone Correction Settings" />
+			<_38 v="RootBoneCorrectionSettings">
+				<_F v="flags">
+					<Flag v="AnimEventFunctionOverrideCorrectionType" />
+				</_F>
+				<_A v="Root Bone Correction Type">
+					<Flag v="Off" />
+					<Flag v="FractionOfAnimationDuration" />
+					<Flag v="StaticDuration" />
+				</_A>
+				<_34 v="generated_pad0a63" length="2" />
+				<_14 v="Root Bone Correction Duration" />
+				<_A v="Root Bone Correction Bone Index">
+					<Flag v="RootBone" />
+					<Flag v="Pelvis" />
+				</_A>
+				<_34 v="generated_padbdae" length="3" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_40 v="Leg Grounding Settings">
+				<_2 v="Marker" />
+				<_14 v="Planted Threshold" />
+				<_14 v="Lifted Threshold" />
+				<_14 v="Lifted Minimum Time" />
+				<_B v="Event">
+					<Flag v="none" />
+					<Flag v="primary_keyframe" />
+					<Flag v="secondary_keyframe" />
+					<Flag v="tertiary_keyframe" />
+					<Flag v="left_foot" />
+					<Flag v="right_foot" />
+					<Flag v="allow_interruption" />
+					<Flag v="do_not_allow_interruption" />
+					<Flag v="both_feet_shuffle" />
+					<Flag v="body_impact" />
+					<Flag v="left_foot_lock" />
+					<Flag v="left_foot_unlock" />
+					<Flag v="right_foot_lock" />
+					<Flag v="right_foot_unlock" />
+					<Flag v="blend_range_marker" />
+					<Flag v="stride_expansion" />
+					<Flag v="stride_contraction" />
+					<Flag v="ragdoll_keyframe" />
+					<Flag v="drop_weapon_keyframe" />
+					<Flag v="match_a" />
+					<Flag v="match_b" />
+					<Flag v="match_c" />
+					<Flag v="match_d" />
+					<Flag v="jetpack_closed" />
+					<Flag v="jetpack_open" />
+					<Flag v="sound_event" />
+					<Flag v="effect_event" />
+					<Flag v="left_hand" />
+					<Flag v="right_hand" />
+					<Flag v="grenade" />
+					<Flag v="melee" />
+					<Flag v="interact_device" />
+					<Flag v="shield_raise" />
+					<Flag v="activate_equipment" />
+					<Flag v="aoe_attack" />
+					<Flag v="equipment" />
+					<Flag v="jink_fire" />
+					<Flag v="align_to_target" />
+					<Flag v="block_exiting" />
+					<Flag v="set_interruptable" />
+					<Flag v="disable_shooting" />
+					<Flag v="re_enable_shooting" />
+					<Flag v="skip_crouch_transition" />
+					<Flag v="start_bamf" />
+					<Flag v="end_bamf" />
+					<Flag v="hide" />
+					<Flag v="frame_attachment_objects_show" />
+					<Flag v="frame_attachment_objects_hide" />
+					<Flag v="creature_physics_mode_change" />
+					<Flag v="melee_range" />
+					<Flag v="frame_attachment_switch_to_secondary_parent_marker" />
+					<Flag v="frame_attachment_switch_to_default_parent_marker" />
+					<Flag v="allow_sprint_interrupt" />
+				</_B>
+				<_34 v="generated_paddc16" length="2" />
+				<_3B v="" />
+			</_40>
+			<_37 v="Wrist Break Fixup" />
+			<_14 v="Wrist Break Interp Time" />
+			<_14 v="Wrist Break Angle Limit" />
+			<_14 v="Wrist Break Fixup Scale" />
+			<_37 v="" />
+			<_F v="Flags">
+				<Flag v="Use Procedural Footstep Events" />
+				<Flag v="Use Wrist Break IK Fixup" />
+			</_F>
+			<_34 v="generated_pad6f99" length="3" />
+			<_37 v="Object Node Graph" />
+			<_40 v="Object Node Graphs">
+				<_2 v="Name" />
+				<_41 v="Exported Node Graph" />
+				<_F v="Flags">
+					<Flag v="Runs on Server" />
+					<Flag v="Runs on Client" />
+					<Flag v="Start updating on the first frame" />
+				</_F>
+				<_A v="Enable Node Graph">
+					<Flag v="Default" />
+					<Flag v="Yes" />
+					<Flag v="No" />
+				</_A>
+				<_34 v="generated_pad8671" length="2" />
+				<_3B v="" />
+			</_40>
+			<_37 v="" />
+			<_40 v="parent animation matching">
+				<_36 v="ANIMATION REMAPPING" />
+				<_2 v="animation on parent" />
+				<_2 v="animation to play on object" />
+				<_2 v="animation set to use with the child object's animation" />
+				<_3B v="" />
+			</_40>
+			<_37 v="model variant switching" />
+			<_36 v="MODEL VARIANT SWITCHING" />
+			<_2 v="model variant switching function" />
+			<_40 v="model variant switching table">
+				<_25 v="function result range" />
+				<_2 v="model variant name" />
+				<_3B v="" />
+			</_40>
+			<_37 v="" />
+			<_37 v="knockback" />
+			<_14 v="knockback impulse scalar" />
+			<_37 v="" />
+			<_37 v="Ability Components" />
+			<_40 v="location sensor">
+				<_37 v="Sensor Parameters" />
+				<_D v="sensor flags">
+					<Flag v="use proximity activation" />
+					<Flag v="use reveal duration inside detection radius" />
+					<Flag v="use order based reveal delays" />
+					<Flag v="don't reveal targets to the motion tracker" />
+					<Flag v="only play radius effect for owner" />
+					<Flag v="show player name instead of health" />
+				</_D>
+				<_14 v="ping frequency" />
+				<_14 v="ping radius" />
+				<_14 v="reveal duration" />
+				<_14 v="scanning duration" />
+				<_14 v="minimum delay between marks" />
+				<_14 v="delay per distance" />
+				<_37 v="" />
+				<_37 v="Sensor Visuals" />
+				<_41 v="sensor radius effect" />
+				<_2 v="sensor radius effect marker" />
+				<_41 v="sensor ping effect" />
+				<_37 v="" />
+				<_37 v="Target Visuals" />
+				<_41 v="target outline" />
+				<_41 v="target visor ping effect" />
+				<_2 v="target visor ping effect marker" />
+				<_37 v="" />
+				<_37 v="Navpoints" />
+				<_2 v="sensor navpoint name" />
+				<_2 v="sensor navpoint marker" />
+				<_2 v="target navpoint name" />
+				<_2 v="target navpoint marker" />
+				<_37 v="" />
+				<_3B v="" />
+			</_40>
+			<_40 v="shroud generator">
+				<_14 v="outer radius" />
+				<_2 v="edge effect marker" />
+				<_41 v="biped enter effect" />
+				<_41 v="biped inside effect" />
+				<_41 v="biped leave effect" />
+				<_37 v="Mapping function" />
+				<_38 v="inside shrouded mapping">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_14 v="max distance inside for shroud" />
+				<_37 v="Mapping function" />
+				<_38 v="outside shrouded mapping">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_14 v="max distance outside for shroud" />
+				<_37 v="Blocker" />
+				<_41 v="blocker object" />
+				<_2 v="blocker attach marker" />
+				<_2 v="blocker attach child marker" />
+				<_14 v="blocker scale" />
+				<_37 v="" />
+				<_3B v="" />
+			</_40>
+			<_37 v="" />
+			<_40 v="Power Component">
+				<_36 v="Power Component System" />
+				<_40 v="power source configurations">
+					<_2 v="name" />
+					<_15 v="capacity" />
+					<_3B v="" />
+				</_40>
+				<_40 v="power sources">
+					<_2 v="region name" />
+					<_6 v="runtime region index" />
+					<_36 v="Model Region Damage State Configurations" />
+					<_40 v="state configurations">
+						<_B v="region state">
+							<Flag v="default" />
+							<Flag v="minor damage" />
+							<Flag v="medium damage" />
+							<Flag v="major damage" />
+							<Flag v="destroyed" />
+						</_B>
+						<_2E v="configuration" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_37 v="communication node capacity" />
+				<_40 v="communication node power sources">
+					<_2E v="component" />
+					<_3B v="" />
+				</_40>
+				<_2 v="communication node power modifier id" />
+				<_37 v="" />
+				<_37 v="locomotion capacity" />
+				<_40 v="locomotion power sources">
+					<_2E v="component" />
+					<_3B v="" />
+				</_40>
+				<_2 v="locomotion power modifier id" />
+				<_37 v="locomotion power modifier" />
+				<_38 v="locomotion power modifier">
+					<_14 v="Base Value" />
+					<_25 v="Value Bounds" />
+					<_3B v="" />
+				</_38>
+				<_37 v="" />
+				<_37 v="weapon capacity" />
+				<_40 v="weapon power sources">
+					<_2E v="component" />
+					<_3B v="" />
+				</_40>
+				<_2 v="weapon power modifier id" />
+				<_37 v="" />
+				<_3B v="" />
+			</_40>
+			<_40 v="self destruct handler">
+				<_40 v="Self destruct sounds">
+					<_36 v="SELF DESTRUCTION SOUNDS" />
+					<_6 v="active damage section count" />
+					<_41 v="sound to play" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Indirect Lighting Component">
+				<_2 v="Lightmap attachment bone" />
+				<_3B v="" />
+			</_40>
+			<_37 v="" />
+			<_34 v="generated_paddd0c" length="4" />
+			<_3B v="" />
+		</_38>
+		<_37 v="$$$ UNIT $$$" />
+		<_D v="unit flags">
+			<Flag v="circular aiming" />
+			<Flag v="destroyed after dying" />
+			<Flag v="half-speed interpolation" />
+			<Flag v="fires from camera" />
+			<Flag v="entrance inside bounding sphere" />
+			<Flag v="doesn't show readied weapon" />
+			<Flag v="causes passenger dialogue" />
+			<Flag v="resists pings" />
+			<Flag v="melee attack is fatal" />
+			<Flag v="don't reface during pings" />
+			<Flag v="has no aiming" />
+			<Flag v="impact melee attaches to unit" />
+			<Flag v="impact melee dies on shields" />
+			<Flag v="cannot open doors automatically" />
+			<Flag v="melee attackers cannot attach" />
+			<Flag v="not instantly killed by melee" />
+			<Flag v="flashlight power doesnt transfer to weapon" />
+			<Flag v="runs around flaming" />
+			<Flag v="top level for AOE damage" />
+			<Flag v="special cinematic unit" />
+			<Flag v="ignored by autoaiming" />
+			<Flag v="shields fry infection forms" />
+			<Flag v="use velocity as acceleration" />
+			<Flag v="can dual wield" />
+			<Flag v="acts as gunner for parent" />
+			<Flag v="controlled by parent gunner" />
+			<Flag v="parent's primary weapon" />
+			<Flag v="parent's secondary weapon" />
+			<Flag v="unit has vectored thrust" />
+			<Flag v="allow aim while opening or closing" />
+			<Flag v="compute acceleration from aiming" />
+			<Flag v="override all pings" />
+		</_D>
+		<_D v="flags2">
+			<Flag v="unit supports bailout" />
+			<Flag v="flying_or_vehicle_hard_pings_allowed" />
+			<Flag v="attempt to fire from weapon matching camera" />
+			<Flag v="treat as vehicle " />
+			<Flag v="dropped weapons can dissolve" />
+			<Flag v="hard pings not allowed for driver-less vehicle" />
+			<Flag v="No friendly bump damage " />
+			<Flag v="ignores attachment feedback forced hard pings" />
+			<Flag v="unit appears on radar as dot not sprite" />
+			<Flag v="suppress radar blip" />
+			<Flag v="do not ignore parents for line of sight tests" />
+			<Flag v="do not pass attached AOE damage to children" />
+			<Flag v="do not generate AI line of fire pill for unit" />
+			<Flag v="allows procedural soft pings" />
+			<Flag v="allows procedural recoils" />
+			<Flag v="hide unreadied weapons" />
+			<Flag v="disable collision at death" />
+			<Flag v="always hard ping at death" />
+			<Flag v="component required - active camo" />
+			<Flag v="component required - power up" />
+			<Flag v="Preserve controlled aim and look directions, after/while unit is no longer controlled" />
+			<Flag v="Disable Damage Effect Sounds on this unit (defer to material effects)" />
+			<Flag v="Always play material effect sounds" />
+			<Flag v="Bucket unit audio priority based on distance" />
+			<Flag v="Play a minor lethal sound upon death" />
+			<Flag v="Allow children to play damage effect sounds" />
+			<Flag v="Disallow Lunge" />
+		</_D>
+		<_B v="default team">
+			<Flag v="default" />
+			<Flag v="player" />
+			<Flag v="human" />
+			<Flag v="covenant" />
+			<Flag v="brute" />
+			<Flag v="mule" />
+			<Flag v="wild_captive" />
+			<Flag v="wild_free" />
+			<Flag v="spare" />
+			<Flag v="covenant_player" />
+			<Flag v="forerunner" />
+			<Flag v="neutral" />
+		</_B>
+		<_B v="constant sound volume">
+			<Flag v="silent" />
+			<Flag v="quiet" />
+			<Flag v="medium" />
+			<Flag v="shout" />
+			<Flag v="loud" />
+		</_B>
+		<_41 v="hologram unit reference" />
+		<_40 v="campaign metagame bucket">
+			<_F v="flags">
+				<Flag v="only counts with riders" />
+			</_F>
+			<_A v="type">
+				<Flag v="grunt" />
+				<Flag v="jackal" />
+				<Flag v="skirmisher" />
+				<Flag v="marine" />
+				<Flag v="spartan" />
+				<Flag v="bugger" />
+				<Flag v="hunter" />
+				<Flag v="flood_infection" />
+				<Flag v="flood_carrier" />
+				<Flag v="flood_combat" />
+				<Flag v="flood_pure" />
+				<Flag v="sentinel" />
+				<Flag v="elite" />
+				<Flag v="engineer" />
+				<Flag v="mule" />
+				<Flag v="turret" />
+				<Flag v="mongoose" />
+				<Flag v="warthog" />
+				<Flag v="scorpion" />
+				<Flag v="hornet" />
+				<Flag v="pelican" />
+				<Flag v="revenant" />
+				<Flag v="seraph" />
+				<Flag v="shade" />
+				<Flag v="watchtower" />
+				<Flag v="ghost" />
+				<Flag v="chopper" />
+				<Flag v="mauler" />
+				<Flag v="wraith" />
+				<Flag v="banshee" />
+				<Flag v="phantom" />
+				<Flag v="scarab" />
+				<Flag v="guntower" />
+				<Flag v="tuning_fork" />
+				<Flag v="broadsword" />
+				<Flag v="mammoth" />
+				<Flag v="lich" />
+				<Flag v="mantis" />
+				<Flag v="wasp" />
+				<Flag v="phaeton" />
+				<Flag v="bishop" />
+				<Flag v="knight" />
+				<Flag v="pawn" />
+				<Flag v="soldier" />
+				<Flag v="packmaster" />
+				<Flag v="cavalier" />
+				<Flag v="brute" />
+				<Flag v="hoverer" />
+				<Flag v="crusher" />
+			</_A>
+			<_A v="class">
+				<Flag v="infantry" />
+				<Flag v="leader" />
+				<Flag v="hero" />
+				<Flag v="specialist" />
+				<Flag v="light vehicle" />
+				<Flag v="heavy vehicle" />
+				<Flag v="giant vehicle" />
+				<Flag v="standard vehicle" />
+			</_A>
+			<_34 v="generated_pad6695" length="1" />
+			<_5 v="point count" />
+			<_3B v="" />
+		</_40>
+		<_40 v="screen effects">
+			<_41 v="screen effect" />
+			<_3B v="" />
+		</_40>
+		<_14 v="camera stiffness" />
+		<_38 v="unit camera">
+			<_37 v="Unit Camera" />
+			<_E v="flags">
+				<Flag v="pitch bounds absolute space" />
+				<Flag v="only collides with environment" />
+				<Flag v="hides player-unit from camera" />
+				<Flag v="use aiming vector instead of marker forward" />
+			</_E>
+			<_34 v="generated_padc79e" length="2" />
+			<_37 v="" />
+			<_2 v="camera marker name" />
+			<_8 v="pitch auto-level" />
+			<_24 v="pitch range" />
+			<_40 v="camera tracks">
+				<_41 v="track" />
+				<_41 v="screen effect" />
+				<_14 v="transition time in" />
+				<_14 v="transition time out" />
+				<_3B v="" />
+			</_40>
+			<_8 v="pitch minimum spring" />
+			<_8 v="pitch mmaximum spring" />
+			<_8 v="spring velocity" />
+			<_8 v="look acceleration" />
+			<_8 v="look deceleration" />
+			<_15 v="look acc smoothing fraction" />
+			<_8 v="field of view bias" />
+			<_38 v="camera obstruction">
+				<_15 v="cylinder fraction" />
+				<_8 v="obstruction test angle" />
+				<_14 v="obstruction max inward accel" />
+				<_14 v="obstruction max outward accel" />
+				<_14 v="obstruction max velocity" />
+				<_14 v="obstruction return delay" />
+				<_3B v="" />
+			</_38>
+			<_40 v="camera acceleration">
+				<_14 v="maximum camera velocity" />
+				<_36 v="" />
+				<_38 v="forward/back">
+					<_A v="Input Variable">
+						<Flag v="linear velocity" />
+						<Flag v="linear acceleration" />
+						<Flag v="yaw" />
+						<Flag v="pitch" />
+						<Flag v="roll" />
+					</_A>
+					<_34 v="generated_padd066" length="3" />
+					<_37 v="mapping" />
+					<_38 v="mapping">
+						<_37 v="" />
+						<_42 v="data" />
+						<_37 v="" />
+						<_3B v="" />
+					</_38>
+					<_14 v="maximum value" />
+					<_14 v="camera scale (axial)" />
+					<_14 v="camera scale (perpendicular)" />
+					<_3B v="" />
+				</_38>
+				<_38 v="left/right">
+					<_A v="Input Variable">
+						<Flag v="linear velocity" />
+						<Flag v="linear acceleration" />
+						<Flag v="yaw" />
+						<Flag v="pitch" />
+						<Flag v="roll" />
+					</_A>
+					<_34 v="generated_padd066" length="3" />
+					<_37 v="mapping" />
+					<_38 v="mapping">
+						<_37 v="" />
+						<_42 v="data" />
+						<_37 v="" />
+						<_3B v="" />
+					</_38>
+					<_14 v="maximum value" />
+					<_14 v="camera scale (axial)" />
+					<_14 v="camera scale (perpendicular)" />
+					<_3B v="" />
+				</_38>
+				<_38 v="up/down">
+					<_A v="Input Variable">
+						<Flag v="linear velocity" />
+						<Flag v="linear acceleration" />
+						<Flag v="yaw" />
+						<Flag v="pitch" />
+						<Flag v="roll" />
+					</_A>
+					<_34 v="generated_padd066" length="3" />
+					<_37 v="mapping" />
+					<_38 v="mapping">
+						<_37 v="" />
+						<_42 v="data" />
+						<_37 v="" />
+						<_3B v="" />
+					</_38>
+					<_14 v="maximum value" />
+					<_14 v="camera scale (axial)" />
+					<_14 v="camera scale (perpendicular)" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_36 v="sync action camera fields" />
+		<_38 v="sync action camera">
+			<_37 v="Unit Camera" />
+			<_E v="flags">
+				<Flag v="pitch bounds absolute space" />
+				<Flag v="only collides with environment" />
+				<Flag v="hides player-unit from camera" />
+				<Flag v="use aiming vector instead of marker forward" />
+			</_E>
+			<_34 v="generated_padc79e" length="2" />
+			<_37 v="" />
+			<_2 v="camera marker name" />
+			<_8 v="pitch auto-level" />
+			<_24 v="pitch range" />
+			<_40 v="camera tracks">
+				<_41 v="track" />
+				<_41 v="screen effect" />
+				<_14 v="transition time in" />
+				<_14 v="transition time out" />
+				<_3B v="" />
+			</_40>
+			<_8 v="pitch minimum spring" />
+			<_8 v="pitch mmaximum spring" />
+			<_8 v="spring velocity" />
+			<_8 v="look acceleration" />
+			<_8 v="look deceleration" />
+			<_15 v="look acc smoothing fraction" />
+			<_8 v="field of view bias" />
+			<_38 v="camera obstruction">
+				<_15 v="cylinder fraction" />
+				<_8 v="obstruction test angle" />
+				<_14 v="obstruction max inward accel" />
+				<_14 v="obstruction max outward accel" />
+				<_14 v="obstruction max velocity" />
+				<_14 v="obstruction return delay" />
+				<_3B v="" />
+			</_38>
+			<_40 v="camera acceleration">
+				<_14 v="maximum camera velocity" />
+				<_36 v="" />
+				<_38 v="forward/back">
+					<_A v="Input Variable">
+						<Flag v="linear velocity" />
+						<Flag v="linear acceleration" />
+						<Flag v="yaw" />
+						<Flag v="pitch" />
+						<Flag v="roll" />
+					</_A>
+					<_34 v="generated_padd066" length="3" />
+					<_37 v="mapping" />
+					<_38 v="mapping">
+						<_37 v="" />
+						<_42 v="data" />
+						<_37 v="" />
+						<_3B v="" />
+					</_38>
+					<_14 v="maximum value" />
+					<_14 v="camera scale (axial)" />
+					<_14 v="camera scale (perpendicular)" />
+					<_3B v="" />
+				</_38>
+				<_38 v="left/right">
+					<_A v="Input Variable">
+						<Flag v="linear velocity" />
+						<Flag v="linear acceleration" />
+						<Flag v="yaw" />
+						<Flag v="pitch" />
+						<Flag v="roll" />
+					</_A>
+					<_34 v="generated_padd066" length="3" />
+					<_37 v="mapping" />
+					<_38 v="mapping">
+						<_37 v="" />
+						<_42 v="data" />
+						<_37 v="" />
+						<_3B v="" />
+					</_38>
+					<_14 v="maximum value" />
+					<_14 v="camera scale (axial)" />
+					<_14 v="camera scale (perpendicular)" />
+					<_3B v="" />
+				</_38>
+				<_38 v="up/down">
+					<_A v="Input Variable">
+						<Flag v="linear velocity" />
+						<Flag v="linear acceleration" />
+						<Flag v="yaw" />
+						<Flag v="pitch" />
+						<Flag v="roll" />
+					</_A>
+					<_34 v="generated_padd066" length="3" />
+					<_37 v="mapping" />
+					<_38 v="mapping">
+						<_37 v="" />
+						<_42 v="data" />
+						<_37 v="" />
+						<_3B v="" />
+					</_38>
+					<_14 v="maximum value" />
+					<_14 v="camera scale (axial)" />
+					<_14 v="camera scale (perpendicular)" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_2 v="unit markup name for weapon class override" />
+		<_41 v="seat acceleration" />
+		<_14 v="pain major total damage threshold" />
+		<_37 v="pings" />
+		<_14 v="soft ping threshold" />
+		<_14 v="soft ping interrupt time" />
+		<_14 v="hard ping threshold" />
+		<_14 v="hard ping interrupt time" />
+		<_14 v="soft death direction speed threshold" />
+		<_14 v="hard death threshold" />
+		<_14 v="feign death threshold" />
+		<_14 v="feign death time" />
+		<_14 v="pain screen duration" />
+		<_14 v="pain screen region fade out duration" />
+		<_15 v="pain screen region fade out weight threshold" />
+		<_8 v="pain screen angle tolerance" />
+		<_8 v="pain screen angle randomness" />
+		<_14 v="defensive screen duration" />
+		<_15 v="defensive screen scrub fallback fraction" />
+		<_37 v="" />
+		<_14 v="distance of dive anim" />
+		<_15 v="terminal velocity fall ratio" />
+		<_37 v="stun" />
+		<_15 v="stun movement penalty" />
+		<_15 v="stun turning penalty" />
+		<_15 v="stun jumping penalty" />
+		<_14 v="minimum stun time" />
+		<_14 v="maximum stun time" />
+		<_37 v="" />
+		<_14 v="feign death chance" />
+		<_14 v="feign repeat chance" />
+		<_41 v="spawned turret character" />
+		<_37 v="aiming/looking" />
+		<_2 v="target aiming pivot marker name" />
+		<_8 v="aiming velocity maximum" />
+		<_8 v="aiming acceleration maximum" />
+		<_15 v="casual aiming modifier" />
+		<_8 v="looking velocity maximum" />
+		<_8 v="looking acceleration maximum" />
+		<_14 v="Dropped ability object velocity" />
+		<_37 v="" />
+		<_14 v="object velocity maximum" />
+		<_2 v="right_hand_node" />
+		<_2 v="left_hand_node" />
+		<_38 v="more damn nodes">
+			<_2 v="preferred_gun_node" />
+			<_37 v="" />
+			<_2 v="preferred_grenade_marker" />
+			<_36 v="Weapon Specific Markers" />
+			<_40 v="weapon specific markers">
+				<_2 v="complete weapon name" />
+				<_2 v="weapon class" />
+				<_2 v="weapon name" />
+				<_37 v="" />
+				<_2 v="right hand marker" />
+				<_37 v="" />
+				<_2 v="left hand marker" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_37 v="melee damage" />
+		<_41 v="melee damage" />
+		<_41 v="native melee override" />
+		<_38 v="your momma">
+			<_41 v="boarding melee damage" />
+			<_41 v="boarding melee response" />
+			<_41 v="eviction melee damage" />
+			<_41 v="eviction melee response" />
+			<_41 v="landing melee damage" />
+			<_41 v="flurry melee damage" />
+			<_41 v="obstacle smash damage" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_B v="motion sensor blip style enemy">
+			<Flag v="major" />
+			<Flag v="minor" />
+		</_B>
+		<_B v="motion sensor blip style friendly">
+			<Flag v="major" />
+			<Flag v="minor" />
+		</_B>
+		<_B v="item owner size">
+			<Flag v="small" />
+			<Flag v="medium" />
+			<Flag v="large" />
+			<Flag v="huge" />
+		</_B>
+		<_34 v="generated_pad9055" length="2" />
+		<_14 v="motion tracker range modifier" />
+		<_2 v="equipment variant name" />
+		<_2 v="grounded equipment variant name" />
+		<_40 v="Hud audio cues">
+			<_40 v="Hud audio cues">
+				<_41 v="sound" />
+				<_D v="latched to">
+					<Flag v="health recharging" />
+					<Flag v="health recharging - from healing" />
+					<Flag v="health minor damaged" />
+					<Flag v="health major damaged" />
+					<Flag v="health critical damaged" />
+					<Flag v="health minor" />
+					<Flag v="health major" />
+					<Flag v="health critical" />
+					<Flag v="shield recharging" />
+					<Flag v="shield recharging - from healing" />
+					<Flag v="shield minor damaged" />
+					<Flag v="shield major damaged" />
+					<Flag v="shield critical damaged" />
+					<Flag v="shield minor" />
+					<Flag v="shield major" />
+					<Flag v="shield critical" />
+					<Flag v="player tracked" />
+					<Flag v="player locked" />
+					<Flag v="player downed" />
+				</_D>
+				<_14 v="scale" />
+				<_3B v="" />
+			</_40>
+			<_37 v="health thresholds" />
+			<_14 v="health minor" />
+			<_14 v="health major" />
+			<_14 v="health critical" />
+			<_37 v="" />
+			<_37 v="shield thresholds" />
+			<_14 v="shield minor" />
+			<_14 v="shield major" />
+			<_14 v="shield critical" />
+			<_37 v="" />
+			<_3B v="" />
+		</_40>
+		<_40 v="dialogue variants">
+			<_5 v="variant number" />
+			<_34 v="generated_padef78" length="2" />
+			<_41 v="dialogue" />
+			<_3B v="" />
+		</_40>
+		<_37 v="standard grenade throw" />
+		<_14 v="grenade angle" />
+		<_14 v="grenade angle max elevation" />
+		<_14 v="grenade angle min elevation" />
+		<_14 v="grenade velocity" />
+		<_1C v="grenade rotational velocity min" />
+		<_1C v="greande rotational velocity max" />
+		<_37 v="grenade throw speed scalar" />
+		<_38 v="grenade throw speed scalar">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="primary weapon toss" />
+		<_14 v="weapon angle" />
+		<_14 v="weapon angle max elevation" />
+		<_14 v="weapon angle min elevation" />
+		<_14 v="weapon velocity" />
+		<_1C v="weapon rotational velocity min" />
+		<_1C v="weapon rotational velocity max" />
+		<_37 v="" />
+		<_40 v="powered seats">
+			<_14 v="driver powerup time" />
+			<_14 v="driver powerdown time" />
+			<_3B v="" />
+		</_40>
+		<_40 v="weapons">
+			<_41 v="weapon" />
+			<_2 v="weapon name" />
+			<_2 v="variant name" />
+			<_C v="position">
+				<Flag v="primary or backpack" />
+				<Flag v="secondary" />
+			</_C>
+			<_F v="weapon flags">
+				<Flag v="Cannot fire any weapon while boosting" />
+			</_F>
+			<_34 v="generated_paddad2" length="3" />
+			<_8 v="maximum firing cone angle" />
+			<_14 v="max firing cone angle cosine" />
+			<_14 v="minimum retarget time" />
+			<_14 v="blind fire time" />
+			<_14 v="lead fraction" />
+			<_25 v="engagement range" />
+			<_14 v="proximity score multiplier" />
+			<_14 v="direction score multiplier" />
+			<_14 v="attacker score multiplier" />
+			<_14 v="targeting weight hologram" />
+			<_14 v="targeting weight auto turret" />
+			<_14 v="primary fire delay from idle" />
+			<_14 v="secondary fire delay from idle" />
+			<_14 v="caution duration" />
+			<_14 v="alert angular speed max" />
+			<_14 v="idle angular speed max" />
+			<_8 v="targeting yaw min" />
+			<_8 v="targeting yaw max" />
+			<_8 v="targeting pitch min" />
+			<_8 v="targeting pitch max" />
+			<_8 v="idle scanning yaw min" />
+			<_8 v="idle scanning yaw max" />
+			<_8 v="idle scanning pitch min" />
+			<_8 v="idle scanning pitch max" />
+			<_14 v="idle scanning min interest distance" />
+			<_41 v="alert mode effect" />
+			<_37 v="" />
+			<_2 v="alert mode effect marker" />
+			<_2 v="alert mode effect primary scale" />
+			<_2 v="alert mode effect secondary scale" />
+			<_40 v="sentry properties">
+				<_F v="behavior">
+					<Flag v="performs yaw scanning" />
+					<Flag v="secondary barrel starts enabled" />
+					<Flag v="only use vehicle range scale if secondary barrel active" />
+					<Flag v="only use vehicle score bonus if secondary barrel active" />
+				</_F>
+				<_34 v="generated_pad4624" length="3" />
+				<_8 v="sight cone angle" />
+				<_14 v="sight cone cosine" />
+				<_14 v="alert range" />
+				<_14 v="attack range" />
+				<_14 v="attack range score multiplier" />
+				<_14 v="light vehicle range scale" />
+				<_14 v="heavy vehicle range scale" />
+				<_14 v="flying vehicle range scale" />
+				<_14 v="light vehicle score bonus" />
+				<_14 v="heavy vehicle score bonus" />
+				<_14 v="flying vehicle score bonus" />
+				<_14 v="current target score bonus" />
+				<_14 v="startup time" />
+				<_14 v="primary fire time" />
+				<_14 v="secondary fire time" />
+				<_41 v="player entered alert range sound" />
+				<_41 v="player exited alert range sound" />
+				<_37 v="Node graph events" />
+				<_36 v="Events to fire on state transitions" />
+				<_40 v="Transition Events">
+					<_C v="From state">
+						<Flag v="Startup" />
+						<Flag v="Idle" />
+						<Flag v="Alert" />
+						<Flag v="Attack" />
+						<Flag v="Inactive" />
+						<Flag v="Any state" />
+					</_C>
+					<_C v="To state">
+						<Flag v="Startup" />
+						<Flag v="Idle" />
+						<Flag v="Alert" />
+						<Flag v="Attack" />
+						<Flag v="Inactive" />
+						<Flag v="Any state" />
+					</_C>
+					<_2 v="Event" />
+					<_3B v="" />
+				</_40>
+				<_37 v="" />
+				<_3B v="" />
+			</_40>
+			<_14 v="target camouflage threshold" />
+			<_3B v="" />
+		</_40>
+		<_40 v="target tracking">
+			<_F v="target tracking flags">
+				<Flag v="only enable when aimed down sight" />
+				<Flag v="never lose target lock" />
+				<Flag v="only enable when in alt fire" />
+			</_F>
+			<_34 v="generated_pada390" length="3" />
+			<_40 v="tracking types">
+				<_2 v="tracking type" />
+				<_3B v="" />
+			</_40>
+			<_14 v="acquire time" />
+			<_14 v="grace time" />
+			<_14 v="decay time" />
+			<_3C v="max target locks" />
+			<_34 v="generated_padbd71" length="3" />
+			<_41 v="tracking sound" />
+			<_41 v="locked sound" />
+			<_3B v="" />
+		</_40>
+		<_40 v="seats">
+			<_D v="flags">
+				<Flag v="invisible" />
+				<Flag v="locked" />
+				<Flag v="driver" />
+				<Flag v="gunner" />
+				<Flag v="third person camera" />
+				<Flag v="allows weapons" />
+				<Flag v="third person on enter" />
+				<Flag v="first person camera slaved to gun." />
+				<Flag v="not valid without driver" />
+				<Flag v="allow AI noncombatants" />
+				<Flag v="boarding seat" />
+				<Flag v="ai firing disabled by max acceleration" />
+				<Flag v="boarding enters seat" />
+				<Flag v="boarding need any passenger" />
+				<Flag v="invalid for player" />
+				<Flag v="invalid for non-player" />
+				<Flag v="invalid for hero" />
+				<Flag v="gunner (player only)" />
+				<Flag v="invisible under major damage" />
+				<Flag v="melee instant killable" />
+				<Flag v="leader preference" />
+				<Flag v="allows exit and detach" />
+				<Flag v="blocks headshots" />
+				<Flag v="exits to ground" />
+				<Flag v="forward from attachment" />
+				<Flag v="disallow AI shooting" />
+				<Flag v="prevents weapon stowing" />
+				<Flag v="takes top level aoe damage" />
+				<Flag v="disallow exit" />
+				<Flag v="local aiming" />
+				<Flag v="pelvis relative attachment" />
+				<Flag v="apply velocity on death exit" />
+			</_D>
+			<_D v="secondary flags">
+				<Flag v="skip obstacle check" />
+				<Flag v="search parent for entry marker" />
+				<Flag v="gunner release aim on exit" />
+				<Flag v="fully open before allowing exit" />
+				<Flag v="finish melee before allowing exit" />
+				<Flag v="kill parent if unit in seat dies" />
+				<Flag v="co-pilot" />
+				<Flag v="ejectable seat" />
+				<Flag v="kill on ejection" />
+				<Flag v="use head marker for navpoint" />
+				<Flag v="allows equipment and grenade switching" />
+			</_D>
+			<_C v="passenger seat designator">
+				<Flag v="MidCenter" />
+				<Flag v="LeftBack" />
+				<Flag v="LeftFront" />
+				<Flag v="MidLeftBack" />
+				<Flag v="MidLeft" />
+				<Flag v="MidLeftFront" />
+				<Flag v="RightBack" />
+				<Flag v="RightFront" />
+				<Flag v="MidRightBack" />
+				<Flag v="MidRight" />
+				<Flag v="MidRightFront" />
+				<Flag v="LeftFrontRow1" />
+				<Flag v="LeftFrontRow2" />
+				<Flag v="LeftFrontRow3" />
+				<Flag v="LeftFrontRow4" />
+				<Flag v="LeftBackRow1" />
+				<Flag v="LeftBackRow2" />
+				<Flag v="LeftBackRow3" />
+				<Flag v="LeftBackRow4" />
+				<Flag v="RightFrontRow1" />
+				<Flag v="RightFrontRow2" />
+				<Flag v="RightFrontRow3" />
+				<Flag v="RightFrontRow4" />
+				<Flag v="RightBackRow1" />
+				<Flag v="RightBackRow2" />
+				<Flag v="RightBackRow3" />
+				<Flag v="RightBackRow4" />
+			</_C>
+			<_A v="seat has infinite grenades of type">
+				<Flag v="none" />
+				<Flag v="fragmentation grenade" />
+				<Flag v="plasma grenade" />
+				<Flag v="lightning grenade" />
+				<Flag v="spike grenade" />
+				<Flag v="sapper grenade" />
+				<Flag v="stasis grenade" />
+			</_A>
+			<_A v="seat selection priority">
+				<Flag v="normal" />
+				<Flag v="high" />
+			</_A>
+			<_34 v="generated_pad811e" length="2" />
+			<_2 v="label text" />
+			<_0 v="label" />
+			<_37 v="" />
+			<_2 v="marker name" />
+			<_37 v="" />
+			<_2 v="entry marker(s) name" />
+			<_37 v="" />
+			<_2 v="exit marker name" />
+			<_37 v="" />
+			<_2 v="ui marker name" />
+			<_2 v="ui navpoint name" />
+			<_37 v="" />
+			<_2 v="boarding grenade marker" />
+			<_2 v="boarding grenade string" />
+			<_2 v="boarding melee string" />
+			<_2 v="in-seat string" />
+			<_40 v="ai model targets">
+				<_2 v="model target name" />
+				<_3B v="" />
+			</_40>
+			<_15 v="ping scale" />
+			<_14 v="turnover time" />
+			<_36 v="seat acceleration spring" />
+			<_41 v="seat acceleration" />
+			<_14 v="AI scariness" />
+			<_B v="ai seat type">
+				<Flag v="NONE" />
+				<Flag v="passenger" />
+				<Flag v="gunner" />
+				<Flag v="small cargo" />
+				<Flag v="large cargo" />
+				<Flag v="driver" />
+			</_B>
+			<_2E v="boarding seat" />
+			<_40 v="additional boarding seats">
+				<_2E v="seat" />
+				<_3B v="" />
+			</_40>
+			<_37 v="seat switching" />
+			<_36 v="explanation" />
+			<_38 v="seat switching">
+				<_37 v="up" />
+				<_38 v="up">
+					<_2 v="destinationSeat" />
+					<_2 v="animation" />
+					<_14 v="seat switch cooldown time" />
+					<_3B v="" />
+				</_38>
+				<_37 v="" />
+				<_37 v="down" />
+				<_38 v="down">
+					<_2 v="destinationSeat" />
+					<_2 v="animation" />
+					<_14 v="seat switch cooldown time" />
+					<_3B v="" />
+				</_38>
+				<_37 v="" />
+				<_37 v="left" />
+				<_38 v="left">
+					<_2 v="destinationSeat" />
+					<_2 v="animation" />
+					<_14 v="seat switch cooldown time" />
+					<_3B v="" />
+				</_38>
+				<_37 v="" />
+				<_37 v="right" />
+				<_38 v="right">
+					<_2 v="destinationSeat" />
+					<_2 v="animation" />
+					<_14 v="seat switch cooldown time" />
+					<_3B v="" />
+				</_38>
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_15 v="listener interpolation factor" />
+			<_15 v="listener orientation interpolation" />
+			<_15 v="listener blend towards locked axis" />
+			<_36 v="speed dependent turn rates" />
+			<_25 v="yaw rate bounds" />
+			<_25 v="pitch rate bounds" />
+			<_14 v="pitch interpolation time" />
+			<_14 v="min speed reference" />
+			<_14 v="max speed reference" />
+			<_14 v="speed exponent" />
+			<_36 v="camera fields" />
+			<_38 v="unit camera">
+				<_37 v="Unit Camera" />
+				<_E v="flags">
+					<Flag v="pitch bounds absolute space" />
+					<Flag v="only collides with environment" />
+					<Flag v="hides player-unit from camera" />
+					<Flag v="use aiming vector instead of marker forward" />
+				</_E>
+				<_34 v="generated_padc79e" length="2" />
+				<_37 v="" />
+				<_2 v="camera marker name" />
+				<_8 v="pitch auto-level" />
+				<_24 v="pitch range" />
+				<_40 v="camera tracks">
+					<_41 v="track" />
+					<_41 v="screen effect" />
+					<_14 v="transition time in" />
+					<_14 v="transition time out" />
+					<_3B v="" />
+				</_40>
+				<_8 v="pitch minimum spring" />
+				<_8 v="pitch mmaximum spring" />
+				<_8 v="spring velocity" />
+				<_8 v="look acceleration" />
+				<_8 v="look deceleration" />
+				<_15 v="look acc smoothing fraction" />
+				<_8 v="field of view bias" />
+				<_38 v="camera obstruction">
+					<_15 v="cylinder fraction" />
+					<_8 v="obstruction test angle" />
+					<_14 v="obstruction max inward accel" />
+					<_14 v="obstruction max outward accel" />
+					<_14 v="obstruction max velocity" />
+					<_14 v="obstruction return delay" />
+					<_3B v="" />
+				</_38>
+				<_40 v="camera acceleration">
+					<_14 v="maximum camera velocity" />
+					<_36 v="" />
+					<_38 v="forward/back">
+						<_A v="Input Variable">
+							<Flag v="linear velocity" />
+							<Flag v="linear acceleration" />
+							<Flag v="yaw" />
+							<Flag v="pitch" />
+							<Flag v="roll" />
+						</_A>
+						<_34 v="generated_padd066" length="3" />
+						<_37 v="mapping" />
+						<_38 v="mapping">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_14 v="maximum value" />
+						<_14 v="camera scale (axial)" />
+						<_14 v="camera scale (perpendicular)" />
+						<_3B v="" />
+					</_38>
+					<_38 v="left/right">
+						<_A v="Input Variable">
+							<Flag v="linear velocity" />
+							<Flag v="linear acceleration" />
+							<Flag v="yaw" />
+							<Flag v="pitch" />
+							<Flag v="roll" />
+						</_A>
+						<_34 v="generated_padd066" length="3" />
+						<_37 v="mapping" />
+						<_38 v="mapping">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_14 v="maximum value" />
+						<_14 v="camera scale (axial)" />
+						<_14 v="camera scale (perpendicular)" />
+						<_3B v="" />
+					</_38>
+					<_38 v="up/down">
+						<_A v="Input Variable">
+							<Flag v="linear velocity" />
+							<Flag v="linear acceleration" />
+							<Flag v="yaw" />
+							<Flag v="pitch" />
+							<Flag v="roll" />
+						</_A>
+						<_34 v="generated_padd066" length="3" />
+						<_37 v="mapping" />
+						<_38 v="mapping">
+							<_37 v="" />
+							<_42 v="data" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_14 v="maximum value" />
+						<_14 v="camera scale (axial)" />
+						<_14 v="camera scale (perpendicular)" />
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_41 v="hud screen reference" />
+			<_41 v="alt hud screen reference" />
+			<_2 v="enter seat string" />
+			<_40 v="button callouts">
+				<_2 v="text" />
+				<_3B v="" />
+			</_40>
+			<_8 v="pitch minimum" />
+			<_8 v="pitch maximum" />
+			<_8 v="pitch minimum for AI operator" />
+			<_8 v="pitch maximum for AI operator" />
+			<_8 v="yaw minimum" />
+			<_8 v="yaw maximum" />
+			<_8 v="yaw minimum for AI operator" />
+			<_8 v="yaw maximum for AI operator" />
+			<_41 v="built-in gunner" />
+			<_36 v="entry fields" />
+			<_14 v="entry radius" />
+			<_8 v="entry marker cone angle" />
+			<_8 v="entry marker facing angle" />
+			<_14 v="maximum relative velocity" />
+			<_41 v="equipment" />
+			<_14 v="open time" />
+			<_14 v="close time" />
+			<_2 v="open function name" />
+			<_2 v="opening function name" />
+			<_2 v="closing function name" />
+			<_2 v="invisible seat region" />
+			<_6 v="runtime invisible seat region index" />
+			<_36 v="seat death grab crate" />
+			<_41 v="seat death grab crate" />
+			<_2 v="Seat Selection String" />
+			<_14 v="bailout velocity" />
+			<_36 v="Seat Ejection Fields" />
+			<_14 v="maximum acceleration" />
+			<_14 v="maximum centrifugal force" />
+			<_3B v="" />
+		</_40>
+		<_14 v="maximum seat switch linear velocity" />
+		<_8 v="maximum seat switch angular velocity" />
+		<_B v="empty mount behavior">
+			<Flag v="Reset Team when empty and parentless" />
+			<Flag v="Keep last team when empty and parentless" />
+		</_B>
+		<_34 v="generated_pad7674" length="2" />
+		<_37 v="open/close" />
+		<_14 v="opening time" />
+		<_14 v="closing time" />
+		<_37 v="" />
+		<_41 v="docking site" />
+		<_36 v="Deprecated Unit Power Component settings.  Please use the new settings in the OBJECT section above." />
+		<_40 v="power component">
+			<_36 v="Power Component System" />
+			<_40 v="power source configurations">
+				<_2 v="name" />
+				<_15 v="capacity" />
+				<_3B v="" />
+			</_40>
+			<_40 v="power sources">
+				<_2 v="region name" />
+				<_6 v="runtime region index" />
+				<_36 v="Model Region Damage State Configurations" />
+				<_40 v="state configurations">
+					<_B v="region state">
+						<Flag v="default" />
+						<Flag v="minor damage" />
+						<Flag v="medium damage" />
+						<Flag v="major damage" />
+						<Flag v="destroyed" />
+					</_B>
+					<_2E v="configuration" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_37 v="communication node capacity" />
+			<_40 v="communication node power sources">
+				<_2E v="component" />
+				<_3B v="" />
+			</_40>
+			<_2 v="communication node power modifier id" />
+			<_37 v="" />
+			<_37 v="locomotion capacity" />
+			<_40 v="locomotion power sources">
+				<_2E v="component" />
+				<_3B v="" />
+			</_40>
+			<_2 v="locomotion power modifier id" />
+			<_37 v="locomotion power modifier" />
+			<_38 v="locomotion power modifier">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_37 v="weapon capacity" />
+			<_40 v="weapon power sources">
+				<_2E v="component" />
+				<_3B v="" />
+			</_40>
+			<_2 v="weapon power modifier id" />
+			<_37 v="" />
+			<_3B v="" />
+		</_40>
+		<_37 v="Boost" />
+		<_41 v="boost definition" />
+		<_36 v="Deprecated Boost Fields.  Please use the Boost Definition field above." />
+		<_38 v="boost">
+			<_41 v="boost collision damage" />
+			<_D v="flags">
+				<Flag v="pegs throttle" />
+			</_D>
+			<_14 v="boost peak power" />
+			<_14 v="boost rise time" />
+			<_14 v="boost fall time" />
+			<_14 v="boost power per second" />
+			<_14 v="boost low warning threshold" />
+			<_14 v="recharge rate" />
+			<_14 v="recharge delay" />
+			<_14 v="post boost weapon delay" />
+			<_37 v="trigger to boost" />
+			<_38 v="trigger to boost">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_C v="tutorial id">
+				<Flag v="None" />
+				<Flag v="Assassination" />
+				<Flag v="Camera" />
+				<Flag v="Crouch" />
+				<Flag v="Grenade" />
+				<Flag v="Jump" />
+				<Flag v="Melee" />
+				<Flag v="Movement" />
+				<Flag v="Shoot" />
+				<Flag v="Tracking" />
+				<Flag v="Clamber" />
+				<Flag v="Slide" />
+				<Flag v="Sprint" />
+				<Flag v="Thruster" />
+				<Flag v="Zoom" />
+				<Flag v="BansheeBoost" />
+				<Flag v="BansheeTrick" />
+				<Flag v="BansheeSwitchWeapons" />
+				<Flag v="GhostBoost" />
+				<Flag v="MantisRockets" />
+				<Flag v="MantisStomp" />
+				<Flag v="VTOLAscend" />
+				<Flag v="VTOLDescend" />
+				<Flag v="VTOLEvade" />
+				<Flag v="VTOLSwitchWeapons" />
+				<Flag v="VTOLShoot" />
+				<Flag v="JeepDrive" />
+				<Flag v="JeepHandbrake" />
+				<Flag v="JeepShoot" />
+				<Flag v="WraithBoost" />
+				<Flag v="SeatSwitch" />
+				<Flag v="OrdersGeneral" />
+				<Flag v="OrdersClear" />
+				<Flag v="OrdersEnemy" />
+				<Flag v="OrdersMove" />
+				<Flag v="OrdersVehicle" />
+				<Flag v="OrdersWeapon" />
+			</_C>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_C v="tutorial weapon swap id">
+			<Flag v="None" />
+			<Flag v="Assassination" />
+			<Flag v="Camera" />
+			<Flag v="Crouch" />
+			<Flag v="Grenade" />
+			<Flag v="Jump" />
+			<Flag v="Melee" />
+			<Flag v="Movement" />
+			<Flag v="Shoot" />
+			<Flag v="Tracking" />
+			<Flag v="Clamber" />
+			<Flag v="Slide" />
+			<Flag v="Sprint" />
+			<Flag v="Thruster" />
+			<Flag v="Zoom" />
+			<Flag v="BansheeBoost" />
+			<Flag v="BansheeTrick" />
+			<Flag v="BansheeSwitchWeapons" />
+			<Flag v="GhostBoost" />
+			<Flag v="MantisRockets" />
+			<Flag v="MantisStomp" />
+			<Flag v="VTOLAscend" />
+			<Flag v="VTOLDescend" />
+			<Flag v="VTOLEvade" />
+			<Flag v="VTOLSwitchWeapons" />
+			<Flag v="VTOLShoot" />
+			<Flag v="JeepDrive" />
+			<Flag v="JeepHandbrake" />
+			<Flag v="JeepShoot" />
+			<Flag v="WraithBoost" />
+			<Flag v="SeatSwitch" />
+			<Flag v="OrdersGeneral" />
+			<Flag v="OrdersClear" />
+			<Flag v="OrdersEnemy" />
+			<Flag v="OrdersMove" />
+			<Flag v="OrdersVehicle" />
+			<Flag v="OrdersWeapon" />
+		</_C>
+		<_36 v="Lipsync" />
+		<_38 v="lipsync">
+			<_15 v="attack weight" />
+			<_15 v="decay weight" />
+			<_3B v="" />
+		</_38>
+		<_36 v="Exit and Detach" />
+		<_41 v="exit and detach damage" />
+		<_41 v="exit and detach weapon" />
+		<_40 v="exit and detach variants">
+			<_2 v="variant name" />
+			<_41 v="exit and detach weapon" />
+			<_41 v="exit and detach damage" />
+			<_3B v="" />
+		</_40>
+		<_36 v="Vehicle Death Telemetry Rule" />
+		<_A v="Death Telemetry Rule">
+			<Flag v="Default" />
+			<Flag v="Always Send Event" />
+			<Flag v="Never Send Event" />
+		</_A>
+		<_34 v="generated_pad29bf" length="1" />
+		<_36 v="Experience" />
+		<_5 v="experience for kill" />
+		<_5 v="experience for assist" />
+		<_34 v="generated_pad0fde" length="2" />
+		<_14 v="bailout threshold" />
+		<_15 v="iron sight weapon dampening" />
+		<_37 v="Birthing" />
+		<_38 v="birth">
+			<_2E v="seat" />
+			<_34 v="generated_pada2d2" length="2" />
+			<_2 v="birthing region" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_15 v="procedural recoil scaler" />
+		<_41 v="flinch system" />
+		<_36 v="Active Camouflage Malleable Properties" />
+		<_38 v="active camouflage properties">
+			<_A v="camo level">
+				<Flag v="poor" />
+				<Flag v="good" />
+				<Flag v="excellent" />
+				<Flag v="invisible" />
+				<Flag v="ai" />
+			</_A>
+			<_F v="flags">
+				<Flag v="No speed scaling" />
+			</_F>
+			<_34 v="generated_pad06e4" length="2" />
+			<_37 v="grenade throw penalty" />
+			<_38 v="grenade throw penalty">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="interpolation time" />
+			<_38 v="interpolation time">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="melee penalty" />
+			<_38 v="melee penalty">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="minimum dinged amount" />
+			<_38 v="minimum dinged amount">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="maximum duration" />
+			<_38 v="maximum duration">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_41 v="active camouflage energy gain effect" />
+		<_38 v="damage properties">
+			<_36 v="Damage scaling malleable properties" />
+			<_37 v="Weapon damage scalar" />
+			<_38 v="Weapon damage scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="Melee damage scalar" />
+			<_38 v="Melee damage scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="Melee knockback scalar" />
+			<_38 v="Melee knockback scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="Melee recovery speed scalar" />
+			<_38 v="Melee recovery speed scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="Grenade damage scalar" />
+			<_38 v="Grenade damage scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="Grenade knockback scalar" />
+			<_38 v="Grenade knockback scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="Body vampirism scalar" />
+			<_38 v="Body vampirism scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="Shield vampirism scalar" />
+			<_38 v="Shield vampirism scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="Area of effect radius scalar" />
+			<_38 v="Area of effect radius scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_38 v="weapon properties">
+			<_36 v="Weapon trait malleable properties" />
+			<_37 v="weapon switch speed scalar" />
+			<_38 v="weapon switch speed scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="weapon empty reload speed scalar" />
+			<_38 v="weapon empty reload speed scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="weapon overheat loss scalar" />
+			<_38 v="weapon overheat loss scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="weapon tactical reload speed scalar" />
+			<_38 v="weapon tactical reload speed scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="weapon tactical cooling scalar" />
+			<_38 v="weapon tactical cooling scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="movement speed (with turret) scalar" />
+			<_38 v="movement speed (with turret) scalar">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_38 v="emp properties">
+			<_36 v="EMP malleable properties" />
+			<_37 v="EMP disable duration scalar " />
+			<_38 v="EMP disable duration scalar ">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_37 v="EMP disable duration MP scalar " />
+			<_38 v="EMP disable duration MP scalar ">
+				<_14 v="Base Value" />
+				<_25 v="Value Bounds" />
+				<_3B v="" />
+			</_38>
+			<_41 v="EMP unit modifiers" />
+			<_3B v="" />
+		</_38>
+		<_41 v="emp disabled effect" />
+		<_2 v="recording unit type" />
+		<_37 v="" />
+		<_41 v="knockback collision damage override" />
+		<_3B v="" />
+	</_38>
+	<_37 v="$$$ VEHICLE $$$" />
+	<_41 v="parent" />
+	<_D v="flags">
+		<Flag v="no friction w/driver" />
+		<Flag v="autoaim when teamless" />
+		<Flag v="ai weapon cannot rotate" />
+		<Flag v="ai does not require driver" />
+		<Flag v="ai driver enable" />
+		<Flag v="ai driver flying" />
+		<Flag v="ai driver can-sidestep" />
+		<Flag v="ai driver hovering" />
+		<Flag v="noncombat vehicle" />
+		<Flag v="does not cause collision damage" />
+		<Flag v="huge vehicle physics group" />
+		<Flag v="ai auto turret" />
+		<Flag v="ai sentry turret" />
+		<Flag v="ignore camera pitch" />
+		<Flag v="auto turret" />
+		<Flag v="ignore kill volumes" />
+		<Flag v="targetable when open" />
+		<Flag v="vehicle wants to recieve reduced weapon acceleration when on ground" />
+		<Flag v="vehicle wants to recieve reduced weapon acceleration when airborne" />
+		<Flag v="do not force units to exit when upside down" />
+		<Flag v="vehicle creates enemy spawn influencers" />
+		<Flag v="driver cannot take damage" />
+		<Flag v="player cannot flip vehicle" />
+		<Flag v="do not kill riders at terminal velocity" />
+		<Flag v="people in this vehicle use radio only" />
+		<Flag v="Treat the offhand dual wielded weapon as a secondary primary weapon" />
+		<Flag v="Override the player's nav point while they are in this vehicle" />
+	</_D>
+	<_36 v="physics type" />
+	<_38 v="physics types">
+		<_37 v="" />
+		<_40 v="type-human_tank">
+			<_8 v="forward arc" />
+			<_8 v="perpendicular forward arc" />
+			<_14 v="flip window" />
+			<_14 v="pegged fraction" />
+			<_14 v="forward turn scale" />
+			<_14 v="reverse turn scale" />
+			<_36 v="forward differential" />
+			<_14 v="maximum left differential" />
+			<_14 v="maximum right differential" />
+			<_14 v="differential acceleration" />
+			<_14 v="differential deceleration" />
+			<_36 v="reverse differential" />
+			<_14 v="maximum left reverse differential" />
+			<_14 v="maximum right reverse differential" />
+			<_14 v="differential reverse acceleration" />
+			<_14 v="differential reverse deceleration" />
+			<_38 v="engine">
+				<_36 v="engine" />
+				<_14 v="engine moment" />
+				<_14 v="engine min angular velocity" />
+				<_14 v="engine max angular velocity" />
+				<_40 v="gears">
+					<_36 v="loaded torque" />
+					<_38 v="loaded torque curve">
+						<_38 v="function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_36 v="cruising torque" />
+					<_38 v="cruising torque curve">
+						<_38 v="function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_36 v="gearing" />
+					<_14 v="min time to upshift" />
+					<_14 v="engine up-shift scale" />
+					<_14 v="gear ratio" />
+					<_14 v="min time to downshift" />
+					<_14 v="engine down-shift scale" />
+					<_14 v="audio engine uprev rate" />
+					<_14 v="audio engine shift up RPM value" />
+					<_14 v="audio engine downrev rate" />
+					<_14 v="audio engine shift down RPM value" />
+					<_41 v="gear shift sound - shifting up" />
+					<_41 v="gear shift sound - shifting down" />
+					<_3B v="" />
+				</_40>
+				<_41 v="gear shift sound" />
+				<_40 v="load and cruise sound">
+					<_2 v="load cruise function" />
+					<_30 v="attachment index" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_36 v="wheel circumferance" />
+			<_14 v="wheel circumferance" />
+			<_14 v="gravity adjust" />
+			<_36 v="New Tank Controls" />
+			<_F v="control flags">
+				<Flag v="Enable New Control" />
+				<Flag v="Use Linear Velocity" />
+				<Flag v="Use Angular Velocity" />
+			</_F>
+			<_34 v="generated_pad4b05" length="3" />
+			<_14 v="at rest forward angle(purple)" />
+			<_14 v="at rest reverse angle(violet)" />
+			<_14 v="at rest side on reverse angle closest to front(green)" />
+			<_14 v="at rest side on reverse angle furthest from front(blue)" />
+			<_14 v="at rest facing forward reverse angle(yellow)" />
+			<_14 v="at rest facing backward reverse angle(pink)" />
+			<_14 v="in motion opposing direction angle" />
+			<_14 v="in motion speed" />
+			<_3B v="" />
+		</_40>
+		<_40 v="type-human_jeep">
+			<_38 v="steering control">
+				<_36 v="steering overdampening" />
+				<_8 v="overdampen cusp angle" />
+				<_14 v="overdampen exponent" />
+				<_8 v="ebrake overdampen cusp angle" />
+				<_14 v="ebrake overdampen exponent" />
+				<_37 v="Throttle Steering" />
+				<_8 v="throttle steering angle" />
+				<_14 v="throttle steering interpolation rate" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_38 v="turning control">
+				<_36 v="turning" />
+				<_14 v="maximum left turn" />
+				<_14 v="maximum right turn (negative)" />
+				<_14 v="turn rate" />
+				<_3B v="" />
+			</_38>
+			<_38 v="engine">
+				<_36 v="engine" />
+				<_14 v="engine moment" />
+				<_14 v="engine min angular velocity" />
+				<_14 v="engine max angular velocity" />
+				<_40 v="gears">
+					<_36 v="loaded torque" />
+					<_38 v="loaded torque curve">
+						<_38 v="function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_36 v="cruising torque" />
+					<_38 v="cruising torque curve">
+						<_38 v="function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_36 v="gearing" />
+					<_14 v="min time to upshift" />
+					<_14 v="engine up-shift scale" />
+					<_14 v="gear ratio" />
+					<_14 v="min time to downshift" />
+					<_14 v="engine down-shift scale" />
+					<_14 v="audio engine uprev rate" />
+					<_14 v="audio engine shift up RPM value" />
+					<_14 v="audio engine downrev rate" />
+					<_14 v="audio engine shift down RPM value" />
+					<_41 v="gear shift sound - shifting up" />
+					<_41 v="gear shift sound - shifting down" />
+					<_3B v="" />
+				</_40>
+				<_41 v="gear shift sound" />
+				<_40 v="load and cruise sound">
+					<_2 v="load cruise function" />
+					<_30 v="attachment index" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_36 v="wheel circumferance" />
+			<_14 v="wheel circumferance" />
+			<_14 v="gravity adjust" />
+			<_14 v="antiroll torque factor" />
+			<_38 v="air control torque function">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_14 v="air control torque max" />
+			<_37 v="Wheel Identification" />
+			<_2E v="front left wheel" />
+			<_2E v="front right wheel" />
+			<_2E v="back left wheel" />
+			<_2E v="back right wheel" />
+			<_37 v="" />
+			<_3B v="" />
+		</_40>
+		<_40 v="type-human_plane">
+			<_36 v="velocity control variables" />
+			<_14 v="maximum forward speed" />
+			<_14 v="maximum reverse speed" />
+			<_14 v="speed acceleration" />
+			<_14 v="speed deceleration" />
+			<_14 v="speed accel against direction" />
+			<_14 v="maximum forward speed during boost" />
+			<_14 v="maximum left slide" />
+			<_14 v="maximum right slide" />
+			<_14 v="slide acceleration" />
+			<_14 v="slide deceleration" />
+			<_14 v="slide accel against direction" />
+			<_14 v="maximum slide speed during boost" />
+			<_14 v="maximum up rise" />
+			<_14 v="maximum down rise" />
+			<_14 v="rise acceleration" />
+			<_14 v="rise deceleration" />
+			<_14 v="rise accel against direction" />
+			<_14 v="maximum rise speed during boost" />
+			<_36 v="human plane tuning variables" />
+			<_14 v="flying torque scale" />
+			<_14 v="air friction deceleration" />
+			<_14 v="thrust scale" />
+			<_14 v="turn rate scale when boosting" />
+			<_14 v="maximum roll" />
+			<_38 v="steering animation">
+				<_36 v="steering animation and interpolation&#xA;" />
+				<_14 v="interpolation scale" />
+				<_8 v="max angle" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="type-alien_scout">
+			<_38 v="steering control">
+				<_36 v="steering overdampening" />
+				<_8 v="overdampen cusp angle" />
+				<_14 v="overdampen exponent" />
+				<_8 v="ebrake overdampen cusp angle" />
+				<_14 v="ebrake overdampen exponent" />
+				<_37 v="Throttle Steering" />
+				<_8 v="throttle steering angle" />
+				<_14 v="throttle steering interpolation rate" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_36 v="velocity control variables" />
+			<_14 v="maximum forward speed" />
+			<_14 v="maximum reverse speed" />
+			<_14 v="speed acceleration" />
+			<_14 v="speed deceleration" />
+			<_14 v="maximum left slide" />
+			<_14 v="maximum right slide" />
+			<_14 v="slide acceleration" />
+			<_14 v="slide deceleration" />
+			<_14 v="AI deceleration multiplier" />
+			<_14 v="slide accel against direction" />
+			<_14 v="slide speed at top speed" />
+			<_F v="flags">
+				<Flag v="locked camera" />
+			</_F>
+			<_34 v="generated_pad1c8d" length="3" />
+			<_14 v="drag coeficient" />
+			<_14 v="constant deceleration" />
+			<_14 v="torque scale" />
+			<_36 v="engine object function" />
+			<_38 v="engine gravity function">
+				<_2 v="object function damage region" />
+				<_14 v="min anti gravity engine speed" />
+				<_14 v="max anti gravity engine speed" />
+				<_14 v="engine speed acceleration" />
+				<_14 v="maximum vehicle speed" />
+				<_3B v="" />
+			</_38>
+			<_36 v="contrail object function" />
+			<_38 v="contrail gravity function">
+				<_2 v="object function damage region" />
+				<_14 v="min anti gravity engine speed" />
+				<_14 v="max anti gravity engine speed" />
+				<_14 v="engine speed acceleration" />
+				<_14 v="maximum vehicle speed" />
+				<_3B v="" />
+			</_38>
+			<_36 v="engine rotation function" />
+			<_25 v="gear rotation speed" />
+			<_38 v="steering animation">
+				<_36 v="steering animation and interpolation&#xA;" />
+				<_14 v="interpolation scale" />
+				<_8 v="max angle" />
+				<_3B v="" />
+			</_38>
+			<_38 v="scout physics">
+				<_F v="flags">
+					<Flag v="hovercraft" />
+					<Flag v="slope scales speed" />
+				</_F>
+				<_34 v="generated_padddec" length="3" />
+				<_36 v="Air control" />
+				<_14 v="air control angular velocity factor" />
+				<_14 v="air control throttle acceleration" />
+				<_14 v="air control throttle bonus clamp min" />
+				<_14 v="air control throttle bonus clamp max" />
+				<_14 v="air control angular acceleration" />
+				<_15 v="air control auto level strength" />
+				<_36 v="Brake control" />
+				<_14 v="brake lift angular acceleration" />
+				<_14 v="brake lift acceleration up" />
+				<_14 v="brake airborne lift acceleration forward" />
+				<_14 v="brake airborne lift acceleration up" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="type-alien_fighter">
+			<_38 v="steering control">
+				<_36 v="steering overdampening" />
+				<_8 v="overdampen cusp angle" />
+				<_14 v="overdampen exponent" />
+				<_8 v="ebrake overdampen cusp angle" />
+				<_14 v="ebrake overdampen exponent" />
+				<_37 v="Throttle Steering" />
+				<_8 v="throttle steering angle" />
+				<_14 v="throttle steering interpolation rate" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_38 v="turning control">
+				<_36 v="turning" />
+				<_14 v="maximum left turn" />
+				<_14 v="maximum right turn (negative)" />
+				<_14 v="turn rate" />
+				<_3B v="" />
+			</_38>
+			<_36 v="velocity control variables" />
+			<_14 v="maximum forward speed" />
+			<_14 v="maximum reverse speed" />
+			<_14 v="speed acceleration" />
+			<_14 v="speed deceleration" />
+			<_14 v="boost maximum forward speed" />
+			<_14 v="boost maximum reverse speed" />
+			<_14 v="boost speed acceleration" />
+			<_14 v="boost speed deceleration" />
+			<_14 v="maximum left slide" />
+			<_14 v="maximum right slide" />
+			<_14 v="slide acceleration" />
+			<_14 v="slide deceleration" />
+			<_14 v="slide accel against direction" />
+			<_36 v="torque scale" />
+			<_14 v="flying torque scale" />
+			<_14 v="flying torque cap cusp" />
+			<_14 v="flying torque cap exponent" />
+			<_36 v="fixed gun offset" />
+			<_8 v="fixed gun yaw" />
+			<_8 v="fixed gun pitch" />
+			<_36 v="alien fighter trick variables" />
+			<_14 v="maximum trick frequency" />
+			<_14 v="loop trick duration" />
+			<_14 v="roll trick duration" />
+			<_36 v="alien fighter fake flight control" />
+			<_14 v="zero gravity speed" />
+			<_14 v="full gravity speed" />
+			<_14 v="strafe boost scale" />
+			<_14 v="off stick deceleration scale" />
+			<_14 v="cruising throttle" />
+			<_14 v="dive speed scale" />
+			<_3B v="" />
+		</_40>
+		<_40 v="type-turret">
+			<_E v="flags">
+				<Flag v="powered by parent" />
+				<Flag v="idles in default position" />
+				<Flag v="reverse yaw motor direction" />
+				<Flag v="reverse pitch motor direction" />
+				<Flag v="reverse elevate motor direction" />
+				<Flag v="targetable when open" />
+			</_E>
+			<_34 v="generated_pad4605" length="2" />
+			<_2 v="physical yaw node" />
+			<_2 v="physical pitch node" />
+			<_2 v="physical elevate node" />
+			<_8 v="operating elevation angle" />
+			<_3B v="" />
+		</_40>
+		<_40 v="type-vtol">
+			<_38 v="turning control">
+				<_36 v="turning" />
+				<_14 v="maximum left turn" />
+				<_14 v="maximum right turn (negative)" />
+				<_14 v="turn rate" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_2 v="left lift marker" />
+			<_37 v="" />
+			<_2 v="right lift marker" />
+			<_37 v="" />
+			<_2 v="thrust marker" />
+			<_38 v="trigger to throttle">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_38 v="descent to boost">
+				<_38 v="descent to boost">
+					<_37 v="function" />
+					<_38 v="function">
+						<_37 v="" />
+						<_42 v="data" />
+						<_37 v="" />
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_38>
+				<_14 v="max downward speed" />
+				<_3B v="" />
+			</_38>
+			<_36 v="minimum and maximum up acceleration" />
+			<_14 v="maximum up acceleration" />
+			<_14 v="maximum down acceleration" />
+			<_14 v="vertical deceleration time" />
+			<_36 v="lift arm pivot" />
+			<_14 v="lift arm pivot length" />
+			<_14 v="lift arm pivot length negative z" />
+			<_36 v="turn, left and forward accelerations" />
+			<_14 v="maximum turn acceleration" />
+			<_14 v="turn acceleration gain" />
+			<_36 v="interpolation parameters" />
+			<_14 v="interpolation speed domain" />
+			<_36 v="function explanation" />
+			<_38 v="SPEED_TROTTLE_CEILING()">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_38 v="INTERPOLATION_ACC()">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_38 v="A_B_INTERPOLATION() interpolation mapping">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_40 v="speed interpolated parameters">
+				<_14 v="rotor damping" />
+				<_14 v="maximum left acceleration" />
+				<_14 v="maximum forward acceleration" />
+				<_14 v="drag coeficient" />
+				<_14 v="constant deceleration" />
+				<_14 v="magic angular acc exp" />
+				<_14 v="magic angular acc scale" />
+				<_14 v="magic angular acc k" />
+				<_3B v="" />
+			</_40>
+			<_8 v="lift angles acc" />
+			<_14 v="alt. lock offset coefficient" />
+			<_14 v="alt. lock velocity coefficient" />
+			<_36 v="prop rotation" />
+			<_25 v="prop rotation speed" />
+			<_36 v="landing" />
+			<_14 v="landing time" />
+			<_14 v="takeoff time" />
+			<_14 v="landing linear velocity" />
+			<_14 v="landing angular velocity" />
+			<_14 v="auto take off height offset" />
+			<_E v="flags">
+				<Flag v="dodge overloaded on boost trigger" />
+				<Flag v="disable weapons when boosting" />
+				<Flag v="allow boost in z" />
+				<Flag v="manual altitude lock" />
+			</_E>
+			<_34 v="generated_padac32" length="2" />
+			<_36 v="dodge boost" />
+			<_38 v="dodge boost force application">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_38 v="dodge boost velocity">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_14 v="dodge boost trigger time" />
+			<_14 v="dodge boost duration" />
+			<_14 v="dodge boost recharge duration" />
+			<_41 v="dodge boost damage response" />
+			<_36 v="steering overdampening" />
+			<_38 v="steering control">
+				<_36 v="steering overdampening" />
+				<_8 v="overdampen cusp angle" />
+				<_14 v="overdampen exponent" />
+				<_8 v="ebrake overdampen cusp angle" />
+				<_14 v="ebrake overdampen exponent" />
+				<_37 v="Throttle Steering" />
+				<_8 v="throttle steering angle" />
+				<_14 v="throttle steering interpolation rate" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="type-chopper">
+			<_38 v="steering control">
+				<_36 v="steering overdampening" />
+				<_8 v="overdampen cusp angle" />
+				<_14 v="overdampen exponent" />
+				<_8 v="ebrake overdampen cusp angle" />
+				<_14 v="ebrake overdampen exponent" />
+				<_37 v="Throttle Steering" />
+				<_8 v="throttle steering angle" />
+				<_14 v="throttle steering interpolation rate" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_38 v="turning control">
+				<_36 v="turning" />
+				<_14 v="maximum left turn" />
+				<_14 v="maximum right turn (negative)" />
+				<_14 v="turn rate" />
+				<_3B v="" />
+			</_38>
+			<_38 v="engine">
+				<_36 v="engine" />
+				<_14 v="engine moment" />
+				<_14 v="engine min angular velocity" />
+				<_14 v="engine max angular velocity" />
+				<_40 v="gears">
+					<_36 v="loaded torque" />
+					<_38 v="loaded torque curve">
+						<_38 v="function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_36 v="cruising torque" />
+					<_38 v="cruising torque curve">
+						<_38 v="function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_38>
+					<_36 v="gearing" />
+					<_14 v="min time to upshift" />
+					<_14 v="engine up-shift scale" />
+					<_14 v="gear ratio" />
+					<_14 v="min time to downshift" />
+					<_14 v="engine down-shift scale" />
+					<_14 v="audio engine uprev rate" />
+					<_14 v="audio engine shift up RPM value" />
+					<_14 v="audio engine downrev rate" />
+					<_14 v="audio engine shift down RPM value" />
+					<_41 v="gear shift sound - shifting up" />
+					<_41 v="gear shift sound - shifting down" />
+					<_3B v="" />
+				</_40>
+				<_41 v="gear shift sound" />
+				<_40 v="load and cruise sound">
+					<_2 v="load cruise function" />
+					<_30 v="attachment index" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_14 v="wheel circumferance" />
+			<_19 v="pivot offset" />
+			<_36 v="Yaw Correction" />
+			<_14 v="yaw correction coefficient 2" />
+			<_14 v="yaw correction coefficient 1" />
+			<_14 v="yaw correction coefficient 0" />
+			<_14 v="bank to slide ratio" />
+			<_14 v="bank slide exponent" />
+			<_14 v="bank to turn ratio" />
+			<_14 v="bank turn exponent" />
+			<_14 v="bank fraction" />
+			<_14 v="bank rate" />
+			<_14 v="wheel accel" />
+			<_14 v="gyroscopic damping" />
+			<_3B v="" />
+		</_40>
+		<_40 v="type-guardian">
+			<_38 v="steering control">
+				<_36 v="steering overdampening" />
+				<_8 v="overdampen cusp angle" />
+				<_14 v="overdampen exponent" />
+				<_8 v="ebrake overdampen cusp angle" />
+				<_14 v="ebrake overdampen exponent" />
+				<_37 v="Throttle Steering" />
+				<_8 v="throttle steering angle" />
+				<_14 v="throttle steering interpolation rate" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_14 v="maximum forward speed" />
+			<_14 v="maximum reverse speed" />
+			<_14 v="speed acceleration" />
+			<_14 v="speed deceleration" />
+			<_14 v="maximum left slide" />
+			<_14 v="maximum right slide" />
+			<_14 v="slide acceleration" />
+			<_14 v="slide deceleration" />
+			<_14 v="torque scale" />
+			<_14 v="anti-gravity force z-offset" />
+			<_3B v="" />
+		</_40>
+		<_40 v="type-jackal-glider">
+			<_38 v="steering control">
+				<_36 v="steering overdampening" />
+				<_8 v="overdampen cusp angle" />
+				<_14 v="overdampen exponent" />
+				<_8 v="ebrake overdampen cusp angle" />
+				<_14 v="ebrake overdampen exponent" />
+				<_37 v="Throttle Steering" />
+				<_8 v="throttle steering angle" />
+				<_14 v="throttle steering interpolation rate" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_36 v="velocity control variables" />
+			<_14 v="maximum forward speed" />
+			<_14 v="maximum reverse speed" />
+			<_14 v="speed acceleration" />
+			<_14 v="speed deceleration" />
+			<_14 v="maximum left slide" />
+			<_14 v="maximum right slide" />
+			<_14 v="slide acceleration" />
+			<_14 v="slide deceleration" />
+			<_14 v="torque scale" />
+			<_36 v="engine object function" />
+			<_38 v="engine object function">
+				<_2 v="object function damage region" />
+				<_14 v="min anti gravity engine speed" />
+				<_14 v="max anti gravity engine speed" />
+				<_14 v="engine speed acceleration" />
+				<_14 v="maximum vehicle speed" />
+				<_3B v="" />
+			</_38>
+			<_36 v="contrail object function" />
+			<_38 v="contrail object function">
+				<_2 v="object function damage region" />
+				<_14 v="min anti gravity engine speed" />
+				<_14 v="max anti gravity engine speed" />
+				<_14 v="engine speed acceleration" />
+				<_14 v="maximum vehicle speed" />
+				<_3B v="" />
+			</_38>
+			<_38 v="steering animation">
+				<_36 v="steering animation and interpolation&#xA;" />
+				<_14 v="interpolation scale" />
+				<_8 v="max angle" />
+				<_3B v="" />
+			</_38>
+			<_14 v="flying velocity threshold" />
+			<_8 v="flying look threshold" />
+			<_14 v="flying hover threshold" />
+			<_14 v="grounded hover threshold" />
+			<_14 v="landing grounded time" />
+			<_8 v="ground turn radius" />
+			<_14 v="ground acceleration" />
+			<_36 v="wing lift" />
+			<_14 v="wing lift q" />
+			<_14 v="wing lift k" />
+			<_14 v="wing lift function ceiling" />
+			<_14 v="aileron to angular acceleartion scale" />
+			<_8 v="aileron yaw tilt angle" />
+			<_36 v="wing" />
+			<_38 v="wing surface">
+				<_A v="offset axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="pivot axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="rotation axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="normal axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_14 v="offset distance" />
+				<_14 v="pivot distance" />
+				<_36 v="normal force" />
+				<_14 v="q" />
+				<_14 v="k" />
+				<_14 v="function ceiling" />
+				<_8 v="maximum angle" />
+				<_14 v="render debug radius" />
+				<_3B v="" />
+			</_38>
+			<_36 v="ailerons" />
+			<_38 v="aileron surface">
+				<_A v="offset axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="pivot axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="rotation axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="normal axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_14 v="offset distance" />
+				<_14 v="pivot distance" />
+				<_36 v="normal force" />
+				<_14 v="q" />
+				<_14 v="k" />
+				<_14 v="function ceiling" />
+				<_8 v="maximum angle" />
+				<_14 v="render debug radius" />
+				<_3B v="" />
+			</_38>
+			<_36 v="elevator" />
+			<_38 v="elevator surface">
+				<_A v="offset axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="pivot axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="rotation axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="normal axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_14 v="offset distance" />
+				<_14 v="pivot distance" />
+				<_36 v="normal force" />
+				<_14 v="q" />
+				<_14 v="k" />
+				<_14 v="function ceiling" />
+				<_8 v="maximum angle" />
+				<_14 v="render debug radius" />
+				<_3B v="" />
+			</_38>
+			<_36 v="tail" />
+			<_38 v="tail surface">
+				<_A v="offset axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="pivot axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="rotation axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="normal axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_14 v="offset distance" />
+				<_14 v="pivot distance" />
+				<_36 v="normal force" />
+				<_14 v="q" />
+				<_14 v="k" />
+				<_14 v="function ceiling" />
+				<_8 v="maximum angle" />
+				<_14 v="render debug radius" />
+				<_3B v="" />
+			</_38>
+			<_36 v="rudder" />
+			<_38 v="rudder surface">
+				<_A v="offset axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="pivot axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="rotation axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="normal axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_14 v="offset distance" />
+				<_14 v="pivot distance" />
+				<_36 v="normal force" />
+				<_14 v="q" />
+				<_14 v="k" />
+				<_14 v="function ceiling" />
+				<_8 v="maximum angle" />
+				<_14 v="render debug radius" />
+				<_3B v="" />
+			</_38>
+			<_36 v="taxi" />
+			<_38 v="taxi surface">
+				<_A v="offset axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="pivot axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="rotation axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_A v="normal axis">
+					<Flag v="foward" />
+					<Flag v="left" />
+					<Flag v="up" />
+				</_A>
+				<_14 v="offset distance" />
+				<_14 v="pivot distance" />
+				<_36 v="normal force" />
+				<_14 v="q" />
+				<_14 v="k" />
+				<_14 v="function ceiling" />
+				<_8 v="maximum angle" />
+				<_14 v="render debug radius" />
+				<_3B v="" />
+			</_38>
+			<_36 v="ground drag" />
+			<_38 v="ground drag struct">
+				<_36 v="drag" />
+				<_14 v="q" />
+				<_14 v="k" />
+				<_14 v="constant deceleration" />
+				<_3B v="" />
+			</_38>
+			<_36 v="air drag" />
+			<_38 v="air drag struct">
+				<_36 v="drag" />
+				<_14 v="q" />
+				<_14 v="k" />
+				<_14 v="constant deceleration" />
+				<_3B v="" />
+			</_38>
+			<_36 v="takeoff drag" />
+			<_38 v="takeoff drag struct">
+				<_36 v="drag" />
+				<_14 v="q" />
+				<_14 v="k" />
+				<_14 v="constant deceleration" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="type-space-fighter">
+			<_38 v="steering control">
+				<_36 v="steering overdampening" />
+				<_8 v="overdampen cusp angle" />
+				<_14 v="overdampen exponent" />
+				<_8 v="ebrake overdampen cusp angle" />
+				<_14 v="ebrake overdampen exponent" />
+				<_37 v="Throttle Steering" />
+				<_8 v="throttle steering angle" />
+				<_14 v="throttle steering interpolation rate" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_38 v="turning control">
+				<_36 v="turning" />
+				<_14 v="maximum left turn" />
+				<_14 v="maximum right turn (negative)" />
+				<_14 v="turn rate" />
+				<_3B v="" />
+			</_38>
+			<_36 v="velocity control variables" />
+			<_14 v="full throttle speed" />
+			<_14 v="neutral throttle speed" />
+			<_14 v="reverse throttle speed" />
+			<_14 v="speed acceleration" />
+			<_14 v="speed deceleration" />
+			<_14 v="maximum left slide" />
+			<_14 v="maximum right slide" />
+			<_14 v="slide acceleration" />
+			<_14 v="slide deceleration" />
+			<_14 v="slide accel against direction" />
+			<_36 v="torque scale" />
+			<_14 v="flying torque scale" />
+			<_36 v="fixed gun offset" />
+			<_8 v="fixed gun yaw" />
+			<_8 v="fixed gun pitch" />
+			<_36 v="alien fighter trick variables" />
+			<_14 v="maximum trick frequency" />
+			<_14 v="loop trick duration" />
+			<_14 v="roll trick duration" />
+			<_36 v="alien fighter fake flight control" />
+			<_14 v="strafe boost scale" />
+			<_14 v="off stick deceleration scale" />
+			<_14 v="dive speed scale" />
+			<_8 v="roll max velocity" />
+			<_8 v="roll acceleration" />
+			<_8 v="roll deceleration" />
+			<_15 v="roll smoothing fraction" />
+			<_36 v="autolevel" />
+			<_14 v="autolevel time" />
+			<_8 v="autolevel pitch cutoff" />
+			<_8 v="autolevel max velocity" />
+			<_8 v="autolevel max acceleration" />
+			<_8 v="autolevel max user ang. vel." />
+			<_14 v="autolevel spring k" />
+			<_14 v="autolevel spring c" />
+			<_36 v="cosmetic roll" />
+			<_14 v="cosmetic roll scale" />
+			<_8 v="cosmetic roll max bank" />
+			<_8 v="cosmetic roll max velocity" />
+			<_8 v="cosmetic roll acceleration" />
+			<_14 v="cosmetic roll spring k" />
+			<_14 v="cosmetic roll spring c" />
+			<_36 v="new roll" />
+			<_D v="roll flags">
+				<Flag v="use new roll" />
+			</_D>
+			<_8 v="maximum left stick roll angle" />
+			<_14 v="left stick rate smoothing" />
+			<_14 v="left stick trend smoothing" />
+			<_8 v="maximum right stick roll angle" />
+			<_14 v="right stick rate smoothing" />
+			<_14 v="right stick trend smoothing" />
+			<_36 v="turn deceleration" />
+			<_8 v="turn deceleration threshold" />
+			<_15 v="turn deceleration fraction" />
+			<_36 v="soft ceiling turn back" />
+			<_D v="turn back flags">
+				<Flag v="turn back to tangent" />
+			</_D>
+			<_14 v="turn back latched period" />
+			<_38 v="turn back distance to turn rate">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_36 v="thrust params" />
+			<_14 v="ideal thrust decay" />
+			<_14 v="ideal thrust increase" />
+			<_14 v="minimum thrust decay" />
+			<_14 v="minimum thrust increase" />
+			<_14 v="maximum thrust increase" />
+			<_36 v="dive params" />
+			<_14 v="minimum dive angle" />
+			<_14 v="maximum dive angle" />
+			<_36 v="strafe params" />
+			<_14 v="strafe boost power" />
+			<_36 v="wingtip params" />
+			<_14 v="wingtip contrail turn" />
+			<_14 v="wingtip min turn" />
+			<_36 v="Safety" />
+			<_14 v="dangerous trajectory prediction time" />
+			<_3B v="" />
+		</_40>
+		<_40 v="type-revenant">
+			<_38 v="tank block">
+				<_8 v="forward arc" />
+				<_8 v="perpendicular forward arc" />
+				<_14 v="flip window" />
+				<_14 v="pegged fraction" />
+				<_14 v="forward turn scale" />
+				<_14 v="reverse turn scale" />
+				<_36 v="forward differential" />
+				<_14 v="maximum left differential" />
+				<_14 v="maximum right differential" />
+				<_14 v="differential acceleration" />
+				<_14 v="differential deceleration" />
+				<_36 v="reverse differential" />
+				<_14 v="maximum left reverse differential" />
+				<_14 v="maximum right reverse differential" />
+				<_14 v="differential reverse acceleration" />
+				<_14 v="differential reverse deceleration" />
+				<_38 v="engine">
+					<_36 v="engine" />
+					<_14 v="engine moment" />
+					<_14 v="engine min angular velocity" />
+					<_14 v="engine max angular velocity" />
+					<_40 v="gears">
+						<_36 v="loaded torque" />
+						<_38 v="loaded torque curve">
+							<_38 v="function">
+								<_37 v="function" />
+								<_38 v="function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_36 v="cruising torque" />
+						<_38 v="cruising torque curve">
+							<_38 v="function">
+								<_37 v="function" />
+								<_38 v="function">
+									<_37 v="" />
+									<_42 v="data" />
+									<_37 v="" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_36 v="gearing" />
+						<_14 v="min time to upshift" />
+						<_14 v="engine up-shift scale" />
+						<_14 v="gear ratio" />
+						<_14 v="min time to downshift" />
+						<_14 v="engine down-shift scale" />
+						<_14 v="audio engine uprev rate" />
+						<_14 v="audio engine shift up RPM value" />
+						<_14 v="audio engine downrev rate" />
+						<_14 v="audio engine shift down RPM value" />
+						<_41 v="gear shift sound - shifting up" />
+						<_41 v="gear shift sound - shifting down" />
+						<_3B v="" />
+					</_40>
+					<_41 v="gear shift sound" />
+					<_40 v="load and cruise sound">
+						<_2 v="load cruise function" />
+						<_30 v="attachment index" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_36 v="wheel circumferance" />
+				<_14 v="wheel circumferance" />
+				<_14 v="gravity adjust" />
+				<_36 v="New Tank Controls" />
+				<_F v="control flags">
+					<Flag v="Enable New Control" />
+					<Flag v="Use Linear Velocity" />
+					<Flag v="Use Angular Velocity" />
+				</_F>
+				<_34 v="generated_pad4b05" length="3" />
+				<_14 v="at rest forward angle(purple)" />
+				<_14 v="at rest reverse angle(violet)" />
+				<_14 v="at rest side on reverse angle closest to front(green)" />
+				<_14 v="at rest side on reverse angle furthest from front(blue)" />
+				<_14 v="at rest facing forward reverse angle(yellow)" />
+				<_14 v="at rest facing backward reverse angle(pink)" />
+				<_14 v="in motion opposing direction angle" />
+				<_14 v="in motion speed" />
+				<_3B v="" />
+			</_38>
+			<_36 v="velocity control variables" />
+			<_14 v="maximum forward speed" />
+			<_14 v="maximum reverse speed" />
+			<_14 v="speed acceleration" />
+			<_14 v="speed deceleration" />
+			<_14 v="maximum left slide" />
+			<_14 v="maximum right slide" />
+			<_14 v="slide acceleration" />
+			<_14 v="slide deceleration" />
+			<_38 v="scout physics">
+				<_F v="flags">
+					<Flag v="hovercraft" />
+					<Flag v="slope scales speed" />
+				</_F>
+				<_34 v="generated_padddec" length="3" />
+				<_36 v="Air control" />
+				<_14 v="air control angular velocity factor" />
+				<_14 v="air control throttle acceleration" />
+				<_14 v="air control throttle bonus clamp min" />
+				<_14 v="air control throttle bonus clamp max" />
+				<_14 v="air control angular acceleration" />
+				<_15 v="air control auto level strength" />
+				<_36 v="Brake control" />
+				<_14 v="brake lift angular acceleration" />
+				<_14 v="brake lift acceleration up" />
+				<_14 v="brake airborne lift acceleration forward" />
+				<_14 v="brake airborne lift acceleration up" />
+				<_3B v="" />
+			</_38>
+			<_14 v="drag coeficient" />
+			<_14 v="constant deceleration" />
+			<_14 v="torque scale" />
+			<_3B v="" />
+		</_40>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_36 v="General Vehicle Physics" />
+	<_38 v="havok vehicle physics">
+		<_14 v="gravity scale" />
+		<_6 v="iteration count" />
+		<_40 v="anti gravity point configurations">
+			<_2 v="name" />
+			<_36 v="Operational Range- Height" />
+			<_14 v="inner distance" />
+			<_14 v="outer distance" />
+			<_36 v="Banking" />
+			<_14 v="banking lift" />
+			<_14 v="steering banking factor" />
+			<_36 v="Maximum Lifting Force" />
+			<_14 v="strength" />
+			<_36 v="Error" />
+			<_15 v="error" />
+			<_36 v="Operational Range- Orientation" />
+			<_8 v="inner rotational limit" />
+			<_8 v="outer rotational limit" />
+			<_36 v="Damping" />
+			<_14 v="compression damping" />
+			<_14 v="extension damping" />
+			<_37 v="Ground Impact Effects" />
+			<_41 v="combined material effects" />
+			<_41 v="visual material effects" />
+			<_41 v="sound material effects" />
+			<_37 v="" />
+			<_3B v="" />
+		</_40>
+		<_40 v="anti gravity points">
+			<_37 v="" />
+			<_2 v="marker name" />
+			<_2 v="region name" />
+			<_6 v="runtime region index" />
+			<_37 v="" />
+			<_2 v="looping sound marker" />
+			<_40 v="state configurations">
+				<_B v="region state">
+					<Flag v="default" />
+					<Flag v="minor damage" />
+					<Flag v="medium damage" />
+					<Flag v="major damage" />
+					<Flag v="destroyed" />
+				</_B>
+				<_2E v="configuration" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="friction point configurations">
+			<_2 v="name" />
+			<_14 v="radius" />
+			<_36 v="Normal Force Simulation" />
+			<_14 v="ground depth" />
+			<_14 v="ground damp factor" />
+			<_36 v="Physics Simulation Noise Reduction" />
+			<_15 v="ground normal blend rate" />
+			<_14 v="max normal force contribution to friction" />
+			<_36 v="Traction" />
+			<_14 v="static friction" />
+			<_14 v="kinetic friction" />
+			<_14 v="slide speed difference" />
+			<_14 v="e-brake static friction" />
+			<_14 v="e-brake kinetic friction" />
+			<_14 v="e-brake slide speed difference" />
+			<_14 v="AI static friction override" />
+			<_14 v="AI kinetic friction override" />
+			<_8 v="world space slope to stop all traction" />
+			<_8 v="local space slope to start traction loss" />
+			<_8 v="local space slope to stop all traction" />
+			<_8 v="local space slope to stop hit checks" />
+			<_36 v="Grounded Vehicle Stabilizing Torque" />
+			<_38 v="grounded speed to down torque function">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_38 v="nearly grounded speed to down torque function">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_37 v="Ground Impact Effects" />
+			<_41 v="combined material effects" />
+			<_41 v="visual material effects" />
+			<_41 v="sound material effects" />
+			<_37 v="" />
+			<_D v="flags">
+				<Flag v="suspension is destroyed" />
+			</_D>
+			<_3B v="" />
+		</_40>
+		<_40 v="friction points">
+			<_37 v="" />
+			<_2 v="marker name" />
+			<_2 v="region name" />
+			<_6 v="runtime region index" />
+			<_15 v="load fraction" />
+			<_14 v="turn ratio" />
+			<_D v="flags">
+				<Flag v="powered" />
+				<Flag v="attached to e-brake" />
+			</_D>
+			<_37 v="" />
+			<_2 v="looping sound marker" />
+			<_2 v="grinding object function" />
+			<_2 v="rolling object function" />
+			<_40 v="state configurations">
+				<_B v="region state">
+					<Flag v="default" />
+					<Flag v="minor damage" />
+					<Flag v="medium damage" />
+					<Flag v="major damage" />
+					<Flag v="destroyed" />
+				</_B>
+				<_2E v="configuration" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_36 v="Grounded Vehicle Stabilizing Downforce" />
+		<_14 v="maximum speed for downForce" />
+		<_8 v="angle to exclude downforce" />
+		<_38 v="grounded speed to COM downforce function">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_38 v="nearly grounded speed to COM downforce function">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_36 v="Airborne Vehicle Rotational Stabilization" />
+		<_19 v="airborne angular stabilization coefficients" />
+		<_3B v="" />
+	</_38>
+	<_40 v="tricks">
+		<_2 v="animation name" />
+		<_A v="activation type">
+			<Flag v="trick button + left" />
+			<Flag v="trick button + right" />
+			<Flag v="trick button + up" />
+			<Flag v="trick button + down" />
+			<Flag v="peg-flick-jump left" />
+			<Flag v="peg-flick-jump right" />
+			<Flag v="peg-flick-jump up" />
+			<Flag v="peg-flick-jump down" />
+			<Flag v="double-jump left" />
+			<Flag v="double-jump right" />
+			<Flag v="double-jump up" />
+			<Flag v="double-jump down" />
+		</_A>
+		<_A v="velocity preservation">
+			<Flag v="none" />
+			<Flag v="trick relative" />
+			<Flag v="world relative" />
+		</_A>
+		<_F v="flags">
+			<Flag v="use following camera" />
+			<Flag v="do not slam player control" />
+		</_F>
+		<_34 v="generated_pad983c" length="1" />
+		<_14 v="camera interpolation time" />
+		<_14 v="trick exit time" />
+		<_25 v="trick exit camera interpolation time" />
+		<_14 v="trick exit displacement reference" />
+		<_14 v="cooldown time" />
+		<_C v="tutorial id">
+			<Flag v="None" />
+			<Flag v="Assassination" />
+			<Flag v="Camera" />
+			<Flag v="Crouch" />
+			<Flag v="Grenade" />
+			<Flag v="Jump" />
+			<Flag v="Melee" />
+			<Flag v="Movement" />
+			<Flag v="Shoot" />
+			<Flag v="Tracking" />
+			<Flag v="Clamber" />
+			<Flag v="Slide" />
+			<Flag v="Sprint" />
+			<Flag v="Thruster" />
+			<Flag v="Zoom" />
+			<Flag v="BansheeBoost" />
+			<Flag v="BansheeTrick" />
+			<Flag v="BansheeSwitchWeapons" />
+			<Flag v="GhostBoost" />
+			<Flag v="MantisRockets" />
+			<Flag v="MantisStomp" />
+			<Flag v="VTOLAscend" />
+			<Flag v="VTOLDescend" />
+			<Flag v="VTOLEvade" />
+			<Flag v="VTOLSwitchWeapons" />
+			<Flag v="VTOLShoot" />
+			<Flag v="JeepDrive" />
+			<Flag v="JeepHandbrake" />
+			<Flag v="JeepShoot" />
+			<Flag v="WraithBoost" />
+			<Flag v="SeatSwitch" />
+			<Flag v="OrdersGeneral" />
+			<Flag v="OrdersClear" />
+			<Flag v="OrdersEnemy" />
+			<Flag v="OrdersMove" />
+			<Flag v="OrdersVehicle" />
+			<Flag v="OrdersWeapon" />
+		</_C>
+		<_3B v="" />
+	</_40>
+	<_A v="player training vehicle type">
+		<Flag v="none" />
+		<Flag v="warthog" />
+		<Flag v="warthog turret" />
+		<Flag v="ghost" />
+		<Flag v="banshee" />
+		<Flag v="tank" />
+		<Flag v="wraith" />
+	</_A>
+	<_A v="vehicle size">
+		<Flag v="small" />
+		<Flag v="large" />
+	</_A>
+	<_4 v="complex suspension sample count" />
+	<_34 v="generated_pad9b33" length="1" />
+	<_8 v="complex suspension distribution angle" />
+	<_14 v="complex suspension wheel diameter" />
+	<_14 v="complex suspension wheel width" />
+	<_14 v="minimum flipping angular velocity" />
+	<_14 v="maximum flipping angular velocity" />
+	<_8 v="upside down angle" />
+	<_14 v="crouch transition time" />
+	<_14 v="HOOJYTSU" />
+	<_14 v="seat enterance acceleration scale" />
+	<_14 v="seat exit accelersation scale" />
+	<_2 v="blur function name" />
+	<_14 v="blur speed" />
+	<_2 v="flip message" />
+	<_36 v="sounds and effects" />
+	<_41 v="Player vehicle sound bank" />
+	<_41 v="Surface sound material effects" />
+	<_41 v="light suspension sound" />
+	<_14 v="Light suspension sound displacement threshold" />
+	<_41 v="medium suspension sound" />
+	<_14 v="Medium suspension sound displacement threshold" />
+	<_41 v="hard suspension sound" />
+	<_14 v="Hard suspension sound displacement threshold" />
+	<_14 v="fake audio speed - speed increase amount" />
+	<_14 v="fake audio speed - boost speed increase amount" />
+	<_14 v="fake audio speed - speed decrease amount" />
+	<_14 v="fake audio speed - non-boost limit" />
+	<_14 v="fake audio speed - max speed scale" />
+	<_40 v="Sound RTPCs">
+		<_30 v="Attachment Index" />
+		<_2 v="Function" />
+		<_2 v="RTPC Name" />
+		<_6 v="RTPC name hash value" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Sound Sweeteners">
+		<_2 v="Function" />
+		<_41 v="sound" />
+		<_14 v="Switch point" />
+		<_6 v="Mode" />
+		<_3B v="" />
+	</_40>
+	<_41 v="special effect" />
+	<_41 v="driver boost damage effect or response" />
+	<_41 v="rider boost damage effect or response" />
+	<_2 v="vehicle name" />
+	<_40 v="AI cruise control">
+		<_36 v="ai speed control" />
+		<_14 v="Proportional" />
+		<_14 v="Integral" />
+		<_14 v="Derivative" />
+		<_14 v="Slow down rate" />
+		<_3B v="" />
+	</_40>
+	<_40 v="UI display info">
+		<_2 v="name" />
+		<_2 v="alt name " />
+		<_2 v="description" />
+		<_2 v="help text" />
+		<_2 v="icon string id" />
+		<_41 v="sprite" />
+		<_6 v="sprite index" />
+		<_41 v="alt sprite" />
+		<_6 v="alt sprite index" />
+		<_6 v="damage sprite index" />
+		<_41 v="ui vehicle screen reference" />
+		<_3B v="" />
+	</_40>
+	<_41 v="UI Vehicle Display info" />
+	<_C v="Vehicle Nav Point Sequence Index">
+		<Flag v="TacticalObjective" />
+		<Flag v="SubObjective" />
+		<Flag v="MainObjective" />
+		<Flag v="SupplyCache" />
+		<Flag v="MoveToIndicator" />
+		<Flag v="ChatterIndicator" />
+		<Flag v="AttackCommandFg" />
+		<Flag v="ReviveFg" />
+		<Flag v="ReviveBg" />
+		<Flag v="BleedoutTimerStroke" />
+		<Flag v="ReviveCommand" />
+		<Flag v="ReviveHelpPulse" />
+		<Flag v="WzBossFg" />
+		<Flag v="WzBossBg" />
+		<Flag v="WzReqFg" />
+		<Flag v="WzHomeBaseFg" />
+		<Flag v="AttackFg" />
+		<Flag v="DefendFg" />
+		<Flag v="CircleBg" />
+		<Flag v="DiamondBg" />
+		<Flag v="SquareBg" />
+		<Flag v="HexBg" />
+		<Flag v="CircleStroke" />
+		<Flag v="DiamondStroke" />
+		<Flag v="SquareStroke" />
+		<Flag v="HexStroke" />
+		<Flag v="ExclamationFg" />
+		<Flag v="DeadIndicator" />
+		<Flag v="SpeakingIndicator" />
+		<Flag v="WeaponPadFg" />
+		<Flag v="CubeFg" />
+		<Flag v="FlagFg" />
+		<Flag v="LetterAFg" />
+		<Flag v="LetterBFg" />
+		<Flag v="LetterCFg" />
+		<Flag v="BombFg" />
+		<Flag v="CrownFg" />
+		<Flag v="SmallOffscreenArrow" />
+		<Flag v="FriendlyArrow" />
+		<Flag v="EnemyArrow" />
+		<Flag v="SeekIndicator" />
+		<Flag v="LockOnIndicator" />
+		<Flag v="ReqBg" />
+		<Flag v="Num0Fg" />
+		<Flag v="Num1Fg" />
+		<Flag v="Num2Fg" />
+		<Flag v="Num3Fg" />
+		<Flag v="Num4Fg" />
+		<Flag v="Num5Fg" />
+		<Flag v="Num6Fg" />
+		<Flag v="Num7Fg" />
+		<Flag v="Num8Fg" />
+		<Flag v="Num9Fg" />
+		<Flag v="FrameIdentifier1" />
+		<Flag v="FrameIdentifier2" />
+		<Flag v="FrameIdentifier3" />
+		<Flag v="FrameIdentifier4" />
+		<Flag v="AbilityAutoTurret" />
+		<Flag v="AbilityCloak" />
+		<Flag v="AbilityGravSphere" />
+		<Flag v="AbilityHealthBlast" />
+		<Flag v="AbilityHex" />
+		<Flag v="AbilityHologram" />
+		<Flag v="AbilityLocationDart" />
+		<Flag v="AbilityMedicDrone" />
+		<Flag v="AbilityTrap" />
+		<Flag v="Flipbook1" />
+		<Flag v="Flipbook2" />
+		<Flag v="Flipbook3" />
+		<Flag v="Flipbook4" />
+		<Flag v="Flipbook5" />
+		<Flag v="Flipbook6" />
+		<Flag v="Flipbook7" />
+		<Flag v="Flipbook8" />
+		<Flag v="Flipbook9" />
+		<Flag v="Flipbook10" />
+		<Flag v="Flipbook11" />
+		<Flag v="Flipbook12" />
+		<Flag v="Flipbook13" />
+		<Flag v="Flipbook14" />
+		<Flag v="Flipbook15" />
+		<Flag v="Flipbook16" />
+		<Flag v="Flipbook17" />
+		<Flag v="Flipbook18" />
+		<Flag v="Flipbook19" />
+		<Flag v="Flipbook20" />
+		<Flag v="Flipbook21" />
+		<Flag v="Flipbook22" />
+		<Flag v="Flipbook23" />
+		<Flag v="Flipbook24" />
+	</_C>
+	<_37 v="" />
+	<_34 v="generated_pade54b" length="4" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,1607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="build identifier">
+		<_6 v="manifest_id0" />
+		<_6 v="manifest_id1" />
+		<_6 v="manifest_id2" />
+		<_6 v="manifest_id3" />
+		<_6 v="build_index" />
+		<_6 v="structure importer version" />
+		<_3B v="" />
+	</_38>
+	<_38 v="parent build identifier">
+		<_6 v="manifest_id0" />
+		<_6 v="manifest_id1" />
+		<_6 v="manifest_id2" />
+		<_6 v="manifest_id3" />
+		<_6 v="build_index" />
+		<_6 v="structure importer version" />
+		<_3B v="" />
+	</_38>
+	<_6 v="import info checksum" />
+	<_6 v="import version" />
+	<_41 v="owner level" />
+	<_41 v="structure meta data" />
+	<_E v="flags">
+		<Flag v="has processed prefab instances" />
+		<Flag v="Collision geometry is over double the budget" />
+		<Flag v="prefab placements limit exceeded" />
+		<Flag v="hidden ios have changed" />
+		<Flag v="get data from hlods" />
+	</_E>
+	<_E v="content policy flags">
+		<Flag v="has working pathfinding" />
+		<Flag v="convex decomposition enabled" />
+	</_E>
+	<_E v="failed content policy flags">
+		<Flag v="has working pathfinding" />
+		<Flag v="convex decomposition enabled" />
+	</_E>
+	<_34 v="generated_pad7169" length="2" />
+	<_40 v="seam identifiers">
+		<_38 v="seams identifier">
+			<_6 v="seam_id0" />
+			<_6 v="seam_id1" />
+			<_6 v="seam_id2" />
+			<_6 v="seam_id3" />
+			<_3B v="" />
+		</_38>
+		<_40 v="edge mapping">
+			<_6 v="structure edge index" />
+			<_3B v="" />
+		</_40>
+		<_40 v="cluster mapping">
+			<_6 v="cluster_index" />
+			<_17 v="cluster center" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="collision materials">
+		<_2E v="conveyor surface index" />
+		<_2E v="seam mapping index" />
+		<_E v="flags">
+			<Flag v="is seam" />
+		</_E>
+		<_3B v="" />
+	</_40>
+	<_40 v="leaves">
+		<_3C v="cluster" />
+		<_3B v="" />
+	</_40>
+	<_40 v="super node parent mappings">
+		<_5 v="parent_super_node_index" />
+		<_4 v="parent_internal_node_index" />
+		<_F v="flags">
+			<Flag v="above" />
+		</_F>
+		<_6 v="has_traversal_geometry_mask" />
+		<_2E v="first_traversal_geometry_index" />
+		<_2E v="first_aabb_index" />
+		<_6 v="aabb_mask" />
+		<_2E v="non_terminal_traversal_geometry_index" />
+		<_34 v="generated_pad5df5" length="2" />
+		<_3B v="" />
+	</_40>
+	<_40 v="super node recursable_masks">
+		<_3D v="mask" />
+		<_3B v="" />
+	</_40>
+	<_40 v="structure_super_node_traversal_geometry_block">
+		<_40 v="portal_indices">
+			<_5 v="index" />
+			<_3B v="" />
+		</_40>
+		<_40 v="seam_indices">
+			<_5 v="index" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_25 v="world bounds x" />
+	<_25 v="world bounds y" />
+	<_25 v="world bounds z" />
+	<_40 v="cluster portals">
+		<_38 v="oriented bounds">
+			<_17 v="center" />
+			<_19 v="extents" />
+			<_1A v="orientation" />
+			<_3B v="" />
+		</_38>
+		<_5 v="back cluster" />
+		<_5 v="front cluster" />
+		<_6 v="plane index" />
+		<_17 v="centroid" />
+		<_14 v="bounding radius" />
+		<_D v="flags">
+			<Flag v="ai can't hear through this shit" />
+			<Flag v="one-way" />
+			<Flag v="no-way" />
+			<Flag v="one-way-reversed" />
+			<Flag v="no one can hear through this" />
+		</_D>
+		<_40 v="vertices">
+			<_17 v="point" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="clusters">
+		<_36 v="CLUSTER INFO" />
+		<_25 v="bounds x" />
+		<_25 v="bounds y" />
+		<_25 v="bounds z" />
+		<_40 v="portals">
+			<_5 v="portal index" />
+			<_3B v="" />
+		</_40>
+		<_5 v="mesh index" />
+		<_5 v="instance imposter cluster mopp index" />
+		<_40 v="seam indices">
+			<_5 v="seam index" />
+			<_3B v="" />
+		</_40>
+		<_40 v="instance Buckets Block">
+			<_6 v="runtime geo mesh index" />
+			<_41 v="runtime geo tag reference" />
+			<_6 v="pad" />
+			<_40 v="instances Data Block">
+				<_5 v="instance index" />
+				<_3B v="" />
+			</_40>
+			<_6 v="instances Data Block Flags" />
+			<_6 v="instances Data Block Vector1" />
+			<_6 v="instances Data Block Vector2" />
+			<_3B v="" />
+		</_40>
+		<_6 v="instance Buckets Flags" />
+		<_6 v="instance Buckets Vector1" />
+		<_6 v="instance Buckets Vector2" />
+		<_3B v="" />
+	</_40>
+	<_40 v="cookie cutters">
+		<_37 v="Cookie Cutter" />
+		<_38 v="collision model">
+			<_40 v="bsp3d nodes">
+				<_7 v="node data designator" />
+				<_3B v="" />
+			</_40>
+			<_40 v="bsp3d supernodes">
+				<_14 v="plane 0" />
+				<_14 v="plane 1" />
+				<_14 v="plane 2" />
+				<_14 v="plane 3" />
+				<_14 v="plane 4" />
+				<_14 v="plane 5" />
+				<_14 v="plane 6" />
+				<_14 v="plane 7" />
+				<_14 v="plane 8" />
+				<_14 v="plane 9" />
+				<_14 v="plane10" />
+				<_14 v="plane11" />
+				<_14 v="plane12" />
+				<_14 v="plane13" />
+				<_14 v="plane14" />
+				<_6 v="plane dimensions" />
+				<_6 v="child index 0" />
+				<_6 v="child index 1" />
+				<_6 v="child index 2" />
+				<_6 v="child index 3" />
+				<_6 v="child index 4" />
+				<_6 v="child index 5" />
+				<_6 v="child index 6" />
+				<_6 v="child index 7" />
+				<_6 v="child index 8" />
+				<_6 v="child index 9" />
+				<_6 v="child index10" />
+				<_6 v="child index11" />
+				<_6 v="child index12" />
+				<_6 v="child index13" />
+				<_6 v="child index14" />
+				<_6 v="child index15" />
+				<_3B v="" />
+			</_40>
+			<_40 v="planes">
+				<_1E v="plane" />
+				<_3B v="" />
+			</_40>
+			<_40 v="leaves">
+				<_F v="flags">
+					<Flag v="contains double-sided surfaces" />
+				</_F>
+				<_34 v="generated_padd325" length="1" />
+				<_3D v="bsp2d reference count" />
+				<_3E v="first bsp2d reference" />
+				<_3B v="" />
+			</_40>
+			<_40 v="bsp2d references">
+				<_5 v="plane" />
+				<_5 v="bsp2d node" />
+				<_3B v="" />
+			</_40>
+			<_40 v="bsp2d nodes">
+				<_1D v="plane" />
+				<_5 v="left child" />
+				<_5 v="right child" />
+				<_3B v="" />
+			</_40>
+			<_40 v="surfaces">
+				<_3D v="plane index" />
+				<_3D v="first edge" />
+				<_5 v="material" />
+				<_F v="flags">
+					<Flag v="two sided" />
+					<Flag v="invisible" />
+					<Flag v="climbable" />
+					<Flag v="invalid" />
+					<Flag v="conveyor" />
+					<Flag v="slip" />
+					<Flag v="plane negated" />
+				</_F>
+				<_3C v="best plane calculation vertex index " />
+				<_3B v="" />
+			</_40>
+			<_40 v="edges">
+				<_3D v="start vertex" />
+				<_3D v="end vertex" />
+				<_3D v="forward edge" />
+				<_3D v="reverse edge" />
+				<_3D v="left surface" />
+				<_3D v="right surface" />
+				<_3B v="" />
+			</_40>
+			<_40 v="vertices">
+				<_17 v="point" />
+				<_3D v="first edge" />
+				<_5 v="sink" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="markers">
+		<_A v="marker type">
+			<Flag v="none" />
+			<Flag v="falling leaf generator" />
+			<Flag v="sky (unused)" />
+			<Flag v="model" />
+		</_A>
+		<_0 v="marker parameter" />
+		<_34 v="generated_padbec6" length="3" />
+		<_1A v="rotation" />
+		<_17 v="position" />
+		<_3B v="" />
+	</_40>
+	<_40 v="leaf map leaves">
+		<_40 v="faces">
+			<_6 v="node index" />
+			<_40 v="vertices">
+				<_17 v="vertex" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="connection indices">
+			<_6 v="connection index" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="leaf map connections">
+		<_6 v="plane index" />
+		<_6 v="back leaf index" />
+		<_6 v="front leaf index" />
+		<_40 v="vertices">
+			<_17 v="vertex" />
+			<_3B v="" />
+		</_40>
+		<_14 v="area" />
+		<_3B v="" />
+	</_40>
+	<_40 v="errors">
+		<_1 v="name" />
+		<_A v="report type">
+			<Flag v="silent" />
+			<Flag v="comment" />
+			<Flag v="warning" />
+			<Flag v="error" />
+		</_A>
+		<_34 v="generated_padf276" length="1" />
+		<_E v="flags">
+			<Flag v="rendered" />
+			<Flag v="tangent-space" />
+			<Flag v="non-critical" />
+			<Flag v="lightmap light" />
+			<Flag v="report key is valid" />
+		</_E>
+		<_3D v="runtime generation flags" />
+		<_34 v="generated_pad3f2b" length="2" />
+		<_6 v="runtime something" />
+		<_40 v="reports">
+			<_A v="type">
+				<Flag v="silent" />
+				<Flag v="comment" />
+				<Flag v="warning" />
+				<Flag v="error" />
+			</_A>
+			<_A v="source">
+				<Flag v="none" />
+				<Flag v="structure" />
+				<Flag v="poop" />
+				<Flag v="lightmap" />
+				<Flag v="pathfinding" />
+			</_A>
+			<_E v="flags">
+				<Flag v="rendered" />
+				<Flag v="tangent-space" />
+				<Flag v="non-critical" />
+				<Flag v="lightmap light" />
+				<Flag v="report key is valid" />
+			</_E>
+			<_42 v="text" />
+			<_6 v="source identifier" />
+			<_0 v="source filename" />
+			<_6 v="source line number" />
+			<_40 v="vertices">
+				<_38 v="point">
+					<_17 v="position" />
+					<_39 v="node indices" />
+					<_39 v="node weights" />
+					<_3B v="" />
+				</_38>
+				<_20 v="color" />
+				<_14 v="screen size" />
+				<_3B v="" />
+			</_40>
+			<_40 v="vectors">
+				<_38 v="point">
+					<_17 v="position" />
+					<_39 v="node indices" />
+					<_39 v="node weights" />
+					<_3B v="" />
+				</_38>
+				<_20 v="color" />
+				<_19 v="normal" />
+				<_14 v="screen length" />
+				<_3B v="" />
+			</_40>
+			<_40 v="lines">
+				<_39 v="points" />
+				<_20 v="color" />
+				<_3B v="" />
+			</_40>
+			<_40 v="triangles">
+				<_39 v="points" />
+				<_20 v="color" />
+				<_3B v="" />
+			</_40>
+			<_40 v="quads">
+				<_39 v="points" />
+				<_20 v="color" />
+				<_3B v="" />
+			</_40>
+			<_40 v="comments">
+				<_42 v="text" />
+				<_38 v="point">
+					<_17 v="position" />
+					<_39 v="node indices" />
+					<_39 v="node weights" />
+					<_3B v="" />
+				</_38>
+				<_20 v="color" />
+				<_3B v="" />
+			</_40>
+			<_6 v="report key" />
+			<_6 v="node index" />
+			<_25 v="bounds x" />
+			<_25 v="bounds y" />
+			<_25 v="bounds z" />
+			<_20 v="color" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="instanced geometry instances">
+		<_19 v="scale" />
+		<_19 v="forward" />
+		<_19 v="left" />
+		<_19 v="up" />
+		<_17 v="position" />
+		<_41 v="Runtime geo mesh reference" />
+		<_41 v="Foliage material palette reference" />
+		<_5 v="Runtime geo mesh index" />
+		<_5 v="unique io index" />
+		<_E v="flags">
+			<Flag v="render only" />
+			<Flag v="does not block aoe damage" />
+			<Flag v="remove from dynamic shadow geometry" />
+			<Flag v="cinema only" />
+			<Flag v="exclude from cinema" />
+			<Flag v="disable play collision" />
+			<Flag v="disable bullet collision" />
+			<Flag v="ignore cubemap volume" />
+			<Flag v="always generate floating shadow" />
+			<Flag v="PVS always visible" />
+			<Flag v="PVS always use LOD 0" />
+			<Flag v="PVS don't use as an occluder" />
+			<Flag v="exclude from intel map" />
+			<Flag v="Exclude from broadphase calculation" />
+			<Flag v="can generate decorators" />
+			<Flag v="isHLOD" />
+		</_E>
+		<_34 v="generated_pad89b2" length="2" />
+		<_14 v="bounds x0" />
+		<_14 v="bounds x1" />
+		<_14 v="bounds y0" />
+		<_14 v="bounds y1" />
+		<_14 v="bounds z0" />
+		<_14 v="bounds z1" />
+		<_17 v="world bounding sphere center" />
+		<_14 v="world bounding sphere radius" />
+		<_34 v="generated_padd667" length="4" />
+		<_7 v="Placement Checksum" />
+		<_A v="pathfinding policy">
+			<Flag v="cut-out" />
+			<Flag v="static" />
+			<Flag v="none" />
+		</_A>
+		<_A v="streaming priority">
+			<Flag v="default" />
+			<Flag v="higher" />
+			<Flag v="highest" />
+		</_A>
+		<_E v="flags2">
+			<Flag v="contains decal parts" />
+			<Flag v="negative scale" />
+			<Flag v="is quick deleted" />
+			<Flag v="Supports Coatings" />
+			<Flag v="wants hologram override" />
+			<Flag v="Coatings Setup On Initial Frame" />
+		</_E>
+		<_3D v="hlod index" />
+		<_34 v="generated_pad231c" length="2" />
+		<_38 v="lod Overrides">
+			<_40 v="Lod Levels Block">
+				<_14 v="lodTransitionDistance" />
+				<_3B v="" />
+			</_40>
+			<_6 v="Lod Levels Block Flags" />
+			<_6 v="Lod Levels Block Vector1" />
+			<_6 v="Lod Levels Block Vector2" />
+			<_14 v="lod fade after Distance" />
+			<_3B v="" />
+		</_38>
+		<_2 v="style id" />
+		<_6 v="damage style index" />
+		<_34 v="generated_pad6fd1" length="4" />
+		<_7 v="style tag override data" />
+		<_38 v="material override data">
+			<_40 v="per Instance Material Block">
+				<_41 v="material" />
+				<_3B v="" />
+			</_40>
+			<_6 v="per Instance Material Flags" />
+			<_6 v="per Instance Material Vector1" />
+			<_6 v="per Instance Material Vector2" />
+			<_E v="mesh flags override">
+				<Flag v="mesh has vertex color" />
+				<Flag v="use region index for sorting" />
+				<Flag v="can be rendered in draw bundles" />
+				<Flag v="mesh is custom shadow caster" />
+				<Flag v="mesh is unindexed (do not modify)" />
+				<Flag v="mash should render in z prepass" />
+				<Flag v="use uncompressed vertex format" />
+				<Flag v="mesh is PCA" />
+				<Flag v="mesh has a useful set of second texture coords" />
+				<Flag v="mesh has a useful set of third texture coords" />
+				<Flag v="Use UV3 Tangent Rotation" />
+			</_E>
+			<_34 v="generated_pad58dd" length="2" />
+			<_3B v="" />
+		</_38>
+		<_17 v="rectMin" />
+		<_17 v="rectMax" />
+		<_6 v="external_guid" />
+		<_7 v="coating entry" />
+		<_7 v="editorData" />
+		<_3B v="" />
+	</_40>
+	<_6 v="instanced geometry instances Flags" />
+	<_6 v="instanced geometry instances Vector1" />
+	<_6 v="instanced geometry instances Vector2" />
+	<_40 v="instanced foliage instances">
+		<_19 v="scale" />
+		<_19 v="forward" />
+		<_19 v="left" />
+		<_19 v="up" />
+		<_17 v="position" />
+		<_41 v="Runtime geo mesh reference" />
+		<_41 v="Foliage material palette reference" />
+		<_5 v="Runtime geo mesh index" />
+		<_5 v="unique io index" />
+		<_E v="flags">
+			<Flag v="render only" />
+			<Flag v="does not block aoe damage" />
+			<Flag v="remove from dynamic shadow geometry" />
+			<Flag v="cinema only" />
+			<Flag v="exclude from cinema" />
+			<Flag v="disable play collision" />
+			<Flag v="disable bullet collision" />
+			<Flag v="ignore cubemap volume" />
+			<Flag v="always generate floating shadow" />
+			<Flag v="PVS always visible" />
+			<Flag v="PVS always use LOD 0" />
+			<Flag v="PVS don't use as an occluder" />
+			<Flag v="exclude from intel map" />
+			<Flag v="Exclude from broadphase calculation" />
+			<Flag v="can generate decorators" />
+			<Flag v="isHLOD" />
+		</_E>
+		<_34 v="generated_pad89b2" length="2" />
+		<_14 v="bounds x0" />
+		<_14 v="bounds x1" />
+		<_14 v="bounds y0" />
+		<_14 v="bounds y1" />
+		<_14 v="bounds z0" />
+		<_14 v="bounds z1" />
+		<_17 v="world bounding sphere center" />
+		<_14 v="world bounding sphere radius" />
+		<_34 v="generated_padd667" length="4" />
+		<_7 v="Placement Checksum" />
+		<_A v="pathfinding policy">
+			<Flag v="cut-out" />
+			<Flag v="static" />
+			<Flag v="none" />
+		</_A>
+		<_A v="streaming priority">
+			<Flag v="default" />
+			<Flag v="higher" />
+			<Flag v="highest" />
+		</_A>
+		<_E v="flags2">
+			<Flag v="contains decal parts" />
+			<Flag v="negative scale" />
+			<Flag v="is quick deleted" />
+			<Flag v="Supports Coatings" />
+			<Flag v="wants hologram override" />
+			<Flag v="Coatings Setup On Initial Frame" />
+		</_E>
+		<_3D v="hlod index" />
+		<_34 v="generated_pad231c" length="2" />
+		<_38 v="lod Overrides">
+			<_40 v="Lod Levels Block">
+				<_14 v="lodTransitionDistance" />
+				<_3B v="" />
+			</_40>
+			<_6 v="Lod Levels Block Flags" />
+			<_6 v="Lod Levels Block Vector1" />
+			<_6 v="Lod Levels Block Vector2" />
+			<_14 v="lod fade after Distance" />
+			<_3B v="" />
+		</_38>
+		<_2 v="style id" />
+		<_6 v="damage style index" />
+		<_34 v="generated_pad6fd1" length="4" />
+		<_7 v="style tag override data" />
+		<_38 v="material override data">
+			<_40 v="per Instance Material Block">
+				<_41 v="material" />
+				<_3B v="" />
+			</_40>
+			<_6 v="per Instance Material Flags" />
+			<_6 v="per Instance Material Vector1" />
+			<_6 v="per Instance Material Vector2" />
+			<_E v="mesh flags override">
+				<Flag v="mesh has vertex color" />
+				<Flag v="use region index for sorting" />
+				<Flag v="can be rendered in draw bundles" />
+				<Flag v="mesh is custom shadow caster" />
+				<Flag v="mesh is unindexed (do not modify)" />
+				<Flag v="mash should render in z prepass" />
+				<Flag v="use uncompressed vertex format" />
+				<Flag v="mesh is PCA" />
+				<Flag v="mesh has a useful set of second texture coords" />
+				<Flag v="mesh has a useful set of third texture coords" />
+				<Flag v="Use UV3 Tangent Rotation" />
+			</_E>
+			<_34 v="generated_pad58dd" length="2" />
+			<_3B v="" />
+		</_38>
+		<_17 v="rectMin" />
+		<_17 v="rectMax" />
+		<_6 v="external_guid" />
+		<_7 v="coating entry" />
+		<_7 v="editorData" />
+		<_3B v="" />
+	</_40>
+	<_6 v="instanced foliage instances Flags" />
+	<_6 v="instanced foliage instances Vector1" />
+	<_6 v="instanced foliage instances Vector2" />
+	<_40 v="instanced physics instances">
+		<_41 v="m_collisionTagReference" />
+		<_40 v="instanced physics instances">
+			<_5 v="per-instance material palette" />
+			<_3B v="" />
+		</_40>
+		<_6 v="instanced physics instances Flags" />
+		<_6 v="instanced physics instances Vector1" />
+		<_6 v="instanced physics instances Vector2" />
+		<_19 v="Scale" />
+		<_19 v="Forward" />
+		<_19 v="Left" />
+		<_19 v="Up" />
+		<_17 v="Position" />
+		<_D v="m_typeMask">
+			<Flag v="Bullet" />
+			<Flag v="Play" />
+			<Flag v="InvisibleWall" />
+			<Flag v="Render" />
+		</_D>
+		<_6 v="m_guid" />
+		<_39 v="havok body ID array" />
+		<_F v="flags">
+			<Flag v="Allow decals" />
+		</_F>
+		<_34 v="generated_pad119d" length="7" />
+		<_7 v="m_scene" />
+		<_3B v="" />
+	</_40>
+	<_6 v="instanced physics instances Flags" />
+	<_6 v="instanced physics instances Vector1" />
+	<_6 v="instanced physics instances Vector2" />
+	<_6 v="Instance Geometry Tag Instance Count" />
+	<_7 v="Instance Postprocess Checksum" />
+	<_40 v="debug info">
+		<_40 v="clusters">
+			<_E v="errors">
+				<Flag v="multiple fog planes" />
+				<Flag v="fog zone collision" />
+				<Flag v="fog zone immersion" />
+			</_E>
+			<_E v="warnings">
+				<Flag v="multiple visible fog planes" />
+				<Flag v="visible fog cluster omission" />
+				<Flag v="fog plane missed render-bsp" />
+			</_E>
+			<_40 v="lines">
+				<_B v="type">
+					<Flag v="fog plane boundary edge" />
+					<Flag v="fog plane internal edge" />
+					<Flag v="fog zone floodfill" />
+					<Flag v="fog zone cluster centroid" />
+					<Flag v="fog zone cluster geometry" />
+					<Flag v="fog zone portal centroid" />
+					<Flag v="fog zone portal geometry" />
+				</_B>
+				<_5 v="code" />
+				<_5 v="pad thai" />
+				<_34 v="generated_pada37a" length="2" />
+				<_17 v="point 0" />
+				<_17 v="point 1" />
+				<_3B v="" />
+			</_40>
+			<_40 v="fog plane indices">
+				<_6 v="index" />
+				<_3B v="" />
+			</_40>
+			<_40 v="visible fog plane indices">
+				<_6 v="index" />
+				<_3B v="" />
+			</_40>
+			<_40 v="vis-fog omission cluster indices">
+				<_6 v="index" />
+				<_3B v="" />
+			</_40>
+			<_40 v="containing fog zone indices">
+				<_6 v="index" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="fog planes">
+			<_6 v="fog zone index" />
+			<_6 v="connected plane designator" />
+			<_40 v="lines">
+				<_B v="type">
+					<Flag v="fog plane boundary edge" />
+					<Flag v="fog plane internal edge" />
+					<Flag v="fog zone floodfill" />
+					<Flag v="fog zone cluster centroid" />
+					<Flag v="fog zone cluster geometry" />
+					<Flag v="fog zone portal centroid" />
+					<Flag v="fog zone portal geometry" />
+				</_B>
+				<_5 v="code" />
+				<_5 v="pad thai" />
+				<_34 v="generated_pada37a" length="2" />
+				<_17 v="point 0" />
+				<_17 v="point 1" />
+				<_3B v="" />
+			</_40>
+			<_40 v="intersected cluster indices">
+				<_6 v="index" />
+				<_3B v="" />
+			</_40>
+			<_40 v="inf. extent cluster indices">
+				<_6 v="index" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="fog zones">
+			<_6 v="media index" />
+			<_6 v="base fog plane index" />
+			<_40 v="lines">
+				<_B v="type">
+					<Flag v="fog plane boundary edge" />
+					<Flag v="fog plane internal edge" />
+					<Flag v="fog zone floodfill" />
+					<Flag v="fog zone cluster centroid" />
+					<Flag v="fog zone cluster geometry" />
+					<Flag v="fog zone portal centroid" />
+					<Flag v="fog zone portal geometry" />
+				</_B>
+				<_5 v="code" />
+				<_5 v="pad thai" />
+				<_34 v="generated_pada37a" length="2" />
+				<_17 v="point 0" />
+				<_17 v="point 1" />
+				<_3B v="" />
+			</_40>
+			<_40 v="immersed cluster indices">
+				<_6 v="index" />
+				<_3B v="" />
+			</_40>
+			<_40 v="bounding fog plane indices">
+				<_6 v="index" />
+				<_3B v="" />
+			</_40>
+			<_40 v="collision fog plane indices">
+				<_6 v="index" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad5788" length="4" />
+	<_38 v="render geometry">
+		<_D v="runtime flags">
+			<Flag v="processed" />
+			<Flag v="available" />
+			<Flag v="has valid budgets (really)" />
+			<Flag v="manual resource creation" />
+			<Flag v="keep raw geometry" />
+			<Flag v="dont use compressed vertex positions" />
+			<Flag v="pca animation table sorted" />
+			<Flag v="has dual quat" />
+			<Flag v="mesh streaming" />
+		</_D>
+		<_40 v="meshes import info">
+			<_3E v="CRC" />
+			<_17 v="position bounds 0" />
+			<_17 v="position bounds 1" />
+			<_16 v="texcoord bounds 0" />
+			<_16 v="texcoord bounds 1" />
+			<_3B v="" />
+		</_40>
+		<_40 v="meshes">
+			<_40 v="LOD render data">
+				<_40 v="per mesh temporary">
+					<_40 v="raw vertices">
+						<_17 v="position" />
+						<_16 v="texcoord" />
+						<_17 v="normal" />
+						<_17 v="binormal" />
+						<_17 v="tangent" />
+						<_16 v="lightmap texcoord" />
+						<_39 v="node indices" />
+						<_39 v="node weights" />
+						<_17 v="vertex color" />
+						<_16 v="texcoord1" />
+						<_14 v="dual quat weight" />
+						<_14 v="vertex alpha" />
+						<_17 v="tangent UV2" />
+						<_16 v="texcoord2" />
+						<_17 v="tangent UV3" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw indices">
+						<_3D v="word" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw indices32">
+						<_3E v="dword" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw water data">
+						<_40 v="raw water indices">
+							<_3D v="word" />
+							<_3B v="" />
+						</_40>
+						<_40 v="raw water vertices">
+							<_16 v="base texcoord" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="raw blendshapes">
+						<_19 v="position" />
+						<_19 v="normal" />
+						<_20 v="tension and ambient occlusion" />
+						<_3E v="target Id" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw blendshapes indices">
+						<_3E v="dword" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw tension edges">
+						<_3E v="start vertex index" />
+						<_3E v="end vertex index" />
+						<_14 v="edge rest length" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw blendshapes triangle and edge Indices">
+						<_3E v="dword" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw blendshapes triangle and edge index info">
+						<_3E v="triangle and edge index pos" />
+						<_3E v="encoded triangle and edge size" />
+						<_3B v="" />
+					</_40>
+					<_D v="flags">
+						<Flag v="indices are triangle strips" />
+						<Flag v="indices are triangle lists" />
+						<Flag v="indices are quad lists" />
+					</_D>
+					<_40 v="level breakdown data">
+						<_41 v="Asset tag" />
+						<_2 v="Default variant name" />
+						<_41 v="LOD settings tag" />
+						<_2 v="LOD settings name" />
+						<_6 v="Convert Collision to Shadow Geometry" />
+						<_40 v="Asset variants">
+							<_2 v="Variant name" />
+							<_41 v="Runtime Geo" />
+							<_41 v="Static Collision Geo" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="part sorting position">
+					<_1E v="plane" />
+					<_17 v="position" />
+					<_14 v="radius" />
+					<_39 v="node indices" />
+					<_39 v="node weights" />
+					<_3B v="" />
+				</_40>
+				<_40 v="parts">
+					<_2E v="material index" />
+					<_2E v="transparent sorting index" />
+					<_6 v="index start" />
+					<_6 v="index count" />
+					<_6 v="perMeshPartConstantsOffset" />
+					<_3C v="part type" />
+					<_34 v="generated_pad5c53" length="1" />
+					<_E v="part flags">
+						<Flag v="draw cull rendering shields" />
+						<Flag v="blendshape" />
+						<Flag v="colormask Control NormalBlend" />
+						<Flag v="draw cull rendering active camo" />
+						<Flag v="Don't use virtual texturing" />
+						<Flag v="Virtual texturing UV shell skirt" />
+					</_E>
+					<_3D v="budget vertex count" />
+					<_34 v="generated_pad0f9e" length="2" />
+					<_3B v="" />
+				</_40>
+				<_40 v="subparts">
+					<_6 v="index start" />
+					<_6 v="index count" />
+					<_2E v="part index" />
+					<_3D v="budget vertex count" />
+					<_3B v="" />
+				</_40>
+				<_40 v="material streaming scale">
+					<_6 v="material index" />
+					<_14 v="material scale" />
+					<_3B v="" />
+				</_40>
+				<_39 v="vertex buffer indices" />
+				<_3D v="index buffer index" />
+				<_E v="lod flags">
+					<Flag v="lod 0" />
+					<Flag v="lod 1" />
+					<Flag v="lod 2" />
+					<Flag v="lod 3" />
+					<Flag v="lod 4" />
+					<Flag v="lod 5" />
+					<Flag v="lod 6" />
+					<Flag v="lod 7" />
+					<Flag v="lod 8" />
+					<Flag v="lod 9" />
+					<Flag v="lod 10" />
+					<Flag v="lod 11" />
+					<Flag v="lod 12" />
+					<Flag v="lod 13" />
+					<Flag v="lod 14" />
+					<Flag v="lod 15" />
+				</_E>
+				<_E v="lod render flags">
+					<Flag v="LOD has shadow proxies" />
+				</_E>
+				<_3B v="" />
+			</_40>
+			<_E v="mesh flags">
+				<Flag v="mesh has vertex color" />
+				<Flag v="use region index for sorting" />
+				<Flag v="can be rendered in draw bundles" />
+				<Flag v="mesh is custom shadow caster" />
+				<Flag v="mesh is unindexed (do not modify)" />
+				<Flag v="mash should render in z prepass" />
+				<Flag v="use uncompressed vertex format" />
+				<Flag v="mesh is PCA" />
+				<Flag v="mesh has a useful set of second texture coords" />
+				<Flag v="mesh has a useful set of third texture coords" />
+				<Flag v="Use UV3 Tangent Rotation" />
+			</_E>
+			<_3C v="rigid node index" />
+			<_A v="vertex type">
+				<Flag v="world" />
+				<Flag v="rigid" />
+				<Flag v="skinned" />
+				<Flag v="particle_model" />
+				<Flag v="screen" />
+				<Flag v="debug" />
+				<Flag v="transparent" />
+				<Flag v="particle" />
+				<Flag v="removed08" />
+				<Flag v="removed09" />
+				<Flag v="chud_simple" />
+				<Flag v="decorator" />
+				<Flag v="position only" />
+				<Flag v="removed13" />
+				<Flag v="ripple" />
+				<Flag v="removed15" />
+				<Flag v="tessellatedTerrain" />
+				<Flag v="empty" />
+				<Flag v="decal" />
+				<Flag v="removed19" />
+				<Flag v="removed20" />
+				<Flag v="position_only" />
+				<Flag v="tracer" />
+				<Flag v="rigid_boned" />
+				<Flag v="removed24" />
+				<Flag v="CheapParticle" />
+				<Flag v="dq_skinned" />
+				<Flag v="skinned 8 weights" />
+				<Flag v="tessellated vector" />
+				<Flag v="interaction" />
+				<Flag v="number of standard vertex types" />
+			</_A>
+			<_4 v="use dual quat" />
+			<_A v="index buffer type">
+				<Flag v="DEFAULT" />
+				<Flag v="line list" />
+				<Flag v="line strip" />
+				<Flag v="triangle list" />
+				<Flag v="triangle patch" />
+				<Flag v="triangle strip" />
+				<Flag v="quad list" />
+			</_A>
+			<_5 v="pca mesh index" />
+			<_40 v="vertex keys">
+				<_6 v="key1" />
+				<_6 v="key2" />
+				<_3B v="" />
+			</_40>
+			<_2E v="clone index" />
+			<_5 v="optional LOD volume index" />
+			<_5 v="Procedural Deformation Remap Table" />
+			<_34 v="generated_pad8fb3" length="2" />
+			<_6 v="lod state cache slot" />
+			<_3B v="" />
+		</_40>
+		<_40 v="PCA Mesh Indices">
+			<_30 v="mesh index" />
+			<_3B v="" />
+		</_40>
+		<_40 v="compression info">
+			<_E v="compression flags">
+				<Flag v="compressed position" />
+				<Flag v="compressed texcoord" />
+				<Flag v="compression optimized" />
+			</_E>
+			<_34 v="generated_pad1711" length="2" />
+			<_36 v="WARNING" />
+			<_17 v="position bounds 0" />
+			<_17 v="position bounds 1" />
+			<_16 v="texcoord bounds 0" />
+			<_16 v="texcoord bounds 1" />
+			<_16 v="texcoord bounds2 0" />
+			<_16 v="texcoord bounds2 1" />
+			<_16 v="texcoord bounds3 0" />
+			<_16 v="texcoord bounds3 1" />
+			<_14 v="unused0" />
+			<_14 v="unused1" />
+			<_3B v="" />
+		</_40>
+		<_40 v="per mesh node map">
+			<_40 v="node map">
+				<_3D v="node index" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="Optional animated mesh tag references">
+			<_41 v="Animated mesh tag reference" />
+			<_2 v="Name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Optional LOD volumes data">
+			<_17 v="position bounds 0" />
+			<_17 v="position bounds 1" />
+			<_40 v="position data">
+				<_1E v="plane" />
+				<_17 v="position" />
+				<_14 v="radius" />
+				<_39 v="node indices" />
+				<_39 v="node weights" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_38 v="mesh package">
+			<_3D v="flags" />
+			<_B v="mesh resource packing policy">
+				<Flag v="Single Resource" />
+				<Flag v="N Meshes Per Resource" />
+			</_B>
+			<_3D v="total index buffer count" />
+			<_3D v="total vertex buffer count" />
+			<_40 v="mesh resource groups">
+				<_43 v="mesh resource" />
+				<_3B v="" />
+			</_40>
+			<_40 v="index resource look up">
+				<_5 v="resource group index" />
+				<_5 v="group item index" />
+				<_3B v="" />
+			</_40>
+			<_40 v="vertex resource look up">
+				<_5 v="resource group index" />
+				<_5 v="group item index" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_40 v="blendshape compression info">
+			<_17 v="position scale" />
+			<_17 v="position offset" />
+			<_17 v="normal scale" />
+			<_17 v="normal offset" />
+			<_40 v="raw target hash name">
+				<_3E v="dword" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="blendshape Procedural Deformation function list">
+			<_40 v="parameter list">
+				<_2 v="parameter name" />
+				<_3C v="parameter mode" />
+				<_34 v="generated_pad8065" length="3" />
+				<_14 v="constant input" />
+				<_3B v="" />
+			</_40>
+			<_2 v="Procedural deformation function name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Procedural Deformation function Remap Table List">
+			<_40 v="Procedural Remap Table">
+				<_3D v="word" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="Deformation parameter default value table from skeleton">
+			<_2 v="parameter name" />
+			<_14 v="parameter default value" />
+			<_3B v="" />
+		</_40>
+		<_34 v="generated_paddf2d" length="4" />
+		<_7 v="perMeshPartConstantBuffer" />
+		<_3B v="" />
+	</_38>
+	<_40 v="widget references">
+		<_5 v="marker index" />
+		<_34 v="generated_pad3469" length="2" />
+		<_41 v="widget ref" />
+		<_3B v="" />
+	</_40>
+	<_38 v="resource interface">
+		<_40 v="raw_resources">
+			<_38 v="raw_items">
+				<_40 v="collision bsp">
+					<_40 v="bsp3d nodes">
+						<_7 v="node data designator" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bsp3d supernodes">
+						<_14 v="plane 0" />
+						<_14 v="plane 1" />
+						<_14 v="plane 2" />
+						<_14 v="plane 3" />
+						<_14 v="plane 4" />
+						<_14 v="plane 5" />
+						<_14 v="plane 6" />
+						<_14 v="plane 7" />
+						<_14 v="plane 8" />
+						<_14 v="plane 9" />
+						<_14 v="plane10" />
+						<_14 v="plane11" />
+						<_14 v="plane12" />
+						<_14 v="plane13" />
+						<_14 v="plane14" />
+						<_6 v="plane dimensions" />
+						<_6 v="child index 0" />
+						<_6 v="child index 1" />
+						<_6 v="child index 2" />
+						<_6 v="child index 3" />
+						<_6 v="child index 4" />
+						<_6 v="child index 5" />
+						<_6 v="child index 6" />
+						<_6 v="child index 7" />
+						<_6 v="child index 8" />
+						<_6 v="child index 9" />
+						<_6 v="child index10" />
+						<_6 v="child index11" />
+						<_6 v="child index12" />
+						<_6 v="child index13" />
+						<_6 v="child index14" />
+						<_6 v="child index15" />
+						<_3B v="" />
+					</_40>
+					<_40 v="planes">
+						<_1E v="plane" />
+						<_3B v="" />
+					</_40>
+					<_40 v="leaves">
+						<_F v="flags">
+							<Flag v="contains double-sided surfaces" />
+						</_F>
+						<_34 v="generated_padd325" length="1" />
+						<_3D v="bsp2d reference count" />
+						<_3E v="first bsp2d reference" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bsp2d references">
+						<_5 v="plane" />
+						<_5 v="bsp2d node" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bsp2d nodes">
+						<_1D v="plane" />
+						<_5 v="left child" />
+						<_5 v="right child" />
+						<_3B v="" />
+					</_40>
+					<_40 v="surfaces">
+						<_3D v="plane index" />
+						<_3D v="first edge" />
+						<_5 v="material" />
+						<_F v="flags">
+							<Flag v="two sided" />
+							<Flag v="invisible" />
+							<Flag v="climbable" />
+							<Flag v="invalid" />
+							<Flag v="conveyor" />
+							<Flag v="slip" />
+							<Flag v="plane negated" />
+						</_F>
+						<_3C v="best plane calculation vertex index " />
+						<_3B v="" />
+					</_40>
+					<_40 v="edges">
+						<_3D v="start vertex" />
+						<_3D v="end vertex" />
+						<_3D v="forward edge" />
+						<_3D v="reverse edge" />
+						<_3D v="left surface" />
+						<_3D v="right surface" />
+						<_3B v="" />
+					</_40>
+					<_40 v="vertices">
+						<_17 v="point" />
+						<_3D v="first edge" />
+						<_5 v="sink" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="large collision bsp">
+					<_40 v="bsp3d nodes">
+						<_6 v="plane" />
+						<_6 v="back child" />
+						<_6 v="front child" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bsp3d supernodes">
+						<_14 v="plane 0" />
+						<_14 v="plane 1" />
+						<_14 v="plane 2" />
+						<_14 v="plane 3" />
+						<_14 v="plane 4" />
+						<_14 v="plane 5" />
+						<_14 v="plane 6" />
+						<_14 v="plane 7" />
+						<_14 v="plane 8" />
+						<_14 v="plane 9" />
+						<_14 v="plane10" />
+						<_14 v="plane11" />
+						<_14 v="plane12" />
+						<_14 v="plane13" />
+						<_14 v="plane14" />
+						<_6 v="plane dimensions" />
+						<_6 v="child index 0" />
+						<_6 v="child index 1" />
+						<_6 v="child index 2" />
+						<_6 v="child index 3" />
+						<_6 v="child index 4" />
+						<_6 v="child index 5" />
+						<_6 v="child index 6" />
+						<_6 v="child index 7" />
+						<_6 v="child index 8" />
+						<_6 v="child index 9" />
+						<_6 v="child index10" />
+						<_6 v="child index11" />
+						<_6 v="child index12" />
+						<_6 v="child index13" />
+						<_6 v="child index14" />
+						<_6 v="child index15" />
+						<_3B v="" />
+					</_40>
+					<_40 v="planes">
+						<_1E v="plane" />
+						<_3B v="" />
+					</_40>
+					<_40 v="leaves">
+						<_F v="flags">
+							<Flag v="contains double-sided surfaces" />
+						</_F>
+						<_34 v="generated_pad7ea5" length="1" />
+						<_5 v="bsp2d reference count" />
+						<_6 v="first bsp2d reference" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bsp2d references">
+						<_6 v="plane" />
+						<_6 v="bsp2d node" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bsp2d nodes">
+						<_1D v="plane" />
+						<_6 v="left child" />
+						<_6 v="right child" />
+						<_3B v="" />
+					</_40>
+					<_40 v="surfaces">
+						<_6 v="plane index" />
+						<_6 v="first edge" />
+						<_5 v="material" />
+						<_F v="flags">
+							<Flag v="two sided" />
+							<Flag v="invisible" />
+							<Flag v="climbable" />
+							<Flag v="invalid" />
+							<Flag v="conveyor" />
+							<Flag v="slip" />
+							<Flag v="plane negated" />
+						</_F>
+						<_3C v="best plane calculation vertex index " />
+						<_3B v="" />
+					</_40>
+					<_40 v="edges">
+						<_6 v="start vertex" />
+						<_6 v="end vertex" />
+						<_6 v="forward edge" />
+						<_6 v="reverse edge" />
+						<_6 v="left surface" />
+						<_6 v="right surface" />
+						<_3B v="" />
+					</_40>
+					<_40 v="vertices">
+						<_17 v="point" />
+						<_6 v="first edge" />
+						<_5 v="sink" />
+						<_34 v="generated_pad06d3" length="2" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_43 v="tag_resources" />
+		<_6 v="use resource items" />
+		<_3B v="" />
+	</_38>
+	<_40 v="external references">
+		<_41 v="static render geometry" />
+		<_41 v="static collision geometry" />
+		<_41 v="material palette" />
+		<_2 v="name" />
+		<_2 v="material override variant name" />
+		<_19 v="scale" />
+		<_19 v="forward" />
+		<_19 v="left" />
+		<_19 v="up" />
+		<_17 v="position" />
+		<_E v="override flags">
+			<Flag v="render only" />
+			<Flag v="does not block aoe damage" />
+			<Flag v="remove from dynamic shadow geometry" />
+			<Flag v="cinema only" />
+			<Flag v="exclude from cinema" />
+			<Flag v="disable play collision" />
+			<Flag v="disable bullet collision" />
+			<Flag v="ignore cubemap volume" />
+			<Flag v="always generate floating shadow" />
+			<Flag v="PVS always visible" />
+			<Flag v="PVS always use LOD 0" />
+			<Flag v="PVS don't use as an occluder" />
+			<Flag v="exclude from intel map" />
+			<Flag v="Exclude from broadphase calculation" />
+			<Flag v="can generate decorators" />
+			<Flag v="isHLOD" />
+		</_E>
+		<_E v="instance flags Mask">
+			<Flag v="render only" />
+			<Flag v="does not block aoe damage" />
+			<Flag v="remove from dynamic shadow geometry" />
+			<Flag v="cinema only" />
+			<Flag v="exclude from cinema" />
+			<Flag v="disable play collision" />
+			<Flag v="disable bullet collision" />
+			<Flag v="ignore cubemap volume" />
+			<Flag v="always generate floating shadow" />
+			<Flag v="PVS always visible" />
+			<Flag v="PVS always use LOD 0" />
+			<Flag v="PVS don't use as an occluder" />
+			<Flag v="exclude from intel map" />
+			<Flag v="Exclude from broadphase calculation" />
+			<Flag v="can generate decorators" />
+			<Flag v="isHLOD" />
+		</_E>
+		<_F v="physics override flags">
+			<Flag v="Allow decals" />
+		</_F>
+		<_F v="physics instance flags Mask">
+			<Flag v="Allow decals" />
+		</_F>
+		<_A v="override pathfinding policy">
+			<Flag v="cut-out" />
+			<Flag v="static" />
+			<Flag v="none" />
+		</_A>
+		<_A v="override streaming priority">
+			<Flag v="default" />
+			<Flag v="higher" />
+			<Flag v="highest" />
+		</_A>
+		<_E v="instance policy mask">
+			<Flag v="override pathfinding policy" />
+		</_E>
+		<_34 v="generated_pad81ce" length="2" />
+		<_39 v="LOD distance overrides" />
+		<_14 v="LOD fade after override" />
+		<_C v="instance type">
+			<Flag v="Default" />
+			<Flag v="Foliage" />
+		</_C>
+		<_6 v="guid" />
+		<_3E v="hlodIndex" />
+		<_E v="placementFlags">
+			<Flag v="Is HLOD" />
+		</_E>
+		<_34 v="generated_padce83" length="2" />
+		<_2 v="styleId" />
+		<_34 v="generated_pad1b38" length="4" />
+		<_7 v="styleTagOverride" />
+		<_40 v="instance material overrides">
+			<_41 v="Original material ref" />
+			<_41 v="Override material ref" />
+			<_3B v="" />
+		</_40>
+		<_40 v="material overrides">
+			<_41 v="Original material ref" />
+			<_41 v="Override material ref" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_6 v="base material count" />
+	<_40 v="obb volume list">
+		<_17 v="origin" />
+		<_19 v="axis 1" />
+		<_19 v="axis 2" />
+		<_19 v="axis 3" />
+		<_3E v="type" />
+		<_3B v="" />
+	</_40>
+	<_40 v="visibility cluster node counts">
+		<_40 v="clusterMask Block">
+			<_3E v="chunk" />
+			<_3B v="" />
+		</_40>
+		<_6 v="clusterMask Flags" />
+		<_6 v="clusterMask Vector1" />
+		<_6 v="clusterMask Vector2" />
+		<_3D v="startingNodeIndex" />
+		<_3D v="nodeCount" />
+		<_3B v="" />
+	</_40>
+	<_6 v="visibility cluster node counts Flags" />
+	<_6 v="visibility cluster node counts Vector1" />
+	<_6 v="visibility cluster node counts Vector2" />
+	<_7 v="m_instanceGroupPipelineStateCache" />
+	<_42 v="growable dataof" />
+	<_7 v="heap array pointer" />
+	<_6 v="heap current size" />
+	<_6 v="active growth state" />
+	<_7 v="instanceData" />
+	<_7 v="instanceBufferConstants" />
+	<_7 v="ioPlacementGpuTestingBuffer" />
+	<_7 v="ioPlacementGpuTestingSRV" />
+	<_7 v="ioLodStaticInfoBuffer" />
+	<_7 v="ioLodIndexBuffer" />
+	<_38 v="activeIoBitfield">
+		<_7 v="Bsp Structure Bitfield Buffer" />
+		<_39 v="CPU Bsp Structure  Bitfield" />
+		<_3B v="" />
+	</_38>
+	<_7 v="newlyVisibleIoBitfieldBuffer" />
+	<_7 v="ioPlacementLodInfoBuffer" />
+	<_41 v="acoustics data" />
+	<_6 v="number of IO over the limit" />
+	<_6 v="needToClearShadowSubmissionsBuffers" />
+	<_34 v="generated_pad0ad3" length="4" />
+	<_7 v="gpuFloatingShadowSubmissionData" />
+	<_39 v="GPU Submission Sources" />
+	<_39 v="Instances with non-Gpu submission parts" />
+	<_40 v="foliage runtime">
+		<_40 v="foliage types">
+			<_41 v="runtime geo" />
+			<_41 v="material palette" />
+			<_3B v="" />
+		</_40>
+		<_34 v="generated_pad1383" length="4" />
+		<_7 v="foliage runtime gpu" />
+		<_7 v="foliage runtime cpu" />
+		<_3B v="" />
+	</_40>
+	<_40 v="bitmaps">
+		<_41 v="bitmap" />
+		<_3B v="" />
+	</_40>
+	<_6 v="bitmaps Flags" />
+	<_6 v="bitmaps Vector1" />
+	<_6 v="bitmaps Vector2" />
+	<_40 v="uniqueIos">
+		<_40 v="PerLodBitmaps Block">
+			<_40 v="StreamingBitmapScale Block">
+				<_6 v="bitmap index in bsp" />
+				<_14 v="scale" />
+				<_3B v="" />
+			</_40>
+			<_6 v="StreamingBitmapScale Block Flags" />
+			<_6 v="StreamingBitmapScale Block Vector1" />
+			<_6 v="StreamingBitmapScale Block Vector2" />
+			<_3B v="" />
+		</_40>
+		<_6 v="PerLodBitmaps Block Flags" />
+		<_6 v="PerLodBitmaps Block Vector1" />
+		<_6 v="PerLodBitmaps Block Vector2" />
+		<_5 v="io index" />
+		<_34 v="generated_pad5360" length="2" />
+		<_3B v="" />
+	</_40>
+	<_6 v="uniqueIos Flags" />
+	<_6 v="uniqueIos Vector1" />
+	<_6 v="uniqueIos Vector2" />
+	<_40 v="uniqueFoliage">
+		<_40 v="PerLodBitmaps Block">
+			<_40 v="StreamingBitmapScale Block">
+				<_6 v="bitmap index in bsp" />
+				<_14 v="scale" />
+				<_3B v="" />
+			</_40>
+			<_6 v="StreamingBitmapScale Block Flags" />
+			<_6 v="StreamingBitmapScale Block Vector1" />
+			<_6 v="StreamingBitmapScale Block Vector2" />
+			<_3B v="" />
+		</_40>
+		<_6 v="PerLodBitmaps Block Flags" />
+		<_6 v="PerLodBitmaps Block Vector1" />
+		<_6 v="PerLodBitmaps Block Vector2" />
+		<_5 v="io index" />
+		<_34 v="generated_pad5360" length="2" />
+		<_3B v="" />
+	</_40>
+	<_6 v="uniqueFoliage Flags" />
+	<_6 v="uniqueFoliage Vector1" />
+	<_6 v="uniqueFoliage Vector2" />
+	<_40 v="decorator sets">
+		<_41 v="decorator asset" />
+		<_40 v="decorator placements">
+			<_17 v="position" />
+			<_3C v="type index" />
+			<_3C v="motion scale" />
+			<_3C v="ground tint" />
+			<_F v="flags">
+				<Flag v="delete_bit" />
+				<Flag v="adjusted_bit" />
+				<Flag v="approximated_position_bit" />
+			</_F>
+			<_1A v="rotation" />
+			<_14 v="scale" />
+			<_17 v="tint color" />
+			<_17 v="original point" />
+			<_17 v="original normal" />
+			<_6 v="extra" />
+			<_3D v="placement surface albedo" />
+			<_3D v="placement surface normal" />
+			<_3B v="" />
+		</_40>
+		<_41 v="owning layer default bsp" />
+		<_3B v="" />
+	</_40>
+	<_40 v="decorator runtime">
+		<_40 v="sets">
+			<_41 v="decorator asset" />
+			<_6 v="offset" />
+			<_6 v="count" />
+			<_3C v="set type index" />
+			<_34 v="generated_pad961e" length="3" />
+			<_3B v="" />
+		</_40>
+		<_40 v="clusters">
+			<_19 v="scale" />
+			<_14 v="max render distance squared" />
+			<_19 v="offset" />
+			<_19 v="Bounding sphere center" />
+			<_14 v="Bounding sphere radius" />
+			<_19 v="Bounding AABB Min" />
+			<_19 v="Bounding AABB Max" />
+			<_3B v="" />
+		</_40>
+		<_6 v="bspIndex" />
+		<_34 v="generated_pad92da" length="4" />
+		<_7 v="decorator runtime gpu" />
+		<_7 v="decorator runtime cpu" />
+		<_3B v="" />
+	</_40>
+	<_F v="render flags">
+		<Flag v="Has Coatings" />
+		<Flag v="Coatings Are Finalized" />
+	</_F>
+	<_34 v="generated_pad8b4a" length="3" />
+	<_3B v="" />
+</root>

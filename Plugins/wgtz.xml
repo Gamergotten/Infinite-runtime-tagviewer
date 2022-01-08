@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="Screen Widgets" />
+	<_40 v="node graphs">
+		<_41 v="node graph tag" />
+		<_3B v="" />
+	</_40>
+	<_40 v="bitmap dictionaries">
+		<_41 v="bitmap dictionary" />
+		<_3B v="" />
+	</_40>
+	<_36 v="Lua User Libraries" />
+	<_40 v="lua user libraries">
+		<_41 v="lua library" />
+		<_3B v="" />
+	</_40>
+	<_40 v="cui screen widgets">
+		<_2 v="name" />
+		<_41 v="cui screen tag" />
+		<_3B v="" />
+	</_40>
+	<_40 v="cui overlay cameras">
+		<_2 v="resolution name" />
+		<_A v="pivot corner">
+			<Flag v="top left" />
+			<Flag v="top right" />
+			<Flag v="bottom right" />
+			<Flag v="bottom left" />
+		</_A>
+		<_34 v="generated_pad630c" length="3" />
+		<_14 v="Z near" />
+		<_14 v="Z far" />
+		<_14 v="X angle degrees" />
+		<_14 v="Y angle degrees" />
+		<_3B v="" />
+	</_40>
+	<_14 v="spawn-timer countdown rate" />
+	<_40 v="game intro sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_40 v="game round end sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_40 v="game round end with killcam sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_40 v="game next round sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_40 v="game end sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_40 v="game end with killcam sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_40 v="in game sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_40 v="halftime sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_40 v="overtime sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_40 v="map intro sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_40 v="player intro sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_40 v="team intro sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_40 v="team regroup sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_40 v="team outro sequence">
+		<_F v="flags">
+			<Flag v="show loadout menu" />
+			<Flag v="loadout menu close ends sequence" />
+			<Flag v="show scoreboard" />
+			<Flag v="show hud" />
+			<Flag v="show final kill cam" />
+			<Flag v="Hide UI for Observers" />
+		</_F>
+		<_34 v="generated_pad4325" length="3" />
+		<_C v="allowedVariants">
+			<Flag v="all" />
+			<Flag v="team" />
+			<Flag v="free-for-all" />
+		</_C>
+		<_2 v="Start Hui Event" />
+		<_2 v="End Hui Event" />
+		<_0 v="MP Game Event" />
+		<_0 v="Server Lua Function" />
+		<_0 v="Client Lua Function" />
+		<_14 v="startTime" />
+		<_14 v="endTime" />
+		<_3B v="" />
+	</_40>
+	<_41 v="HUD globals" />
+	<_6 v="Total object count budget" />
+	<_41 v="In-Game Map Settings Tag" />
+	<_34 v="generated_pad86bd" length="4" />
+	<_3B v="" />
+</root>

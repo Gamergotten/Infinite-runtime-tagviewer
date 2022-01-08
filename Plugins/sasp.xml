@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="sprint">
+		<_38 v="common ability parameters">
+			<_37 v="common ability parameters" />
+			<_C v="input">
+				<Flag v="Default" />
+				<Flag v="Mobility" />
+				<Flag v="Suit" />
+				<Flag v="Jump" />
+				<Flag v="Equipment" />
+				<Flag v="Melee" />
+				<Flag v="PowerUp" />
+				<Flag v="Unmapped" />
+			</_C>
+			<_D v="flags">
+				<Flag v="Use 3rd Person Camera When Active" />
+				<Flag v="Hide Reticle When Active" />
+				<Flag v="Is Motion Tracked (By Enemies) When Active" />
+				<Flag v="One-Shot Activation Effect" />
+				<Flag v="Can be activated when weapon state is relaxed" />
+				<Flag v="Does Not Appear In Extended Motion Tracker Range" />
+				<Flag v="Energy persists across deaths" />
+				<Flag v="Activation interrupts weapon switching" />
+				<Flag v="Allow activation during weapon throw" />
+				<Flag v="Allow activation while sliding" />
+			</_D>
+			<_15 v="activation energy cost" />
+			<_14 v="active energy consumption" />
+			<_14 v="recharge duration" />
+			<_14 v="recharge delay" />
+			<_14 v="cooldown delay" />
+			<_41 v="activation effect" />
+			<_14 v="activation effect kill delay" />
+			<_A v="sprint preservation">
+				<Flag v="No" />
+				<Flag v="Zero fraction" />
+				<Flag v="Retain fraction" />
+				<Flag v="Decay (normal)" />
+				<Flag v="Decay (forced)" />
+			</_A>
+			<_34 v="generated_pad0aca" length="3" />
+			<_41 v="active malleable property modifiers" />
+			<_41 v="timed malleable property modifiers" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_D v="flags">
+			<Flag v="allow build up whilst airborne" />
+			<Flag v="allow fall-off whilst airborne" />
+			<Flag v="cannot be active whilst airborne" />
+			<Flag v="pause damage section recharge" />
+			<Flag v="zero sprint fraction when engaging combat actions" />
+			<Flag v="allow reload by default" />
+			<Flag v="disable manual cancellation" />
+			<Flag v="scale melee lunge" />
+		</_D>
+		<_A v="maintain through clamber">
+			<Flag v="No" />
+			<Flag v="Zero fraction" />
+			<Flag v="Retain fraction" />
+			<Flag v="Decay (normal)" />
+			<Flag v="Decay (forced)" />
+		</_A>
+		<_A v="maintain through evade">
+			<Flag v="No" />
+			<Flag v="Zero fraction" />
+			<Flag v="Retain fraction" />
+			<Flag v="Decay (normal)" />
+			<Flag v="Decay (forced)" />
+		</_A>
+		<_A v="maintain through reload">
+			<Flag v="No" />
+			<Flag v="Zero fraction" />
+			<Flag v="Retain fraction" />
+			<Flag v="Decay (normal)" />
+			<Flag v="Decay (forced)" />
+		</_A>
+		<_A v="maintain through melee">
+			<Flag v="No" />
+			<Flag v="Zero fraction" />
+			<Flag v="Retain fraction" />
+			<Flag v="Decay (normal)" />
+			<Flag v="Decay (forced)" />
+		</_A>
+		<_A v="maintain through airborne">
+			<Flag v="No" />
+			<Flag v="Zero fraction" />
+			<Flag v="Retain fraction" />
+			<Flag v="Decay (normal)" />
+			<Flag v="Decay (forced)" />
+		</_A>
+		<_34 v="generated_pad3793" length="3" />
+		<_C v="stun timer control">
+			<Flag v="Normal" />
+			<Flag v="Suspend" />
+			<Flag v="Reset" />
+		</_C>
+		<_14 v="evade delay time" />
+		<_37 v="time to full speed" />
+		<_38 v="time to full speed">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_14 v="falloff time" />
+		<_14 v="falloff time (melee)" />
+		<_36 v="speed ramp up function" />
+		<_37 v="speed ramp up function" />
+		<_38 v="speed ramp up function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_37 v="full speed scalar" />
+		<_38 v="full speed scalar">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_36 v="look velocity scale function" />
+		<_37 v="look velocity scale function" />
+		<_38 v="look velocity scale function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_14 v="yaw velocity scale at full sprint" />
+		<_14 v="pitch velocity scale at full sprint" />
+		<_36 v="max strafe throttle magnitude function" />
+		<_37 v="max strafe throttle magnitude function" />
+		<_38 v="max strafe throttle magnitude function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_14 v="max strafe throttle magnitude at full sprint" />
+		<_14 v="pegged magnitude" />
+		<_8 v="pegged angular threshold" />
+		<_8 v="max angle between facing and velocity" />
+		<_14 v="minimum player velocity to be considered in a sprinting state" />
+		<_2 v="animation stance" />
+		<_37 v="exit animation speed scalar" />
+		<_38 v="exit animation speed scalar">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

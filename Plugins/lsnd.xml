@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="Start Event." />
+	<_2 v="Stop Event." />
+	<_2 v="Player Start Event." />
+	<_2 v="Player Stop Event." />
+	<_41 v="Sound bank" />
+	<_41 v="Player sound bank" />
+	<_25 v="runtime distance bounds" />
+	<_14 v="maximum radius" />
+	<_41 v="Category" />
+	<_41 v="Player Category" />
+	<_41 v="Sound Tails" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Regions">
+		<_2 v="Region Name" />
+		<_40 v="Permutation Regions">
+			<_2 v="Permutation Region" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Permutation Settings">
+			<_2 v="Permutation Name" />
+			<_41 v="Material Style" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Charm">
+		<_41 v="Charm" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Emblems">
+		<_40 v="Theme Ids">
+			<_2 v="id" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Markers">
+			<_2 v="Marker" />
+			<_3B v="" />
+		</_40>
+		<_40 v="BigEmblems">
+			<_2 v="Theme Id" />
+			<_2 v="Marker" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Effect Overrides">
+		<_41 v="Effect Override Definition" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Material Styles" />
+	<_34 v="generated_pad0f9a" length="4" />
+	<_3B v="" />
+</root>

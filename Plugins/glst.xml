@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_26 v="subtitle rect width" />
+	<_26 v="subtitle rect height" />
+	<_1F v="default subtitle color" />
+	<_1F v="default subtitle shadow color" />
+	<_20 v="default subtitle background color" />
+	<_25 v="default subtitle background border X" />
+	<_25 v="default subtitle background border Y" />
+	<_25 v="small subtitle background border X" />
+	<_25 v="small subtitle background border Y" />
+	<_25 v="large subtitle background border X" />
+	<_25 v="large subtitle background border Y" />
+	<_25 v="small 4K subtitle background border X" />
+	<_25 v="small 4K subtitle background border Y" />
+	<_25 v="medium 4K subtitle background border X" />
+	<_25 v="medium 4K subtitle background border Y" />
+	<_25 v="large 4K subtitle background border X" />
+	<_25 v="large 4K subtitle background border Y" />
+	<_14 v="minimum display time per word" />
+	<_14 v="minimum display time per page of subtitles" />
+	<_A v="use uniform durations for autopaginated subtitles">
+		<Flag v="Disabled" />
+		<Flag v="Enabled" />
+	</_A>
+	<_34 v="generated_padf9a9" length="3" />
+	<_14 v="time to fade out completed subtitles" />
+	<_14 v="duplicate subtitles requests are allowed only after this many seconds" />
+	<_14 v="priority lock cooldown duration" />
+	<_6 v="minimum subtitle priority threshold" />
+	<_A v="pending preservation mode">
+		<Flag v="Disabled" />
+		<Flag v="PreserveHighestOnly" />
+		<Flag v="PreserveAnyAboveThreshold" />
+		<Flag v="PreserveAll" />
+	</_A>
+	<_34 v="generated_paddfc8" length="3" />
+	<_14 v="percent of a subtitle duration required to pass before we allow it to be ejected" />
+	<_5 v="max lines of text per page of subtitles" />
+	<_34 v="generated_pad9313" length="2" />
+	<_14 v="subtitle threshold to reset character moniker in seconds" />
+	<_41 v="Unicode tag reference to subtitles character IDs list" />
+	<_1F v="Default subtitle speaker color" />
+	<_40 v="Subtitle speaker colors">
+		<_2 v="Character Id" />
+		<_A v="Disposition">
+			<Flag v="Neutral" />
+			<Flag v="Allied" />
+			<Flag v="Enemy" />
+		</_A>
+		<_F v="Allow color override">
+			<Flag v="Enabled" />
+		</_F>
+		<_34 v="generated_padc00e" length="2" />
+		<_1F v="Color" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_1 v="name" />
+	<_19 v="position" />
+	<_18 v="terrain size" />
+	<_14 v="terrain height" />
+	<_3E v="Tile X Count" />
+	<_3E v="Tile Y Count" />
+	<_40 v="Tiles">
+		<_41 v="Tile" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Shared Parameters">
+		<_38 v="Parameter">
+			<_2 v="Name" />
+			<_C v="Type">
+				<Flag v="None" />
+				<Flag v="Any" />
+				<Flag v="Boolean" />
+				<Flag v="Integer" />
+				<Flag v="Float" />
+				<Flag v="Float2" />
+				<Flag v="Float3" />
+				<Flag v="Float4" />
+				<Flag v="Material" />
+				<Flag v="MaterialPreset" />
+				<Flag v="RenderGraph" />
+				<Flag v="Buffer" />
+				<Flag v="Surface" />
+				<Flag v="DataBlob" />
+				<Flag v="Viewport" />
+				<Flag v="Rect" />
+				<Flag v="DrawParameters" />
+				<Flag v="DispatchParameters" />
+				<Flag v="SamplerStateView" />
+				<Flag v="TerrainChunk" />
+				<Flag v="DrawableList" />
+				<Flag v="TextureDataPath" />
+			</_C>
+			<_6 v="Int" />
+			<_14 v="Float" />
+			<_19 v="Float3" />
+			<_41 v="Tag" />
+			<_42 v="DataPath" />
+			<_2 v="String" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="Source Texture Settings">
+		<_2 v="Surface Id" />
+		<_3E v="Texel Density" />
+		<_D v="Flags">
+			<Flag v="Disabled" />
+			<Flag v="Can Edit" />
+		</_D>
+		<_3B v="" />
+	</_40>
+	<_40 v="Intermediate Texture Settings">
+		<_2 v="Surface Id" />
+		<_3E v="Texel Density" />
+		<_D v="Flags">
+			<Flag v="Disabled" />
+			<Flag v="Can Edit" />
+		</_D>
+		<_3B v="" />
+	</_40>
+	<_41 v="Sculpt Graph" />
+	<_41 v="GPU Surfacing Graph" />
+	<_41 v="Render Material" />
+	<_41 v="Masks Composite Material" />
+	<_14 v="Macro Color Near Distance" />
+	<_14 v="Macro Color Far Distance" />
+	<_14 v="Macro Color Near Opacity" />
+	<_14 v="Macro Color Far Opacity" />
+	<_38 v="Micro Height Vertex Density">
+		<_14 v="Very Low" />
+		<_14 v="Low" />
+		<_14 v="Medium" />
+		<_14 v="High" />
+		<_14 v="Ultra" />
+		<_14 v="2 Player Splitscreen" />
+		<_14 v="3 Player Splitscreen" />
+		<_14 v="4 Player Splitscreen" />
+		<_3B v="" />
+	</_38>
+	<_38 v="Micro Height Radius">
+		<_14 v="Very Low" />
+		<_14 v="Low" />
+		<_14 v="Medium" />
+		<_14 v="High" />
+		<_14 v="Ultra" />
+		<_14 v="2 Player Splitscreen" />
+		<_14 v="3 Player Splitscreen" />
+		<_14 v="4 Player Splitscreen" />
+		<_3B v="" />
+	</_38>
+	<_38 v="Micro Height Mip Level">
+		<_6 v="Very Low" />
+		<_6 v="Low" />
+		<_6 v="Medium" />
+		<_6 v="High" />
+		<_6 v="Ultra" />
+		<_14 v="2 Player Splitscreen" />
+		<_14 v="3 Player Splitscreen" />
+		<_14 v="4 Player Splitscreen" />
+		<_3B v="" />
+	</_38>
+	<_14 v="Micro Height Scale" />
+	<_D v="Flags">
+		<Flag v="Enable Erosion" />
+	</_D>
+	<_3B v="" />
+</root>

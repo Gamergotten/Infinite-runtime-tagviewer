@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="object types">
+		<_36 v="WARNING" />
+		<_2 v="name" />
+		<_41 v="object" />
+		<_3B v="" />
+	</_40>
+	<_40 v="weapons">
+		<_30 v="object type" />
+		<_14 v="random weight" />
+		<_3B v="" />
+	</_40>
+	<_40 v="vehicles">
+		<_30 v="object type" />
+		<_14 v="random weight" />
+		<_3B v="" />
+	</_40>
+	<_40 v="grenades">
+		<_30 v="object type" />
+		<_14 v="random weight" />
+		<_3B v="" />
+	</_40>
+	<_40 v="equipment">
+		<_30 v="object type" />
+		<_14 v="random weight" />
+		<_3B v="" />
+	</_40>
+	<_6 v="random weapon menu sprite frame" />
+	<_6 v="random equipment menu sprite frame" />
+	<_2 v="random weapon icon string id" />
+	<_2 v="random equipment icon string id" />
+	<_34 v="generated_pad97b8" length="4" />
+	<_3B v="" />
+</root>

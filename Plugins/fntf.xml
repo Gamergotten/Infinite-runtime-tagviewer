@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="typefaces">
+		<_2 v="Typeface name" />
+		<_38 v="Default typeface">
+			<_1 v="font name" />
+			<_C v="font weight">
+				<Flag v="ExtraLight (200)" />
+				<Flag v="Thin (250)" />
+				<Flag v="Light (300)" />
+				<Flag v="SemiLight (350)" />
+				<Flag v="Regular (400)" />
+				<Flag v="Medium (500)" />
+				<Flag v="SemiBold (600)" />
+				<Flag v="Bold (700)" />
+				<Flag v="ExtraBold (800)" />
+				<Flag v="Black (900)" />
+				<Flag v="ExtraBlack (950)" />
+			</_C>
+			<_E v="flags">
+				<Flag v="Italic" />
+			</_E>
+			<_34 v="generated_pad6635" length="2" />
+			<_3B v="" />
+		</_38>
+		<_40 v="Language-specific typefaces">
+			<_C v="Language">
+				<Flag v="English" />
+				<Flag v="Japanese" />
+				<Flag v="German" />
+				<Flag v="French" />
+				<Flag v="Spanish" />
+				<Flag v="Mexican-Spanish" />
+				<Flag v="Italian" />
+				<Flag v="Korean" />
+				<Flag v="Traditional-Chinese" />
+				<Flag v="Simplified-Chinese" />
+				<Flag v="Portuguese" />
+				<Flag v="Polish" />
+				<Flag v="Russian" />
+				<Flag v="Danish" />
+				<Flag v="Finnish" />
+				<Flag v="Dutch" />
+				<Flag v="Norwegian" />
+				<Flag v="Brazilian-Portuguese" />
+			</_C>
+			<_38 v="Replacement typeface">
+				<_1 v="font name" />
+				<_C v="font weight">
+					<Flag v="ExtraLight (200)" />
+					<Flag v="Thin (250)" />
+					<Flag v="Light (300)" />
+					<Flag v="SemiLight (350)" />
+					<Flag v="Regular (400)" />
+					<Flag v="Medium (500)" />
+					<Flag v="SemiBold (600)" />
+					<Flag v="Bold (700)" />
+					<Flag v="ExtraBold (800)" />
+					<Flag v="Black (900)" />
+					<Flag v="ExtraBlack (950)" />
+				</_C>
+				<_E v="flags">
+					<Flag v="Italic" />
+				</_E>
+				<_34 v="generated_pad6635" length="2" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padb4d2" length="4" />
+	<_3B v="" />
+</root>

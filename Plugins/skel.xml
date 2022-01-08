@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Imported data">
+		<_40 v="Joints">
+			<_2 v="name" />
+			<_2E v="parent node" />
+			<_2E v="first child node" />
+			<_2E v="next sibling node" />
+			<_34 v="generated_pad95e7" length="2" />
+			<_17 v="default translation" />
+			<_1A v="default rotation" />
+			<_D v="importer_flags">
+				<Flag v="world bone" />
+			</_D>
+			<_3B v="" />
+		</_40>
+		<_40 v="User parameters">
+			<_2 v="name" />
+			<_14 v="initial value" />
+			<_3B v="" />
+		</_40>
+		<_6 v="Joint checksum" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Joint usage">
+		<_2 v="Joint name" />
+		<_B v="Joint usage type">
+			<Flag v="physics control" />
+			<Flag v="camera control" />
+			<Flag v="origin marker" />
+			<Flag v="left clavicle" />
+			<Flag v="left upperarm" />
+			<Flag v="pose blend pitch" />
+			<Flag v="pose blend yaw" />
+			<Flag v="pedestal" />
+			<Flag v="pelvis" />
+			<Flag v="left foot" />
+			<Flag v="right foot" />
+			<Flag v="damage root gut" />
+			<Flag v="damage root chest" />
+			<Flag v="damage root head" />
+			<Flag v="damage root left shoulder" />
+			<Flag v="damage root left arm" />
+			<Flag v="damage root left leg" />
+			<Flag v="damage root left foot" />
+			<Flag v="damage root right shoulder" />
+			<Flag v="damage root right arm" />
+			<Flag v="damage root right leg" />
+			<Flag v="damage root right foot" />
+			<Flag v="left hand" />
+			<Flag v="right hand" />
+			<Flag v="weapon ik" />
+			<Flag v="head" />
+			<Flag v="helmet" />
+			<Flag v="right clavicle" />
+			<Flag v="left forearm" />
+			<Flag v="right forearm" />
+			<Flag v="left front foot" />
+			<Flag v="right front foot" />
+			<Flag v="left eye" />
+			<Flag v="right eye" />
+			<Flag v="overlay object space parent" />
+		</_B>
+		<_34 v="generated_pade9c7" length="2" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Nav joint">
+		<_2 v="Joint name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Detail Joints">
+		<_2 v="Joint Name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Procedural Joints">
+		<_2 v="Joint Name" />
+		<_A v="procedure">
+			<Flag v="none" />
+			<Flag v="multiply rotation" />
+			<Flag v="copy scaled twist" />
+			<Flag v="look at" />
+			<Flag v="copy local orientation" />
+			<Flag v="copy scaled twist legacy" />
+		</_A>
+		<_A v="procedure axis">
+			<Flag v="all" />
+			<Flag v="yaw" />
+			<Flag v="pitch" />
+			<Flag v="roll" />
+		</_A>
+		<_34 v="generated_pad9cf3" length="2" />
+		<_2 v="procedure node A" />
+		<_2 v="procedure node B" />
+		<_14 v="procedure var 1" />
+		<_14 v="procedure var 2" />
+		<_1C v="procedure neutral offset" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Joint masks">
+		<_2 v="Name" />
+		<_A v="Mask selection behavior">
+			<Flag v="MaskAllSelected" />
+			<Flag v="MaskAllNotSelected" />
+		</_A>
+		<_34 v="generated_padf204" length="3" />
+		<_2 v="Joint selection chain start" />
+		<_40 v="Joint selection chain ends">
+			<_2 v="Joint name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Explicit joint selections">
+			<_2 v="Joint name" />
+			<_3B v="" />
+		</_40>
+		<_2E v="Add joints from other mask" />
+		<_2E v="Remove joints from other mask" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Joint animation filtering">
+		<_2 v="Joint name" />
+		<_3B v="" />
+	</_40>
+	<_37 v="IK Settings" />
+	<_36 v="IK Junctions" />
+	<_40 v="IK junctions">
+		<_2 v="Name" />
+		<_2 v="Pivot joint" />
+		<_14 v="Pull passthrough" />
+		<_3B v="" />
+	</_40>
+	<_36 v="IK Chains" />
+	<_40 v="IK chains">
+		<_2 v="Name" />
+		<_B v="Type">
+			<Flag v="standard" />
+			<Flag v="spine" />
+			<Flag v="spline driven spine" />
+		</_B>
+		<_34 v="generated_pad7620" length="2" />
+		<_2 v="Start joint" />
+		<_2 v="Effector joint" />
+		<_40 v="Special joints">
+			<_2 v="joint" />
+			<_E v="flags">
+				<Flag v="static" />
+				<Flag v="hinge" />
+			</_E>
+			<_34 v="generated_pada927" length="2" />
+			<_3B v="" />
+		</_40>
+		<_36 v="Pull settings" />
+		<_14 v="Pull strength" />
+		<_14 v="Push strength" />
+		<_14 v="Over extent pull strength" />
+		<_14 v="Under extent push strength" />
+		<_36 v="Effector Cone Limits" />
+		<_14 v="Effector cone limit power" />
+		<_24 v="Pitch bounds" />
+		<_24 v="Yaw bounds" />
+		<_25 v="Offset bounds" />
+		<_36 v="Spline settings" />
+		<_14 v="Spline reversal strength" />
+		<_3B v="" />
+	</_40>
+	<_36 v="IK Leg Definitions" />
+	<_40 v="IK leg definitions">
+		<_30 v="IK Chain" />
+		<_25 v="Standing Compression Limits" />
+		<_25 v="Crouching Compression Limits" />
+		<_25 v="Foot Pitch Limits" />
+		<_25 v="Foot Yaw Limits" />
+		<_3B v="" />
+	</_40>
+	<_40 v="IK arm definitions">
+		<_30 v="IK Chain" />
+		<_14 v="Wrist Break Threshold" />
+		<_2 v="Fixup Axis Marker" />
+		<_36 v="Advanced" />
+		<_14 v="Wrist Break Acceptable Min Angle" />
+		<_3B v="" />
+	</_40>
+	<_36 v="Points and Sets" />
+	<_40 v="IK point">
+		<_2 v="Name" />
+		<_2 v="Source marker" />
+		<_C v="Attach to">
+			<Flag v="parent" />
+			<Flag v="NYI any child" />
+			<Flag v="primary weapon" />
+			<Flag v="secondary weapon" />
+		</_C>
+		<_2 v="Destination marker" />
+		<_19 v="Pole marker" />
+		<_30 v="IK chain to use" />
+		<_2 v="Weight source object function" />
+		<_2 v="Priority source object function" />
+		<_3B v="" />
+	</_40>
+	<_40 v="IK sets">
+		<_2 v="Name" />
+		<_D v="Flags">
+			<Flag v="Disable Quadruped Footlocking" />
+			<Flag v="Enable Biped Handlocking" />
+		</_D>
+		<_40 v="IK points">
+			<_2E v="IK point" />
+			<_A v="Point usage toggle">
+				<Flag v="Enabled" />
+				<Flag v="Disabled" />
+			</_A>
+			<_34 v="generated_pad4862" length="1" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_37 v="ACL Settings" />
+	<_14 v="Error Threshold" />
+	<_14 v="Default Shell Radius" />
+	<_40 v="Shell Radius Overrides">
+		<_2 v="Name" />
+		<_14 v="Shell Radius" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_3B v="" />
+</root>

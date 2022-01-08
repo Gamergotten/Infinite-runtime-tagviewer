@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="channel" />
+	<_41 v="parent" />
+	<_41 v="asset" />
+	<_41 v="Animation Frame Events" />
+	<_41 v="Audio Frame Events" />
+	<_41 v="Effect Frame Events" />
+	<_40 v="Animations">
+		<_2 v="token" />
+		<_6 v="uniqueID" />
+		<_2 v="legacyName" />
+		<_41 v="animationSource" />
+		<_A v="type">
+			<Flag v="Base" />
+			<Flag v="Base + Txy motion type" />
+			<Flag v="Base + Txy,Yaw motion type" />
+			<Flag v="Base + Txyz,Yaw motion type" />
+			<Flag v="Base + Txyz,AngleAxis motion type" />
+			<Flag v="Base + Full motion type" />
+			<Flag v="Base + No motion type" />
+			<Flag v="Overlay" />
+			<Flag v="Overlay Additive - Pose" />
+			<Flag v="Replacement" />
+		</_A>
+		<_A v="compression">
+			<Flag v="Auto" />
+			<Flag v="None" />
+			<Flag v="Medium" />
+			<Flag v="Rough" />
+			<Flag v="Light" />
+			<Flag v="ACL Auto" />
+		</_A>
+		<_34 v="generated_pad78b5" length="2" />
+		<_41 v="generatedModelAnimation" />
+		<_14 v="weight" />
+		<_A v="autoWeight">
+			<Flag v="Auto" />
+			<Flag v="Fixed" />
+		</_A>
+		<_F v="Flags">
+			<Flag v="Stop searching and ignore tokens in lower channels" />
+		</_F>
+		<_37 v="Legacy fields" />
+		<_5 v="Loop frame index" />
+		<_E v="Legacy User Flags">
+			<Flag v="disable interpolation in" />
+			<Flag v="disable interpolation out" />
+			<Flag v="disable mode ik" />
+			<Flag v="disable weapon ik" />
+			<Flag v="disable weapon aim/1st person" />
+			<Flag v="disable look screen" />
+			<Flag v="force weapon ik on" />
+			<Flag v="enable replacement interpolation" />
+			<Flag v="enable blend-in on replacement anims" />
+			<Flag v="use custom blend-in time" />
+			<Flag v="disable ik sets" />
+			<Flag v="disable ik chains" />
+			<Flag v="translate and scale root only" />
+			<Flag v="enable blend-out on replacement anims" />
+			<Flag v="use custom replacement blend-out time" />
+			<Flag v="override player input" />
+		</_E>
+		<_37 v="" />
+		<_34 v="generated_pad5ed4" length="2" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Reference to generated anim pool tag" />
+	<_37 v="Legacy AnimSet fields" />
+	<_40 v="composites">
+		<_2 v="Name" />
+		<_44 v="Source XML" />
+		<_A v="Type">
+			<Flag v="Base" />
+			<Flag v="Overlay" />
+		</_A>
+		<_34 v="generated_padc60d" length="3" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_34 v="generated_pad5195" length="4" />
+	<_3B v="" />
+</root>

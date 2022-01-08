@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_D v="flags">
+		<Flag v="collides structure" />
+		<Flag v="collides objects" />
+		<Flag v="collides water" />
+		<Flag v="affected by explosions" />
+	</_D>
+	<_2 v="marker attach name" />
+	<_41 v="bitmap sprite plate" />
+	<_25 v="emission rate" />
+	<_14 v="lifetime" />
+	<_25 v="wind min/max" />
+	<_14 v="wind scale" />
+	<_14 v="time scale" />
+	<_25 v="fade distance" />
+	<_14 v="emissions sphere radius" />
+	<_14 v="movement cylinder radius" />
+	<_14 v="fade in time" />
+	<_14 v="fade out time" />
+	<_40 v="leaf types">
+		<_5 v="bitmap sprite index" />
+		<_34 v="generated_padb751" length="2" />
+		<_14 v="frequency" />
+		<_14 v="mass" />
+		<_25 v="geometry scale" />
+		<_14 v="flitteriness" />
+		<_14 v="flitteriness swing arm length" />
+		<_14 v="flitteriness scale" />
+		<_14 v="flitteriness speed" />
+		<_14 v="flitteriness leaves phase" />
+		<_14 v="tumble scale" />
+		<_14 v="rotation scale" />
+		<_14 v="starting velocity" />
+		<_26 v="air friction XY and Z" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_paddb8c" length="4" />
+	<_3B v="" />
+</root>

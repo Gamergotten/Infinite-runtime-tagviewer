@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_5 v="dynamic/analytic gobo texture slots" />
+	<_E v="flags">
+		<Flag v="Use volumetric lighting" />
+		<Flag v="Enable DWS" />
+		<Flag v="Enable DWS Indirect Irradiance" />
+		<Flag v="Decouple DWS / Sky Hand Painted" />
+		<Flag v="Decouple DWS / Sky Atm. Scattering" />
+		<Flag v="Decouple DWS / Sky Vol. Clouds" />
+		<Flag v="Disable Sun" />
+	</_E>
+	<_5 v="Volumetric Clouds DWS Sun Index" />
+	<_5 v="Atmospheric Scattering DWS Sun Index" />
+	<_5 v="DWS Sun Lens flare Index" />
+	<_5 v="max gobo resolution" />
+	<_A v="gobo bit depth">
+		<Flag v="8-bit" />
+		<Flag v="16-bit" />
+	</_A>
+	<_A v="single pass lighting mode">
+		<Flag v="sun only" />
+		<Flag v="multiple lights" />
+	</_A>
+	<_A v="shadow rendering mode">
+		<Flag v="default" />
+		<Flag v="gpu-driven" />
+	</_A>
+	<_F v="Enable Shadows For Uncached Lights">
+		<Flag v="Enabled" />
+	</_F>
+	<_3B v="" />
+</root>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="suppressed incidents">
+		<_2 v="incident name" />
+		<_F v="suppression type">
+			<Flag v="suppress cause player game engine event" />
+			<Flag v="suppress effect player game engine event" />
+			<Flag v="suppress cause team game engine event" />
+			<Flag v="suppress effect team game engine event" />
+			<Flag v="suppress medal display" />
+			<Flag v="suppress medal stats" />
+			<Flag v="suppress fanfare" />
+			<Flag v="suppress audio" />
+		</_F>
+		<_34 v="generated_padf3b1" length="3" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padadce" length="4" />
+	<_3B v="" />
+</root>

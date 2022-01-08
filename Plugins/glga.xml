@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="garbage collection">
+		<_36 v="Garbage Times" />
+		<_14 v="Dropped item" />
+		<_14 v="Dropped special item" />
+		<_14 v="Dropped item in multiplayer" />
+		<_14 v="Dead unit" />
+		<_14 v="Dead player" />
+		<_14 v="Dead MP Player" />
+		<_14 v="Dead MP Player overloaded" />
+		<_6 v="Max dead body count " />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad2c4e" length="4" />
+	<_3B v="" />
+</root>

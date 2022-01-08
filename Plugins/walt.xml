@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_F v="alt-fire flags">
+		<Flag v="outline locked targets" />
+	</_F>
+	<_34 v="generated_pada038" length="3" />
+	<_41 v="target tracking outline" />
+	<_14 v="alt-fire animation transition in time" />
+	<_14 v="alt-fire animation transition out time" />
+	<_14 v="weapon fov scale" />
+	<_17 v="alt-fire translation offset" />
+	<_36 v="alt-fire percent to offset percent" />
+	<_38 v="alt-fire percent to offset percent">
+		<_37 v="function" />
+		<_38 v="function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="alt-fire animation mode" />
+	<_40 v="recoil view kick modifiers">
+		<_14 v="view kick deceleration modifier" />
+		<_14 v="view kick return to center modifier" />
+		<_3B v="" />
+	</_40>
+	<_40 v="recoil gunkick modifiers">
+		<_14 v="gunkick spring constant modifier" />
+		<_3B v="" />
+	</_40>
+	<_40 v="heat modifiers">
+		<_14 v="heat loss per second modifier" />
+		<_14 v="overheated heat loss per second modifier" />
+		<_14 v="heat generated per round modifier" />
+		<_3B v="" />
+	</_40>
+	<_40 v="aim assist modifiers">
+		<_14 v="autoaim angle" />
+		<_14 v="prioritization angle" />
+		<_14 v="autoaim range" />
+		<_14 v="autoaim falloff range" />
+		<_14 v="autoaim near falloff range" />
+		<_14 v="magnetism angle" />
+		<_14 v="magnetism range" />
+		<_14 v="magnetism falloff range" />
+		<_14 v="magnetism near falloff range" />
+		<_14 v="deviation angle" />
+		<_3B v="" />
+	</_40>
+	<_40 v="accuracy modifiers">
+		<_14 v="accuracy spread" />
+		<_3B v="" />
+	</_40>
+	<_40 v="unit modifiers">
+		<_14 v="move speed scale modifier" />
+		<_14 v="turn rate scale modifier" />
+		<_14 v="simulated input scale modifier" />
+		<_3B v="" />
+	</_40>
+	<_41 v="activate sound" />
+	<_41 v="deactivate sound" />
+	<_34 v="generated_padba19" length="4" />
+	<_3B v="" />
+</root>

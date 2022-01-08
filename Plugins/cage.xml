@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Points">
+		<_F v="Flags">
+			<Flag v="Ignore X" />
+			<Flag v="Ignore Y" />
+			<Flag v="Ignore Z" />
+			<Flag v="Ignore Yaw" />
+			<Flag v="Ignore Pitch" />
+			<Flag v="Ignore Roll" />
+			<Flag v="Use Bounding Sphere Center" />
+			<Flag v="Put Z-Axis At Floor" />
+		</_F>
+		<_34 v="generated_pad7a22" length="3" />
+		<_2 v="name" />
+		<_A v="offsetType">
+			<Flag v="Local" />
+			<Flag v="Location" />
+			<Flag v="World" />
+			<Flag v="Orbit" />
+			<Flag v="LocalWithCenter" />
+			<Flag v="WindDirection" />
+		</_A>
+		<_34 v="generated_padc6d7" length="3" />
+		<_19 v="offsetPosition" />
+		<_1C v="offsetRotation" />
+		<_A v="locationType">
+			<Flag v="None" />
+			<Flag v="Marker" />
+			<Flag v="Bone" />
+			<Flag v="FPS" />
+		</_A>
+		<_34 v="generated_pad138c" length="3" />
+		<_2 v="locationName" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad90a9" length="4" />
+	<_3B v="" />
+</root>

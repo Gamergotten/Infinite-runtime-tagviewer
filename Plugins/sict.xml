@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="States">
+		<_36 v="Self-Illumination State" />
+		<_2 v="Name" />
+		<_D v="Flags">
+			<Flag v="Looping" />
+			<Flag v="Triggered By AI State" />
+			<Flag v="Triggered By Anim State" />
+			<Flag v="Triggered By Dialog" />
+		</_D>
+		<_14 v="Length " />
+		<_2 v="Next State " />
+		<_38 v="Intensity ">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_38 v="Color ">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_38 v="Activation ">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad01b6" length="4" />
+	<_3B v="" />
+</root>

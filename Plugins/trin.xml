@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="placement">
+		<_38 v="Terrain Definition">
+			<_41 v="terrain system" />
+			<_38 v="Volume">
+				<_40 v="Points">
+					<_17 v="position" />
+					<_3B v="" />
+				</_40>
+				<_14 v="height" />
+				<_14 v="sink" />
+				<_17 v="center point" />
+				<_14 v="trivial cull radius squared" />
+				<_17 v="aabbCenter" />
+				<_17 v="aabbExtents" />
+				<_40 v="nativePoints2D">
+					<_16 v="point" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_41 v="runtime terrain" />
+		<_40 v="EditorMetadata">
+			<_1 v="folder name" />
+			<_17 v="local space pivot point position" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="splines">
+		<_2 v="name" />
+		<_38 v="curve">
+			<_40 v="control points">
+				<_19 v="value" />
+				<_19 v="tangent in" />
+				<_19 v="tangent out" />
+				<_14 v="curviness" />
+				<_A v="segment type x">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="segment type y">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="segment type z">
+					<Flag v="Spline" />
+					<Flag v="Linear" />
+					<Flag v="Stepped" />
+					<Flag v="SteppedNext" />
+				</_A>
+				<_A v="tangent mode x">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_A v="tangent mode y">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_A v="tangent mode z">
+					<Flag v="AutoStraight" />
+					<Flag v="UserStraight" />
+					<Flag v="UserBroken" />
+				</_A>
+				<_34 v="generated_pad30cd" length="2" />
+				<_40 v="pointMetadata">
+					<_40 v="spline road metadata">
+						<_14 v="width" />
+						<_14 v="opacity" />
+						<_14 v="falloffLeft" />
+						<_14 v="falloffRight" />
+						<_14 v="bank" />
+						<_3B v="" />
+					</_40>
+					<_40 v="road decal metadata">
+						<_40 v="Road Decal Textures">
+							<_41 v="Reference" />
+							<_3B v="" />
+						</_40>
+						<_18 v="Road Decal Scale" />
+						<_18 v="Road Decal Offset" />
+						<_14 v="Road Decal Tile Repeat Count" />
+						<_14 v="Road Decal Height Strength" />
+						<_14 v="Road Decal Mask Strength" />
+						<_14 v="Road Decal Height Contrast" />
+						<_14 v="Road Decal Mask Contrast" />
+						<_14 v="Road Decal Edge Fade" />
+						<_6 v="Road Decal Random Seed" />
+						<_3B v="" />
+					</_40>
+					<_40 v="animated spline metadata">
+						<_14 v="Time" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_40 v="SplineMetadata">
+			<_40 v="spline road metadata">
+				<_14 v="width" />
+				<_14 v="opacity" />
+				<_14 v="falloffLeft" />
+				<_14 v="falloffRight" />
+				<_14 v="bank" />
+				<_5 v="subdivision count" />
+				<_34 v="generated_pad6df6" length="2" />
+				<_40 v="Road Decal Metadata">
+					<_40 v="Road Decal Textures">
+						<_41 v="Reference" />
+						<_3B v="" />
+					</_40>
+					<_18 v="Road Decal Scale" />
+					<_18 v="Road Decal Offset" />
+					<_14 v="Road Decal Tile Repeat Count" />
+					<_14 v="Road Decal Height Strength" />
+					<_14 v="Road Decal Mask Strength" />
+					<_14 v="Road Decal Height Contrast" />
+					<_14 v="Road Decal Mask Contrast" />
+					<_14 v="Road Decal Edge Fade" />
+					<_6 v="Road Decal Random Seed" />
+					<_3B v="" />
+				</_40>
+				<_41 v="terrain system" />
+				<_3B v="" />
+			</_40>
+			<_40 v="spline flight path metadata">
+				<_15 v="Preference" />
+				<_3C v="Lines per spline segment" />
+				<_34 v="generated_padfb3b" length="3" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="EditorMetadata">
+			<_1 v="folder name" />
+			<_17 v="local space pivot point position" />
+			<_3B v="" />
+		</_40>
+		<_6 v="Guid" />
+		<_3B v="" />
+	</_40>
+	<_40 v="terrain volumes">
+		<_2 v="Name" />
+		<_38 v="Terrain Definition">
+			<_41 v="terrain system" />
+			<_38 v="Volume">
+				<_40 v="Points">
+					<_17 v="position" />
+					<_3B v="" />
+				</_40>
+				<_14 v="height" />
+				<_14 v="sink" />
+				<_17 v="center point" />
+				<_14 v="trivial cull radius squared" />
+				<_17 v="aabbCenter" />
+				<_17 v="aabbExtents" />
+				<_40 v="nativePoints2D">
+					<_16 v="point" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_6 v="Volume Composition Order" />
+		<_40 v="EditorMetadata">
+			<_1 v="folder name" />
+			<_17 v="local space pivot point position" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad0b59" length="4" />
+	<_3B v="" />
+</root>

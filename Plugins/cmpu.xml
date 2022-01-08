@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Equipment Paths">
+		<_2 v="Path name" />
+		<_B v="Path Upgrade Type">
+			<Flag v="Invalid" />
+			<Flag v="Grapple" />
+			<Flag v="Shield" />
+			<Flag v="Sensor" />
+			<Flag v="Wall" />
+			<Flag v="Evade" />
+		</_B>
+		<_34 v="generated_pad72a0" length="2" />
+		<_2 v="Path description" />
+		<_2 v="Persistence key levels" />
+		<_2 v="Persistence key read levels" />
+		<_2 v="Persistence key discovered" />
+		<_F v="Unlocked by default">
+			<Flag v="enabled" />
+		</_F>
+		<_34 v="generated_pad8c81" length="3" />
+		<_37 v="UI Info" />
+		<_38 v="UIInfo">
+			<_2 v="name" />
+			<_2 v="alt name " />
+			<_2 v="description" />
+			<_2 v="help text" />
+			<_2 v="icon string id" />
+			<_41 v="sprite" />
+			<_6 v="sprite index" />
+			<_41 v="alt sprite" />
+			<_6 v="alt sprite index" />
+			<_6 v="damage sprite index" />
+			<_41 v="ui vehicle screen reference" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_40 v="Nodes">
+			<_2 v="Node name" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Equipment Points">
+		<_2 v="Persistence Key" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Shield Upgrades">
+		<_2 v="Persistence Key" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad9564" length="4" />
+	<_3B v="" />
+</root>

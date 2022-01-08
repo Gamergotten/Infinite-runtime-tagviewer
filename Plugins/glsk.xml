@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="campaign metagame globals">
+		<_40 v="styles">
+			<_2 v="incident name" />
+			<_14 v="style multiplier" />
+			<_3B v="" />
+		</_40>
+		<_40 v="difficulty">
+			<_14 v="difficulty multiplier" />
+			<_3B v="" />
+		</_40>
+		<_40 v="skulls">
+			<_14 v="difficulty multiplier" />
+			<_3B v="" />
+		</_40>
+		<_6 v="friendly_death_point_count" />
+		<_6 v="player_death_point_count" />
+		<_6 v="player_betrayal_point_count" />
+		<_14 v="transient score time" />
+		<_14 v="EMP kill window" />
+		<_14 v="Cowbell explosion acceleration multiplier" />
+		<_14 v="Boom explosion acceleration multiplier" />
+		<_14 v="Famine ammo multiplier" />
+		<_14 v="Score delta display seconds (max)" />
+		<_14 v="Score delta display seconds (incremental)" />
+		<_14 v="Mythic skull body vitality scalar" />
+		<_14 v="Mythic skull shield vitality scalar" />
+		<_40 v="Mythic skull bonuses">
+			<_A v="Type">
+				<Flag v="grunt" />
+				<Flag v="jackal" />
+				<Flag v="skirmisher" />
+				<Flag v="marine" />
+				<Flag v="spartan" />
+				<Flag v="bugger" />
+				<Flag v="hunter" />
+				<Flag v="flood_infection" />
+				<Flag v="flood_carrier" />
+				<Flag v="flood_combat" />
+				<Flag v="flood_pure" />
+				<Flag v="sentinel" />
+				<Flag v="elite" />
+				<Flag v="engineer" />
+				<Flag v="mule" />
+				<Flag v="turret" />
+				<Flag v="mongoose" />
+				<Flag v="warthog" />
+				<Flag v="scorpion" />
+				<Flag v="hornet" />
+				<Flag v="pelican" />
+				<Flag v="revenant" />
+				<Flag v="seraph" />
+				<Flag v="shade" />
+				<Flag v="watchtower" />
+				<Flag v="ghost" />
+				<Flag v="chopper" />
+				<Flag v="mauler" />
+				<Flag v="wraith" />
+				<Flag v="banshee" />
+				<Flag v="phantom" />
+				<Flag v="scarab" />
+				<Flag v="guntower" />
+				<Flag v="tuning_fork" />
+				<Flag v="broadsword" />
+				<Flag v="mammoth" />
+				<Flag v="lich" />
+				<Flag v="mantis" />
+				<Flag v="wasp" />
+				<Flag v="phaeton" />
+				<Flag v="bishop" />
+				<Flag v="knight" />
+				<Flag v="pawn" />
+				<Flag v="soldier" />
+				<Flag v="packmaster" />
+				<Flag v="cavalier" />
+				<Flag v="brute" />
+				<Flag v="hoverer" />
+				<Flag v="crusher" />
+			</_A>
+			<_34 v="generated_pad9f60" length="3" />
+			<_14 v="Shield vitality bonus" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad8e18" length="4" />
+	<_3B v="" />
+</root>

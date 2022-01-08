@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="Bot Backfill">
+		<_37 v="Bot Backfill" />
+		<_14 v="MMR threshold for Recruit" />
+		<_14 v="MMR threshold for Marine" />
+		<_14 v="MMR threshold for ODST" />
+		<_14 v="MMR threshold for Spartan" />
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_40 v="Difficulty Specific Tuning">
+		<_B v="Difficulty Level">
+			<Flag v="Unused 1" />
+			<Flag v="Unused 2" />
+			<Flag v="Unused 3" />
+			<Flag v="Autobot (Campaign test automation)" />
+			<Flag v="Adaptive" />
+			<Flag v="Weapon Drill" />
+			<Flag v="Marine" />
+			<Flag v="ODST" />
+			<Flag v="Spartan" />
+			<Flag v="Recruit" />
+		</_B>
+		<_34 v="generated_pad637c" length="2" />
+		<_D v="Difficulty Specific Flags">
+			<Flag v="can circuit" />
+			<Flag v="can circle strafe" />
+			<Flag v="can throw grenades" />
+			<Flag v="can use equipment" />
+			<Flag v="can jump/crouch in combat" />
+			<Flag v="can use grapple back smack finisher" />
+			<Flag v="can use motion tracker" />
+			<Flag v="can avoid dangerous objects" />
+			<Flag v="can avoid their own or teammates' dangerous objects" />
+			<Flag v="can be aware of their teammates' targets" />
+			<Flag v="can use guard ranking system" />
+			<Flag v="Switch weapons at low ammo mid combat" />
+		</_D>
+		<_38 v="Hysteresis">
+			<_37 v="Hysteresis" />
+			<_14 v="Hysteresis Max Amount" />
+			<_14 v="Hysteresis Timeout Seconds" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_38 v="Traversal Tuning">
+			<_37 v="Traversal Properties" />
+			<_14 v="Destination Evaluation Tolerance" />
+			<_14 v="Random Neighbor Selection Chance" />
+			<_14 v="Start Sprint Evaluation Tolerance" />
+			<_14 v="Stop Sprint Evaluation Tolerance" />
+			<_8 v="Bot angular turn velocity" />
+			<_8 v="Bot angular turn acceleration" />
+			<_14 v="Bot stuck time timeout" />
+			<_14 v="Bot end of path tolerance distance sq" />
+			<_14 v="Wrong path direction timeout" />
+			<_14 v="Ledge fall distance sq" />
+			<_14 v="Waypoint path distance" />
+			<_8 v="Jump hint facing threshold (no clamber)" />
+			<_14 v="Low weapon desirabilty to gear up" />
+			<_14 v="Objective path distance correction threshold" />
+			<_14 v="Hunt look at ambition distance" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_38 v="Combat Tuning">
+			<_37 v="Combat" />
+			<_38 v="Melee">
+				<_37 v="Melee" />
+				<_14 v="Melee min delay time" />
+				<_14 v="Melee max delay time" />
+				<_14 v="Melee striking distance (no melee weapon)" />
+				<_14 v="Melee striking distance (with melee weapon)" />
+				<_14 v="Minimum melee distance" />
+				<_14 v="Max melee distance (no equipment)" />
+				<_14 v="Max melee distance (with objective)" />
+				<_14 v="Min melee grapple distance" />
+				<_14 v="Max melee distance (with grapple hook)" />
+				<_14 v="Max enemy health for unarmed grapple" />
+				<_14 v="Restrict melee knockback weapon desirability min" />
+				<_14 v="Target 'low shield vitality' threshold" />
+				<_14 v="'Low confidence' threshold" />
+				<_8 v="'Target is facing away' angle threshold" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_37 v="Combat Dance" />
+			<_14 v="Reset initial combat dance delay time" />
+			<_37 v="Strafing" />
+			<_14 v="Strafe min time" />
+			<_14 v="Strafe max time" />
+			<_14 v="Halt strafe chance" />
+			<_14 v="Halt strafe min time" />
+			<_14 v="Halt strafe max time" />
+			<_14 v="Halt strafe min time (initial)" />
+			<_14 v="Halt strafe max time (initial)" />
+			<_37 v="" />
+			<_37 v="Vertical Movement" />
+			<_14 v="Vertical movement min delay time" />
+			<_14 v="Vertical movement max delay time" />
+			<_14 v="Vertical movement crouch chance" />
+			<_14 v="Crouch hold time" />
+			<_14 v="Vertical movement jump check height" />
+			<_8 v="Target is aiming check threshold" />
+			<_14 v="Avoid dangerous object jump chance" />
+			<_37 v="" />
+			<_37 v="" />
+			<_37 v="Grenades" />
+			<_14 v="Grenade delay min time" />
+			<_14 v="Grenade delay noise time" />
+			<_14 v="Grenade min target distance" />
+			<_14 v="Grenade max target distance" />
+			<_14 v="Grenade distance in front of target feet" />
+			<_14 v="'Low ground' height threshold" />
+			<_37 v="" />
+			<_37 v="Thrown Weapons" />
+			<_14 v="Thrown weapon delay min time" />
+			<_14 v="Thrown weapon delay noise time" />
+			<_14 v="Thrown weapon min target distance" />
+			<_14 v="Thrown weapon max target distance" />
+			<_14 v="Thrown weapon 'Low ground' height threshold" />
+			<_37 v="" />
+			<_8 v="Deploy drop wall aiming tolerance" />
+			<_14 v="Deploy drop wall confidence threshold" />
+			<_14 v="Min drop wall delay time" />
+			<_14 v="Max drop wall delay time" />
+			<_14 v="Disengage confidence threshold" />
+			<_14 v="Evade min delay time" />
+			<_14 v="Evade max delay time" />
+			<_14 v="Combat error magnitude" />
+			<_14 v="Minimum error magnitude" />
+			<_14 v="Target velocity max noise threshhold sq" />
+			<_14 v="Targeting error from velocity weight" />
+			<_14 v="Targeting error recalculation time (min)" />
+			<_14 v="Targeting error recalculation time (max)" />
+			<_8 v="Desired vs actual aiming differential allowance" />
+			<_14 v="Predictability velocity magnitude change threshold" />
+			<_8 v="Predictability velocity direction change threshhold" />
+			<_14 v="Predictability error gain rate" />
+			<_14 v="Predictability error decay rate" />
+			<_14 v="Maximum aiming offset" />
+			<_14 v="Combat weapon switch desirability delta" />
+			<_14 v="Combat weapon switch distance delta" />
+			<_14 v="Weapon switch from objective confidence limit" />
+			<_14 v="Weapon switch from objective combat distance limit" />
+			<_14 v="Initial hide point search radius" />
+			<_14 v="Location Sensor Min Activation Distance Sq" />
+			<_14 v="Location Sensor Max Activation Distance Sq" />
+			<_14 v="Min location sensor delay time" />
+			<_14 v="Max location sensor delay time" />
+			<_8 v="Location sensor aiming check threshold" />
+			<_14 v="Disengage max jump height" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_38 v="Awareness Tuning">
+			<_37 v="Awareness" />
+			<_14 v="Max ground awareness distance" />
+			<_14 v="Max air awareness distance" />
+			<_14 v="Max shared awareness distance" />
+			<_8 v="FOV Degrees" />
+			<_14 v="Threat sensor awareness distance" />
+			<_14 v="Active camo invisibility threshold" />
+			<_14 v="Danger decay rate per second" />
+			<_14 v="Clairvoyance max time" />
+			<_14 v="Clairvoyance max distance" />
+			<_14 v="Dangerous object awareness distance" />
+			<_14 v="Dangerous object max time to damage" />
+			<_8 v="Dangerous object approaching bot angle" />
+			<_14 v="Moving dangerous object min speed" />
+			<_14 v="Chance to notice new dangerous objects per second" />
+			<_14 v="Dangerous object danger radius scalar" />
+			<_14 v="Target Hysteresis Max Amount" />
+			<_14 v="Target Hysteresis Timeout Seconds" />
+			<_40 v="Target Priority Calculation Inputs">
+				<_B v="Input">
+					<Flag v="Distance to Target" />
+					<Flag v="Target Shields Popped" />
+					<Flag v="Target Health" />
+					<Flag v="Target Is Holding Objective" />
+				</_B>
+				<_34 v="generated_pad9bc9" length="2" />
+				<_14 v="Weight" />
+				<_3B v="" />
+			</_40>
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_38 v="Guard Behavior Tuning">
+			<_37 v="Guard" />
+			<_14 v="Min guard look time" />
+			<_14 v="Max guard look time" />
+			<_14 v="Min guard look rotation angle" />
+			<_14 v="Max guard look rotation angle" />
+			<_14 v="Guard volume boundary width" />
+			<_14 v="Max patrol time" />
+			<_14 v="Min patrol pause time" />
+			<_14 v="Max patrol pause time" />
+			<_14 v="Min Guard Distance" />
+			<_14 v="Guard height difference threshold" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_38 v="Guard Ranked Behavior Tuning">
+			<_37 v="GuardRanked" />
+			<_14 v="Max Guard Distance" />
+			<_14 v="Non-Owning AmbitionOwnershipState Input Score" />
+			<_14 v="Owning AmbitionOwnershipState Input Score" />
+			<_14 v="Max Ally Interaction Radius" />
+			<_40 v="Ambition Priority Calculation Inputs">
+				<_B v="Input">
+					<Flag v="Distance to Ambition" />
+					<Flag v="Ambition Ownership State" />
+					<Flag v="Number of Allies Interacting with Ambition (Inverse Relationship)" />
+				</_B>
+				<_34 v="generated_padd51d" length="2" />
+				<_14 v="Weight" />
+				<_3B v="" />
+			</_40>
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_38 v="Pickup Tuning">
+			<_37 v="Pickup" />
+			<_14 v="Pickup distance sq" />
+			<_14 v="Pathless distance sq" />
+			<_14 v="Item pickup delay" />
+			<_14 v="Weapon pickup cooldown" />
+			<_14 v="Item observation radius" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_40 v="Weapon Tuning">
+			<_41 v="Approved Weapon Definition Tag" />
+			<_D v="Weapon usage flags">
+				<Flag v="Aims at head" />
+				<Flag v="Aims at feet" />
+				<Flag v="Aims in front of feet" />
+				<Flag v="Trigger latches" />
+				<Flag v="Melee weapon" />
+				<Flag v="Held objective (Flag, ball, etc)" />
+				<Flag v="Should Throw Weapon" />
+			</_D>
+			<_14 v="Error magnitude" />
+			<_14 v="Minimum error magnitude" />
+			<_14 v="Error max velocity (sq) threshold" />
+			<_14 v="Desirability" />
+			<_14 v="Min distance sq" />
+			<_14 v="Max distance sq" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Approved Bot Equipment">
+		<_41 v="Approved Equipment Definition Tag" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Adaptive Difficulty Tuning">
+		<_37 v="Adaptive Difficulty" />
+		<_14 v="Player Health Shooting Threshold" />
+		<_14 v="Max Movement" />
+		<_14 v="Max Aiming" />
+		<_14 v="Aiming Coefficient" />
+		<_14 v="Position Coefficient" />
+		<_14 v="Engagement Constant" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad7603" length="4" />
+	<_3B v="" />
+</root>

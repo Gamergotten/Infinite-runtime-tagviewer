@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="voxel data">
+		<_6 v="guid" />
+		<_40 v="LODs">
+			<_3F v="x dimension" />
+			<_3F v="y dimension" />
+			<_3F v="z dimension" />
+			<_3F v="bsp start offset x" />
+			<_3F v="bsp start offset y" />
+			<_3F v="bsp start offset z" />
+			<_3F v="bsp size x" />
+			<_3F v="bsp size y" />
+			<_3F v="bsp size z" />
+			<_42 v="voxel data" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="shape data">
+		<_6 v="guid" />
+		<_6 v="generated front zone" />
+		<_6 v="generated back zone" />
+		<_F v="generated data flags">
+			<Flag v="Is Geo Blocked" />
+		</_F>
+		<_34 v="generated_pad25f8" length="3" />
+		<_42 v="shape data" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

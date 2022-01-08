@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Lightmap Priority Volumes">
+		<_2 v="Name" />
+		<_37 v="Volume settings" />
+		<_38 v="Volume">
+			<_40 v="Points">
+				<_17 v="position" />
+				<_3B v="" />
+			</_40>
+			<_14 v="height" />
+			<_14 v="sink" />
+			<_17 v="center point" />
+			<_14 v="trivial cull radius squared" />
+			<_17 v="aabbCenter" />
+			<_17 v="aabbExtents" />
+			<_40 v="nativePoints2D">
+				<_16 v="point" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_14 v="Volume Priority" />
+		<_14 v="Lightmap Priority" />
+		<_B v="Exclude Shadow Geometry">
+			<Flag v="No" />
+			<Flag v="Yes" />
+		</_B>
+		<_B v="Exclude Per Pixel Lighting">
+			<Flag v="No" />
+			<Flag v="Yes" />
+		</_B>
+		<_B v="Exclude Analytic Sun Contribution">
+			<Flag v="No" />
+			<Flag v="Yes" />
+		</_B>
+		<_B v="Exclude Analytic Light Contribution">
+			<Flag v="No" />
+			<Flag v="Yes" />
+		</_B>
+		<_40 v="EditorMetadata">
+			<_1 v="folder name" />
+			<_17 v="local space pivot point position" />
+			<_3B v="" />
+		</_40>
+		<_41 v="owner bsp" />
+		<_2 v="owner variant" />
+		<_5 v="runtime bsp index" />
+		<_5 v="runtime variant index" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Air Probe Density Volumes">
+		<_2 v="Name" />
+		<_37 v="Volume settings" />
+		<_38 v="Volume">
+			<_40 v="Points">
+				<_17 v="position" />
+				<_3B v="" />
+			</_40>
+			<_14 v="height" />
+			<_14 v="sink" />
+			<_17 v="center point" />
+			<_14 v="trivial cull radius squared" />
+			<_17 v="aabbCenter" />
+			<_17 v="aabbExtents" />
+			<_40 v="nativePoints2D">
+				<_16 v="point" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_14 v="Air Probe Density" />
+		<_40 v="EditorMetadata">
+			<_1 v="folder name" />
+			<_17 v="local space pivot point position" />
+			<_3B v="" />
+		</_40>
+		<_41 v="owner bsp" />
+		<_2 v="owner variant" />
+		<_5 v="runtime bsp index" />
+		<_5 v="runtime variant index" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Air Probe Region Volumes">
+		<_2 v="Name" />
+		<_37 v="Volume settings" />
+		<_38 v="Volume">
+			<_40 v="Points">
+				<_17 v="position" />
+				<_3B v="" />
+			</_40>
+			<_14 v="height" />
+			<_14 v="sink" />
+			<_17 v="center point" />
+			<_14 v="trivial cull radius squared" />
+			<_17 v="aabbCenter" />
+			<_17 v="aabbExtents" />
+			<_40 v="nativePoints2D">
+				<_16 v="point" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_40 v="EditorMetadata">
+			<_1 v="folder name" />
+			<_17 v="local space pivot point position" />
+			<_3B v="" />
+		</_40>
+		<_41 v="owner bsp" />
+		<_2 v="owner variant" />
+		<_5 v="runtime bsp index" />
+		<_5 v="runtime variant index" />
+		<_14 v="Probe XY spacing" />
+		<_14 v="Probe Z spacing" />
+		<_6 v="Volume priority" />
+		<_14 v="Blend radius XY" />
+		<_14 v="Blend radius Z" />
+		<_E v="Flags">
+			<Flag v="Enable Terrain Following" />
+			<Flag v="Disable Occlusion" />
+		</_E>
+		<_34 v="generated_pad0802" length="2" />
+		<_14 v="Probe offset above ground" />
+		<_6 v="Number of Z layers" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Cubemap Volumes">
+		<_2 v="Name" />
+		<_D v="Flags">
+			<Flag v="Enable Intensity Correction" />
+			<Flag v="Capture With Effects" />
+			<Flag v="Affects Adjacent Bsps" />
+			<Flag v="Capture Dynamic Objects" />
+		</_D>
+		<_38 v="Dumpling">
+			<_40 v="inner points">
+				<_17 v="position" />
+				<_3B v="" />
+			</_40>
+			<_40 v="outer points">
+				<_17 v="position" />
+				<_3B v="" />
+			</_40>
+			<_14 v="height" />
+			<_14 v="sink" />
+			<_14 v="inner value" />
+			<_14 v="outer value" />
+			<_17 v="center point" />
+			<_14 v="trivial cull radius squared" />
+			<_14 v="bound volume" />
+			<_3B v="" />
+		</_38>
+		<_41 v="Cubemap Bitmap" />
+		<_B v="Enable Parallax Correction">
+			<Flag v="Off" />
+			<Flag v="On" />
+		</_B>
+		<_5 v="Cubemap Volume Priority" />
+		<_17 v="Cubemap Origin" />
+		<_19 v="Depth Positive" />
+		<_19 v="Depth Negative" />
+		<_B v="Active Volume">
+			<Flag v="Off" />
+			<Flag v="On" />
+		</_B>
+		<_B v="Maximum cubemap size">
+			<Flag v="128x128" />
+			<Flag v="256x256" />
+			<Flag v="512x512" />
+		</_B>
+		<_17 v="Intensity" />
+		<_14 v="Self-illum Scale Down" />
+		<_40 v="EditorMetadata">
+			<_1 v="folder name" />
+			<_17 v="local space pivot point position" />
+			<_3B v="" />
+		</_40>
+		<_41 v="owner bsp" />
+		<_2 v="owner variant" />
+		<_5 v="runtime bsp index" />
+		<_5 v="runtime variant index" />
+		<_14 v="Blend Distance" />
+		<_C v="Cubemap Volume Type">
+			<Flag v="Prism" />
+			<Flag v="Sphere" />
+		</_C>
+		<_14 v="Orientation" />
+		<_41 v="Cubemap Depth Bitmap" />
+		<_14 v="Depth Blend Range" />
+		<_14 v="Intensity Scale" />
+		<_B v="Tintable">
+			<Flag v="Off" />
+			<Flag v="On" />
+		</_B>
+		<_34 v="generated_pad93d5" length="2" />
+		<_14 v="Relevancy Radius" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

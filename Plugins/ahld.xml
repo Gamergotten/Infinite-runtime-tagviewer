@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="HLOD Auto-Generation Parameters" />
+	<_37 v="BSP Cells" />
+	<_6 v="X Splits" />
+	<_6 v="Y Splits" />
+	<_6 v="Z Splits" />
+	<_37 v="" />
+	<_37 v="HLOD settings" />
+	<_37 v="Multi BSP HLOD Settings" />
+	<_38 v="Multi BSP HLOD Settings">
+		<_38 v="Hlod Settings">
+			<_41 v="HLOD settings preset list" />
+			<_2 v="HLOD settings name" />
+			<_3B v="" />
+		</_38>
+		<_14 v="Switch Distance" />
+		<_B v="Maximum LOD">
+			<Flag v="LOD0" />
+			<Flag v="LOD1" />
+			<Flag v="LOD2" />
+			<Flag v="LOD3" />
+			<Flag v="LOD4" />
+			<Flag v="LOD5" />
+			<Flag v="LOD6" />
+			<Flag v="LOD7" />
+			<Flag v="LOD8" />
+			<Flag v="LOD9" />
+			<Flag v="LOD10" />
+			<Flag v="LOD11" />
+			<Flag v="LOD12" />
+			<Flag v="LOD13" />
+			<Flag v="LOD14" />
+			<Flag v="LOD15" />
+			<Flag v="Use Distance" />
+		</_B>
+		<_34 v="generated_padd86d" length="2" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="BSP HLOD Settings" />
+	<_38 v="BSP HLOD Settings">
+		<_38 v="Hlod Settings">
+			<_41 v="HLOD settings preset list" />
+			<_2 v="HLOD settings name" />
+			<_3B v="" />
+		</_38>
+		<_14 v="Switch Distance" />
+		<_B v="Maximum LOD">
+			<Flag v="LOD0" />
+			<Flag v="LOD1" />
+			<Flag v="LOD2" />
+			<Flag v="LOD3" />
+			<Flag v="LOD4" />
+			<Flag v="LOD5" />
+			<Flag v="LOD6" />
+			<Flag v="LOD7" />
+			<Flag v="LOD8" />
+			<Flag v="LOD9" />
+			<Flag v="LOD10" />
+			<Flag v="LOD11" />
+			<Flag v="LOD12" />
+			<Flag v="LOD13" />
+			<Flag v="LOD14" />
+			<Flag v="LOD15" />
+			<Flag v="Use Distance" />
+		</_B>
+		<_34 v="generated_padd86d" length="2" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="BSP Cell HLOD Settings" />
+	<_38 v="BSP Cell Hlod Settings">
+		<_38 v="Hlod Settings">
+			<_41 v="HLOD settings preset list" />
+			<_2 v="HLOD settings name" />
+			<_3B v="" />
+		</_38>
+		<_14 v="Switch Distance" />
+		<_B v="Maximum LOD">
+			<Flag v="LOD0" />
+			<Flag v="LOD1" />
+			<Flag v="LOD2" />
+			<Flag v="LOD3" />
+			<Flag v="LOD4" />
+			<Flag v="LOD5" />
+			<Flag v="LOD6" />
+			<Flag v="LOD7" />
+			<Flag v="LOD8" />
+			<Flag v="LOD9" />
+			<Flag v="LOD10" />
+			<Flag v="LOD11" />
+			<Flag v="LOD12" />
+			<Flag v="LOD13" />
+			<Flag v="LOD14" />
+			<Flag v="LOD15" />
+			<Flag v="Use Distance" />
+		</_B>
+		<_34 v="generated_padd86d" length="2" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="" />
+	<_34 v="generated_padd9ad" length="4" />
+	<_3B v="" />
+</root>

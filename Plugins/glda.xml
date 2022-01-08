@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="damage table">
+		<_40 v="damage groups">
+			<_2 v="name" />
+			<_40 v="armor modifiers">
+				<_2 v="name" />
+				<_14 v="damage multiplier" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="damage">
+		<_36 v="Guardians Damage Source" />
+		<_38 v="guardiansDamageSource">
+			<_2 v="Damage Source Name" />
+			<_3B v="" />
+		</_38>
+		<_36 v="Unknown Damage Type" />
+		<_38 v="unknownDamageType">
+			<_2 v="Damage Type Name" />
+			<_3B v="" />
+		</_38>
+		<_36 v="Generic Collision Damage Source" />
+		<_38 v="genericCollisionDamageSource">
+			<_2 v="Damage Source Name" />
+			<_3B v="" />
+		</_38>
+		<_36 v="Scripting Damage Source" />
+		<_38 v="scriptingDamageSource">
+			<_2 v="Damage Source Name" />
+			<_3B v="" />
+		</_38>
+		<_41 v="Instant kill damage" />
+		<_41 v="falling damage" />
+		<_41 v="jumping damage" />
+		<_41 v="soft landing damage" />
+		<_41 v="hard landing damage" />
+		<_41 v="transfer damage" />
+		<_41 v="hs damage" />
+		<_41 v="hs healing" />
+		<_36 v="Fire Damage Source" />
+		<_38 v="scriptingFireDamageSource">
+			<_2 v="Damage Source Name" />
+			<_3B v="" />
+		</_38>
+		<_41 v="hs fire damage" />
+		<_36 v="Terminal Velocity Damage Source" />
+		<_38 v="terminalVelocityDamageSource">
+			<_2 v="Damage Source Name" />
+			<_3B v="" />
+		</_38>
+		<_14 v="terminal velocity" />
+		<_41 v="terminal velocity damage" />
+		<_41 v="default damage response" />
+		<_41 v="friendly fire damage response" />
+		<_14 v="player shield spillover" />
+		<_14 v="ex-driver considered vehicle damage owner window" />
+		<_37 v="damage decay" />
+		<_38 v="damage decay props">
+			<_14 v="current damage decay delay" />
+			<_14 v="current damage decay time" />
+			<_14 v="current damage decay rate" />
+			<_14 v="recent damage decay delay" />
+			<_14 v="recent damage decay time" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="AI damage decay" />
+		<_38 v="ai damage decay props">
+			<_14 v="current damage decay delay" />
+			<_14 v="current damage decay time" />
+			<_14 v="current damage decay rate" />
+			<_14 v="recent damage decay delay" />
+			<_14 v="recent damage decay time" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="shield impact decay" />
+		<_38 v="shield impact decay props">
+			<_14 v="current damage decay delay" />
+			<_14 v="current damage decay time" />
+			<_14 v="current damage decay rate" />
+			<_14 v="recent damage decay delay" />
+			<_14 v="recent damage decay time" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="AI stun damage decay" />
+		<_38 v="ai stun damage decay props">
+			<_14 v="current damage decay delay" />
+			<_14 v="current damage decay time" />
+			<_14 v="current damage decay rate" />
+			<_14 v="recent damage decay delay" />
+			<_14 v="recent damage decay time" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Medium Ping Decay" />
+		<_38 v="medium ping decay props">
+			<_14 v="current damage decay delay" />
+			<_14 v="current damage decay time" />
+			<_14 v="current damage decay rate" />
+			<_14 v="recent damage decay delay" />
+			<_14 v="recent damage decay time" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Hard Ping Decay" />
+		<_38 v="hard ping decay props">
+			<_14 v="current damage decay delay" />
+			<_14 v="current damage decay time" />
+			<_14 v="current damage decay rate" />
+			<_14 v="recent damage decay delay" />
+			<_14 v="recent damage decay time" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="player damage additive sounds" />
+		<_41 v="deprecated player dealt damage additive sound" />
+		<_41 v="deprecated player dealt AOE damage additive sound" />
+		<_41 v="deprecated player dealt friendly fire additive sound" />
+		<_38 v="player additive sound deal damage">
+			<_41 v="player additive sound deal damage regular" />
+			<_41 v="player additive sound deal damage aoe" />
+			<_41 v="player additive sound deal damage friendly fire" />
+			<_41 v="player additive sound deal damage weak spot" />
+			<_41 v="player additive sound deal damage headshot" />
+			<_41 v="player additive sound deal damage kill" />
+			<_41 v="player additive sound deal damage headshot kill" />
+			<_3B v="" />
+		</_38>
+		<_41 v="player received damage additive sound (default)" />
+		<_41 v="player received damage additive sound (third person)" />
+		<_41 v="player received damage additive sound (in vehicle)" />
+		<_41 v="player received AOE damage additive sound (default)" />
+		<_41 v="player received AOE damage additive sound (third person)" />
+		<_41 v="player received AOE damage additive sound (in vehicle)" />
+		<_41 v="player died from AOE damage sound" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

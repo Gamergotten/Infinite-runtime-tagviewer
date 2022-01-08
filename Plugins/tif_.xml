@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_7 v="width" />
+	<_7 v="height" />
+	<_6 v="format" />
+	<_34 v="generated_pad09ba" length="4" />
+	<_7 v="rowPitch" />
+	<_7 v="slicePitch" />
+	<_7 v="pixels" />
+	<_42 v="pixel data" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="drag">
+		<_37 v="Pressure" />
+		<_38 v="pressure">
+			<_37 v="velocity to force" />
+			<_38 v="velocity to pressure">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_14 v="max velocity" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Suction" />
+		<_38 v="suction">
+			<_37 v="velocity to force" />
+			<_38 v="velocity to pressure">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_14 v="max velocity" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_14 v="linear damping" />
+		<_14 v="angular damping" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

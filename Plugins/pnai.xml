@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_E v="Flags">
+		<Flag v="Auto-play Spawn Animation" />
+		<Flag v="Use Dissolve on Spawn and Despawn" />
+	</_E>
+	<_34 v="generated_pad7f42" length="2" />
+	<_14 v="Effect On Spawn Duration" />
+	<_14 v="Effect On Despawn Duration" />
+	<_14 v="Gaze Return Orientation Speed" />
+	<_14 v="Initial Gaze Duration" />
+	<_6 v="Maximum Base Color Intensity" />
+	<_6 v="Maximum Face Color Intensity" />
+	<_6 v="Maximum Glow Color Intensity" />
+	<_6 v="Maximum Scanline Scale" />
+	<_6 v="Maximum Scanline Speed" />
+	<_6 v="Scanline Pattern Count" />
+	<_40 v="Color Preset Definitions">
+		<_2 v="Color Preset" />
+		<_14 v="Color Intensity" />
+		<_1F v="Base Color" />
+		<_14 v="Glow Color Intensity" />
+		<_1F v="Glow Color" />
+		<_6 v="Scanline Pattern" />
+		<_14 v="Scanline Scale" />
+		<_14 v="Scanline Speed" />
+		<_14 v="Face Color Intensity" />
+		<_1F v="Face Color" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Avatar Configurations">
+		<_C v="Avatar Type">
+			<Flag v="Prism" />
+			<Flag v="Pyramid" />
+			<Flag v="Sphere" />
+			<Flag v="Teardrop" />
+			<Flag v="Superintendent" />
+			<Flag v="Mister Chief" />
+		</_C>
+		<_2 v="Avatar Variant Name" />
+		<_6 v="Facial Bitmap Index Count" />
+		<_2 v="Facial Animation Parameter" />
+		<_14 v="Effect On Spawn Delay" />
+		<_14 v="Effect On Despawn Delay" />
+		<_40 v="Animations">
+			<_C v="Animation Type">
+				<Flag v="Idle" />
+				<Flag v="Spawn" />
+				<Flag v="Despawn" />
+				<Flag v="DespawnNegative" />
+				<Flag v="DespawnSad" />
+				<Flag v="HackingEnter" />
+				<Flag v="HackingLoop" />
+				<Flag v="HackingSuccess" />
+				<Flag v="HackingFailure" />
+				<Flag v="EmotePanic" />
+				<Flag v="EmoteCelebration" />
+				<Flag v="EmoteGreeting" />
+				<Flag v="EmotePositive" />
+			</_C>
+			<_2 v="Body Transition Parameter" />
+			<_E v="Flags">
+				<Flag v="Looping" />
+			</_E>
+			<_34 v="generated_pad60f5" length="2" />
+			<_40 v="Facial Animation Data">
+				<_6 v="Bitmap Index" />
+				<_14 v="Display Frame Length" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padcbf7" length="4" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="m_channel" />
+	<_41 v="m_parent" />
+	<_40 v="m_animEntryLists">
+		<_2 v="m_token" />
+		<_40 v="m_animations">
+			<_41 v="m_generatedModelAnimation" />
+			<_6 v="m_animationId" />
+			<_14 v="m_weight" />
+			<_41 v="m_animSource" />
+			<_3B v="" />
+		</_40>
+		<_F v="Flags">
+			<Flag v="Stop searching and ignore tokens in lower channel" />
+		</_F>
+		<_34 v="generated_padec23" length="3" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad402f" length="4" />
+	<_3B v="" />
+</root>

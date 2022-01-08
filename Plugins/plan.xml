@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Customization Platform Animation Settings">
+		<_2 v="Platfrom Name" />
+		<_B v="Platform type">
+			<Flag v="SpartanPlatform0" />
+			<Flag v="SpartanPlatform1" />
+			<Flag v="SpartanPlatform2" />
+			<Flag v="SpartanPlatform3" />
+			<Flag v="SpartanPlatform4" />
+			<Flag v="SpartanPlatform5" />
+			<Flag v="SpartanPlatform6" />
+			<Flag v="SpartanPlatform7" />
+			<Flag v="SpartanPlatformsCount" />
+			<Flag v="VehiclePlatform" />
+		</_B>
+		<_34 v="generated_padd394" length="2" />
+		<_14 v="Vertical Animation Offset" />
+		<_14 v="Transition Time" />
+		<_B v="Animation Easing">
+			<Flag v="LinearTween" />
+			<Flag v="EaseInQuad" />
+			<Flag v="EaseOutQuad" />
+			<Flag v="EaseInOutQuad" />
+			<Flag v="EaseInCubic" />
+			<Flag v="EaseOutCubic" />
+			<Flag v="EaseInOutCubic" />
+			<Flag v="EaseInQuart" />
+			<Flag v="EaseOutQuart" />
+			<Flag v="EaseInOutQuart" />
+			<Flag v="EaseInQuint" />
+			<Flag v="EaseOutQuint" />
+			<Flag v="EaseInOutQuint" />
+			<Flag v="EaseInSine" />
+			<Flag v="EaseOutSine" />
+			<Flag v="EaseInOutSine" />
+			<Flag v="EaseInExpo" />
+			<Flag v="EaseOutExpo" />
+			<Flag v="EaseInOutExpo" />
+			<Flag v="EaseInCirc" />
+			<Flag v="EaseOutCirc" />
+			<Flag v="EaseInOutCirc" />
+			<Flag v="EaseInSinCustom" />
+			<Flag v="EaseOutSinCustom" />
+		</_B>
+		<_34 v="generated_paded75" length="2" />
+		<_1C v="Platform selection orientation offset" />
+		<_1C v="Default Orientation" />
+		<_0 v="Platform Camera Point" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padd22a" length="4" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Musketeer Teams">
+		<_40 v="Musketeer">
+			<_41 v="character" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Difficulty Tunings">
+			<_40 v="Tuning Sets">
+				<_C v="Type">
+					<Flag v="Target visible to any player" />
+					<Flag v="Actor gunning for any player" />
+					<Flag v="Actor following order" />
+					<Flag v="Musketeer" />
+					<Flag v="Actor visible to any player" />
+					<Flag v="Actor not visible to any player" />
+					<Flag v="Moving to revive Player" />
+					<Flag v="Moving to revive Ai" />
+					<Flag v="Reviving Player" />
+					<Flag v="Reviving Ai" />
+				</_C>
+				<_36 v="health" />
+				<_14 v="SCALE enemy damage" />
+				<_14 v="MIN enemy damage" />
+				<_14 v="SCALE enemy vitality" />
+				<_14 v="MIN enemy vitality" />
+				<_14 v="SCALE enemy shield" />
+				<_14 v="MIN enemy shield" />
+				<_14 v="SCALE enemy recharge" />
+				<_14 v="MIN enemy recharge" />
+				<_14 v="SCALE friend damage" />
+				<_14 v="MIN friend damage" />
+				<_14 v="SCALE friend vitality" />
+				<_14 v="MIN friend vitality" />
+				<_14 v="SCALE friend shield" />
+				<_14 v="MIN friend shield" />
+				<_14 v="SCALE friend recharge" />
+				<_14 v="MIN friend recharge" />
+				<_34 v="pad0" length="16" />
+				<_36 v="ranged fire" />
+				<_14 v="SCALE rate of fire" />
+				<_14 v="MIN rate of fire" />
+				<_14 v="SCALE projectile error" />
+				<_14 v="MIN projectile error" />
+				<_14 v="SCALE burst error" />
+				<_14 v="MIN burst error" />
+				<_14 v="SCALE new target delay" />
+				<_14 v="MIN new target delay" />
+				<_14 v="SCALE burst separation" />
+				<_14 v="MIN burst separation" />
+				<_14 v="SCALE target tracking" />
+				<_14 v="MIN target tracking" />
+				<_14 v="SCALE target leading" />
+				<_14 v="MIN target leading" />
+				<_14 v="SCALE overcharge chance" />
+				<_14 v="MIN overcharge chance" />
+				<_14 v="SCALE special fire delay" />
+				<_14 v="MIN special fire delay" />
+				<_14 v="SCALE guidance vs player" />
+				<_14 v="MIN guidance vs player" />
+				<_14 v="SCALE melee delay base" />
+				<_14 v="MIN melee delay base" />
+				<_14 v="SCALE melee delay scale" />
+				<_14 v="MIN melee delay scale" />
+				<_34 v="pad1" length="8" />
+				<_36 v="grenades" />
+				<_14 v="SCALE grenade chance scale" />
+				<_14 v="MIN grenade chance scale" />
+				<_14 v="SCALE grenade timer scale" />
+				<_14 v="MIN grenade timer scale" />
+				<_14 v="SCALE grenade detonation timer scale" />
+				<_14 v="MIN grenade detonation timer scale" />
+				<_14 v="SCALE grenade arming timer scale" />
+				<_14 v="MIN grenade arming timer scale" />
+				<_14 v="SCALE grenade velocity scale" />
+				<_14 v="MIN grenade velocity scale" />
+				<_36 v="placement" />
+				<_14 v="SCALE major upgrade (normal)" />
+				<_14 v="MIN major upgrade (normal)" />
+				<_14 v="SCALE major upgrade (few)" />
+				<_14 v="MIN major upgrade (few)" />
+				<_14 v="SCALE major upgrade (many)" />
+				<_14 v="MIN major upgrade (many)" />
+				<_36 v="vehicles" />
+				<_14 v="SCALE player vehicle ram chance" />
+				<_14 v="MIN player vehicle ram chance" />
+				<_14 v="SCALE trick dodge chance scale" />
+				<_14 v="MIN trick dodge chance scale" />
+				<_14 v="SCALE vehicle boarding chance" />
+				<_14 v="MIN vehicle boarding chance" />
+				<_36 v="cover" />
+				<_14 v="SCALE hide time" />
+				<_14 v="MIN hide time" />
+				<_14 v="SCALE shield fraction hide" />
+				<_14 v="MIN shield fraction hide" />
+				<_14 v="SCALE cover vitality threshold" />
+				<_14 v="MIN cover vitality threshold" />
+				<_14 v="SCALE bunker open duration" />
+				<_14 v="MIN bunker open duration" />
+				<_14 v="SCALE bunker closed duration" />
+				<_14 v="MIN bunker closed duration" />
+				<_34 v="pad2" length="8" />
+				<_36 v="global kung fu" />
+				<_14 v="SCALE max attackers" />
+				<_14 v="MIN max attackers" />
+				<_36 v="threat tokens" />
+				<_14 v="SCALE max high tokens" />
+				<_14 v="MIN max high tokens" />
+				<_14 v="SCALE max low tokens" />
+				<_14 v="MIN max low tokens" />
+				<_14 v="SCALE max engagement tokens" />
+				<_14 v="MIN max engagement tokens" />
+				<_36 v="grenade tokens" />
+				<_14 v="SCALE max grenade tokens" />
+				<_14 v="MIN max grenade tokens" />
+				<_14 v="SCALE grenade token cooldown" />
+				<_14 v="MIN grenade token cooldown" />
+				<_36 v="effectiveness tokens" />
+				<_14 v="SCALE max effectiveness tokens" />
+				<_14 v="MIN max effectiveness tokens" />
+				<_36 v="weapon fidget" />
+				<_14 v="SCALE weapon fidget chance per second" />
+				<_14 v="MIN weapon fidget chance per second" />
+				<_36 v="Damage Scaling" />
+				<_14 v="SCALE Damage received from enemy AI" />
+				<_14 v="MIN Damage received from enemy AI" />
+				<_3B v="" />
+			</_40>
+			<_36 v="clamps" />
+			<_14 v="minimum value for starting accuracy" />
+			<_14 v="minimum value for ending accuracy" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad4122" length="4" />
+	<_3B v="" />
+</root>

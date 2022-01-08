@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="TYPE FLAGS" />
+	<_D v="flags">
+		<Flag v="ripple drifted by flow" />
+		<Flag v="amplitude changed by pendulum function" />
+		<Flag v="display flash foam" />
+		<Flag v="foam size defined in game unit" />
+	</_D>
+	<_36 v="INITIAL SETTINGS" />
+	<_14 v="initial radius" />
+	<_14 v="initial amplitude" />
+	<_14 v="spread speed" />
+	<_14 v="speed bias" />
+	<_14 v="position random range" />
+	<_14 v="max visibility distance" />
+	<_36 v="LIFE SETTINGS" />
+	<_14 v="duration max" />
+	<_14 v="duration min" />
+	<_14 v="rise period ratio" />
+	<_B v="rise function">
+		<Flag v="linear" />
+		<Flag v="early" />
+		<Flag v="very early" />
+		<Flag v="late" />
+		<Flag v="very late" />
+		<Flag v="cosine" />
+		<Flag v="one" />
+		<Flag v="zero" />
+	</_B>
+	<_B v="descend function">
+		<Flag v="linear" />
+		<Flag v="early" />
+		<Flag v="very early" />
+		<Flag v="late" />
+		<Flag v="very late" />
+		<Flag v="cosine" />
+		<Flag v="one" />
+		<Flag v="zero" />
+	</_B>
+	<_36 v="PENDULUM SETTINGS" />
+	<_14 v="phase revolution speed" />
+	<_14 v="phase repeat along radius" />
+	<_36 v="SHAPE TRANSITION" />
+	<_14 v="pattern start idx" />
+	<_14 v="pattern end idx" />
+	<_B v="pattern transition">
+		<Flag v="linear" />
+		<Flag v="early" />
+		<Flag v="very early" />
+		<Flag v="late" />
+		<Flag v="very late" />
+		<Flag v="cosine" />
+		<Flag v="one" />
+		<Flag v="zero" />
+	</_B>
+	<_34 v="generated_pad8f3f" length="2" />
+	<_36 v="FOAM" />
+	<_14 v="foam out radius" />
+	<_14 v="foam fade distance" />
+	<_14 v="foam duration" />
+	<_B v="foam rise function">
+		<Flag v="linear" />
+		<Flag v="early" />
+		<Flag v="very early" />
+		<Flag v="late" />
+		<Flag v="very late" />
+		<Flag v="cosine" />
+		<Flag v="one" />
+		<Flag v="zero" />
+	</_B>
+	<_B v="foam fade function">
+		<Flag v="linear" />
+		<Flag v="early" />
+		<Flag v="very early" />
+		<Flag v="late" />
+		<Flag v="very late" />
+		<Flag v="cosine" />
+		<Flag v="one" />
+		<Flag v="zero" />
+	</_B>
+	<_3B v="" />
+</root>

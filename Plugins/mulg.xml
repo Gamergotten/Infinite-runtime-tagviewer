@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="universal">
+		<_40 v="teams">
+			<_2 v="name" />
+			<_1F v="primary color" />
+			<_1F v="secondary color" />
+			<_37 v="- Emblem Data" />
+			<_2 v="themeName" />
+			<_2 v="emblemShaderName" />
+			<_2 v="coatingName" />
+			<_2 v="markerName" />
+			<_37 v="" />
+			<_3B v="" />
+		</_40>
+		<_40 v="player starting profile">
+			<_0 v="name" />
+			<_15 v="starting health damage" />
+			<_15 v="starting shield damage" />
+			<_41 v="primary weapon" />
+			<_5 v="primaryrounds loaded" />
+			<_5 v="primaryrounds total" />
+			<_41 v="primary weapon configuration" />
+			<_2 v="primary weapon variant name" />
+			<_41 v="secondary weapon" />
+			<_5 v="secondaryrounds loaded" />
+			<_5 v="secondaryrounds total" />
+			<_41 v="secondary weapon configuration" />
+			<_2 v="secondary weapon variant name" />
+			<_4 v="starting fragmentation grenade count" />
+			<_4 v="starting plasma grenade count" />
+			<_4 v="starting lightning grenade count" />
+			<_4 v="starting gravity grenade count" />
+			<_4 v="starting spike grenade count" />
+			<_4 v="starting pulse grenade count" />
+			<_4 v="starting grenade type 7 count" />
+			<_4 v="starting grenade type 8 count" />
+			<_41 v="starting equipment" />
+			<_2 v="starting tactical package" />
+			<_2 v="starting support upgrade" />
+			<_2E v="editor folder" />
+			<_34 v="generated_padc11b" length="2" />
+			<_40 v="EditorMetadata">
+				<_1 v="folder name" />
+				<_17 v="local space pivot point position" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_41 v="random player names v2" />
+		<_41 v="team names v2" />
+		<_41 v="disposition labels v2" />
+		<_41 v="random bot names v2" />
+		<_A v="mvar scripts compile mode">
+			<Flag v="Precompile" />
+			<Flag v="Text" />
+		</_A>
+		<_34 v="generated_pad1ab1" length="3" />
+		<_3B v="" />
+	</_40>
+	<_40 v="runtime">
+		<_41 v="editor helper" />
+		<_40 v="sounds">
+			<_41 v="sound" />
+			<_3B v="" />
+		</_40>
+		<_40 v="looping sounds">
+			<_41 v="looping sound" />
+			<_3B v="" />
+		</_40>
+		<_40 v="multiplayer constants">
+			<_36 v="PLAYER SPAWN INFLUENCERS" />
+			<_41 v="Default Spawn Settings" />
+			<_36 v="MORE MP CONSTANTS" />
+			<_14 v="teleporter recharge time" />
+			<_41 v="sandbox effect" />
+			<_2 v="blocked teleporter string" />
+			<_36 v="RESPAWN STRINGS" />
+			<_2 v="voluntary respawn control instructions" />
+			<_2 v="spawn allowed default respawn" />
+			<_2 v="spawn at player allowed looking at self" />
+			<_2 v="spawn at player allowed looking at target" />
+			<_2 v="spawn at player allowed looking at potential target" />
+			<_2 v="spawn at territory allowed looking at target" />
+			<_2 v="spawn at territory allowed looking at potential target" />
+			<_2 v="you are out of lives" />
+			<_2 v="invalid spawn target selected" />
+			<_2 v="targetted player enemies nearby" />
+			<_2 v="targetted player unfriendly team" />
+			<_2 v="targetted player dead" />
+			<_2 v="targetted player in combat" />
+			<_2 v="targetted player too far from owned flag" />
+			<_2 v="no available netpoints" />
+			<_2 v="targetted netpoint contested" />
+			<_3B v="" />
+		</_40>
+		<_41 v="hill shader" />
+		<_41 v="spline shader" />
+		<_41 v="default_biped_simulation_interpolation" />
+		<_41 v="default_vehicle_simulation_interpolation" />
+		<_41 v="default_crate_simulation_interpolation" />
+		<_41 v="default_item_simulation_interpolation" />
+		<_41 v="default_projectile_simulation_interpolation" />
+		<_41 v="default_object_simulation_interpolation" />
+		<_7 v="m_hillPipelineState" />
+		<_7 v="m_splinePipelineState" />
+		<_41 v="Supply Lines System Globals" />
+		<_41 v="Personal AI Globals" />
+		<_41 v="Spotting Service Globals" />
+		<_41 v="Unarmed Weapon Reference" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

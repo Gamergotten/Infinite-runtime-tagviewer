@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Effects">
+		<_6 v="Unique ID" />
+		<_2 v="Name" />
+		<_40 v="Effects">
+			<_41 v="Effect" />
+			<_E v="Key event flags">
+				<Flag v="AllowOnPlayer" />
+				<Flag v="LeftArmOnly" />
+				<Flag v="RightArmOnly" />
+				<Flag v="FirstPersonOnly" />
+				<Flag v="ThirdPersonOnly" />
+				<Flag v="ForwardOnly" />
+				<Flag v="BackwardsOnly" />
+				<Flag v="FPNoAgedWeapons" />
+			</_E>
+			<_34 v="generated_padf5ee" length="2" />
+			<_41 v="Model reference" />
+			<_2 v="Model variant" />
+			<_41 v="Weapon reference" />
+			<_2 v="Weapon variant" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad7c9f" length="4" />
+	<_3B v="" />
+</root>

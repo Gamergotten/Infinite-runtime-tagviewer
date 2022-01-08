@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="name" />
+	<_40 v="primitives">
+		<_36 v="" />
+		<_E v="flags">
+			<Flag v="radial" />
+			<Flag v="leader" />
+		</_E>
+		<_5 v="priority" />
+		<_5 v="capacity" />
+		<_34 v="generated_pad9ea5" length="2" />
+		<_14 v="dist forwards" />
+		<_14 v="dist backwards" />
+		<_14 v="rank spacing" />
+		<_14 v="file spacing" />
+		<_40 v="points">
+			<_36 v="" />
+			<_8 v="angle" />
+			<_14 v="offset" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

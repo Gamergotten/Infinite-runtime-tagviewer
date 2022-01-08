@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="language references">
+		<_C v="language">
+			<Flag v="English" />
+			<Flag v="Japanese" />
+			<Flag v="German" />
+			<Flag v="French" />
+			<Flag v="Spanish" />
+			<Flag v="Mexican-Spanish" />
+			<Flag v="Italian" />
+			<Flag v="Korean" />
+			<Flag v="Traditional-Chinese" />
+			<Flag v="Simplified-Chinese" />
+			<Flag v="Portuguese" />
+			<Flag v="Polish" />
+			<Flag v="Russian" />
+			<Flag v="Danish" />
+			<Flag v="Finnish" />
+			<Flag v="Dutch" />
+			<Flag v="Norwegian" />
+			<Flag v="Brazilian-Portuguese" />
+		</_C>
+		<_43 v="string list resource" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad95a9" length="4" />
+	<_3B v="" />
+</root>

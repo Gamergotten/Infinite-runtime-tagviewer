@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_6 v="number of games to qualify for CSR" />
+	<_40 v="skill ranking globals">
+		<_2 v="display_name" />
+		<_6 v="icon_index" />
+		<_40 v="tier">
+			<_2 v="display_name " />
+			<_6 v="beginning_points" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

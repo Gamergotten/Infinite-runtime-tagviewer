@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_6 v="frameCount" />
+	<_14 v="fps" />
+	<_40 v="joints">
+		<_2 v="name" />
+		<_40 v="perFrameTranslations">
+			<_6 v="beginFrame" />
+			<_6 v="endFrame" />
+			<_17 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="perFrameRotations">
+			<_6 v="beginFrame" />
+			<_6 v="endFrame" />
+			<_1A v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="perFrameScales">
+			<_6 v="beginFrame" />
+			<_6 v="endFrame" />
+			<_14 v="value" />
+			<_3B v="" />
+		</_40>
+		<_30 v="processingPerFrameTranslationCount" />
+		<_30 v="processingPerFrameRotationCount" />
+		<_30 v="processingPerFrameScaleCount" />
+		<_3B v="" />
+	</_40>
+	<_40 v="userParameters">
+		<_2 v="name" />
+		<_40 v="perFrameValues">
+			<_6 v="beginFrame" />
+			<_6 v="endFrame" />
+			<_14 v="value" />
+			<_3B v="" />
+		</_40>
+		<_30 v="processingPerFrameValueCount" />
+		<_3B v="" />
+	</_40>
+	<_41 v="asset" />
+	<_40 v="IKEvents">
+		<_2 v="targetMarkerName" />
+		<_2 v="chainName" />
+		<_A v="usageType">
+			<Flag v="None" />
+			<Flag v="World" />
+			<Flag v="Self" />
+			<Flag v="Parent" />
+			<Flag v="PrimaryWeapon" />
+			<Flag v="SecondaryWeapon" />
+			<Flag v="Assassination" />
+		</_A>
+		<_34 v="generated_pade6b5" length="3" />
+		<_40 v="perFrameEffect">
+			<_6 v="beginFrame" />
+			<_6 v="endFrame" />
+			<_14 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="targetMarkerTranslations">
+			<_6 v="beginFrame" />
+			<_6 v="endFrame" />
+			<_17 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="targetMarkerRotations">
+			<_6 v="beginFrame" />
+			<_6 v="endFrame" />
+			<_1A v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="targetMarkerScales">
+			<_6 v="beginFrame" />
+			<_6 v="endFrame" />
+			<_14 v="value" />
+			<_3B v="" />
+		</_40>
+		<_30 v="processingPerFrameEffectCount" />
+		<_30 v="processingPerFrameTranslationCount" />
+		<_30 v="processingPerFrameRotationCount" />
+		<_30 v="processingPerFrameScaleCount" />
+		<_3B v="" />
+	</_40>
+	<_40 v="objectSpaceOffsetJoint">
+		<_2E v="jointReferenceIndex" />
+		<_3B v="" />
+	</_40>
+	<_40 v="replacementCorrectionJoint">
+		<_2E v="jointReferenceIndex" />
+		<_3B v="" />
+	</_40>
+	<_40 v="FIKAnchorJoint">
+		<_2E v="jointReferenceIndex" />
+		<_3B v="" />
+	</_40>
+	<_40 v="cameras">
+		<_2 v="name" />
+		<_40 v="perFrameTranslations">
+			<_6 v="beginFrame" />
+			<_6 v="endFrame" />
+			<_17 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="perFrameRotations">
+			<_6 v="beginFrame" />
+			<_6 v="endFrame" />
+			<_1A v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="perFrameFocalLengths">
+			<_6 v="beginFrame" />
+			<_6 v="endFrame" />
+			<_14 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="perFrameFocusDistances">
+			<_6 v="beginFrame" />
+			<_6 v="endFrame" />
+			<_14 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="perFrameFStops">
+			<_6 v="beginFrame" />
+			<_6 v="endFrame" />
+			<_14 v="value" />
+			<_3B v="" />
+		</_40>
+		<_30 v="processingPerFrameTranslationCount" />
+		<_30 v="processingPerFrameRotationCount" />
+		<_30 v="processingPerFrameFocalLengthCount" />
+		<_30 v="processingPerFrameFocusDistanceCount" />
+		<_30 v="processingPerFrameFStopCount" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

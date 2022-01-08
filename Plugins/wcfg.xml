@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="object_configuration">
+		<_38 v="AnyTag">
+			<_7 v="vtable space" />
+			<_38 v="internal struct">
+				<_6 v="global tag ID" />
+				<_34 v="local tag handle" length="4" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_37 v="OBJECT" />
+		<_38 v="object">
+			<_41 v="Object Definition" />
+			<_2 v="Variant name" />
+			<_2 v="Style Id" />
+			<_41 v="frame override" />
+			<_37 v="Customization" />
+			<_2 v="customization set override" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_34 v="generated_pad01af" length="4" />
+		<_3B v="" />
+	</_38>
+	<_37 v="WEAPON" />
+	<_38 v="weapon">
+		<_2 v="variant name" />
+		<_40 v="generic attachments">
+			<_41 v="attachment" />
+			<_3B v="" />
+		</_40>
+		<_41 v="barrel attachment" />
+		<_41 v="heat attachment" />
+		<_41 v="magazine attachment" />
+		<_41 v="melee attachment" />
+		<_41 v="sight attachment" />
+		<_41 v="target tracking attachment" />
+		<_41 v="trigger attachment" />
+		<_36 v="WARNING" />
+		<_41 v="unit modifier set" />
+		<_41 v="UI Display Info" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_34 v="generated_padb818" length="4" />
+	<_3B v="" />
+</root>

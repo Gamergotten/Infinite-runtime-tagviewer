@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="DamageStruct">
+		<_D v="Flags">
+			<Flag v="Don't scale damage" />
+			<Flag v="Object may choose not to deal damage" />
+			<Flag v="Suppress death for non lethal damage" />
+			<Flag v="Replicate material effects to clients" />
+		</_D>
+		<_14 v="minimum velocity for lethal collision" />
+		<_36 v="Game collision damage" />
+		<_38 v="game collision damage">
+			<_37 v="Mapping function" />
+			<_38 v="mapping">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_25 v="game acceleration" />
+		<_14 v="minimum velocity for game damage" />
+		<_36 v="Game collision damage scaling" />
+		<_14 v="Apply collision damage scale" />
+		<_14 v="Friendly apply collision damage scale" />
+		<_8 v="Game collision damage normal threshold" />
+		<_36 v="Absolute collision damage" />
+		<_38 v="absolute collision damage">
+			<_37 v="Mapping function" />
+			<_38 v="mapping">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_25 v="absolute acceleration" />
+		<_14 v="minimum velocity for absolute damage" />
+		<_36 v="Absolute collision damage scaling" />
+		<_14 v="Apply absolute collision damage scale" />
+		<_14 v="Friendly apply absolute collision damage scale" />
+		<_8 v="Absolute collision damage normal threshold" />
+		<_36 v="Alternative damage effect" />
+		<_41 v="alternative damage effect" />
+		<_3B v="" />
+	</_38>
+	<_34 v="generated_padcb8c" length="4" />
+	<_3B v="" />
+</root>

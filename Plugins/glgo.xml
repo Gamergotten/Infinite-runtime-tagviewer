@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Hologram Lighting">
+		<_37 v="HOLOGRAM FUNCTIONS" />
+		<_2 v="Intensity" />
+		<_37 v="" />
+		<_37 v="KEY LIGHT FUNCTIONS" />
+		<_38 v="Key Light Functions">
+			<_2 v="Intensity" />
+			<_2 v="Forward" />
+			<_2 v="Right" />
+			<_2 v="Up" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="FILL LIGHT FUNCTIONS" />
+		<_38 v="Fill Light Functions">
+			<_2 v="Intensity" />
+			<_2 v="Forward" />
+			<_2 v="Right" />
+			<_2 v="Up" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="RIM LIGHT FUNCTIONS" />
+		<_38 v="Rim Light Functions">
+			<_2 v="Intensity" />
+			<_2 v="Forward" />
+			<_2 v="Right" />
+			<_2 v="Up" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="active camo">
+		<_14 v="biped speed reference" />
+		<_14 v="active camo ground vertical speed scalar" />
+		<_14 v="active camo airborne vertical speed scalar" />
+		<_14 v="vehicle speed reference" />
+		<_15 v="camo value for game name" />
+		<_38 v="camo value to distortion">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_38 v="camo value to transparency">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_38 v="camo distortion texture strength">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_18 v="camo distortion scale" />
+		<_18 v="camo distortion translate speed" />
+		<_41 v="camo distortion texture" />
+		<_14 v="camo depth bias max distance" />
+		<_38 v="camo depth bias function">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_40 v="camo levels">
+			<_14 v="biped speed reference" />
+			<_14 v="active camo ground vertical speed scalar" />
+			<_14 v="active camo airborne vertical speed scalar" />
+			<_14 v="vehicle speed reference" />
+			<_15 v="camo value for game name" />
+			<_38 v="camo value to distortion">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_38 v="camo value to transparency">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_38 v="camo distortion texture strength">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_18 v="camo distortion scale" />
+			<_18 v="camo distortion translate speed" />
+			<_41 v="camo distortion texture" />
+			<_14 v="camo depth bias max distance" />
+			<_38 v="camo depth bias function">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_38 v="speed to maximum camo">
+				<_37 v="function" />
+				<_38 v="function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="shield boost">
+		<_36 v="shield boosting" />
+		<_14 v="shield boost decay" />
+		<_14 v="shield boost recharge time" />
+		<_14 v="shield boost stun time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Item Toss">
+		<_37 v="Random Toss Angles" />
+		<_36 v="Possible Toss Directions" />
+		<_36 v="Radial Toss Direction" />
+		<_36 v="Toss Pitch Angle" />
+		<_24 v="Pitch Angle" />
+		<_37 v="" />
+		<_37 v="Random Toss Speed" />
+		<_36 v="Speed" />
+		<_25 v="Speed" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

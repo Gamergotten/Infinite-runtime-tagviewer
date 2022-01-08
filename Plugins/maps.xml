@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Map lights">
+		<_41 v="Reference" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Map light placements">
+		<_17 v="position" />
+		<_17 v="direction" />
+		<_17 v="up" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Lightmap" />
+	<_41 v="Dynamic World State Globals" />
+	<_41 v="Material variations" />
+	<_41 v="Sky Object" />
+	<_1C v="Sky Orientation" />
+	<_41 v="Ray collision asset" />
+	<_41 v="Ray Collision Quad Tree" />
+	<_D v="Flags">
+		<Flag v="Enable map post-process" />
+		<Flag v="Enable line detection post-process step" />
+		<Flag v="Enable screen-space blur post-process step" />
+		<Flag v="Enable terrain" />
+		<Flag v="Enable atmosphere fog" />
+		<Flag v="Enable chromatic aberration" />
+		<Flag v="Enable vignette" />
+	</_D>
+	<_14 v="Min Z for fade-out" />
+	<_14 v="Max Z for fade-out" />
+	<_14 v="Line frequency" />
+	<_B v="Explicit shader for explicit lighting pass">
+		<Flag v="Forge shader" />
+		<Flag v="MP shader" />
+		<Flag v="Campaign shader" />
+	</_B>
+	<_34 v="generated_pad7316" length="2" />
+	<_18 v="Red offset in pixels" />
+	<_18 v="Blue offset in pixels" />
+	<_14 v="Center weight" />
+	<_F v="animatedModelTypes">
+		<Flag v="Base" />
+		<Flag v="Base Vertical Line" />
+		<Flag v="Main" />
+		<Flag v="Top Vertical Line" />
+	</_F>
+	<_34 v="generated_pad9a6d" length="3" />
+	<_14 v="mainPOIModelOffset" />
+	<_1C v="mainPOIModelOrientation" />
+	<_14 v="mainPOIModelScale" />
+	<_41 v="basePOIModel" />
+	<_14 v="basePOIModelOffset" />
+	<_1C v="basePOIModelOrientation" />
+	<_14 v="basePOIModelScale" />
+	<_41 v="baseVerticalLinePOIModel" />
+	<_14 v="baseVerticalLinePOIModelOffset" />
+	<_1C v="baseVerticalLinePOIModelOrientation" />
+	<_14 v="baseVerticalLinePOIModelScale" />
+	<_41 v="topVerticalLinePOIModel" />
+	<_14 v="topVerticalLinePOIModelOffset" />
+	<_1C v="topVerticalLinePOIModelOrientation" />
+	<_14 v="topVerticalLinePOIModelScale" />
+	<_38 v="POI Animation">
+		<_B v="verticalTranslationMode">
+			<Flag v="Loop" />
+			<Flag v="Mirror" />
+			<Flag v="Once" />
+		</_B>
+		<_34 v="generated_pad6126" length="2" />
+		<_14 v="verticalTranslationDuration" />
+		<_14 v="verticalTranslationCooldownDuration" />
+		<_38 v="verticalTranslationFunction">
+			<_37 v="Mapping" />
+			<_38 v="Mapping">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_B v="zRotationMode">
+			<Flag v="Loop" />
+			<Flag v="Mirror" />
+			<Flag v="Once" />
+		</_B>
+		<_34 v="generated_padaddb" length="2" />
+		<_14 v="zRotationDuration" />
+		<_14 v="zRotationCooldownDuration" />
+		<_38 v="zRotationFunction">
+			<_37 v="Mapping" />
+			<_38 v="Mapping">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_B v="scaleMode">
+			<Flag v="Loop" />
+			<Flag v="Mirror" />
+			<Flag v="Once" />
+		</_B>
+		<_34 v="generated_padfa90" length="2" />
+		<_14 v="scaleDuration" />
+		<_14 v="scaleCooldownDuration" />
+		<_38 v="scaleFunction">
+			<_37 v="Mapping" />
+			<_38 v="Mapping">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="LOD Settings">
+		<_B v="lodMode">
+			<Flag v="Object Distance to Camera" />
+			<Flag v="Camera Height" />
+		</_B>
+		<_34 v="generated_pad4e7d" length="2" />
+		<_38 v="lodCollisionResolution">
+			<_B v="resolutionMode">
+				<Flag v="Hide Lower Tier" />
+				<Flag v="No Collision Resolution" />
+			</_B>
+			<_34 v="generated_pad21e2" length="2" />
+			<_14 v="collisionNormalizedScreenDistance" />
+			<_3B v="" />
+		</_38>
+		<_14 v="spotlightRadiusScale" />
+		<_40 v="Per-tier settings for POIs">
+			<_14 v="fullIconAndLabelWithModelFadeStart" />
+			<_36 v="3D Model Fading" />
+			<_14 v="fullIconAndLabelFadeStart" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_38 v="Icon Settings">
+		<_41 v="fullIcons" />
+		<_41 v="smallIcons" />
+		<_41 v="detailIcons" />
+		<_41 v="highlightedOverlayIcons" />
+		<_41 v="outerMissionListIcons" />
+		<_41 v="innerMissionListIcons" />
+		<_40 v="markerColors">
+			<_B v="markerType">
+				<Flag v="Invalid" />
+				<Flag v="Critical Path" />
+				<Flag v="Enemy" />
+				<Flag v="Friendly" />
+				<Flag v="Equipment or Upgrade" />
+			</_B>
+			<_B v="missionType">
+				<Flag v="Invalid" />
+				<Flag v="Spire" />
+				<Flag v="Base" />
+				<Flag v="PilotBase" />
+				<Flag v="PrisonBase" />
+				<Flag v="RefineryBase" />
+				<Flag v="BossHQInterior" />
+				<Flag v="BossHQExterior" />
+				<Flag v="Outpost" />
+				<Flag v="DeadSpartan" />
+				<Flag v="MemoryCore" />
+				<Flag v="Dungeon" />
+				<Flag v="AaGun" />
+				<Flag v="Fob" />
+				<Flag v="FobFriendly" />
+				<Flag v="Epoi" />
+				<Flag v="Scanner" />
+				<Flag v="BanishedShip" />
+				<Flag v="Underbelly" />
+				<Flag v="CortanaPalace" />
+				<Flag v="Skull" />
+				<Flag v="Hvt" />
+				<Flag v="MarineSupport" />
+				<Flag v="Totem" />
+				<Flag v="ArmorLocker" />
+				<Flag v="Bridge" />
+				<Flag v="Collectible" />
+				<Flag v="ForerunnerTower" />
+				<Flag v="SpartanSuperMission" />
+				<Flag v="HvtSuperMission" />
+				<Flag v="MarineSuperMission" />
+				<Flag v="CollectibleSuperMission" />
+				<Flag v="ScannerSuperMission" />
+				<Flag v="BanishedDatapad" />
+				<Flag v="UnscDatapad" />
+			</_B>
+			<_1F v="color" />
+			<_3B v="" />
+		</_40>
+		<_40 v="markerVisibilitySettings">
+			<_B v="missionType">
+				<Flag v="Invalid" />
+				<Flag v="Spire" />
+				<Flag v="Base" />
+				<Flag v="PilotBase" />
+				<Flag v="PrisonBase" />
+				<Flag v="RefineryBase" />
+				<Flag v="BossHQInterior" />
+				<Flag v="BossHQExterior" />
+				<Flag v="Outpost" />
+				<Flag v="DeadSpartan" />
+				<Flag v="MemoryCore" />
+				<Flag v="Dungeon" />
+				<Flag v="AaGun" />
+				<Flag v="Fob" />
+				<Flag v="FobFriendly" />
+				<Flag v="Epoi" />
+				<Flag v="Scanner" />
+				<Flag v="BanishedShip" />
+				<Flag v="Underbelly" />
+				<Flag v="CortanaPalace" />
+				<Flag v="Skull" />
+				<Flag v="Hvt" />
+				<Flag v="MarineSupport" />
+				<Flag v="Totem" />
+				<Flag v="ArmorLocker" />
+				<Flag v="Bridge" />
+				<Flag v="Collectible" />
+				<Flag v="ForerunnerTower" />
+				<Flag v="SpartanSuperMission" />
+				<Flag v="HvtSuperMission" />
+				<Flag v="MarineSuperMission" />
+				<Flag v="CollectibleSuperMission" />
+				<Flag v="ScannerSuperMission" />
+				<Flag v="BanishedDatapad" />
+				<Flag v="UnscDatapad" />
+			</_B>
+			<_34 v="generated_pad5f56" length="2" />
+			<_14 v="MinimumZoom" />
+			<_14 v="MaximumZoom" />
+			<_14 v="hitTestRange" />
+			<_14 v="poiSnapHitTestRangeMinZoom" />
+			<_14 v="poiSnapHitTestRangeMaxZoom" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_38 v="Camera Settings">
+		<_F v="Flags">
+			<Flag v="DOF Enabled" />
+		</_F>
+		<_34 v="generated_pad38bd" length="3" />
+		<_14 v="defaultHitTestRangeMinZoom" />
+		<_14 v="defaultHitTestRangeMaxZoom" />
+		<_14 v="defaultPoiSnapHitTestRange" />
+		<_14 v="poiSnappingThreshold" />
+		<_14 v="playerIconCollisionDistance" />
+		<_14 v="panningVelocityDeadzone" />
+		<_14 v="zoomingVelocityDeadzone" />
+		<_14 v="Min Pan X" />
+		<_14 v="Min Pan Y" />
+		<_14 v="Max Pan X" />
+		<_14 v="Max Pan Y" />
+		<_14 v="Min Zoom" />
+		<_14 v="Max Zoom" />
+		<_14 v="Tilt Point" />
+		<_14 v="Tilt Width" />
+		<_14 v="Pan Accel Duration" />
+		<_14 v="Pan Decel Duration" />
+		<_14 v="Min Pan Speed" />
+		<_14 v="Max Pan Speed" />
+		<_14 v="Highlight Distance" />
+		<_14 v="Max Zoom Factor" />
+		<_14 v="Zoom Accel Duration" />
+		<_14 v="Zoom Decel Duration" />
+		<_14 v="Max Zoom Speed" />
+		<_14 v="Mission Pan Speed" />
+		<_14 v="AutoPan Time Delay" />
+		<_14 v="Mission List AutoPan Duration" />
+		<_14 v="Mission List AutoPan Zoom" />
+		<_14 v="AutoPan Slow Down Speed Ratio" />
+		<_14 v="AutoPan Speed" />
+		<_14 v="AutoPan Slow Down Range" />
+		<_14 v="AutoPanner Bezier Curve MidPoint Height" />
+		<_14 v="AutoPanner Bezier Curve P1 Height" />
+		<_14 v="AutoPanner Bezier Curve P3 Height" />
+		<_14 v="Duration for Centering on Player" />
+		<_14 v="Min Zoom Spotlight Cone Scale" />
+		<_14 v="Max Zoom Spotlight Cone Scale" />
+		<_14 v="Spotlight Moving Speed" />
+		<_14 v="Initial Pitch" />
+		<_14 v="Initial Yaw" />
+		<_14 v="Initial Zoom" />
+		<_14 v="Pan Height" />
+		<_14 v="Initial Camera X" />
+		<_14 v="Initial Camera Y" />
+		<_14 v="Initial Camera Z" />
+		<_14 v="Initial Camera Look X" />
+		<_14 v="Initial Camera Look Y" />
+		<_14 v="Initial Camera Look Z" />
+		<_14 v="Camera XY Axis Offset" />
+		<_14 v="Camera Field of View" />
+		<_14 v="Edge Pan Screen Margin X" />
+		<_14 v="Edge Pan Screen Margin Y" />
+		<_14 v="Help Bar Height" />
+		<_14 v="Back Menu Tab Bar Height" />
+		<_3B v="" />
+	</_38>
+	<_40 v="Area of Interest Settings">
+		<_B v="markerType">
+			<Flag v="Invalid" />
+			<Flag v="Critical Path" />
+			<Flag v="Enemy" />
+			<Flag v="Friendly" />
+			<Flag v="Equipment or Upgrade" />
+		</_B>
+		<_34 v="generated_pad8446" length="2" />
+		<_41 v="model" />
+		<_41 v="bitmap" />
+		<_14 v="bitmapCorrectiveScale" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Async Loaded Display Assets">
+		<_2 v="Name" />
+		<_41 v="Model" />
+		<_17 v="Rotation" />
+		<_14 v="Scale" />
+		<_17 v="Icon Offset" />
+		<_F v="Flags">
+			<Flag v="Animate on Hover" />
+			<Flag v="Draw Indicator Line" />
+		</_F>
+		<_34 v="generated_pad21a6" length="3" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Async Loaded Asset List" />
+	<_40 v="Collectible Settings">
+		<_2 v="name" />
+		<_A v="type">
+			<Flag v="None" />
+			<Flag v="Halsey_DataPad" />
+			<Flag v="ArmorLocker" />
+			<Flag v="GameSkull" />
+			<Flag v="DeadSpartan" />
+			<Flag v="MemoryCore" />
+			<Flag v="UNSC_DataPad" />
+			<Flag v="Ban_DataPad" />
+			<Flag v="ForerunnerTotem" />
+			<Flag v="CommTower" />
+		</_A>
+		<_34 v="generated_padf32a" length="1" />
+		<_B v="missionType">
+			<Flag v="Invalid" />
+			<Flag v="Spire" />
+			<Flag v="Base" />
+			<Flag v="PilotBase" />
+			<Flag v="PrisonBase" />
+			<Flag v="RefineryBase" />
+			<Flag v="BossHQInterior" />
+			<Flag v="BossHQExterior" />
+			<Flag v="Outpost" />
+			<Flag v="DeadSpartan" />
+			<Flag v="MemoryCore" />
+			<Flag v="Dungeon" />
+			<Flag v="AaGun" />
+			<Flag v="Fob" />
+			<Flag v="FobFriendly" />
+			<Flag v="Epoi" />
+			<Flag v="Scanner" />
+			<Flag v="BanishedShip" />
+			<Flag v="Underbelly" />
+			<Flag v="CortanaPalace" />
+			<Flag v="Skull" />
+			<Flag v="Hvt" />
+			<Flag v="MarineSupport" />
+			<Flag v="Totem" />
+			<Flag v="ArmorLocker" />
+			<Flag v="Bridge" />
+			<Flag v="Collectible" />
+			<Flag v="ForerunnerTower" />
+			<Flag v="SpartanSuperMission" />
+			<Flag v="HvtSuperMission" />
+			<Flag v="MarineSuperMission" />
+			<Flag v="CollectibleSuperMission" />
+			<Flag v="ScannerSuperMission" />
+			<Flag v="BanishedDatapad" />
+			<Flag v="UnscDatapad" />
+		</_B>
+		<_6 v="spriteIndex" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Regions">
+		<_2 v="name" />
+		<_40 v="Region Polygons">
+			<_40 v="Region Polygon">
+				<_17 v="Region Point" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_38 v="Vignette Settings">
+		<_1F v="color" />
+		<_14 v="opacity" />
+		<_14 v="innerRadius" />
+		<_14 v="outerRadius" />
+		<_14 v="darkenRatio" />
+		<_3B v="" />
+	</_38>
+	<_40 v="Model Dictionary">
+		<_2 v="Name" />
+		<_41 v="Model" />
+		<_3B v="" />
+	</_40>
+	<_38 v="Transition Settings">
+		<_14 v="IntroMinLoadTime" />
+		<_14 v="IntroTotalTransitionTime" />
+		<_14 v="OuttroMapTransitionTime" />
+		<_14 v="OuttroMinUnloadTime" />
+		<_14 v="OuttroGameplayTransitionTime" />
+		<_3B v="" />
+	</_38>
+	<_38 v="POI Visual Settings">
+		<_14 v="Captured Collectible Opacity" />
+		<_14 v="Default Collectible Opacity" />
+		<_1F v="Text Tint Color" />
+		<_1F v="Captured POI Tint Color" />
+		<_1F v="Captured Tint Color" />
+		<_6 v="Multi-Stage Parent Sprite Index" />
+		<_14 v="Waypoint Over POI Offset" />
+		<_14 v="Default Waypoint Offset" />
+		<_14 v="Safe Region Bounds" />
+		<_3B v="" />
+	</_38>
+	<_38 v="Gak Settings">
+		<_14 v="Gak POI Spawn Frequency" />
+		<_14 v="Gak POI Spawn Chance" />
+		<_6 v="Gak Max POI Count" />
+		<_6 v="Gak POI Num Types" />
+		<_14 v="Gak POI Lifetime Min" />
+		<_14 v="Gak POI Lifetime Max" />
+		<_14 v="Gak POI Fade Out" />
+		<_14 v="Gak Tile Origin X" />
+		<_14 v="Gak Tile Origin Y" />
+		<_14 v="Gak Tile Size X" />
+		<_14 v="Gak Tile Size Y" />
+		<_6 v="Gak Tile Count X" />
+		<_6 v="Gak Tile Count Y" />
+		<_14 v="Gak Tile Margin" />
+		<_40 v="Gak Invalid Tiles">
+			<_6 v="X" />
+			<_6 v="Y" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_38 v="Player Position Override Settings">
+		<_40 v="Zone Set Settings">
+			<_2 v="Zoneset Name" />
+			<_2 v="Point of Interest Name" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_6 v="TacMap Tab Index" />
+	<_3B v="" />
+</root>

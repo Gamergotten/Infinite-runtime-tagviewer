@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="Global timing" />
+	<_25 v="strike delay bounds" />
+	<_14 v="remind delay" />
+	<_14 v="post combat results wait time" />
+	<_14 v="grapple hook pull delay time" />
+	<_14 v="player shoot min interval" />
+	<_14 v="actor shoot min interval" />
+	<_14 v="cover curse chance" />
+	<_14 v="2D speaker duration buffer" />
+	<_36 v="Player look settings" />
+	<_14 v="player look max distance" />
+	<_14 v="player look" />
+	<_14 v="player look long time" />
+	<_36 v="Spartan nearby search distance" />
+	<_14 v="spartan nearby search distance" />
+	<_36 v="Face friendly player distance" />
+	<_14 v="face friendly player distance" />
+	<_36 v="Space dialogue effect" />
+	<_2 v="space dialogue effect" />
+	<_36 v="Speaker distance restrictions" />
+	<_14 v="max respond distance" />
+	<_14 v="max respond distance in space" />
+	<_36 v="Pattern selection ranges" />
+	<_14 v="speaker max delta" />
+	<_14 v="pattern max delta" />
+	<_36 v="Danger Level thresholds" />
+	<_14 v="player shield damage threshold" />
+	<_14 v="player body damage threshold" />
+	<_36 v="Subtitles" />
+	<_14 v="max player distance" />
+	<_36 v="Default stimulus suppressors" />
+	<_40 v="default stimulus suppressors">
+		<_2 v="stimulus" />
+		<_3B v="" />
+	</_40>
+	<_36 v="Dialogue System Data Tags" />
+	<_40 v="DSD tags">
+		<_41 v="dialogue_system_data tag" />
+		<_3B v="" />
+	</_40>
+	<_7 v="runtime dialogue system data" />
+	<_3B v="" />
+</root>

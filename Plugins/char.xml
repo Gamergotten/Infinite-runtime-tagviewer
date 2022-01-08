@@ -1,0 +1,2632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_D v="Character flags">
+		<Flag v="Flag1" />
+		<Flag v="Disable Velocity/Throttle Alignment" />
+		<Flag v="Use Boss Damage Audio" />
+	</_D>
+	<_41 v="parent character" />
+	<_41 v="unit" />
+	<_41 v="creature" />
+	<_41 v="style" />
+	<_41 v="major character" />
+	<_41 v="mythic skull character" />
+	<_40 v="variants">
+		<_2 v="variant name" />
+		<_5 v="variant index" />
+		<_34 v="generated_padedbf" length="2" />
+		<_2 v="Style Id" />
+		<_40 v="voices">
+			<_41 v="dialogue" />
+			<_2 v="designator" />
+			<_14 v="weight" />
+			<_40 v="region filters">
+				<_2 v="region name" />
+				<_40 v="permutation filters">
+					<_2 v="permutation name" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="voice">
+		<_40 v="voices">
+			<_41 v="dialogue" />
+			<_2 v="designator" />
+			<_14 v="weight" />
+			<_40 v="region filters">
+				<_2 v="region name" />
+				<_40 v="permutation filters">
+					<_2 v="permutation name" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Development Status">
+		<_B v="Stage">
+			<Flag v="Unknown" />
+			<Flag v="Prototype" />
+			<Flag v="Final" />
+			<Flag v="Deprecated" />
+		</_B>
+		<_34 v="padding1" length="2" />
+		<_3B v="" />
+	</_40>
+	<_40 v="general properties">
+		<_D v="general flags">
+			<Flag v="swarm" />
+			<Flag v="flying" />
+			<Flag v="dual wields" />
+			<Flag v="uses gravemind" />
+			<Flag v="gravemind chorus" />
+			<Flag v="don't trade weapon" />
+			<Flag v="don't stow weapon" />
+			<Flag v="hero character" />
+			<Flag v="leader independent positioning" />
+			<Flag v="has active camo" />
+			<Flag v="use head marker for looking" />
+			<Flag v="space character" />
+			<Flag v="do not drop equipment" />
+			<Flag v="do not allow crouch" />
+			<Flag v="do not allow moving crouch" />
+			<Flag v="critical betrayal" />
+			<Flag v="deathless critical betrayal" />
+			<Flag v="armor prevents assassination" />
+			<Flag v="drop all weapons on death" />
+			<Flag v="drop no weapons on death" />
+			<Flag v="shield prevents assassination" />
+			<Flag v="cannot be assassinated" />
+			<Flag v="infinite ammo" />
+			<Flag v="Use Aim At Feet Fallback" />
+			<Flag v="Effectiveness Token Override" />
+		</_D>
+		<_B v="type">
+			<Flag v="none" />
+			<Flag v="player" />
+			<Flag v="marine" />
+			<Flag v="crew" />
+			<Flag v="spartan" />
+			<Flag v="elite" />
+			<Flag v="jackal" />
+			<Flag v="jackal sniper" />
+			<Flag v="grunt" />
+			<Flag v="hunter" />
+			<Flag v="prophet" />
+			<Flag v="bugger" />
+			<Flag v="scarab" />
+			<Flag v="engineer" />
+			<Flag v="skirmisher" />
+			<Flag v="bishop" />
+			<Flag v="knight" />
+			<Flag v="pawn" />
+			<Flag v="cavalier" />
+			<Flag v="packmaster" />
+			<Flag v="soldier" />
+			<Flag v="soldier sniper" />
+			<Flag v="soldier officer" />
+			<Flag v="rook" />
+			<Flag v="sentinel" />
+			<Flag v="brute" />
+			<Flag v="hoverer" />
+			<Flag v="crusher" />
+			<Flag v="mule" />
+			<Flag v="mounted_weapon" />
+			<Flag v="octopus" />
+			<Flag v="wildlife" />
+		</_B>
+		<_5 v="rank" />
+		<_41 v="prototype script" />
+		<_14 v="max leader dist" />
+		<_14 v="absolute max leader dist" />
+		<_14 v="max player dialogue dist" />
+		<_14 v="scariness" />
+		<_A v="default grenade type">
+			<Flag v="none" />
+			<Flag v="fragmentation grenade" />
+			<Flag v="plasma grenade" />
+			<Flag v="lightning grenade" />
+			<Flag v="spike grenade" />
+			<Flag v="sapper grenade" />
+			<Flag v="stasis grenade" />
+		</_A>
+		<_34 v="generated_pad6d7e" length="1" />
+		<_B v="behavior tree root">
+			<Flag v="Default" />
+			<Flag v="Flying" />
+			<Flag v="Bot" />
+			<Flag v="Test" />
+		</_B>
+		<_41 v="Data Behavior Tree" />
+		<_40 v="disallowed weapons from trading">
+			<_41 v="weapon" />
+			<_3B v="" />
+		</_40>
+		<_41 v="Initial Primary Weapon " />
+		<_41 v="Primary Weapon Configuration" />
+		<_41 v="Initial Secondary Weapon " />
+		<_41 v="Secondary Weapon Configuration" />
+		<_41 v="Initial Equipment " />
+		<_2 v="Shield Frame Attachment" />
+		<_5 v="Token Priority" />
+		<_34 v="generated_padba33" length="2" />
+		<_40 v="Designer Metadata">
+			<_2 v="meta label" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Dialogue System Metadata">
+			<_2 v="meta label" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="proto spawn properties">
+		<_B v="Proto Spawn Type ">
+			<Flag v="None" />
+			<Flag v="Limbo" />
+			<Flag v="Spawner" />
+			<Flag v="Birther" />
+		</_B>
+		<_3B v="" />
+	</_40>
+	<_40 v="interact properties">
+		<_F v="Interact Flags">
+			<Flag v="Do not shoot while moving" />
+		</_F>
+		<_34 v="generated_padb4d2" length="3" />
+		<_14 v="default maximum object interact range" />
+		<_3B v="" />
+	</_40>
+	<_40 v="emotion properties">
+		<_40 v="situational danger">
+			<_B v="highest prop class">
+				<Flag v="none - actor has no targets whatsoever" />
+				<Flag v="dead enemy- my only target is a dead enemy" />
+				<Flag v="non-attacking enemy- I am debilitated and the enemy is not attacking me" />
+				<Flag v="disregarded orphan- did not find my target and gave up searching" />
+				<Flag v="inspected orphan- checked last know position and didn't find target; still searching" />
+				<Flag v="uninspected orphan- can't see target, but have a good idea where they may be" />
+				<Flag v="certain orphan- can't see target, but know exactly where they are" />
+				<Flag v="visible enemy- I can see the target" />
+				<Flag v="nearby enemy- I can see the target, and it's close" />
+				<Flag v="potentially dangerous enemy- target is near and is facing me" />
+				<Flag v="dangerous enemy- target is facing my way and fighting" />
+				<Flag v="attacking enemy- target is aiming at me and shooting me" />
+				<Flag v="very close enemy- enemy is really close" />
+				<Flag v="damaging_enemy- enemy is damaging me" />
+			</_B>
+			<_34 v="generated_pad78a8" length="2" />
+			<_14 v="situational danger" />
+			<_3B v="" />
+		</_40>
+		<_14 v="perceived danger increase half-life" />
+		<_14 v="perceived danger decay half-life" />
+		<_14 v="Perceived Danger Alert Threshold" />
+		<_14 v="Perceived Danger Combat Threshold" />
+		<_3B v="" />
+	</_40>
+	<_40 v="vitality properties">
+		<_D v="vitality flags">
+			<Flag v="auto resurrect" />
+			<Flag v="disable vitality override" />
+			<Flag v="no friendly damage" />
+		</_D>
+		<_14 v="normal body vitality" />
+		<_14 v="normal shield vitality" />
+		<_14 v="legendary body vitality" />
+		<_14 v="legendary shield vitality" />
+		<_14 v="body recharge fraction" />
+		<_14 v="soft ping threshold (with shields)" />
+		<_14 v="soft ping threshold (no shields)" />
+		<_14 v="medium ping threshold (with shields)" />
+		<_14 v="medium ping threshold (no shields)" />
+		<_14 v="medium ping cooldown time" />
+		<_14 v="hard ping threshold (with shields)" />
+		<_14 v="hard ping threshold (no shields)" />
+		<_14 v="hard ping cooldown time" />
+		<_14 v="body recharge delay time" />
+		<_14 v="body recharge time" />
+		<_14 v="shield recharge delay time" />
+		<_14 v="shield recharge time" />
+		<_14 v="extended shield damage threshold" />
+		<_14 v="extended body damage threshold" />
+		<_14 v="runtime_body_recharge_velocity" />
+		<_14 v="runtime_shield_recharge_velocity" />
+		<_41 v="resurrect weapon" />
+		<_14 v="player damage_scale" />
+		<_41 v="collision damage override" />
+		<_41 v="Knockback Collision Damage Override" />
+		<_14 v="stun threshold (easy)" />
+		<_14 v="stun threshold (normal)" />
+		<_14 v="stun threshold (heroic)" />
+		<_14 v="stun threshold (legendary)" />
+		<_14 v="stun time scale (easy)" />
+		<_14 v="stun time scale (normal)" />
+		<_14 v="stun time scale (heroic)" />
+		<_14 v="stun time scale (legendary)" />
+		<_14 v="stun cooldown (easy)" />
+		<_14 v="stun cooldown (normal)" />
+		<_14 v="stun cooldown (heroic)" />
+		<_14 v="stun cooldown (legendary)" />
+		<_3B v="" />
+	</_40>
+	<_40 v="placement properties">
+		<_14 v="few upgrade chance (easy)" />
+		<_14 v="few upgrade chance (normal)" />
+		<_14 v="few upgrade chance (heroic)" />
+		<_14 v="few upgrade chance (legendary)" />
+		<_14 v="normal upgrade chance (easy)" />
+		<_14 v="normal upgrade chance (normal)" />
+		<_14 v="normal upgrade chance (heroic)" />
+		<_14 v="normal upgrade chance (legendary)" />
+		<_14 v="many upgrade chance (easy)" />
+		<_14 v="many upgrade chance (normal)" />
+		<_14 v="many upgrade chance (heroic)" />
+		<_14 v="many upgrade chance (legendary)" />
+		<_3B v="" />
+	</_40>
+	<_40 v="base perception properties">
+		<_F v="flags">
+			<Flag v="Has Magic Sight" />
+			<Flag v="More Frequent Prop Perception" />
+		</_F>
+		<_34 v="generated_pad16e5" length="3" />
+		<_14 v="Silent Movement Speed Threshold" />
+		<_14 v="Perception Decay Delay" />
+		<_14 v="Moving Perception Decay Delay" />
+		<_14 v="Perception Begin To Forget Time" />
+		<_14 v="Perception Forget Time" />
+		<_14 v="Combat Status Alert Cooldown" />
+		<_14 v="Combat Status Active Cooldown" />
+		<_14 v="Postcombat clump state time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="perception properties">
+		<_B v="perception_mode">
+			<Flag v="idle" />
+			<Flag v="alert" />
+			<Flag v="combat" />
+			<Flag v="vehicle idle" />
+			<Flag v="vehicle alert" />
+			<Flag v="vehicle combat" />
+		</_B>
+		<_E v="flags">
+			<Flag v="character can see in darkness" />
+			<Flag v="ignore tracking projectiles" />
+			<Flag v="ignore minor tracking projectiles" />
+		</_E>
+		<_14 v="maximum vision distance" />
+		<_14 v="reliable vision distance" />
+		<_14 v="maximum peripheral vision distance" />
+		<_14 v="reliable peripheral vision distance" />
+		<_14 v="max peripheral vision distance at peripheral vision angle" />
+		<_14 v="max reliable peripheral vision distance at peripheral vision angle" />
+		<_14 v="Maximum Unmistakable Distance" />
+		<_14 v="surprise distance" />
+		<_14 v="Min distance from last known position to surprise" />
+		<_14 v="Min time from last clump surprise" />
+		<_14 v="Min time from last seen to surprise" />
+		<_25 v="Surprise lerp distance range" />
+		<_25 v="Surprise angle range" />
+		<_8 v="focus interior angle" />
+		<_8 v="focus exterior angle" />
+		<_8 v="peripheral vision angle" />
+		<_8 v="Vertical Exterior Up Angle" />
+		<_8 v="Vertical Exterior Down Angle" />
+		<_14 v="hearing distance" />
+		<_14 v="Max Propagation Time" />
+		<_14 v="Partial Perception Awareness Delay" />
+		<_14 v="Full Perception Awareness Delay" />
+		<_14 v="Unmistakable Perception Awareness Delay" />
+		<_14 v="Partial Perception Acknowledgement Delay" />
+		<_14 v="Full Perception Acknowledgement Delay" />
+		<_14 v="Unmistakable Perception Acknowledgement Delay" />
+		<_14 v="awareness glance level" />
+		<_15 v="identify hologram chance" />
+		<_25 v="hologram ignore timer" />
+		<_14 v="hologram ignore timer shot penalty" />
+		<_37 v="Parital Perception/Distance distribution function" />
+		<_38 v="mapping">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_37 v="Normal active-camo perception" />
+		<_38 v="normal active camo perception">
+			<_15 v="partial invisibility amount" />
+			<_14 v="partial invisibility vision distance" />
+			<_15 v="full invisibility amount" />
+			<_14 v="full invisibility vision distance" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Legendary active-camo perception" />
+		<_38 v="legendary active camo perception">
+			<_15 v="partial invisibility amount" />
+			<_14 v="partial invisibility vision distance" />
+			<_15 v="full invisibility amount" />
+			<_14 v="full invisibility vision distance" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="target properties">
+		<_14 v="player preference" />
+		<_3B v="" />
+	</_40>
+	<_40 v="look properties">
+		<_1B v="maximum aiming deviation" />
+		<_1B v="maximum looking deviation" />
+		<_1B v="runtime aiming deviation cosines" />
+		<_1B v="runtime looking deviation cosines" />
+		<_8 v="noncombat look delta L" />
+		<_8 v="noncombat look delta R" />
+		<_8 v="combat look delta L" />
+		<_8 v="combat look delta R" />
+		<_25 v="noncombat idle looking" />
+		<_25 v="noncombat idle aiming" />
+		<_25 v="combat idle looking" />
+		<_25 v="combat idle aiming" />
+		<_3B v="" />
+	</_40>
+	<_40 v="hopping properties">
+		<_D v="Hopping Flags">
+			<Flag v="to cover path segements" />
+			<Flag v="to end of path" />
+			<Flag v="forward only" />
+			<Flag v="force fire" />
+		</_D>
+		<_40 v="Hopping Definition">
+			<_37 v="Default" />
+			<_38 v="Default">
+				<_14 v="Min hop distance" />
+				<_14 v="Min hop distance to path end" />
+				<_25 v="Hop wait timer min/max" />
+				<_14 v="Max hop distance" />
+				<_14 v="pad" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_37 v="Passive" />
+			<_38 v="Passive">
+				<_14 v="Min hop distance" />
+				<_14 v="Min hop distance to path end" />
+				<_25 v="Hop wait timer min/max" />
+				<_14 v="Max hop distance" />
+				<_14 v="pad" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_37 v="Aggressive" />
+			<_38 v="Aggressive">
+				<_14 v="Min hop distance" />
+				<_14 v="Min hop distance to path end" />
+				<_25 v="Hop wait timer min/max" />
+				<_14 v="Max hop distance" />
+				<_14 v="pad" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="warp properties">
+		<_40 v="Warp Definition">
+			<_37 v="Default" />
+			<_38 v="Default">
+				<_14 v="min warp distance" />
+				<_14 v="max warp distance" />
+				<_14 v="warp speed" />
+				<_14 v="run up distance" />
+				<_14 v="linear distance until cooldown" />
+				<_14 v="cooldown duration" />
+				<_14 v="min jump distance" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_37 v="Passive" />
+			<_38 v="Passive">
+				<_14 v="min warp distance" />
+				<_14 v="max warp distance" />
+				<_14 v="warp speed" />
+				<_14 v="run up distance" />
+				<_14 v="linear distance until cooldown" />
+				<_14 v="cooldown duration" />
+				<_14 v="min jump distance" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_37 v="Aggressive" />
+			<_38 v="Aggressive">
+				<_14 v="min warp distance" />
+				<_14 v="max warp distance" />
+				<_14 v="warp speed" />
+				<_14 v="run up distance" />
+				<_14 v="linear distance until cooldown" />
+				<_14 v="cooldown duration" />
+				<_14 v="min jump distance" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_3B v="" />
+		</_40>
+		<_41 v="Intro Effect" />
+		<_41 v="Travel Effect" />
+		<_41 v="Outro Effect" />
+		<_3B v="" />
+	</_40>
+	<_40 v="movement properties">
+		<_D v="movement flags">
+			<Flag v="danger crouch allow movement" />
+			<Flag v="no side-step" />
+			<Flag v="prefer to combar near friends" />
+			<Flag v="allow boosted jump" />
+			<Flag v="allow mid-jump free facing" />
+			<Flag v="climb" />
+			<Flag v="prefer wall movement" />
+			<Flag v="has flying mode" />
+			<Flag v="disallow crouch" />
+			<Flag v="disallow all movement" />
+			<Flag v="always use search points" />
+			<Flag v="keep moving" />
+			<Flag v="cure isolation jump" />
+			<Flag v="gain elevation" />
+			<Flag v="reposition distant" />
+			<Flag v="only use aerial firing positions" />
+			<Flag v="use high priority pathfinding" />
+			<Flag v="lower weapon when no alert movement override" />
+			<Flag v="phase" />
+			<Flag v="no override when firing" />
+			<Flag v="no stow during idle activities" />
+			<Flag v="flip any vehicle" />
+			<Flag v="bound along path" />
+			<Flag v="use new aiming and facing control" />
+			<Flag v="force strafe when crouching" />
+			<Flag v="disallow hard stop" />
+			<Flag v="Disable velocity/throttle alignment" />
+			<Flag v="Fixed facing hunker" />
+			<Flag v="Zero Smash Cost In Combat" />
+		</_D>
+		<_14 v="pathfinding radius" />
+		<_14 v="avoidance radius" />
+		<_14 v="destination radius" />
+		<_14 v="Friendly Outer Radius" />
+		<_14 v="Friendly Inner Radius" />
+		<_14 v="Friendly Player Outer Radius" />
+		<_14 v="Friendly Player Inner Radius" />
+		<_36 v="Danger Zone Avoidance" />
+		<_B v="obstacle leap min size">
+			<Flag v="default" />
+			<Flag v="tiny" />
+			<Flag v="small" />
+			<Flag v="medium" />
+			<Flag v="large" />
+			<Flag v="immobile" />
+		</_B>
+		<_B v="obstacle leap max size">
+			<Flag v="default" />
+			<Flag v="tiny" />
+			<Flag v="small" />
+			<Flag v="medium" />
+			<Flag v="large" />
+			<Flag v="immobile" />
+		</_B>
+		<_B v="obstacle ignore size">
+			<Flag v="default" />
+			<Flag v="tiny" />
+			<Flag v="small" />
+			<Flag v="medium" />
+			<Flag v="large" />
+			<Flag v="immobile" />
+		</_B>
+		<_B v="obstacle smashable size">
+			<Flag v="default" />
+			<Flag v="tiny" />
+			<Flag v="small" />
+			<Flag v="medium" />
+			<Flag v="large" />
+			<Flag v="immobile" />
+		</_B>
+		<_36 v="clearance cache" />
+		<_B v="clearance cache bucket size">
+			<Flag v="default" />
+			<Flag v="small" />
+			<Flag v="medium" />
+			<Flag v="large" />
+			<Flag v="no cache" />
+		</_B>
+		<_34 v="generated_pad024b" length="2" />
+		<_14 v="max jump height" />
+		<_14 v="max jump distance" />
+		<_14 v="maximum leap height" />
+		<_14 v="leap proximity fraction" />
+		<_14 v="maximum hoist height" />
+		<_14 v="obstacle smash strength" />
+		<_D v="movement hints">
+			<Flag v="vault step" />
+			<Flag v="vault crouch" />
+			<Flag v="unused0" />
+			<Flag v="unused1" />
+			<Flag v="unused2" />
+			<Flag v="mount step" />
+			<Flag v="mount crouch" />
+			<Flag v="mount stand" />
+			<Flag v="unused3" />
+			<Flag v="unused4" />
+			<Flag v="unused5" />
+			<Flag v="hoist crouch" />
+			<Flag v="hoist stand" />
+			<Flag v="unused6" />
+			<Flag v="unused7" />
+			<Flag v="unused8" />
+		</_D>
+		<_37 v="Throttle and inertia" />
+		<_40 v="change direction pause">
+			<_36 v="Inertial pause settings" />
+			<_8 v="direction change angle" />
+			<_6 v="stationary change" />
+			<_3B v="" />
+		</_40>
+		<_14 v="maximum throttle" />
+		<_14 v="minimum throttle" />
+		<_14 v="throttle smoothing rate" />
+		<_40 v="movement throttle control">
+			<_B v="combat status">
+				<Flag v="asleep" />
+				<Flag v="idle" />
+				<Flag v="alert" />
+				<Flag v="uninspected orphan" />
+				<Flag v="active" />
+				<Flag v="definite orphan" />
+				<Flag v="certain orphan" />
+				<Flag v="visible enemy" />
+				<Flag v="clear enemy los" />
+				<Flag v="dangerous enemy" />
+			</_B>
+			<_34 v="generated_padd966" length="2" />
+			<_40 v="throttle settings">
+				<_14 v="distance" />
+				<_14 v="throttle scale" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_14 v="minimum juke throttle" />
+		<_8 v="minimum direction change juke angle" />
+		<_14 v="non direction change juke probability" />
+		<_14 v="non direction change juke timeout" />
+		<_6 v="minimum post juke movement ticks" />
+		<_37 v="" />
+		<_14 v="stationary turn radius" />
+		<_25 v="move distance" />
+		<_37 v="Phasing" />
+		<_14 v="phase chance" />
+		<_14 v="phase delay seconds" />
+		<_37 v="" />
+		<_37 v="Movement Facing" />
+		<_36 v="Movement Facing" />
+		<_8 v="Maximum Deviation Angle" />
+		<_37 v="" />
+		<_38 v="locomotion settings">
+			<_37 v="Locomotion Settings" />
+			<_15 v="Sharp Turn Throttle" />
+			<_8 v="Sharp Turn Angle" />
+			<_14 v="Max Accel Time" />
+			<_14 v="Max Decel Time" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_14 v="wall climb cost multiplier " />
+		<_37 v="Character flight" />
+		<_A v="Air nav firing point position">
+			<Flag v="Center" />
+			<Flag v="Bottom" />
+		</_A>
+		<_37 v="" />
+		<_34 v="generated_padb596" length="3" />
+		<_3B v="" />
+	</_40>
+	<_40 v="aiming-facing properties">
+		<_F v="Flags">
+			<Flag v="Disallow behaviors forcing baseball runs" />
+			<Flag v="Disallow firing during 'running' phase in baseball run" />
+		</_F>
+		<_A v="Default facing mode">
+			<Flag v="Baseball run" />
+			<Flag v="Strafe only" />
+			<Flag v="Run only" />
+		</_A>
+		<_34 v="generated_padbf57" length="2" />
+		<_37 v="Baseball run properties" />
+		<_36 v="Baseball run properties" />
+		<_14 v="Strafe to run rate" />
+		<_14 v="Run to strafe rate" />
+		<_14 v="Start distance threshold" />
+		<_14 v="End distance threshold" />
+		<_14 v="Path minimum length" />
+		<_14 v="Minimum distance to target" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="decelerated turns properties">
+		<_37 v="Turn Slerp Blend Table" />
+		<_37 v="Turn Slerp Blend Table Table" />
+		<_38 v="Turn Slerp Blend Table">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Turn Anticipation Blend Table" />
+		<_37 v="Turn Anticipation Blend Table" />
+		<_38 v="Turn Anticipation Blend Table">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Turn Reaction Blend Table" />
+		<_37 v="Turn Reaction Blend Table" />
+		<_38 v="Turn Reaction Blend Table">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_14 v="Turn reaction cosine power" />
+		<_14 v="Turn reaction cosine factor" />
+		<_3B v="" />
+	</_40>
+	<_40 v="locomotion overrides">
+		<_38 v="locomotion overrides">
+			<_F v="Flags">
+				<Flag v="Disable STAS (Stick-To-Authored-Samples)" />
+			</_F>
+			<_34 v="generated_pad2640" length="3" />
+			<_36 v="Walk speed properties" />
+			<_14 v="walking speed" />
+			<_36 v="AI Sprint speed properties" />
+			<_14 v="AI sprinting speed" />
+			<_36 v="Run speed properties" />
+			<_14 v="running forward speed" />
+			<_14 v="running backward speed" />
+			<_14 v="running sideways speed" />
+			<_36 v="Crouch speed properties" />
+			<_14 v="crouching forward speed" />
+			<_14 v="crouching backward speed" />
+			<_14 v="crouching sideways speed" />
+			<_36 v="Acceleration/deceleration properties" />
+			<_14 v="maximum run acceleration" />
+			<_14 v="maximum run deceleration" />
+			<_14 v="maximum crouch acceleration" />
+			<_14 v="maximum crouch deceleration" />
+			<_14 v="minimum slip recovery acceleration" />
+			<_36 v="Airborne Acceleration/Deceleration" />
+			<_14 v="maximum airborne acceleration" />
+			<_14 v="maximum airborne deceleration" />
+			<_36 v="Stationary turn properties old action system" />
+			<_14 v="low speed threshold" />
+			<_14 v="high speed threshold" />
+			<_14 v="acceleration" />
+			<_36 v="Stationary turn properties new action system" />
+			<_14 v="stationary turn trigger range factor" />
+			<_14 v="stationary turn max anim playback speed up factor" />
+			<_36 v="Stationary turn properties new action system (DEPRECATED)" />
+			<_8 v="min stationary turn angle" />
+			<_14 v="stationary turn max speed threshold" />
+			<_8 v="stationary turn min yaw threshold" />
+			<_8 v="stationary turn max speed yaw" />
+			<_8 v="min stationary turn speed" />
+			<_8 v="max stationary turn speed" />
+			<_14 v="stationary turn acceleration rate" />
+			<_14 v="stationary turn decceleration rate" />
+			<_36 v="Non stationary turn properties" />
+			<_8 v="max angular velocity clamp" />
+			<_8 v="turn accel/decel rate" />
+			<_36 v="Speed/acceleration scales based on mode" />
+			<_40 v="Mode specific scaling">
+				<_2 v="mode name" />
+				<_14 v="speed scale" />
+				<_14 v="acceleration scale" />
+				<_14 v="locomotion turn rate scale" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="movement tweak properties">
+		<_14 v="Dive grenade chance" />
+		<_14 v="Brace grenade chance" />
+		<_14 v="Dive vehicle chance" />
+		<_14 v="Brace vehicle chance" />
+		<_14 v="Stand Ground Chance" />
+		<_14 v="Stand Ground Anticipation Time" />
+		<_14 v="Brace For Grenade Time" />
+		<_14 v="Brace For Vehicle Impact Time" />
+		<_14 v="Brace For Vehicle Impact Prediction Time" />
+		<_14 v="Brace For Vehicle Impact Velocity Threshold" />
+		<_B v="jump height">
+			<Flag v="NONE" />
+			<Flag v="very short" />
+			<Flag v="short" />
+			<Flag v="medium short" />
+			<Flag v="medium long" />
+			<Flag v="long" />
+			<Flag v="very long" />
+			<Flag v="infinite" />
+		</_B>
+		<_34 v="generated_pad113f" length="2" />
+		<_40 v="Full Body Animation Jump Preventers">
+			<_2 v="Animation exception name" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="throttle styles">
+		<_2 v="style name" />
+		<_15 v="desired throttle" />
+		<_14 v="acceleration time" />
+		<_38 v="acceleration function">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_14 v="deceleration distance" />
+		<_38 v="deceleration function">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_2 v="stance" />
+		<_3B v="" />
+	</_40>
+	<_40 v="movement sets">
+		<_2 v="name" />
+		<_40 v="variants">
+			<_14 v="chance" />
+			<_36 v="MAPPING" />
+			<_2 v="idle" />
+			<_2 v="alert" />
+			<_2 v="engage" />
+			<_2 v="self_preserve" />
+			<_2 v="search" />
+			<_2 v="retreat" />
+			<_2 v="panic" />
+			<_2 v="flank" />
+			<_2 v="protected" />
+			<_2 v="stunned" />
+			<_2 v="post_combat" />
+			<_2 v="hurry" />
+			<_2 v="custom_1" />
+			<_2 v="custom_2" />
+			<_2 v="custom_3" />
+			<_2 v="custom_4" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="flocking properties">
+		<_36 v="Jaime, don't touch this" />
+		<_14 v="deceleration distance" />
+		<_14 v="normalized speed" />
+		<_14 v="buffer distance" />
+		<_25 v="throttle threshold bounds" />
+		<_14 v="deceleration stop time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="swarm properties">
+		<_5 v="scatter killed count" />
+		<_34 v="generated_pad8e1a" length="2" />
+		<_14 v="scatter radius" />
+		<_14 v="scatter time" />
+		<_14 v="hound min distance" />
+		<_14 v="hound max distance" />
+		<_14 v="perlin offset scale" />
+		<_25 v="offset period" />
+		<_14 v="perlin idle movement threshold" />
+		<_14 v="perlin combat movement threshold" />
+		<_14 v="stuck time" />
+		<_14 v="stuck distance" />
+		<_3B v="" />
+	</_40>
+	<_40 v="ready properties">
+		<_25 v="ready time bounds" />
+		<_3B v="" />
+	</_40>
+	<_40 v="engage properties">
+		<_D v="flags">
+			<Flag v="defend threat axis " />
+			<Flag v="fight constant movement" />
+			<Flag v="flight fight constant movement" />
+			<Flag v="disallow combat crouching" />
+			<Flag v="disallow crouch shooting" />
+			<Flag v="fight stable" />
+			<Flag v="throw should lob" />
+			<Flag v="allow positioning beyond ideal range" />
+			<Flag v="can suppress" />
+			<Flag v="Prefers Bunker" />
+			<Flag v="Burst Inhibits Evasion" />
+			<Flag v="Allow midair shooting" />
+			<Flag v="Disallow Surround" />
+			<Flag v="Provides Cover" />
+			<Flag v="Desires Cover" />
+			<Flag v="Want Danger Crouch LOS check" />
+		</_D>
+		<_25 v="Reposition bounds" />
+		<_25 v="Bunkering Reposition bounds" />
+		<_36 v="Danger Crouch" />
+		<_14 v="Crouch danger threshold" />
+		<_14 v="Crouch max path distance" />
+		<_14 v="Stand danger threshold" />
+		<_14 v="Fight danger move threshold" />
+		<_23 v="Fight danger move threshold cooldown" />
+		<_41 v="override grenade projectile" />
+		<_25 v="default combat range" />
+		<_25 v="default firing range" />
+		<_15 v="Preferred engage fraction " />
+		<_14 v="Active Shield Fire Cutoff Delay" />
+		<_14 v="Friendly Avoid Distance" />
+		<_14 v="Friendly Close Avoid Distance" />
+		<_14 v="TeamLead flocking distance" />
+		<_14 v="Enemy avoid distance" />
+		<_14 v="Scary enemy avoid distance" />
+		<_40 v="Full Body Animation Exceptions for Firing Reset">
+			<_2 v="Animation exception name" />
+			<_3B v="" />
+		</_40>
+		<_36 v="Flying" />
+		<_8 v="Max angle from level" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Berserk Properties">
+		<_D v="Flags">
+			<Flag v="Don't use the berserk anim stance" />
+			<Flag v="Don't stow weapon" />
+			<Flag v="Allow dialog" />
+			<Flag v="Don't play the intro animation" />
+			<Flag v="Permanent once initiated" />
+			<Flag v="Unreachable exit permanent berserk" />
+			<Flag v="Allow anim when stuck and already berserked" />
+			<Flag v="Can berserk when no target visible" />
+			<Flag v="Stop berserk when target unassailable" />
+			<Flag v="Ignore Hard Pings" />
+		</_D>
+		<_41 v="Berserk Weapon" />
+		<_14 v="Timeout" />
+		<_26 v="Shield down chance" />
+		<_25 v="Shield down range" />
+		<_14 v="Friendly killed distance" />
+		<_15 v="Peer killed chance" />
+		<_15 v="Leader killed chance" />
+		<_14 v="Chance to play berserk anim" />
+		<_14 v="Chance to play berserk anim when stuck" />
+		<_15 v="Proximity chance" />
+		<_14 v="Proximity check cooldown" />
+		<_14 v="Proximity abort distance" />
+		<_15 v="Broken kamikaze chance" />
+		<_15 v="Surprise kamikaze chance" />
+		<_40 v="Kamikaze attachment Markers">
+			<_2 v="Attachment Marker" />
+			<_3B v="" />
+		</_40>
+		<_14 v="Broken Kamikaze stuck delay" />
+		<_14 v="Max kamikaze time" />
+		<_14 v="Last man trigger distance" />
+		<_40 v="Difficulty limits">
+			<_36 v="Difficulty Limits" />
+			<_5 v="max kamikaze count" />
+			<_5 v="max berserk count" />
+			<_5 v="min berserk count" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Weapon Pickup Properties">
+		<_14 v="Search range" />
+		<_14 v="Minimum target range" />
+		<_14 v="Range threshold" />
+		<_14 v="Vehicle threshold" />
+		<_14 v="Search delay min" />
+		<_14 v="Search delay max" />
+		<_A v="Bias">
+			<Flag v="Reactive" />
+			<Flag v="Proactive" />
+		</_A>
+		<_34 v="generated_pad5304" length="3" />
+		<_14 v="Danger threshold" />
+		<_3B v="" />
+	</_40>
+	<_36 v="Danger Values" />
+	<_40 v="evasion properties">
+		<_14 v="Evasion danger threshold" />
+		<_14 v="Evasion delay timer" />
+		<_14 v="Evasion chance" />
+		<_14 v="Evasion proximity threshold" />
+		<_14 v="dive retreat chance" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Dodge properties">
+		<_14 v="Danger threshold" />
+		<_14 v="Cooldown" />
+		<_14 v="Chance" />
+		<_14 v="Stop proximity" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Run Away From Vehicle properties">
+		<_14 v="Chance" />
+		<_14 v="Minimum time to flee" />
+		<_14 v="Time to flee" />
+		<_14 v="Time to keep path" />
+		<_3B v="" />
+	</_40>
+	<_40 v="cover properties">
+		<_D v="cover flags">
+			<Flag v="Dive To cover" />
+			<Flag v="Reject Visible Points" />
+			<Flag v="Cover Against Multiple Enemies" />
+			<Flag v="Disallow Cover-point Evaluation while hiding" />
+		</_D>
+		<_25 v="hide behind cover time" />
+		<_36 v="Cover conditions" />
+		<_14 v="Cover shield fraction" />
+		<_14 v="Cover vitality threshold" />
+		<_14 v="Cover danger threshold" />
+		<_14 v="Leave cover danger threshold" />
+		<_37 v="Aggresive/Defensive cover properties" />
+		<_14 v="minimum defensive distance from target" />
+		<_14 v="minimum defensive distance from cover" />
+		<_14 v="always defensive scary threshold" />
+		<_37 v="" />
+		<_36 v="Other" />
+		<_14 v="Cover check delay" />
+		<_14 v="Cover pinned down check delay" />
+		<_14 v="Emerge from cover when shield fraction reaches threshold" />
+		<_14 v="Body Vitality Exit Threshold" />
+		<_14 v="Proximity self-preserve" />
+		<_14 v="unreachable enemy danger threshold" />
+		<_14 v="scary target threshold" />
+		<_14 v="Minimum enemy distance" />
+		<_3B v="" />
+	</_40>
+	<_40 v="retreat properties">
+		<_D v="Retreat flags">
+			<Flag v="Zig-zag when fleeing" />
+			<Flag v="Unused1" />
+		</_D>
+		<_14 v="Shield threshold" />
+		<_14 v="Scary target threshold" />
+		<_14 v="Danger threshold" />
+		<_14 v="Proximity threshold" />
+		<_25 v="min/max forced cower time bounds" />
+		<_25 v="min/max cower timeout bounds" />
+		<_14 v="proximity ambush threshold" />
+		<_14 v="awareness ambush threshold" />
+		<_14 v="leader dead retreat chance" />
+		<_14 v="peer dead retreat chance" />
+		<_14 v="second peer dead retreat chance" />
+		<_14 v="flee timeout" />
+		<_8 v="zig-zag angle" />
+		<_14 v="zig-zag period" />
+		<_14 v="retreat grenade chance" />
+		<_3B v="" />
+	</_40>
+	<_40 v="search properties">
+		<_D v="Search flags">
+			<Flag v="crouch on investigate" />
+			<Flag v="walk on pursuit" />
+			<Flag v="search forever" />
+			<Flag v="search exclusively" />
+			<Flag v="search points only while searching" />
+		</_D>
+		<_25 v="search time" />
+		<_14 v="Search distance" />
+		<_14 v="Max Searcher Count " />
+		<_36 v="Uncover" />
+		<_25 v="Uncover distance bounds" />
+		<_36 v="Investigate" />
+		<_25 v="vocalization time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="pre-search properties">
+		<_D v="Pre-search flags">
+			<Flag v="Flag1" />
+		</_D>
+		<_25 v="min presearch time" />
+		<_25 v="max presearch time" />
+		<_25 v="Peek Time" />
+		<_14 v="Max Certainty Radius" />
+		<_14 v="Max Presearcher Count " />
+		<_14 v="Max Suppressing Count" />
+		<_14 v="Max Uncover Count" />
+		<_6 v="Max Destroy Cover Count" />
+		<_14 v="max suppress time" />
+		<_14 v="fire to uncover chance " />
+		<_14 v="Max destroy cover time" />
+		<_37 v="Child Weights" />
+		<_14 v="suppressing fire weight" />
+		<_14 v="uncover weight" />
+		<_14 v="leap on cover weight" />
+		<_14 v="destroy cover weight" />
+		<_14 v="guard weight" />
+		<_14 v="investigate weight" />
+		<_14 v="search by fire weight" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Recognizing Properties">
+		<_36 v="Recognizing" />
+		<_14 v="Recognize min time" />
+		<_14 v="Recognize max time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="idle properties">
+		<_25 v="idle pose delay time" />
+		<_25 v="wander delay time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Precombat Properties">
+		<_40 v="Systematic Recreation Settings">
+			<_2 v="Required Weapon Class" />
+			<_25 v="Cooldown" />
+			<_25 v="Duration" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="vocalization properties">
+		<_36 v="Skip Fraction" />
+		<_14 v="character skip fraction" />
+		<_14 v="speaker weight bonus" />
+		<_14 v="look trigger distance" />
+		<_14 v="look cooldown time" />
+		<_14 v="look comment time" />
+		<_14 v="look long comment time" />
+		<_14 v="look respond max time" />
+		<_14 v="look respond early out time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="boarding properties">
+		<_2 v="rule name" />
+		<_D v="flags">
+			<Flag v="airborne boarding" />
+		</_D>
+		<_14 v="Boarding Distance" />
+		<_14 v="abort distance" />
+		<_14 v="Minimum Entry Distance" />
+		<_14 v="Maximum Entry Distance" />
+		<_14 v="max speed" />
+		<_14 v="board time" />
+		<_25 v="boarding timeout" />
+		<_40 v="vehicle specific properties">
+			<_41 v="vehicle" />
+			<_D v="flags">
+				<Flag v="boarding does not enter seat" />
+			</_D>
+			<_3B v="" />
+		</_40>
+		<_40 v="vehicle specific pull properties">
+			<_41 v="vehicle" />
+			<_14 v="max pull" />
+			<_14 v="min linear acceleration" />
+			<_14 v="pull history factor" />
+			<_3B v="" />
+		</_40>
+		<_36 v="New boarding behavior" />
+		<_14 v="max danger" />
+		<_14 v="max pull" />
+		<_14 v="min linear acceleration" />
+		<_14 v="pull history factor" />
+		<_14 v="Ejection Knockback Time" />
+		<_14 v="entry timeout" />
+		<_14 v="Boarding Chance" />
+		<_14 v="Hijack Max Wait Time" />
+		<_14 v="Min Vehicle Vitality" />
+		<_25 v="melee cooldown" />
+		<_3B v="" />
+	</_40>
+	<_40 v="kungfu properties">
+		<_14 v="kungfu override distance" />
+		<_14 v="kungfu cover danger threshold" />
+		<_14 v="Min Allowed Time" />
+		<_14 v="Min Disallowed Time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="bunker properties">
+		<_D v="Flags">
+			<Flag v="No Bunker During Guard" />
+		</_D>
+		<_36 v="DEFAULT TIMINGS" />
+		<_38 v="default">
+			<_25 v="open time" />
+			<_14 v="closed min time" />
+			<_14 v="close danger level" />
+			<_14 v="open chance" />
+			<_14 v="peek chance" />
+			<_3B v="" />
+		</_38>
+		<_36 v="FIGHT TIMINGS" />
+		<_38 v="fight">
+			<_25 v="open time" />
+			<_14 v="closed min time" />
+			<_14 v="close danger level" />
+			<_14 v="open chance" />
+			<_14 v="peek chance" />
+			<_3B v="" />
+		</_38>
+		<_36 v="COVER TIMINGS" />
+		<_38 v="cover">
+			<_25 v="open time" />
+			<_14 v="closed min time" />
+			<_14 v="close danger level" />
+			<_14 v="open chance" />
+			<_14 v="peek chance" />
+			<_3B v="" />
+		</_38>
+		<_36 v="GUARD TIMINGS" />
+		<_38 v="guard">
+			<_25 v="open time" />
+			<_14 v="closed min time" />
+			<_14 v="close danger level" />
+			<_14 v="open chance" />
+			<_14 v="peek chance" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="shield wall properties">
+		<_14 v="Raise Shield Delay" />
+		<_14 v="Relocate Delay" />
+		<_14 v="Max Leader Protect Distance" />
+		<_37 v="Formation" />
+		<_38 v="Formation Description">
+			<_36 v="Procedural" />
+			<_C v="Shape">
+				<Flag v="None" />
+				<Flag v="Line" />
+				<Flag v="Rectangle" />
+				<Flag v="Wedge" />
+				<Flag v="Circle" />
+			</_C>
+			<_8 v="Yaw" />
+			<_14 v="Spacing" />
+			<_6 v="Max Rectangle Width" />
+			<_36 v="Custom" />
+			<_41 v="Formation Reference" />
+			<_36 v="Common" />
+			<_14 v="Max Speed" />
+			<_8 v="Max Yaw Rate" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="firing wall properties">
+		<_37 v="Activation Chance" />
+		<_15 v="Activation Chance (easy)" />
+		<_15 v="Activation Chance (normal)" />
+		<_15 v="Activation Chance (heroic)" />
+		<_15 v="Activation Chance (legendary)" />
+		<_37 v="" />
+		<_14 v="Max Distance" />
+		<_6 v="Min Member Count" />
+		<_6 v="Max Member Count" />
+		<_25 v="Fire Time" />
+		<_14 v="Cooldown" />
+		<_14 v="Warp In Time" />
+		<_14 v="Min Arrival Time Variation" />
+		<_14 v="Max Arrival Time Variation" />
+		<_14 v="Warp Out Time" />
+		<_14 v="Min Departure Time Variation" />
+		<_14 v="Max Departure Time Variation" />
+		<_8 v="Max Angle Between Formation and Target" />
+		<_37 v="Formation" />
+		<_38 v="Formation Description">
+			<_36 v="Procedural" />
+			<_C v="Shape">
+				<Flag v="None" />
+				<Flag v="Line" />
+				<Flag v="Rectangle" />
+				<Flag v="Wedge" />
+				<Flag v="Circle" />
+			</_C>
+			<_8 v="Yaw" />
+			<_14 v="Spacing" />
+			<_6 v="Max Rectangle Width" />
+			<_36 v="Custom" />
+			<_41 v="Formation Reference" />
+			<_36 v="Common" />
+			<_14 v="Max Speed" />
+			<_8 v="Max Yaw Rate" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Interpose Request Properties">
+		<_14 v="Danger Level" />
+		<_25 v="Wait Time" />
+		<_14 v="Cooldown" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Interpose Properties">
+		<_25 v="Protect Time" />
+		<_14 v="Distance from Protect" />
+		<_2 v="Firing Style" />
+		<_3B v="" />
+	</_40>
+	<_40 v="bounding properties">
+		<_14 v="Max Wait Time" />
+		<_14 v="Advance Time" />
+		<_14 v="Reposition Search Range" />
+		<_14 v="Max Destination Age" />
+		<_3C v="Max Cover Agents" />
+		<_34 v="generated_pada6c0" length="3" />
+		<_3B v="" />
+	</_40>
+	<_40 v="projectile deflection properties">
+		<_36 v="Deflection areas" />
+		<_40 v="Target Areas">
+			<_25 v="Time to Target Window" />
+			<_19 v="Target Offset" />
+			<_14 v="Target Radius" />
+			<_8 v="Max Incoming Angle" />
+			<_2 v="Animation Name" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Bot Properties">
+		<_D v="movement flags">
+			<Flag v="crouch" />
+			<Flag v="jump" />
+			<Flag v="evade" />
+			<Flag v="discard recent firing positions" />
+		</_D>
+		<_36 v="Bot info" />
+		<_14 v="crouch time" />
+		<_15 v="crouch Low shield threshold" />
+		<_15 v="jump chance" />
+		<_15 v="evade low shield threshold" />
+		<_14 v="strafing influence vector radius" />
+		<_14 v="strafing influence vector weight" />
+		<_14 v="firing point refresh distance" />
+		<_14 v="influence rejection radius" />
+		<_14 v="movement cooldown min" />
+		<_14 v="movement cooldown max" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Evasive Fight Properties">
+		<_14 v="Engage Fraction" />
+		<_25 v="Stationary Time" />
+		<_14 v="Move Danger Threshold" />
+		<_14 v="Shield Threshold" />
+		<_14 v="Dive Cooldown" />
+		<_14 v="Dive Shield Threshold" />
+		<_14 v="Dive Danger Threshold" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Aggressive Fight Properties">
+		<_F v="Flags">
+			<Flag v="Ignore lower bound when target advancing" />
+			<Flag v="Face exactly" />
+		</_F>
+		<_34 v="generated_padcd38" length="3" />
+		<_14 v="Engage Fraction" />
+		<_25 v="Stationary Time" />
+		<_14 v="Move Danger Threshold" />
+		<_14 v="Max Speed Percent" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Linear Advance Fight Properties">
+		<_25 v="Stationary Time" />
+		<_14 v="Advance Distance" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Static Fight Properties">
+		<_25 v="Stationary Time" />
+		<_14 v="Danger Move Threshold" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Stand Ground Properties">
+		<_25 v="Target Distance" />
+		<_14 v="Ally Distance" />
+		<_14 v="Ally Attacker Distance" />
+		<_14 v="Behavior Linger Time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Grenade Fight Properties">
+		<_25 v="Stationary Time" />
+		<_14 v="Minimum Movement" />
+		<_15 v="Ideal Fraction" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Cover Sequence Properties">
+		<_14 v="Shield Start Threshold" />
+		<_14 v="Shield End Threshold" />
+		<_14 v="Danger Start Threshold" />
+		<_14 v="Danger End Threshold" />
+		<_14 v="Minimum Hide Duration" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Cover Move Properties">
+		<_D v="Flags">
+			<Flag v="Dive to Cover" />
+		</_D>
+		<_14 v="Cover Failed Duration" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Cover Hide Properties">
+		<_14 v="Minimum Hide Duration" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Long Range Attack Properties">
+		<_D v="Flags">
+			<Flag v="Take potshots while running" />
+			<Flag v="Do not take cover" />
+		</_D>
+		<_14 v="Potshot duration" />
+		<_14 v="Peek duration" />
+		<_14 v="Time between potshots" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Hoist Attack Properties">
+		<_14 v="Max Danger Threshold" />
+		<_14 v="Hoist Attack Chance" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Hunker Down Properties">
+		<_14 v="Danger Start Threshold" />
+		<_14 v="Distance Abort Threshold" />
+		<_15 v="Shield Health Threshold" />
+		<_25 v="Hunker Time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Shield Raise Properties">
+		<_14 v="Danger Threshold" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Vehicle Aggressive Fight Properties">
+		<_38 v="Fight Properties">
+			<_15 v="Engage Fraction" />
+			<_14 v="Max Speed Percent" />
+			<_3B v="" />
+		</_38>
+		<_D v="Flags">
+			<Flag v="Can Boost" />
+		</_D>
+		<_14 v="Max Danger to Boost" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Vehicle Defensive Fight Properties">
+		<_38 v="Fight Properties">
+			<_15 v="Engage Fraction" />
+			<_14 v="Max Speed Percent" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="engineer properties">
+		<_14 v="death height" />
+		<_14 v="death rise time" />
+		<_14 v="death detonation time" />
+		<_14 v="shield boost radius max" />
+		<_14 v="shield boost period" />
+		<_2 v="shield boost damage section name" />
+		<_36 v="Detonation Thresholds" />
+		<_14 v="detonation shield threshold" />
+		<_14 v="detonation body vitality" />
+		<_14 v="proximity radius" />
+		<_14 v="proximity detonation chance" />
+		<_41 v="proximity equipment" />
+		<_3B v="" />
+	</_40>
+	<_40 v="inspect properties">
+		<_14 v="stop distance" />
+		<_25 v="inspect time" />
+		<_25 v="search range" />
+		<_3B v="" />
+	</_40>
+	<_40 v="vehicle entrance properties">
+		<_14 v="Max Distance From Actor" />
+		<_14 v="Minimum Distance From Player" />
+		<_14 v="Minimum Distance From Vehicle" />
+		<_14 v="Perceived Danger Threshold" />
+		<_36 v="Total Health Percentage" />
+		<_14 v="Minimum Health to Enter" />
+		<_14 v="Health Percentage to Exit" />
+		<_36 v="Remaining Damage Sections Percentage" />
+		<_14 v="Threshold to Enter" />
+		<_14 v="Threshold to Exit" />
+		<_14 v="Chance To Exit Vehicle" />
+		<_14 v="Vehicle Exit Impulse Timer" />
+		<_3B v="" />
+	</_40>
+	<_40 v="test-only weapons properties">
+		<_41 v="weapon" />
+		<_36 v="Weapon drop when killed" />
+		<_25 v="drop weapon loaded" />
+		<_23 v="drop weapon ammo" />
+		<_41 v="weapon melee damage" />
+		<_36 v="Accuracy" />
+		<_25 v="normal accuracy bounds" />
+		<_14 v="normal accuracy time" />
+		<_25 v="heroic accuracy bounds" />
+		<_14 v="heroic accuracy time" />
+		<_25 v="legendary accuracy bounds" />
+		<_14 v="legendary accuracy time" />
+		<_40 v="weapon preferences">
+			<_A v="Tier Category">
+				<Flag v="Low" />
+				<Flag v="Medium" />
+				<Flag v="High" />
+			</_A>
+			<_34 v="generated_padb31f" length="3" />
+			<_6 v="Weight" />
+			<_6 v="Multi-Tier Multiplier" />
+			<_3B v="" />
+		</_40>
+		<_40 v="weapon modes">
+			<_2 v="mode name" />
+			<_D v="weapons flags">
+				<Flag v="bursting inhibits movement" />
+				<Flag v="must crouch to shoot" />
+				<Flag v="use extended safe-to-save range" />
+				<Flag v="fixed aiming vector" />
+				<Flag v="aim at feet" />
+				<Flag v="force aim from barrel position" />
+				<Flag v="Favor for long range" />
+				<Flag v="Favor for close range" />
+				<Flag v="Favor Against Vehicles " />
+				<Flag v="Favored Special Weapon (Class Specific weapon marker)" />
+				<Flag v="bursting inhibits evasion" />
+				<Flag v="aim at head" />
+				<Flag v="vehicle disabling" />
+				<Flag v="Override Mode" />
+				<Flag v="Force aim down sight(ADS) AutoCharge" />
+				<Flag v="Do not use pre-fire tell" />
+				<Flag v="Preparing to fire inhibits movement" />
+				<Flag v="Ignore splash damage" />
+				<Flag v="Shoot at last seen position" />
+				<Flag v="Aim before firing" />
+				<Flag v="Face aim exactly" />
+			</_D>
+			<_36 v="Combat ranges" />
+			<_14 v="maximum firing range" />
+			<_14 v="minimum firing range" />
+			<_25 v="normal combat range" />
+			<_14 v="bombardment range" />
+			<_14 v="Max special target distance" />
+			<_14 v="Max extreme target distance" />
+			<_A v="Lower bound option">
+				<Flag v="Fixed" />
+				<Flag v="Ignore aggressively" />
+				<Flag v="Ignore when firing" />
+				<Flag v="Ignore when target advancing" />
+			</_A>
+			<_34 v="generated_pad6ff4" length="3" />
+			<_36 v="Ballistic Firing" />
+			<_25 v="Ballistic firing bounds" />
+			<_25 v="Ballistic fraction bounds" />
+			<_36 v="Use Preferences" />
+			<_19 v="Favored Ranges" />
+			<_19 v="Range Ratings" />
+			<_14 v="anti-vehicle rating " />
+			<_14 v="Scariness Threshold" />
+			<_36 v="Behavior" />
+			<_25 v="first burst delay time" />
+			<_14 v="death fire-wildly chance" />
+			<_14 v="death fire-wildly time" />
+			<_15 v="heat vent min percent" />
+			<_15 v="ammo reload min percent" />
+			<_15 v="reload chance if not empty" />
+			<_14 v="heat vent cooldown" />
+			<_19 v="custom stand gun offset" />
+			<_19 v="custom crouch gun offset" />
+			<_6 v="Blocked Shot Count" />
+			<_14 v="Max Pre-Fire Time (Normal)" />
+			<_14 v="Max Pre-Fire Time (Heroic)" />
+			<_14 v="Max Pre-Fire Time (Legendary)" />
+			<_40 v="selection properties">
+				<_D v="Initiators">
+					<Flag v="Target Biped" />
+					<Flag v="Target Vehicle" />
+					<Flag v="Target Cluster" />
+					<Flag v="Self Berserk" />
+					<Flag v="Self Healing" />
+					<Flag v="Vehicle Aggressive" />
+					<Flag v="Vehicle Defensive" />
+					<Flag v="Hunker" />
+				</_D>
+				<_D v="Required Conditions">
+					<Flag v="Target Not Player On Foot" />
+					<Flag v="Target Flying" />
+					<Flag v="Target on Ground" />
+					<Flag v="Target Visible" />
+					<Flag v="Target Out of Sight" />
+					<Flag v="Actor wants to heal" />
+				</_D>
+				<_14 v="Cluster Radius" />
+				<_6 v="Min Cluster Count" />
+				<_25 v="Target Range Bounds" />
+				<_25 v="Danger Bounds" />
+				<_14 v="Activation Chance" />
+				<_14 v="Activation Check Delay" />
+				<_14 v="Projectile Error" />
+				<_25 v="Lifetime" />
+				<_6 v="Max Burst Count" />
+				<_A v="Trigger Behavior">
+					<Flag v="Primary" />
+					<Flag v="Secondary" />
+					<Flag v="Overcharge" />
+					<Flag v="Disabled" />
+				</_A>
+				<_34 v="generated_padabe7" length="3" />
+				<_3B v="" />
+			</_40>
+			<_A v="Threat Level">
+				<Flag v="Low" />
+				<Flag v="High" />
+			</_A>
+			<_34 v="generated_pad89d5" length="3" />
+			<_14 v="Effectiveness Token Close Player Distance" />
+			<_40 v="Firing Program">
+				<_36 v="Precision" />
+				<_37 v="Target Position" />
+				<_26 v="Tracking" />
+				<_25 v="Matching Fraction" />
+				<_25 v="Matching Spring Force" />
+				<_26 v="Leading" />
+				<_37 v="" />
+				<_37 v="Aiming Error" />
+				<_25 v="Error Distance" />
+				<_24 v="Error Angle" />
+				<_24 v="Error Max Angle" />
+				<_37 v="" />
+				<_37 v="Linear Burst Geo." />
+				<_A v="Burst Line Style">
+					<Flag v="Mirror" />
+					<Flag v="No Mirror" />
+					<Flag v="Fixed" />
+				</_A>
+				<_34 v="generated_paddb86" length="3" />
+				<_24 v="Burst Line Angle" />
+				<_25 v="Burst Origin Radius" />
+				<_24 v="Burst Origin Angle" />
+				<_25 v="Burst Return Length Min" />
+				<_25 v="Burst Return Length Max" />
+				<_24 v="Burst Return Angle" />
+				<_25 v="Burst Maximum Angular Vel." />
+				<_24 v="Burst Maximum Error Angle" />
+				<_37 v="" />
+				<_36 v="Hostility" />
+				<_25 v="Rate of Fire" />
+				<_25 v="Weapon Damage Mod." />
+				<_37 v="Burst Pattern" />
+				<_25 v="Duration Min" />
+				<_25 v="Duration Max" />
+				<_25 v="Separation Min" />
+				<_25 v="Separation Max" />
+				<_37 v="" />
+				<_37 v="Burst Noise" />
+				<_26 v="Amount" />
+				<_25 v="Min Period" />
+				<_25 v="Max Period" />
+				<_37 v="" />
+				<_3B v="" />
+			</_40>
+			<_36 v="Unit Target Preference" />
+			<_40 v="Unit Target Preference">
+				<_A v="Category">
+					<Flag v="Chassis" />
+					<Flag v="Traversal" />
+					<Flag v="Engine" />
+					<Flag v="Cover" />
+					<Flag v="Weapon" />
+					<Flag v="Occupant" />
+				</_A>
+				<_34 v="generated_pad0052" length="3" />
+				<_14 v="Preference" />
+				<_36 v="Vehicle Velocity Targeting Prefernces" />
+				<_40 v="Vehicle Velocity Based Targeting">
+					<_14 v="Vehicle Velocity Override Preference" />
+					<_14 v="Velocity Threshold" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Prefire Beam">
+				<_8 v="initial error angle" />
+				<_36 v="Radius Decay" />
+				<_37 v="radius decay function" />
+				<_38 v="radius decay function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_36 v="Beam Spin" />
+				<_37 v="beam spin function" />
+				<_38 v="beam spin function">
+					<_37 v="" />
+					<_42 v="data" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_41 v="beam effect" />
+				<_41 v="full screen effect" />
+				<_36 v="Marker overrides" />
+				<_2 v="start marker" />
+				<_2 v="fallback marker" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="firing styles">
+		<_2 v="style name" />
+		<_14 v="precision" />
+		<_14 v="hostility" />
+		<_26 v="Precision Range" />
+		<_26 v="Hostility Range" />
+		<_3B v="" />
+	</_40>
+	<_40 v="grenades properties">
+		<_D v="grenades flags">
+			<Flag v="do not throw while bunkering" />
+			<Flag v="allow while berserking" />
+		</_D>
+		<_A v="grenade type">
+			<Flag v="none" />
+			<Flag v="fragmentation grenade" />
+			<Flag v="plasma grenade" />
+			<Flag v="lightning grenade" />
+			<Flag v="spike grenade" />
+			<Flag v="sapper grenade" />
+			<Flag v="stasis grenade" />
+		</_A>
+		<_34 v="generated_padcce0" length="1" />
+		<_B v="trajectory type">
+			<Flag v="toss" />
+			<Flag v="lob" />
+			<Flag v="bounce" />
+		</_B>
+		<_5 v="minimum enemy count" />
+		<_34 v="generated_pade6c1" length="2" />
+		<_14 v="enemy radius" />
+		<_37 v="throw error" />
+		<_8 v="throw error (easy)" />
+		<_8 v="throw error (normal)" />
+		<_8 v="throw error (heroic)" />
+		<_8 v="throw error (legendary)" />
+		<_37 v="" />
+		<_37 v="Damage Modifier" />
+		<_14 v="Damage Modifier (easy)" />
+		<_14 v="Damage Modifier (normal)" />
+		<_14 v="Damage Modifier (heroic)" />
+		<_14 v="Damage Modifier (legendary)" />
+		<_37 v="" />
+		<_14 v="grenade ideal velocity" />
+		<_14 v="grenade velocity" />
+		<_25 v="grenade ranges" />
+		<_14 v="collateral damage radius" />
+		<_15 v="grenade chance" />
+		<_14 v="Active Shield Modifier" />
+		<_14 v="grenade throw delay" />
+		<_14 v="Global grenade delay" />
+		<_15 v="grenade uncover chance" />
+		<_15 v="anti-vehicle grenade chance" />
+		<_36 v="Grenade drop when killed" />
+		<_23 v="grenade count" />
+		<_14 v="dont drop grenades chance" />
+		<_3B v="" />
+	</_40>
+	<_40 v="vehicle properties">
+		<_41 v="unit" />
+		<_41 v="style" />
+		<_41 v="Behavior Tree" />
+		<_41 v="Nondriver Behavior Tree" />
+		<_36 v="Flying Avoidance" />
+		<_14 v="lookahead_time" />
+		<_14 v="roll change magnitude" />
+		<_14 v="roll decay multiplier" />
+		<_14 v="throttle grace period" />
+		<_14 v="minimum throttle" />
+		<_36 v="Vehicle flags" />
+		<_D v="vehicle flags">
+			<Flag v="passengers adopt original squad" />
+			<Flag v="snap facing to forward (ghosts)" />
+			<Flag v="throttle to target (hornets)" />
+			<Flag v="stationary fight (tanks)" />
+			<Flag v="keep moving" />
+			<Flag v="can pathfind with avoidance only" />
+			<Flag v="use volume avoidance" />
+			<Flag v="target equality" />
+			<Flag v="don't face target" />
+			<Flag v="override aiming limits" />
+		</_D>
+		<_36 v="Hover Perturbation New" />
+		<_14 v="hover deceleration distance" />
+		<_14 v="hover offset distance" />
+		<_36 v="Hover Perturbation Fallback" />
+		<_14 v="hover allow perturbation speed" />
+		<_14 v="hover random x-axis period" />
+		<_14 v="hover random y-axis period" />
+		<_14 v="hover random z-axis period" />
+		<_14 v="hover random radius" />
+		<_14 v="hover anchor approach speed limit" />
+		<_25 v="hover anchor throttle scale distance" />
+		<_25 v="hover anchor xy-throttle scale" />
+		<_25 v="hover anchor z-throttle scale" />
+		<_14 v="hover throttle min z" />
+		<_36 v="Pathfinding" />
+		<_14 v="ai pathfinding radius" />
+		<_14 v="ai avoidance radius" />
+		<_14 v="ai destination radius" />
+		<_14 v="ai deceleration distance" />
+		<_14 v="roughly, the time it would take this vehicle to stop; default is 2 seconds" />
+		<_36 v="Turning" />
+		<_14 v="ai turning radius" />
+		<_36 v="Steering" />
+		<_8 v="ai banshee steering maximum" />
+		<_14 v="ai max steering angle" />
+		<_14 v="ai max steering delta" />
+		<_14 v="ai oversteering scale" />
+		<_14 v="ai sideslip distance (combat)" />
+		<_14 v="ai sideslip distance (non-combat)" />
+		<_14 v="ai avoidance distance" />
+		<_14 v="ai min urgency" />
+		<_8 v="destination behind angle" />
+		<_14 v="skid scale" />
+		<_8 v="aiming velocity maximum" />
+		<_8 v="aiming acceleration maximum" />
+		<_36 v="Throttle" />
+		<_14 v="ai throttle maximum" />
+		<_14 v="ai reverse throttle maximum" />
+		<_14 v="ai goal min throttle scale" />
+		<_14 v="ai turn min throttle scale" />
+		<_14 v="ai direction min throttle scale" />
+		<_14 v="ai skid min throttle scale" />
+		<_8 v="skid attentuation max angle" />
+		<_14 v="ai acceleration scale" />
+		<_14 v="ai throttle blend" />
+		<_14 v="theoretical max speed" />
+		<_14 v="error scale" />
+		<_14 v="Throttle Ramp Step" />
+		<_36 v="Speed" />
+		<_14 v="Target Speed" />
+		<_36 v="Boost For Locomotion - Directional Ground Vehicles" />
+		<_15 v="ai boost forward facing angle" />
+		<_14 v="ai min throttle to boost" />
+		<_36 v="Combat" />
+		<_8 v="ai allowable aim deviation angle" />
+		<_14 v="Melee Cooldown" />
+		<_36 v="Behavior" />
+		<_14 v="ai charge tight angle distance" />
+		<_14 v="ai charge tight angle" />
+		<_14 v="ai charge repeat timeout" />
+		<_14 v="ai charge look-ahead time" />
+		<_14 v="ai charge consider distance" />
+		<_14 v="ai charge abort distance" />
+		<_14 v="ai charge abort close distance" />
+		<_14 v="ai charge max out of area distance" />
+		<_14 v="vehicle ram timeout" />
+		<_14 v="ram paralysis time" />
+		<_14 v="ai cover damage threshold" />
+		<_14 v="ai cover shield damage threshold" />
+		<_14 v="ai cover min distance" />
+		<_14 v="ai cover time" />
+		<_14 v="ai cover min boost distance" />
+		<_14 v="turtling recent damage threshold" />
+		<_14 v="turtling min time" />
+		<_14 v="turtling timeout" />
+		<_40 v="Vehicle Strafing Properties">
+			<_14 v="strafe min distance" />
+			<_14 v="strafe abort distance" />
+			<_14 v="defensive strafe abort distance" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Vehicle Flying Holding Pattern Properties">
+			<_14 v="holding pattern elevation" />
+			<_15 v="holding pattern speed percentage" />
+			<_14 v="holding pattern radius" />
+			<_15 v="max turn angle percentage" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Vehicle Flying Preengage Properties">
+			<_25 v="pre engage time" />
+			<_14 v="pre engage elevation" />
+			<_14 v="pre engage radius" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Vehicle Flying Suppressed Properties">
+			<_25 v="suppressed time" />
+			<_14 v="suppressed damage threshold" />
+			<_14 v="suppressed retreat distance" />
+			<_14 v="suppressed elevation" />
+			<_14 v="suppressed radius" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Vehicle Flying Aggressive Engage Properties">
+			<_23 v="aggressive loops" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Vehicle Flying Defensive Engage Properties">
+			<_25 v="defensive time" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Vehicle Flying Fallback Properties">
+			<_25 v="combat elevation" />
+			<_14 v="fallback minimum distance" />
+			<_14 v="flyby distance" />
+			<_3B v="" />
+		</_40>
+		<_B v="obstacle ignore size">
+			<Flag v="default" />
+			<Flag v="tiny" />
+			<Flag v="small" />
+			<Flag v="medium" />
+			<Flag v="large" />
+			<Flag v="immobile" />
+		</_B>
+		<_34 v="generated_pad354a" length="2" />
+		<_3B v="" />
+	</_40>
+	<_40 v="flying movement properties">
+		<_41 v="vehicle" />
+		<_37 v="Default Values" />
+		<_36 v="Vector Weights" />
+		<_14 v="facing" />
+		<_14 v="perturbation" />
+		<_14 v="volume avoidance" />
+		<_14 v="volume perturbation" />
+		<_14 v="volume cover" />
+		<_14 v="flocking" />
+		<_14 v="target" />
+		<_14 v="target tail" />
+		<_36 v="Area Selection" />
+		<_25 v="area reselect time" />
+		<_36 v="Idle" />
+		<_25 v="idle time" />
+		<_36 v="Cover" />
+		<_25 v="unsafe cover reselect time" />
+		<_25 v="cover heading reselect time" />
+		<_14 v="max cover search distance" />
+		<_14 v="max cover impulse distance" />
+		<_25 v="spline cooldown time" />
+		<_36 v="Volume Avoidance" />
+		<_14 v="volume influence distance" />
+		<_14 v="volume perturbation phase" />
+		<_14 v="volume bounding distance" />
+		<_36 v="Approach" />
+		<_14 v="volume approach distance" />
+		<_14 v="volume break off distance" />
+		<_14 v="minimum approach distance" />
+		<_25 v="collision avoidance range" />
+		<_36 v="Evasion" />
+		<_25 v="evade time" />
+		<_15 v="evade body damage threshold" />
+		<_15 v="evade shield damage threshold" />
+		<_14 v="bogey retreat time" />
+		<_14 v="bogey retreat distance" />
+		<_36 v="Flocking" />
+		<_25 v="flock radius" />
+		<_8 v="forward follow angle" />
+		<_8 v="behind follow angle" />
+		<_36 v="Tailing" />
+		<_14 v="min tailing time" />
+		<_25 v="tailing radius" />
+		<_8 v="tailing cone angle" />
+		<_36 v="Strafing" />
+		<_14 v="volume strafe distance" />
+		<_14 v="strafe min distance" />
+		<_14 v="strafe above distance" />
+		<_14 v="strafe abort distance" />
+		<_14 v="strafe timeout" />
+		<_36 v="Attitude Control" />
+		<_8 v="max descend angle" />
+		<_8 v="max ascend angle" />
+		<_36 v="Shooting" />
+		<_8 v="shooting cone angle" />
+		<_36 v="Evasive Maneuvers" />
+		<_15 v="missile dodge change" />
+		<_14 v="ideal missile dodge distance" />
+		<_25 v="Dodge Timeout" />
+		<_3B v="" />
+	</_40>
+	<_40 v="equipment definitions">
+		<_36 v="Equipment" />
+		<_41 v="equipment" />
+		<_D v="flags">
+			<Flag v="Stop If No Energy" />
+		</_D>
+		<_14 v="relative drop chance" />
+		<_2 v="Animation" />
+		<_40 v="equipment use">
+			<_36 v="Equipment Use" />
+			<_40 v="Use Conditions">
+				<_36 v="Use Conditions" />
+				<_B v="use when">
+					<Flag v="combat" />
+					<Flag v="cover" />
+					<Flag v="shield" />
+					<Flag v="health" />
+					<Flag v="uncover" />
+					<Flag v="berserk" />
+					<Flag v="investigate" />
+					<Flag v="anti vehicle" />
+					<Flag v="long range attack" />
+					<Flag v="Cannot attack target" />
+					<Flag v="Cannot find cover" />
+					<Flag v="Tracked Armor Destroyed" />
+					<Flag v="Ally Can Attack" />
+				</_B>
+				<_34 v="generated_padd2ce" length="2" />
+				<_14 v="health/shield use threshold" />
+				<_3B v="" />
+			</_40>
+			<_B v="use how">
+				<Flag v="Attach to self" />
+				<Flag v="Throw at enemy" />
+				<Flag v="Throw at feet" />
+				<Flag v="Throw at ally" />
+				<Flag v="Use on self" />
+				<Flag v="Stop using on self" />
+			</_B>
+			<_34 v="generated_padd6c8" length="2" />
+			<_36 v="Skip Fraction" />
+			<_14 v="easy/normal" />
+			<_14 v="legendary" />
+			<_14 v="Chance Per Second" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="stimuli responses">
+		<_36 v="Stimulus Response" />
+		<_2 v="stimulus name" />
+		<_41 v="override character" />
+		<_35 v="Resolved Stimulus" length="8" />
+		<_3B v="" />
+	</_40>
+	<_40 v="campaign metagame bucket">
+		<_F v="flags">
+			<Flag v="only counts with riders" />
+		</_F>
+		<_A v="type">
+			<Flag v="grunt" />
+			<Flag v="jackal" />
+			<Flag v="skirmisher" />
+			<Flag v="marine" />
+			<Flag v="spartan" />
+			<Flag v="bugger" />
+			<Flag v="hunter" />
+			<Flag v="flood_infection" />
+			<Flag v="flood_carrier" />
+			<Flag v="flood_combat" />
+			<Flag v="flood_pure" />
+			<Flag v="sentinel" />
+			<Flag v="elite" />
+			<Flag v="engineer" />
+			<Flag v="mule" />
+			<Flag v="turret" />
+			<Flag v="mongoose" />
+			<Flag v="warthog" />
+			<Flag v="scorpion" />
+			<Flag v="hornet" />
+			<Flag v="pelican" />
+			<Flag v="revenant" />
+			<Flag v="seraph" />
+			<Flag v="shade" />
+			<Flag v="watchtower" />
+			<Flag v="ghost" />
+			<Flag v="chopper" />
+			<Flag v="mauler" />
+			<Flag v="wraith" />
+			<Flag v="banshee" />
+			<Flag v="phantom" />
+			<Flag v="scarab" />
+			<Flag v="guntower" />
+			<Flag v="tuning_fork" />
+			<Flag v="broadsword" />
+			<Flag v="mammoth" />
+			<Flag v="lich" />
+			<Flag v="mantis" />
+			<Flag v="wasp" />
+			<Flag v="phaeton" />
+			<Flag v="bishop" />
+			<Flag v="knight" />
+			<Flag v="pawn" />
+			<Flag v="soldier" />
+			<Flag v="packmaster" />
+			<Flag v="cavalier" />
+			<Flag v="brute" />
+			<Flag v="hoverer" />
+			<Flag v="crusher" />
+		</_A>
+		<_A v="class">
+			<Flag v="infantry" />
+			<Flag v="leader" />
+			<Flag v="hero" />
+			<Flag v="specialist" />
+			<Flag v="light vehicle" />
+			<Flag v="heavy vehicle" />
+			<Flag v="giant vehicle" />
+			<Flag v="standard vehicle" />
+		</_A>
+		<_34 v="generated_pad6695" length="1" />
+		<_5 v="point count" />
+		<_3B v="" />
+	</_40>
+	<_40 v="activity objects">
+		<_2 v="activity name" />
+		<_41 v="crate" />
+		<_37 v="" />
+		<_2 v="crate marker name" />
+		<_37 v="" />
+		<_2 v="unit marker name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="pain screen properties">
+		<_36 v="Pain Reactions" />
+		<_14 v="pain screen duration" />
+		<_14 v="pain screen region fade out duration" />
+		<_15 v="pain screen region fade out weight threshold" />
+		<_8 v="pain screen angle tolerance" />
+		<_8 v="pain screen angle randomness" />
+		<_36 v="Defensive Reactions" />
+		<_14 v="defensive screen duration" />
+		<_15 v="defensive screen scrub fallback fraction" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Melee animation scaling properties">
+		<_36 v="Easy Scaling" />
+		<_14 v="Easy Windup Scaling" />
+		<_14 v="Easy Recovery Scaling" />
+		<_36 v="Normal Scaling" />
+		<_14 v="Normal Windup Scaling" />
+		<_14 v="Normal Recovery Scaling" />
+		<_36 v="Heroic Scaling" />
+		<_14 v="Heroic Windup Scaling" />
+		<_14 v="Heroic Recovery Scaling" />
+		<_36 v="Legendary Scaling" />
+		<_14 v="Legendary Windup Scaling" />
+		<_14 v="Legendary Recovery Scaling" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Close Quarters Defense Blast">
+		<_37 v="Close Quarters Defense Blast Parameters" />
+		<_37 v="Activation Chance" />
+		<_15 v="Activation Chance (easy)" />
+		<_15 v="Activation Chance (normal)" />
+		<_15 v="Activation Chance (heroic)" />
+		<_15 v="Activation Chance (legendary)" />
+		<_37 v="" />
+		<_14 v="cooldown" />
+		<_25 v="attack range" />
+		<_2 v="marker" />
+		<_41 v="damage effect" />
+		<_41 v="effect" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="bishop properties">
+		<_36 v="Repair" />
+		<_41 v="repair beam effect" />
+		<_36 v="Protect Allies" />
+		<_14 v="Min Follow Distance " />
+		<_36 v="Resurrect Allies" />
+		<_14 v="Resurrection Initiation Delay Time (seconds) " />
+		<_14 v="Resurrection Charge Up Time (seconds) " />
+		<_14 v="Resurrection Give Up Time (seconds) " />
+		<_41 v="Resurrection Ground Effect " />
+		<_41 v="Res. Area Scan Start Effect " />
+		<_41 v="Res. Area Scan Success Effect " />
+		<_41 v="Res. Area Scan Failure Effect " />
+		<_36 v="Shard Spawning" />
+		<_41 v="Shard Spawn Ground Effect " />
+		<_14 v="Shard Creation Delay (seconds) " />
+		<_25 v="Spawn Delay (seconds) " />
+		<_36 v="Healing Allies" />
+		<_14 v="Healing Time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Healing Properties">
+		<_14 v="Healing delay time" />
+		<_14 v="Healing standby time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="packmaster properties">
+		<_41 v="Pack Character Ancestor " />
+		<_14 v="command radius" />
+		<_6 v="group fire min count" />
+		<_6 v="group fire max count" />
+		<_37 v="group fire chance" />
+		<_15 v="group fire chance (easy)" />
+		<_15 v="group fire chance (normal)" />
+		<_15 v="group fire chance (heroic)" />
+		<_15 v="group fire chance (legendary)" />
+		<_37 v="" />
+		<_14 v="group fire burst time" />
+		<_14 v="group fire cooldown time" />
+		<_6 v="group fire burst count" />
+		<_14 v="group fire burst delay" />
+		<_14 v="group fire target range" />
+		<_14 v="lion charge max range" />
+		<_14 v="lion charge chance" />
+		<_14 v="lion charge melee range" />
+		<_14 v="lion charge fire duration" />
+		<_14 v="lion charge throttle override" />
+		<_14 v="lion charge abort range" />
+		<_14 v="pack charge distance" />
+		<_14 v="pack charge cooldown" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Dynamic Task">
+		<_D v="Agent Filter Flags ">
+			<Flag v="Companion" />
+			<Flag v="Protector" />
+			<Flag v="Spawner" />
+			<Flag v="Birther" />
+			<Flag v="Cover Fire" />
+			<Flag v="SlipSpace Spawner" />
+			<Flag v="Healer" />
+		</_D>
+		<_D v="Task Generation Flags ">
+			<Flag v="Protect Me" />
+			<Flag v="Resurrect On Death" />
+			<Flag v="Heal Me" />
+		</_D>
+		<_15 v="Protect Request Shield Level " />
+		<_15 v="Protect Request Body Level " />
+		<_15 v="Resurrection Req. Chance " />
+		<_14 v="Shield Task Priority " />
+		<_25 v="Protect Task Priorities (Min Health - Max Health) " />
+		<_14 v="Resurrection Task Priority " />
+		<_14 v="Shield During Resurrection Task Priority " />
+		<_41 v="Shield Crate Override " />
+		<_14 v="Heal Request Shield Level " />
+		<_14 v="Heal Request Body Level " />
+		<_3B v="" />
+	</_40>
+	<_40 v="Rush Attack">
+		<_36 v="Rush Attack" />
+		<_38 v="Generic Advance Attack">
+			<_D v="Flags">
+				<Flag v="Berserk on activation" />
+				<Flag v="Don't always advance without ranged" />
+				<Flag v="Advance on shields down" />
+				<Flag v="Advance on vehicles" />
+				<Flag v="Use slow advance" />
+			</_D>
+			<_25 v="Range" />
+			<_14 v="Max scariness" />
+			<_A v="Threat Level">
+				<Flag v="Low" />
+				<Flag v="High" />
+			</_A>
+			<_34 v="generated_pad8a75" length="3" />
+			<_37 v="Activation Chance" />
+			<_15 v="Activation Chance (easy)" />
+			<_15 v="Activation Chance (normal)" />
+			<_15 v="Activation Chance (heroic)" />
+			<_15 v="Activation Chance (legendary)" />
+			<_37 v="" />
+			<_14 v="Attack timeout" />
+			<_14 v="Melee range" />
+			<_15 v="Shield down threshold" />
+			<_14 v="Abort danger threshold" />
+			<_14 v="Abort distance" />
+			<_14 v="Outside area range" />
+			<_14 v="Berserk abort distance" />
+			<_14 v="Cooldown" />
+			<_15 v="Tell animation chance" />
+			<_14 v="Tell Animation Cooldown" />
+			<_2 v="Throttle style" />
+			<_38 v="Slow Advance">
+				<_36 v="Slow Advance" />
+				<_14 v="Slow range" />
+				<_2 v="Slow throttle style" />
+				<_14 v="Exit range" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_36 v="Rush specific settings" />
+		<_D v="Rush flags">
+			<Flag v="Don't shoot while advancing" />
+			<Flag v="Allow multiple hits" />
+			<Flag v="Ignore followers" />
+		</_D>
+		<_14 v="Leader Abandoned Chance" />
+		<_15 v="Berserk chance" />
+		<_14 v="Berserk recheck cooldown" />
+		<_14 v="Min abort time" />
+		<_14 v="Min abort dist travelled" />
+		<_14 v="Vertical Range Scalar" />
+		<_15 v="Zig-zag chance" />
+		<_8 v="Zig-zag angle" />
+		<_14 v="Zig-zag period" />
+		<_8 v="Tackle angle" />
+		<_14 v="Tackle wait" />
+		<_40 v="Combo Definitions">
+			<_D v="Combo Flags" />
+			<_14 v="Weight Modifier" />
+			<_40 v="Attacks">
+				<_D v="Direction Flags">
+					<Flag v="Front" />
+					<Flag v="Left" />
+					<Flag v="Right" />
+					<Flag v="Back" />
+				</_D>
+				<_2 v="Animation Name" />
+				<_41 v="Damage Override" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_2 v="Taunt Animation Name" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Leap Attack">
+		<_36 v="Leap Attack" />
+		<_38 v="Generic Advance Attack">
+			<_D v="Flags">
+				<Flag v="Berserk on activation" />
+				<Flag v="Don't always advance without ranged" />
+				<Flag v="Advance on shields down" />
+				<Flag v="Advance on vehicles" />
+				<Flag v="Use slow advance" />
+			</_D>
+			<_25 v="Range" />
+			<_14 v="Max scariness" />
+			<_A v="Threat Level">
+				<Flag v="Low" />
+				<Flag v="High" />
+			</_A>
+			<_34 v="generated_pad8a75" length="3" />
+			<_37 v="Activation Chance" />
+			<_15 v="Activation Chance (easy)" />
+			<_15 v="Activation Chance (normal)" />
+			<_15 v="Activation Chance (heroic)" />
+			<_15 v="Activation Chance (legendary)" />
+			<_37 v="" />
+			<_14 v="Attack timeout" />
+			<_14 v="Melee range" />
+			<_15 v="Shield down threshold" />
+			<_14 v="Abort danger threshold" />
+			<_14 v="Abort distance" />
+			<_14 v="Outside area range" />
+			<_14 v="Berserk abort distance" />
+			<_14 v="Cooldown" />
+			<_15 v="Tell animation chance" />
+			<_14 v="Tell Animation Cooldown" />
+			<_2 v="Throttle style" />
+			<_38 v="Slow Advance">
+				<_36 v="Slow Advance" />
+				<_14 v="Slow range" />
+				<_2 v="Slow throttle style" />
+				<_14 v="Exit range" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_36 v="Leap specific settings" />
+		<_D v="Leap Flags">
+			<Flag v="Allow with ranged weapons" />
+			<Flag v="Always face target" />
+			<Flag v="Can lose target mid jump" />
+			<Flag v="Stick the landing" />
+			<Flag v="Swoop tracks target" />
+		</_D>
+		<_14 v="Ideal leap speed" />
+		<_14 v="Max leap speed" />
+		<_15 v="Ballistic fraction" />
+		<_14 v="Prediction percent" />
+		<_14 v="Shortfall" />
+		<_14 v="Swoop accel rate" />
+		<_14 v="Swoop accel time" />
+		<_8 v="Swoop max deviation" />
+		<_14 v="Swoop prediction" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Teleport Attack">
+		<_36 v="Teleport attack" />
+		<_38 v="Generic Advance Attack">
+			<_D v="Flags">
+				<Flag v="Berserk on activation" />
+				<Flag v="Don't always advance without ranged" />
+				<Flag v="Advance on shields down" />
+				<Flag v="Advance on vehicles" />
+				<Flag v="Use slow advance" />
+			</_D>
+			<_25 v="Range" />
+			<_14 v="Max scariness" />
+			<_A v="Threat Level">
+				<Flag v="Low" />
+				<Flag v="High" />
+			</_A>
+			<_34 v="generated_pad8a75" length="3" />
+			<_37 v="Activation Chance" />
+			<_15 v="Activation Chance (easy)" />
+			<_15 v="Activation Chance (normal)" />
+			<_15 v="Activation Chance (heroic)" />
+			<_15 v="Activation Chance (legendary)" />
+			<_37 v="" />
+			<_14 v="Attack timeout" />
+			<_14 v="Melee range" />
+			<_15 v="Shield down threshold" />
+			<_14 v="Abort danger threshold" />
+			<_14 v="Abort distance" />
+			<_14 v="Outside area range" />
+			<_14 v="Berserk abort distance" />
+			<_14 v="Cooldown" />
+			<_15 v="Tell animation chance" />
+			<_14 v="Tell Animation Cooldown" />
+			<_2 v="Throttle style" />
+			<_38 v="Slow Advance">
+				<_36 v="Slow Advance" />
+				<_14 v="Slow range" />
+				<_2 v="Slow throttle style" />
+				<_14 v="Exit range" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_36 v="Teleport specific settings" />
+		<_14 v="Destination distance" />
+		<_14 v="Side step distance" />
+		<_14 v="Forward distance" />
+		<_14 v="Tracking distance" />
+		<_14 v="Runup time" />
+		<_14 v="Position pause" />
+		<_14 v="Escape Cooldown" />
+		<_14 v="Lock Distance" />
+		<_41 v="Launch effect" />
+		<_41 v="Land effect" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Jink and Shoot">
+		<_36 v="Jink and Shoot" />
+		<_25 v="Start distance" />
+		<_14 v="Start max offset angle" />
+		<_14 v="Min start teleport distance" />
+		<_6 v="Number of intermediate teleports" />
+		<_14 v="Max offset angle" />
+		<_25 v="Side step distance" />
+		<_25 v="Forward distance" />
+		<_41 v="Launch effect" />
+		<_41 v="Land effect" />
+		<_2 v="Effect marker" />
+		<_41 v="Jink and Shoot Weapon" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Teleport and Tackle">
+		<_36 v="Teleport and Tackle" />
+		<_25 v="Destination distance" />
+		<_14 v="Max offset angle" />
+		<_14 v="Duration to Align" />
+		<_14 v="Min teleport distance" />
+		<_41 v="Launch effect" />
+		<_41 v="Land effect" />
+		<_2 v="Effect marker" />
+		<_41 v="Teleport and Tackle Weapon" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Teleport and Taunt Animation">
+		<_36 v="Teleport and Taunt Behavior" />
+		<_2 v="Custom Animation Name" />
+		<_14 v="Taunt Frequency" />
+		<_14 v="Taunt chance" />
+		<_25 v="Destination distance" />
+		<_14 v="Max offset angle" />
+		<_14 v="Min teleport distance" />
+		<_41 v="Launch effect" />
+		<_41 v="Land effect" />
+		<_2 v="Effect marker" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Desperation Rush">
+		<_D v="Properties">
+			<Flag v="Ignore Cooldown" />
+		</_D>
+		<_14 v="Range" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Proximity Melee">
+		<_36 v="Proximity Melee Impulse" />
+		<_14 v="Range" />
+		<_14 v="Cooldown" />
+		<_14 v="Outside area range" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Dive Bomb Kamikaze">
+		<_15 v="Ally target chance" />
+		<_15 v="Enemy target chance" />
+		<_25 v="Travel distance" />
+		<_14 v="Travel time before exploding" />
+		<_41 v="Impact detonation projectile" />
+		<_25 v="Target error range" />
+		<_F v="Behavior flags">
+			<Flag v="Enable target leading" />
+			<Flag v="Should drop Weapon" />
+		</_F>
+		<_34 v="generated_pad94ce" length="3" />
+		<_15 v="Kamikaze below health percentage" />
+		<_15 v="Chance to kamikaze at low health (per second)" />
+		<_15 v="Chance to kamikaze when last man (per second)" />
+		<_14 v="a Pause between Kamikaze anim and dive bomb action(default 2 seconds)" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Post Combat">
+		<_15 v="Shoot Corpse Chance" />
+		<_25 v="Postcombat Phase 1 Time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Pack Stalk">
+		<_14 v="Min Wander Distance " />
+		<_14 v="Outside Area Border " />
+		<_25 v="Position Update Delay " />
+		<_15 v="Throttle In Cover " />
+		<_3B v="" />
+	</_40>
+	<_40 v="Fight Circle">
+		<_25 v="Strafe Time " />
+		<_25 v="Extra Firing Time " />
+		<_14 v="Target Patience Time " />
+		<_8 v="Max Angle From ThreatAxis " />
+		<_8 v="Nearby Inner Angle " />
+		<_8 v="Nearby Outer Angle " />
+		<_2 v="strafe throttle style " />
+		<_2 v="move throttle style " />
+		<_3B v="" />
+	</_40>
+	<_40 v="Hamstring">
+		<_8 v="Flank Angle " />
+		<_14 v="Flank Distance " />
+		<_14 v="Outer Engage Distance " />
+		<_14 v="Hamstring Delay " />
+		<_14 v="Initiate chance " />
+		<_14 v="Max Rush Time " />
+		<_14 v="Melee Attack Time Min " />
+		<_14 v="Melee Attack Time Max " />
+		<_14 v="Max Charge Range" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Forerunner">
+		<_D v="forerunner flags">
+			<Flag v="charge on command" />
+			<Flag v="Teleport to combat pos" />
+			<Flag v="Treat as leader" />
+		</_D>
+		<_14 v="order minion charge chance " />
+		<_14 v="order minion charge radius " />
+		<_14 v="minion charge min time " />
+		<_14 v="minion charge max time " />
+		<_25 v="Phase To Position distance bounds " />
+		<_25 v="Phase To Position Probability range " />
+		<_3B v="" />
+	</_40>
+	<_40 v="Gravity Jump">
+		<_37 v="Activation Chance" />
+		<_15 v="Activation Chance (easy)" />
+		<_15 v="Activation Chance (normal)" />
+		<_15 v="Activation Chance (heroic)" />
+		<_15 v="Activation Chance (legendary)" />
+		<_37 v="" />
+		<_14 v="Float Time " />
+		<_14 v="Float Gravity Scale" />
+		<_37 v="Descent Gravity Scale Function" />
+		<_38 v="descendGravityScaleFunction">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_14 v="Slow descend time " />
+		<_14 v="Jump Target Height " />
+		<_14 v="Cooldown " />
+		<_14 v="Trigger Distance " />
+		<_3B v="" />
+	</_40>
+	<_40 v="Co-op Modifiers">
+		<_14 v="Body Vitality Scale for 2-3 Players" />
+		<_14 v="Body Vitality Scale for 4 Players" />
+		<_14 v="Shield Vitality Scale for 2-3 Players" />
+		<_14 v="Shield Vitality Scale for 4 Players" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Multi Target Tracked Attack">
+		<_37 v="activation chance" />
+		<_15 v="activation chance (easy)" />
+		<_15 v="activation chance (normal)" />
+		<_15 v="activation chance (heroic)" />
+		<_15 v="activation chance (legendary)" />
+		<_37 v="" />
+		<_8 v="targeting angle" />
+		<_25 v="activation range" />
+		<_3C v="min targets in range" />
+		<_3C v="bursts" />
+		<_A v="trigger">
+			<Flag v="primary" />
+			<Flag v="secondary" />
+		</_A>
+		<_34 v="generated_pade74f" length="1" />
+		<_14 v="cooldown" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Drop Objects">
+		<_6 v="Number of Rolls" />
+		<_14 v="Min Item Launch Velocity" />
+		<_14 v="Max Item Launch Velocity" />
+		<_15 v="Max Trajectory Radius" />
+		<_40 v="Drop Objects">
+			<_15 v="Easy_Normal Drop Chance" />
+			<_15 v="Heroic Drop Chance" />
+			<_15 v="Legendary Drop Chance" />
+			<_41 v="Drop Object" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Custom Scripting">
+		<_40 v="Scripted Threshold">
+			<_36 v="Scripted Thresholds" />
+			<_D v="Flags">
+				<Flag v="Called Only Once" />
+			</_D>
+			<_B v="Tracked Attribute">
+				<Flag v="Danger" />
+				<Flag v="Target Distance" />
+				<Flag v="Target Perceived Scariness" />
+				<Flag v="Target Inherent Scariness" />
+				<Flag v="Body Vitality" />
+				<Flag v="Shield Vitality" />
+			</_B>
+			<_B v="Trigger When">
+				<Flag v="Greater Than" />
+				<Flag v="Less Than" />
+			</_B>
+			<_14 v="Threshold Value" />
+			<_14 v="Recheck Buffer" />
+			<_14 v="Recheck Cooldown" />
+			<_1 v="Function" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad539d" length="4" />
+	<_3B v="" />
+</root>

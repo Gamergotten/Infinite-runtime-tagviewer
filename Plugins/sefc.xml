@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_E v="global flags">
+		<Flag v="play sequentially - ignore delay settings" />
+		<Flag v="debug this screen effect" />
+		<Flag v="force delete when attached to dead object" />
+		<Flag v="force max one per object" />
+		<Flag v="force looping (dangerous; lasts forever)" />
+		<Flag v="die when effect ends" />
+	</_E>
+	<_E v="global hidden flags">
+		<Flag v="update thread" />
+		<Flag v="render thread" />
+	</_E>
+	<_40 v="screen effects">
+		<_2 v="name" />
+		<_E v="flags">
+			<Flag v="debug disable" />
+			<Flag v="allow effect outside radius" />
+			<Flag v="unattached" />
+			<Flag v="first person" />
+			<Flag v="third person" />
+			<Flag v="disable camera falloffs" />
+			<Flag v="only affects attached object" />
+			<Flag v="draw precisely one (ask Bill before you check this)" />
+			<Flag v="use player travel direction" />
+			<Flag v="use color override as tint" />
+		</_E>
+		<_E v="hidden flags">
+			<Flag v="update thread" />
+			<Flag v="render thread" />
+		</_E>
+		<_36 v="DISTANCE FALLOFF" />
+		<_14 v="maximum distance" />
+		<_38 v="distance falloff">
+			<_37 v="Mapping" />
+			<_38 v="Mapping">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_36 v="TIME EVOLUTION" />
+		<_14 v="delay" />
+		<_14 v="lifetime" />
+		<_38 v="time falloff">
+			<_37 v="Mapping" />
+			<_38 v="Mapping">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_36 v="ANGLE FALLOFF" />
+		<_38 v="angle falloff">
+			<_37 v="Mapping" />
+			<_38 v="Mapping">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_36 v="OBJECT FALLOFF" />
+		<_38 v="object falloff">
+			<_2 v="Input Variable" />
+			<_2 v="Range Variable" />
+			<_37 v="Mapping" />
+			<_38 v="Mapping">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_36 v="EFFECTS" />
+		<_41 v="color grading look-up-texture" />
+		<_14 v="runtime color grading strength" />
+		<_41 v="hdr color grading look-up-texture" />
+		<_14 v="runtime hdr color grading strength" />
+		<_14 v="exposure boost" />
+		<_14 v="exposure deboost" />
+		<_14 v="hue left" />
+		<_14 v="hue right" />
+		<_14 v="saturation" />
+		<_14 v="desaturation" />
+		<_14 v="contrast enhance" />
+		<_14 v="gamma enhance" />
+		<_14 v="gamma reduce" />
+		<_A v="filter color override mode">
+			<Flag v="None" />
+			<Flag v="Color Override 1" />
+			<Flag v="Color Override 2" />
+			<Flag v="Team Color" />
+			<Flag v="DWS Sun Color" />
+		</_A>
+		<_34 v="generated_pad1d18" length="3" />
+		<_1F v="color filter" />
+		<_A v="floor color override mode">
+			<Flag v="None" />
+			<Flag v="Color Override 1" />
+			<Flag v="Color Override 2" />
+			<Flag v="Team Color" />
+			<Flag v="DWS Sun Color" />
+		</_A>
+		<_34 v="generated_pad36f9" length="3" />
+		<_1F v="color floor" />
+		<_15 v="color replace strength" />
+		<_A v="replace color override mode">
+			<Flag v="None" />
+			<Flag v="Color Override 1" />
+			<Flag v="Color Override 2" />
+			<Flag v="Team Color" />
+			<Flag v="DWS Sun Color" />
+		</_A>
+		<_34 v="generated_pad83ae" length="3" />
+		<_1F v="color replace" />
+		<_14 v="tron" />
+		<_14 v="radial blur" />
+		<_19 v="radial blur direction" />
+		<_14 v="vision mode" />
+		<_14 v="hud fade" />
+		<_14 v="fov in" />
+		<_14 v="fov out" />
+		<_14 v="screen shake" />
+		<_34 v="generated_padb9c9" length="4" />
+		<_41 v="shader effect" />
+		<_34 v="generated_pad6f0e" length="4" />
+		<_7 v="m_pipelineState" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

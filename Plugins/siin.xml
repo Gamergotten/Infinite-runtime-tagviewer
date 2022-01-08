@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="SIMULATION INTERPOLATION" />
+	<_37 v="High level settings" />
+	<_14 v="position_client_ignore_tolerance" />
+	<_14 v="angular_speed_threshold_for_temporarily_ignoring_rotation_updates" />
+	<_37 v="Warp Thresholds" />
+	<_36 v="WARP THRESHOLDS" />
+	<_14 v="position_warp_threshold" />
+	<_14 v="position_warp_threshold_xy" />
+	<_14 v="rotation_warp_threshold" />
+	<_37 v="" />
+	<_37 v="" />
+	<_37 v="Position while controlled" />
+	<_38 v="position_while_controlled">
+		<_36 v="SINGLE DOMAIN INTERPOLATION" />
+		<_14 v="discrepancy_threshold_above_which_we_use_blending" />
+		<_14 v="coming_to_rest_speed" />
+		<_14 v="coming_to_rest_maximum_ignorable_error" />
+		<_37 v="Velocity bumps" />
+		<_38 v="velocity bumps">
+			<_36 v="SINGLE DOMAIN VELOCITY BUMPS" />
+			<_F v="flags">
+				<Flag v="manual" />
+			</_F>
+			<_34 v="generated_padedec" length="3" />
+			<_14 v="velocity_scale" />
+			<_14 v="velocity_min" />
+			<_14 v="velocity_max" />
+			<_36 v="Velocity Bump Suppression" />
+			<_14 v="velocity_difference_ignore_threshold" />
+			<_14 v="velocity_difference_absolute_ignore_threshold" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Blending" />
+		<_38 v="blending">
+			<_36 v="SINGLE DOMAIN BLENDING CONFIGURATION" />
+			<_14 v="min_object_speed" />
+			<_14 v="max_object_speed" />
+			<_14 v="fraction_at_min_object_speed" />
+			<_14 v="fraction_at_max_object_speed" />
+			<_14 v="min_speed_at_min_object_speed" />
+			<_14 v="min_speed_at_max_object_speed" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Rotation while controlled" />
+	<_38 v="rotation_while_controlled">
+		<_36 v="SINGLE DOMAIN INTERPOLATION" />
+		<_14 v="discrepancy_threshold_above_which_we_use_blending" />
+		<_14 v="coming_to_rest_speed" />
+		<_14 v="coming_to_rest_maximum_ignorable_error" />
+		<_37 v="Velocity bumps" />
+		<_38 v="velocity bumps">
+			<_36 v="SINGLE DOMAIN VELOCITY BUMPS" />
+			<_F v="flags">
+				<Flag v="manual" />
+			</_F>
+			<_34 v="generated_padedec" length="3" />
+			<_14 v="velocity_scale" />
+			<_14 v="velocity_min" />
+			<_14 v="velocity_max" />
+			<_36 v="Velocity Bump Suppression" />
+			<_14 v="velocity_difference_ignore_threshold" />
+			<_14 v="velocity_difference_absolute_ignore_threshold" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Blending" />
+		<_38 v="blending">
+			<_36 v="SINGLE DOMAIN BLENDING CONFIGURATION" />
+			<_14 v="min_object_speed" />
+			<_14 v="max_object_speed" />
+			<_14 v="fraction_at_min_object_speed" />
+			<_14 v="fraction_at_max_object_speed" />
+			<_14 v="min_speed_at_min_object_speed" />
+			<_14 v="min_speed_at_max_object_speed" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Position while not controlled" />
+	<_38 v="position_while_uncontrolled">
+		<_36 v="SINGLE DOMAIN INTERPOLATION" />
+		<_14 v="discrepancy_threshold_above_which_we_use_blending" />
+		<_14 v="coming_to_rest_speed" />
+		<_14 v="coming_to_rest_maximum_ignorable_error" />
+		<_37 v="Velocity bumps" />
+		<_38 v="velocity bumps">
+			<_36 v="SINGLE DOMAIN VELOCITY BUMPS" />
+			<_F v="flags">
+				<Flag v="manual" />
+			</_F>
+			<_34 v="generated_padedec" length="3" />
+			<_14 v="velocity_scale" />
+			<_14 v="velocity_min" />
+			<_14 v="velocity_max" />
+			<_36 v="Velocity Bump Suppression" />
+			<_14 v="velocity_difference_ignore_threshold" />
+			<_14 v="velocity_difference_absolute_ignore_threshold" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Blending" />
+		<_38 v="blending">
+			<_36 v="SINGLE DOMAIN BLENDING CONFIGURATION" />
+			<_14 v="min_object_speed" />
+			<_14 v="max_object_speed" />
+			<_14 v="fraction_at_min_object_speed" />
+			<_14 v="fraction_at_max_object_speed" />
+			<_14 v="min_speed_at_min_object_speed" />
+			<_14 v="min_speed_at_max_object_speed" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Rotation while not controlled" />
+	<_38 v="rotation_while_uncontrolled">
+		<_36 v="SINGLE DOMAIN INTERPOLATION" />
+		<_14 v="discrepancy_threshold_above_which_we_use_blending" />
+		<_14 v="coming_to_rest_speed" />
+		<_14 v="coming_to_rest_maximum_ignorable_error" />
+		<_37 v="Velocity bumps" />
+		<_38 v="velocity bumps">
+			<_36 v="SINGLE DOMAIN VELOCITY BUMPS" />
+			<_F v="flags">
+				<Flag v="manual" />
+			</_F>
+			<_34 v="generated_padedec" length="3" />
+			<_14 v="velocity_scale" />
+			<_14 v="velocity_min" />
+			<_14 v="velocity_max" />
+			<_36 v="Velocity Bump Suppression" />
+			<_14 v="velocity_difference_ignore_threshold" />
+			<_14 v="velocity_difference_absolute_ignore_threshold" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Blending" />
+		<_38 v="blending">
+			<_36 v="SINGLE DOMAIN BLENDING CONFIGURATION" />
+			<_14 v="min_object_speed" />
+			<_14 v="max_object_speed" />
+			<_14 v="fraction_at_min_object_speed" />
+			<_14 v="fraction_at_max_object_speed" />
+			<_14 v="min_speed_at_min_object_speed" />
+			<_14 v="min_speed_at_max_object_speed" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="UCN" />
+	<_41 v="Authority Trust Settings" />
+	<_37 v="" />
+	<_3B v="" />
+</root>

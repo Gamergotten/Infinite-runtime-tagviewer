@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="m_vectorVertices">
+		<_16 v="position" />
+		<_6 v="region index" />
+		<_17 v="texcoord" />
+		<_6 v="render type" />
+		<_3B v="" />
+	</_40>
+	<_40 v="m_vectorIndices">
+		<_3D v="index" />
+		<_3B v="" />
+	</_40>
+	<_40 v="m_drawInformation">
+		<_3D v="entry point" />
+		<_3D v="vertex start" />
+		<_3D v="index start" />
+		<_3D v="index count" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padc0a6" length="4" />
+	<_7 v="vertexBuffer" />
+	<_7 v="indexBuffer" />
+	<_14 v="aspectRatio" />
+	<_34 v="generated_pad0d5b" length="4" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_F v="Flags">
+		<Flag v="Make physical children keyframed" />
+		<Flag v="Use physics for collision" />
+		<Flag v="Use aggressive deactivation for havok bodies" />
+	</_F>
+	<_34 v="generated_pad7535" length="3" />
+	<_14 v="Mass override" />
+	<_14 v="Mass scale override" />
+	<_40 v="Materials">
+		<_2 v="Property region" />
+		<_F v="Flags">
+			<Flag v="Suppresses effects" />
+			<Flag v="Force enable collision with player" />
+		</_F>
+		<_34 v="generated_padfd60" length="3" />
+		<_2 v="Phantom type name" />
+		<_36 v="Collision layer override" />
+		<_2 v="Collision layer" />
+		<_3B v="" />
+	</_40>
+	<_37 v="Shapes" />
+	<_40 v="Shapes">
+		<_2 v="Name" />
+		<_A v="Compound shape policy">
+			<Flag v="Disabled" />
+			<Flag v="Enabled" />
+		</_A>
+		<_34 v="generated_pad2544" length="3" />
+		<_14 v="Relative mass scale" />
+		<_A v="Motion type">
+			<Flag v="Dynamic" />
+			<Flag v="Keyframed" />
+			<Flag v="Static" />
+		</_A>
+		<_A v="Size">
+			<Flag v="Default" />
+			<Flag v="Tiny" />
+			<Flag v="Small" />
+			<Flag v="Medium" />
+			<Flag v="Large" />
+			<Flag v="Huge" />
+			<Flag v="Extra huge" />
+		</_A>
+		<_34 v="generated_pad3f25" length="2" />
+		<_14 v="Bounding sphere pad" />
+		<_40 v="Havok data">
+			<_F v="Flags">
+				<Flag v="Infinite intertia tensor" />
+				<Flag v="Explicit mass" />
+				<Flag v="Absolute center of mass" />
+				<Flag v="Force keyframed" />
+				<Flag v="Force not cut NavMesh" />
+			</_F>
+			<_34 v="generated_padebef" length="3" />
+			<_14 v="Mass" />
+			<_19 v="Center of mass offset" />
+			<_14 v="Inertial tensor scale" />
+			<_14 v="Linear air drag" />
+			<_14 v="Angular air drag" />
+			<_3B v="" />
+		</_40>
+		<_37 v="Collision layer" />
+		<_36 v="Collision layer override" />
+		<_2 v="Collision layer" />
+		<_A v="Collision quality override type">
+			<Flag v="None" />
+			<Flag v="Static" />
+			<Flag v="Debris" />
+			<Flag v="Dynamic" />
+			<Flag v="Critical" />
+			<Flag v="Character" />
+		</_A>
+		<_34 v="generated_pad8bda" length="3" />
+		<_37 v="" />
+		<_37 v="Stupid Mass" />
+		<_36 v="Stupid mass override" />
+		<_14 v="Mass body override" />
+		<_19 v="Mass distribution override" />
+		<_37 v="" />
+		<_37 v="Water Physics" />
+		<_36 v="Water physics bounding box" />
+		<_14 v="Water physics x0" />
+		<_14 v="Water physics x1" />
+		<_14 v="Water physics y0" />
+		<_14 v="Water physics y1" />
+		<_14 v="Water physics z0" />
+		<_14 v="Water physics z1" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Self-collision pairs">
+		<_2E v="First shape setting" />
+		<_2E v="Second shape setting" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_40 v="Phantom types">
+		<_2 v="Name" />
+		<_37 v="Flags" />
+		<_D v="Flags">
+			<Flag v="Ignores players" />
+			<Flag v="Ignores nonplayers" />
+			<Flag v="Ignores bipeds" />
+			<Flag v="Ignores dead bipeds" />
+			<Flag v="Ignores live bipeds" />
+			<Flag v="Ignores grounded bipeds" />
+			<Flag v="Ignores vehicles" />
+			<Flag v="Ignores weapons" />
+			<Flag v="Ignores equipment" />
+			<Flag v="Ignores projectiles" />
+			<Flag v="Ignores scenery" />
+			<Flag v="Ignores devices" />
+			<Flag v="Ignores crates" />
+			<Flag v="Ignores creatures" />
+			<Flag v="Ignores giants" />
+			<Flag v="Ignores mechs" />
+			<Flag v="ignores damage owner" />
+			<Flag v="ignores attached objects" />
+			<Flag v="Ignores forge editor" />
+			<Flag v="Use acceleration as force" />
+			<Flag v="Smart directional acceleration" />
+			<Flag v="Accelerate along input direction" />
+			<Flag v="Negates gravity" />
+			<Flag v="Disable linear air drag" />
+			<Flag v="Disable angular air drag" />
+			<Flag v="Latching disabled" />
+			<Flag v="Mirrored axis" />
+			<Flag v="Activate ragdolls" />
+		</_D>
+		<_37 v="" />
+		<_14 v="Brittle timer" />
+		<_A v="Minimum size">
+			<Flag v="Default" />
+			<Flag v="Tiny" />
+			<Flag v="Small" />
+			<Flag v="Medium" />
+			<Flag v="Large" />
+			<Flag v="Huge" />
+			<Flag v="Extra huge" />
+		</_A>
+		<_A v="Maximum size">
+			<Flag v="Default" />
+			<Flag v="Tiny" />
+			<Flag v="Small" />
+			<Flag v="Medium" />
+			<Flag v="Large" />
+			<Flag v="Huge" />
+			<Flag v="Extra huge" />
+		</_A>
+		<_34 v="generated_paddcef" length="2" />
+		<_37 v="" />
+		<_2 v="Marker name" />
+		<_37 v="" />
+		<_2 v="Mancannon launched object marker name" />
+		<_37 v="" />
+		<_2 v="Alignment marker name" />
+		<_37 v="Linear motion" />
+		<_36 v="Linear motion" />
+		<_14 v="Hooke's Law e" />
+		<_14 v="Linear dead radius" />
+		<_14 v="Center acceleration" />
+		<_14 v="Center maximum velocity" />
+		<_14 v="Axis acceleration" />
+		<_14 v="Axis maximum velocity" />
+		<_14 v="Direction acceleration" />
+		<_14 v="Direction maximum velocity" />
+		<_14 v="Orbit acceleration" />
+		<_14 v="Orbit maximum velocity" />
+		<_37 v="" />
+		<_37 v="Angular motion" />
+		<_36 v="Angular motion" />
+		<_14 v="Alignment Hooke's Law e" />
+		<_14 v="Alignment acceleration" />
+		<_14 v="Alignment maximum velocity" />
+		<_37 v="" />
+		<_37 v="Damage per second" />
+		<_41 v="Damage per second effect" />
+		<_41 v="Damage per second visual material effects" />
+		<_41 v="Damage per second sound material effects" />
+		<_2 v="damage per second object function" />
+		<_14 v="damage per second object function threshold" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_37 v="Constraints and Motors" />
+	<_40 v="Constraints">
+		<_2 v="Name" />
+		<_A v="Type">
+			<Flag v="Hinge" />
+			<Flag v="Limited hinge" />
+			<Flag v="Ragdoll" />
+			<Flag v="Stiff spring" />
+			<Flag v="Ball and socket" />
+			<Flag v="Prismatic" />
+		</_A>
+		<_F v="Flags">
+			<Flag v="Is physical child" />
+			<Flag v="Is rigid" />
+			<Flag v="Disable effects" />
+			<Flag v="Not created automatically" />
+		</_F>
+		<_34 v="generated_padd2a4" length="2" />
+		<_14 v="Friction" />
+		<_40 v="Ragdoll settings">
+			<_14 v="Minimum twist" />
+			<_14 v="Maximum twist" />
+			<_14 v="Minimum cone" />
+			<_14 v="Maximum cone" />
+			<_14 v="Minimum plane" />
+			<_14 v="Maximum plane" />
+			<_14 v="Maximum friction torque" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Ragdoll motors">
+			<_36 v="Twist" />
+			<_38 v="Twist motor">
+				<_A v="Motor type">
+					<Flag v="None" />
+					<Flag v="Damped spring" />
+					<Flag v="Position" />
+				</_A>
+				<_34 v="generated_pad18f3" length="3" />
+				<_2 v="Motor name (reference)" />
+				<_3B v="" />
+			</_38>
+			<_36 v="Cone" />
+			<_38 v="Cone motor">
+				<_A v="Motor type">
+					<Flag v="None" />
+					<Flag v="Damped spring" />
+					<Flag v="Position" />
+				</_A>
+				<_34 v="generated_pad18f3" length="3" />
+				<_2 v="Motor name (reference)" />
+				<_3B v="" />
+			</_38>
+			<_36 v="Plane" />
+			<_38 v="Plane motor">
+				<_A v="Motor type">
+					<Flag v="None" />
+					<Flag v="Damped spring" />
+					<Flag v="Position" />
+				</_A>
+				<_34 v="generated_pad18f3" length="3" />
+				<_2 v="Motor name (reference)" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="Limited hinge settings">
+			<_14 v="Limit friction" />
+			<_14 v="Limit minimum angle" />
+			<_14 v="Limit maximum angle" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Limited hinge motors">
+			<_38 v="Motor">
+				<_A v="Motor type">
+					<Flag v="None" />
+					<Flag v="Damped spring" />
+					<Flag v="Position" />
+				</_A>
+				<_34 v="generated_pad18f3" length="3" />
+				<_2 v="Motor name (reference)" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="Stiff spring settings">
+			<_14 v="Spring length" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Prismatic settings">
+			<_14 v="Minimum limit" />
+			<_14 v="Maximum limit" />
+			<_14 v="Maximum friction force" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Damped spring motors">
+		<_2 v="Name" />
+		<_14 v="Maximum force" />
+		<_14 v="Minimum force" />
+		<_14 v="Spring k" />
+		<_14 v="Damping" />
+		<_14 v="Initial position" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Position motors">
+		<_2 v="Name" />
+		<_14 v="Maximum force" />
+		<_14 v="Minimum force" />
+		<_14 v="Tau" />
+		<_14 v="Damping" />
+		<_14 v="Proportion recover velocity" />
+		<_14 v="Constant recover velocity" />
+		<_14 v="Initial position" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_3B v="" />
+</root>

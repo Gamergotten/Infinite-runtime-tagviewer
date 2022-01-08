@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="force">
+		<_F v="flags">
+			<Flag v="is infinitely long cylinder" />
+			<Flag v="multiply force by attached object speed" />
+			<Flag v="override force direction" />
+		</_F>
+		<_A v="shape">
+			<Flag v="sphere" />
+			<Flag v="cylinder" />
+			<Flag v="plane" />
+		</_A>
+		<_3C v="version" />
+		<_34 v="generated_pad5f24" length="1" />
+		<_14 v="normal force strength" />
+		<_14 v="tangent force strength" />
+		<_14 v="binormal force strength" />
+		<_14 v="falloff begin" />
+		<_14 v="falloff end" />
+		<_14 v="max speed" />
+		<_19 v="direction override" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

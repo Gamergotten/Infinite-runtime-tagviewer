@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="grunt birthday effect" />
+	<_41 v="material effects globals" />
+	<_36 v="Spawn Effects" />
+	<_40 v="multiplayer">
+		<_41 v="biped spawn effect" />
+		<_41 v="vehicle spawn effect" />
+		<_41 v="weapon spawn effect" />
+		<_41 v="first person player spawn effect" />
+		<_3B v="" />
+	</_40>
+	<_40 v="campaign">
+		<_41 v="biped spawn effect" />
+		<_41 v="vehicle spawn effect" />
+		<_41 v="weapon spawn effect" />
+		<_41 v="first person player spawn effect" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

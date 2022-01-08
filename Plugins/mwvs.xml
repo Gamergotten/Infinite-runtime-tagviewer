@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="pattern_variants">
+		<_2 v="name" />
+		<_41 v="visorPattern" />
+		<_3B v="" />
+	</_40>
+	<_40 v="color_variants">
+		<_2 v="name" />
+		<_1F v="gradient_top_color" />
+		<_1F v="gradient_mid_color" />
+		<_1F v="gradient_bottom_color" />
+		<_2 v="notes" />
+		<_2 v="groupName" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

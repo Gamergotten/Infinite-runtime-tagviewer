@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Weapon Aim Assist" />
+	<_36 v="Aim Assist Override" />
+	<_40 v="aim assist modifiers">
+		<_14 v="autoaim angle" />
+		<_14 v="prioritization angle" />
+		<_14 v="autoaim range" />
+		<_14 v="autoaim falloff range" />
+		<_14 v="autoaim near falloff range" />
+		<_14 v="magnetism angle" />
+		<_14 v="magnetism range" />
+		<_14 v="magnetism falloff range" />
+		<_14 v="magnetism near falloff range" />
+		<_14 v="deviation angle" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_34 v="generated_pad6673" length="4" />
+	<_3B v="" />
+</root>

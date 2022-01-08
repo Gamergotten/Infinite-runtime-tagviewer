@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="camera">
+		<_41 v="default unit camera track" />
+		<_36 v="SANDBOX" />
+		<_38 v="pitch to vertical offset">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_36 v="CAMERA UNIVERSALS" />
+		<_14 v="field of view" />
+		<_14 v="yaw scale" />
+		<_14 v="pitch scale" />
+		<_14 v="forward scale" />
+		<_14 v="side scale" />
+		<_14 v="up scale" />
+		<_36 v="DEAD CAMERA" />
+		<_14 v="minimum distance to player" />
+		<_14 v="transition time" />
+		<_14 v="falling death transition time" />
+		<_14 v="initial distance" />
+		<_14 v="final distance" />
+		<_14 v="dead cam z offset" />
+		<_14 v="dead cam maximum elevation" />
+		<_14 v="dead cam movement delay" />
+		<_14 v="time_to_auto_switch_to_orbiting" />
+		<_14 v="ignore_stick_time" />
+		<_14 v="ignore_button_time" />
+		<_14 v="dead camera minimum falling velocity" />
+		<_36 v="FLYING CAMERA" />
+		<_14 v="maximum boost speed" />
+		<_14 v="time to maximum_boost" />
+		<_B v="boost function">
+			<Flag v="linear" />
+			<Flag v="early" />
+			<Flag v="very early" />
+			<Flag v="late" />
+			<Flag v="very late" />
+			<Flag v="cosine" />
+			<Flag v="one" />
+			<Flag v="zero" />
+		</_B>
+		<_34 v="generated_pad632c" length="2" />
+		<_14 v="zoomed field of view" />
+		<_14 v="zoomed look speed" />
+		<_14 v="bounding sphere radius" />
+		<_14 v="flying cam movement delay" />
+		<_14 v="zoom transition time" />
+		<_14 v="vertical movement time to max speed" />
+		<_B v="vertical movement function">
+			<Flag v="linear" />
+			<Flag v="early" />
+			<Flag v="very early" />
+			<Flag v="late" />
+			<Flag v="very late" />
+			<Flag v="cosine" />
+			<Flag v="one" />
+			<Flag v="zero" />
+		</_B>
+		<_34 v="generated_pad7d0d" length="2" />
+		<_36 v="ORBITING CAMERA" />
+		<_14 v="minimum distance" />
+		<_14 v="maximum distance" />
+		<_14 v="initial distance on focus" />
+		<_14 v="orbit cam movement delay" />
+		<_14 v="orbit cam z offset" />
+		<_14 v="orbit cam minimum elevation" />
+		<_14 v="orbit cam maximum elevation" />
+		<_14 v="orbit cam use targets facing direction after " />
+		<_14 v="film specific tuning orbit cam use targets facing direction after " />
+		<_14 v="orbit cam transition to targets facing direction delay" />
+		<_36 v="FIRST PERSON CAMERA" />
+		<_8 v="first person vertical field of view" />
+		<_36 v="SAVED FILMS" />
+		<_14 v="max playback speed" />
+		<_14 v="fade out time" />
+		<_14 v="fade in time" />
+		<_36 v="IN GAME" />
+		<_14 v="enter vehicle transition time" />
+		<_14 v="exit vehicle transition time" />
+		<_36 v="CAMERA OBSTRUCTION" />
+		<_38 v="obstruction">
+			<_15 v="cylinder fraction" />
+			<_8 v="obstruction test angle" />
+			<_14 v="obstruction max inward accel" />
+			<_14 v="obstruction max outward accel" />
+			<_14 v="obstruction max velocity" />
+			<_14 v="obstruction return delay" />
+			<_3B v="" />
+		</_38>
+		<_36 v="KILLPLAYBACK CAMERA" />
+		<_14 v="initial_distance" />
+		<_14 v="kill playback camera use target's facing direction for " />
+		<_14 v="kill playback camera z offset" />
+		<_8 v="kill playback camera initial angle" />
+		<_36 v="PLAYER PROFILE DEFAULTS" />
+		<_25 v="horizontal fov bounds" />
+		<_36 v="EDITOR PROFILE DEFAULTS" />
+		<_25 v="editor horizontal fov bounds" />
+		<_3B v="" />
+	</_40>
+	<_40 v="camera impulse">
+		<_37 v="Mapping function" />
+		<_38 v="mapping">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

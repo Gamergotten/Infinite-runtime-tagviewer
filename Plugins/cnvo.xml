@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_E v="Flags">
+		<Flag v="AllowLuaToOverride" />
+		<Flag v="SurviveForceDisruptingPriorities" />
+		<Flag v="OverrideSceneTypeAiDialog" />
+		<Flag v="DisableAiDialog" />
+		<Flag v="CanStartLatches" />
+		<Flag v="IgnoreCollisions" />
+		<Flag v="DoNotPlayDialog" />
+		<Flag v="BeatsSamePriority" />
+	</_E>
+	<_A v="Conversation Type">
+		<Flag v="Cinematic" />
+		<Flag v="CriticalScripted" />
+		<Flag v="CollectiblePlay" />
+		<Flag v="Alert" />
+		<Flag v="NoncriticalScripted" />
+		<Flag v="ProceedReminder" />
+		<Flag v="BespokeAivo" />
+		<Flag v="Background" />
+		<Flag v="BloodgateReminder" />
+		<Flag v="FobInteract" />
+		<Flag v="CollectibleAlert" />
+		<Flag v="Chain" />
+	</_A>
+	<_34 v="generated_pad56e4" length="1" />
+	<_5 v="Relative Priority" />
+	<_5 v="Timeout Duration" />
+	<_5 v="Maximum Duration" />
+	<_34 v="generated_pad70c5" length="2" />
+	<_14 v="Pre-Convo Delay" />
+	<_14 v="Pre-Convo Delay Max" />
+	<_14 v="Post-Convo Delay" />
+	<_14 v="Post-Convo Delay Max" />
+	<_34 v="generated_padbd7a" length="4" />
+	<_3B v="" />
+</root>

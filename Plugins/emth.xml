@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="global default emblem coating" />
+	<_40 v="coating groups">
+		<_2 v="id" />
+		<_40 v="elements">
+			<_2 v="id" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_36 v="Themes" />
+	<_40 v="emblem themes">
+		<_2 v="theme id" />
+		<_36 v="Theme emblems" />
+		<_2 v="key emblem" />
+		<_2 v="tile emblem" />
+		<_2 v="ui nameplate emblem" />
+		<_36 v="Theme coatings" />
+		<_40 v="valid coatings">
+			<_2 v="id" />
+			<_3B v="" />
+		</_40>
+		<_40 v="valid coating groups">
+			<_2 v="id" />
+			<_3B v="" />
+		</_40>
+		<_2 v="default coating" />
+		<_2 v="initial coating" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padf606" length="4" />
+	<_3B v="" />
+</root>

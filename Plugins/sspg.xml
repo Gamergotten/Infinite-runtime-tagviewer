@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Scattering Profiles">
+		<_2 v="Name" />
+		<_36 v="Subsurface Layer" />
+		<_1F v="Subsurface Layer Weight" />
+		<_14 v="Subsurface Layer Scale" />
+		<_36 v="Shallow Layer" />
+		<_1F v="Shallow Layer Weight" />
+		<_14 v="Shallow Layer Scale" />
+		<_36 v="Middle Layer" />
+		<_1F v="Middle Layer Weight" />
+		<_14 v="Middle Layer Scale" />
+		<_36 v="Deep Layer" />
+		<_1F v="Deep Layer Weight" />
+		<_14 v="Deep Layer Scale" />
+		<_14 v="Post-Scatter Amount" />
+		<_1F v="AO Color" />
+		<_14 v="AO Color Amount" />
+		<_14 v="AO Specular Power" />
+		<_14 v="Glancing Roughness" />
+		<_14 v="Specular Intensity" />
+		<_36 v="Scale Modifiers" />
+		<_14 v="Scale Modifier (Subsurface and Shallow Layers)" />
+		<_14 v="Scale Modifier (Middle and Deep Layers)" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad7610" length="4" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_D v="flags">
+		<Flag v="trigger cell event when played" />
+	</_D>
+	<_2 v="SFX Event Name" />
+	<_2 v="SFX Player Event Name" />
+	<_14 v="Max Radius" />
+	<_14 v="Max Duration" />
+	<_41 v="Sound bank" />
+	<_41 v="Player sound bank" />
+	<_41 v="Category" />
+	<_41 v="Player Category" />
+	<_41 v="Sound Tails" />
+	<_2 v="External Source" />
+	<_40 v="VO Event Info">
+		<_2 v="Event Name" />
+		<_2 v="Subtitle Name" />
+		<_2 v="Subtitle Character Id" />
+		<_14 v="Event duration" />
+		<_40 v="Narrative Reference">
+			<_0 v="Character name" />
+			<_1 v="Dialogue" />
+			<_0 v="WWise effect" />
+			<_0 v="Narrative Wwise Effect Recommendation" />
+			<_C v="Wwise 2D/3D">
+				<Flag v="2D" />
+				<Flag v="3D" />
+				<Flag v="Combo" />
+			</_C>
+			<_C v="Narrative 2D/3D Recommendation">
+				<Flag v="2D" />
+				<Flag v="3D" />
+				<Flag v="Combo" />
+			</_C>
+			<_14 v="WWise Attenuation" />
+			<_3B v="" />
+		</_40>
+		<_40 v="AI Dialogue Info">
+			<_D v="flags">
+				<Flag v="Campaign Only" />
+				<Flag v="Exclude from certain missions" />
+				<Flag v="Exclude from M10" />
+				<Flag v="Exclude from M20" />
+				<Flag v="Exclude from M30" />
+				<Flag v="Exclude from M40" />
+				<Flag v="Exclude from M60" />
+				<Flag v="Exclude from M70" />
+				<Flag v="Exclude from M80" />
+				<Flag v="Exclude from M90" />
+			</_D>
+			<_14 v="skip fraction" />
+			<_1 v="Dialogue State Table Skip Rule" />
+			<_40 v="dst expression tokens">
+				<_2 v="an expression token" />
+				<_6 v="numeric constant, if applicable" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="facial animation resource languages">
+			<_43 v="facial animation resource" />
+			<_43 v="model animation resource" />
+			<_C v="language">
+				<Flag v="English" />
+				<Flag v="Japanese" />
+				<Flag v="German" />
+				<Flag v="French" />
+				<Flag v="Spanish" />
+				<Flag v="Mexican-Spanish" />
+				<Flag v="Italian" />
+				<Flag v="Korean" />
+				<Flag v="Traditional-Chinese" />
+				<Flag v="Simplified-Chinese" />
+				<Flag v="Portuguese" />
+				<Flag v="Polish" />
+				<Flag v="Russian" />
+				<Flag v="Danish" />
+				<Flag v="Finnish" />
+				<Flag v="Dutch" />
+				<Flag v="Norwegian" />
+				<Flag v="Brazilian-Portuguese" />
+			</_C>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_A v="AI Port Glow Color">
+		<Flag v="None" />
+		<Flag v="Color1" />
+		<Flag v="Color2" />
+	</_A>
+	<_34 v="generated_padf447" length="3" />
+	<_41 v="Unicode Subtitles Tag" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="LOD Settings">
+		<_40 v="LOD Transitions">
+			<_14 v="Transition start" />
+			<_14 v="Transition end" />
+			<_3B v="" />
+		</_40>
+		<_14 v="Max Shadow Distance" />
+		<_3B v="" />
+	</_38>
+	<_40 v="Presets">
+		<_2 v="Name" />
+		<_38 v="Parameters">
+			<_C v="Alignment">
+				<Flag v="default" />
+				<Flag v="normal" />
+				<Flag v="up" />
+				<Flag v="down" />
+				<Flag v="left" />
+				<Flag v="right" />
+				<Flag v="forward" />
+				<Flag v="backward" />
+				<Flag v="random" />
+			</_C>
+			<_C v="Random Rotate">
+				<Flag v="default" />
+				<Flag v="enabled" />
+				<Flag v="disabled" />
+			</_C>
+			<_14 v="Placement Weight" />
+			<_14 v="Separation Min" />
+			<_14 v="Scale Min" />
+			<_14 v="Scale Max" />
+			<_14 v="Tilt Min" />
+			<_14 v="Tilt Max" />
+			<_14 v="Stiffness Min" />
+			<_14 v="Stiffness Max" />
+			<_14 v="Ground Tint Min" />
+			<_14 v="Ground Tint Max" />
+			<_14 v="Hover Min" />
+			<_14 v="Hover Max" />
+			<_14 v="Roughness Min" />
+			<_14 v="Roughness Max" />
+			<_14 v="Slope Min" />
+			<_14 v="Slope Max" />
+			<_14 v="Rotate Min" />
+			<_14 v="Rotate Max" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad84de" length="4" />
+	<_3B v="" />
+</root>

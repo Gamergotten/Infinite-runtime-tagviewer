@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Transition sounds">
+		<_2 v="Display Name" />
+		<_C v="Avatar Type">
+			<Flag v="Prism" />
+			<Flag v="Pyramid" />
+			<Flag v="Sphere" />
+			<Flag v="Teardrop" />
+			<Flag v="Superintendent" />
+			<Flag v="Mister Chief" />
+		</_C>
+		<_41 v="Sound" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad87b4" length="4" />
+	<_3B v="" />
+</root>

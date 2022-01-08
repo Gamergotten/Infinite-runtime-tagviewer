@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Forge Object Entries">
+		<_41 v="Forge Object" />
+		<_2 v="Name" />
+		<_2 v="Description" />
+		<_41 v="Thumbnail" />
+		<_40 v="Object Metadata">
+			<_2 v="Keyword" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Category Entries">
+		<_2 v="Title" />
+		<_2 v="Description" />
+		<_2 v="Category ID" />
+		<_2 v="Parent Category ID" />
+		<_3B v="" />
+	</_40>
+	<_2 v="Recent Objects Category ID" />
+	<_2 v="Prefabs Category ID" />
+	<_40 v="styleShaders">
+		<_2 v="name" />
+		<_41 v="palette" />
+		<_41 v="coatingMaterialSet" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad0120" length="4" />
+	<_3B v="" />
+</root>

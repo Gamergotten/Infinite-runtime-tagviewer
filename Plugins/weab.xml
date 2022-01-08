@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="weapon attachment component">
+		<_37 v="Weapon Attachment" />
+		<_2 v="variant region name" />
+		<_2 v="variant permutation name" />
+		<_40 v="region permutations">
+			<_2 v="region name" />
+			<_2 v="permutation name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="attachments">
+			<_2 v="name" />
+			<_41 v="type" />
+			<_41 v="tag graph output" />
+			<_2 v="output node name" />
+			<_40 v="tag graph float params">
+				<_2 v="name" />
+				<_14 v="value" />
+				<_3B v="" />
+			</_40>
+			<_41 v="override type" />
+			<_36 v="variant names" />
+			<_40 v="variant names">
+				<_2 v="variant name" />
+				<_3B v="" />
+			</_40>
+			<_37 v="" />
+			<_2 v="marker" />
+			<_A v="change color">
+				<Flag v="none" />
+				<Flag v="primary" />
+				<Flag v="secondary" />
+				<Flag v="tertiary" />
+				<Flag v="quaternary" />
+			</_A>
+			<_F v="flags">
+				<Flag v="always create" />
+				<Flag v="effect size scale from object scale" />
+				<Flag v="update on create" />
+				<Flag v="always update" />
+			</_F>
+			<_34 v="generated_padbd3f" length="2" />
+			<_2 v="primary scale" />
+			<_2 v="secondary scale" />
+			<_3B v="" />
+		</_40>
+		<_36 v="Attachment Name" />
+		<_38 v="attachmentName">
+			<_2 v="Attachment Name" />
+			<_3B v="" />
+		</_38>
+		<_40 v="attachment object">
+			<_41 v="object" />
+			<_2 v="weapon marker" />
+			<_2 v="attachment marker" />
+			<_3B v="" />
+		</_40>
+		<_40 v="accuracy modifiers">
+			<_14 v="accuracy spread" />
+			<_3B v="" />
+		</_40>
+		<_40 v="precision aim modifiers">
+			<_14 v="precision transition in time modifier" />
+			<_14 v="precision transition out time modifier" />
+			<_3B v="" />
+		</_40>
+		<_40 v="unit modifiers">
+			<_14 v="move speed scale modifier" />
+			<_14 v="turn rate scale modifier" />
+			<_14 v="simulated input scale modifier" />
+			<_3B v="" />
+		</_40>
+		<_40 v="aim assist modifiers">
+			<_14 v="autoaim angle" />
+			<_14 v="prioritization angle" />
+			<_14 v="autoaim range" />
+			<_14 v="autoaim falloff range" />
+			<_14 v="autoaim near falloff range" />
+			<_14 v="magnetism angle" />
+			<_14 v="magnetism range" />
+			<_14 v="magnetism falloff range" />
+			<_14 v="magnetism near falloff range" />
+			<_14 v="deviation angle" />
+			<_3B v="" />
+		</_40>
+		<_41 v="aim assist reference" />
+		<_40 v="recoil view kick modifiers">
+			<_14 v="view kick deceleration modifier" />
+			<_14 v="view kick return to center modifier" />
+			<_3B v="" />
+		</_40>
+		<_40 v="recoil gunkick modifiers">
+			<_14 v="gunkick spring constant modifier" />
+			<_3B v="" />
+		</_40>
+		<_40 v="animation modifiers">
+			<_14 v="ready playback speed modifier" />
+			<_14 v="ready initial playback modifier" />
+			<_14 v="put away playback speed modifier" />
+			<_14 v="reload playback speed modifier" />
+			<_14 v="reload while empty playback speed modifier" />
+			<_3B v="" />
+		</_40>
+		<_40 v="heat modifiers">
+			<_14 v="heat loss per second modifier" />
+			<_14 v="overheated heat loss per second modifier" />
+			<_14 v="heat generated per round modifier" />
+			<_3B v="" />
+		</_40>
+		<_40 v="UI display info">
+			<_2 v="name" />
+			<_2 v="alt name " />
+			<_2 v="description" />
+			<_2 v="help text" />
+			<_2 v="icon string id" />
+			<_41 v="sprite" />
+			<_6 v="sprite index" />
+			<_41 v="alt sprite" />
+			<_6 v="alt sprite index" />
+			<_6 v="damage sprite index" />
+			<_41 v="ui vehicle screen reference" />
+			<_3B v="" />
+		</_40>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_38 v="weapon attachment barrel component">
+		<_37 v="Weapon Barrel" />
+		<_40 v="primary barrel override">
+			<_41 v="projectile" />
+			<_40 v="firing params">
+				<_38 v="firing params">
+					<_25 v="rounds per second" />
+					<_2 v="rate of fire acceleration" />
+					<_14 v="acceleration time" />
+					<_2 v="rate of fire deceleration" />
+					<_14 v="deceleration time" />
+					<_14 v="barrel spin scale" />
+					<_38 v="barrel spin scalars">
+						<_37 v="Barrel Spinning" />
+						<_14 v="idle spin speed" />
+						<_14 v="ready spin speed" />
+						<_14 v="firing rate scalar" />
+						<_14 v="spin up time" />
+						<_14 v="spin down time" />
+						<_37 v="" />
+						<_3B v="" />
+					</_38>
+					<_15 v="blurred rate of fire" />
+					<_23 v="shots per fire" />
+					<_14 v="fire recovery time" />
+					<_15 v="soft recovery fraction" />
+					<_14 v="melee  fire recovery time" />
+					<_15 v="melee soft recovery fraction" />
+					<_14 v="runtime rate of fire acceleration rate" />
+					<_14 v="runtime rate of fire deceleration rate" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="firing effects">
+				<_5 v="shot count lower bound" />
+				<_5 v="shot count upper bound" />
+				<_36 v="firing effect" />
+				<_38 v="firing effect overrides">
+					<_41 v="effect" />
+					<_D v="flags">
+						<Flag v="Stagger fire across multiple markers" />
+						<Flag v="Random firing effects" />
+						<Flag v="Enable marker overrides" />
+					</_D>
+					<_40 v="override effects">
+						<_41 v="effect" />
+						<_3B v="" />
+					</_40>
+					<_40 v="marker overrides">
+						<_36 v="Marker overrides" />
+						<_37 v="" />
+						<_2 v="marker" />
+						<_37 v="" />
+						<_2 v="markerOverride" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_36 v="critical effect" />
+				<_38 v="critical effect overrides">
+					<_41 v="effect" />
+					<_D v="flags">
+						<Flag v="Stagger fire across multiple markers" />
+						<Flag v="Random firing effects" />
+						<Flag v="Enable marker overrides" />
+					</_D>
+					<_40 v="override effects">
+						<_41 v="effect" />
+						<_3B v="" />
+					</_40>
+					<_40 v="marker overrides">
+						<_36 v="Marker overrides" />
+						<_37 v="" />
+						<_2 v="marker" />
+						<_37 v="" />
+						<_2 v="markerOverride" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_36 v="misfire effect" />
+				<_38 v="misfire effect overrides">
+					<_41 v="effect" />
+					<_D v="flags">
+						<Flag v="Stagger fire across multiple markers" />
+						<Flag v="Random firing effects" />
+						<Flag v="Enable marker overrides" />
+					</_D>
+					<_40 v="override effects">
+						<_41 v="effect" />
+						<_3B v="" />
+					</_40>
+					<_40 v="marker overrides">
+						<_36 v="Marker overrides" />
+						<_37 v="" />
+						<_2 v="marker" />
+						<_37 v="" />
+						<_2 v="markerOverride" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_36 v="empty effect" />
+				<_38 v="empty effect overrides">
+					<_41 v="effect" />
+					<_D v="flags">
+						<Flag v="Stagger fire across multiple markers" />
+						<Flag v="Random firing effects" />
+						<Flag v="Enable marker overrides" />
+					</_D>
+					<_40 v="override effects">
+						<_41 v="effect" />
+						<_3B v="" />
+					</_40>
+					<_40 v="marker overrides">
+						<_36 v="Marker overrides" />
+						<_37 v="" />
+						<_2 v="marker" />
+						<_37 v="" />
+						<_2 v="markerOverride" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_36 v="optional secondary firing effect" />
+				<_38 v="optional secondary firing effect overrides">
+					<_41 v="effect" />
+					<_D v="flags">
+						<Flag v="Stagger fire across multiple markers" />
+						<Flag v="Random firing effects" />
+						<Flag v="Enable marker overrides" />
+					</_D>
+					<_40 v="override effects">
+						<_41 v="effect" />
+						<_3B v="" />
+					</_40>
+					<_40 v="marker overrides">
+						<_36 v="Marker overrides" />
+						<_37 v="" />
+						<_2 v="marker" />
+						<_37 v="" />
+						<_2 v="markerOverride" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_41 v="firing effect" />
+				<_41 v="critical effect" />
+				<_41 v="misfire effect" />
+				<_41 v="empty effect" />
+				<_41 v="optional secondary firing effect" />
+				<_41 v="firing damage" />
+				<_41 v="critical damage" />
+				<_41 v="misfire damage" />
+				<_41 v="empty damage" />
+				<_41 v="optional secondary firing damage" />
+				<_41 v="firing rider damage" />
+				<_41 v="critical rider damage" />
+				<_41 v="misfire rider damage" />
+				<_41 v="empty rider damage" />
+				<_41 v="optional secondary firing rider damage" />
+				<_3B v="" />
+			</_40>
+			<_40 v="projectile distribution">
+				<_38 v="projectile distribution">
+					<_B v="distribution function">
+						<Flag v="point" />
+						<Flag v="horizontal fan" />
+						<Flag v="custom directions" />
+						<Flag v="custom positions" />
+					</_B>
+					<_5 v="projectiles per shot" />
+					<_40 v="direction offset">
+						<_1B v="angle offset" />
+						<_3B v="" />
+					</_40>
+					<_40 v="position offsets">
+						<_16 v="Point offset" />
+						<_3B v="" />
+					</_40>
+					<_14 v="distribution angle" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="projectile error">
+				<_38 v="projectile error">
+					<_14 v="lower bound deceleration time" />
+					<_14 v="deceleration time" />
+					<_14 v="runtime error min deceleration rate" />
+					<_14 v="runtime error deceleration rate" />
+					<_8 v="minimum error" />
+					<_24 v="minimum error angle" />
+					<_24 v="error angle" />
+					<_25 v="damage error" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="noise">
+				<_38 v="barrel noise">
+					<_B v="ai noise">
+						<Flag v="silent" />
+						<Flag v="quiet" />
+						<Flag v="medium" />
+						<Flag v="shout" />
+						<Flag v="loud" />
+					</_B>
+					<_B v="motion tracker noise">
+						<Flag v="edge" />
+						<Flag v="inner" />
+						<Flag v="silent" />
+					</_B>
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="heat generated per round">
+				<_15 v="heat generated per round" />
+				<_3B v="" />
+			</_40>
+			<_40 v="age generation">
+				<_38 v="age generation">
+					<_15 v="age generated per round" />
+					<_15 v="CAMPAIGN age generated per round" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="sweet heat">
+				<_38 v="sweet heat">
+					<_37 v="Heat Sweet Spot" />
+					<_15 v="sweet spot start heat level" />
+					<_15 v="sweet spot end heat level" />
+					<_41 v="sweet heat projectile" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_37 v="$$$ New Sound $$$" />
+			<_40 v="weapon fire sound">
+				<_38 v="Weapon Fire Sound">
+					<_B v="Firing Type">
+						<Flag v="One off" />
+						<Flag v="Looping" />
+						<Flag v="Burst" />
+					</_B>
+					<_2E v="Barrel Attachment Index" />
+					<_14 v="Fire start delay" />
+					<_40 v="Weapon Fire Sound Variations">
+						<_41 v="Weapon Fire Sound" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="weapon fire tail sound">
+				<_38 v="Weapon Fire Tail">
+					<_2 v="Weapon Switch Group" />
+					<_2 v="Weapon Switch Value" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_37 v="" />
+			<_3B v="" />
+		</_40>
+		<_40 v="secondary barrel override">
+			<_41 v="projectile" />
+			<_40 v="firing params">
+				<_38 v="firing params">
+					<_25 v="rounds per second" />
+					<_2 v="rate of fire acceleration" />
+					<_14 v="acceleration time" />
+					<_2 v="rate of fire deceleration" />
+					<_14 v="deceleration time" />
+					<_14 v="barrel spin scale" />
+					<_38 v="barrel spin scalars">
+						<_37 v="Barrel Spinning" />
+						<_14 v="idle spin speed" />
+						<_14 v="ready spin speed" />
+						<_14 v="firing rate scalar" />
+						<_14 v="spin up time" />
+						<_14 v="spin down time" />
+						<_37 v="" />
+						<_3B v="" />
+					</_38>
+					<_15 v="blurred rate of fire" />
+					<_23 v="shots per fire" />
+					<_14 v="fire recovery time" />
+					<_15 v="soft recovery fraction" />
+					<_14 v="melee  fire recovery time" />
+					<_15 v="melee soft recovery fraction" />
+					<_14 v="runtime rate of fire acceleration rate" />
+					<_14 v="runtime rate of fire deceleration rate" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="firing effects">
+				<_5 v="shot count lower bound" />
+				<_5 v="shot count upper bound" />
+				<_36 v="firing effect" />
+				<_38 v="firing effect overrides">
+					<_41 v="effect" />
+					<_D v="flags">
+						<Flag v="Stagger fire across multiple markers" />
+						<Flag v="Random firing effects" />
+						<Flag v="Enable marker overrides" />
+					</_D>
+					<_40 v="override effects">
+						<_41 v="effect" />
+						<_3B v="" />
+					</_40>
+					<_40 v="marker overrides">
+						<_36 v="Marker overrides" />
+						<_37 v="" />
+						<_2 v="marker" />
+						<_37 v="" />
+						<_2 v="markerOverride" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_36 v="critical effect" />
+				<_38 v="critical effect overrides">
+					<_41 v="effect" />
+					<_D v="flags">
+						<Flag v="Stagger fire across multiple markers" />
+						<Flag v="Random firing effects" />
+						<Flag v="Enable marker overrides" />
+					</_D>
+					<_40 v="override effects">
+						<_41 v="effect" />
+						<_3B v="" />
+					</_40>
+					<_40 v="marker overrides">
+						<_36 v="Marker overrides" />
+						<_37 v="" />
+						<_2 v="marker" />
+						<_37 v="" />
+						<_2 v="markerOverride" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_36 v="misfire effect" />
+				<_38 v="misfire effect overrides">
+					<_41 v="effect" />
+					<_D v="flags">
+						<Flag v="Stagger fire across multiple markers" />
+						<Flag v="Random firing effects" />
+						<Flag v="Enable marker overrides" />
+					</_D>
+					<_40 v="override effects">
+						<_41 v="effect" />
+						<_3B v="" />
+					</_40>
+					<_40 v="marker overrides">
+						<_36 v="Marker overrides" />
+						<_37 v="" />
+						<_2 v="marker" />
+						<_37 v="" />
+						<_2 v="markerOverride" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_36 v="empty effect" />
+				<_38 v="empty effect overrides">
+					<_41 v="effect" />
+					<_D v="flags">
+						<Flag v="Stagger fire across multiple markers" />
+						<Flag v="Random firing effects" />
+						<Flag v="Enable marker overrides" />
+					</_D>
+					<_40 v="override effects">
+						<_41 v="effect" />
+						<_3B v="" />
+					</_40>
+					<_40 v="marker overrides">
+						<_36 v="Marker overrides" />
+						<_37 v="" />
+						<_2 v="marker" />
+						<_37 v="" />
+						<_2 v="markerOverride" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_36 v="optional secondary firing effect" />
+				<_38 v="optional secondary firing effect overrides">
+					<_41 v="effect" />
+					<_D v="flags">
+						<Flag v="Stagger fire across multiple markers" />
+						<Flag v="Random firing effects" />
+						<Flag v="Enable marker overrides" />
+					</_D>
+					<_40 v="override effects">
+						<_41 v="effect" />
+						<_3B v="" />
+					</_40>
+					<_40 v="marker overrides">
+						<_36 v="Marker overrides" />
+						<_37 v="" />
+						<_2 v="marker" />
+						<_37 v="" />
+						<_2 v="markerOverride" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_41 v="firing effect" />
+				<_41 v="critical effect" />
+				<_41 v="misfire effect" />
+				<_41 v="empty effect" />
+				<_41 v="optional secondary firing effect" />
+				<_41 v="firing damage" />
+				<_41 v="critical damage" />
+				<_41 v="misfire damage" />
+				<_41 v="empty damage" />
+				<_41 v="optional secondary firing damage" />
+				<_41 v="firing rider damage" />
+				<_41 v="critical rider damage" />
+				<_41 v="misfire rider damage" />
+				<_41 v="empty rider damage" />
+				<_41 v="optional secondary firing rider damage" />
+				<_3B v="" />
+			</_40>
+			<_40 v="projectile distribution">
+				<_38 v="projectile distribution">
+					<_B v="distribution function">
+						<Flag v="point" />
+						<Flag v="horizontal fan" />
+						<Flag v="custom directions" />
+						<Flag v="custom positions" />
+					</_B>
+					<_5 v="projectiles per shot" />
+					<_40 v="direction offset">
+						<_1B v="angle offset" />
+						<_3B v="" />
+					</_40>
+					<_40 v="position offsets">
+						<_16 v="Point offset" />
+						<_3B v="" />
+					</_40>
+					<_14 v="distribution angle" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="projectile error">
+				<_38 v="projectile error">
+					<_14 v="lower bound deceleration time" />
+					<_14 v="deceleration time" />
+					<_14 v="runtime error min deceleration rate" />
+					<_14 v="runtime error deceleration rate" />
+					<_8 v="minimum error" />
+					<_24 v="minimum error angle" />
+					<_24 v="error angle" />
+					<_25 v="damage error" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="noise">
+				<_38 v="barrel noise">
+					<_B v="ai noise">
+						<Flag v="silent" />
+						<Flag v="quiet" />
+						<Flag v="medium" />
+						<Flag v="shout" />
+						<Flag v="loud" />
+					</_B>
+					<_B v="motion tracker noise">
+						<Flag v="edge" />
+						<Flag v="inner" />
+						<Flag v="silent" />
+					</_B>
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="heat generated per round">
+				<_15 v="heat generated per round" />
+				<_3B v="" />
+			</_40>
+			<_40 v="age generation">
+				<_38 v="age generation">
+					<_15 v="age generated per round" />
+					<_15 v="CAMPAIGN age generated per round" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="sweet heat">
+				<_38 v="sweet heat">
+					<_37 v="Heat Sweet Spot" />
+					<_15 v="sweet spot start heat level" />
+					<_15 v="sweet spot end heat level" />
+					<_41 v="sweet heat projectile" />
+					<_37 v="" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_37 v="$$$ New Sound $$$" />
+			<_40 v="weapon fire sound">
+				<_38 v="Weapon Fire Sound">
+					<_B v="Firing Type">
+						<Flag v="One off" />
+						<Flag v="Looping" />
+						<Flag v="Burst" />
+					</_B>
+					<_2E v="Barrel Attachment Index" />
+					<_14 v="Fire start delay" />
+					<_40 v="Weapon Fire Sound Variations">
+						<_41 v="Weapon Fire Sound" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="weapon fire tail sound">
+				<_38 v="Weapon Fire Tail">
+					<_2 v="Weapon Switch Group" />
+					<_2 v="Weapon Switch Value" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_37 v="" />
+			<_3B v="" />
+		</_40>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="parent" />
+	<_25 v="radius" />
+	<_15 v="cutoff scale" />
+	<_D v="effect flags">
+		<Flag v="don't scale damage by distance" />
+		<Flag v="area damage players only" />
+		<Flag v="affects model targets" />
+		<Flag v="grenade explosion" />
+	</_D>
+	<_36 v="damage" />
+	<_36 v="Damage Type" />
+	<_38 v="damageType">
+		<_2 v="Damage Type Name" />
+		<_3B v="" />
+	</_38>
+	<_B v="side effect">
+		<Flag v="none" />
+		<Flag v="harmless" />
+		<Flag v="lethal to the unsuspecting" />
+		<Flag v="emp" />
+		<Flag v="strips armor" />
+		<Flag v="makes AI afraid" />
+	</_B>
+	<_B v="category">
+		<Flag v="none" />
+		<Flag v="falling" />
+		<Flag v="bullet" />
+		<Flag v="grenade" />
+		<Flag v="high explosive" />
+		<Flag v="sniper" />
+		<Flag v="melee" />
+		<Flag v="flame" />
+		<Flag v="mounted weapon" />
+		<Flag v="vehicle" />
+		<Flag v="plasma" />
+		<Flag v="needle" />
+		<Flag v="shotgun" />
+	</_B>
+	<_C v="death vocalization">
+		<Flag v="default" />
+		<Flag v="dth" />
+		<Flag v="dth_fall" />
+		<Flag v="dth_mjr" />
+		<Flag v="dth_slw" />
+		<Flag v="dth_hdsht" />
+		<Flag v="dth_slnt" />
+		<Flag v="dth_drama" />
+		<Flag v="dth_reanimated" />
+		<Flag v="thrwn" />
+		<Flag v="die_space" />
+		<Flag v="die_ass" />
+		<Flag v="die incinerated" />
+	</_C>
+	<_D v="flags">
+		<Flag v="does not hurt owner" />
+		<Flag v="can cause headshots" />
+		<Flag v="ignores headshot obstructions" />
+		<Flag v="pings resistant units" />
+		<Flag v="does not hurt friends" />
+		<Flag v="does not ping units" />
+		<Flag v="detonates explosives" />
+		<Flag v="only hurts shields" />
+		<Flag v="causes flaming death" />
+		<Flag v="skips shields" />
+		<Flag v="ignore seat scale for dir. dmg" />
+		<Flag v="forces hard ping if body dmg" />
+		<Flag v="forces hard ping always" />
+		<Flag v="forces medium ping if body dmg" />
+		<Flag v="forces medium ping always" />
+		<Flag v="does not hurt players" />
+		<Flag v="enables special death" />
+		<Flag v="cannot cause betrayals" />
+		<Flag v="uses old EMP behavior" />
+		<Flag v="ignores damage resistance" />
+		<Flag v="force s_kill on death" />
+		<Flag v="cause magic deceleration" />
+		<Flag v="aoe skip obstruction test" />
+		<Flag v="does not spill over" />
+		<Flag v="does not hurt boarders" />
+		<Flag v="does not cause biped aoe effect" />
+		<Flag v="hurt only friends" />
+		<Flag v="causes incineration dissolve" />
+		<Flag v="causes incineration dissolve on headshot" />
+		<Flag v="does not hurt damage source" />
+		<Flag v="damage vehicles only" />
+		<Flag v="triggers interact logic" />
+	</_D>
+	<_D v="secondary flags">
+		<Flag v="causes incineration dissolve to dead units" />
+		<Flag v="force hard ping as attachment feedback" />
+		<Flag v="detaches object dispenser items" />
+		<Flag v="hard pings from this damage stun AI" />
+		<Flag v="deaths are non revivable" />
+		<Flag v="forces hard ping when available" />
+		<Flag v="forces medium ping when available" />
+		<Flag v="impales bipeds" />
+		<Flag v="resets stun ticks on units" />
+		<Flag v="Show damage as critical in UI" />
+		<Flag v="Ignore physics impulses on friendlies" />
+		<Flag v="Damage is continuous" />
+		<Flag v="suppress evade" />
+		<Flag v="suppress grapple hook" />
+		<Flag v="Use different impulse for props" />
+	</_D>
+	<_36 v="NOTE" />
+	<_41 v="modifiers" />
+	<_14 v="headshot damage multiplier" />
+	<_14 v="headshot shielded damage multiplier" />
+	<_14 v="AOE core radius" />
+	<_14 v="AOE force offset z" />
+	<_14 v="damage lower bound" />
+	<_25 v="damage upper bound" />
+	<_38 v="damage falloff function">
+		<_37 v="function" />
+		<_38 v="function">
+			<_37 v="" />
+			<_42 v="data" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_8 v="dmg inner cone angle" />
+	<_38 v="blah">
+		<_8 v="dmg outer cone angle" />
+		<_3B v="" />
+	</_38>
+	<_14 v="active camouflage damage" />
+	<_26 v="active camouflage damage range" />
+	<_15 v="movement stun" />
+	<_15 v="maximum movement stun" />
+	<_15 v="turn stun" />
+	<_15 v="maximum turn stun" />
+	<_14 v="stun time" />
+	<_6 v="damage stun" />
+	<_14 v="instantaneous acceleration" />
+	<_14 v="alt instantaneous acceleration" />
+	<_14 v="prop instantaneous acceleration" />
+	<_14 v="acceleration cap" />
+	<_36 v="AI Stun Parameters" />
+	<_14 v="ai stun time" />
+	<_14 v="ai stun magnitude" />
+	<_36 v="Impalement parameters" />
+	<_14 v="impale initial velocity" />
+	<_14 v="impale drag acceleration" />
+	<_14 v="impale gravity acceleration" />
+	<_14 v="impale minimum velocity" />
+	<_8 v="impale maximum angle" />
+	<_14 v="impale effect duration" />
+	<_15 v="soft ping pain screen scale" />
+	<_2 v="general_damage" />
+	<_2 v="specific_damage" />
+	<_36 v="vampirism" />
+	<_38 v="vampirism">
+		<_F v="flags">
+			<Flag v="recovers health" />
+			<Flag v="recovers shields" />
+			<Flag v="resets shield stun" />
+		</_F>
+		<_34 v="generated_pad26a2" length="3" />
+		<_14 v="percent transferred" />
+		<_14 v="max overshield" />
+		<_41 v="overshield malleable properties" />
+		<_3B v="" />
+	</_38>
+	<_40 v="custom response labels">
+		<_2 v="custom label" />
+		<_3B v="" />
+	</_40>
+	<_14 v="AI stun radius" />
+	<_25 v="AI stun bounds" />
+	<_B v="aiNoiseVolume">
+		<Flag v="silent" />
+		<Flag v="quiet" />
+		<Flag v="medium" />
+		<Flag v="shout" />
+		<Flag v="loud" />
+	</_B>
+	<_34 v="generated_pad97e3" length="2" />
+	<_14 v="shake radius" />
+	<_14 v="EMP radius" />
+	<_14 v="EMP duration scalar" />
+	<_14 v="aoe spike radius" />
+	<_14 v="aoe spike damage bump" />
+	<_14 v="shield render effects scale" />
+	<_14 v="equipment hack time" />
+	<_36 v="damage response" />
+	<_41 v="damage response" />
+	<_40 v="damage sounds">
+		<_41 v="sound" />
+		<_E v="damage types">
+			<Flag v="none" />
+			<Flag v="lethal instantaneous" />
+			<Flag v="lethal" />
+			<Flag v="non lethal" />
+		</_E>
+		<_E v="object types">
+			<Flag v="biped" />
+			<Flag v="vehicle" />
+			<Flag v="weapon" />
+			<Flag v="equipment" />
+			<Flag v="terminal" />
+			<Flag v="projectile" />
+			<Flag v="scenery" />
+			<Flag v="machine" />
+			<Flag v="control" />
+			<Flag v="dispenser" />
+			<Flag v="crate" />
+			<Flag v="creature" />
+			<Flag v="giant" />
+			<Flag v="effect_scenery" />
+		</_E>
+		<_3B v="" />
+	</_40>
+	<_14 v="Damage dealt SFX cooldown time" />
+	<_14 v="Damage received SFX cooldown time" />
+	<_37 v="player damage additive sounds" />
+	<_41 v="deprecated player dealt damage additive sound" />
+	<_41 v="deprecated player dealt AOE damage additive sound" />
+	<_41 v="deprecated player dealt friendly fire additive sound" />
+	<_38 v="player additive sound deal damage">
+		<_41 v="player additive sound deal damage regular" />
+		<_41 v="player additive sound deal damage aoe" />
+		<_41 v="player additive sound deal damage friendly fire" />
+		<_41 v="player additive sound deal damage weak spot" />
+		<_41 v="player additive sound deal damage headshot" />
+		<_41 v="player additive sound deal damage kill" />
+		<_41 v="player additive sound deal damage headshot kill" />
+		<_3B v="" />
+	</_38>
+	<_41 v="player received damage additive sound (default)" />
+	<_41 v="player received damage additive sound (third person)" />
+	<_41 v="player received damage additive sound (in vehicle)" />
+	<_41 v="player received AOE damage additive sound (default)" />
+	<_41 v="player received AOE damage additive sound (third person)" />
+	<_41 v="player received AOE damage additive sound (in vehicle)" />
+	<_37 v="" />
+	<_41 v="damage effect sounds" />
+	<_14 v="visual damage radius" />
+	<_14 v="visual damage intensity" />
+	<_34 v="generated_pad4b2e" length="4" />
+	<_3B v="" />
+</root>

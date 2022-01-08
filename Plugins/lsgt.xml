@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="Source Level" />
+	<_E v="Options">
+		<Flag v="Include Hlod child IOs" />
+		<Flag v="Include Foliage" />
+	</_E>
+	<_34 v="generated_pad3038" length="2" />
+	<_14 v="Minimum object size" />
+	<_14 v="Minimum screen size" />
+	<_40 v="bsps">
+		<_41 v="Bsp" />
+		<_40 v="static placements">
+			<_38 v="Placement">
+				<_2 v="name" />
+				<_6 v="guid" />
+				<_41 v="prefab reference" />
+				<_2 v="variant name" />
+				<_17 v="position" />
+				<_1C v="rotation" />
+				<_19 v="scale" />
+				<_E v="flags">
+					<Flag v="Disable bullet collision" />
+					<Flag v="Disable play collision" />
+					<Flag v="Disable render collision" />
+					<Flag v="Override prefab probe-grid capture offset" />
+					<Flag v="PVS Always use LOD0" />
+					<Flag v="PVS Always visible" />
+					<Flag v="PVS Don't use as an occluder" />
+					<Flag v="Subtract override from kit" />
+					<Flag v="Generate decorators" />
+				</_E>
+				<_A v="cinema only">
+					<Flag v="no override" />
+					<Flag v="no" />
+					<Flag v="yes" />
+				</_A>
+				<_A v="exclude from cinema">
+					<Flag v="no override" />
+					<Flag v="no" />
+					<Flag v="yes" />
+				</_A>
+				<_A v="remove from dynamic shadow map">
+					<Flag v="no override" />
+					<Flag v="no" />
+					<Flag v="yes" />
+				</_A>
+				<_A v="exclude from intel map">
+					<Flag v="no override" />
+					<Flag v="no" />
+					<Flag v="yes" />
+				</_A>
+				<_34 v="generated_pad651e" length="2" />
+				<_2 v="in-game-maps material" />
+				<_A v="ignore cubemap volume">
+					<Flag v="no override" />
+					<Flag v="no" />
+					<Flag v="yes" />
+				</_A>
+				<_A v="Exclude from broadphase calculation">
+					<Flag v="no override" />
+					<Flag v="no" />
+					<Flag v="yes" />
+				</_A>
+				<_A v="pathfinding policy">
+					<Flag v="no override" />
+					<Flag v="cut-out" />
+					<Flag v="static" />
+					<Flag v="none" />
+				</_A>
+				<_A v="lightmapping policy">
+					<Flag v="automatic" />
+					<Flag v="per-pixel" />
+					<Flag v="per-vertex" />
+					<Flag v="single-probe" />
+					<Flag v="exclude" />
+					<Flag v="per-pixel ao" />
+					<Flag v="per-vertex ao" />
+					<Flag v="probe grid" />
+				</_A>
+				<_A v="collision decals policy">
+					<Flag v="No override" />
+					<Flag v="Force allow decals" />
+					<Flag v="Force do not allow decals" />
+				</_A>
+				<_34 v="generated_padb1d3" length="3" />
+				<_19 v="probe-grid capture offset" />
+				<_14 v="override lightmap resolution scale" />
+				<_14 v="decorator generator density" />
+				<_14 v="LOD distance override 1" />
+				<_14 v="LOD distance override 2" />
+				<_14 v="LOD distance override 3" />
+				<_14 v="LOD distance override 4" />
+				<_14 v="LOD distance override 5" />
+				<_14 v="LOD distance override 6" />
+				<_14 v="LOD distance override 7" />
+				<_14 v="LOD distance override 8" />
+				<_14 v="LOD distance override 9" />
+				<_14 v="LOD distance override 10" />
+				<_14 v="LOD distance override 11" />
+				<_14 v="LOD distance override 12" />
+				<_14 v="LOD distance override 13" />
+				<_14 v="LOD distance override 14" />
+				<_14 v="LOD distance override 15" />
+				<_14 v="LOD distance override 16" />
+				<_14 v="LOD fade after override" />
+				<_40 v="instance material overrides">
+					<_41 v="Original material ref" />
+					<_41 v="Override material ref" />
+					<_3B v="" />
+				</_40>
+				<_40 v="material overrides">
+					<_41 v="Original material ref" />
+					<_41 v="Override material ref" />
+					<_3B v="" />
+				</_40>
+				<_40 v="mask painting material bitmap overrides">
+					<_41 v="Original material ref" />
+					<_40 v="bitmap overrides">
+						<_2 v="parameter name" />
+						<_41 v="bitmap" />
+						<_3B v="" />
+					</_40>
+					<_41 v="Override material ref" />
+					<_3B v="" />
+				</_40>
+				<_40 v="EditorMetadata">
+					<_1 v="folder name" />
+					<_17 v="local space pivot point position" />
+					<_3B v="" />
+				</_40>
+				<_41 v="owner bsp" />
+				<_3B v="" />
+			</_38>
+			<_19 v="Bounding Center" />
+			<_14 v="Bounding Radius" />
+			<_14 v="Streaming Radius" />
+			<_3B v="" />
+		</_40>
+		<_40 v="foliage placements">
+			<_38 v="Placement">
+				<_2 v="name" />
+				<_6 v="guid" />
+				<_41 v="prefab reference" />
+				<_2 v="variant name" />
+				<_17 v="position" />
+				<_1C v="rotation" />
+				<_19 v="scale" />
+				<_E v="flags">
+					<Flag v="Disable bullet collision" />
+					<Flag v="Disable play collision" />
+					<Flag v="Disable render collision" />
+					<Flag v="Override prefab probe-grid capture offset" />
+					<Flag v="PVS Always use LOD0" />
+					<Flag v="PVS Always visible" />
+					<Flag v="PVS Don't use as an occluder" />
+					<Flag v="Subtract override from kit" />
+					<Flag v="Generate decorators" />
+				</_E>
+				<_A v="cinema only">
+					<Flag v="no override" />
+					<Flag v="no" />
+					<Flag v="yes" />
+				</_A>
+				<_A v="exclude from cinema">
+					<Flag v="no override" />
+					<Flag v="no" />
+					<Flag v="yes" />
+				</_A>
+				<_A v="remove from dynamic shadow map">
+					<Flag v="no override" />
+					<Flag v="no" />
+					<Flag v="yes" />
+				</_A>
+				<_A v="exclude from intel map">
+					<Flag v="no override" />
+					<Flag v="no" />
+					<Flag v="yes" />
+				</_A>
+				<_34 v="generated_pad651e" length="2" />
+				<_2 v="in-game-maps material" />
+				<_A v="ignore cubemap volume">
+					<Flag v="no override" />
+					<Flag v="no" />
+					<Flag v="yes" />
+				</_A>
+				<_A v="Exclude from broadphase calculation">
+					<Flag v="no override" />
+					<Flag v="no" />
+					<Flag v="yes" />
+				</_A>
+				<_A v="pathfinding policy">
+					<Flag v="no override" />
+					<Flag v="cut-out" />
+					<Flag v="static" />
+					<Flag v="none" />
+				</_A>
+				<_A v="lightmapping policy">
+					<Flag v="automatic" />
+					<Flag v="per-pixel" />
+					<Flag v="per-vertex" />
+					<Flag v="single-probe" />
+					<Flag v="exclude" />
+					<Flag v="per-pixel ao" />
+					<Flag v="per-vertex ao" />
+					<Flag v="probe grid" />
+				</_A>
+				<_A v="collision decals policy">
+					<Flag v="No override" />
+					<Flag v="Force allow decals" />
+					<Flag v="Force do not allow decals" />
+				</_A>
+				<_34 v="generated_padb1d3" length="3" />
+				<_19 v="probe-grid capture offset" />
+				<_14 v="override lightmap resolution scale" />
+				<_14 v="decorator generator density" />
+				<_14 v="LOD distance override 1" />
+				<_14 v="LOD distance override 2" />
+				<_14 v="LOD distance override 3" />
+				<_14 v="LOD distance override 4" />
+				<_14 v="LOD distance override 5" />
+				<_14 v="LOD distance override 6" />
+				<_14 v="LOD distance override 7" />
+				<_14 v="LOD distance override 8" />
+				<_14 v="LOD distance override 9" />
+				<_14 v="LOD distance override 10" />
+				<_14 v="LOD distance override 11" />
+				<_14 v="LOD distance override 12" />
+				<_14 v="LOD distance override 13" />
+				<_14 v="LOD distance override 14" />
+				<_14 v="LOD distance override 15" />
+				<_14 v="LOD distance override 16" />
+				<_14 v="LOD fade after override" />
+				<_40 v="instance material overrides">
+					<_41 v="Original material ref" />
+					<_41 v="Override material ref" />
+					<_3B v="" />
+				</_40>
+				<_40 v="material overrides">
+					<_41 v="Original material ref" />
+					<_41 v="Override material ref" />
+					<_3B v="" />
+				</_40>
+				<_40 v="mask painting material bitmap overrides">
+					<_41 v="Original material ref" />
+					<_40 v="bitmap overrides">
+						<_2 v="parameter name" />
+						<_41 v="bitmap" />
+						<_3B v="" />
+					</_40>
+					<_41 v="Override material ref" />
+					<_3B v="" />
+				</_40>
+				<_40 v="EditorMetadata">
+					<_1 v="folder name" />
+					<_17 v="local space pivot point position" />
+					<_3B v="" />
+				</_40>
+				<_41 v="owner bsp" />
+				<_3B v="" />
+			</_38>
+			<_19 v="Bounding Center" />
+			<_14 v="Bounding Radius" />
+			<_14 v="Streaming Radius" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad4a19" length="4" />
+	<_3B v="" />
+</root>

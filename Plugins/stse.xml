@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="structure manifest">
+		<_36 v="build identifer" />
+		<_38 v="build identifer">
+			<_6 v="manifest_id0" />
+			<_6 v="manifest_id1" />
+			<_6 v="manifest_id2" />
+			<_6 v="manifest_id3" />
+			<_6 v="build_index" />
+			<_6 v="structure importer version" />
+			<_3B v="" />
+		</_38>
+		<_36 v="parent build identifier" />
+		<_38 v="parent build identifer">
+			<_6 v="manifest_id0" />
+			<_6 v="manifest_id1" />
+			<_6 v="manifest_id2" />
+			<_6 v="manifest_id3" />
+			<_6 v="build_index" />
+			<_6 v="structure importer version" />
+			<_3B v="" />
+		</_38>
+		<_40 v="bsp manifest">
+			<_38 v="build identifer">
+				<_6 v="manifest_id0" />
+				<_6 v="manifest_id1" />
+				<_6 v="manifest_id2" />
+				<_6 v="manifest_id3" />
+				<_6 v="build_index" />
+				<_6 v="structure importer version" />
+				<_3B v="" />
+			</_38>
+			<_38 v="parent build identifer">
+				<_6 v="manifest_id0" />
+				<_6 v="manifest_id1" />
+				<_6 v="manifest_id2" />
+				<_6 v="manifest_id3" />
+				<_6 v="build_index" />
+				<_6 v="structure importer version" />
+				<_3B v="" />
+			</_38>
+			<_1 v="bsp name" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_36 v="This tag defines the geometry between seam connected structures bsp." />
+	<_6 v="version" />
+	<_40 v="errors">
+		<_1 v="name" />
+		<_A v="report type">
+			<Flag v="silent" />
+			<Flag v="comment" />
+			<Flag v="warning" />
+			<Flag v="error" />
+		</_A>
+		<_34 v="generated_padf276" length="1" />
+		<_E v="flags">
+			<Flag v="rendered" />
+			<Flag v="tangent-space" />
+			<Flag v="non-critical" />
+			<Flag v="lightmap light" />
+			<Flag v="report key is valid" />
+		</_E>
+		<_3D v="runtime generation flags" />
+		<_34 v="generated_pad3f2b" length="2" />
+		<_6 v="runtime something" />
+		<_40 v="reports">
+			<_A v="type">
+				<Flag v="silent" />
+				<Flag v="comment" />
+				<Flag v="warning" />
+				<Flag v="error" />
+			</_A>
+			<_A v="source">
+				<Flag v="none" />
+				<Flag v="structure" />
+				<Flag v="poop" />
+				<Flag v="lightmap" />
+				<Flag v="pathfinding" />
+			</_A>
+			<_E v="flags">
+				<Flag v="rendered" />
+				<Flag v="tangent-space" />
+				<Flag v="non-critical" />
+				<Flag v="lightmap light" />
+				<Flag v="report key is valid" />
+			</_E>
+			<_42 v="text" />
+			<_6 v="source identifier" />
+			<_0 v="source filename" />
+			<_6 v="source line number" />
+			<_40 v="vertices">
+				<_38 v="point">
+					<_17 v="position" />
+					<_39 v="node indices" />
+					<_39 v="node weights" />
+					<_3B v="" />
+				</_38>
+				<_20 v="color" />
+				<_14 v="screen size" />
+				<_3B v="" />
+			</_40>
+			<_40 v="vectors">
+				<_38 v="point">
+					<_17 v="position" />
+					<_39 v="node indices" />
+					<_39 v="node weights" />
+					<_3B v="" />
+				</_38>
+				<_20 v="color" />
+				<_19 v="normal" />
+				<_14 v="screen length" />
+				<_3B v="" />
+			</_40>
+			<_40 v="lines">
+				<_39 v="points" />
+				<_20 v="color" />
+				<_3B v="" />
+			</_40>
+			<_40 v="triangles">
+				<_39 v="points" />
+				<_20 v="color" />
+				<_3B v="" />
+			</_40>
+			<_40 v="quads">
+				<_39 v="points" />
+				<_20 v="color" />
+				<_3B v="" />
+			</_40>
+			<_40 v="comments">
+				<_42 v="text" />
+				<_38 v="point">
+					<_17 v="position" />
+					<_39 v="node indices" />
+					<_39 v="node weights" />
+					<_3B v="" />
+				</_38>
+				<_20 v="color" />
+				<_3B v="" />
+			</_40>
+			<_6 v="report key" />
+			<_6 v="node index" />
+			<_25 v="bounds x" />
+			<_25 v="bounds y" />
+			<_25 v="bounds z" />
+			<_20 v="color" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="seams">
+		<_38 v="identifier">
+			<_6 v="seam_id0" />
+			<_6 v="seam_id1" />
+			<_6 v="seam_id2" />
+			<_6 v="seam_id3" />
+			<_3B v="" />
+		</_38>
+		<_38 v="original">
+			<_40 v="original vertices">
+				<_17 v="original vertex" />
+				<_6 v="final point index" />
+				<_40 v="plane normals">
+					<_19 v="triangle normal" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_38 v="final">
+			<_40 v="planes">
+				<_1E v="plane" />
+				<_3B v="" />
+			</_40>
+			<_40 v="points">
+				<_17 v="final point" />
+				<_3B v="" />
+			</_40>
+			<_40 v="triangles">
+				<_6 v="final plane" />
+				<_2E v="final point0" />
+				<_2E v="final point1" />
+				<_2E v="final point2" />
+				<_34 v="generated_pad4b3a" length="2" />
+				<_3B v="" />
+			</_40>
+			<_40 v="edges">
+				<_2E v="final point0" />
+				<_2E v="final point1" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="seam triangle mopp code block">
+		<_7 v="field pointer skip" />
+		<_7 v="property bag skip" />
+		<_5 v="size" />
+		<_5 v="count" />
+		<_34 v="pad0" length="12" />
+		<_14 v="v.i" />
+		<_14 v="v.j" />
+		<_14 v="v.k" />
+		<_14 v="v.w" />
+		<_34 v="pad64_0" length="4" />
+		<_7 v="m_data pointer" />
+		<_6 v="int m_size" />
+		<_6 v="int m_capacityAndFlags" />
+		<_4 v="int8 m_buildType" />
+		<_34 v="pad1_0" length="1" />
+		<_34 v="pad1_1" length="2" />
+		<_34 v="pad1_2" length="4" />
+		<_34 v="pad64_1" length="4" />
+		<_37 v="" />
+		<_40 v="mopp data block ">
+			<_3C v="mopp data" />
+			<_3B v="" />
+		</_40>
+		<_37 v="" />
+		<_4 v="mopp build type" />
+		<_34 v="pad2_0" length="1" />
+		<_34 v="pad2_1" length="2" />
+		<_34 v="generated_pad27be" length="8" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padf765" length="4" />
+	<_3B v="" />
+</root>

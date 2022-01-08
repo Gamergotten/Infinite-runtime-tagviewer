@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Geometry">
+		<_2 v="Visual region name" />
+		<_2 v="Property region name" />
+		<_40 v="Mesh parts">
+			<_40 v="Vertices">
+				<_19 v="Position" />
+				<_19 v="Normal" />
+				<_19 v="Binormal" />
+				<_19 v="Tangent" />
+				<_19 v="Tangent UV2" />
+				<_19 v="Tangent UV3" />
+				<_18 v="Texcoord set 1" />
+				<_18 v="Texcoord set 2" />
+				<_18 v="Texcoord set 3" />
+				<_18 v="Lighting texcoord set" />
+				<_20 v="Color" />
+				<_14 v="Dual Quaternion Weight" />
+				<_40 v="Joint Weights">
+					<_2E v="Joint index" />
+					<_34 v="generated_pad85cc" length="2" />
+					<_14 v="Joint weight" />
+					<_3B v="" />
+				</_40>
+				<_40 v="Blendshape Targets">
+					<_2 v="Name" />
+					<_19 v="Delta" />
+					<_3E v="Procedural deformation index" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Indices">
+				<_6 v="Triangle index" />
+				<_3B v="" />
+			</_40>
+			<_3E v="Material block index" />
+			<_1 v="Originating shape name" />
+			<_1 v="Originating shape UUID" />
+			<_3E v="Properties checksum" />
+			<_17 v="Position bounds lower" />
+			<_17 v="Position bounds upper" />
+			<_16 v="Texcoord bounds lower" />
+			<_16 v="Texcoord bounds upper" />
+			<_16 v="Texcoord2 bounds lower" />
+			<_16 v="Texcoord2 bounds upper" />
+			<_16 v="Texcoord3 bounds lower" />
+			<_16 v="Texcoord3 bounds upper" />
+			<_16 v="Lighting texcoord bounds lower" />
+			<_16 v="Lighting texcoord bounds upper" />
+			<_3B v="" />
+		</_40>
+		<_E v="LOD flags">
+			<Flag v="LOD 0" />
+			<Flag v="LOD 1" />
+			<Flag v="LOD 2" />
+			<Flag v="LOD 3" />
+			<Flag v="LOD 4" />
+			<Flag v="LOD 5" />
+			<Flag v="LOD 6" />
+			<Flag v="LOD 7" />
+			<Flag v="LOD 8" />
+			<Flag v="LOD 9" />
+			<Flag v="LOD 10" />
+			<Flag v="LOD 11" />
+			<Flag v="LOD 12" />
+			<Flag v="LOD 13" />
+			<Flag v="LOD 14" />
+			<Flag v="LOD 15" />
+		</_E>
+		<_E v="Usage flags">
+			<Flag v="Use as render geometry" />
+			<Flag v="Use as bullet collision geometry" />
+			<Flag v="Use as play collision geometry" />
+			<Flag v="Use as physics collision geometry" />
+			<Flag v="Use as dynamic collision geometry" />
+			<Flag v="Use as invisible wall" />
+			<Flag v="Use as custom shadow caster geometry" />
+			<Flag v="Use as custom shadow caster geometry (alpha support)" />
+		</_E>
+		<_E v="Supported features">
+			<Flag v="Has usable primary UV set" />
+			<Flag v="Has usable second UV set" />
+			<Flag v="Has usable lightmap UV set" />
+			<Flag v="Has usable colorset" />
+			<Flag v="Has skinning" />
+			<Flag v="Has dual quaternion skinning" />
+			<Flag v="Force decorator format" />
+			<Flag v="Has usable third UV set" />
+			<Flag v="Use UV3 Tangent Rotation" />
+			<Flag v="Has blendshapes" />
+			<Flag v="Has more than 4 influences" />
+		</_E>
+		<_34 v="generated_pade039" length="2" />
+		<_D v="Import Info">
+			<Flag v="Was generated during import" />
+		</_D>
+		<_44 v="Originating source file" />
+		<_7 v="Properties checksum" />
+		<_17 v="Position bounds lower" />
+		<_17 v="Position bounds upper" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Materials">
+		<_41 v="Material reference" />
+		<_3B v="" />
+	</_40>
+	<_7 v="Joints checksum" />
+	<_40 v="Joints">
+		<_2 v="name" />
+		<_2E v="parent node" />
+		<_2E v="first child node" />
+		<_2E v="next sibling node" />
+		<_34 v="generated_pad95e7" length="2" />
+		<_17 v="default translation" />
+		<_1A v="default rotation" />
+		<_D v="importer_flags">
+			<Flag v="world bone" />
+		</_D>
+		<_3B v="" />
+	</_40>
+	<_40 v="Procedural deformations">
+		<_2 v="Name" />
+		<_2 v="Mode" />
+		<_40 v="Control parameters">
+			<_A v="Parameter mode">
+				<Flag v="User parameter" />
+				<Flag v="Constant value" />
+			</_A>
+			<_34 v="generated_pade7c0" length="3" />
+			<_2 v="Name" />
+			<_14 v="Constant value" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_37 v="Markers" />
+	<_40 v="Marker Groups">
+		<_2 v="Group" />
+		<_40 v="Markers">
+			<_2 v="Visual region name" />
+			<_2 v="Name" />
+			<_2 v="Parent" />
+			<_17 v="Position" />
+			<_1C v="Rotation" />
+			<_19 v="Scale" />
+			<_19 v="Direction" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Hint Marker Groups">
+		<_C v="Hint Type">
+			<Flag v="Bunker" />
+			<Flag v="Corner Left" />
+			<Flag v="Corner Right" />
+			<Flag v="Vault Step" />
+			<Flag v="Vault Crouch" />
+			<Flag v="Hoist Stand" />
+			<Flag v="Hoist Crouch" />
+		</_C>
+		<_40 v="Hint Markers">
+			<_2 v="Visual region name" />
+			<_2 v="Name" />
+			<_2 v="Parent" />
+			<_17 v="Position" />
+			<_1C v="Rotation" />
+			<_19 v="Scale" />
+			<_14 v="Length" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Target Marker Groups">
+		<_2 v="Group" />
+		<_40 v="Target Markers">
+			<_2 v="Visual region name" />
+			<_2 v="Name" />
+			<_2 v="Parent" />
+			<_17 v="Position" />
+			<_14 v="Radius" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_40 v="Import transition distances">
+		<_14 v="Transition distance" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Physics">
+		<_40 v="Constraints">
+			<_2 v="Name" />
+			<_2 v="Physics settings" />
+			<_17 v="Position" />
+			<_1A v="Orientation" />
+			<_2 v="Parent shape" />
+			<_2 v="Child shape" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Primitives">
+			<_2 v="Name" />
+			<_2 v="Physics settings" />
+			<_2 v="Visual region name" />
+			<_2 v="Property region name" />
+			<_A v="Primitive type">
+				<Flag v="Sphere" />
+				<Flag v="Capsule" />
+				<Flag v="Cylinder" />
+				<Flag v="Box" />
+			</_A>
+			<_34 v="generated_pade68c" length="1" />
+			<_2E v="Joint index" />
+			<_17 v="Position" />
+			<_1A v="Orientation" />
+			<_14 v="Radius" />
+			<_14 v="Length" />
+			<_14 v="Width" />
+			<_14 v="Height" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Meshes">
+			<_2 v="Name" />
+			<_2 v="Physics settings" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_38 v="Validation">
+		<_36 v="Content validation tests" />
+		<_D v="Validation status">
+			<Flag v="Performance (performance will be effected)" />
+			<Flag v="Functionality (functionality will be impaired)" />
+			<Flag v="Critical (will cause crashes or instability if processed)" />
+			<Flag v="Not Run (this test has not been run as of the last pass)" />
+		</_D>
+		<_40 v="Validation test batteries">
+			<_1 v="Group name" />
+			<_6 v="Group ID" />
+			<_D v="Validation status">
+				<Flag v="Performance (performance will be effected)" />
+				<Flag v="Functionality (functionality will be impaired)" />
+				<Flag v="Critical (will cause crashes or instability if processed)" />
+				<Flag v="Not Run (this test has not been run as of the last pass)" />
+			</_D>
+			<_40 v="Validation Tests">
+				<_1 v="Test name" />
+				<_D v="Test status">
+					<Flag v="Performance (performance will be effected)" />
+					<Flag v="Functionality (functionality will be impaired)" />
+					<Flag v="Critical (will cause crashes or instability if processed)" />
+					<Flag v="Not Run (this test has not been run as of the last pass)" />
+				</_D>
+				<_40 v="Comments">
+					<_1 v="Comment" />
+					<_D v="Status">
+						<Flag v="Performance (performance will be effected)" />
+						<Flag v="Functionality (functionality will be impaired)" />
+						<Flag v="Critical (will cause crashes or instability if processed)" />
+						<Flag v="Not Run (this test has not been run as of the last pass)" />
+					</_D>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_34 v="generated_pad6734" length="4" />
+	<_3B v="" />
+</root>

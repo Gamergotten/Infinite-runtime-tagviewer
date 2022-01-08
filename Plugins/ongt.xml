@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="Source Graph" />
+	<_40 v="Nodes">
+		<_2 v="Node Type" />
+		<_6 v="Node ID" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Node Connections">
+		<_6 v="Parent Node ID" />
+		<_6 v="Child Node ID" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Node Parameter Connections">
+		<_6 v="Owning Node ID" />
+		<_2 v="Parameter Identifier" />
+		<_A v="Parameter Type">
+			<Flag v="Bool" />
+			<Flag v="Integer" />
+			<Flag v="Float" />
+			<Flag v="String" />
+			<Flag v="Squad Type" />
+			<Flag v="Combat Status" />
+			<Flag v="Area Reference" />
+			<Flag v="Squad Reference" />
+			<Flag v="Location Reference" />
+			<Flag v="Object Reference" />
+		</_A>
+		<_34 v="generated_pad818f" length="3" />
+		<_6 v="Parameter Index" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Bool Parameters">
+		<_2 v="Blackboard Identifier" />
+		<_4 v="Parameter Value" />
+		<_34 v="generated_pad1bf7" length="3" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Int Parameters">
+		<_2 v="Blackboard Identifier" />
+		<_6 v="Parameter Value" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Float Parameters">
+		<_2 v="Blackboard Identifier" />
+		<_14 v="Parameter Value" />
+		<_3B v="" />
+	</_40>
+	<_40 v="String Parameters">
+		<_2 v="Blackboard Identifier" />
+		<_2 v="Parameter Value" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Asset Parameters">
+		<_2 v="Blackboard Identifier" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pada36f" length="4" />
+	<_3B v="" />
+</root>

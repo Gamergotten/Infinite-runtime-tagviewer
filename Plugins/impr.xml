@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_14 v="Camera distance" />
+	<_B v="Number of camera points">
+		<Flag v="13 camera positions" />
+		<Flag v="41 camera positions" />
+		<Flag v="145 camera positions" />
+		<Flag v="181 camera positions" />
+		<Flag v="221 camera positions" />
+	</_B>
+	<_E v="Texture channels rendered">
+		<Flag v="Alpha" />
+		<Flag v="Albedo" />
+		<Flag v="Normals" />
+		<Flag v="Roughness" />
+		<Flag v="Ambient Occlusion" />
+		<Flag v="Depth" />
+	</_E>
+	<_B v="Grid shape">
+		<Flag v="Camera placements around hemisphere" />
+	</_B>
+	<_B v="Texture size">
+		<Flag v="128x128" />
+		<Flag v="256x256" />
+		<Flag v="512x512" />
+	</_B>
+	<_B v="Maximum LOD index">
+		<Flag v="lod 0" />
+		<Flag v="lod 1" />
+		<Flag v="lod 2" />
+		<Flag v="lod 3" />
+		<Flag v="lod 4" />
+		<Flag v="lod 5" />
+		<Flag v="lod 6" />
+		<Flag v="lod 7" />
+		<Flag v="lod 8" />
+		<Flag v="lod 9" />
+		<Flag v="lod 10" />
+		<Flag v="lod 11" />
+		<Flag v="lod 12" />
+		<Flag v="lod 13" />
+		<Flag v="lod 14" />
+		<Flag v="lod 15" />
+	</_B>
+	<_34 v="generated_padac96" length="2" />
+	<_3B v="" />
+</root>

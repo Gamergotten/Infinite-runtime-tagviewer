@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Valor Rewards">
+		<_2 v="Reward Name" />
+		<_2 v="Is Read Key" />
+		<_2E v="Icon" />
+		<_2E v="Background" />
+		<_6 v="Sprite Index" />
+		<_B v="Damage Type">
+			<Flag v="None" />
+			<Flag v="Kinetic" />
+			<Flag v="Plasma" />
+			<Flag v="Hardlight" />
+			<Flag v="Shock" />
+			<Flag v="Power" />
+			<Flag v="Melee" />
+		</_B>
+		<_34 v="generated_pad0c76" length="2" />
+		<_41 v="Vehicle Sprite" />
+		<_41 v="Weapon Sprite" />
+		<_41 v="Marine Sprite" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Valor Points">
+		<_2 v="Persistence Key" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Icons">
+		<_2 v="Name" />
+		<_41 v="Sprite" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Backgrounds">
+		<_2 v="Name" />
+		<_41 v="Sprite" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

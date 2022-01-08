@@ -1,0 +1,5421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Scenario" />
+	<_38 v="Scenario">
+		<_41 v="Scenario" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_2 v="Name" />
+	<_D v="Flags">
+		<Flag v="Letterbox On" />
+		<Flag v="Mute Transition" />
+		<Flag v="Coop ICS" />
+		<Flag v="Immediate ICS" />
+		<Flag v="Don't Force Hologram Render" />
+		<Flag v="Lower Weapon" />
+		<Flag v="Hide Hud" />
+		<Flag v="Allow Player Input With Camera Track" />
+		<Flag v="AI Does Not Ignore Players With Camera Track" />
+		<Flag v="Client Only" />
+		<Flag v="Unskippable" />
+		<Flag v="Override LOD Scale" />
+		<Flag v="Disable Bsp Streaming" />
+		<Flag v="Stop Previous Cage Camera Update" />
+		<Flag v="Use Inertialization" />
+		<Flag v="Do Not Teleport Absent Players" />
+		<Flag v="Prefer Teleport To Spawn Points" />
+		<Flag v="Do Not Teleport Vehicles" />
+		<Flag v="Destroy Vehicle" />
+		<Flag v="Split-Screen Camera" />
+		<Flag v="Skip All Scenes" />
+		<Flag v="Disable Fade-In After Skip" />
+		<Flag v="Fade Vehicle Transition" />
+		<Flag v="Fade Support Transition" />
+		<Flag v="Fade Airborne Transition" />
+	</_D>
+	<_14 v="Animation Blend In" />
+	<_14 v="Cage Camera Blend In Time" />
+	<_A v="Cage Camera Blend In Curve">
+		<Flag v="None" />
+		<Flag v="Linear" />
+		<Flag v="Zero" />
+		<Flag v="One" />
+		<Flag v="EaseInQuad" />
+		<Flag v="EaseOutQuad" />
+		<Flag v="EaseInOutQuad" />
+		<Flag v="EaseInCubic" />
+		<Flag v="EaseOutCubic" />
+		<Flag v="EaseInOutCubic" />
+		<Flag v="EaseInQuart" />
+		<Flag v="EaseOutQuart" />
+		<Flag v="EaseInOutQuart" />
+		<Flag v="EaseInQuint" />
+		<Flag v="EaseOutQuint" />
+		<Flag v="EaseInOutQuint" />
+		<Flag v="EaseInSine" />
+		<Flag v="EaseOutSine" />
+		<Flag v="EaseInOutSine" />
+		<Flag v="EaseInExpo" />
+		<Flag v="EaseOutExpo" />
+		<Flag v="EaseInOutExpo" />
+		<Flag v="EaseInCirc" />
+		<Flag v="EaseOutCirc" />
+		<Flag v="EaseInOutCirc" />
+		<Flag v="EaseInOutLight" />
+		<Flag v="EaseInOutHeavy" />
+	</_A>
+	<_34 v="generated_pada339" length="3" />
+	<_2 v="Cage Camera Blend-In Variant" />
+	<_14 v="Cage Camera Blend Out Time" />
+	<_A v="Cage Camera Blend Out Curve">
+		<Flag v="None" />
+		<Flag v="Linear" />
+		<Flag v="Zero" />
+		<Flag v="One" />
+		<Flag v="EaseInQuad" />
+		<Flag v="EaseOutQuad" />
+		<Flag v="EaseInOutQuad" />
+		<Flag v="EaseInCubic" />
+		<Flag v="EaseOutCubic" />
+		<Flag v="EaseInOutCubic" />
+		<Flag v="EaseInQuart" />
+		<Flag v="EaseOutQuart" />
+		<Flag v="EaseInOutQuart" />
+		<Flag v="EaseInQuint" />
+		<Flag v="EaseOutQuint" />
+		<Flag v="EaseInOutQuint" />
+		<Flag v="EaseInSine" />
+		<Flag v="EaseOutSine" />
+		<Flag v="EaseInOutSine" />
+		<Flag v="EaseInExpo" />
+		<Flag v="EaseOutExpo" />
+		<Flag v="EaseInOutExpo" />
+		<Flag v="EaseInCirc" />
+		<Flag v="EaseOutCirc" />
+		<Flag v="EaseInOutCirc" />
+		<Flag v="EaseInOutLight" />
+		<Flag v="EaseInOutHeavy" />
+	</_A>
+	<_34 v="generated_pad8958" length="3" />
+	<_2 v="Cage Camera Blend-Out Variant" />
+	<_14 v="Cinematic LOD Scale" />
+	<_37 v="Transition Fade Overrides" />
+	<_14 v="Vehicle Transition Fade Time Override" />
+	<_14 v="Support Transition Fade Time Override" />
+	<_14 v="Airborne Transition Fade Time Override" />
+	<_14 v="Composition Start Transition Fade Time Override" />
+	<_37 v="" />
+	<_2 v="Lighting Variant" />
+	<_41 v="Transition" />
+	<_41 v="Skip Sound Event" />
+	<_41 v="Start Sound Event" />
+	<_41 v="End Sound Event" />
+	<_41 v="Skip Music Event" />
+	<_41 v="Start Music Event" />
+	<_41 v="End Music Event" />
+	<_41 v="Skip Dialog Event" />
+	<_41 v="Start Dialog Event" />
+	<_41 v="End Dialog Event" />
+	<_37 v="Bink" />
+	<_38 v="Bink">
+		<_D v="Flags">
+			<Flag v="Extra Memory" />
+			<Flag v="Opaque" />
+			<Flag v="No Stretch" />
+		</_D>
+		<_41 v="Bink Movie" />
+		<_0 v="Bink Movie On Disc" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="ICS Points" />
+	<_0 v="ICS Point 0" />
+	<_0 v="ICS Point 1" />
+	<_0 v="ICS Point 2" />
+	<_0 v="ICS Point 3" />
+	<_37 v="" />
+	<_38 v="Start Script">
+		<_F v="Flags">
+			<Flag v="Client" />
+			<Flag v="HasAssociatedScript" />
+			<Flag v="IgnoreInEditor" />
+		</_F>
+		<_34 v="generated_pad585d" length="3" />
+		<_42 v="Data" />
+		<_3C v="Boolean Expression" />
+		<_34 v="generated_pad3e7c" length="3" />
+		<_42 v="Runtime Script Binary" />
+		<_0 v="Runtime Script Name" />
+		<_3E v="Runtime Script CRC" />
+		<_3B v="" />
+	</_38>
+	<_38 v="End Script">
+		<_F v="Flags">
+			<Flag v="Client" />
+			<Flag v="HasAssociatedScript" />
+			<Flag v="IgnoreInEditor" />
+		</_F>
+		<_34 v="generated_pad585d" length="3" />
+		<_42 v="Data" />
+		<_3C v="Boolean Expression" />
+		<_34 v="generated_pad3e7c" length="3" />
+		<_42 v="Runtime Script Binary" />
+		<_0 v="Runtime Script Name" />
+		<_3E v="Runtime Script CRC" />
+		<_3B v="" />
+	</_38>
+	<_38 v="Skip Script">
+		<_F v="Flags">
+			<Flag v="Client" />
+			<Flag v="HasAssociatedScript" />
+			<Flag v="IgnoreInEditor" />
+		</_F>
+		<_34 v="generated_pad585d" length="3" />
+		<_42 v="Data" />
+		<_3C v="Boolean Expression" />
+		<_34 v="generated_pad3e7c" length="3" />
+		<_42 v="Runtime Script Binary" />
+		<_0 v="Runtime Script Name" />
+		<_3E v="Runtime Script CRC" />
+		<_3B v="" />
+	</_38>
+	<_40 v="Scenes">
+		<_2 v="Name" />
+		<_2 v="Anchor Marker" />
+		<_17 v="Anchor Position" />
+		<_1C v="Anchor Rotation" />
+		<_A v="Reset Lighting">
+			<Flag v="Default" />
+			<Flag v="Don't Reset" />
+			<Flag v="Reset" />
+		</_A>
+		<_F v="Flags">
+			<Flag v="Supports Multiplayer Team Cameras" />
+			<Flag v="Use Local Players First" />
+			<Flag v="Sort Players By Place" />
+		</_F>
+		<_34 v="generated_padd502" length="2" />
+		<_41 v="Skip Sound Event" />
+		<_41 v="Start Sound Event" />
+		<_41 v="End Sound Event" />
+		<_41 v="Skip Music Event" />
+		<_41 v="Start Music Event" />
+		<_41 v="End Music Event" />
+		<_41 v="Skip Dialog Event" />
+		<_41 v="Start Dialog Event" />
+		<_41 v="End Dialog Event" />
+		<_40 v="Synced Audio Tracks">
+			<_41 v="SoundEvent" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Tracks">
+			<_2 v="Name" />
+			<_A v="Type">
+				<Flag v="Camera" />
+				<Flag v="Puppet" />
+				<Flag v="Dummy" />
+			</_A>
+			<_34 v="generated_padec1b" length="3" />
+			<_6 v="Id" />
+			<_5 v="Data Index" />
+			<_5 v="SubAction Count" />
+			<_40 v="Actions">
+				<_2 v="Name" />
+				<_6 v="Id" />
+				<_6 v="Blend In" />
+				<_A v="Blend In Curve">
+					<Flag v="None" />
+					<Flag v="Linear" />
+					<Flag v="Zero" />
+					<Flag v="One" />
+					<Flag v="EaseInQuad" />
+					<Flag v="EaseOutQuad" />
+					<Flag v="EaseInOutQuad" />
+					<Flag v="EaseInCubic" />
+					<Flag v="EaseOutCubic" />
+					<Flag v="EaseInOutCubic" />
+					<Flag v="EaseInQuart" />
+					<Flag v="EaseOutQuart" />
+					<Flag v="EaseInOutQuart" />
+					<Flag v="EaseInQuint" />
+					<Flag v="EaseOutQuint" />
+					<Flag v="EaseInOutQuint" />
+					<Flag v="EaseInSine" />
+					<Flag v="EaseOutSine" />
+					<Flag v="EaseInOutSine" />
+					<Flag v="EaseInExpo" />
+					<Flag v="EaseOutExpo" />
+					<Flag v="EaseInOutExpo" />
+					<Flag v="EaseInCirc" />
+					<Flag v="EaseOutCirc" />
+					<Flag v="EaseInOutCirc" />
+					<Flag v="EaseInOutLight" />
+					<Flag v="EaseInOutHeavy" />
+				</_A>
+				<_34 v="generated_pad61be" length="3" />
+				<_6 v="Length" />
+				<_F v="Flags">
+					<Flag v="Looping" />
+					<Flag v="Simulate Position" />
+					<Flag v="Lower Weapon" />
+					<Flag v="Stow Weapon Immediately" />
+				</_F>
+				<_A v="Type">
+					<Flag v="Animation" />
+					<Flag v="Graph Animation" />
+					<Flag v="Path" />
+					<Flag v="Camera" />
+					<Flag v="CameraCage" />
+					<Flag v="Hide" />
+					<Flag v="Dummy" />
+					<Flag v="Geometry Cache" />
+					<Flag v="Unit Recording" />
+					<Flag v="Command Script" />
+				</_A>
+				<_A v="Simulation Type">
+					<Flag v="Default" />
+					<Flag v="Simulation On" />
+					<Flag v="Simulation Off" />
+				</_A>
+				<_34 v="generated_padae73" length="1" />
+				<_5 v="Data Index" />
+				<_5 v="Condition Check Rate" />
+				<_38 v="Condition Script">
+					<_F v="Flags">
+						<Flag v="Client" />
+						<Flag v="HasAssociatedScript" />
+						<Flag v="IgnoreInEditor" />
+					</_F>
+					<_34 v="generated_pad585d" length="3" />
+					<_42 v="Data" />
+					<_3C v="Boolean Expression" />
+					<_34 v="generated_pad3e7c" length="3" />
+					<_42 v="Runtime Script Binary" />
+					<_0 v="Runtime Script Name" />
+					<_3E v="Runtime Script CRC" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_40 v="Editor Actions">
+				<_1 v="Comment" />
+				<_3E v="Color" />
+				<_F v="Editor Flags">
+					<Flag v="Muted" />
+					<Flag v="Expanded" />
+					<Flag v="Imported" />
+					<Flag v="Playing" />
+					<Flag v="Recording" />
+					<Flag v="Hidden" />
+					<Flag v="HasTrailingEmptyAction" />
+				</_F>
+				<_34 v="generated_padd075" length="3" />
+				<_37 v="Condition Script" />
+				<_38 v="Condition Script">
+					<_42 v="Data" />
+					<_3E v="Script CRC" />
+					<_3B v="" />
+				</_38>
+				<_37 v="" />
+				<_3B v="" />
+			</_40>
+			<_40 v="Cameras">
+				<_F v="Flags">
+					<Flag v="Disable Lightmap Shadow" />
+					<Flag v="Instant Auto Exposure" />
+					<Flag v="Looping" />
+					<Flag v="Play in Reverse" />
+					<Flag v="Disable Floating Shadow" />
+					<Flag v="No Subframe Interpolation" />
+					<Flag v="Preserve Player Aim" />
+				</_F>
+				<_34 v="generated_padb1af" length="3" />
+				<_2 v="Animation Name" />
+				<_6 v="Animation Index" />
+				<_37 v="Position" />
+				<_38 v="Position">
+					<_B v="Type">
+						<Flag v="Current" />
+						<Flag v="Object" />
+						<Flag v="Placement" />
+						<Flag v="Point Set" />
+						<Flag v="Flag" />
+						<Flag v="Custom" />
+						<Flag v="Scene Anchor" />
+						<Flag v="Instance Anchor" />
+						<Flag v="Nearest Player" />
+						<Flag v="Inherit from Parent" />
+						<Flag v="None" />
+					</_B>
+					<_F v="Flags">
+						<Flag v="Use Orientation" />
+						<Flag v="Don't Stop" />
+					</_F>
+					<_34 v="generated_pad5f87" length="1" />
+					<_38 v="Subject">
+						<_2 v="Object Name" />
+						<_42 v="Raw Object Name" />
+						<_38 v="Object">
+							<_40 v="path">
+								<_6 v="guid" />
+								<_2 v="name" />
+								<_3B v="" />
+							</_40>
+							<_6 v="guid" />
+							<_3B v="" />
+						</_38>
+						<_A v="Object Resolution Type">
+							<Flag v="Invalid" />
+							<Flag v="Reference" />
+							<Flag v="Name" />
+							<Flag v="AI" />
+							<Flag v="Global" />
+							<Flag v="Puppet" />
+							<Flag v="Point Set" />
+							<Flag v="Flag" />
+						</_A>
+						<_34 v="generated_padc9c6" length="3" />
+						<_3B v="" />
+					</_38>
+					<_2 v="Marker" />
+					<_17 v="Position" />
+					<_1C v="Rotation" />
+					<_3B v="" />
+				</_38>
+				<_37 v="" />
+				<_6 v="Start Frame" />
+				<_6 v="End Frame" />
+				<_6 v="Repeat Count" />
+				<_14 v="Scale" />
+				<_3B v="" />
+			</_40>
+			<_40 v="Camera Cages">
+				<_37 v="Placement" />
+				<_38 v="Placement">
+					<_B v="Type">
+						<Flag v="Current" />
+						<Flag v="Object" />
+						<Flag v="Placement" />
+						<Flag v="Point Set" />
+						<Flag v="Flag" />
+						<Flag v="Custom" />
+						<Flag v="Scene Anchor" />
+						<Flag v="Instance Anchor" />
+						<Flag v="Nearest Player" />
+						<Flag v="Inherit from Parent" />
+						<Flag v="None" />
+					</_B>
+					<_F v="Flags">
+						<Flag v="Use Orientation" />
+						<Flag v="Don't Stop" />
+					</_F>
+					<_34 v="generated_pad5f87" length="1" />
+					<_38 v="Subject">
+						<_2 v="Object Name" />
+						<_42 v="Raw Object Name" />
+						<_38 v="Object">
+							<_40 v="path">
+								<_6 v="guid" />
+								<_2 v="name" />
+								<_3B v="" />
+							</_40>
+							<_6 v="guid" />
+							<_3B v="" />
+						</_38>
+						<_A v="Object Resolution Type">
+							<Flag v="Invalid" />
+							<Flag v="Reference" />
+							<Flag v="Name" />
+							<Flag v="AI" />
+							<Flag v="Global" />
+							<Flag v="Puppet" />
+							<Flag v="Point Set" />
+							<Flag v="Flag" />
+						</_A>
+						<_34 v="generated_padc9c6" length="3" />
+						<_3B v="" />
+					</_38>
+					<_2 v="Marker" />
+					<_17 v="Position" />
+					<_1C v="Rotation" />
+					<_3B v="" />
+				</_38>
+				<_37 v="" />
+				<_38 v="Position Subject">
+					<_2 v="Object Name" />
+					<_42 v="Raw Object Name" />
+					<_38 v="Object">
+						<_40 v="path">
+							<_6 v="guid" />
+							<_2 v="name" />
+							<_3B v="" />
+						</_40>
+						<_6 v="guid" />
+						<_3B v="" />
+					</_38>
+					<_A v="Object Resolution Type">
+						<Flag v="Invalid" />
+						<Flag v="Reference" />
+						<Flag v="Name" />
+						<Flag v="AI" />
+						<Flag v="Global" />
+						<Flag v="Puppet" />
+						<Flag v="Point Set" />
+						<Flag v="Flag" />
+					</_A>
+					<_34 v="generated_padc9c6" length="3" />
+					<_3B v="" />
+				</_38>
+				<_41 v="Position Cage or Abc" />
+				<_6 v="Start Frame" />
+				<_6 v="End Frame" />
+				<_6 v="Repeat Count" />
+				<_14 v="Scale" />
+				<_8 v="Max Look Drift Angle" />
+				<_1B v="Look Drift Speed" />
+				<_3C v="Look Drift Dampen Percentage" />
+				<_34 v="generated_pad2bb7" length="3" />
+				<_14 v="Look Drift Dampen Time" />
+				<_14 v="Look Drift No Input Delay" />
+				<_2 v="Position Cage Point" />
+				<_2 v="Camera Name" />
+				<_40 v="Target Points">
+					<_38 v="Subject">
+						<_2 v="Object Name" />
+						<_42 v="Raw Object Name" />
+						<_38 v="Object">
+							<_40 v="path">
+								<_6 v="guid" />
+								<_2 v="name" />
+								<_3B v="" />
+							</_40>
+							<_6 v="guid" />
+							<_3B v="" />
+						</_38>
+						<_A v="Object Resolution Type">
+							<Flag v="Invalid" />
+							<Flag v="Reference" />
+							<Flag v="Name" />
+							<Flag v="AI" />
+							<Flag v="Global" />
+							<Flag v="Puppet" />
+							<Flag v="Point Set" />
+							<Flag v="Flag" />
+						</_A>
+						<_34 v="generated_padc9c6" length="3" />
+						<_3B v="" />
+					</_38>
+					<_41 v="Cage" />
+					<_2 v="Cage Point" />
+					<_14 v="Weight" />
+					<_3B v="" />
+				</_40>
+				<_38 v="Blend Settings">
+					<_6 v="Blend Time" />
+					<_A v="Transform Curve">
+						<Flag v="None" />
+						<Flag v="Linear" />
+						<Flag v="Zero" />
+						<Flag v="One" />
+						<Flag v="EaseInQuad" />
+						<Flag v="EaseOutQuad" />
+						<Flag v="EaseInOutQuad" />
+						<Flag v="EaseInCubic" />
+						<Flag v="EaseOutCubic" />
+						<Flag v="EaseInOutCubic" />
+						<Flag v="EaseInQuart" />
+						<Flag v="EaseOutQuart" />
+						<Flag v="EaseInOutQuart" />
+						<Flag v="EaseInQuint" />
+						<Flag v="EaseOutQuint" />
+						<Flag v="EaseInOutQuint" />
+						<Flag v="EaseInSine" />
+						<Flag v="EaseOutSine" />
+						<Flag v="EaseInOutSine" />
+						<Flag v="EaseInExpo" />
+						<Flag v="EaseOutExpo" />
+						<Flag v="EaseInOutExpo" />
+						<Flag v="EaseInCirc" />
+						<Flag v="EaseOutCirc" />
+						<Flag v="EaseInOutCirc" />
+						<Flag v="EaseInOutLight" />
+						<Flag v="EaseInOutHeavy" />
+					</_A>
+					<_A v="Properties Curve">
+						<Flag v="None" />
+						<Flag v="Linear" />
+						<Flag v="Zero" />
+						<Flag v="One" />
+						<Flag v="EaseInQuad" />
+						<Flag v="EaseOutQuad" />
+						<Flag v="EaseInOutQuad" />
+						<Flag v="EaseInCubic" />
+						<Flag v="EaseOutCubic" />
+						<Flag v="EaseInOutCubic" />
+						<Flag v="EaseInQuart" />
+						<Flag v="EaseOutQuart" />
+						<Flag v="EaseInOutQuart" />
+						<Flag v="EaseInQuint" />
+						<Flag v="EaseOutQuint" />
+						<Flag v="EaseInOutQuint" />
+						<Flag v="EaseInSine" />
+						<Flag v="EaseOutSine" />
+						<Flag v="EaseInOutSine" />
+						<Flag v="EaseInExpo" />
+						<Flag v="EaseOutExpo" />
+						<Flag v="EaseInOutExpo" />
+						<Flag v="EaseInCirc" />
+						<Flag v="EaseOutCirc" />
+						<Flag v="EaseInOutCirc" />
+						<Flag v="EaseInOutLight" />
+						<Flag v="EaseInOutHeavy" />
+					</_A>
+					<_34 v="generated_paddf02" length="2" />
+					<_3B v="" />
+				</_38>
+				<_38 v="Camera Properties">
+					<_14 v="Focal Length" />
+					<_14 v="Focus Distance" />
+					<_14 v="F-Stop" />
+					<_6 v="Bokeh Side Count" />
+					<_38 v="Focal Length Curve">
+						<_2 v="Name" />
+						<_F v="Flags">
+							<Flag v="Enabled" />
+							<Flag v="Visible" />
+						</_F>
+						<_34 v="generated_pad94fd" length="3" />
+						<_38 v="Value Curve">
+							<_40 v="control points">
+								<_14 v="value" />
+								<_14 v="tangent in" />
+								<_14 v="tangent out" />
+								<_14 v="curviness" />
+								<_A v="segment type">
+									<Flag v="Spline" />
+									<Flag v="Linear" />
+									<Flag v="Stepped" />
+									<Flag v="SteppedNext" />
+								</_A>
+								<_A v="tangent mode">
+									<Flag v="AutoStraight" />
+									<Flag v="UserStraight" />
+									<Flag v="UserBroken" />
+								</_A>
+								<_34 v="generated_pad7103" length="2" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_40 v="AnimatedCurveMetadata">
+							<_14 v="time" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_38>
+					<_38 v="Focus Distance Curve">
+						<_2 v="Name" />
+						<_F v="Flags">
+							<Flag v="Enabled" />
+							<Flag v="Visible" />
+						</_F>
+						<_34 v="generated_pad94fd" length="3" />
+						<_38 v="Value Curve">
+							<_40 v="control points">
+								<_14 v="value" />
+								<_14 v="tangent in" />
+								<_14 v="tangent out" />
+								<_14 v="curviness" />
+								<_A v="segment type">
+									<Flag v="Spline" />
+									<Flag v="Linear" />
+									<Flag v="Stepped" />
+									<Flag v="SteppedNext" />
+								</_A>
+								<_A v="tangent mode">
+									<Flag v="AutoStraight" />
+									<Flag v="UserStraight" />
+									<Flag v="UserBroken" />
+								</_A>
+								<_34 v="generated_pad7103" length="2" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_40 v="AnimatedCurveMetadata">
+							<_14 v="time" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_38>
+					<_38 v="F-Stop Curve">
+						<_2 v="Name" />
+						<_F v="Flags">
+							<Flag v="Enabled" />
+							<Flag v="Visible" />
+						</_F>
+						<_34 v="generated_pad94fd" length="3" />
+						<_38 v="Value Curve">
+							<_40 v="control points">
+								<_14 v="value" />
+								<_14 v="tangent in" />
+								<_14 v="tangent out" />
+								<_14 v="curviness" />
+								<_A v="segment type">
+									<Flag v="Spline" />
+									<Flag v="Linear" />
+									<Flag v="Stepped" />
+									<Flag v="SteppedNext" />
+								</_A>
+								<_A v="tangent mode">
+									<Flag v="AutoStraight" />
+									<Flag v="UserStraight" />
+									<Flag v="UserBroken" />
+								</_A>
+								<_34 v="generated_pad7103" length="2" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_40 v="AnimatedCurveMetadata">
+							<_14 v="time" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_38>
+				<_14 v="Blur Amount" />
+				<_F v="Vibration Flags">
+					<Flag v="Position Enable" />
+					<Flag v="Spring Enable" />
+				</_F>
+				<_F v="Player Control Flags">
+					<Flag v="Jump" />
+					<Flag v="Crouch" />
+					<Flag v="Equip" />
+					<Flag v="Action" />
+					<Flag v="Throw Grenade" />
+					<Flag v="Fire" />
+				</_F>
+				<_34 v="generated_paddf02" length="2" />
+				<_14 v="Walk/Run Weight" />
+				<_14 v="Camera Weight" />
+				<_F v="Flags">
+					<Flag v="Disable Lightmap Shadow" />
+					<Flag v="Instant Auto Exposure" />
+					<Flag v="Looping" />
+					<Flag v="Play in Reverse" />
+					<Flag v="Disable Floating Shadow" />
+					<Flag v="No Subframe Interpolation" />
+					<Flag v="Disable Cage Orbit" />
+					<Flag v="Preserve Player Aim" />
+				</_F>
+				<_34 v="generated_pad924d" length="3" />
+				<_41 v="Resolved Camera Position" />
+				<_37 v="Player Controlled Zoom" />
+				<_40 v="Zoom Settings">
+					<_41 v="Curve Definition" />
+					<_38 v="Positional Curve Adjustments">
+						<_A v="Curve Type">
+							<Flag v="None" />
+							<Flag v="Linear" />
+							<Flag v="Zero" />
+							<Flag v="One" />
+							<Flag v="EaseInQuad" />
+							<Flag v="EaseOutQuad" />
+							<Flag v="EaseInOutQuad" />
+							<Flag v="EaseInCubic" />
+							<Flag v="EaseOutCubic" />
+							<Flag v="EaseInOutCubic" />
+							<Flag v="EaseInQuart" />
+							<Flag v="EaseOutQuart" />
+							<Flag v="EaseInOutQuart" />
+							<Flag v="EaseInQuint" />
+							<Flag v="EaseOutQuint" />
+							<Flag v="EaseInOutQuint" />
+							<Flag v="EaseInSine" />
+							<Flag v="EaseOutSine" />
+							<Flag v="EaseInOutSine" />
+							<Flag v="EaseInExpo" />
+							<Flag v="EaseOutExpo" />
+							<Flag v="EaseInOutExpo" />
+							<Flag v="EaseInCirc" />
+							<Flag v="EaseOutCirc" />
+							<Flag v="EaseInOutCirc" />
+							<Flag v="EaseInOutLight" />
+							<Flag v="EaseInOutHeavy" />
+						</_A>
+						<_34 v="generated_padc5da" length="3" />
+						<_2 v="Curve Name" />
+						<_3C v="Dampen Percentage" />
+						<_34 v="generated_pad128f" length="3" />
+						<_14 v="Dampen Time" />
+						<_3B v="" />
+					</_38>
+					<_38 v="Focal Length Curve Adjustments">
+						<_A v="Curve Type">
+							<Flag v="None" />
+							<Flag v="Linear" />
+							<Flag v="Zero" />
+							<Flag v="One" />
+							<Flag v="EaseInQuad" />
+							<Flag v="EaseOutQuad" />
+							<Flag v="EaseInOutQuad" />
+							<Flag v="EaseInCubic" />
+							<Flag v="EaseOutCubic" />
+							<Flag v="EaseInOutCubic" />
+							<Flag v="EaseInQuart" />
+							<Flag v="EaseOutQuart" />
+							<Flag v="EaseInOutQuart" />
+							<Flag v="EaseInQuint" />
+							<Flag v="EaseOutQuint" />
+							<Flag v="EaseInOutQuint" />
+							<Flag v="EaseInSine" />
+							<Flag v="EaseOutSine" />
+							<Flag v="EaseInOutSine" />
+							<Flag v="EaseInExpo" />
+							<Flag v="EaseOutExpo" />
+							<Flag v="EaseInOutExpo" />
+							<Flag v="EaseInCirc" />
+							<Flag v="EaseOutCirc" />
+							<Flag v="EaseInOutCirc" />
+							<Flag v="EaseInOutLight" />
+							<Flag v="EaseInOutHeavy" />
+						</_A>
+						<_34 v="generated_padc5da" length="3" />
+						<_2 v="Curve Name" />
+						<_3C v="Dampen Percentage" />
+						<_34 v="generated_pad128f" length="3" />
+						<_14 v="Dampen Time" />
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_40>
+				<_37 v="" />
+				<_3B v="" />
+			</_40>
+			<_40 v="Animations">
+				<_40 v="Animations">
+					<_2 v="Name" />
+					<_6 v="Weight" />
+					<_2 v="IKPointSet" />
+					<_2 v="Weapon Class" />
+					<_2 v="ABC Anim Token" />
+					<_3B v="" />
+				</_40>
+				<_40 v="Model Animation Graphs">
+					<_41 v="Puppet Object Type" />
+					<_41 v="Model Animation Graph" />
+					<_A v="ABC Animation Type">
+						<Flag v="Base" />
+						<Flag v="Base + Txy motion type" />
+						<Flag v="Base + Txy,Yaw motion type" />
+						<Flag v="Base + Txyz,Yaw motion type" />
+						<Flag v="Base + Txyz,AngleAxis motion type" />
+						<Flag v="Base + Full motion type" />
+						<Flag v="Base + No motion type" />
+						<Flag v="Overlay" />
+						<Flag v="Overlay Additive - Pose" />
+						<Flag v="Replacement" />
+					</_A>
+					<_A v="ABC Compression Type">
+						<Flag v="Auto" />
+						<Flag v="None" />
+						<Flag v="Medium" />
+						<Flag v="Rough" />
+						<Flag v="Light" />
+						<Flag v="ACL Auto" />
+					</_A>
+					<_34 v="generated_padfe48" length="2" />
+					<_41 v="ABC Skeleton Tag (Optional)" />
+					<_41 v="generatedModelAnimationInternal" />
+					<_3B v="" />
+				</_40>
+				<_37 v="Point" />
+				<_38 v="Position">
+					<_B v="Type">
+						<Flag v="Current" />
+						<Flag v="Object" />
+						<Flag v="Placement" />
+						<Flag v="Point Set" />
+						<Flag v="Flag" />
+						<Flag v="Custom" />
+						<Flag v="Scene Anchor" />
+						<Flag v="Instance Anchor" />
+						<Flag v="Nearest Player" />
+						<Flag v="Inherit from Parent" />
+						<Flag v="None" />
+					</_B>
+					<_F v="Flags">
+						<Flag v="Use Orientation" />
+						<Flag v="Don't Stop" />
+					</_F>
+					<_34 v="generated_pad5f87" length="1" />
+					<_38 v="Subject">
+						<_2 v="Object Name" />
+						<_42 v="Raw Object Name" />
+						<_38 v="Object">
+							<_40 v="path">
+								<_6 v="guid" />
+								<_2 v="name" />
+								<_3B v="" />
+							</_40>
+							<_6 v="guid" />
+							<_3B v="" />
+						</_38>
+						<_A v="Object Resolution Type">
+							<Flag v="Invalid" />
+							<Flag v="Reference" />
+							<Flag v="Name" />
+							<Flag v="AI" />
+							<Flag v="Global" />
+							<Flag v="Puppet" />
+							<Flag v="Point Set" />
+							<Flag v="Flag" />
+						</_A>
+						<_34 v="generated_padc9c6" length="3" />
+						<_3B v="" />
+					</_38>
+					<_2 v="Marker" />
+					<_17 v="Position" />
+					<_1C v="Rotation" />
+					<_3B v="" />
+				</_38>
+				<_37 v="" />
+				<_A v="Position Type">
+					<Flag v="Teleport" />
+					<Flag v="Force Position" />
+					<Flag v="Motion" />
+					<Flag v="Attach" />
+					<Flag v="Teleport Vertical" />
+					<Flag v="None" />
+				</_A>
+				<_34 v="generated_pad0dd6" length="1" />
+				<_E v="Flags">
+					<Flag v="Looping" />
+					<Flag v="Play in Reverse" />
+					<Flag v="Reset Object Position" />
+					<Flag v="Reset Object Position to Floor" />
+					<Flag v="ICS Animation" />
+					<Flag v="Reset Camera Rotation" />
+					<Flag v="No Lightmap Shadow" />
+					<Flag v="Never LOD" />
+					<Flag v="Disable Physics" />
+					<Flag v="Pause at End" />
+					<Flag v="Use Token" />
+					<Flag v="No Subframe Interpolation" />
+					<Flag v="Reset Motion to First Frame" />
+					<Flag v="Hide for First Frame" />
+					<Flag v="Blend Root Bone in Inertialization" />
+					<Flag v="Use Linear Blend" />
+				</_E>
+				<_2 v="Sync Puppet" />
+				<_6 v="Start Frame" />
+				<_6 v="End Frame" />
+				<_6 v="Repeat Count" />
+				<_14 v="Scale" />
+				<_41 v="Overlay Group Graph" />
+				<_2 v="Overlay Group Name" />
+				<_2 v="Animation Mode" />
+				<_38 v="Override Transition Settings">
+					<_A v="Type">
+						<Flag v="None" />
+						<Flag v="Interpolation" />
+						<Flag v="Crossblend" />
+					</_A>
+					<_34 v="generated_pad6308" length="3" />
+					<_6 v="Interpolation Time" />
+					<_2 v="Interpolator Set" />
+					<_3B v="" />
+				</_38>
+				<_40 v="Override Animation Events">
+					<_5 v="Event Type" />
+					<_5 v="Frame Index" />
+					<_5 v="Data Index" />
+					<_F v="Event Flags">
+						<Flag v="Mute" />
+					</_F>
+					<_34 v="generated_pad2246" length="1" />
+					<_2 v="Data Identifier" />
+					<_2 v="Anim Data Identifier" />
+					<_3B v="" />
+				</_40>
+				<_40 v="Overlay Channels">
+					<_A v="Type">
+						<Flag v="Overlay" />
+						<Flag v="Pose Blend" />
+					</_A>
+					<_34 v="generated_pad2a65" length="3" />
+					<_41 v="Channel Graph" />
+					<_2 v="Overlay Name" />
+					<_14 v="Playback Data" />
+					<_6 v="Frame Start" />
+					<_6 v="Frame End" />
+					<_38 v="Proximity Object">
+						<_B v="Type">
+							<Flag v="Current" />
+							<Flag v="Object" />
+							<Flag v="Placement" />
+							<Flag v="Point Set" />
+							<Flag v="Flag" />
+							<Flag v="Custom" />
+							<Flag v="Scene Anchor" />
+							<Flag v="Instance Anchor" />
+							<Flag v="Nearest Player" />
+							<Flag v="Inherit from Parent" />
+							<Flag v="None" />
+						</_B>
+						<_F v="Flags">
+							<Flag v="Use Orientation" />
+							<Flag v="Don't Stop" />
+						</_F>
+						<_34 v="generated_pad5f87" length="1" />
+						<_38 v="Subject">
+							<_2 v="Object Name" />
+							<_42 v="Raw Object Name" />
+							<_38 v="Object">
+								<_40 v="path">
+									<_6 v="guid" />
+									<_2 v="name" />
+									<_3B v="" />
+								</_40>
+								<_6 v="guid" />
+								<_3B v="" />
+							</_38>
+							<_A v="Object Resolution Type">
+								<Flag v="Invalid" />
+								<Flag v="Reference" />
+								<Flag v="Name" />
+								<Flag v="AI" />
+								<Flag v="Global" />
+								<Flag v="Puppet" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+							</_A>
+							<_34 v="generated_padc9c6" length="3" />
+							<_3B v="" />
+						</_38>
+						<_2 v="Marker" />
+						<_17 v="Position" />
+						<_1C v="Rotation" />
+						<_3B v="" />
+					</_38>
+					<_14 v="Radius" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Alembic Animations">
+				<_40 v="Animations">
+					<_41 v="Animation Source" />
+					<_A v="ABC Animation Type">
+						<Flag v="Base" />
+						<Flag v="Base + Txy motion type" />
+						<Flag v="Base + Txy,Yaw motion type" />
+						<Flag v="Base + Txyz,Yaw motion type" />
+						<Flag v="Base + Txyz,AngleAxis motion type" />
+						<Flag v="Base + Full motion type" />
+						<Flag v="Base + No motion type" />
+						<Flag v="Overlay" />
+						<Flag v="Overlay Additive - Pose" />
+						<Flag v="Replacement" />
+					</_A>
+					<_A v="ABC Compression Type">
+						<Flag v="Auto" />
+						<Flag v="None" />
+						<Flag v="Medium" />
+						<Flag v="Rough" />
+						<Flag v="Light" />
+						<Flag v="ACL Auto" />
+					</_A>
+					<_34 v="generated_padbc6d" length="2" />
+					<_6 v="Weight" />
+					<_41 v="generatedModelAnimationInternal" />
+					<_3B v="" />
+				</_40>
+				<_37 v="Point" />
+				<_38 v="Position">
+					<_B v="Type">
+						<Flag v="Current" />
+						<Flag v="Object" />
+						<Flag v="Placement" />
+						<Flag v="Point Set" />
+						<Flag v="Flag" />
+						<Flag v="Custom" />
+						<Flag v="Scene Anchor" />
+						<Flag v="Instance Anchor" />
+						<Flag v="Nearest Player" />
+						<Flag v="Inherit from Parent" />
+						<Flag v="None" />
+					</_B>
+					<_F v="Flags">
+						<Flag v="Use Orientation" />
+						<Flag v="Don't Stop" />
+					</_F>
+					<_34 v="generated_pad5f87" length="1" />
+					<_38 v="Subject">
+						<_2 v="Object Name" />
+						<_42 v="Raw Object Name" />
+						<_38 v="Object">
+							<_40 v="path">
+								<_6 v="guid" />
+								<_2 v="name" />
+								<_3B v="" />
+							</_40>
+							<_6 v="guid" />
+							<_3B v="" />
+						</_38>
+						<_A v="Object Resolution Type">
+							<Flag v="Invalid" />
+							<Flag v="Reference" />
+							<Flag v="Name" />
+							<Flag v="AI" />
+							<Flag v="Global" />
+							<Flag v="Puppet" />
+							<Flag v="Point Set" />
+							<Flag v="Flag" />
+						</_A>
+						<_34 v="generated_padc9c6" length="3" />
+						<_3B v="" />
+					</_38>
+					<_2 v="Marker" />
+					<_17 v="Position" />
+					<_1C v="Rotation" />
+					<_3B v="" />
+				</_38>
+				<_37 v="" />
+				<_A v="Position Type">
+					<Flag v="Teleport" />
+					<Flag v="Force Position" />
+					<Flag v="Motion" />
+					<Flag v="Attach" />
+					<Flag v="Teleport Vertical" />
+					<Flag v="None" />
+				</_A>
+				<_34 v="generated_pad49af" length="1" />
+				<_E v="Flags">
+					<Flag v="Looping" />
+					<Flag v="Play in Reverse" />
+					<Flag v="Reset Object Position" />
+					<Flag v="Reset Object Position to Floor" />
+					<Flag v="ICS Animation" />
+					<Flag v="Reset Camera Rotation" />
+					<Flag v="No Lightmap Shadow" />
+					<Flag v="Never LOD" />
+					<Flag v="Disable Physics" />
+					<Flag v="Pause at End" />
+					<Flag v="Use Token" />
+					<Flag v="No Subframe Interpolation" />
+					<Flag v="Reset Motion to First Frame" />
+					<Flag v="Hide for First Frame" />
+					<Flag v="Blend Root Bone in Inertialization" />
+					<Flag v="Use Linear Blend" />
+				</_E>
+				<_2 v="Sync Puppet" />
+				<_6 v="Start Frame" />
+				<_6 v="End Frame" />
+				<_6 v="Repeat Count" />
+				<_14 v="Scale" />
+				<_2 v="Animation Mode" />
+				<_38 v="Override Transition Settings">
+					<_A v="Type">
+						<Flag v="None" />
+						<Flag v="Interpolation" />
+						<Flag v="Crossblend" />
+					</_A>
+					<_34 v="generated_pad6308" length="3" />
+					<_6 v="Interpolation Time" />
+					<_2 v="Interpolator Set" />
+					<_3B v="" />
+				</_38>
+				<_40 v="Override Animation Events">
+					<_5 v="Event Type" />
+					<_5 v="Frame Index" />
+					<_5 v="Data Index" />
+					<_F v="Event Flags">
+						<Flag v="Mute" />
+					</_F>
+					<_34 v="generated_pad2246" length="1" />
+					<_2 v="Data Identifier" />
+					<_2 v="Anim Data Identifier" />
+					<_3B v="" />
+				</_40>
+				<_40 v="Overlay Channels">
+					<_A v="Type">
+						<Flag v="Overlay" />
+						<Flag v="Pose Blend" />
+					</_A>
+					<_34 v="generated_pad2a65" length="3" />
+					<_41 v="Channel Graph" />
+					<_2 v="Overlay Name" />
+					<_14 v="Playback Data" />
+					<_6 v="Frame Start" />
+					<_6 v="Frame End" />
+					<_38 v="Proximity Object">
+						<_B v="Type">
+							<Flag v="Current" />
+							<Flag v="Object" />
+							<Flag v="Placement" />
+							<Flag v="Point Set" />
+							<Flag v="Flag" />
+							<Flag v="Custom" />
+							<Flag v="Scene Anchor" />
+							<Flag v="Instance Anchor" />
+							<Flag v="Nearest Player" />
+							<Flag v="Inherit from Parent" />
+							<Flag v="None" />
+						</_B>
+						<_F v="Flags">
+							<Flag v="Use Orientation" />
+							<Flag v="Don't Stop" />
+						</_F>
+						<_34 v="generated_pad5f87" length="1" />
+						<_38 v="Subject">
+							<_2 v="Object Name" />
+							<_42 v="Raw Object Name" />
+							<_38 v="Object">
+								<_40 v="path">
+									<_6 v="guid" />
+									<_2 v="name" />
+									<_3B v="" />
+								</_40>
+								<_6 v="guid" />
+								<_3B v="" />
+							</_38>
+							<_A v="Object Resolution Type">
+								<Flag v="Invalid" />
+								<Flag v="Reference" />
+								<Flag v="Name" />
+								<Flag v="AI" />
+								<Flag v="Global" />
+								<Flag v="Puppet" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+							</_A>
+							<_34 v="generated_padc9c6" length="3" />
+							<_3B v="" />
+						</_38>
+						<_2 v="Marker" />
+						<_17 v="Position" />
+						<_1C v="Rotation" />
+						<_3B v="" />
+					</_38>
+					<_14 v="Radius" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Animated Meshes">
+				<_40 v="Animated Meshes">
+					<_2 v="Name" />
+					<_6 v="Weight" />
+					<_3B v="" />
+				</_40>
+				<_E v="Flags">
+					<Flag v="Looping" />
+					<Flag v="Reset At End" />
+					<Flag v="Never LOD" />
+					<Flag v="Disable Physics" />
+				</_E>
+				<_34 v="generated_pad65ba" length="2" />
+				<_14 v="Scale" />
+				<_6 v="Start Frame" />
+				<_6 v="End Frame" />
+				<_3B v="" />
+			</_40>
+			<_40 v="Paths">
+				<_14 v="Throttle" />
+				<_40 v="Points">
+					<_B v="Type">
+						<Flag v="Current" />
+						<Flag v="Object" />
+						<Flag v="Placement" />
+						<Flag v="Point Set" />
+						<Flag v="Flag" />
+						<Flag v="Custom" />
+						<Flag v="Scene Anchor" />
+						<Flag v="Instance Anchor" />
+						<Flag v="Nearest Player" />
+						<Flag v="Inherit from Parent" />
+						<Flag v="None" />
+					</_B>
+					<_F v="Flags">
+						<Flag v="Use Orientation" />
+						<Flag v="Don't Stop" />
+					</_F>
+					<_34 v="generated_pad5f87" length="1" />
+					<_38 v="Subject">
+						<_2 v="Object Name" />
+						<_42 v="Raw Object Name" />
+						<_38 v="Object">
+							<_40 v="path">
+								<_6 v="guid" />
+								<_2 v="name" />
+								<_3B v="" />
+							</_40>
+							<_6 v="guid" />
+							<_3B v="" />
+						</_38>
+						<_A v="Object Resolution Type">
+							<Flag v="Invalid" />
+							<Flag v="Reference" />
+							<Flag v="Name" />
+							<Flag v="AI" />
+							<Flag v="Global" />
+							<Flag v="Puppet" />
+							<Flag v="Point Set" />
+							<Flag v="Flag" />
+						</_A>
+						<_34 v="generated_padc9c6" length="3" />
+						<_3B v="" />
+					</_38>
+					<_2 v="Marker" />
+					<_17 v="Position" />
+					<_1C v="Rotation" />
+					<_3B v="" />
+				</_40>
+				<_14 v="Destination Tolerance" />
+				<_2 v="Animation Mode" />
+				<_40 v="Overlay Channels">
+					<_A v="Type">
+						<Flag v="Overlay" />
+						<Flag v="Pose Blend" />
+					</_A>
+					<_34 v="generated_pad2a65" length="3" />
+					<_41 v="Channel Graph" />
+					<_2 v="Overlay Name" />
+					<_14 v="Playback Data" />
+					<_6 v="Frame Start" />
+					<_6 v="Frame End" />
+					<_38 v="Proximity Object">
+						<_B v="Type">
+							<Flag v="Current" />
+							<Flag v="Object" />
+							<Flag v="Placement" />
+							<Flag v="Point Set" />
+							<Flag v="Flag" />
+							<Flag v="Custom" />
+							<Flag v="Scene Anchor" />
+							<Flag v="Instance Anchor" />
+							<Flag v="Nearest Player" />
+							<Flag v="Inherit from Parent" />
+							<Flag v="None" />
+						</_B>
+						<_F v="Flags">
+							<Flag v="Use Orientation" />
+							<Flag v="Don't Stop" />
+						</_F>
+						<_34 v="generated_pad5f87" length="1" />
+						<_38 v="Subject">
+							<_2 v="Object Name" />
+							<_42 v="Raw Object Name" />
+							<_38 v="Object">
+								<_40 v="path">
+									<_6 v="guid" />
+									<_2 v="name" />
+									<_3B v="" />
+								</_40>
+								<_6 v="guid" />
+								<_3B v="" />
+							</_38>
+							<_A v="Object Resolution Type">
+								<Flag v="Invalid" />
+								<Flag v="Reference" />
+								<Flag v="Name" />
+								<Flag v="AI" />
+								<Flag v="Global" />
+								<Flag v="Puppet" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+							</_A>
+							<_34 v="generated_padc9c6" length="3" />
+							<_3B v="" />
+						</_38>
+						<_2 v="Marker" />
+						<_17 v="Position" />
+						<_1C v="Rotation" />
+						<_3B v="" />
+					</_38>
+					<_14 v="Radius" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Unit Recordings">
+				<_2 v="recording unit type" />
+				<_2 v="recording name" />
+				<_14 v="Scale" />
+				<_6 v="Start Frame" />
+				<_6 v="End Frame" />
+				<_5 v="Smoothing Time" />
+				<_F v="Flags">
+					<Flag v="Play in Reverse" />
+					<Flag v="Pause at End" />
+					<Flag v="Never LOD" />
+				</_F>
+				<_34 v="generated_pad3413" length="1" />
+				<_3B v="" />
+			</_40>
+			<_40 v="Command Scripts">
+				<_38 v="Script">
+					<_F v="Flags">
+						<Flag v="Client" />
+						<Flag v="HasAssociatedScript" />
+						<Flag v="IgnoreInEditor" />
+					</_F>
+					<_34 v="generated_pad585d" length="3" />
+					<_42 v="Data" />
+					<_3C v="Boolean Expression" />
+					<_34 v="generated_pad3e7c" length="3" />
+					<_42 v="Runtime Script Binary" />
+					<_0 v="Runtime Script Name" />
+					<_3E v="Runtime Script CRC" />
+					<_3B v="" />
+				</_38>
+				<_3B v="" />
+			</_40>
+			<_38 v="SubTracks">
+				<_40 v="SubTracks References">
+					<_41 v="SubTracks Reference" />
+					<_3B v="" />
+				</_40>
+				<_40 v="SubTracks">
+					<_2 v="Name" />
+					<_3E v="Color" />
+					<_A v="Category">
+						<Flag v="General" />
+						<Flag v="Lighting" />
+						<Flag v="Effects" />
+						<Flag v="Audio" />
+					</_A>
+					<_34 v="generated_padbc0b" length="3" />
+					<_40 v="SubActions">
+						<_C v="Type">
+							<Flag v="Branch" />
+							<Flag v="Look At" />
+							<Flag v="Face" />
+							<Flag v="Shoot At" />
+							<Flag v="Effect" />
+							<Flag v="Script" />
+							<Flag v="Clip Plane" />
+							<Flag v="Function" />
+							<Flag v="Function Curve" />
+							<Flag v="Input Constraint" />
+							<Flag v="Dialog" />
+							<Flag v="Sound" />
+							<Flag v="Screen Effect" />
+							<Flag v="Texture Movie" />
+							<Flag v="Custom Lighting" />
+							<Flag v="Atmosphere Fog" />
+							<Flag v="Camera FX Settings" />
+							<Flag v="Cubemap" />
+							<Flag v="Environment Darken" />
+							<Flag v="Exposure" />
+							<Flag v="Static Scalar" />
+							<Flag v="Lightmap Indirect Scalar" />
+							<Flag v="Analytic Scalar" />
+							<Flag v="Light" />
+							<Flag v="Hologram Lighting" />
+							<Flag v="Aim At" />
+							<Flag v="Effect Object" />
+							<Flag v="Title" />
+							<Flag v="UI Scene" />
+							<Flag v="NodeGraph Event" />
+							<Flag v="Subtitle" />
+							<Flag v="Camera Trigger" />
+							<Flag v="Game Engine Vignette Event" />
+							<Flag v="Sound Object" />
+							<Flag v="Light Cone" />
+							<Flag v="Color Grading" />
+							<Flag v="HDR Color Grading" />
+							<Flag v="Camera Lens Dirt" />
+							<Flag v="Transform" />
+							<Flag v="Throw Grenade" />
+							<Flag v="Crouch" />
+							<Flag v="Melee" />
+							<Flag v="Smash" />
+							<Flag v="Die" />
+							<Flag v="Lens Flare Object" />
+							<Flag v="Lens Flare" />
+							<Flag v="IK Influencer" />
+							<Flag v="Transform Curve" />
+							<Flag v="Camera DOF Curve" />
+							<Flag v="Script Curves" />
+							<Flag v="Puppet Variant" />
+							<Flag v="Camera Fade Screen" />
+							<Flag v="Vehicle Int Indirect Tint" />
+							<Flag v="Vehicle Int Cubemap Tint" />
+							<Flag v="DWS Exposure Offset" />
+							<Flag v="DWS Bloom Highlight Offset" />
+							<Flag v="DWS Bounce Lighting Tint" />
+							<Flag v="DWS Sky Lighting Tint" />
+							<Flag v="DWS Cubemap Tint" />
+							<Flag v="DWS Cubemap Tint Intensity" />
+							<Flag v="DWS Sun Intensity EV Scalar" />
+							<Flag v="DWS Exposure Lock" />
+							<Flag v="DWS Color Grading" />
+							<Flag v="DWS Chromatic Aberration" />
+							<Flag v="Object" />
+							<Flag v="Rumble" />
+							<Flag v="Camera Shake" />
+						</_C>
+						<_A v="Start Type">
+							<Flag v="Offset From Start" />
+							<Flag v="Offset From End" />
+							<Flag v="Condition" />
+						</_A>
+						<_A v="End Type">
+							<Flag v="Offset From Start" />
+							<Flag v="Offset From End" />
+							<Flag v="Condition" />
+						</_A>
+						<_5 v="Data Index" />
+						<_6 v="Start Action" />
+						<_6 v="Start Offset" />
+						<_38 v="Start Condition Script">
+							<_F v="Flags">
+								<Flag v="Client" />
+								<Flag v="HasAssociatedScript" />
+								<Flag v="IgnoreInEditor" />
+							</_F>
+							<_34 v="generated_pad585d" length="3" />
+							<_42 v="Data" />
+							<_3C v="Boolean Expression" />
+							<_34 v="generated_pad3e7c" length="3" />
+							<_42 v="Runtime Script Binary" />
+							<_0 v="Runtime Script Name" />
+							<_3E v="Runtime Script CRC" />
+							<_3B v="" />
+						</_38>
+						<_38 v="End Condition Script">
+							<_F v="Flags">
+								<Flag v="Client" />
+								<Flag v="HasAssociatedScript" />
+								<Flag v="IgnoreInEditor" />
+							</_F>
+							<_34 v="generated_pad585d" length="3" />
+							<_42 v="Data" />
+							<_3C v="Boolean Expression" />
+							<_34 v="generated_pad3e7c" length="3" />
+							<_42 v="Runtime Script Binary" />
+							<_0 v="Runtime Script Name" />
+							<_3E v="Runtime Script CRC" />
+							<_3B v="" />
+						</_38>
+						<_6 v="End Action" />
+						<_6 v="End Offset" />
+						<_F v="SubAction Flags">
+							<Flag v="Must Run On Skip" />
+							<Flag v="First Loop Only" />
+							<Flag v="Avoid Loop Interruption" />
+						</_F>
+						<_34 v="generated_pad6d2e" length="3" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Editor SubActions">
+						<_1 v="Comment" />
+						<_3E v="Color" />
+						<_3C v="SubTrack" />
+						<_F v="Editor Flags">
+							<Flag v="Muted" />
+							<Flag v="Expanded" />
+							<Flag v="Imported" />
+							<Flag v="Playing" />
+							<Flag v="Recording" />
+							<Flag v="Hidden" />
+							<Flag v="HasTrailingEmptyAction" />
+						</_F>
+						<_34 v="generated_pad8687" length="2" />
+						<_37 v="Start Condition Script" />
+						<_38 v="Start Condition Script">
+							<_42 v="Data" />
+							<_3E v="Script CRC" />
+							<_3B v="" />
+						</_38>
+						<_37 v="" />
+						<_37 v="End Condition Script" />
+						<_38 v="End Condition Script">
+							<_42 v="Data" />
+							<_3E v="Script CRC" />
+							<_3B v="" />
+						</_38>
+						<_37 v="" />
+						<_37 v="Custom Script" />
+						<_38 v="Custom Script">
+							<_42 v="Data" />
+							<_3E v="Script CRC" />
+							<_3B v="" />
+						</_38>
+						<_37 v="" />
+						<_40 v="Branch Scripts">
+							<_42 v="Data" />
+							<_3E v="Script CRC" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="Points">
+						<_F v="Flags">
+							<Flag v="Unattached" />
+						</_F>
+						<_34 v="generated_pad00d4" length="3" />
+						<_37 v="Point" />
+						<_38 v="Point">
+							<_B v="Type">
+								<Flag v="Current" />
+								<Flag v="Object" />
+								<Flag v="Placement" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+								<Flag v="Custom" />
+								<Flag v="Scene Anchor" />
+								<Flag v="Instance Anchor" />
+								<Flag v="Nearest Player" />
+								<Flag v="Inherit from Parent" />
+								<Flag v="None" />
+							</_B>
+							<_F v="Flags">
+								<Flag v="Use Orientation" />
+								<Flag v="Don't Stop" />
+							</_F>
+							<_34 v="generated_pad5f87" length="1" />
+							<_38 v="Subject">
+								<_2 v="Object Name" />
+								<_42 v="Raw Object Name" />
+								<_38 v="Object">
+									<_40 v="path">
+										<_6 v="guid" />
+										<_2 v="name" />
+										<_3B v="" />
+									</_40>
+									<_6 v="guid" />
+									<_3B v="" />
+								</_38>
+								<_A v="Object Resolution Type">
+									<Flag v="Invalid" />
+									<Flag v="Reference" />
+									<Flag v="Name" />
+									<Flag v="AI" />
+									<Flag v="Global" />
+									<Flag v="Puppet" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+								</_A>
+								<_34 v="generated_padc9c6" length="3" />
+								<_3B v="" />
+							</_38>
+							<_2 v="Marker" />
+							<_17 v="Position" />
+							<_1C v="Rotation" />
+							<_3B v="" />
+						</_38>
+						<_37 v="" />
+						<_41 v="Asset" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Branches">
+						<_40 v="Elements">
+							<_6 v="Target Action" />
+							<_38 v="Condition Script">
+								<_F v="Flags">
+									<Flag v="Client" />
+									<Flag v="HasAssociatedScript" />
+									<Flag v="IgnoreInEditor" />
+								</_F>
+								<_34 v="generated_pad585d" length="3" />
+								<_42 v="Data" />
+								<_3C v="Boolean Expression" />
+								<_34 v="generated_pad3e7c" length="3" />
+								<_42 v="Runtime Script Binary" />
+								<_0 v="Runtime Script Name" />
+								<_3E v="Runtime Script CRC" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_5 v="Check Rate" />
+						<_34 v="generated_padb7d8" length="2" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Dialog">
+						<_36 v="Dialog Sub-Action information" />
+						<_40 v="Dialogs">
+							<_41 v="Dialog" />
+							<_6 v="Weight" />
+							<_14 v="Scale" />
+							<_38 v="Dialog Script">
+								<_F v="Flags">
+									<Flag v="Client" />
+									<Flag v="HasAssociatedScript" />
+									<Flag v="IgnoreInEditor" />
+								</_F>
+								<_34 v="generated_pad585d" length="3" />
+								<_42 v="Data" />
+								<_3C v="Boolean Expression" />
+								<_34 v="generated_pad3e7c" length="3" />
+								<_42 v="Runtime Script Binary" />
+								<_0 v="Runtime Script Name" />
+								<_3E v="Runtime Script CRC" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_38 v="Subject">
+							<_2 v="Object Name" />
+							<_42 v="Raw Object Name" />
+							<_38 v="Object">
+								<_40 v="path">
+									<_6 v="guid" />
+									<_2 v="name" />
+									<_3B v="" />
+								</_40>
+								<_6 v="guid" />
+								<_3B v="" />
+							</_38>
+							<_A v="Object Resolution Type">
+								<Flag v="Invalid" />
+								<Flag v="Reference" />
+								<Flag v="Name" />
+								<Flag v="AI" />
+								<Flag v="Global" />
+								<Flag v="Puppet" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+							</_A>
+							<_34 v="generated_padc9c6" length="3" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_40 v="Subtitles">
+						<_2 v="Subtitle" />
+						<_2 v="Character" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Effects">
+						<_36 v="Effect Sub-Action information" />
+						<_F v="Flags">
+							<Flag v="Loop" />
+							<Flag v="Kill" />
+							<Flag v="Attach" />
+							<Flag v="Attach To Camera" />
+						</_F>
+						<_34 v="generated_pad6b33" length="3" />
+						<_41 v="Effect" />
+						<_37 v="Point" />
+						<_38 v="Point">
+							<_B v="Type">
+								<Flag v="Current" />
+								<Flag v="Object" />
+								<Flag v="Placement" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+								<Flag v="Custom" />
+								<Flag v="Scene Anchor" />
+								<Flag v="Instance Anchor" />
+								<Flag v="Nearest Player" />
+								<Flag v="Inherit from Parent" />
+								<Flag v="None" />
+							</_B>
+							<_F v="Flags">
+								<Flag v="Use Orientation" />
+								<Flag v="Don't Stop" />
+							</_F>
+							<_34 v="generated_pad5f87" length="1" />
+							<_38 v="Subject">
+								<_2 v="Object Name" />
+								<_42 v="Raw Object Name" />
+								<_38 v="Object">
+									<_40 v="path">
+										<_6 v="guid" />
+										<_2 v="name" />
+										<_3B v="" />
+									</_40>
+									<_6 v="guid" />
+									<_3B v="" />
+								</_38>
+								<_A v="Object Resolution Type">
+									<Flag v="Invalid" />
+									<Flag v="Reference" />
+									<Flag v="Name" />
+									<Flag v="AI" />
+									<Flag v="Global" />
+									<Flag v="Puppet" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+								</_A>
+								<_34 v="generated_padc9c6" length="3" />
+								<_3B v="" />
+							</_38>
+							<_2 v="Marker" />
+							<_17 v="Position" />
+							<_1C v="Rotation" />
+							<_3B v="" />
+						</_38>
+						<_37 v="" />
+						<_14 v="Scale" />
+						<_2 v="Function A" />
+						<_2 v="Function B" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Lens Flares">
+						<_41 v="Lens Flare" />
+						<_37 v="Point" />
+						<_38 v="Point">
+							<_B v="Type">
+								<Flag v="Current" />
+								<Flag v="Object" />
+								<Flag v="Placement" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+								<Flag v="Custom" />
+								<Flag v="Scene Anchor" />
+								<Flag v="Instance Anchor" />
+								<Flag v="Nearest Player" />
+								<Flag v="Inherit from Parent" />
+								<Flag v="None" />
+							</_B>
+							<_F v="Flags">
+								<Flag v="Use Orientation" />
+								<Flag v="Don't Stop" />
+							</_F>
+							<_34 v="generated_pad5f87" length="1" />
+							<_38 v="Subject">
+								<_2 v="Object Name" />
+								<_42 v="Raw Object Name" />
+								<_38 v="Object">
+									<_40 v="path">
+										<_6 v="guid" />
+										<_2 v="name" />
+										<_3B v="" />
+									</_40>
+									<_6 v="guid" />
+									<_3B v="" />
+								</_38>
+								<_A v="Object Resolution Type">
+									<Flag v="Invalid" />
+									<Flag v="Reference" />
+									<Flag v="Name" />
+									<Flag v="AI" />
+									<Flag v="Global" />
+									<Flag v="Puppet" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+								</_A>
+								<_34 v="generated_padc9c6" length="3" />
+								<_3B v="" />
+							</_38>
+							<_2 v="Marker" />
+							<_17 v="Position" />
+							<_1C v="Rotation" />
+							<_3B v="" />
+						</_38>
+						<_37 v="" />
+						<_2 v="Function" />
+						<_F v="Flags">
+							<Flag v="Attach" />
+						</_F>
+						<_34 v="generated_pad13c6" length="3" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Lights">
+						<_38 v="Light">
+							<_40 v="path">
+								<_6 v="guid" />
+								<_2 v="name" />
+								<_3B v="" />
+							</_40>
+							<_6 v="guid" />
+							<_3B v="" />
+						</_38>
+						<_2 v="Light Name" />
+						<_6 v="Light Guid" />
+						<_40 v="Linked Objects">
+							<_2 v="Object Name" />
+							<_42 v="Raw Object Name" />
+							<_38 v="Object">
+								<_40 v="path">
+									<_6 v="guid" />
+									<_2 v="name" />
+									<_3B v="" />
+								</_40>
+								<_6 v="guid" />
+								<_3B v="" />
+							</_38>
+							<_A v="Object Resolution Type">
+								<Flag v="Invalid" />
+								<Flag v="Reference" />
+								<Flag v="Name" />
+								<Flag v="AI" />
+								<Flag v="Global" />
+								<Flag v="Puppet" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+							</_A>
+							<_34 v="generated_padc9c6" length="3" />
+							<_3B v="" />
+						</_40>
+						<_38 v="Transform Curve">
+							<_A v="Translation Type">
+								<Flag v="Off" />
+								<Flag v="Curve" />
+								<Flag v="Point with Curve Offset" />
+							</_A>
+							<_A v="Rotation Type">
+								<Flag v="Off" />
+								<Flag v="Curve" />
+								<Flag v="Look At" />
+								<Flag v="Curve with Offset" />
+							</_A>
+							<_34 v="generated_paddcfb" length="2" />
+							<_38 v="Translation Curve">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_padc23f" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_19 v="value" />
+										<_19 v="tangent in" />
+										<_19 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type x">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type y">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type z">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode x">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode y">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode z">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad30cd" length="2" />
+										<_40 v="pointMetadata">
+											<_40 v="spline road metadata">
+												<_14 v="width" />
+												<_14 v="opacity" />
+												<_14 v="falloffLeft" />
+												<_14 v="falloffRight" />
+												<_14 v="bank" />
+												<_3B v="" />
+											</_40>
+											<_40 v="road decal metadata">
+												<_40 v="Road Decal Textures">
+													<_41 v="Reference" />
+													<_3B v="" />
+												</_40>
+												<_18 v="Road Decal Scale" />
+												<_18 v="Road Decal Offset" />
+												<_14 v="Road Decal Tile Repeat Count" />
+												<_14 v="Road Decal Height Strength" />
+												<_14 v="Road Decal Mask Strength" />
+												<_14 v="Road Decal Height Contrast" />
+												<_14 v="Road Decal Mask Contrast" />
+												<_14 v="Road Decal Edge Fade" />
+												<_6 v="Road Decal Random Seed" />
+												<_3B v="" />
+											</_40>
+											<_40 v="animated spline metadata">
+												<_14 v="Time" />
+												<_3B v="" />
+											</_40>
+											<_3B v="" />
+										</_40>
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_38 v="Rotation Curve">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_padc23f" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_19 v="value" />
+										<_19 v="tangent in" />
+										<_19 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type x">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type y">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type z">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode x">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode y">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode z">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad30cd" length="2" />
+										<_40 v="pointMetadata">
+											<_40 v="spline road metadata">
+												<_14 v="width" />
+												<_14 v="opacity" />
+												<_14 v="falloffLeft" />
+												<_14 v="falloffRight" />
+												<_14 v="bank" />
+												<_3B v="" />
+											</_40>
+											<_40 v="road decal metadata">
+												<_40 v="Road Decal Textures">
+													<_41 v="Reference" />
+													<_3B v="" />
+												</_40>
+												<_18 v="Road Decal Scale" />
+												<_18 v="Road Decal Offset" />
+												<_14 v="Road Decal Tile Repeat Count" />
+												<_14 v="Road Decal Height Strength" />
+												<_14 v="Road Decal Mask Strength" />
+												<_14 v="Road Decal Height Contrast" />
+												<_14 v="Road Decal Mask Contrast" />
+												<_14 v="Road Decal Edge Fade" />
+												<_6 v="Road Decal Random Seed" />
+												<_3B v="" />
+											</_40>
+											<_40 v="animated spline metadata">
+												<_14 v="Time" />
+												<_3B v="" />
+											</_40>
+											<_3B v="" />
+										</_40>
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_38 v="Blend Curve">
+								<_2 v="Name" />
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_pad94fd" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_14 v="value" />
+										<_14 v="tangent in" />
+										<_14 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad7103" length="2" />
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_40 v="AnimatedCurveMetadata">
+									<_14 v="time" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_37 v="Translation Point" />
+							<_38 v="Translation Point">
+								<_B v="Type">
+									<Flag v="Current" />
+									<Flag v="Object" />
+									<Flag v="Placement" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+									<Flag v="Custom" />
+									<Flag v="Scene Anchor" />
+									<Flag v="Instance Anchor" />
+									<Flag v="Nearest Player" />
+									<Flag v="Inherit from Parent" />
+									<Flag v="None" />
+								</_B>
+								<_F v="Flags">
+									<Flag v="Use Orientation" />
+									<Flag v="Don't Stop" />
+								</_F>
+								<_34 v="generated_pad5f87" length="1" />
+								<_38 v="Subject">
+									<_2 v="Object Name" />
+									<_42 v="Raw Object Name" />
+									<_38 v="Object">
+										<_40 v="path">
+											<_6 v="guid" />
+											<_2 v="name" />
+											<_3B v="" />
+										</_40>
+										<_6 v="guid" />
+										<_3B v="" />
+									</_38>
+									<_A v="Object Resolution Type">
+										<Flag v="Invalid" />
+										<Flag v="Reference" />
+										<Flag v="Name" />
+										<Flag v="AI" />
+										<Flag v="Global" />
+										<Flag v="Puppet" />
+										<Flag v="Point Set" />
+										<Flag v="Flag" />
+									</_A>
+									<_34 v="generated_padc9c6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_2 v="Marker" />
+								<_17 v="Position" />
+								<_1C v="Rotation" />
+								<_3B v="" />
+							</_38>
+							<_37 v="" />
+							<_37 v="Rotation Point" />
+							<_38 v="Rotation Point">
+								<_B v="Type">
+									<Flag v="Current" />
+									<Flag v="Object" />
+									<Flag v="Placement" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+									<Flag v="Custom" />
+									<Flag v="Scene Anchor" />
+									<Flag v="Instance Anchor" />
+									<Flag v="Nearest Player" />
+									<Flag v="Inherit from Parent" />
+									<Flag v="None" />
+								</_B>
+								<_F v="Flags">
+									<Flag v="Use Orientation" />
+									<Flag v="Don't Stop" />
+								</_F>
+								<_34 v="generated_pad5f87" length="1" />
+								<_38 v="Subject">
+									<_2 v="Object Name" />
+									<_42 v="Raw Object Name" />
+									<_38 v="Object">
+										<_40 v="path">
+											<_6 v="guid" />
+											<_2 v="name" />
+											<_3B v="" />
+										</_40>
+										<_6 v="guid" />
+										<_3B v="" />
+									</_38>
+									<_A v="Object Resolution Type">
+										<Flag v="Invalid" />
+										<Flag v="Reference" />
+										<Flag v="Name" />
+										<Flag v="AI" />
+										<Flag v="Global" />
+										<Flag v="Puppet" />
+										<Flag v="Point Set" />
+										<Flag v="Flag" />
+									</_A>
+									<_34 v="generated_padc9c6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_2 v="Marker" />
+								<_17 v="Position" />
+								<_1C v="Rotation" />
+								<_3B v="" />
+							</_38>
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_F v="Curves">
+							<Flag v="IntensityScalar" />
+							<Flag v="Color" />
+							<Flag v="NearAttenuation" />
+							<Flag v="FarAttenuation" />
+							<Flag v="InnerConeAngle" />
+							<Flag v="OuterConeAngle" />
+							<Flag v="DimmerValue" />
+							<Flag v="OverrideSourceIntensityMultiplier" />
+						</_F>
+						<_34 v="generated_pad018e" length="3" />
+						<_40 v="Curve List">
+							<_2 v="Name" />
+							<_A v="Curve Type">
+								<Flag v="AnimatedCurveType" />
+								<Flag v="Vector2dCurveType" />
+								<Flag v="Vector3dCurveType" />
+								<Flag v="DepthOfFieldCurveType" />
+								<Flag v="AnimatedCurve1dType" />
+								<Flag v="AnimatedCurve2dType" />
+								<Flag v="AnimatedCurve3dType" />
+							</_A>
+							<_34 v="generated_pad711a" length="3" />
+							<_38 v="Animated Curve 2d">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_paddf2c" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_18 v="value" />
+										<_18 v="tangent in" />
+										<_18 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type x">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type y">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode x">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode y">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_40 v="AnimatedCurveMetadata">
+									<_14 v="time" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_38 v="Animated Curve 3d">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_padc23f" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_19 v="value" />
+										<_19 v="tangent in" />
+										<_19 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type x">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type y">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type z">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode x">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode y">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode z">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad30cd" length="2" />
+										<_40 v="pointMetadata">
+											<_40 v="spline road metadata">
+												<_14 v="width" />
+												<_14 v="opacity" />
+												<_14 v="falloffLeft" />
+												<_14 v="falloffRight" />
+												<_14 v="bank" />
+												<_3B v="" />
+											</_40>
+											<_40 v="road decal metadata">
+												<_40 v="Road Decal Textures">
+													<_41 v="Reference" />
+													<_3B v="" />
+												</_40>
+												<_18 v="Road Decal Scale" />
+												<_18 v="Road Decal Offset" />
+												<_14 v="Road Decal Tile Repeat Count" />
+												<_14 v="Road Decal Height Strength" />
+												<_14 v="Road Decal Mask Strength" />
+												<_14 v="Road Decal Height Contrast" />
+												<_14 v="Road Decal Mask Contrast" />
+												<_14 v="Road Decal Edge Fade" />
+												<_6 v="Road Decal Random Seed" />
+												<_3B v="" />
+											</_40>
+											<_40 v="animated spline metadata">
+												<_14 v="Time" />
+												<_3B v="" />
+											</_40>
+											<_3B v="" />
+										</_40>
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_38 v="Depth of Field Curve">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_pad134b" length="3" />
+								<_38 v="FocalLength">
+									<_40 v="KeyFrames">
+										<_18 v="Position" />
+										<_14 v="LeftSlope" />
+										<_14 v="RightSlope" />
+										<_A v="SegmentType">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="TangentMode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad4bfe" length="2" />
+										<_3B v="" />
+									</_40>
+									<_F v="Flags">
+										<Flag v="Enabled" />
+										<Flag v="Visible" />
+									</_F>
+									<_34 v="generated_pad5cd6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_38 v="FocusDistance">
+									<_40 v="KeyFrames">
+										<_18 v="Position" />
+										<_14 v="LeftSlope" />
+										<_14 v="RightSlope" />
+										<_A v="SegmentType">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="TangentMode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad4bfe" length="2" />
+										<_3B v="" />
+									</_40>
+									<_F v="Flags">
+										<Flag v="Enabled" />
+										<Flag v="Visible" />
+									</_F>
+									<_34 v="generated_pad5cd6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_38 v="FStop">
+									<_40 v="KeyFrames">
+										<_18 v="Position" />
+										<_14 v="LeftSlope" />
+										<_14 v="RightSlope" />
+										<_A v="SegmentType">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="TangentMode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad4bfe" length="2" />
+										<_3B v="" />
+									</_40>
+									<_F v="Flags">
+										<Flag v="Enabled" />
+										<Flag v="Visible" />
+									</_F>
+									<_34 v="generated_pad5cd6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_38 v="Gameplay FOV Blend">
+									<_40 v="KeyFrames">
+										<_18 v="Position" />
+										<_14 v="LeftSlope" />
+										<_14 v="RightSlope" />
+										<_A v="SegmentType">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="TangentMode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad4bfe" length="2" />
+										<_3B v="" />
+									</_40>
+									<_F v="Flags">
+										<Flag v="Enabled" />
+										<Flag v="Visible" />
+									</_F>
+									<_34 v="generated_pad5cd6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_38 v="Animated Curve 1d">
+								<_2 v="Name" />
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_pad94fd" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_14 v="value" />
+										<_14 v="tangent in" />
+										<_14 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad7103" length="2" />
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_40 v="AnimatedCurveMetadata">
+									<_14 v="time" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_F v="Light Flags">
+							<Flag v="Persist Values" />
+						</_F>
+						<_34 v="generated_pad4e43" length="3" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Clip Planes">
+						<_17 v="Plane Center" />
+						<_17 v="Plane Direction" />
+						<_40 v="Subjects">
+							<_2 v="Object Name" />
+							<_42 v="Raw Object Name" />
+							<_38 v="Object">
+								<_40 v="path">
+									<_6 v="guid" />
+									<_2 v="name" />
+									<_3B v="" />
+								</_40>
+								<_6 v="guid" />
+								<_3B v="" />
+							</_38>
+							<_A v="Object Resolution Type">
+								<Flag v="Invalid" />
+								<Flag v="Reference" />
+								<Flag v="Name" />
+								<Flag v="AI" />
+								<Flag v="Global" />
+								<Flag v="Puppet" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+							</_A>
+							<_34 v="generated_padc9c6" length="3" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="Functions">
+						<_36 v="Function Sub-Action information" />
+						<_F v="Flags">
+							<Flag v="Clear Value At End" />
+							<Flag v="Global" />
+						</_F>
+						<_34 v="generated_pade2ec" length="3" />
+						<_2 v="Function Name" />
+						<_38 v="Function">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_40 v="Function Curves">
+						<_36 v="Function Sub-Action information" />
+						<_F v="Flags">
+							<Flag v="Clear Value At End" />
+							<Flag v="Global" />
+						</_F>
+						<_34 v="generated_pade687" length="3" />
+						<_38 v="Curve">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_40 v="Input Constraints">
+						<_11 v="Maximum Look Angles" />
+						<_14 v="Frictional Force" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Generic SubActions">
+						<_41 v="Asset" />
+						<_6 v="Blend Frames" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Object SubActions">
+						<_38 v="Subject">
+							<_2 v="Object Name" />
+							<_42 v="Raw Object Name" />
+							<_38 v="Object">
+								<_40 v="path">
+									<_6 v="guid" />
+									<_2 v="name" />
+									<_3B v="" />
+								</_40>
+								<_6 v="guid" />
+								<_3B v="" />
+							</_38>
+							<_A v="Object Resolution Type">
+								<Flag v="Invalid" />
+								<Flag v="Reference" />
+								<Flag v="Name" />
+								<Flag v="AI" />
+								<Flag v="Global" />
+								<Flag v="Puppet" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+							</_A>
+							<_34 v="generated_padc9c6" length="3" />
+							<_3B v="" />
+						</_38>
+						<_6 v="Object Guid" />
+						<_38 v="Transform Curve">
+							<_A v="Translation Type">
+								<Flag v="Off" />
+								<Flag v="Curve" />
+								<Flag v="Point with Curve Offset" />
+							</_A>
+							<_A v="Rotation Type">
+								<Flag v="Off" />
+								<Flag v="Curve" />
+								<Flag v="Look At" />
+								<Flag v="Curve with Offset" />
+							</_A>
+							<_34 v="generated_paddcfb" length="2" />
+							<_38 v="Translation Curve">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_padc23f" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_19 v="value" />
+										<_19 v="tangent in" />
+										<_19 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type x">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type y">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type z">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode x">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode y">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode z">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad30cd" length="2" />
+										<_40 v="pointMetadata">
+											<_40 v="spline road metadata">
+												<_14 v="width" />
+												<_14 v="opacity" />
+												<_14 v="falloffLeft" />
+												<_14 v="falloffRight" />
+												<_14 v="bank" />
+												<_3B v="" />
+											</_40>
+											<_40 v="road decal metadata">
+												<_40 v="Road Decal Textures">
+													<_41 v="Reference" />
+													<_3B v="" />
+												</_40>
+												<_18 v="Road Decal Scale" />
+												<_18 v="Road Decal Offset" />
+												<_14 v="Road Decal Tile Repeat Count" />
+												<_14 v="Road Decal Height Strength" />
+												<_14 v="Road Decal Mask Strength" />
+												<_14 v="Road Decal Height Contrast" />
+												<_14 v="Road Decal Mask Contrast" />
+												<_14 v="Road Decal Edge Fade" />
+												<_6 v="Road Decal Random Seed" />
+												<_3B v="" />
+											</_40>
+											<_40 v="animated spline metadata">
+												<_14 v="Time" />
+												<_3B v="" />
+											</_40>
+											<_3B v="" />
+										</_40>
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_38 v="Rotation Curve">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_padc23f" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_19 v="value" />
+										<_19 v="tangent in" />
+										<_19 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type x">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type y">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type z">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode x">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode y">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode z">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad30cd" length="2" />
+										<_40 v="pointMetadata">
+											<_40 v="spline road metadata">
+												<_14 v="width" />
+												<_14 v="opacity" />
+												<_14 v="falloffLeft" />
+												<_14 v="falloffRight" />
+												<_14 v="bank" />
+												<_3B v="" />
+											</_40>
+											<_40 v="road decal metadata">
+												<_40 v="Road Decal Textures">
+													<_41 v="Reference" />
+													<_3B v="" />
+												</_40>
+												<_18 v="Road Decal Scale" />
+												<_18 v="Road Decal Offset" />
+												<_14 v="Road Decal Tile Repeat Count" />
+												<_14 v="Road Decal Height Strength" />
+												<_14 v="Road Decal Mask Strength" />
+												<_14 v="Road Decal Height Contrast" />
+												<_14 v="Road Decal Mask Contrast" />
+												<_14 v="Road Decal Edge Fade" />
+												<_6 v="Road Decal Random Seed" />
+												<_3B v="" />
+											</_40>
+											<_40 v="animated spline metadata">
+												<_14 v="Time" />
+												<_3B v="" />
+											</_40>
+											<_3B v="" />
+										</_40>
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_38 v="Blend Curve">
+								<_2 v="Name" />
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_pad94fd" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_14 v="value" />
+										<_14 v="tangent in" />
+										<_14 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad7103" length="2" />
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_40 v="AnimatedCurveMetadata">
+									<_14 v="time" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_37 v="Translation Point" />
+							<_38 v="Translation Point">
+								<_B v="Type">
+									<Flag v="Current" />
+									<Flag v="Object" />
+									<Flag v="Placement" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+									<Flag v="Custom" />
+									<Flag v="Scene Anchor" />
+									<Flag v="Instance Anchor" />
+									<Flag v="Nearest Player" />
+									<Flag v="Inherit from Parent" />
+									<Flag v="None" />
+								</_B>
+								<_F v="Flags">
+									<Flag v="Use Orientation" />
+									<Flag v="Don't Stop" />
+								</_F>
+								<_34 v="generated_pad5f87" length="1" />
+								<_38 v="Subject">
+									<_2 v="Object Name" />
+									<_42 v="Raw Object Name" />
+									<_38 v="Object">
+										<_40 v="path">
+											<_6 v="guid" />
+											<_2 v="name" />
+											<_3B v="" />
+										</_40>
+										<_6 v="guid" />
+										<_3B v="" />
+									</_38>
+									<_A v="Object Resolution Type">
+										<Flag v="Invalid" />
+										<Flag v="Reference" />
+										<Flag v="Name" />
+										<Flag v="AI" />
+										<Flag v="Global" />
+										<Flag v="Puppet" />
+										<Flag v="Point Set" />
+										<Flag v="Flag" />
+									</_A>
+									<_34 v="generated_padc9c6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_2 v="Marker" />
+								<_17 v="Position" />
+								<_1C v="Rotation" />
+								<_3B v="" />
+							</_38>
+							<_37 v="" />
+							<_37 v="Rotation Point" />
+							<_38 v="Rotation Point">
+								<_B v="Type">
+									<Flag v="Current" />
+									<Flag v="Object" />
+									<Flag v="Placement" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+									<Flag v="Custom" />
+									<Flag v="Scene Anchor" />
+									<Flag v="Instance Anchor" />
+									<Flag v="Nearest Player" />
+									<Flag v="Inherit from Parent" />
+									<Flag v="None" />
+								</_B>
+								<_F v="Flags">
+									<Flag v="Use Orientation" />
+									<Flag v="Don't Stop" />
+								</_F>
+								<_34 v="generated_pad5f87" length="1" />
+								<_38 v="Subject">
+									<_2 v="Object Name" />
+									<_42 v="Raw Object Name" />
+									<_38 v="Object">
+										<_40 v="path">
+											<_6 v="guid" />
+											<_2 v="name" />
+											<_3B v="" />
+										</_40>
+										<_6 v="guid" />
+										<_3B v="" />
+									</_38>
+									<_A v="Object Resolution Type">
+										<Flag v="Invalid" />
+										<Flag v="Reference" />
+										<Flag v="Name" />
+										<Flag v="AI" />
+										<Flag v="Global" />
+										<Flag v="Puppet" />
+										<Flag v="Point Set" />
+										<Flag v="Flag" />
+									</_A>
+									<_34 v="generated_padc9c6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_2 v="Marker" />
+								<_17 v="Position" />
+								<_1C v="Rotation" />
+								<_3B v="" />
+							</_38>
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_F v="Flags">
+							<Flag v="Create If Missing" />
+							<Flag v="Destroy When Finished" />
+							<Flag v="Hide On End" />
+							<Flag v="Keep Enabled When Finished" />
+						</_F>
+						<_F v="Curves">
+							<Flag v="LightConeIntensity" />
+							<Flag v="LightConeColor" />
+						</_F>
+						<_34 v="generated_pad69f5" length="2" />
+						<_40 v="Curve List">
+							<_2 v="Name" />
+							<_A v="Curve Type">
+								<Flag v="AnimatedCurveType" />
+								<Flag v="Vector2dCurveType" />
+								<Flag v="Vector3dCurveType" />
+								<Flag v="DepthOfFieldCurveType" />
+								<Flag v="AnimatedCurve1dType" />
+								<Flag v="AnimatedCurve2dType" />
+								<Flag v="AnimatedCurve3dType" />
+							</_A>
+							<_34 v="generated_pad711a" length="3" />
+							<_38 v="Animated Curve 2d">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_paddf2c" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_18 v="value" />
+										<_18 v="tangent in" />
+										<_18 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type x">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type y">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode x">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode y">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_40 v="AnimatedCurveMetadata">
+									<_14 v="time" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_38 v="Animated Curve 3d">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_padc23f" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_19 v="value" />
+										<_19 v="tangent in" />
+										<_19 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type x">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type y">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type z">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode x">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode y">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode z">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad30cd" length="2" />
+										<_40 v="pointMetadata">
+											<_40 v="spline road metadata">
+												<_14 v="width" />
+												<_14 v="opacity" />
+												<_14 v="falloffLeft" />
+												<_14 v="falloffRight" />
+												<_14 v="bank" />
+												<_3B v="" />
+											</_40>
+											<_40 v="road decal metadata">
+												<_40 v="Road Decal Textures">
+													<_41 v="Reference" />
+													<_3B v="" />
+												</_40>
+												<_18 v="Road Decal Scale" />
+												<_18 v="Road Decal Offset" />
+												<_14 v="Road Decal Tile Repeat Count" />
+												<_14 v="Road Decal Height Strength" />
+												<_14 v="Road Decal Mask Strength" />
+												<_14 v="Road Decal Height Contrast" />
+												<_14 v="Road Decal Mask Contrast" />
+												<_14 v="Road Decal Edge Fade" />
+												<_6 v="Road Decal Random Seed" />
+												<_3B v="" />
+											</_40>
+											<_40 v="animated spline metadata">
+												<_14 v="Time" />
+												<_3B v="" />
+											</_40>
+											<_3B v="" />
+										</_40>
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_38 v="Depth of Field Curve">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_pad134b" length="3" />
+								<_38 v="FocalLength">
+									<_40 v="KeyFrames">
+										<_18 v="Position" />
+										<_14 v="LeftSlope" />
+										<_14 v="RightSlope" />
+										<_A v="SegmentType">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="TangentMode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad4bfe" length="2" />
+										<_3B v="" />
+									</_40>
+									<_F v="Flags">
+										<Flag v="Enabled" />
+										<Flag v="Visible" />
+									</_F>
+									<_34 v="generated_pad5cd6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_38 v="FocusDistance">
+									<_40 v="KeyFrames">
+										<_18 v="Position" />
+										<_14 v="LeftSlope" />
+										<_14 v="RightSlope" />
+										<_A v="SegmentType">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="TangentMode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad4bfe" length="2" />
+										<_3B v="" />
+									</_40>
+									<_F v="Flags">
+										<Flag v="Enabled" />
+										<Flag v="Visible" />
+									</_F>
+									<_34 v="generated_pad5cd6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_38 v="FStop">
+									<_40 v="KeyFrames">
+										<_18 v="Position" />
+										<_14 v="LeftSlope" />
+										<_14 v="RightSlope" />
+										<_A v="SegmentType">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="TangentMode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad4bfe" length="2" />
+										<_3B v="" />
+									</_40>
+									<_F v="Flags">
+										<Flag v="Enabled" />
+										<Flag v="Visible" />
+									</_F>
+									<_34 v="generated_pad5cd6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_38 v="Gameplay FOV Blend">
+									<_40 v="KeyFrames">
+										<_18 v="Position" />
+										<_14 v="LeftSlope" />
+										<_14 v="RightSlope" />
+										<_A v="SegmentType">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="TangentMode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad4bfe" length="2" />
+										<_3B v="" />
+									</_40>
+									<_F v="Flags">
+										<Flag v="Enabled" />
+										<Flag v="Visible" />
+									</_F>
+									<_34 v="generated_pad5cd6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_38 v="Animated Curve 1d">
+								<_2 v="Name" />
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_pad94fd" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_14 v="value" />
+										<_14 v="tangent in" />
+										<_14 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad7103" length="2" />
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_40 v="AnimatedCurveMetadata">
+									<_14 v="time" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="Value SubActions">
+						<_A v="Type">
+							<Flag v="Linear" />
+							<Flag v="Constant" />
+							<Flag v="Curve" />
+						</_A>
+						<_34 v="generated_pad0885" length="3" />
+						<_14 v="Start Value" />
+						<_14 v="End Value" />
+						<_38 v="Value Curve">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_40 v="Camera Fade Screens">
+						<_F v="Fade Screen Flags">
+							<Flag v="Clear Fade At End" />
+							<Flag v="Preserve Fade After Level Load" />
+						</_F>
+						<_34 v="generated_pad8ae3" length="3" />
+						<_1F v="Fade Color" />
+						<_38 v="Fade Curve">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_40 v="Camera Trigger SubActions">
+						<_F v="Flags">
+							<Flag v="First Person Perspective" />
+							<Flag v="Ready Weapon Immediately" />
+							<Flag v="Offset First Person Hands for Blend Out" />
+						</_F>
+						<_3B v="" />
+					</_40>
+					<_40 v="Scripts">
+						<_F v="Flags">
+							<Flag v="Client" />
+							<Flag v="HasAssociatedScript" />
+							<Flag v="IgnoreInEditor" />
+						</_F>
+						<_34 v="generated_pad585d" length="3" />
+						<_42 v="Data" />
+						<_3C v="Boolean Expression" />
+						<_34 v="generated_pad3e7c" length="3" />
+						<_42 v="Runtime Script Binary" />
+						<_0 v="Runtime Script Name" />
+						<_3E v="Runtime Script CRC" />
+						<_3B v="" />
+					</_40>
+					<_40 v="UI Scenes">
+						<_F v="Flags">
+							<Flag v="Attach" />
+							<Flag v="Render 2D" />
+							<Flag v="Render on display plane (1080p)" />
+						</_F>
+						<_34 v="generated_pad2864" length="3" />
+						<_41 v="UI Scene" />
+						<_37 v="Point" />
+						<_38 v="Point">
+							<_B v="Type">
+								<Flag v="Current" />
+								<Flag v="Object" />
+								<Flag v="Placement" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+								<Flag v="Custom" />
+								<Flag v="Scene Anchor" />
+								<Flag v="Instance Anchor" />
+								<Flag v="Nearest Player" />
+								<Flag v="Inherit from Parent" />
+								<Flag v="None" />
+							</_B>
+							<_F v="Flags">
+								<Flag v="Use Orientation" />
+								<Flag v="Don't Stop" />
+							</_F>
+							<_34 v="generated_pad5f87" length="1" />
+							<_38 v="Subject">
+								<_2 v="Object Name" />
+								<_42 v="Raw Object Name" />
+								<_38 v="Object">
+									<_40 v="path">
+										<_6 v="guid" />
+										<_2 v="name" />
+										<_3B v="" />
+									</_40>
+									<_6 v="guid" />
+									<_3B v="" />
+								</_38>
+								<_A v="Object Resolution Type">
+									<Flag v="Invalid" />
+									<Flag v="Reference" />
+									<Flag v="Name" />
+									<Flag v="AI" />
+									<Flag v="Global" />
+									<Flag v="Puppet" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+								</_A>
+								<_34 v="generated_padc9c6" length="3" />
+								<_3B v="" />
+							</_38>
+							<_2 v="Marker" />
+							<_17 v="Position" />
+							<_1C v="Rotation" />
+							<_3B v="" />
+						</_38>
+						<_37 v="" />
+						<_14 v="Scale" />
+						<_40 v="Player Data">
+							<_A v="Player Type">
+								<Flag v="Multiplayer" />
+								<Flag v="Campaign" />
+								<Flag v="Dynamic" />
+							</_A>
+							<_A v="Multiplayer Team">
+								<Flag v="Defender" />
+								<Flag v="Attacker" />
+								<Flag v="ThirdParty" />
+								<Flag v="FourthParty" />
+								<Flag v="FifthParty" />
+								<Flag v="SixthParty" />
+								<Flag v="SeventhParty" />
+								<Flag v="EighthParty" />
+								<Flag v="Neutral" />
+							</_A>
+							<_F v="Flags">
+								<Flag v="UseWinningTeam" />
+								<Flag v="ForgeIntroSpectator" />
+							</_F>
+							<_34 v="generated_padf92f" length="1" />
+							<_6 v="Player Index" />
+							<_6 v="Forge Spectator Player Index" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="NodeGraph Events">
+						<_2 v="Event Name" />
+						<_F v="Flags">
+							<Flag v="Global Event" />
+						</_F>
+						<_34 v="generated_pad5d68" length="3" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Game Engine Vignette Events">
+						<_2 v="Event Name" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Camera Lens Dirt">
+						<_14 v="Intensity" />
+						<_41 v="Dirt Texture" />
+						<_A v="Dirt Type">
+							<Flag v="Apply at bloom res" />
+							<Flag v="Apply at full res" />
+						</_A>
+						<_34 v="generated_pad40de" length="3" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Transform SubActions">
+						<_F v="Flags">
+							<Flag v="Position" />
+							<Flag v="Rotation" />
+						</_F>
+						<_34 v="generated_pad6ca2" length="3" />
+						<_37 v="Point 1" />
+						<_38 v="Point 1">
+							<_B v="Type">
+								<Flag v="Current" />
+								<Flag v="Object" />
+								<Flag v="Placement" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+								<Flag v="Custom" />
+								<Flag v="Scene Anchor" />
+								<Flag v="Instance Anchor" />
+								<Flag v="Nearest Player" />
+								<Flag v="Inherit from Parent" />
+								<Flag v="None" />
+							</_B>
+							<_F v="Flags">
+								<Flag v="Use Orientation" />
+								<Flag v="Don't Stop" />
+							</_F>
+							<_34 v="generated_pad5f87" length="1" />
+							<_38 v="Subject">
+								<_2 v="Object Name" />
+								<_42 v="Raw Object Name" />
+								<_38 v="Object">
+									<_40 v="path">
+										<_6 v="guid" />
+										<_2 v="name" />
+										<_3B v="" />
+									</_40>
+									<_6 v="guid" />
+									<_3B v="" />
+								</_38>
+								<_A v="Object Resolution Type">
+									<Flag v="Invalid" />
+									<Flag v="Reference" />
+									<Flag v="Name" />
+									<Flag v="AI" />
+									<Flag v="Global" />
+									<Flag v="Puppet" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+								</_A>
+								<_34 v="generated_padc9c6" length="3" />
+								<_3B v="" />
+							</_38>
+							<_2 v="Marker" />
+							<_17 v="Position" />
+							<_1C v="Rotation" />
+							<_3B v="" />
+						</_38>
+						<_37 v="" />
+						<_37 v="Point 2" />
+						<_38 v="Point 2">
+							<_B v="Type">
+								<Flag v="Current" />
+								<Flag v="Object" />
+								<Flag v="Placement" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+								<Flag v="Custom" />
+								<Flag v="Scene Anchor" />
+								<Flag v="Instance Anchor" />
+								<Flag v="Nearest Player" />
+								<Flag v="Inherit from Parent" />
+								<Flag v="None" />
+							</_B>
+							<_F v="Flags">
+								<Flag v="Use Orientation" />
+								<Flag v="Don't Stop" />
+							</_F>
+							<_34 v="generated_pad5f87" length="1" />
+							<_38 v="Subject">
+								<_2 v="Object Name" />
+								<_42 v="Raw Object Name" />
+								<_38 v="Object">
+									<_40 v="path">
+										<_6 v="guid" />
+										<_2 v="name" />
+										<_3B v="" />
+									</_40>
+									<_6 v="guid" />
+									<_3B v="" />
+								</_38>
+								<_A v="Object Resolution Type">
+									<Flag v="Invalid" />
+									<Flag v="Reference" />
+									<Flag v="Name" />
+									<Flag v="AI" />
+									<Flag v="Global" />
+									<Flag v="Puppet" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+								</_A>
+								<_34 v="generated_padc9c6" length="3" />
+								<_3B v="" />
+							</_38>
+							<_2 v="Marker" />
+							<_17 v="Position" />
+							<_1C v="Rotation" />
+							<_3B v="" />
+						</_38>
+						<_37 v="" />
+						<_38 v="Mapping">
+							<_37 v="function" />
+							<_38 v="function">
+								<_37 v="" />
+								<_42 v="data" />
+								<_37 v="" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_40 v="Transform Curve SubActions">
+						<_38 v="Transform Curve">
+							<_A v="Translation Type">
+								<Flag v="Off" />
+								<Flag v="Curve" />
+								<Flag v="Point with Curve Offset" />
+							</_A>
+							<_A v="Rotation Type">
+								<Flag v="Off" />
+								<Flag v="Curve" />
+								<Flag v="Look At" />
+								<Flag v="Curve with Offset" />
+							</_A>
+							<_34 v="generated_paddcfb" length="2" />
+							<_38 v="Translation Curve">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_padc23f" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_19 v="value" />
+										<_19 v="tangent in" />
+										<_19 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type x">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type y">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type z">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode x">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode y">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode z">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad30cd" length="2" />
+										<_40 v="pointMetadata">
+											<_40 v="spline road metadata">
+												<_14 v="width" />
+												<_14 v="opacity" />
+												<_14 v="falloffLeft" />
+												<_14 v="falloffRight" />
+												<_14 v="bank" />
+												<_3B v="" />
+											</_40>
+											<_40 v="road decal metadata">
+												<_40 v="Road Decal Textures">
+													<_41 v="Reference" />
+													<_3B v="" />
+												</_40>
+												<_18 v="Road Decal Scale" />
+												<_18 v="Road Decal Offset" />
+												<_14 v="Road Decal Tile Repeat Count" />
+												<_14 v="Road Decal Height Strength" />
+												<_14 v="Road Decal Mask Strength" />
+												<_14 v="Road Decal Height Contrast" />
+												<_14 v="Road Decal Mask Contrast" />
+												<_14 v="Road Decal Edge Fade" />
+												<_6 v="Road Decal Random Seed" />
+												<_3B v="" />
+											</_40>
+											<_40 v="animated spline metadata">
+												<_14 v="Time" />
+												<_3B v="" />
+											</_40>
+											<_3B v="" />
+										</_40>
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_38 v="Rotation Curve">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_padc23f" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_19 v="value" />
+										<_19 v="tangent in" />
+										<_19 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type x">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type y">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type z">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode x">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode y">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode z">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad30cd" length="2" />
+										<_40 v="pointMetadata">
+											<_40 v="spline road metadata">
+												<_14 v="width" />
+												<_14 v="opacity" />
+												<_14 v="falloffLeft" />
+												<_14 v="falloffRight" />
+												<_14 v="bank" />
+												<_3B v="" />
+											</_40>
+											<_40 v="road decal metadata">
+												<_40 v="Road Decal Textures">
+													<_41 v="Reference" />
+													<_3B v="" />
+												</_40>
+												<_18 v="Road Decal Scale" />
+												<_18 v="Road Decal Offset" />
+												<_14 v="Road Decal Tile Repeat Count" />
+												<_14 v="Road Decal Height Strength" />
+												<_14 v="Road Decal Mask Strength" />
+												<_14 v="Road Decal Height Contrast" />
+												<_14 v="Road Decal Mask Contrast" />
+												<_14 v="Road Decal Edge Fade" />
+												<_6 v="Road Decal Random Seed" />
+												<_3B v="" />
+											</_40>
+											<_40 v="animated spline metadata">
+												<_14 v="Time" />
+												<_3B v="" />
+											</_40>
+											<_3B v="" />
+										</_40>
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_38 v="Blend Curve">
+								<_2 v="Name" />
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_pad94fd" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_14 v="value" />
+										<_14 v="tangent in" />
+										<_14 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad7103" length="2" />
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_40 v="AnimatedCurveMetadata">
+									<_14 v="time" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_37 v="Translation Point" />
+							<_38 v="Translation Point">
+								<_B v="Type">
+									<Flag v="Current" />
+									<Flag v="Object" />
+									<Flag v="Placement" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+									<Flag v="Custom" />
+									<Flag v="Scene Anchor" />
+									<Flag v="Instance Anchor" />
+									<Flag v="Nearest Player" />
+									<Flag v="Inherit from Parent" />
+									<Flag v="None" />
+								</_B>
+								<_F v="Flags">
+									<Flag v="Use Orientation" />
+									<Flag v="Don't Stop" />
+								</_F>
+								<_34 v="generated_pad5f87" length="1" />
+								<_38 v="Subject">
+									<_2 v="Object Name" />
+									<_42 v="Raw Object Name" />
+									<_38 v="Object">
+										<_40 v="path">
+											<_6 v="guid" />
+											<_2 v="name" />
+											<_3B v="" />
+										</_40>
+										<_6 v="guid" />
+										<_3B v="" />
+									</_38>
+									<_A v="Object Resolution Type">
+										<Flag v="Invalid" />
+										<Flag v="Reference" />
+										<Flag v="Name" />
+										<Flag v="AI" />
+										<Flag v="Global" />
+										<Flag v="Puppet" />
+										<Flag v="Point Set" />
+										<Flag v="Flag" />
+									</_A>
+									<_34 v="generated_padc9c6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_2 v="Marker" />
+								<_17 v="Position" />
+								<_1C v="Rotation" />
+								<_3B v="" />
+							</_38>
+							<_37 v="" />
+							<_37 v="Rotation Point" />
+							<_38 v="Rotation Point">
+								<_B v="Type">
+									<Flag v="Current" />
+									<Flag v="Object" />
+									<Flag v="Placement" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+									<Flag v="Custom" />
+									<Flag v="Scene Anchor" />
+									<Flag v="Instance Anchor" />
+									<Flag v="Nearest Player" />
+									<Flag v="Inherit from Parent" />
+									<Flag v="None" />
+								</_B>
+								<_F v="Flags">
+									<Flag v="Use Orientation" />
+									<Flag v="Don't Stop" />
+								</_F>
+								<_34 v="generated_pad5f87" length="1" />
+								<_38 v="Subject">
+									<_2 v="Object Name" />
+									<_42 v="Raw Object Name" />
+									<_38 v="Object">
+										<_40 v="path">
+											<_6 v="guid" />
+											<_2 v="name" />
+											<_3B v="" />
+										</_40>
+										<_6 v="guid" />
+										<_3B v="" />
+									</_38>
+									<_A v="Object Resolution Type">
+										<Flag v="Invalid" />
+										<Flag v="Reference" />
+										<Flag v="Name" />
+										<Flag v="AI" />
+										<Flag v="Global" />
+										<Flag v="Puppet" />
+										<Flag v="Point Set" />
+										<Flag v="Flag" />
+									</_A>
+									<_34 v="generated_padc9c6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_2 v="Marker" />
+								<_17 v="Position" />
+								<_1C v="Rotation" />
+								<_3B v="" />
+							</_38>
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_40 v="Generic AI SubActions">
+						<_37 v="Point" />
+						<_38 v="Point">
+							<_B v="Type">
+								<Flag v="Current" />
+								<Flag v="Object" />
+								<Flag v="Placement" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+								<Flag v="Custom" />
+								<Flag v="Scene Anchor" />
+								<Flag v="Instance Anchor" />
+								<Flag v="Nearest Player" />
+								<Flag v="Inherit from Parent" />
+								<Flag v="None" />
+							</_B>
+							<_F v="Flags">
+								<Flag v="Use Orientation" />
+								<Flag v="Don't Stop" />
+							</_F>
+							<_34 v="generated_pad5f87" length="1" />
+							<_38 v="Subject">
+								<_2 v="Object Name" />
+								<_42 v="Raw Object Name" />
+								<_38 v="Object">
+									<_40 v="path">
+										<_6 v="guid" />
+										<_2 v="name" />
+										<_3B v="" />
+									</_40>
+									<_6 v="guid" />
+									<_3B v="" />
+								</_38>
+								<_A v="Object Resolution Type">
+									<Flag v="Invalid" />
+									<Flag v="Reference" />
+									<Flag v="Name" />
+									<Flag v="AI" />
+									<Flag v="Global" />
+									<Flag v="Puppet" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+								</_A>
+								<_34 v="generated_padc9c6" length="3" />
+								<_3B v="" />
+							</_38>
+							<_2 v="Marker" />
+							<_17 v="Position" />
+							<_1C v="Rotation" />
+							<_3B v="" />
+						</_38>
+						<_37 v="" />
+						<_14 v="Scalar" />
+						<_3D v="Flags" />
+						<_34 v="generated_pade30f" length="2" />
+						<_3B v="" />
+					</_40>
+					<_40 v="IK Influencer SubActions">
+						<_37 v="Target" />
+						<_38 v="IK Target">
+							<_B v="Type">
+								<Flag v="Current" />
+								<Flag v="Object" />
+								<Flag v="Placement" />
+								<Flag v="Point Set" />
+								<Flag v="Flag" />
+								<Flag v="Custom" />
+								<Flag v="Scene Anchor" />
+								<Flag v="Instance Anchor" />
+								<Flag v="Nearest Player" />
+								<Flag v="Inherit from Parent" />
+								<Flag v="None" />
+							</_B>
+							<_F v="Flags">
+								<Flag v="Use Orientation" />
+								<Flag v="Don't Stop" />
+							</_F>
+							<_34 v="generated_pad5f87" length="1" />
+							<_38 v="Subject">
+								<_2 v="Object Name" />
+								<_42 v="Raw Object Name" />
+								<_38 v="Object">
+									<_40 v="path">
+										<_6 v="guid" />
+										<_2 v="name" />
+										<_3B v="" />
+									</_40>
+									<_6 v="guid" />
+									<_3B v="" />
+								</_38>
+								<_A v="Object Resolution Type">
+									<Flag v="Invalid" />
+									<Flag v="Reference" />
+									<Flag v="Name" />
+									<Flag v="AI" />
+									<Flag v="Global" />
+									<Flag v="Puppet" />
+									<Flag v="Point Set" />
+									<Flag v="Flag" />
+								</_A>
+								<_34 v="generated_padc9c6" length="3" />
+								<_3B v="" />
+							</_38>
+							<_2 v="Marker" />
+							<_17 v="Position" />
+							<_1C v="Rotation" />
+							<_3B v="" />
+						</_38>
+						<_37 v="" />
+						<_2 v="Chain Name" />
+						<_14 v="Weight" />
+						<_14 v="Current Influence Scale" />
+						<_14 v="Influence Priority" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Camera DOF Curve SubActions">
+						<_38 v="Camera DOF Curve">
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad134b" length="3" />
+							<_38 v="FocalLength">
+								<_40 v="KeyFrames">
+									<_18 v="Position" />
+									<_14 v="LeftSlope" />
+									<_14 v="RightSlope" />
+									<_A v="SegmentType">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="TangentMode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad4bfe" length="2" />
+									<_3B v="" />
+								</_40>
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_pad5cd6" length="3" />
+								<_3B v="" />
+							</_38>
+							<_38 v="FocusDistance">
+								<_40 v="KeyFrames">
+									<_18 v="Position" />
+									<_14 v="LeftSlope" />
+									<_14 v="RightSlope" />
+									<_A v="SegmentType">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="TangentMode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad4bfe" length="2" />
+									<_3B v="" />
+								</_40>
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_pad5cd6" length="3" />
+								<_3B v="" />
+							</_38>
+							<_38 v="FStop">
+								<_40 v="KeyFrames">
+									<_18 v="Position" />
+									<_14 v="LeftSlope" />
+									<_14 v="RightSlope" />
+									<_A v="SegmentType">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="TangentMode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad4bfe" length="2" />
+									<_3B v="" />
+								</_40>
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_pad5cd6" length="3" />
+								<_3B v="" />
+							</_38>
+							<_38 v="Gameplay FOV Blend">
+								<_40 v="KeyFrames">
+									<_18 v="Position" />
+									<_14 v="LeftSlope" />
+									<_14 v="RightSlope" />
+									<_A v="SegmentType">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="TangentMode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad4bfe" length="2" />
+									<_3B v="" />
+								</_40>
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_pad5cd6" length="3" />
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_38>
+						<_6 v="Bokeh Side Count" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Script Curves SubActions">
+						<_38 v="Script">
+							<_F v="Flags">
+								<Flag v="Client" />
+								<Flag v="HasAssociatedScript" />
+								<Flag v="IgnoreInEditor" />
+							</_F>
+							<_34 v="generated_pad585d" length="3" />
+							<_42 v="Data" />
+							<_3C v="Boolean Expression" />
+							<_34 v="generated_pad3e7c" length="3" />
+							<_42 v="Runtime Script Binary" />
+							<_0 v="Runtime Script Name" />
+							<_3E v="Runtime Script CRC" />
+							<_3B v="" />
+						</_38>
+						<_38 v="script_curve_value_1">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_38 v="script_curve_value_2">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_38 v="script_curve_value_3">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_38 v="script_curve_value_4">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_40 v="Puppet Variant SubActions">
+						<_2 v="Variant Name" />
+						<_2 v="Style Id" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Color RGBA SubActions">
+						<_A v="Type">
+							<Flag v="Linear" />
+							<Flag v="Constant" />
+							<Flag v="Curve" />
+						</_A>
+						<_34 v="generated_padc5f1" length="3" />
+						<_14 v="Red Start Value" />
+						<_14 v="Red End Value" />
+						<_14 v="Green Start Value" />
+						<_14 v="Green End Value" />
+						<_14 v="Blue Start Value" />
+						<_14 v="Blue End Value" />
+						<_14 v="Alpha Start Value" />
+						<_14 v="Alpha End Value" />
+						<_38 v="Red Curve">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_38 v="Green Curve">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_38 v="Blue Curve">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_38 v="Alpha Curve">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_40 v="DWS Color Grading SubActions">
+						<_E v="Curves">
+							<Flag v="Weight" />
+							<Flag v="Exposure" />
+							<Flag v="Saturation" />
+							<Flag v="Contrast" />
+							<Flag v="ContrastMidpoint" />
+							<Flag v="Lift" />
+							<Flag v="LiftLuma" />
+							<Flag v="Gamma" />
+							<Flag v="GammaLuma" />
+							<Flag v="Gain" />
+							<Flag v="GainLuma" />
+						</_E>
+						<_34 v="generated_padc74f" length="2" />
+						<_40 v="Curve List">
+							<_2 v="Name" />
+							<_A v="Curve Type">
+								<Flag v="AnimatedCurveType" />
+								<Flag v="Vector2dCurveType" />
+								<Flag v="Vector3dCurveType" />
+								<Flag v="DepthOfFieldCurveType" />
+								<Flag v="AnimatedCurve1dType" />
+								<Flag v="AnimatedCurve2dType" />
+								<Flag v="AnimatedCurve3dType" />
+							</_A>
+							<_34 v="generated_pad711a" length="3" />
+							<_38 v="Animated Curve 2d">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_paddf2c" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_18 v="value" />
+										<_18 v="tangent in" />
+										<_18 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type x">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type y">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode x">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode y">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_40 v="AnimatedCurveMetadata">
+									<_14 v="time" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_38 v="Animated Curve 3d">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_padc23f" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_19 v="value" />
+										<_19 v="tangent in" />
+										<_19 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type x">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type y">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="segment type z">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode x">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode y">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_A v="tangent mode z">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad30cd" length="2" />
+										<_40 v="pointMetadata">
+											<_40 v="spline road metadata">
+												<_14 v="width" />
+												<_14 v="opacity" />
+												<_14 v="falloffLeft" />
+												<_14 v="falloffRight" />
+												<_14 v="bank" />
+												<_3B v="" />
+											</_40>
+											<_40 v="road decal metadata">
+												<_40 v="Road Decal Textures">
+													<_41 v="Reference" />
+													<_3B v="" />
+												</_40>
+												<_18 v="Road Decal Scale" />
+												<_18 v="Road Decal Offset" />
+												<_14 v="Road Decal Tile Repeat Count" />
+												<_14 v="Road Decal Height Strength" />
+												<_14 v="Road Decal Mask Strength" />
+												<_14 v="Road Decal Height Contrast" />
+												<_14 v="Road Decal Mask Contrast" />
+												<_14 v="Road Decal Edge Fade" />
+												<_6 v="Road Decal Random Seed" />
+												<_3B v="" />
+											</_40>
+											<_40 v="animated spline metadata">
+												<_14 v="Time" />
+												<_3B v="" />
+											</_40>
+											<_3B v="" />
+										</_40>
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_38 v="Depth of Field Curve">
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_pad134b" length="3" />
+								<_38 v="FocalLength">
+									<_40 v="KeyFrames">
+										<_18 v="Position" />
+										<_14 v="LeftSlope" />
+										<_14 v="RightSlope" />
+										<_A v="SegmentType">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="TangentMode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad4bfe" length="2" />
+										<_3B v="" />
+									</_40>
+									<_F v="Flags">
+										<Flag v="Enabled" />
+										<Flag v="Visible" />
+									</_F>
+									<_34 v="generated_pad5cd6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_38 v="FocusDistance">
+									<_40 v="KeyFrames">
+										<_18 v="Position" />
+										<_14 v="LeftSlope" />
+										<_14 v="RightSlope" />
+										<_A v="SegmentType">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="TangentMode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad4bfe" length="2" />
+										<_3B v="" />
+									</_40>
+									<_F v="Flags">
+										<Flag v="Enabled" />
+										<Flag v="Visible" />
+									</_F>
+									<_34 v="generated_pad5cd6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_38 v="FStop">
+									<_40 v="KeyFrames">
+										<_18 v="Position" />
+										<_14 v="LeftSlope" />
+										<_14 v="RightSlope" />
+										<_A v="SegmentType">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="TangentMode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad4bfe" length="2" />
+										<_3B v="" />
+									</_40>
+									<_F v="Flags">
+										<Flag v="Enabled" />
+										<Flag v="Visible" />
+									</_F>
+									<_34 v="generated_pad5cd6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_38 v="Gameplay FOV Blend">
+									<_40 v="KeyFrames">
+										<_18 v="Position" />
+										<_14 v="LeftSlope" />
+										<_14 v="RightSlope" />
+										<_A v="SegmentType">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="TangentMode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad4bfe" length="2" />
+										<_3B v="" />
+									</_40>
+									<_F v="Flags">
+										<Flag v="Enabled" />
+										<Flag v="Visible" />
+									</_F>
+									<_34 v="generated_pad5cd6" length="3" />
+									<_3B v="" />
+								</_38>
+								<_3B v="" />
+							</_38>
+							<_38 v="Animated Curve 1d">
+								<_2 v="Name" />
+								<_F v="Flags">
+									<Flag v="Enabled" />
+									<Flag v="Visible" />
+								</_F>
+								<_34 v="generated_pad94fd" length="3" />
+								<_38 v="Value Curve">
+									<_40 v="control points">
+										<_14 v="value" />
+										<_14 v="tangent in" />
+										<_14 v="tangent out" />
+										<_14 v="curviness" />
+										<_A v="segment type">
+											<Flag v="Spline" />
+											<Flag v="Linear" />
+											<Flag v="Stepped" />
+											<Flag v="SteppedNext" />
+										</_A>
+										<_A v="tangent mode">
+											<Flag v="AutoStraight" />
+											<Flag v="UserStraight" />
+											<Flag v="UserBroken" />
+										</_A>
+										<_34 v="generated_pad7103" length="2" />
+										<_3B v="" />
+									</_40>
+									<_3B v="" />
+								</_38>
+								<_40 v="AnimatedCurveMetadata">
+									<_14 v="time" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_3B v="" />
+						</_40>
+						<_38 v="Blending Curve">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_40 v="DWS Chromatic Aberration SubActions">
+						<_38 v="Weight">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_38 v="Blending Curve">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_40 v="Rumble SubActions">
+						<_41 v="Rumble Definition" />
+						<_37 v="Basic" />
+						<_14 v="Low Frequency Level" />
+						<_14 v="High Frequency Level" />
+						<_14 v="Primary Trigger Level" />
+						<_14 v="Secondary Trigger Level" />
+						<_37 v="" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Camera Shake SubActions">
+						<_38 v="Blending Curve">
+							<_2 v="Name" />
+							<_F v="Flags">
+								<Flag v="Enabled" />
+								<Flag v="Visible" />
+							</_F>
+							<_34 v="generated_pad94fd" length="3" />
+							<_38 v="Value Curve">
+								<_40 v="control points">
+									<_14 v="value" />
+									<_14 v="tangent in" />
+									<_14 v="tangent out" />
+									<_14 v="curviness" />
+									<_A v="segment type">
+										<Flag v="Spline" />
+										<Flag v="Linear" />
+										<Flag v="Stepped" />
+										<Flag v="SteppedNext" />
+									</_A>
+									<_A v="tangent mode">
+										<Flag v="AutoStraight" />
+										<Flag v="UserStraight" />
+										<Flag v="UserBroken" />
+									</_A>
+									<_34 v="generated_pad7103" length="2" />
+									<_3B v="" />
+								</_40>
+								<_3B v="" />
+							</_38>
+							<_40 v="AnimatedCurveMetadata">
+								<_14 v="time" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_38>
+						<_38 v="Camera Shake Properties">
+							<_38 v="Scale Damping">
+								<_3C v="Position Dampen Percentage" />
+								<_34 v="generated_pad6a9e" length="3" />
+								<_14 v="Position Dampen Time" />
+								<_3C v="Rotation Dampen Percentage" />
+								<_34 v="generated_padb753" length="3" />
+								<_14 v="Rotation Dampen Time" />
+								<_3B v="" />
+							</_38>
+							<_37 v="Position" />
+							<_19 v="Position Sample Values" />
+							<_19 v="Position Offset Scale" />
+							<_18 v="Position Offset Velocity Range" />
+							<_19 v="Position Offset Velocity Scale Min" />
+							<_19 v="Position Offset Velocity Scale Max" />
+							<_18 v="Position Time Velocity Scale" />
+							<_37 v="" />
+							<_37 v="Rotation" />
+							<_19 v="Rotation Sample Values" />
+							<_1C v="Rotation Offset Scale" />
+							<_18 v="Rotation Offset Velocity Range" />
+							<_19 v="Rotation Offset Velocity Scale Min" />
+							<_19 v="Rotation Offset Velocity Scale Max" />
+							<_18 v="Rotation Time Velocity Scale" />
+							<_37 v="" />
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_38 v="Start Script">
+				<_F v="Flags">
+					<Flag v="Client" />
+					<Flag v="HasAssociatedScript" />
+					<Flag v="IgnoreInEditor" />
+				</_F>
+				<_34 v="generated_pad585d" length="3" />
+				<_42 v="Data" />
+				<_3C v="Boolean Expression" />
+				<_34 v="generated_pad3e7c" length="3" />
+				<_42 v="Runtime Script Binary" />
+				<_0 v="Runtime Script Name" />
+				<_3E v="Runtime Script CRC" />
+				<_3B v="" />
+			</_38>
+			<_38 v="End Script">
+				<_F v="Flags">
+					<Flag v="Client" />
+					<Flag v="HasAssociatedScript" />
+					<Flag v="IgnoreInEditor" />
+				</_F>
+				<_34 v="generated_pad585d" length="3" />
+				<_42 v="Data" />
+				<_3C v="Boolean Expression" />
+				<_34 v="generated_pad3e7c" length="3" />
+				<_42 v="Runtime Script Binary" />
+				<_0 v="Runtime Script Name" />
+				<_3E v="Runtime Script CRC" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="Editor Tracks">
+			<_1 v="Comment" />
+			<_3E v="Color" />
+			<_5 v="Height" />
+			<_F v="Editor Flags">
+				<Flag v="Muted" />
+				<Flag v="Expanded" />
+				<Flag v="Imported" />
+				<Flag v="Playing" />
+				<Flag v="Recording" />
+				<Flag v="Hidden" />
+				<Flag v="HasTrailingEmptyAction" />
+			</_F>
+			<_34 v="generated_padf616" length="1" />
+			<_37 v="Start Script" />
+			<_38 v="Start Script">
+				<_42 v="Data" />
+				<_3E v="Script CRC" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_37 v="End Script" />
+			<_38 v="End Script">
+				<_42 v="Data" />
+				<_3E v="Script CRC" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_38 v="Editor GUID bytes">
+				<_39 v="Guid Bytes" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_40 v="Puppet Tracks">
+			<_2 v="Variant Name" />
+			<_2 v="Style Id" />
+			<_2 v="Object Attachment Name" />
+			<_2 v="Graphics Scene Override" />
+			<_41 v="Cage Definition Tag Handle" />
+			<_38 v="Subject">
+				<_2 v="Object Name" />
+				<_42 v="Raw Object Name" />
+				<_38 v="Object">
+					<_40 v="path">
+						<_6 v="guid" />
+						<_2 v="name" />
+						<_3B v="" />
+					</_40>
+					<_6 v="guid" />
+					<_3B v="" />
+				</_38>
+				<_A v="Object Resolution Type">
+					<Flag v="Invalid" />
+					<Flag v="Reference" />
+					<Flag v="Name" />
+					<Flag v="AI" />
+					<Flag v="Global" />
+					<Flag v="Puppet" />
+					<Flag v="Point Set" />
+					<Flag v="Flag" />
+				</_A>
+				<_34 v="generated_padc9c6" length="3" />
+				<_3B v="" />
+			</_38>
+			<_D v="Flags">
+				<Flag v="Optional" />
+				<Flag v="Player" />
+				<Flag v="deprecated" />
+				<Flag v="Create If Missing" />
+				<Flag v="Destroy When Finished" />
+				<Flag v="Leave Show on Damage" />
+				<Flag v="Leave Show on Alert" />
+				<Flag v="Critical (abort the show when leaving)" />
+				<Flag v="No Lightmap Shadow" />
+				<Flag v="Apply Player Customization" />
+				<Flag v="Apply First Person Player Customization" />
+				<Flag v="Primary Hologram" />
+				<Flag v="Pin Textures" />
+				<Flag v="Never LOD" />
+				<Flag v="Lower Weapon" />
+				<Flag v="Stow Weapon Immediately" />
+				<Flag v="Cinematic Visibility" />
+				<Flag v="Disable Physics" />
+				<Flag v="ICS 3rd Person Camera" />
+				<Flag v="Enable 3rd Person FOV" />
+				<Flag v="Deathless" />
+				<Flag v="Invincible" />
+				<Flag v="AI Vehicle" />
+				<Flag v="AI Aware Of Player On Release" />
+				<Flag v="AI Look At Player On Release" />
+				<Flag v="Preserve Velocity" />
+				<Flag v="Muted" />
+				<Flag v="Restore Object Variant" />
+				<Flag v="Blend World Position" />
+				<Flag v="No Ready Weapon" />
+				<Flag v="No Restore Limbo" />
+				<Flag v="Use Player Action Pose Weapon" />
+			</_D>
+			<_41 v="Type" />
+			<_41 v="Parent Model Animation Graph" />
+			<_40 v="Model Animation Graphs">
+				<_41 v="Puppet Object Type" />
+				<_41 v="Model Animation Graph" />
+				<_A v="ABC Animation Type">
+					<Flag v="Base" />
+					<Flag v="Base + Txy motion type" />
+					<Flag v="Base + Txy,Yaw motion type" />
+					<Flag v="Base + Txyz,Yaw motion type" />
+					<Flag v="Base + Txyz,AngleAxis motion type" />
+					<Flag v="Base + Full motion type" />
+					<Flag v="Base + No motion type" />
+					<Flag v="Overlay" />
+					<Flag v="Overlay Additive - Pose" />
+					<Flag v="Replacement" />
+				</_A>
+				<_A v="ABC Compression Type">
+					<Flag v="Auto" />
+					<Flag v="None" />
+					<Flag v="Medium" />
+					<Flag v="Rough" />
+					<Flag v="Light" />
+					<Flag v="ACL Auto" />
+				</_A>
+				<_34 v="generated_padfe48" length="2" />
+				<_41 v="ABC Skeleton Tag (Optional)" />
+				<_41 v="generatedModelAnimationInternal" />
+				<_3B v="" />
+			</_40>
+			<_37 v="Position" />
+			<_38 v="Position">
+				<_B v="Type">
+					<Flag v="Current" />
+					<Flag v="Object" />
+					<Flag v="Placement" />
+					<Flag v="Point Set" />
+					<Flag v="Flag" />
+					<Flag v="Custom" />
+					<Flag v="Scene Anchor" />
+					<Flag v="Instance Anchor" />
+					<Flag v="Nearest Player" />
+					<Flag v="Inherit from Parent" />
+					<Flag v="None" />
+				</_B>
+				<_F v="Flags">
+					<Flag v="Use Orientation" />
+					<Flag v="Don't Stop" />
+				</_F>
+				<_34 v="generated_pad5f87" length="1" />
+				<_38 v="Subject">
+					<_2 v="Object Name" />
+					<_42 v="Raw Object Name" />
+					<_38 v="Object">
+						<_40 v="path">
+							<_6 v="guid" />
+							<_2 v="name" />
+							<_3B v="" />
+						</_40>
+						<_6 v="guid" />
+						<_3B v="" />
+					</_38>
+					<_A v="Object Resolution Type">
+						<Flag v="Invalid" />
+						<Flag v="Reference" />
+						<Flag v="Name" />
+						<Flag v="AI" />
+						<Flag v="Global" />
+						<Flag v="Puppet" />
+						<Flag v="Point Set" />
+						<Flag v="Flag" />
+					</_A>
+					<_34 v="generated_padc9c6" length="3" />
+					<_3B v="" />
+				</_38>
+				<_2 v="Marker" />
+				<_17 v="Position" />
+				<_1C v="Rotation" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_37 v="Bounding Sphere Override" />
+			<_2 v="Bone For Bounding Sphere Center" />
+			<_14 v="Bounding Sphere Radius" />
+			<_37 v="" />
+			<_40 v="Player Puppet Data">
+				<_A v="Player Type">
+					<Flag v="Multiplayer" />
+					<Flag v="Campaign" />
+					<Flag v="Dynamic" />
+				</_A>
+				<_A v="Multiplayer Team">
+					<Flag v="Defender" />
+					<Flag v="Attacker" />
+					<Flag v="ThirdParty" />
+					<Flag v="FourthParty" />
+					<Flag v="FifthParty" />
+					<Flag v="SixthParty" />
+					<Flag v="SeventhParty" />
+					<Flag v="EighthParty" />
+					<Flag v="Neutral" />
+				</_A>
+				<_F v="Flags">
+					<Flag v="UseWinningTeam" />
+					<Flag v="ForgeIntroSpectator" />
+				</_F>
+				<_34 v="generated_padf92f" length="1" />
+				<_6 v="Player Index" />
+				<_6 v="Forge Spectator Player Index" />
+				<_3B v="" />
+			</_40>
+			<_41 v="Runtime Animset (used by code only)" />
+			<_41 v="Reference to generated anim pool tag" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Camera Tracks">
+			<_41 v="Camera Animation Graph" />
+			<_38 v="Subject">
+				<_2 v="Object Name" />
+				<_42 v="Raw Object Name" />
+				<_38 v="Object">
+					<_40 v="path">
+						<_6 v="guid" />
+						<_2 v="name" />
+						<_3B v="" />
+					</_40>
+					<_6 v="guid" />
+					<_3B v="" />
+				</_38>
+				<_A v="Object Resolution Type">
+					<Flag v="Invalid" />
+					<Flag v="Reference" />
+					<Flag v="Name" />
+					<Flag v="AI" />
+					<Flag v="Global" />
+					<Flag v="Puppet" />
+					<Flag v="Point Set" />
+					<Flag v="Flag" />
+				</_A>
+				<_34 v="generated_padc9c6" length="3" />
+				<_3B v="" />
+			</_38>
+			<_37 v="Position" />
+			<_38 v="Position">
+				<_B v="Type">
+					<Flag v="Current" />
+					<Flag v="Object" />
+					<Flag v="Placement" />
+					<Flag v="Point Set" />
+					<Flag v="Flag" />
+					<Flag v="Custom" />
+					<Flag v="Scene Anchor" />
+					<Flag v="Instance Anchor" />
+					<Flag v="Nearest Player" />
+					<Flag v="Inherit from Parent" />
+					<Flag v="None" />
+				</_B>
+				<_F v="Flags">
+					<Flag v="Use Orientation" />
+					<Flag v="Don't Stop" />
+				</_F>
+				<_34 v="generated_pad5f87" length="1" />
+				<_38 v="Subject">
+					<_2 v="Object Name" />
+					<_42 v="Raw Object Name" />
+					<_38 v="Object">
+						<_40 v="path">
+							<_6 v="guid" />
+							<_2 v="name" />
+							<_3B v="" />
+						</_40>
+						<_6 v="guid" />
+						<_3B v="" />
+					</_38>
+					<_A v="Object Resolution Type">
+						<Flag v="Invalid" />
+						<Flag v="Reference" />
+						<Flag v="Name" />
+						<Flag v="AI" />
+						<Flag v="Global" />
+						<Flag v="Puppet" />
+						<Flag v="Point Set" />
+						<Flag v="Flag" />
+					</_A>
+					<_34 v="generated_padc9c6" length="3" />
+					<_3B v="" />
+				</_38>
+				<_2 v="Marker" />
+				<_17 v="Position" />
+				<_1C v="Rotation" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_A v="Team Camera">
+				<Flag v="Defender" />
+				<Flag v="Attacker" />
+				<Flag v="ThirdParty" />
+				<Flag v="FourthParty" />
+				<Flag v="FifthParty" />
+				<Flag v="SixthParty" />
+				<Flag v="SeventhParty" />
+				<Flag v="EighthParty" />
+				<Flag v="Neutral" />
+			</_A>
+			<_34 v="generated_pad8b2a" length="3" />
+			<_3B v="" />
+		</_40>
+		<_6 v="lastActionId" />
+		<_6 v="lastTrackId" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Scene References">
+		<_41 v="Scene" />
+		<_3B v="" />
+	</_40>
+	<_38 v="Name map">
+		<_40 v="ids">
+			<_2 v="id" />
+			<_3B v="" />
+		</_40>
+		<_40 v="string indices">
+			<_6 v="string index" />
+			<_3B v="" />
+		</_40>
+		<_42 v="string table" />
+		<_3B v="" />
+	</_38>
+	<_40 v="Required Sound Banks">
+		<_41 v="SoundBank" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Synced Audio Tracks">
+		<_41 v="SoundEvent" />
+		<_3B v="" />
+	</_40>
+	<_40 v="First to First Transition">
+		<_2 v="Preset" />
+		<_E v="Override Flags">
+			<Flag v="Override Flags" />
+			<Flag v="Override Close Enough Distances" />
+			<Flag v="Override Close Enough Angles" />
+			<Flag v="Override Linear Velocities" />
+			<Flag v="Override Angular Velocities" />
+			<Flag v="Override Lower and Raise Weapon Times" />
+			<Flag v="Override Hide Player Time" />
+			<Flag v="Override Move To Slide Curve and Move To Time" />
+			<Flag v="Override Delays" />
+			<Flag v="Override Blend Times and Curves" />
+		</_E>
+		<_F v="Flags">
+			<Flag v="No Transition In" />
+			<Flag v="No Transition Out" />
+			<Flag v="No HUD Off" />
+			<Flag v="No HUD On" />
+			<Flag v="Use Time Instead" />
+			<Flag v="Transition Out Trigger on Event" />
+			<Flag v="Don't Wait for HUD" />
+			<Flag v="Don't Hide FPS HUD Elements" />
+		</_F>
+		<_34 v="generated_pad1960" length="1" />
+		<_14 v="Close Enough Distance Min" />
+		<_14 v="Close Enough Distance Max" />
+		<_8 v="Close Enough Angle Min" />
+		<_8 v="Close Enough Angle Max" />
+		<_14 v="Linear Velocity Min" />
+		<_14 v="Linear Velocity Max" />
+		<_8 v="Angular Velocity Min" />
+		<_8 v="Angular Velocity Max" />
+		<_14 v="Lower Weapon Time" />
+		<_14 v="Raise Weapon Time" />
+		<_14 v="Hide Player Time" />
+		<_A v="Move To Slide Curve">
+			<Flag v="None" />
+			<Flag v="Linear" />
+			<Flag v="Zero" />
+			<Flag v="One" />
+			<Flag v="EaseInQuad" />
+			<Flag v="EaseOutQuad" />
+			<Flag v="EaseInOutQuad" />
+			<Flag v="EaseInCubic" />
+			<Flag v="EaseOutCubic" />
+			<Flag v="EaseInOutCubic" />
+			<Flag v="EaseInQuart" />
+			<Flag v="EaseOutQuart" />
+			<Flag v="EaseInOutQuart" />
+			<Flag v="EaseInQuint" />
+			<Flag v="EaseOutQuint" />
+			<Flag v="EaseInOutQuint" />
+			<Flag v="EaseInSine" />
+			<Flag v="EaseOutSine" />
+			<Flag v="EaseInOutSine" />
+			<Flag v="EaseInExpo" />
+			<Flag v="EaseOutExpo" />
+			<Flag v="EaseInOutExpo" />
+			<Flag v="EaseInCirc" />
+			<Flag v="EaseOutCirc" />
+			<Flag v="EaseInOutCirc" />
+			<Flag v="EaseInOutLight" />
+			<Flag v="EaseInOutHeavy" />
+		</_A>
+		<_34 v="generated_pad3341" length="3" />
+		<_14 v="Move To Time" />
+		<_14 v="Lower Weapon Delay Override" />
+		<_14 v="Raise Weapon Delay Override" />
+		<_14 v="HUD Off Delay Override" />
+		<_14 v="HUD On Delay Override" />
+		<_14 v="Move To Delay Override" />
+		<_3B v="" />
+	</_40>
+	<_40 v="First to Third Transition">
+		<_F v="Flags">
+			<Flag v="No Transition In" />
+			<Flag v="No Transition Out" />
+			<Flag v="No HUD Off" />
+			<Flag v="No HUD On" />
+			<Flag v="Use Time Instead" />
+			<Flag v="Transition Out Trigger on Event" />
+			<Flag v="Don't Wait for HUD" />
+			<Flag v="Don't Hide FPS HUD Elements" />
+		</_F>
+		<_34 v="generated_pad1bd9" length="3" />
+		<_14 v="Close Enough Distance" />
+		<_8 v="Close Enough Angle" />
+		<_8 v="Angular Velocity" />
+		<_14 v="Lower Weapon Time" />
+		<_14 v="Raise Weapon Time" />
+		<_14 v="Hide Player Time" />
+		<_38 v="Destination">
+			<_40 v="path">
+				<_6 v="guid" />
+				<_2 v="name" />
+				<_3B v="" />
+			</_40>
+			<_6 v="guid" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad3ca3" length="4" />
+	<_3B v="" />
+</root>

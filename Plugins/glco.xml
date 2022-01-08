@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="profile colors">
+		<_1F v="color" />
+		<_3B v="" />
+	</_40>
+	<_40 v="emblem colors">
+		<_2 v="harmony group name" />
+		<_40 v="harmonies">
+			<_2 v="harmony name" />
+			<_1F v="primary color" />
+			<_1F v="secondary color" />
+			<_1F v="tertiary color" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="visor colors">
+		<_2 v="name" />
+		<_1F v="tertiary color" />
+		<_1F v="quaternary color" />
+		<_3B v="" />
+	</_40>
+	<_38 v="elite specular color">
+		<_1F v="tertiary color" />
+		<_1F v="quaternary color" />
+		<_3B v="" />
+	</_38>
+	<_34 v="generated_padc5d6" length="4" />
+	<_3B v="" />
+</root>

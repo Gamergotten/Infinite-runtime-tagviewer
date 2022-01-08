@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="name" />
+	<_40 v="limits">
+		<_2 v="type" />
+		<_3C v="max" />
+		<_F v="flags">
+			<Flag v="hide category from UI" />
+			<Flag v="add attachments in category to inventory swapper UI" />
+			<Flag v="add attachments in category to nav point displays" />
+		</_F>
+		<_34 v="generated_pad2c79" length="2" />
+		<_3B v="" />
+	</_40>
+	<_40 v="frame attachments">
+		<_41 v="frame attachment" />
+		<_A v="set">
+			<Flag v="normal" />
+			<Flag v="initial" />
+			<Flag v="permanent" />
+		</_A>
+		<_A v="initial input slot">
+			<Flag v="none" />
+			<Flag v="equipment" />
+			<Flag v="grenade" />
+			<Flag v="powerup" />
+		</_A>
+		<_34 v="generated_pad5209" length="2" />
+		<_3B v="" />
+	</_40>
+	<_40 v="UI display info">
+		<_2 v="name" />
+		<_2 v="alt name " />
+		<_2 v="description" />
+		<_2 v="help text" />
+		<_2 v="icon string id" />
+		<_41 v="sprite" />
+		<_6 v="sprite index" />
+		<_41 v="alt sprite" />
+		<_6 v="alt sprite index" />
+		<_6 v="damage sprite index" />
+		<_41 v="ui vehicle screen reference" />
+		<_3B v="" />
+	</_40>
+	<_C v="Nav Point Sequence Index">
+		<Flag v="TacticalObjective" />
+		<Flag v="SubObjective" />
+		<Flag v="MainObjective" />
+		<Flag v="SupplyCache" />
+		<Flag v="MoveToIndicator" />
+		<Flag v="ChatterIndicator" />
+		<Flag v="AttackCommandFg" />
+		<Flag v="ReviveFg" />
+		<Flag v="ReviveBg" />
+		<Flag v="BleedoutTimerStroke" />
+		<Flag v="ReviveCommand" />
+		<Flag v="ReviveHelpPulse" />
+		<Flag v="WzBossFg" />
+		<Flag v="WzBossBg" />
+		<Flag v="WzReqFg" />
+		<Flag v="WzHomeBaseFg" />
+		<Flag v="AttackFg" />
+		<Flag v="DefendFg" />
+		<Flag v="CircleBg" />
+		<Flag v="DiamondBg" />
+		<Flag v="SquareBg" />
+		<Flag v="HexBg" />
+		<Flag v="CircleStroke" />
+		<Flag v="DiamondStroke" />
+		<Flag v="SquareStroke" />
+		<Flag v="HexStroke" />
+		<Flag v="ExclamationFg" />
+		<Flag v="DeadIndicator" />
+		<Flag v="SpeakingIndicator" />
+		<Flag v="WeaponPadFg" />
+		<Flag v="CubeFg" />
+		<Flag v="FlagFg" />
+		<Flag v="LetterAFg" />
+		<Flag v="LetterBFg" />
+		<Flag v="LetterCFg" />
+		<Flag v="BombFg" />
+		<Flag v="CrownFg" />
+		<Flag v="SmallOffscreenArrow" />
+		<Flag v="FriendlyArrow" />
+		<Flag v="EnemyArrow" />
+		<Flag v="SeekIndicator" />
+		<Flag v="LockOnIndicator" />
+		<Flag v="ReqBg" />
+		<Flag v="Num0Fg" />
+		<Flag v="Num1Fg" />
+		<Flag v="Num2Fg" />
+		<Flag v="Num3Fg" />
+		<Flag v="Num4Fg" />
+		<Flag v="Num5Fg" />
+		<Flag v="Num6Fg" />
+		<Flag v="Num7Fg" />
+		<Flag v="Num8Fg" />
+		<Flag v="Num9Fg" />
+		<Flag v="FrameIdentifier1" />
+		<Flag v="FrameIdentifier2" />
+		<Flag v="FrameIdentifier3" />
+		<Flag v="FrameIdentifier4" />
+		<Flag v="AbilityAutoTurret" />
+		<Flag v="AbilityCloak" />
+		<Flag v="AbilityGravSphere" />
+		<Flag v="AbilityHealthBlast" />
+		<Flag v="AbilityHex" />
+		<Flag v="AbilityHologram" />
+		<Flag v="AbilityLocationDart" />
+		<Flag v="AbilityMedicDrone" />
+		<Flag v="AbilityTrap" />
+		<Flag v="Flipbook1" />
+		<Flag v="Flipbook2" />
+		<Flag v="Flipbook3" />
+		<Flag v="Flipbook4" />
+		<Flag v="Flipbook5" />
+		<Flag v="Flipbook6" />
+		<Flag v="Flipbook7" />
+		<Flag v="Flipbook8" />
+		<Flag v="Flipbook9" />
+		<Flag v="Flipbook10" />
+		<Flag v="Flipbook11" />
+		<Flag v="Flipbook12" />
+		<Flag v="Flipbook13" />
+		<Flag v="Flipbook14" />
+		<Flag v="Flipbook15" />
+		<Flag v="Flipbook16" />
+		<Flag v="Flipbook17" />
+		<Flag v="Flipbook18" />
+		<Flag v="Flipbook19" />
+		<Flag v="Flipbook20" />
+		<Flag v="Flipbook21" />
+		<Flag v="Flipbook22" />
+		<Flag v="Flipbook23" />
+		<Flag v="Flipbook24" />
+	</_C>
+	<_34 v="generated_pad0c49" length="4" />
+	<_3B v="" />
+</root>

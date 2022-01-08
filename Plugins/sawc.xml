@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="wallcling">
+		<_38 v="common ability parameters">
+			<_37 v="common ability parameters" />
+			<_C v="input">
+				<Flag v="Default" />
+				<Flag v="Mobility" />
+				<Flag v="Suit" />
+				<Flag v="Jump" />
+				<Flag v="Equipment" />
+				<Flag v="Melee" />
+				<Flag v="PowerUp" />
+				<Flag v="Unmapped" />
+			</_C>
+			<_D v="flags">
+				<Flag v="Use 3rd Person Camera When Active" />
+				<Flag v="Hide Reticle When Active" />
+				<Flag v="Is Motion Tracked (By Enemies) When Active" />
+				<Flag v="One-Shot Activation Effect" />
+				<Flag v="Can be activated when weapon state is relaxed" />
+				<Flag v="Does Not Appear In Extended Motion Tracker Range" />
+				<Flag v="Energy persists across deaths" />
+				<Flag v="Activation interrupts weapon switching" />
+				<Flag v="Allow activation during weapon throw" />
+				<Flag v="Allow activation while sliding" />
+			</_D>
+			<_15 v="activation energy cost" />
+			<_14 v="active energy consumption" />
+			<_14 v="recharge duration" />
+			<_14 v="recharge delay" />
+			<_14 v="cooldown delay" />
+			<_41 v="activation effect" />
+			<_14 v="activation effect kill delay" />
+			<_A v="sprint preservation">
+				<Flag v="No" />
+				<Flag v="Zero fraction" />
+				<Flag v="Retain fraction" />
+				<Flag v="Decay (normal)" />
+				<Flag v="Decay (forced)" />
+			</_A>
+			<_34 v="generated_pad0aca" length="3" />
+			<_41 v="active malleable property modifiers" />
+			<_41 v="timed malleable property modifiers" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_D v="flags">
+			<Flag v="Must land again after activating" />
+			<Flag v="Button activated" />
+			<Flag v="Button deactivated" />
+			<Flag v="Disable weapon use" />
+			<Flag v="Sticky mode" />
+			<Flag v="Crouch detach" />
+			<Flag v="Jump directional control" />
+		</_D>
+		<_14 v="cooldown" />
+		<_36 v="Contact point checks" />
+		<_14 v="minimum height above floor" />
+		<_14 v="velocity threshold" />
+		<_15 v="contact normal threshold z" />
+		<_14 v="contact offset threshold z" />
+		<_15 v="contact throttle dot threshold" />
+		<_14 v="maximum distance allowed between current position and desired position before snapping" />
+		<_36 v="Hang parameters" />
+		<_14 v="hang time limit" />
+		<_14 v="slide start time" />
+		<_14 v="slide speed" />
+		<_36 v="Camera parameters" />
+		<_8 v="camera roll max" />
+		<_14 v="camera blend time" />
+		<_36 v="Jump parameters" />
+		<_15 v="jump throttle threshold" />
+		<_8 v="jump pitch" />
+		<_14 v="jump velocity" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

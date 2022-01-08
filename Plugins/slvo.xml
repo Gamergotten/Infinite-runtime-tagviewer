@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Visual Environment Volumes">
+		<_2 v="Name" />
+		<_37 v="Dumpling settings" />
+		<_38 v="Dumpling">
+			<_40 v="inner points">
+				<_17 v="position" />
+				<_3B v="" />
+			</_40>
+			<_40 v="outer points">
+				<_17 v="position" />
+				<_3B v="" />
+			</_40>
+			<_14 v="height" />
+			<_14 v="sink" />
+			<_14 v="inner value" />
+			<_14 v="outer value" />
+			<_17 v="center point" />
+			<_14 v="trivial cull radius squared" />
+			<_14 v="bound volume" />
+			<_3B v="" />
+		</_38>
+		<_40 v="EditorMetadata">
+			<_1 v="folder name" />
+			<_17 v="local space pivot point position" />
+			<_3B v="" />
+		</_40>
+		<_37 v="" />
+		<_38 v="Visual Environment">
+			<_41 v="Camera Settings" />
+			<_41 v="Fog Settings" />
+			<_38 v="Custom Object Lighting">
+				<_36 v="Character Lighting" />
+				<_40 v="Authored Light Probes">
+					<_40 v="Lights">
+						<_37 v="Authored Light Probe" />
+						<_37 v="Direction 1" />
+						<_14 v="Direction 1" />
+						<_37 v="Front-Back 1" />
+						<_14 v="Front-Back 1" />
+						<_1F v="Direct color 1" />
+						<_37 v="Direct intensity 1" />
+						<_14 v="Direct intensity 1" />
+						<_37 v="Direction 2" />
+						<_14 v="Direction 2" />
+						<_37 v="Front-Back 2" />
+						<_14 v="Front-Back 2" />
+						<_1F v="Direct color 2" />
+						<_37 v="Direct intensity 2" />
+						<_14 v="Direct intensity 2" />
+						<_1F v="Ambient Color" />
+						<_37 v="Ambient intensity" />
+						<_14 v="Ambient intensity" />
+						<_1F v="Sun Color" />
+						<_37 v="Sun intensity" />
+						<_14 v="Sun intensity" />
+						<_1F v="Cubemap Scale Color" />
+						<_37 v="Cubemap Scale intensity" />
+						<_14 v="Cubemap Scale intensity" />
+						<_37 v="Authored Light Probe Intensity Scale" />
+						<_14 v="Authored Light Probe Intensity Scale" />
+						<_37 v="Generated Air Probe Intensity Scale" />
+						<_14 v="Generated Air Probe Intensity Scale" />
+						<_3B v="" />
+					</_40>
+					<_37 v="Generated Air Probe Intensity Scale" />
+					<_14 v="Generated Air Probe Intensity Scale" />
+					<_39 v="raw sh data" />
+					<_39 v="per frame sh data" />
+					<_17 v="Sun Color" />
+					<_17 v="Cubemap Scale" />
+					<_36 v="" />
+					<_E v="Flags">
+						<Flag v="Characters" />
+						<Flag v="First Person Geometry" />
+						<Flag v="Vehicles" />
+					</_E>
+					<_34 v="generated_padb28a" length="2" />
+					<_3B v="" />
+				</_40>
+				<_A v="Is Camera-space">
+					<Flag v="Off" />
+					<Flag v="On" />
+				</_A>
+				<_F v="Flags">
+					<Flag v="Force Always Sun" />
+				</_F>
+				<_34 v="generated_pad79fe" length="2" />
+				<_41 v="cubemap override" />
+				<_3B v="" />
+			</_38>
+			<_41 v="Cubemap Bitmap DEPRECATED" />
+			<_3B v="" />
+		</_38>
+		<_41 v="owner bsp" />
+		<_2 v="owner variant" />
+		<_5 v="runtime bsp index" />
+		<_5 v="runtime variant index" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad02e3" length="4" />
+	<_3B v="" />
+</root>

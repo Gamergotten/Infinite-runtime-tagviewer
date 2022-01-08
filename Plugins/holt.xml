@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="Hologram Lighting">
+		<_37 v="HOLOGRAM" />
+		<_37 v="Intensity" />
+		<_14 v="Intensity" />
+		<_14 v="Intensity Input" />
+		<_A v="Transparency Mode">
+			<Flag v="cheap" />
+			<Flag v="expensive" />
+		</_A>
+		<_34 v="generated_pad2b63" length="3" />
+		<_37 v="" />
+		<_37 v="KEY LIGHT" />
+		<_38 v="Key Light">
+			<_37 v="Hologram Light" />
+			<_37 v="Direction" />
+			<_14 v="Direction" />
+			<_37 v="Front-Back" />
+			<_14 v="Front-Back" />
+			<_37 v="Intensity" />
+			<_14 v="Intensity" />
+			<_14 v="Intensity Input" />
+			<_14 v="Forward Input" />
+			<_14 v="Right Input" />
+			<_14 v="Up Input" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="FILL LIGHT" />
+		<_38 v="Fill Light">
+			<_37 v="Hologram Light" />
+			<_37 v="Direction" />
+			<_14 v="Direction" />
+			<_37 v="Front-Back" />
+			<_14 v="Front-Back" />
+			<_37 v="Intensity" />
+			<_14 v="Intensity" />
+			<_14 v="Intensity Input" />
+			<_14 v="Forward Input" />
+			<_14 v="Right Input" />
+			<_14 v="Up Input" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="RIM LIGHT" />
+		<_38 v="Rim Light">
+			<_37 v="Hologram Light" />
+			<_37 v="Direction" />
+			<_14 v="Direction" />
+			<_37 v="Front-Back" />
+			<_14 v="Front-Back" />
+			<_37 v="Intensity" />
+			<_14 v="Intensity" />
+			<_14 v="Intensity Input" />
+			<_14 v="Forward Input" />
+			<_14 v="Right Input" />
+			<_14 v="Up Input" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

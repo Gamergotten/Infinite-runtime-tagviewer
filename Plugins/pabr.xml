@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_D v="Flags">
+		<Flag v="Only Live Preview During Brush Strokes" />
+		<Flag v="Use Paint Targets as UAVs" />
+		<Flag v="Allow Grouped Textures" />
+		<Flag v="Disallow Ungrouped Textures" />
+	</_D>
+	<_41 v="Brush Material" />
+	<_41 v="Generate Data Graph" />
+	<_41 v="Paint Graph" />
+	<_41 v="Highlight Graph" />
+	<_41 v="Live Preview Graph" />
+	<_41 v="Begin Stroke Generate Data Graph" />
+	<_41 v="Begin Stroke Graph" />
+	<_41 v="End Stroke Graph" />
+	<_41 v="On Activate Graph" />
+	<_41 v="On Deactivate Graph" />
+	<_34 v="generated_pad576a" length="4" />
+	<_3B v="" />
+</root>

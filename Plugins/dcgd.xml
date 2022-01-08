@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Enemy Colors">
+		<_2 v="name" />
+		<_36 v="sRGB Colors" />
+		<_20 v="in world color" />
+		<_20 v="outline color" />
+		<_20 v="fx color" />
+		<_36 v="Linear Colors" />
+		<_20 v="bitmap color" />
+		<_20 v="kill feed color" />
+		<_20 v="motion tracker color" />
+		<_20 v="text color" />
+		<_20 v="navpoint color" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Friendly Colors">
+		<_2 v="name" />
+		<_36 v="sRGB Colors" />
+		<_20 v="in world color" />
+		<_20 v="outline color" />
+		<_20 v="fx color" />
+		<_36 v="Linear Colors" />
+		<_20 v="bitmap color" />
+		<_20 v="kill feed color" />
+		<_20 v="motion tracker color" />
+		<_20 v="text color" />
+		<_20 v="navpoint color" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Fireteam Colors">
+		<_2 v="name" />
+		<_36 v="sRGB Colors" />
+		<_20 v="in world color" />
+		<_20 v="outline color" />
+		<_20 v="fx color" />
+		<_36 v="Linear Colors" />
+		<_20 v="bitmap color" />
+		<_20 v="kill feed color" />
+		<_20 v="motion tracker color" />
+		<_20 v="text color" />
+		<_20 v="navpoint color" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Observer Team Colors">
+		<_2 v="name" />
+		<_36 v="sRGB Colors" />
+		<_20 v="in world color" />
+		<_20 v="outline color" />
+		<_20 v="fx color" />
+		<_36 v="Linear Colors" />
+		<_20 v="bitmap color" />
+		<_20 v="kill feed color" />
+		<_20 v="motion tracker color" />
+		<_20 v="text color" />
+		<_20 v="navpoint color" />
+		<_3B v="" />
+	</_40>
+	<_37 v="Neutral Colors" />
+	<_38 v="Neutral Colors">
+		<_2 v="name" />
+		<_36 v="sRGB Colors" />
+		<_20 v="in world color" />
+		<_20 v="outline color" />
+		<_20 v="fx color" />
+		<_36 v="Linear Colors" />
+		<_20 v="bitmap color" />
+		<_20 v="kill feed color" />
+		<_20 v="motion tracker color" />
+		<_20 v="text color" />
+		<_20 v="navpoint color" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Self Colors" />
+	<_38 v="Self Colors">
+		<_2 v="name" />
+		<_36 v="sRGB Colors" />
+		<_20 v="in world color" />
+		<_20 v="outline color" />
+		<_20 v="fx color" />
+		<_36 v="Linear Colors" />
+		<_20 v="bitmap color" />
+		<_20 v="kill feed color" />
+		<_20 v="motion tracker color" />
+		<_20 v="text color" />
+		<_20 v="navpoint color" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_3B v="" />
+</root>

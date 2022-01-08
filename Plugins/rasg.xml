@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="default bitmaps" />
+	<_40 v="default bitmaps">
+		<_41 v="default bitmaps" />
+		<_3B v="" />
+	</_40>
+	<_41 v="explicit shader table" />
+	<_36 v="global materials" />
+	<_40 v="global materials">
+		<_2 v="name" />
+		<_41 v="material" />
+		<_34 v="countPSOs" length="4" />
+		<_34 v="generated_pad8d40" length="4" />
+		<_7 v="ptr PSOs" />
+		<_3B v="" />
+	</_40>
+	<_41 v="default performance throttles" />
+	<_41 v="default scenario render data" />
+	<_41 v="Cheap Particle Type Library" />
+	<_40 v="Display output transformations">
+		<_2 v="Display Output Preset Name" />
+		<_41 v="Reference Rendering Transform" />
+		<_41 v="HDR to LDR LUT" />
+		<_41 v="HDR Output LUT" />
+		<_41 v="HDR Output LUT 10K" />
+		<_3B v="" />
+	</_40>
+	<_14 v="HDR bloom intensity scale" />
+	<_14 v="Bloom max pixel intensity" />
+	<_36 v="Motion blur parameters" />
+	<_14 v="max blur" />
+	<_14 v="blur scale" />
+	<_14 v="center falloff x" />
+	<_14 v="center falloff y" />
+	<_41 v="Hologram Camera FX" />
+	<_36 v="lighting debug parameters" />
+	<_41 v="airprobe render model" />
+	<_14 v="debug lighting value" />
+	<_14 v="albedo clip min" />
+	<_14 v="albedo clip max" />
+	<_41 v="Post-process Graph" />
+	<_41 v="Default Ripple Definition" />
+	<_41 v="Subsurface Scatter Profile tag" />
+	<_41 v="Empty Swatch Tag" />
+	<_41 v="Hair Profile tag" />
+	<_40 v="psoFeatureTags">
+		<_41 v="psoDictionaryReference" />
+		<_A v="contentBucket">
+			<Flag v="Main Menu" />
+			<Flag v="Multiplayer" />
+			<Flag v="Campaign" />
+			<Flag v="Forge" />
+			<Flag v="Shared" />
+			<Flag v="Misc" />
+		</_A>
+		<_34 v="generated_pade9b2" length="3" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

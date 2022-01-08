@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Customization Data">
+		<_0 v="Camera Point" />
+		<_2 v="Default Idle Animation" />
+		<_2 v="Idle Animation" />
+		<_2 v="Idle 2 Focused Animation" />
+		<_2 v="Idle Focused Animation" />
+		<_2 v="Focused 2 Idle Animation" />
+		<_2 v="Armor Change Reaction Animation" />
+		<_2 v="Holo Table Animation" />
+		<_2 v="Idle Spartan Ai Animation" />
+		<_2 v="Spartan Platform Glow Effect" />
+		<_1C v="Rotation Angle Limitation" />
+		<_1C v="Default Weapon Orientation" />
+		<_40 v="Camera Settings Data">
+			<_B v="Core Focus Mode">
+				<Flag v="Default" />
+				<Flag v="CoreFocused" />
+			</_B>
+			<_B v="Animation Easing">
+				<Flag v="LinearTween" />
+				<Flag v="EaseInQuad" />
+				<Flag v="EaseOutQuad" />
+				<Flag v="EaseInOutQuad" />
+				<Flag v="EaseInCubic" />
+				<Flag v="EaseOutCubic" />
+				<Flag v="EaseInOutCubic" />
+				<Flag v="EaseInQuart" />
+				<Flag v="EaseOutQuart" />
+				<Flag v="EaseInOutQuart" />
+				<Flag v="EaseInQuint" />
+				<Flag v="EaseOutQuint" />
+				<Flag v="EaseInOutQuint" />
+				<Flag v="EaseInSine" />
+				<Flag v="EaseOutSine" />
+				<Flag v="EaseInOutSine" />
+				<Flag v="EaseInExpo" />
+				<Flag v="EaseOutExpo" />
+				<Flag v="EaseInOutExpo" />
+				<Flag v="EaseInCirc" />
+				<Flag v="EaseOutCirc" />
+				<Flag v="EaseInOutCirc" />
+				<Flag v="EaseInSinCustom" />
+				<Flag v="EaseOutSinCustom" />
+			</_B>
+			<_40 v="Camera Positions">
+				<_B v="Camera Position Type">
+					<Flag v="Default" />
+					<Flag v="Custom" />
+				</_B>
+				<_34 v="generated_pad010d" length="2" />
+				<_19 v="Camera Position" />
+				<_2 v="Composer Scene Name" />
+				<_3B v="" />
+			</_40>
+			<_14 v="Camera FOV" />
+			<_14 v="Camera Transition" />
+			<_1C v="Orientation" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Region Data">
+			<_2 v="UI Display String" />
+			<_2 v="UI Description�String" />
+			<_6 v="CMS Customization Item Type" />
+			<_B v="CMS Customization Core Type">
+				<Flag v="Unknown" />
+				<Flag v="Armor" />
+				<Flag v="Ai" />
+				<Flag v="WeaponSidekick" />
+				<Flag v="WeaponAR" />
+				<Flag v="WeaponBR" />
+				<Flag v="WeaponCommando" />
+				<Flag v="WeaponSPnKr" />
+				<Flag v="WeaponSniper" />
+				<Flag v="WeaponShotgun" />
+				<Flag v="WeaponHydra" />
+				<Flag v="VehicleWarthog" />
+				<Flag v="VehicleMongoose" />
+				<Flag v="VehicleScorpion" />
+				<Flag v="VehicleWasp" />
+				<Flag v="VehicleRazorBack" />
+				<Flag v="VehicleGungoose" />
+				<Flag v="VehicleRockethog" />
+			</_B>
+			<_34 v="generated_pade424" length="2" />
+			<_2 v="Region Name" />
+			<_2 v="Marker Name" />
+			<_14 v="Marker Offset" />
+			<_B v="Animation Easing">
+				<Flag v="LinearTween" />
+				<Flag v="EaseInQuad" />
+				<Flag v="EaseOutQuad" />
+				<Flag v="EaseInOutQuad" />
+				<Flag v="EaseInCubic" />
+				<Flag v="EaseOutCubic" />
+				<Flag v="EaseInOutCubic" />
+				<Flag v="EaseInQuart" />
+				<Flag v="EaseOutQuart" />
+				<Flag v="EaseInOutQuart" />
+				<Flag v="EaseInQuint" />
+				<Flag v="EaseOutQuint" />
+				<Flag v="EaseInOutQuint" />
+				<Flag v="EaseInSine" />
+				<Flag v="EaseOutSine" />
+				<Flag v="EaseInOutSine" />
+				<Flag v="EaseInExpo" />
+				<Flag v="EaseOutExpo" />
+				<Flag v="EaseInOutExpo" />
+				<Flag v="EaseInCirc" />
+				<Flag v="EaseOutCirc" />
+				<Flag v="EaseInOutCirc" />
+				<Flag v="EaseInSinCustom" />
+				<Flag v="EaseOutSinCustom" />
+			</_B>
+			<_34 v="generated_padfe05" length="2" />
+			<_40 v="Camera Positions">
+				<_B v="Camera Position Type">
+					<Flag v="Default" />
+					<Flag v="Custom" />
+				</_B>
+				<_34 v="generated_pad010d" length="2" />
+				<_19 v="Camera Position" />
+				<_2 v="Composer Scene Name" />
+				<_3B v="" />
+			</_40>
+			<_14 v="Camera FOV" />
+			<_14 v="Camera Transition time" />
+			<_1C v="Camera Orientation" />
+			<_1C v="Focused Object Orientation" />
+			<_2 v="Idle Animation" />
+			<_2 v="To Idle Animation" />
+			<_2 v="From Idle Animation" />
+			<_3B v="" />
+		</_40>
+		<_40 v="RTT Region Data">
+			<_2 v="UI Display String" />
+			<_2 v="UI Description�String" />
+			<_6 v="CMS Customization Item Type" />
+			<_2 v="Region Name" />
+			<_2 v="Marker Name" />
+			<_14 v="Marker Offset" />
+			<_14 v="Camera Offset" />
+			<_B v="Animation Easing">
+				<Flag v="LinearTween" />
+				<Flag v="EaseInQuad" />
+				<Flag v="EaseOutQuad" />
+				<Flag v="EaseInOutQuad" />
+				<Flag v="EaseInCubic" />
+				<Flag v="EaseOutCubic" />
+				<Flag v="EaseInOutCubic" />
+				<Flag v="EaseInQuart" />
+				<Flag v="EaseOutQuart" />
+				<Flag v="EaseInOutQuart" />
+				<Flag v="EaseInQuint" />
+				<Flag v="EaseOutQuint" />
+				<Flag v="EaseInOutQuint" />
+				<Flag v="EaseInSine" />
+				<Flag v="EaseOutSine" />
+				<Flag v="EaseInOutSine" />
+				<Flag v="EaseInExpo" />
+				<Flag v="EaseOutExpo" />
+				<Flag v="EaseInOutExpo" />
+				<Flag v="EaseInCirc" />
+				<Flag v="EaseOutCirc" />
+				<Flag v="EaseInOutCirc" />
+				<Flag v="EaseInSinCustom" />
+				<Flag v="EaseOutSinCustom" />
+			</_B>
+			<_34 v="generated_pad2a44" length="2" />
+			<_40 v="Camera Positions">
+				<_B v="Camera Position Type">
+					<Flag v="Default" />
+					<Flag v="Custom" />
+				</_B>
+				<_34 v="generated_pad010d" length="2" />
+				<_19 v="Camera Position" />
+				<_2 v="Composer Scene Name" />
+				<_3B v="" />
+			</_40>
+			<_14 v="Camera FOV" />
+			<_14 v="Camera Transition time" />
+			<_1C v="Camera Orientation" />
+			<_1C v="Focused Object Orientation" />
+			<_F v="DOF Flags">
+				<Flag v="Enable DOF" />
+				<Flag v="Enable DOF RTT" />
+				<Flag v="Enable DOF World" />
+			</_F>
+			<_34 v="generated_pad4425" length="3" />
+			<_14 v="DOF Focal Length" />
+			<_14 v="DOF Focal Distance" />
+			<_14 v="DOF FStop" />
+			<_2 v="Idle Animation" />
+			<_2 v="To Idle Animation" />
+			<_2 v="From Idle Animation" />
+			<_3B v="" />
+		</_40>
+		<_2 v="AI Spartan Marker" />
+		<_14 v="AI Spartan Marker Scale" />
+		<_36 v="Complex Rotation Settings" />
+		<_40 v="Orientation Limits">
+			<_2 v="Name" />
+			<_14 v="Minimum Yaw" />
+			<_14 v="Maximum Yaw" />
+			<_14 v="Minimum Roll" />
+			<_14 v="Maximum Roll" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Default Speed">
+			<_14 v="Step Fraction" />
+			<_14 v="Close Enough Distance" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Drag Speed">
+			<_14 v="Step Fraction" />
+			<_14 v="Close Enough Distance" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Impulse Speed">
+			<_14 v="Step Fraction" />
+			<_14 v="Close Enough Distance" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad77ac" length="4" />
+	<_3B v="" />
+</root>

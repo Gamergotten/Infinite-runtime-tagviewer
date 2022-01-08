@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Menu Item Definitions">
+		<_2 v="Property" />
+		<_2 v="Title" />
+		<_2 v="Description" />
+		<_1 v="Property Name Literal" />
+		<_B v="Value Type">
+			<Flag v="None" />
+			<Flag v="Bool" />
+			<Flag v="Float" />
+			<Flag v="Vector" />
+			<Flag v="Color" />
+			<Flag v="String" />
+			<Flag v="Tag" />
+		</_B>
+		<_34 v="generated_pad36ce" length="2" />
+		<_14 v="Float Min" />
+		<_14 v="Float Max" />
+		<_14 v="Float Step" />
+		<_2 v="String List" />
+		<_40 v="Strings">
+			<_2 v="String" />
+			<_1 v="String Literal" />
+			<_3B v="" />
+		</_40>
+		<_2 v="Callback Name" />
+		<_2 v="Submenu Id" />
+		<_2 v="Submenu Description" />
+		<_F v="Hidden in Forge">
+			<Flag v="True" />
+		</_F>
+		<_34 v="generated_pad8383" length="3" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad82b6" length="4" />
+	<_3B v="" />
+</root>

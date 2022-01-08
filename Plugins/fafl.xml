@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Lights">
+		<_1F v="Color" />
+		<_14 v="Min. Roughness" />
+		<_19 v="Direction vector" />
+		<_14 v="Diffuse Intensity" />
+		<_14 v="Specular Intensity" />
+		<_3B v="" />
+	</_40>
+	<_41 v="Diffuse Cubemap" />
+	<_14 v="Alpha value for parts not highlighted" />
+	<_3E v="Diffuse Cubemap Mip to Sample" />
+	<_14 v="Indirect Diffuse Intensity" />
+	<_14 v="Indirect Specular Intensity" />
+	<_3B v="" />
+</root>

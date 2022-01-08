@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Per Mesh Data">
+		<_2 v="Name" />
+		<_5 v="Mesh index" />
+		<_F v="Per mesh flags">
+			<Flag v="Does not block AOE damage" />
+			<Flag v="Ignore lightmap policy" />
+		</_F>
+		<_3C v="Lightmapping policy" />
+		<_19 v="Scale" />
+		<_19 v="Forward" />
+		<_19 v="Left" />
+		<_19 v="Up" />
+		<_17 v="Position" />
+		<_17 v="Bounds min" />
+		<_17 v="Bounds max" />
+		<_17 v="Bounding sphere center" />
+		<_14 v="Bounding sphere radius" />
+		<_40 v="Lod levels">
+			<_14 v="lodTransitionDistance" />
+			<_3B v="" />
+		</_40>
+		<_14 v="Fade out after distance" />
+		<_34 v="generated_pad359f" length="4" />
+		<_7 v="Mesh Checksum" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad8ff5" length="4" />
+	<_38 v="render geometry">
+		<_D v="runtime flags">
+			<Flag v="processed" />
+			<Flag v="available" />
+			<Flag v="has valid budgets (really)" />
+			<Flag v="manual resource creation" />
+			<Flag v="keep raw geometry" />
+			<Flag v="dont use compressed vertex positions" />
+			<Flag v="pca animation table sorted" />
+			<Flag v="has dual quat" />
+			<Flag v="mesh streaming" />
+		</_D>
+		<_40 v="meshes import info">
+			<_3E v="CRC" />
+			<_17 v="position bounds 0" />
+			<_17 v="position bounds 1" />
+			<_16 v="texcoord bounds 0" />
+			<_16 v="texcoord bounds 1" />
+			<_3B v="" />
+		</_40>
+		<_40 v="meshes">
+			<_40 v="LOD render data">
+				<_40 v="per mesh temporary">
+					<_40 v="raw vertices">
+						<_17 v="position" />
+						<_16 v="texcoord" />
+						<_17 v="normal" />
+						<_17 v="binormal" />
+						<_17 v="tangent" />
+						<_16 v="lightmap texcoord" />
+						<_39 v="node indices" />
+						<_39 v="node weights" />
+						<_17 v="vertex color" />
+						<_16 v="texcoord1" />
+						<_14 v="dual quat weight" />
+						<_14 v="vertex alpha" />
+						<_17 v="tangent UV2" />
+						<_16 v="texcoord2" />
+						<_17 v="tangent UV3" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw indices">
+						<_3D v="word" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw indices32">
+						<_3E v="dword" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw water data">
+						<_40 v="raw water indices">
+							<_3D v="word" />
+							<_3B v="" />
+						</_40>
+						<_40 v="raw water vertices">
+							<_16 v="base texcoord" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="raw blendshapes">
+						<_19 v="position" />
+						<_19 v="normal" />
+						<_20 v="tension and ambient occlusion" />
+						<_3E v="target Id" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw blendshapes indices">
+						<_3E v="dword" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw tension edges">
+						<_3E v="start vertex index" />
+						<_3E v="end vertex index" />
+						<_14 v="edge rest length" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw blendshapes triangle and edge Indices">
+						<_3E v="dword" />
+						<_3B v="" />
+					</_40>
+					<_40 v="raw blendshapes triangle and edge index info">
+						<_3E v="triangle and edge index pos" />
+						<_3E v="encoded triangle and edge size" />
+						<_3B v="" />
+					</_40>
+					<_D v="flags">
+						<Flag v="indices are triangle strips" />
+						<Flag v="indices are triangle lists" />
+						<Flag v="indices are quad lists" />
+					</_D>
+					<_40 v="level breakdown data">
+						<_41 v="Asset tag" />
+						<_2 v="Default variant name" />
+						<_41 v="LOD settings tag" />
+						<_2 v="LOD settings name" />
+						<_6 v="Convert Collision to Shadow Geometry" />
+						<_40 v="Asset variants">
+							<_2 v="Variant name" />
+							<_41 v="Runtime Geo" />
+							<_41 v="Static Collision Geo" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_40 v="part sorting position">
+					<_1E v="plane" />
+					<_17 v="position" />
+					<_14 v="radius" />
+					<_39 v="node indices" />
+					<_39 v="node weights" />
+					<_3B v="" />
+				</_40>
+				<_40 v="parts">
+					<_2E v="material index" />
+					<_2E v="transparent sorting index" />
+					<_6 v="index start" />
+					<_6 v="index count" />
+					<_6 v="perMeshPartConstantsOffset" />
+					<_3C v="part type" />
+					<_34 v="generated_pad5c53" length="1" />
+					<_E v="part flags">
+						<Flag v="draw cull rendering shields" />
+						<Flag v="blendshape" />
+						<Flag v="colormask Control NormalBlend" />
+						<Flag v="draw cull rendering active camo" />
+						<Flag v="Don't use virtual texturing" />
+						<Flag v="Virtual texturing UV shell skirt" />
+					</_E>
+					<_3D v="budget vertex count" />
+					<_34 v="generated_pad0f9e" length="2" />
+					<_3B v="" />
+				</_40>
+				<_40 v="subparts">
+					<_6 v="index start" />
+					<_6 v="index count" />
+					<_2E v="part index" />
+					<_3D v="budget vertex count" />
+					<_3B v="" />
+				</_40>
+				<_40 v="material streaming scale">
+					<_6 v="material index" />
+					<_14 v="material scale" />
+					<_3B v="" />
+				</_40>
+				<_39 v="vertex buffer indices" />
+				<_3D v="index buffer index" />
+				<_E v="lod flags">
+					<Flag v="lod 0" />
+					<Flag v="lod 1" />
+					<Flag v="lod 2" />
+					<Flag v="lod 3" />
+					<Flag v="lod 4" />
+					<Flag v="lod 5" />
+					<Flag v="lod 6" />
+					<Flag v="lod 7" />
+					<Flag v="lod 8" />
+					<Flag v="lod 9" />
+					<Flag v="lod 10" />
+					<Flag v="lod 11" />
+					<Flag v="lod 12" />
+					<Flag v="lod 13" />
+					<Flag v="lod 14" />
+					<Flag v="lod 15" />
+				</_E>
+				<_E v="lod render flags">
+					<Flag v="LOD has shadow proxies" />
+				</_E>
+				<_3B v="" />
+			</_40>
+			<_E v="mesh flags">
+				<Flag v="mesh has vertex color" />
+				<Flag v="use region index for sorting" />
+				<Flag v="can be rendered in draw bundles" />
+				<Flag v="mesh is custom shadow caster" />
+				<Flag v="mesh is unindexed (do not modify)" />
+				<Flag v="mash should render in z prepass" />
+				<Flag v="use uncompressed vertex format" />
+				<Flag v="mesh is PCA" />
+				<Flag v="mesh has a useful set of second texture coords" />
+				<Flag v="mesh has a useful set of third texture coords" />
+				<Flag v="Use UV3 Tangent Rotation" />
+			</_E>
+			<_3C v="rigid node index" />
+			<_A v="vertex type">
+				<Flag v="world" />
+				<Flag v="rigid" />
+				<Flag v="skinned" />
+				<Flag v="particle_model" />
+				<Flag v="screen" />
+				<Flag v="debug" />
+				<Flag v="transparent" />
+				<Flag v="particle" />
+				<Flag v="removed08" />
+				<Flag v="removed09" />
+				<Flag v="chud_simple" />
+				<Flag v="decorator" />
+				<Flag v="position only" />
+				<Flag v="removed13" />
+				<Flag v="ripple" />
+				<Flag v="removed15" />
+				<Flag v="tessellatedTerrain" />
+				<Flag v="empty" />
+				<Flag v="decal" />
+				<Flag v="removed19" />
+				<Flag v="removed20" />
+				<Flag v="position_only" />
+				<Flag v="tracer" />
+				<Flag v="rigid_boned" />
+				<Flag v="removed24" />
+				<Flag v="CheapParticle" />
+				<Flag v="dq_skinned" />
+				<Flag v="skinned 8 weights" />
+				<Flag v="tessellated vector" />
+				<Flag v="interaction" />
+				<Flag v="number of standard vertex types" />
+			</_A>
+			<_4 v="use dual quat" />
+			<_A v="index buffer type">
+				<Flag v="DEFAULT" />
+				<Flag v="line list" />
+				<Flag v="line strip" />
+				<Flag v="triangle list" />
+				<Flag v="triangle patch" />
+				<Flag v="triangle strip" />
+				<Flag v="quad list" />
+			</_A>
+			<_5 v="pca mesh index" />
+			<_40 v="vertex keys">
+				<_6 v="key1" />
+				<_6 v="key2" />
+				<_3B v="" />
+			</_40>
+			<_2E v="clone index" />
+			<_5 v="optional LOD volume index" />
+			<_5 v="Procedural Deformation Remap Table" />
+			<_34 v="generated_pad8fb3" length="2" />
+			<_6 v="lod state cache slot" />
+			<_3B v="" />
+		</_40>
+		<_40 v="PCA Mesh Indices">
+			<_30 v="mesh index" />
+			<_3B v="" />
+		</_40>
+		<_40 v="compression info">
+			<_E v="compression flags">
+				<Flag v="compressed position" />
+				<Flag v="compressed texcoord" />
+				<Flag v="compression optimized" />
+			</_E>
+			<_34 v="generated_pad1711" length="2" />
+			<_36 v="WARNING" />
+			<_17 v="position bounds 0" />
+			<_17 v="position bounds 1" />
+			<_16 v="texcoord bounds 0" />
+			<_16 v="texcoord bounds 1" />
+			<_16 v="texcoord bounds2 0" />
+			<_16 v="texcoord bounds2 1" />
+			<_16 v="texcoord bounds3 0" />
+			<_16 v="texcoord bounds3 1" />
+			<_14 v="unused0" />
+			<_14 v="unused1" />
+			<_3B v="" />
+		</_40>
+		<_40 v="per mesh node map">
+			<_40 v="node map">
+				<_3D v="node index" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="Optional animated mesh tag references">
+			<_41 v="Animated mesh tag reference" />
+			<_2 v="Name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Optional LOD volumes data">
+			<_17 v="position bounds 0" />
+			<_17 v="position bounds 1" />
+			<_40 v="position data">
+				<_1E v="plane" />
+				<_17 v="position" />
+				<_14 v="radius" />
+				<_39 v="node indices" />
+				<_39 v="node weights" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_38 v="mesh package">
+			<_3D v="flags" />
+			<_B v="mesh resource packing policy">
+				<Flag v="Single Resource" />
+				<Flag v="N Meshes Per Resource" />
+			</_B>
+			<_3D v="total index buffer count" />
+			<_3D v="total vertex buffer count" />
+			<_40 v="mesh resource groups">
+				<_43 v="mesh resource" />
+				<_3B v="" />
+			</_40>
+			<_40 v="index resource look up">
+				<_5 v="resource group index" />
+				<_5 v="group item index" />
+				<_3B v="" />
+			</_40>
+			<_40 v="vertex resource look up">
+				<_5 v="resource group index" />
+				<_5 v="group item index" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_40 v="blendshape compression info">
+			<_17 v="position scale" />
+			<_17 v="position offset" />
+			<_17 v="normal scale" />
+			<_17 v="normal offset" />
+			<_40 v="raw target hash name">
+				<_3E v="dword" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="blendshape Procedural Deformation function list">
+			<_40 v="parameter list">
+				<_2 v="parameter name" />
+				<_3C v="parameter mode" />
+				<_34 v="generated_pad8065" length="3" />
+				<_14 v="constant input" />
+				<_3B v="" />
+			</_40>
+			<_2 v="Procedural deformation function name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Procedural Deformation function Remap Table List">
+			<_40 v="Procedural Remap Table">
+				<_3D v="word" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="Deformation parameter default value table from skeleton">
+			<_2 v="parameter name" />
+			<_14 v="parameter default value" />
+			<_3B v="" />
+		</_40>
+		<_34 v="generated_paddf2d" length="4" />
+		<_7 v="perMeshPartConstantBuffer" />
+		<_3B v="" />
+	</_38>
+	<_40 v="marker groups">
+		<_2 v="name" />
+		<_40 v="markers">
+			<_17 v="translation" />
+			<_1A v="rotation" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_2 v="asset category name" />
+	<_6 v="asset category index" />
+	<_6 v="Number of LODS to make required" />
+	<_3B v="" />
+</root>

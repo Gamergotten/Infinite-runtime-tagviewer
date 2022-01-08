@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="attachment marker name" />
+	<_41 v="bitmaps" />
+	<_41 v="physics" />
+	<_15 v="spring strength coefficient" />
+	<_14 v="texel to world width scale" />
+	<_14 v="falloff pixels" />
+	<_14 v="cutoff pixels" />
+	<_14 v="point of bend" />
+	<_14 v="starting bend" />
+	<_14 v="ending bend" />
+	<_14 v="runtime total length" />
+	<_40 v="vertices">
+		<_1B v="angles" />
+		<_14 v="length" />
+		<_5 v="sequence index" />
+		<_34 v="generated_padd920" length="2" />
+		<_20 v="color" />
+		<_20 v="LOD color" />
+		<_14 v="hermite t" />
+		<_19 v="vector to next" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

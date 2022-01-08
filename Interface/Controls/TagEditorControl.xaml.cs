@@ -72,8 +72,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 			// OK, now we do a proper check to see if this tag is loaded, finally looked into this
 
-			try // never done this before and i hope im doing it terribly wrong
-			{
+			//try // never done this before and i hope im doing it terribly wrong
+			//{
 				// pointer check
 				TagValueBlock p_block = new() { HorizontalAlignment = HorizontalAlignment.Left };
 				p_block.value_type.Text = "Pointer check";
@@ -96,27 +96,27 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 				if (checked_ID != loadingTag.ObjectId || checked_datnum != loadingTag.Datnum)
 				{
-					TextBox tb = new TextBox { Text = "Datnum/ID mismatch; Tag appears to be unloaded, meaning it may not be active on the map, else try reloading the tags" };
-					tagview_panels.Children.Add(tb);
+					TextBox tb1 = new TextBox { Text = "Datnum/ID mismatch; Tag appears to be unloaded, meaning it may not be active on the map, else try reloading the tags" };
+					tagview_panels.Children.Add(tb1);
 					return;
 				}
 
-				if (TagLayouts.Tags.ContainsKey(loadingTag.TagGroup))
-				{
-					Dictionary<long, TagLayouts.C> tags = TagLayouts.Tags[loadingTag.TagGroup];
+				//if (TagLayouts.Tags.ContainsKey(loadingTag.TagGroup))
+				//{
+					Dictionary<long, TagLayouts.C> tags = TagLayouts.Tags(loadingTag.TagGroup);
 					readTagsAndCreateControls(loadingTag, 0, tags, loadingTag.TagData, tagview_panels, tagID+":");
-				}
-				else
-				{
-					TextBox tb = new TextBox { Text = "This tag isn't mapped out ):" };
-					tagview_panels.Children.Add(tb);
-				}
-			}
-			catch
-			{
-				TextBox tb = new TextBox { Text = "ran into an oopsie woopsie, this tag is probably broken/unloaded right now" };
-				tagview_panels.Children.Add(tb);
-			}
+				//}
+				//else
+				//{
+				//	TextBox tb = new TextBox { Text = "This tag isn't mapped out ):" };
+				//	tagview_panels.Children.Add(tb);
+				//}
+			//}
+			//catch
+			//{
+				//TextBox tb = new TextBox { Text = "ran into an oopsie woopsie, this tag is probably broken/unloaded right now" };
+				//tagview_panels.Children.Add(tb);
+			//}
 
 
 		}

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_A v="TelescopingSolutionType">
+		<Flag v="AlgebraicWithMarkup" />
+		<Flag v="Interpolation" />
+	</_A>
+	<_34 v="generated_pad4682" length="3" />
+	<_40 v="Corners">
+		<_41 v="Object" />
+		<_19 v="Position" />
+		<_2 v="variant" />
+		<_19 v="Tip" />
+		<_40 v="Magnets">
+			<_19 v="point" />
+			<_3B v="" />
+		</_40>
+		<_19 v="PositionAtMinScale" />
+		<_19 v="PositionAtMaxScale" />
+		<_41 v="Runtime Underlying Geo (Static IO)" />
+		<_41 v="Runtime Underlying Collision Geo (Static IO)" />
+		<_41 v="Runtime Underlying Material Palette (Static IO)" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Edges">
+		<_41 v="Object" />
+		<_19 v="Position" />
+		<_2 v="variant" />
+		<_19 v="CreaseTip1" />
+		<_19 v="CreaseTip2" />
+		<_40 v="endPoints">
+			<_19 v="point" />
+			<_3B v="" />
+		</_40>
+		<_1A v="rotation" />
+		<_A v="ObjectSpaceEdgeAlignment">
+			<Flag v="NoRotate" />
+			<Flag v="X" />
+			<Flag v="Y" />
+			<Flag v="Z" />
+		</_A>
+		<_34 v="generated_padf5c1" length="3" />
+		<_40 v="Magnets">
+			<_19 v="point" />
+			<_3B v="" />
+		</_40>
+		<_19 v="PositionAtMinScale" />
+		<_19 v="PositionAtMaxScale" />
+		<_14 v="ScaleAtMinScale" />
+		<_14 v="ScaleAtMaxScale" />
+		<_41 v="Runtime Underlying Geo (Static IO)" />
+		<_41 v="Runtime Underlying Collision Geo (Static IO)" />
+		<_41 v="Runtime Underlying Material Palette (Static IO)" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Faces">
+		<_41 v="Object" />
+		<_19 v="Position" />
+		<_2 v="variant" />
+		<_40 v="FaceEndPoints">
+			<_19 v="point" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Magnets">
+			<_19 v="point" />
+			<_3B v="" />
+		</_40>
+		<_41 v="Runtime Underlying Geo (Static IO)" />
+		<_41 v="Runtime Underlying Collision Geo (Static IO)" />
+		<_41 v="Runtime Underlying Material Palette (Static IO)" />
+		<_19 v="endPointsBoundsMax" />
+		<_19 v="endPointsBoundsMin" />
+		<_19 v="geoBoundsMin" />
+		<_19 v="geoBoundsMax" />
+		<_A v="faceWidthToMaintain">
+			<Flag v="None" />
+			<Flag v="X" />
+			<Flag v="Y" />
+			<Flag v="Z" />
+		</_A>
+		<_34 v="generated_padac75" length="3" />
+		<_19 v="PositionAtMinScale" />
+		<_19 v="PositionAtMaxScale" />
+		<_19 v="ScaleAtMinScale" />
+		<_19 v="ScaleAtMaxScale" />
+		<_3B v="" />
+	</_40>
+	<_A v="ScaleConstraint">
+		<Flag v="None" />
+		<Flag v="XY" />
+		<Flag v="XZ" />
+		<Flag v="YZ" />
+		<Flag v="XYZ" />
+		<Flag v="Unscalable" />
+	</_A>
+	<_34 v="generated_pad9337" length="3" />
+	<_19 v="Minimum Scale" />
+	<_19 v="Maximum Scale" />
+	<_41 v="Runtime Underlying Collision Geo (Static IO)" />
+	<_41 v="Runtime Underlying Material Palette (Static IO)" />
+	<_34 v="generated_paddfec" length="4" />
+	<_3B v="" />
+</root>

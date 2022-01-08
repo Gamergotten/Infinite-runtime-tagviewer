@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="Fadeoff distance multiplier" />
+	<_38 v="fadeoff_distance_multiplier">
+		<_25 v="Very Low" />
+		<_25 v="Low" />
+		<_25 v="Medium" />
+		<_25 v="High" />
+		<_25 v="Ultra" />
+		<_14 v="2 Player Splitscreen" />
+		<_14 v="3 Player Splitscreen" />
+		<_14 v="4 Player Splitscreen" />
+		<_3B v="" />
+	</_38>
+	<_36 v="Near Fadeoff distance multiplier" />
+	<_38 v="near_fadeoff_distance_multiplier">
+		<_25 v="Very Low" />
+		<_25 v="Low" />
+		<_25 v="Medium" />
+		<_25 v="High" />
+		<_25 v="Ultra" />
+		<_14 v="2 Player Splitscreen" />
+		<_14 v="3 Player Splitscreen" />
+		<_14 v="4 Player Splitscreen" />
+		<_3B v="" />
+	</_38>
+	<_36 v="Static Object Shadow Fade" />
+	<_38 v="static_object_shadow_fade">
+		<_25 v="Very Low" />
+		<_25 v="Low" />
+		<_25 v="Medium" />
+		<_25 v="High" />
+		<_25 v="Ultra" />
+		<_14 v="2 Player Splitscreen" />
+		<_14 v="3 Player Splitscreen" />
+		<_14 v="4 Player Splitscreen" />
+		<_3B v="" />
+	</_38>
+	<_36 v="Dynamic Object Shadow Fade" />
+	<_38 v="dynamic_object_shadow_fade">
+		<_25 v="Very Low" />
+		<_25 v="Low" />
+		<_25 v="Medium" />
+		<_25 v="High" />
+		<_25 v="Ultra" />
+		<_14 v="2 Player Splitscreen" />
+		<_14 v="3 Player Splitscreen" />
+		<_14 v="4 Player Splitscreen" />
+		<_3B v="" />
+	</_38>
+	<_36 v="Cast Shadows" />
+	<_38 v="cast_shadows">
+		<_E v="Flags">
+			<Flag v="very low" />
+			<Flag v="low" />
+			<Flag v="medium" />
+			<Flag v="high" />
+			<Flag v="ultra" />
+		</_E>
+		<_3B v="" />
+	</_38>
+	<_36 v="Dynamic Object Shadow Casting" />
+	<_38 v="dynamic_object_shadow_casting">
+		<_E v="Flags">
+			<Flag v="very low" />
+			<Flag v="low" />
+			<Flag v="medium" />
+			<Flag v="high" />
+			<Flag v="ultra" />
+		</_E>
+		<_3B v="" />
+	</_38>
+	<_34 v="generated_pad133b" length="4" />
+	<_3B v="" />
+</root>

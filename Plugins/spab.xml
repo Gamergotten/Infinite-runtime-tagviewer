@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="activation energy cost scalar" />
+	<_38 v="activation energy cost scalar">
+		<_14 v="Base Value" />
+		<_25 v="Value Bounds" />
+		<_3B v="" />
+	</_38>
+	<_41 v="ability activation failure effect" />
+	<_41 v="overheat effect" />
+	<_41 v="cooldown effect" />
+	<_14 v="energy bar row" />
+	<_14 v="energy bar column" />
+	<_15 v="energy bar warning pct" />
+	<_41 v="evade ref" />
+	<_41 v="grapple hook ref" />
+	<_41 v="sprint ref" />
+	<_3B v="" />
+</root>

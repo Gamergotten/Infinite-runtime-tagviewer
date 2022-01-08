@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Anim sets">
+		<_41 v="Anim set reference" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Animations">
+		<_2 v="Name" />
+		<_5 v="AnimSet index in legacyanimset tag" />
+		<_5 v="AnimSet parent depth" />
+		<_5 v="AnimSetEntry index" />
+		<_5 v="Composite index" />
+		<_5 v="Anim pool subgraph index" />
+		<_5 v="Anim pool animation index" />
+		<_3B v="" />
+	</_40>
+	<_5 v="Maximum inheritance depth" />
+	<_34 v="generated_pada9d8" length="2" />
+	<_40 v="Per-Animation joint flags">
+		<_2 v="Legacy animation name" />
+		<_40 v="FIK joint names">
+			<_2 v="Joint name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Object space correction joint name">
+			<_2 v="Joint name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Replacement offset correction joint name">
+			<_2 v="Joint name" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Renames">
+		<_2 v="Alias" />
+		<_2 v="Source" />
+		<_F v="Flags">
+			<Flag v="Copy overlay group" />
+			<Flag v="Copy IK set" />
+		</_F>
+		<_34 v="generated_pade78a" length="3" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Copies">
+		<_2 v="Destination" />
+		<_2 v="Source" />
+		<_F v="Flags">
+			<Flag v="Copy overlay group" />
+			<Flag v="Copy IK set" />
+		</_F>
+		<_34 v="generated_pad20b9" length="3" />
+		<_3B v="" />
+	</_40>
+	<_37 v="Blending and Overlays" />
+	<_40 v="Functions">
+		<_2 v="Name" />
+		<_38 v="Function">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="Blend Screens">
+		<_2 v="Name" />
+		<_D v="Flags">
+			<Flag v="active only when weapon down" />
+			<Flag v="attempt piece-wise blending" />
+			<Flag v="allow parent adjustment" />
+			<Flag v="active only when weapon precise" />
+			<Flag v="generates IK Offsets" />
+		</_D>
+		<_14 v="Weight" />
+		<_14 v="Interpolation rate" />
+		<_B v="Yaw source">
+			<Flag v="none" />
+			<Flag v="object function" />
+			<Flag v="horizontal test" />
+			<Flag v="vertical test" />
+			<Flag v="aim yaw" />
+			<Flag v="aim pitch" />
+			<Flag v="look yaw" />
+			<Flag v="look pitch" />
+			<Flag v="object yaw" />
+			<Flag v="object pitch" />
+			<Flag v="acceleration yaw" />
+			<Flag v="acceleration pitch" />
+			<Flag v="steering" />
+			<Flag v="velocity yaw" />
+			<Flag v="velocity pitch" />
+			<Flag v="damage gut yaw" />
+			<Flag v="damage gut pitch" />
+			<Flag v="damage chest yaw" />
+			<Flag v="damage chest pitch" />
+			<Flag v="damage head yaw" />
+			<Flag v="damage head pitch" />
+			<Flag v="damage left shoulder yaw" />
+			<Flag v="damage left shoulder pitch" />
+			<Flag v="damage left arm yaw" />
+			<Flag v="damage left arm pitch" />
+			<Flag v="damage left leg yaw" />
+			<Flag v="damage left leg pitch" />
+			<Flag v="damage left foot yaw" />
+			<Flag v="damage left foot pitch" />
+			<Flag v="damage right shoulder yaw" />
+			<Flag v="damage right shoulder pitch" />
+			<Flag v="damage right arm yaw" />
+			<Flag v="damage right arm pitch" />
+			<Flag v="damage right leg yaw" />
+			<Flag v="damage right leg pitch" />
+			<Flag v="damage right foot yaw" />
+			<Flag v="damage right foot pitch" />
+			<Flag v="defense yaw" />
+			<Flag v="defense pitch" />
+			<Flag v="first person pitch" />
+			<Flag v="first person turn" />
+			<Flag v="throttle side" />
+			<Flag v="throttle_forward" />
+			<Flag v="fp_look_offset_yaw" />
+			<Flag v="fp_look_offset_pitch" />
+			<Flag v="fp_look_accel_yaw" />
+			<Flag v="fp_look_accel_pitch" />
+			<Flag v="fp_grapple_target_yaw" />
+			<Flag v="fp_grapple_target_pitch" />
+		</_B>
+		<_B v="Pitch source">
+			<Flag v="none" />
+			<Flag v="object function" />
+			<Flag v="horizontal test" />
+			<Flag v="vertical test" />
+			<Flag v="aim yaw" />
+			<Flag v="aim pitch" />
+			<Flag v="look yaw" />
+			<Flag v="look pitch" />
+			<Flag v="object yaw" />
+			<Flag v="object pitch" />
+			<Flag v="acceleration yaw" />
+			<Flag v="acceleration pitch" />
+			<Flag v="steering" />
+			<Flag v="velocity yaw" />
+			<Flag v="velocity pitch" />
+			<Flag v="damage gut yaw" />
+			<Flag v="damage gut pitch" />
+			<Flag v="damage chest yaw" />
+			<Flag v="damage chest pitch" />
+			<Flag v="damage head yaw" />
+			<Flag v="damage head pitch" />
+			<Flag v="damage left shoulder yaw" />
+			<Flag v="damage left shoulder pitch" />
+			<Flag v="damage left arm yaw" />
+			<Flag v="damage left arm pitch" />
+			<Flag v="damage left leg yaw" />
+			<Flag v="damage left leg pitch" />
+			<Flag v="damage left foot yaw" />
+			<Flag v="damage left foot pitch" />
+			<Flag v="damage right shoulder yaw" />
+			<Flag v="damage right shoulder pitch" />
+			<Flag v="damage right arm yaw" />
+			<Flag v="damage right arm pitch" />
+			<Flag v="damage right leg yaw" />
+			<Flag v="damage right leg pitch" />
+			<Flag v="damage right foot yaw" />
+			<Flag v="damage right foot pitch" />
+			<Flag v="defense yaw" />
+			<Flag v="defense pitch" />
+			<Flag v="first person pitch" />
+			<Flag v="first person turn" />
+			<Flag v="throttle side" />
+			<Flag v="throttle_forward" />
+			<Flag v="fp_look_offset_yaw" />
+			<Flag v="fp_look_offset_pitch" />
+			<Flag v="fp_look_accel_yaw" />
+			<Flag v="fp_look_accel_pitch" />
+			<Flag v="fp_grapple_target_yaw" />
+			<Flag v="fp_grapple_target_pitch" />
+		</_B>
+		<_2 v="Yaw source function" />
+		<_2 v="Pitch source function" />
+		<_B v="Weight source">
+			<Flag v="none" />
+			<Flag v="object function" />
+			<Flag v="acceleration magnitude" />
+			<Flag v="velocity magnitude" />
+			<Flag v="state function a" />
+			<Flag v="state function b" />
+			<Flag v="state function c" />
+			<Flag v="state function d" />
+			<Flag v="damage chest(damage focus chest)" />
+			<Flag v="damage gut(damage focus gut)" />
+			<Flag v="damage head(damage focus head)" />
+			<Flag v="damage left shoulder(damage focus left shoulder)" />
+			<Flag v="damage left arm(damage focus left arm)" />
+			<Flag v="damage left leg(damage focus left leg)" />
+			<Flag v="damage left foot(damage focus left foot)" />
+			<Flag v="damage right shoulder(damage focus right shoulder)" />
+			<Flag v="damage right arm(damage focus right arm)" />
+			<Flag v="damage right leg(damage focus right leg)" />
+			<Flag v="damage right foot(damage focus right foot)" />
+			<Flag v="defense" />
+		</_B>
+		<_B v="Secondary weight source">
+			<Flag v="none" />
+			<Flag v="object function" />
+			<Flag v="acceleration magnitude" />
+			<Flag v="velocity magnitude" />
+			<Flag v="state function a" />
+			<Flag v="state function b" />
+			<Flag v="state function c" />
+			<Flag v="state function d" />
+			<Flag v="damage chest(damage focus chest)" />
+			<Flag v="damage gut(damage focus gut)" />
+			<Flag v="damage head(damage focus head)" />
+			<Flag v="damage left shoulder(damage focus left shoulder)" />
+			<Flag v="damage left arm(damage focus left arm)" />
+			<Flag v="damage left leg(damage focus left leg)" />
+			<Flag v="damage left foot(damage focus left foot)" />
+			<Flag v="damage right shoulder(damage focus right shoulder)" />
+			<Flag v="damage right arm(damage focus right arm)" />
+			<Flag v="damage right leg(damage focus right leg)" />
+			<Flag v="damage right foot(damage focus right foot)" />
+			<Flag v="defense" />
+		</_B>
+		<_2 v="Weight source object function" />
+		<_2 v="Secondary weight object function" />
+		<_2E v="Weight function" />
+		<_34 v="generated_padffad" length="2" />
+		<_2 v="Animation" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Function Overlays">
+		<_2 v="Name" />
+		<_D v="Flags">
+			<Flag v="strict looping" />
+			<Flag v="hold last frame" />
+		</_D>
+		<_2 v="Frame ratio function" />
+		<_2 v="Playback speed function" />
+		<_2 v="Blend weight function" />
+		<_2 v="Unlock function" />
+		<_25 v="Unlock range" />
+		<_2 v="Animation" />
+		<_5 v="Start LOD taper" />
+		<_5 v="End LOD taper" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Overlay Groups">
+		<_2 v="Name" />
+		<_40 v="Blend Screens">
+			<_2E v="Blend Screen" />
+			<_E v="Flags">
+				<Flag v="Disable" />
+			</_E>
+			<_2 v="Node Mask" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Function Overlays">
+			<_2E v="Function Overlay" />
+			<_E v="Flags">
+				<Flag v="Disable" />
+			</_E>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_37 v="Blending and Overlays" />
+	<_37 v="Interpolators" />
+	<_40 v="Interpolators">
+		<_2 v="Name" />
+		<_2 v="Joint Mask" />
+		<_38 v="Function">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_40 v="Interpolation Sets">
+		<_2 v="Name" />
+		<_14 v="Seconds" />
+		<_40 v="Interpolators">
+			<_2E v="Interpolator" />
+			<_3B v="" />
+		</_40>
+		<_38 v="Function">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_37 v="Interpolators" />
+	<_37 v="Animation Lookup Table" />
+	<_40 v="Model Animation Variants">
+		<_2 v="Name" />
+		<_40 v="Mode or Stance Aliases">
+			<_2 v="Mode or Stance" />
+			<_2 v="Alias" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Object Function Variants">
+		<_2 v="Name" />
+		<_40 v="Mode or Stance Aliases">
+			<_2 v="Mode or Stance" />
+			<_2 v="Alias" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Modes">
+		<_2 v="Anim mode name" />
+		<_2E v="Overlay group" />
+		<_34 v="generated_padb8e6" length="2" />
+		<_2 v="IK set" />
+		<_D v="Flags">
+			<Flag v="this is a stance" />
+		</_D>
+		<_40 v="Weapon classes">
+			<_2 v="Weapon class name" />
+			<_2E v="Overlay group" />
+			<_34 v="generated_padf75f" length="2" />
+			<_2 v="IK set" />
+			<_40 v="Weapon types">
+				<_2 v="Weapon type name" />
+				<_2E v="Overlay group" />
+				<_34 v="generated_pad095f" length="2" />
+				<_2 v="IK set" />
+				<_40 v="Sets">
+					<_2 v="Set name" />
+					<_2E v="Overlay group" />
+					<_34 v="generated_pad4fdb" length="2" />
+					<_2 v="IK set" />
+					<_40 v="Actions">
+						<_2 v="Name" />
+						<_2E v="Overlay group" />
+						<_34 v="generated_padede6" length="2" />
+						<_2 v="IK set" />
+						<_2E v="Animation" />
+						<_34 v="generated_pad3a9b" length="2" />
+						<_2 v="Animation name" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Overlays">
+						<_2 v="Name" />
+						<_2E v="Overlay group" />
+						<_34 v="generated_padede6" length="2" />
+						<_2 v="IK set" />
+						<_2E v="Animation" />
+						<_34 v="generated_pad3a9b" length="2" />
+						<_2 v="Animation name" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Death And Damage">
+						<_2 v="Name" />
+						<_40 v="Directions">
+							<_40 v="Regions">
+								<_2E v="Animation" />
+								<_34 v="generated_padfe89" length="2" />
+								<_2 v="Animation name" />
+								<_3B v="" />
+							</_40>
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_40 v="Transitions">
+						<_2 v="State name" />
+						<_40 v="Destinations">
+							<_2 v="Mode name" />
+							<_2 v="State name" />
+							<_2E v="Transition lerp" />
+							<_2E v="Animation" />
+							<_2 v="Animation name" />
+							<_2 v="Timing function" />
+							<_2E v="Lerp in function" />
+							<_2E v="Lerp out function" />
+							<_3B v="" />
+						</_40>
+						<_F v="Flags">
+							<Flag v="Manually created entry" />
+						</_F>
+						<_34 v="generated_pad9776" length="3" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_40 v="Weapon IK">
+				<_2 v="Marker" />
+				<_2 v="Attach to marker" />
+				<_2 v="Weight source object function" />
+				<_2 v="Priority source object function" />
+				<_3B v="" />
+			</_40>
+			<_40 v="Sync Actions Groups">
+				<_2 v="Name" />
+				<_40 v="Sync Actions">
+					<_2 v="Name" />
+					<_B v="Sync Action Type">
+						<Flag v="Default" />
+						<Flag v="Destroy Armor" />
+					</_B>
+					<_34 v="generated_pad9781" length="2" />
+					<_40 v="Same Type Participants">
+						<_E v="Flags">
+							<Flag v="Initiator" />
+							<Flag v="CriticalParticipant" />
+							<Flag v="Disabled" />
+							<Flag v="Airborne" />
+							<Flag v="Partner" />
+						</_E>
+						<_34 v="generated_pad84f0" length="2" />
+						<_2 v="Animation" />
+						<_19 v="Start Offset" />
+						<_19 v="Start Facing" />
+						<_19 v="End Offset" />
+						<_14 v="Time Until Hurt" />
+						<_19 v="Apex Offset" />
+						<_3B v="" />
+					</_40>
+					<_40 v="Other Participant">
+						<_E v="Flags">
+							<Flag v="Supports Any Type" />
+							<Flag v="Disabled" />
+						</_E>
+						<_34 v="generated_padc2f4" length="2" />
+						<_41 v="Object Type" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="Mode IK">
+			<_2 v="Marker" />
+			<_2 v="Attach to marker" />
+			<_2 v="Weight source object function" />
+			<_2 v="Priority source object function" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_37 v="Animation Lookup Table" />
+	<_37 v="Special Case Animations" />
+	<_40 v="Vehicle Suspensions">
+		<_2 v="Label" />
+		<_2 v="Animation" />
+		<_2 v="Function Name" />
+		<_2 v="Marker Name" />
+		<_2 v="Contact Marker Name" />
+		<_14 v="Mass Point Offset" />
+		<_14 v="Extension Distance" />
+		<_14 v="Compression Distance" />
+		<_2 v="Region Name" />
+		<_14 v="Destroyed Mass Point Offset" />
+		<_14 v="Destroyed Extension Distance" />
+		<_14 v="Destroyed Compression Distance" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Constant Overlays">
+		<_2 v="Label" />
+		<_2 v="Animation" />
+		<_B v="Function controls">
+			<Flag v="frame" />
+			<Flag v="scale" />
+		</_B>
+		<_34 v="generated_pade41c" length="2" />
+		<_2 v="Function" />
+		<_3B v="" />
+	</_40>
+	<_37 v="Special Case Animations" />
+	<_34 v="generated_padc3b9" length="4" />
+	<_3B v="" />
+</root>

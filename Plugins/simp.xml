@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_C v="Allow DirectX">
+		<Flag v="Default" />
+		<Flag v="Hardware" />
+		<Flag v="Software" />
+	</_C>
+	<_40 v="Per LOD settings">
+		<_C v="Cascade Geometry">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_14 v="Override triangle reduction ratio" />
+		<_14 v="Override and use MaxDeviation" />
+		<_C v="Allow degenerate texture coordinates">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_C v="Allow simplygon to create optimized vertex data">
+			<Flag v="Only use original data" />
+			<Flag v="Prefer to use original data" />
+			<Flag v="Prefer to use optimized data" />
+		</_C>
+		<_14 v="Outward move tolerance" />
+		<_14 v="Inward move tolerance" />
+		<_C v="Use Vertex Weighting">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_37 v="Reduction importance" />
+		<_36 v="Reduction importance weights" />
+		<_C v="Geometry importance">
+			<Flag v="Disabled" />
+			<Flag v="Lowest" />
+			<Flag v="Low" />
+			<Flag v="Normal" />
+			<Flag v="High" />
+			<Flag v="Highest" />
+		</_C>
+		<_C v="Texture importance">
+			<Flag v="Disabled" />
+			<Flag v="Lowest" />
+			<Flag v="Low" />
+			<Flag v="Normal" />
+			<Flag v="High" />
+			<Flag v="Highest" />
+		</_C>
+		<_C v="Material importance">
+			<Flag v="Disabled" />
+			<Flag v="Lowest" />
+			<Flag v="Low" />
+			<Flag v="Normal" />
+			<Flag v="High" />
+			<Flag v="Highest" />
+		</_C>
+		<_C v="Normal importance">
+			<Flag v="Disabled" />
+			<Flag v="Lowest" />
+			<Flag v="Low" />
+			<Flag v="Normal" />
+			<Flag v="High" />
+			<Flag v="Highest" />
+		</_C>
+		<_C v="Vertex color importance">
+			<Flag v="Disabled" />
+			<Flag v="Lowest" />
+			<Flag v="Low" />
+			<Flag v="Normal" />
+			<Flag v="High" />
+			<Flag v="Highest" />
+		</_C>
+		<_C v="Curvature importance">
+			<Flag v="Disabled" />
+			<Flag v="Lowest" />
+			<Flag v="Low" />
+			<Flag v="Normal" />
+			<Flag v="High" />
+			<Flag v="Highest" />
+		</_C>
+		<_C v="Group importance">
+			<Flag v="Disabled" />
+			<Flag v="Lowest" />
+			<Flag v="Low" />
+			<Flag v="Normal" />
+			<Flag v="High" />
+			<Flag v="Highest" />
+		</_C>
+		<_C v="Edge set importance">
+			<Flag v="Disabled" />
+			<Flag v="Lowest" />
+			<Flag v="Low" />
+			<Flag v="Normal" />
+			<Flag v="High" />
+			<Flag v="Highest" />
+		</_C>
+		<_C v="Skinning importance">
+			<Flag v="Disabled" />
+			<Flag v="Lowest" />
+			<Flag v="Low" />
+			<Flag v="Normal" />
+			<Flag v="High" />
+			<Flag v="Highest" />
+		</_C>
+		<_37 v="" />
+		<_37 v="Symmetry settings" />
+		<_36 v="Symmetry settings" />
+		<_C v="Keep symmetrical">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_C v="Automatic axis of symmetry detection">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_14 v="Symmetry detection tolerance" />
+		<_C v="Manual symmetry axis">
+			<Flag v="Default" />
+			<Flag v="X Axis" />
+			<Flag v="Y Axis" />
+			<Flag v="Z Axis" />
+		</_C>
+		<_14 v="Manual symmetry offset" />
+		<_C v="Use symmetry quad re-triangulator">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_37 v="" />
+		<_37 v="Normal calculation" />
+		<_C v="Replace normals">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_C v="Replace tangents">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_14 v="Hard edge angle" />
+		<_C v="Repair invalid normals">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_C v="Detect primitive normals">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_C v="Scale by area">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_C v="Scale by angle">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_37 v="" />
+		<_6 v="Weld and T Junction fixup passes" />
+		<_37 v="Weld Settings" />
+		<_C v="Weld vertices">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_14 v="Weld distance" />
+		<_C v="Weld only border verts">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_C v="Weld only on object boundary">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_37 v="" />
+		<_37 v="T Junction Settings" />
+		<_C v="Remove T junctions">
+			<Flag v="Default" />
+			<Flag v="Enabled" />
+			<Flag v="Disabled" />
+		</_C>
+		<_14 v="T junction removal distance" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

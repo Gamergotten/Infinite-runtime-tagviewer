@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_F v="Flags">
+		<Flag v="UseComposition" />
+		<Flag v="UseDepthOfField" />
+		<Flag v="OverrideTransform" />
+		<Flag v="WorldOverrideTransform" />
+		<Flag v="ParentAssetsToCamera" />
+		<Flag v="ParentLightsToCamera" />
+	</_F>
+	<_34 v="generated_pad10db" length="3" />
+	<_41 v="Composition" />
+	<_14 v="Field of View" />
+	<_19 v="DOF" />
+	<_41 v="Inherit Transforms" />
+	<_19 v="Position" />
+	<_19 v="Rotation" />
+	<_19 v="WorldPosition" />
+	<_19 v="WorldRotation" />
+	<_14 v="Scale" />
+	<_3B v="" />
+</root>

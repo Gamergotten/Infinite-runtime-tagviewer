@@ -1,0 +1,1506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Basic Presets">
+		<_0 v="Preset" />
+		<_A v="Reflections">
+			<Flag v="Off" />
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Volumetric Fog">
+			<Flag v="Off" />
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+		</_A>
+		<_A v="Shadows">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Sky Quality">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Temporal AA">
+			<Flag v="Low" />
+			<Flag v="High" />
+		</_A>
+		<_A v="Ambient Occlusion">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Depth of Field">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+		</_A>
+		<_A v="Anisotropic Filtering">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Terrain">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Lighting">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Decorators">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Asset Category Preset">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Dynamic Wind">
+			<Flag v="Off" />
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Hlod Preset">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Animation Quality">
+			<Flag v="Auto" />
+			<Flag v="Max" />
+		</_A>
+		<_A v="Flocks">
+			<Flag v="Off" />
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Simulation Quality">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Effects">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Texture Quality">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Decals">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+		</_A>
+		<_A v="Shader Quality">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_34 v="generated_pad3000" length="3" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_37 v="Preset Details" />
+	<_40 v="Reflection Presets">
+		<_0 v="Preset" />
+		<_A v="Mode">
+			<Flag v="None" />
+			<Flag v="SSR" />
+			<Flag v="SSR Full Resolution" />
+		</_A>
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_A v="Mode">
+				<Flag v="None" />
+				<Flag v="SSR" />
+				<Flag v="SSR Full Resolution" />
+			</_A>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_A v="Mode">
+				<Flag v="None" />
+				<Flag v="SSR" />
+				<Flag v="SSR Full Resolution" />
+			</_A>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_A v="Mode">
+				<Flag v="None" />
+				<Flag v="SSR" />
+				<Flag v="SSR Full Resolution" />
+			</_A>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_A v="Mode">
+				<Flag v="None" />
+				<Flag v="SSR" />
+				<Flag v="SSR Full Resolution" />
+			</_A>
+			<_3B v="" />
+		</_38>
+		<_34 v="generated_padeff7" length="3" />
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Volumetric Fog Presets">
+		<_0 v="Preset" />
+		<_6 v="Resolution" />
+		<_F v="Volumetric Fog Flags">
+			<Flag v="Enabled" />
+		</_F>
+		<_34 v="generated_pad0612" length="3" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_6 v="Resolution" />
+			<_F v="Volumetric Fog Flags">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad26b1" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_6 v="Resolution" />
+			<_F v="Volumetric Fog Flags">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad26b1" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_6 v="Resolution" />
+			<_F v="Volumetric Fog Flags">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad26b1" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_6 v="Resolution" />
+			<_F v="Volumetric Fog Flags">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad26b1" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Shadow Presets">
+		<_0 v="Preset" />
+		<_6 v="Dynamic Shadowmap Atlas Resolution" />
+		<_6 v="Dynamic Shadowmap Atlas Resolution No Sun" />
+		<_6 v="Static Shadowmap Atlas Resolution" />
+		<_F v="Deferred Shadow Mask">
+			<Flag v="Enabled" />
+		</_F>
+		<_F v="Contact Shadows">
+			<Flag v="Enabled" />
+		</_F>
+		<_F v="Local Lights Low Shadow Sampling">
+			<Flag v="Enabled" />
+		</_F>
+		<_F v="Shadows For Non-Visible Objects">
+			<Flag v="Enabled" />
+		</_F>
+		<_14 v="Local Lights Shadow Sampling Falloff" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_6 v="Dynamic Shadowmap Atlas Resolution" />
+			<_6 v="Dynamic Shadowmap Atlas Resolution No Sun" />
+			<_6 v="Static Shadowmap Atlas Resolution" />
+			<_F v="Deferred Shadow Mask">
+				<Flag v="Enabled" />
+			</_F>
+			<_F v="Contact Shadows">
+				<Flag v="Enabled" />
+			</_F>
+			<_F v="Local Lights Low Shadow Sampling">
+				<Flag v="Enabled" />
+			</_F>
+			<_F v="Shadows For Non-Visible Objects">
+				<Flag v="Enabled" />
+			</_F>
+			<_14 v="Local Lights Shadow Sampling Falloff" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_6 v="Dynamic Shadowmap Atlas Resolution" />
+			<_6 v="Dynamic Shadowmap Atlas Resolution No Sun" />
+			<_6 v="Static Shadowmap Atlas Resolution" />
+			<_F v="Deferred Shadow Mask">
+				<Flag v="Enabled" />
+			</_F>
+			<_F v="Contact Shadows">
+				<Flag v="Enabled" />
+			</_F>
+			<_F v="Local Lights Low Shadow Sampling">
+				<Flag v="Enabled" />
+			</_F>
+			<_F v="Shadows For Non-Visible Objects">
+				<Flag v="Enabled" />
+			</_F>
+			<_14 v="Local Lights Shadow Sampling Falloff" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_6 v="Dynamic Shadowmap Atlas Resolution" />
+			<_6 v="Dynamic Shadowmap Atlas Resolution No Sun" />
+			<_6 v="Static Shadowmap Atlas Resolution" />
+			<_F v="Deferred Shadow Mask">
+				<Flag v="Enabled" />
+			</_F>
+			<_F v="Contact Shadows">
+				<Flag v="Enabled" />
+			</_F>
+			<_F v="Local Lights Low Shadow Sampling">
+				<Flag v="Enabled" />
+			</_F>
+			<_F v="Shadows For Non-Visible Objects">
+				<Flag v="Enabled" />
+			</_F>
+			<_14 v="Local Lights Shadow Sampling Falloff" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_6 v="Dynamic Shadowmap Atlas Resolution" />
+			<_6 v="Dynamic Shadowmap Atlas Resolution No Sun" />
+			<_6 v="Static Shadowmap Atlas Resolution" />
+			<_F v="Deferred Shadow Mask">
+				<Flag v="Enabled" />
+			</_F>
+			<_F v="Contact Shadows">
+				<Flag v="Enabled" />
+			</_F>
+			<_F v="Local Lights Low Shadow Sampling">
+				<Flag v="Enabled" />
+			</_F>
+			<_F v="Shadows For Non-Visible Objects">
+				<Flag v="Enabled" />
+			</_F>
+			<_14 v="Local Lights Shadow Sampling Falloff" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Sky Quality Presets">
+		<_0 v="Preset" />
+		<_F v="Volumetric Clouds Enable Flag">
+			<Flag v="Enabled" />
+		</_F>
+		<_34 v="generated_pad520a" length="3" />
+		<_6 v="Volumetric Clouds RT Width Resolution" />
+		<_6 v="Volumetric Clouds RT Height Resolution" />
+		<_6 v="Volumetric Clouds Coverage RT Resolution" />
+		<_6 v="Perlin Worley Noise Resolution" />
+		<_6 v="Worley Noise Resolution" />
+		<_6 v="Curl Noise Resolution" />
+		<_6 v="Volumetric Clouds Shape Ray Steps" />
+		<_6 v="Volumetric Clouds Lighting Ray Steps" />
+		<_14 v="Volumetric Clouds Beer Scale" />
+		<_14 v="Volumetric Clouds Cornette Scale" />
+		<_14 v="Volumetric Clouds Coverage Strength" />
+		<_6 v="Volumetric Clouds Perf Tier" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_F v="Volumetric Clouds Enable Flag">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad31c9" length="3" />
+			<_6 v="Volumetric Clouds RT Width Resolution" />
+			<_6 v="Volumetric Clouds RT Height Resolution" />
+			<_6 v="Volumetric Clouds Coverage RT Resolution" />
+			<_6 v="Perlin Worley Noise Resolution" />
+			<_6 v="Worley Noise Resolution" />
+			<_6 v="Curl Noise Resolution" />
+			<_6 v="Volumetric Clouds Shape Ray Steps" />
+			<_6 v="Volumetric Clouds Lighting Ray Steps" />
+			<_14 v="Volumetric Clouds Beer Scale" />
+			<_14 v="Volumetric Clouds Cornette Scale" />
+			<_14 v="Volumetric Clouds Coverage Strength" />
+			<_6 v="Volumetric Clouds Perf Tier" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_F v="Volumetric Clouds Enable Flag">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad31c9" length="3" />
+			<_6 v="Volumetric Clouds RT Width Resolution" />
+			<_6 v="Volumetric Clouds RT Height Resolution" />
+			<_6 v="Volumetric Clouds Coverage RT Resolution" />
+			<_6 v="Perlin Worley Noise Resolution" />
+			<_6 v="Worley Noise Resolution" />
+			<_6 v="Curl Noise Resolution" />
+			<_6 v="Volumetric Clouds Shape Ray Steps" />
+			<_6 v="Volumetric Clouds Lighting Ray Steps" />
+			<_14 v="Volumetric Clouds Beer Scale" />
+			<_14 v="Volumetric Clouds Cornette Scale" />
+			<_14 v="Volumetric Clouds Coverage Strength" />
+			<_6 v="Volumetric Clouds Perf Tier" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_F v="Volumetric Clouds Enable Flag">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad31c9" length="3" />
+			<_6 v="Volumetric Clouds RT Width Resolution" />
+			<_6 v="Volumetric Clouds RT Height Resolution" />
+			<_6 v="Volumetric Clouds Coverage RT Resolution" />
+			<_6 v="Perlin Worley Noise Resolution" />
+			<_6 v="Worley Noise Resolution" />
+			<_6 v="Curl Noise Resolution" />
+			<_6 v="Volumetric Clouds Shape Ray Steps" />
+			<_6 v="Volumetric Clouds Lighting Ray Steps" />
+			<_14 v="Volumetric Clouds Beer Scale" />
+			<_14 v="Volumetric Clouds Cornette Scale" />
+			<_14 v="Volumetric Clouds Coverage Strength" />
+			<_6 v="Volumetric Clouds Perf Tier" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_F v="Volumetric Clouds Enable Flag">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad31c9" length="3" />
+			<_6 v="Volumetric Clouds RT Width Resolution" />
+			<_6 v="Volumetric Clouds RT Height Resolution" />
+			<_6 v="Volumetric Clouds Coverage RT Resolution" />
+			<_6 v="Perlin Worley Noise Resolution" />
+			<_6 v="Worley Noise Resolution" />
+			<_6 v="Curl Noise Resolution" />
+			<_6 v="Volumetric Clouds Shape Ray Steps" />
+			<_6 v="Volumetric Clouds Lighting Ray Steps" />
+			<_14 v="Volumetric Clouds Beer Scale" />
+			<_14 v="Volumetric Clouds Cornette Scale" />
+			<_14 v="Volumetric Clouds Coverage Strength" />
+			<_6 v="Volumetric Clouds Perf Tier" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Temporal AA Presets">
+		<_0 v="Preset" />
+		<_F v="Enable Flag">
+			<Flag v="Enabled" />
+		</_F>
+		<_34 v="generated_pad3998" length="3" />
+		<_6 v="Quality" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_F v="Enable Flag">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad7fc7" length="3" />
+			<_6 v="Quality" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_F v="Enable Flag">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad7fc7" length="3" />
+			<_6 v="Quality" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_F v="Enable Flag">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad7fc7" length="3" />
+			<_6 v="Quality" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_F v="Enable Flag">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad7fc7" length="3" />
+			<_6 v="Quality" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="AO Presets">
+		<_0 v="Preset" />
+		<_F v="Flags">
+			<Flag v="AO Disabled" />
+		</_F>
+		<_34 v="generated_paddfa8" length="3" />
+		<_6 v="Quality" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_F v="Flags">
+				<Flag v="AO Disabled" />
+			</_F>
+			<_34 v="generated_pad8c97" length="3" />
+			<_6 v="Quality" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_F v="Flags">
+				<Flag v="AO Disabled" />
+			</_F>
+			<_34 v="generated_pad8c97" length="3" />
+			<_6 v="Quality" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_F v="Flags">
+				<Flag v="AO Disabled" />
+			</_F>
+			<_34 v="generated_pad8c97" length="3" />
+			<_6 v="Quality" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_F v="Flags">
+				<Flag v="AO Disabled" />
+			</_F>
+			<_34 v="generated_pad8c97" length="3" />
+			<_6 v="Quality" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Depth of Field Presets">
+		<_0 v="Preset" />
+		<_6 v="Ring Count" />
+		<_A v="Blur Type">
+			<Flag v="Hex" />
+			<Flag v="Circle" />
+		</_A>
+		<_34 v="generated_pad9984" length="3" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_6 v="Ring Count" />
+			<_A v="Blur Type">
+				<Flag v="Hex" />
+				<Flag v="Circle" />
+			</_A>
+			<_34 v="generated_pad9a0b" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_6 v="Ring Count" />
+			<_A v="Blur Type">
+				<Flag v="Hex" />
+				<Flag v="Circle" />
+			</_A>
+			<_34 v="generated_pad9a0b" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_6 v="Ring Count" />
+			<_A v="Blur Type">
+				<Flag v="Hex" />
+				<Flag v="Circle" />
+			</_A>
+			<_34 v="generated_pad9a0b" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_6 v="Ring Count" />
+			<_A v="Blur Type">
+				<Flag v="Hex" />
+				<Flag v="Circle" />
+			</_A>
+			<_34 v="generated_pad9a0b" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Anisotropic Filtering Presets">
+		<_0 v="Preset" />
+		<_A v="Level">
+			<Flag v="0" />
+			<Flag v="2" />
+			<Flag v="4" />
+			<Flag v="8" />
+			<Flag v="16" />
+		</_A>
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_A v="Level">
+				<Flag v="0" />
+				<Flag v="2" />
+				<Flag v="4" />
+				<Flag v="8" />
+				<Flag v="16" />
+			</_A>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_A v="Level">
+				<Flag v="0" />
+				<Flag v="2" />
+				<Flag v="4" />
+				<Flag v="8" />
+				<Flag v="16" />
+			</_A>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_A v="Level">
+				<Flag v="0" />
+				<Flag v="2" />
+				<Flag v="4" />
+				<Flag v="8" />
+				<Flag v="16" />
+			</_A>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_A v="Level">
+				<Flag v="0" />
+				<Flag v="2" />
+				<Flag v="4" />
+				<Flag v="8" />
+				<Flag v="16" />
+			</_A>
+			<_3B v="" />
+		</_38>
+		<_34 v="generated_padc853" length="3" />
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Terrain Presets">
+		<_0 v="Preset" />
+		<_14 v="LOD Radius Factor" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_14 v="LOD Radius Factor" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_14 v="LOD Radius Factor" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_14 v="LOD Radius Factor" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_14 v="LOD Radius Factor" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Lighting Presets">
+		<_0 v="Preset" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Decorators Presets">
+		<_A v="Push Bending">
+			<Flag v="Off" />
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+		</_A>
+		<_0 v="Preset" />
+		<_34 v="generated_pad704e" length="3" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Asset Category Presets">
+		<_0 v="Preset" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Dynamic Wind Presets">
+		<_0 v="Preset" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_F v="Flags">
+				<Flag v="Disabled" />
+			</_F>
+			<_34 v="generated_pad48fe" length="3" />
+			<_14 v="Texel Size" />
+			<_6 v="Texture Resolution X" />
+			<_6 v="Texture Resolution Y" />
+			<_6 v="Texture Resolution Z" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_F v="Flags">
+				<Flag v="Disabled" />
+			</_F>
+			<_34 v="generated_pad48fe" length="3" />
+			<_14 v="Texel Size" />
+			<_6 v="Texture Resolution X" />
+			<_6 v="Texture Resolution Y" />
+			<_6 v="Texture Resolution Z" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_F v="Flags">
+				<Flag v="Disabled" />
+			</_F>
+			<_34 v="generated_pad48fe" length="3" />
+			<_14 v="Texel Size" />
+			<_6 v="Texture Resolution X" />
+			<_6 v="Texture Resolution Y" />
+			<_6 v="Texture Resolution Z" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_F v="Flags">
+				<Flag v="Disabled" />
+			</_F>
+			<_34 v="generated_pad48fe" length="3" />
+			<_14 v="Texel Size" />
+			<_6 v="Texture Resolution X" />
+			<_6 v="Texture Resolution Y" />
+			<_6 v="Texture Resolution Z" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Push Bending Presets">
+		<_0 v="Preset" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_6 v="Resolution" />
+			<_F v="Flags">
+				<Flag v="Disabled" />
+			</_F>
+			<_34 v="generated_padb399" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_6 v="Resolution" />
+			<_F v="Flags">
+				<Flag v="Disabled" />
+			</_F>
+			<_34 v="generated_padb399" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_6 v="Resolution" />
+			<_F v="Flags">
+				<Flag v="Disabled" />
+			</_F>
+			<_34 v="generated_padb399" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_6 v="Resolution" />
+			<_F v="Flags">
+				<Flag v="Disabled" />
+			</_F>
+			<_34 v="generated_padb399" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Hlod Presets">
+		<_0 v="Preset" />
+		<_14 v="HLOD Switch Distance Multiplier" />
+		<_14 v="HLOD Switch Distance Buffer" />
+		<_14 v="HLOD Texture Streaming Multiplier" />
+		<_14 v="Distant Geo Streaming Distance Multiplier" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Animation Quality Presets">
+		<_0 v="Preset" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Visual Damage Presets">
+		<_0 v="Preset" />
+		<_F v="Enable Flag">
+			<Flag v="Enabled" />
+		</_F>
+		<_34 v="generated_pada34f" length="3" />
+		<_6 v="Mask Resolution" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_F v="Enable Flag">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad9506" length="3" />
+			<_6 v="Mask Resolution" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_F v="Enable Flag">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad9506" length="3" />
+			<_6 v="Mask Resolution" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_F v="Enable Flag">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad9506" length="3" />
+			<_6 v="Mask Resolution" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_F v="Enable Flag">
+				<Flag v="Enabled" />
+			</_F>
+			<_34 v="generated_pad9506" length="3" />
+			<_6 v="Mask Resolution" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Virtual Texturing Presets">
+		<_0 v="Preset" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_6 v="Desired Page Count" />
+			<_6 v="Max Pages Per Frame" />
+			<_6 v="Low Priority Pages Per Frame" />
+			<_A v="Compression Quality">
+				<Flag v="Low" />
+				<Flag v="Medium" />
+				<Flag v="High" />
+			</_A>
+			<_F v="Virtual Texturing Flags">
+				<Flag v="Objects Enabled" />
+			</_F>
+			<_34 v="generated_pad5b4a" length="2" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_6 v="Desired Page Count" />
+			<_6 v="Max Pages Per Frame" />
+			<_6 v="Low Priority Pages Per Frame" />
+			<_A v="Compression Quality">
+				<Flag v="Low" />
+				<Flag v="Medium" />
+				<Flag v="High" />
+			</_A>
+			<_F v="Virtual Texturing Flags">
+				<Flag v="Objects Enabled" />
+			</_F>
+			<_34 v="generated_pad5b4a" length="2" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_6 v="Desired Page Count" />
+			<_6 v="Max Pages Per Frame" />
+			<_6 v="Low Priority Pages Per Frame" />
+			<_A v="Compression Quality">
+				<Flag v="Low" />
+				<Flag v="Medium" />
+				<Flag v="High" />
+			</_A>
+			<_F v="Virtual Texturing Flags">
+				<Flag v="Objects Enabled" />
+			</_F>
+			<_34 v="generated_pad5b4a" length="2" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_6 v="Desired Page Count" />
+			<_6 v="Max Pages Per Frame" />
+			<_6 v="Low Priority Pages Per Frame" />
+			<_A v="Compression Quality">
+				<Flag v="Low" />
+				<Flag v="Medium" />
+				<Flag v="High" />
+			</_A>
+			<_F v="Virtual Texturing Flags">
+				<Flag v="Objects Enabled" />
+			</_F>
+			<_34 v="generated_pad5b4a" length="2" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Flocks Presets">
+		<_0 v="Preset" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Simulation Quality Presets">
+		<_0 v="Preset" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Effects Presets">
+		<_0 v="Preset" />
+		<_F v="Effect Quality Options Flags">
+			<Flag v="Enable CPU Particle Collisions" />
+			<Flag v="Disable Low Priority Parts" />
+			<Flag v="High Quality Particle Lighting" />
+		</_F>
+		<_34 v="generated_pad5cbc" length="3" />
+		<_14 v="Dynamic Low Priority Culling Threshold" />
+		<_14 v="Low Priority Culling Distance" />
+		<_14 v="Dynamic Medium Priority Culling Threshold" />
+		<_14 v="Medium Priority Culling Distance" />
+		<_14 v="Distortion Throttling Threshold" />
+		<_14 v="Distortion Fade Threshold" />
+		<_14 v="LOD Distance Scaling" />
+		<_14 v="LOD Distance Dynamic Throttle Min" />
+		<_14 v="LOD Distance Dynamic Throttle Max" />
+		<_14 v="Cheap Light Falloff Throttle" />
+		<_A v="Visual Damage Preset">
+			<Flag v="Off" />
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+		</_A>
+		<_34 v="generated_pad769d" length="3" />
+		<_14 v="Material Effects Distance Scalar" />
+		<_A v="Chromatic Aberration Preset">
+			<Flag v="Off" />
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+		</_A>
+		<_A v="UI Preset">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+		</_A>
+		<_34 v="generated_padc352" length="2" />
+		<_37 v="Effect Streaming Relevancy Settings" />
+		<_38 v="Effect Streaming Relevancy Settings">
+			<_14 v="inner radius" />
+			<_14 v="outer radius" />
+			<_14 v="front-facing radius" />
+			<_8 v="front-facing FOV" />
+			<_14 v="Environment effect distance scale" />
+			<_14 v="Sandbox effect distance scale" />
+			<_14 v="Critical effect distance scale" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_F v="Effect Quality Options Flags">
+				<Flag v="Enable CPU Particle Collisions" />
+				<Flag v="Disable Low Priority Parts" />
+				<Flag v="High Quality Particle Lighting" />
+			</_F>
+			<_34 v="generated_paded43" length="3" />
+			<_14 v="Dynamic Low Priority Culling Threshold" />
+			<_14 v="Low Priority Culling Distance" />
+			<_14 v="Dynamic Medium Priority Culling Threshold" />
+			<_14 v="Medium Priority Culling Distance" />
+			<_14 v="Distortion Throttling Threshold" />
+			<_14 v="Distortion Fade Threshold" />
+			<_14 v="LOD Distance Scaling" />
+			<_14 v="LOD Distance Dynamic Throttle Min" />
+			<_14 v="LOD Distance Dynamic Throttle Max" />
+			<_14 v="Cheap Light Falloff Throttle" />
+			<_14 v="Material Effects Distance Scalar" />
+			<_37 v="Effect Streaming Relevancy Settings" />
+			<_38 v="Effect Streaming Relevancy Settings">
+				<_14 v="inner radius" />
+				<_14 v="outer radius" />
+				<_14 v="front-facing radius" />
+				<_8 v="front-facing FOV" />
+				<_14 v="Environment effect distance scale" />
+				<_14 v="Sandbox effect distance scale" />
+				<_14 v="Critical effect distance scale" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_F v="Effect Quality Options Flags">
+				<Flag v="Enable CPU Particle Collisions" />
+				<Flag v="Disable Low Priority Parts" />
+				<Flag v="High Quality Particle Lighting" />
+			</_F>
+			<_34 v="generated_paded43" length="3" />
+			<_14 v="Dynamic Low Priority Culling Threshold" />
+			<_14 v="Low Priority Culling Distance" />
+			<_14 v="Dynamic Medium Priority Culling Threshold" />
+			<_14 v="Medium Priority Culling Distance" />
+			<_14 v="Distortion Throttling Threshold" />
+			<_14 v="Distortion Fade Threshold" />
+			<_14 v="LOD Distance Scaling" />
+			<_14 v="LOD Distance Dynamic Throttle Min" />
+			<_14 v="LOD Distance Dynamic Throttle Max" />
+			<_14 v="Cheap Light Falloff Throttle" />
+			<_14 v="Material Effects Distance Scalar" />
+			<_37 v="Effect Streaming Relevancy Settings" />
+			<_38 v="Effect Streaming Relevancy Settings">
+				<_14 v="inner radius" />
+				<_14 v="outer radius" />
+				<_14 v="front-facing radius" />
+				<_8 v="front-facing FOV" />
+				<_14 v="Environment effect distance scale" />
+				<_14 v="Sandbox effect distance scale" />
+				<_14 v="Critical effect distance scale" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_F v="Effect Quality Options Flags">
+				<Flag v="Enable CPU Particle Collisions" />
+				<Flag v="Disable Low Priority Parts" />
+				<Flag v="High Quality Particle Lighting" />
+			</_F>
+			<_34 v="generated_paded43" length="3" />
+			<_14 v="Dynamic Low Priority Culling Threshold" />
+			<_14 v="Low Priority Culling Distance" />
+			<_14 v="Dynamic Medium Priority Culling Threshold" />
+			<_14 v="Medium Priority Culling Distance" />
+			<_14 v="Distortion Throttling Threshold" />
+			<_14 v="Distortion Fade Threshold" />
+			<_14 v="LOD Distance Scaling" />
+			<_14 v="LOD Distance Dynamic Throttle Min" />
+			<_14 v="LOD Distance Dynamic Throttle Max" />
+			<_14 v="Cheap Light Falloff Throttle" />
+			<_14 v="Material Effects Distance Scalar" />
+			<_37 v="Effect Streaming Relevancy Settings" />
+			<_38 v="Effect Streaming Relevancy Settings">
+				<_14 v="inner radius" />
+				<_14 v="outer radius" />
+				<_14 v="front-facing radius" />
+				<_8 v="front-facing FOV" />
+				<_14 v="Environment effect distance scale" />
+				<_14 v="Sandbox effect distance scale" />
+				<_14 v="Critical effect distance scale" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_F v="Effect Quality Options Flags">
+				<Flag v="Enable CPU Particle Collisions" />
+				<Flag v="Disable Low Priority Parts" />
+				<Flag v="High Quality Particle Lighting" />
+			</_F>
+			<_34 v="generated_paded43" length="3" />
+			<_14 v="Dynamic Low Priority Culling Threshold" />
+			<_14 v="Low Priority Culling Distance" />
+			<_14 v="Dynamic Medium Priority Culling Threshold" />
+			<_14 v="Medium Priority Culling Distance" />
+			<_14 v="Distortion Throttling Threshold" />
+			<_14 v="Distortion Fade Threshold" />
+			<_14 v="LOD Distance Scaling" />
+			<_14 v="LOD Distance Dynamic Throttle Min" />
+			<_14 v="LOD Distance Dynamic Throttle Max" />
+			<_14 v="Cheap Light Falloff Throttle" />
+			<_14 v="Material Effects Distance Scalar" />
+			<_37 v="Effect Streaming Relevancy Settings" />
+			<_38 v="Effect Streaming Relevancy Settings">
+				<_14 v="inner radius" />
+				<_14 v="outer radius" />
+				<_14 v="front-facing radius" />
+				<_8 v="front-facing FOV" />
+				<_14 v="Environment effect distance scale" />
+				<_14 v="Sandbox effect distance scale" />
+				<_14 v="Critical effect distance scale" />
+				<_3B v="" />
+			</_38>
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Emblem Quality Presets">
+		<_0 v="Preset" />
+		<_3E v="Resolution" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_3E v="Resolution" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_3E v="Resolution" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_3E v="Resolution" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_3E v="Resolution" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Texture Quality Presets">
+		<_0 v="Preset" />
+		<_14 v="Texture Prediction Resolution Limit" />
+		<_14 v="Texture Prediction Target Resolution" />
+		<_A v="Emblem Quality Preset">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_A v="Virtual Texturing Preset">
+			<Flag v="Low" />
+			<Flag v="Medium" />
+			<Flag v="High" />
+			<Flag v="Ultra" />
+		</_A>
+		<_34 v="generated_pad880c" length="2" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_6 v="Texture Array Bias" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_6 v="Texture Array Bias" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_6 v="Texture Array Bias" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_6 v="Texture Array Bias" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_6 v="Fudge Factor Size" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Chromatic Aberration Presets">
+		<_0 v="Preset" />
+		<_6 v="Number of samples" />
+		<_3B v="" />
+	</_40>
+	<_40 v="UI Presets">
+		<_0 v="Preset" />
+		<_F v="Bloom">
+			<Flag v="Enabled" />
+		</_F>
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_F v="Bloom">
+				<Flag v="Enabled" />
+			</_F>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_F v="Bloom">
+				<Flag v="Enabled" />
+			</_F>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_F v="Bloom">
+				<Flag v="Enabled" />
+			</_F>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_F v="Bloom">
+				<Flag v="Enabled" />
+			</_F>
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Decal Presets">
+		<_0 v="Preset" />
+		<_6 v="Max Decal Count" />
+		<_14 v="Decal Lifetime Scale" />
+		<_6 v="Max Clustered Decals" />
+		<_A v="Blend Quality">
+			<Flag v="Albedo Only" />
+			<Flag v="Normal" />
+		</_A>
+		<_34 v="generated_pada386" length="3" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_6 v="Max Decal Count" />
+			<_14 v="Decal Lifetime Scale" />
+			<_6 v="Max Clustered Decals" />
+			<_A v="Blend Quality">
+				<Flag v="Albedo Only" />
+				<Flag v="Normal" />
+			</_A>
+			<_34 v="generated_pad2c5d" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_6 v="Max Decal Count" />
+			<_14 v="Decal Lifetime Scale" />
+			<_6 v="Max Clustered Decals" />
+			<_A v="Blend Quality">
+				<Flag v="Albedo Only" />
+				<Flag v="Normal" />
+			</_A>
+			<_34 v="generated_pad2c5d" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_6 v="Max Decal Count" />
+			<_14 v="Decal Lifetime Scale" />
+			<_6 v="Max Clustered Decals" />
+			<_A v="Blend Quality">
+				<Flag v="Albedo Only" />
+				<Flag v="Normal" />
+			</_A>
+			<_34 v="generated_pad2c5d" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_6 v="Max Decal Count" />
+			<_14 v="Decal Lifetime Scale" />
+			<_6 v="Max Clustered Decals" />
+			<_A v="Blend Quality">
+				<Flag v="Albedo Only" />
+				<Flag v="Normal" />
+			</_A>
+			<_34 v="generated_pad2c5d" length="3" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Shader Quality Presets">
+		<_0 v="Preset" />
+		<_37 v="VRAM" />
+		<_38 v="vram">
+			<_6 v="Initial VRAM usage" />
+			<_6 v="VRAM per 1 million pixels" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_3B v="" />
+</root>

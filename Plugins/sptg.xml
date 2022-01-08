@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Sorting" />
+	<_36 v="" />
+	<_14 v="distance weight" />
+	<_14 v="blended weight" />
+	<_14 v="FOV weight" />
+	<_37 v="" />
+	<_41 v="active ping" />
+	<_41 v="passive ping" />
+	<_41 v="custom ping" />
+	<_3B v="" />
+</root>

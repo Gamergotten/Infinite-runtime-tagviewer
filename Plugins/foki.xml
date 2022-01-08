@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="Original Kit" />
+	<_40 v="Kit Groups">
+		<_2 v="Name" />
+		<_2 v="Parent Name" />
+		<_6 v="Group Index" />
+		<_6 v="Parent Group Index" />
+		<_41 v="Script Tag" />
+		<_38 v="Scriptable Properties">
+			<_40 v="bool properties">
+				<_1 v="name" />
+				<_3C v="Value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="numeric properties">
+				<_1 v="name" />
+				<_14 v="Value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="string properties">
+				<_1 v="name" />
+				<_1 v="Value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="tag properties">
+				<_1 v="name" />
+				<_41 v="Value" />
+				<_2 v="load variant" />
+				<_3B v="" />
+			</_40>
+			<_40 v="color properties">
+				<_1 v="name" />
+				<_20 v="Value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="vector properties">
+				<_1 v="name" />
+				<_19 v="Value" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_40 v="Objects">
+			<_2 v="Name" />
+			<_41 v="Object" />
+			<_2 v="Asset Variant Name" />
+			<_41 v="Asset Geo" />
+			<_41 v="Asset Collision Geo" />
+			<_41 v="Material Palette" />
+			<_17 v="Position" />
+			<_1C v="Rotation" />
+			<_19 v="Scale" />
+			<_40 v="Scenario Data">
+				<_A v="Object Type">
+					<Flag v="biped" />
+					<Flag v="vehicle" />
+					<Flag v="weapon" />
+					<Flag v="equipment" />
+					<Flag v="terminal" />
+					<Flag v="projectile" />
+					<Flag v="scenery" />
+					<Flag v="machine" />
+					<Flag v="control" />
+					<Flag v="dispenser" />
+					<Flag v="crate" />
+					<Flag v="creature" />
+					<Flag v="giant" />
+					<Flag v="effect_scenery" />
+				</_A>
+				<_34 v="generated_pad6a37" length="3" />
+				<_40 v="Multiplayer Properties">
+					<_36 v="Multiplayer Data" />
+					<_2 v="megalo label" />
+					<_2 v="megalo label 2" />
+					<_2 v="megalo label 3" />
+					<_2 v="megalo label 4" />
+					<_A v="game engine symmetric placement">
+						<Flag v="ignore" />
+						<Flag v="symmetric" />
+						<Flag v="asymmetric" />
+					</_A>
+					<_A v="owner team">
+						<Flag v="Defender" />
+						<Flag v="Attacker" />
+						<Flag v="ThirdParty" />
+						<Flag v="FourthParty" />
+						<Flag v="FifthParty" />
+						<Flag v="SixthParty" />
+						<Flag v="SeventhParty" />
+						<Flag v="EighthParty" />
+						<Flag v="Neutral" />
+					</_A>
+					<_A v="owner squad">
+						<Flag v="None" />
+						<Flag v="Alpha" />
+						<Flag v="Bravo" />
+						<Flag v="Charlie" />
+						<Flag v="Delta" />
+						<Flag v="Echo" />
+						<Flag v="Foxtrot" />
+						<Flag v="Gamma" />
+						<Flag v="Hotel" />
+					</_A>
+					<_34 v="generated_pad2291" length="1" />
+					<_E v="spawn flags">
+						<Flag v="unique spawn" />
+						<Flag v="not initially placed" />
+						<Flag v="Deprecated" />
+						<Flag v="is shortcut object" />
+						<Flag v="can spawn on bipeds" />
+						<Flag v="does not respawn" />
+						<Flag v="abandonment timer always active" />
+						<Flag v="override candy monitor defaults" />
+						<Flag v="tracked by candy monitor" />
+					</_E>
+					<_A v="teleporter channel">
+						<Flag v="alpha" />
+						<Flag v="bravo" />
+						<Flag v="charlie" />
+						<Flag v="delta" />
+						<Flag v="echo" />
+						<Flag v="foxtrot" />
+						<Flag v="golf" />
+						<Flag v="hotel" />
+						<Flag v="india" />
+						<Flag v="juliet" />
+						<Flag v="kilo" />
+						<Flag v="lima" />
+						<Flag v="mike" />
+						<Flag v="november" />
+						<Flag v="oscar" />
+						<Flag v="papa" />
+						<Flag v="quebec" />
+						<Flag v="romeo" />
+						<Flag v="sierra" />
+						<Flag v="tango" />
+						<Flag v="uniform" />
+						<Flag v="victor" />
+						<Flag v="whiskey" />
+						<Flag v="xray" />
+						<Flag v="yankee" />
+						<Flag v="zulu" />
+					</_A>
+					<_F v="teleporter passability">
+						<Flag v="disallow players" />
+						<Flag v="allow light land vehicles" />
+						<Flag v="allow heavy land vehicles" />
+						<Flag v="allow flying vehicles" />
+						<Flag v="allow projectiles" />
+					</_F>
+					<_A v="trait zone channel">
+						<Flag v="alpha" />
+						<Flag v="bravo" />
+						<Flag v="charlie" />
+						<Flag v="delta" />
+						<Flag v="echo" />
+						<Flag v="foxtrot" />
+						<Flag v="golf" />
+						<Flag v="hotel" />
+						<Flag v="india" />
+						<Flag v="juliet" />
+						<Flag v="kilo" />
+						<Flag v="lima" />
+						<Flag v="mike" />
+						<Flag v="november" />
+						<Flag v="oscar" />
+						<Flag v="papa" />
+						<Flag v="quebec" />
+						<Flag v="romeo" />
+						<Flag v="sierra" />
+						<Flag v="tango" />
+						<Flag v="uniform" />
+						<Flag v="victor" />
+						<Flag v="whiskey" />
+						<Flag v="xray" />
+						<Flag v="yankee" />
+						<Flag v="zulu" />
+					</_A>
+					<_34 v="generated_pad08b0" length="3" />
+					<_14 v="trait zone seconds to apply" />
+					<_14 v="phantomVelocityMultiplier" />
+					<_14 v="phantomAccelerationMultiplier" />
+					<_14 v="boundary width or radius" />
+					<_14 v="boundary box length" />
+					<_14 v="boundary positive height" />
+					<_14 v="boundary negative height" />
+					<_A v="boundary shape">
+						<Flag v="unused" />
+						<Flag v="sphere" />
+						<Flag v="cylinder" />
+						<Flag v="box" />
+					</_A>
+					<_34 v="boundary pad" length="1" />
+					<_34 v="boundary pad2" length="2" />
+					<_5 v="initial spawn delay" />
+					<_5 v="spawn time" />
+					<_5 v="abandonment time" />
+					<_34 v="generated_padbbfb" length="2" />
+					<_2 v="location name" />
+					<_40 v="spline">
+						<_17 v="position" />
+						<_1C v="rotation" />
+						<_14 v="scale" />
+						<_3B v="" />
+					</_40>
+					<_40 v="SpawnPointProperties">
+						<_F v="Spawn Point Flags">
+							<Flag v="Never Spawn In Vehicle" />
+						</_F>
+						<_3B v="" />
+					</_40>
+					<_14 v="respawn weight" />
+					<_38 v="warzone objective definition membership">
+						<_2E v="warzone objective definition" />
+						<_0 v="warzone objective label" />
+						<_3B v="" />
+					</_38>
+					<_3C v="spawn order" />
+					<_F v="Multiplayer Property Flags">
+						<Flag v="Deny Spawn Points" />
+						<Flag v="Apply Spawn Zone Properties To Opposing Teams" />
+						<Flag v="Apply Spawn Zone Properties To Initial Spawn" />
+						<Flag v="WeaponPad Initially Disabled" />
+						<Flag v="Ignore Spawn Zone Falloff Function" />
+					</_F>
+					<_41 v="WeaponPad object to spawn" />
+					<_41 v="WeaponPad object to spawn configuration" />
+					<_14 v="WeaponPad respawn time" />
+					<_40 v="terminal redeemable objects">
+						<_41 v="redeemable object" />
+						<_6 v="level requirement" />
+						<_3B v="" />
+					</_40>
+					<_F v="MapZones">
+						<Flag v="Zero" />
+						<Flag v="One" />
+						<Flag v="Two" />
+						<Flag v="Three" />
+						<Flag v="Four" />
+						<Flag v="Five" />
+						<Flag v="Six" />
+						<Flag v="Seven" />
+					</_F>
+					<_F v="MapZoneConfigurations">
+						<Flag v="Alpha" />
+						<Flag v="Bravo" />
+						<Flag v="Charlie" />
+						<Flag v="Delta" />
+						<Flag v="Echo" />
+						<Flag v="Foxtrot" />
+						<Flag v="Golf" />
+						<Flag v="Hotel" />
+					</_F>
+					<_34 v="generated_pad3c72" length="2" />
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="Sound Placements">
+			<_2 v="name" />
+			<_6 v="guid" />
+			<_19 v="position" />
+			<_1C v="facing" />
+			<_F v="placement flags">
+				<Flag v="Subtract" />
+				<Flag v="On all bsps" />
+			</_F>
+			<_F v="flags">
+				<Flag v="Don't create automatically" />
+				<Flag v="Movement radius controls loop start stop" />
+				<Flag v="Tag Processed" />
+			</_F>
+			<_34 v="generated_paddbf0" length="2" />
+			<_30 v="editor folder" />
+			<_41 v="looping sound" />
+			<_40 v="shape override">
+				<_14 v="radius" />
+				<_3B v="" />
+			</_40>
+			<_40 v="spline">
+				<_19 v="position" />
+				<_3B v="" />
+			</_40>
+			<_40 v="EditorMetadata">
+				<_1 v="folder name" />
+				<_17 v="local space pivot point position" />
+				<_3B v="" />
+			</_40>
+			<_2 v="moduleId" />
+			<_2 v="Movement RTPC name" />
+			<_14 v="movement detection radius" />
+			<_14 v="Movement distance scaling factor" />
+			<_38 v="BspMapRuntimeRefCounter">
+				<_5 v="Bsp Ref Count" />
+				<_5 v="Layer Ref Count" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_6 v="Child Object Count" />
+	<_41 v="Menu Item Definitions" />
+	<_3B v="" />
+</root>

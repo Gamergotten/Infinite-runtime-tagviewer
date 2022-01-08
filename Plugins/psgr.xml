@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="ActorCellEntryTag">
+		<_38 v="AnyTag">
+			<_7 v="vtable space" />
+			<_38 v="internal struct">
+				<_6 v="global tag ID" />
+				<_34 v="local tag handle" length="4" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_41 v="Character" />
+		<_41 v="Primary Weapon" />
+		<_41 v="Secondary Weapon" />
+		<_34 v="generated_padbb57" length="4" />
+		<_3B v="" />
+	</_38>
+	<_B v="Seat Preference">
+		<Flag v="DEFAULT" />
+		<Flag v="passenger" />
+		<Flag v="gunner" />
+		<Flag v="driver" />
+		<Flag v="small cargo" />
+		<Flag v="large cargo" />
+		<Flag v="NO driver" />
+		<Flag v="NO vehicle" />
+	</_B>
+	<_34 v="generated_pade676" length="6" />
+	<_3B v="" />
+</root>

@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="interface tags">
+		<_36 v="Mode-Specific Tags" />
+		<_41 v="shared globals" />
+		<_41 v="mainmenu ui globals" />
+		<_41 v="singleplayer ui globals" />
+		<_41 v="multiplayer ui globals" />
+		<_41 v="damage reporting display globals" />
+		<_36 v="Customization Data" />
+		<_41 v="Platform Animations" />
+		<_41 v="Light Presets" />
+		<_41 v="Camera Presets" />
+		<_41 v="Camera Transition Sounds" />
+		<_41 v="Spartan Voice Sounds" />
+		<_41 v="Ai Voice Sounds" />
+		<_2 v="Idling Marine Composition" />
+		<_2 v="Default Gray Emblem Coating" />
+		<_36 v="Customization Scene Data" />
+		<_41 v="Spartan Armor Customization" />
+		<_41 v="Weapons Customization" />
+		<_41 v="Vehicle Customization" />
+		<_41 v="AI Customization" />
+		<_41 v="Fireteam Customization" />
+		<_41 v="Presentation Customization" />
+		<_41 v="Inspect Customization" />
+		<_41 v="Inspect Player Customization" />
+		<_41 v="PGCR" />
+		<_41 v="RTT Forward Fast Lighting Presets" />
+		<_40 v="RTT Camera Scenes">
+			<_2 v="UI Display String" />
+			<_2 v="UI Description�String" />
+			<_6 v="CMS Customization Item Type" />
+			<_2 v="Region Name" />
+			<_2 v="Marker Name" />
+			<_14 v="Marker Offset" />
+			<_14 v="Camera Offset" />
+			<_B v="Animation Easing">
+				<Flag v="LinearTween" />
+				<Flag v="EaseInQuad" />
+				<Flag v="EaseOutQuad" />
+				<Flag v="EaseInOutQuad" />
+				<Flag v="EaseInCubic" />
+				<Flag v="EaseOutCubic" />
+				<Flag v="EaseInOutCubic" />
+				<Flag v="EaseInQuart" />
+				<Flag v="EaseOutQuart" />
+				<Flag v="EaseInOutQuart" />
+				<Flag v="EaseInQuint" />
+				<Flag v="EaseOutQuint" />
+				<Flag v="EaseInOutQuint" />
+				<Flag v="EaseInSine" />
+				<Flag v="EaseOutSine" />
+				<Flag v="EaseInOutSine" />
+				<Flag v="EaseInExpo" />
+				<Flag v="EaseOutExpo" />
+				<Flag v="EaseInOutExpo" />
+				<Flag v="EaseInCirc" />
+				<Flag v="EaseOutCirc" />
+				<Flag v="EaseInOutCirc" />
+				<Flag v="EaseInSinCustom" />
+				<Flag v="EaseOutSinCustom" />
+			</_B>
+			<_34 v="generated_pad2a44" length="2" />
+			<_40 v="Camera Positions">
+				<_B v="Camera Position Type">
+					<Flag v="Default" />
+					<Flag v="Custom" />
+				</_B>
+				<_34 v="generated_pad010d" length="2" />
+				<_19 v="Camera Position" />
+				<_2 v="Composer Scene Name" />
+				<_3B v="" />
+			</_40>
+			<_14 v="Camera FOV" />
+			<_14 v="Camera Transition time" />
+			<_1C v="Camera Orientation" />
+			<_1C v="Focused Object Orientation" />
+			<_F v="DOF Flags">
+				<Flag v="Enable DOF" />
+				<Flag v="Enable DOF RTT" />
+				<Flag v="Enable DOF World" />
+			</_F>
+			<_34 v="generated_pad4425" length="3" />
+			<_14 v="DOF Focal Length" />
+			<_14 v="DOF Focal Distance" />
+			<_14 v="DOF FStop" />
+			<_2 v="Idle Animation" />
+			<_2 v="To Idle Animation" />
+			<_2 v="From Idle Animation" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Composer Scenes">
+			<_2 v="Composer Scene Name" />
+			<_40 v="Camera Points">
+				<_0 v="CameraPoint" />
+				<_3B v="" />
+			</_40>
+			<_40 v="Camera Point Layout Block">
+				<_37 v="Single camera point properties" />
+				<_0 v="Layout one first postion" />
+				<_37 v="" />
+				<_37 v="Two camera point properties" />
+				<_0 v="Layout two first position" />
+				<_0 v="Layout two second position" />
+				<_37 v="" />
+				<_37 v="Three camera point properties" />
+				<_0 v="Layout three first position" />
+				<_0 v="Layout three second position" />
+				<_0 v="Layout three third position" />
+				<_37 v="" />
+				<_37 v="Four camera point properties" />
+				<_0 v="Layout four first position " />
+				<_0 v="Layout four second position" />
+				<_0 v="Layout four third position" />
+				<_0 v="Layout four fourth position" />
+				<_37 v="" />
+				<_3B v="" />
+			</_40>
+			<_14 v="Camera Point move time" />
+			<_41 v="Composer Definition" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Landing Scene Data">
+			<_6 v="Composer Scene Time" />
+			<_6 v="Fodeout Star Time" />
+			<_6 v="Fodeout End Time" />
+			<_40 v="Composer Scenes">
+				<_2 v="Composer Scene Name" />
+				<_B v="Core Type">
+					<Flag v="Unknown" />
+					<Flag v="Armor" />
+					<Flag v="Ai" />
+					<Flag v="WeaponSidekick" />
+					<Flag v="WeaponAR" />
+					<Flag v="WeaponBR" />
+					<Flag v="WeaponCommando" />
+					<Flag v="WeaponSPnKr" />
+					<Flag v="WeaponSniper" />
+					<Flag v="WeaponShotgun" />
+					<Flag v="WeaponHydra" />
+					<Flag v="VehicleWarthog" />
+					<Flag v="VehicleMongoose" />
+					<Flag v="VehicleScorpion" />
+					<Flag v="VehicleWasp" />
+					<Flag v="VehicleRazorBack" />
+					<Flag v="VehicleGungoose" />
+					<Flag v="VehicleRockethog" />
+				</_B>
+				<_34 v="generated_pad18b7" length="2" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_40>
+		<_40 v="CoreType order">
+			<_B v="Core Type">
+				<Flag v="Unknown" />
+				<Flag v="Armor" />
+				<Flag v="Ai" />
+				<Flag v="WeaponSidekick" />
+				<Flag v="WeaponAR" />
+				<Flag v="WeaponBR" />
+				<Flag v="WeaponCommando" />
+				<Flag v="WeaponSPnKr" />
+				<Flag v="WeaponSniper" />
+				<Flag v="WeaponShotgun" />
+				<Flag v="WeaponHydra" />
+				<Flag v="VehicleWarthog" />
+				<Flag v="VehicleMongoose" />
+				<Flag v="VehicleScorpion" />
+				<Flag v="VehicleWasp" />
+				<Flag v="VehicleRazorBack" />
+				<Flag v="VehicleGungoose" />
+				<Flag v="VehicleRockethog" />
+			</_B>
+			<_3B v="" />
+		</_40>
+		<_40 v="MythicFx Composer Names">
+			<_2 v="Composer Scene Name" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Weapon Death Composer Names">
+			<_2 v="Composer Scene Name" />
+			<_3B v="" />
+		</_40>
+		<_41 v="Inspect Data" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padaaba" length="4" />
+	<_3B v="" />
+</root>

@@ -20,34 +20,8 @@ the point of this tool is to lay-out all of the related *runtime* tag info into 
 this tool does not rely on module files to read tags because we read everything from the games memory.
 however it does partly require the TagID's and their respective Tagnames from the modules, as they do not appear to be in Halo Infinite's runtime memory.
 
-List of tags that are kinda mapped out so far (DM me or something if whatever's not here that you want supported)
-- vehi 
-- weap 
-- proj 
-- hlmt (swapping turrets on vehicles and whatever)
-- sddt
-- levl (for soft&kill barriers)
-- effe (tried mapping out AI spawning stuff)
-- matg
-- pmcg
-- glpa (player representation)
-- foot 
-- ocgd
-- mode (model Scales)
-- wgtz
-- char
-- bipd
-- sqds (changing what characters spawn in campaign)
-- jpt! (damage ammount)
-- sagh (grappleshot)
-- eqip (equipment)
-- bloc
-- scen
-- bost (boost type)
-- saev 
-- sasp (did someone say Super Sprint)
-- gmpm
-_ valu (not fully mapped)
+we now support all tags (kinda, if they dont load then theres an issue with the value mappings, shoot me a message on whereever and i'll look into it)
+thanks to lord zedd and exhibit for their work on dumping the tag definitions, which was a massive help to understanding how the tag definitions work
 
 enormous thanks to Krevil for his tool (https://github.com/Krevil/InfiniteModuleReader) that allows us to dump the tag names&IDs, so we can see the correct names of each tag and easily redump the info anytime theres a change in the module information
 

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="properties">
+		<_37 v="Vehicle Attachment" />
+		<_40 v="maximum vitality">
+			<_14 v="health scalar" />
+			<_3B v="" />
+		</_40>
+		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_36 v="Attachment Name" />
+	<_38 v="attachmentName">
+		<_2 v="Attachment Name" />
+		<_3B v="" />
+	</_38>
+	<_3B v="" />
+</root>

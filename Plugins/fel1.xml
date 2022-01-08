@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="Library" />
+	<_40 v="Sounds">
+		<_6 v="Unique ID" />
+		<_2 v="Name" />
+		<_40 v="Sounds">
+			<_41 v="Sound" />
+			<_E v="Key event flags">
+				<Flag v="AllowOnPlayer" />
+				<Flag v="LeftArmOnly" />
+				<Flag v="RightArmOnly" />
+				<Flag v="FirstPersonOnly" />
+				<Flag v="ThirdPersonOnly" />
+				<Flag v="ForwardOnly" />
+				<Flag v="BackwardsOnly" />
+				<Flag v="FPNoAgedWeapons" />
+			</_E>
+			<_34 v="generated_padb649" length="2" />
+			<_41 v="Model reference" />
+			<_2 v="Model variant" />
+			<_41 v="Weapon reference" />
+			<_2 v="Weapon variant" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_40 v="Dialogues">
+		<_6 v="Unique ID" />
+		<_2 v="Vocialization name" />
+		<_A v="Dialogue play restrictions">
+			<Flag v="Unrestricted" />
+			<Flag v="OnlyWithShield" />
+			<Flag v="OnlyWithShieldEmpty" />
+		</_A>
+		<_34 v="generated_pad2391" length="3" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Animations">
+		<_2 v="Name" />
+		<_6 v="Guid" />
+		<_40 v="Sound events">
+			<_5 v="Frame" />
+			<_34 v="generated_pad4191" length="2" />
+			<_2 v="Marker name" />
+			<_6 v="Sound ID" />
+			<_2E v="Sound" />
+			<_34 v="generated_pad27b0" length="2" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Dialogue events">
+			<_5 v="Frame" />
+			<_34 v="generated_pade448" length="2" />
+			<_2 v="Marker name" />
+			<_6 v="Dialogue ID" />
+			<_2E v="Dialogue" />
+			<_34 v="generated_padfe29" length="2" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

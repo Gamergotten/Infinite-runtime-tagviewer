@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="compile" />
+	<_40 v="types">
+		<_2 v="name" />
+		<_37 v="physics" />
+		<_14 v="drag" />
+		<_14 v="gravity" />
+		<_14 v="turbulence" />
+		<_30 v="turbulence type" />
+		<_37 v="" />
+		<_37 v="collision" />
+		<_14 v="depth_range" />
+		<_14 v="elasticity" />
+		<_14 v="death" />
+		<_30 v="change type" />
+		<_37 v="" />
+		<_37 v="render" />
+		<_C v="orientation">
+			<Flag v="velocity" />
+			<Flag v="screen facing" />
+		</_C>
+		<_36 v="render parameters" />
+		<_20 v="color0" />
+		<_14 v="intensity0" />
+		<_14 v="fade start" />
+		<_25 v="size" />
+		<_14 v="motion blur stretch" />
+		<_30 v="texture" />
+		<_14 v="texture y scale" />
+		<_14 v="taa mask strength" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_40 v="textures">
+		<_41 v="bitmap" />
+		<_3B v="" />
+	</_40>
+	<_41 v="random" />
+	<_40 v="turbulence types">
+		<_2 v="name" />
+		<_41 v="turbulence" />
+		<_14 v="turb du dt" />
+		<_14 v="turb dv dt" />
+		<_14 v="turb du dp" />
+		<_14 v="turb dv dp" />
+		<_3B v="" />
+	</_40>
+	<_41 v="type_texture" />
+	<_41 v="render_texture" />
+	<_41 v="turbulenceTexture" />
+	<_34 v="generated_pad3c2a" length="4" />
+	<_3B v="" />
+</root>

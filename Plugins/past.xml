@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_41 v="Asset" />
+	<_2 v="Variant" />
+	<_6 v="LOD Level" />
+	<_1C v="Rotation" />
+	<_19 v="Scale" />
+	<_41 v="Generated ParticleModel" />
+	<_3B v="" />
+</root>

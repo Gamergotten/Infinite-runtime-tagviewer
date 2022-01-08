@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="Performance Throttles" />
+	<_40 v="Performance Throttles">
+		<_D v="flags">
+			<Flag v="disable object attachment lights" />
+			<Flag v="disable cheap particles" />
+			<Flag v="disable blob shadows" />
+			<Flag v="disable patchy fog" />
+			<Flag v="disable screen distortion" />
+			<Flag v="disable light shafts" />
+			<Flag v="disable first person depth of field" />
+			<Flag v="disable motion blur" />
+			<Flag v="disable particles continue offscreen" />
+			<Flag v="disable light cones" />
+			<Flag v="disable water interraction" />
+			<Flag v="disable water refraction" />
+			<Flag v="disable decorators" />
+			<Flag v="disable instance occlusion queries" />
+			<Flag v="disable structure decals" />
+			<Flag v="disable object decals" />
+		</_D>
+		<_14 v="water tessellation scale" />
+		<_14 v="decorator fade dist scale" />
+		<_14 v="effect lod distance scale" />
+		<_37 v="Object settings" />
+		<_14 v="instance fade modifier" />
+		<_14 v="object fade modifier" />
+		<_14 v="object detail fade modifier" />
+		<_14 v="object lighting time limit" />
+		<_37 v="" />
+		<_37 v="LOD settings" />
+		<_14 v="LOD modifier" />
+		<_14 v="LOD vertical modifier" />
+		<_6 v="Maximum Instance Group LOD draw bundles" />
+		<_37 v="" />
+		<_37 v="Dynamic light settings" />
+		<_6 v="max forward dynamic lights" />
+		<_14 v="forward dynamic light fade distance scale" />
+		<_6 v="max screenspace dynamic lights" />
+		<_14 v="screenspace light fade distance scale" />
+		<_6 v="max effect lights (screenspace)" />
+		<_37 v="" />
+		<_37 v="Shadow settings" />
+		<_6 v="max shadow casting objects" />
+		<_14 v="shadow quality lod" />
+		<_14 v="floating shadow quality lod" />
+		<_37 v="" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pada5ca" length="4" />
+	<_3B v="" />
+</root>

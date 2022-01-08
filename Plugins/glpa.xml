@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_2 v="Default representation" />
+	<_37 v="Player Representations" />
+	<_36 v="Notes" />
+	<_40 v="@player representations">
+		<_2 v="name" />
+		<_2 v="first person interface name" />
+		<_2 v="customization set" />
+		<_41 v="customization" />
+		<_F v="flags">
+			<Flag v="can use health packs" />
+			<Flag v="use teammate chatter dialogue" />
+		</_F>
+		<_34 v="generated_pad3e61" length="3" />
+		<_41 v="third person unit" />
+		<_2 v="third person variant" />
+		<_41 v="frame override" />
+		<_30 v="player information" />
+		<_41 v="hud screen reference" />
+		<_2 v="hud transition event name" />
+		<_41 v="first person hands model" />
+		<_41 v="generatedFirstPersonHandsModel" />
+		<_2 v="first person hands variant" />
+		<_2 v="first person body variant" />
+		<_40 v="hidden fpBody regions">
+			<_2 v="hidden region" />
+			<_F v="flags">
+				<Flag v="visible in ICS" />
+			</_F>
+			<_34 v="generated_pad9af5" length="3" />
+			<_3B v="" />
+		</_40>
+		<_2 v="override default style id" />
+		<_41 v="bot reference" />
+		<_41 v="outline to use for enemy" />
+		<_41 v="non-occluded outline to use for enemy" />
+		<_41 v="outline to use when we need only characters" />
+		<_41 v="non-occluded outline to use when we need only characters" />
+		<_41 v="outline to use for enemy near reticle" />
+		<_41 v="outline to use for enemy flash acquire" />
+		<_41 v="outline to use for friendly" />
+		<_41 v="outline to use for friendly near reticle" />
+		<_41 v="outline to use when viewed by spectators" />
+		<_41 v="non-occluded outline to use when viewed by spectators" />
+		<_3B v="" />
+	</_40>
+	<_37 v="" />
+	<_40 v="@player information">
+		<_2 v="name" />
+		<_14 v="walking speed" />
+		<_14 v="run forward" />
+		<_14 v="run backward" />
+		<_14 v="run sideways" />
+		<_14 v="run acceleration" />
+		<_14 v="sneak forward" />
+		<_14 v="sneak backward" />
+		<_14 v="sneak sideways" />
+		<_14 v="sneak acceleration" />
+		<_14 v="downed forward" />
+		<_14 v="downed backward" />
+		<_14 v="downed sideways" />
+		<_14 v="downed acceleration" />
+		<_14 v="airborne acceleration" />
+		<_17 v="grenade origin" />
+		<_38 v="grenade aiming">
+			<_37 v="function" />
+			<_38 v="function">
+				<_37 v="" />
+				<_42 v="data" />
+				<_37 v="" />
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_38>
+		<_25 v="first person idle time" />
+		<_15 v="first person skip fraction" />
+		<_14 v="tracking detection locked decay time" />
+		<_14 v="tracking detection locking decay time" />
+		<_3B v="" />
+	</_40>
+	<_40 v="@player camera">
+		<_36 v="Default camera values" />
+		<_14 v="look velocity base (pitch)" />
+		<_14 v="look velocity step (pitch)" />
+		<_14 v="look velocity base (yaw)" />
+		<_14 v="look velocity step (yaw)" />
+		<_14 v="mouse input velocity scale" />
+		<_36 v="Flying camera pitch values" />
+		<_39 v="flying camera pitch values" />
+		<_36 v="Flying camera yaw values" />
+		<_39 v="flying camera yaw values" />
+		<_36 v="Flying camera speed values" />
+		<_39 v="flying camera speed values" />
+		<_36 v="Flying camera thrust values" />
+		<_39 v="flying camera thrust values" />
+		<_3B v="" />
+	</_40>
+	<_40 v="@first person weapon">
+		<_36 v="Body Render Max FOV" />
+		<_14 v="body render max fov" />
+		<_3B v="" />
+	</_40>
+	<_40 v="@predictable collisions">
+		<_36 v="Predictable Collision" />
+		<_D v="flags">
+			<Flag v="enable" />
+			<Flag v="include friendlies" />
+		</_D>
+		<_14 v="participant radius scalar" />
+		<_15 v="participant adjustment fraction" />
+		<_15 v="adjustment fraction" />
+		<_14 v="linear correction velocity max" />
+		<_3B v="" />
+	</_40>
+	<_38 v="participant malleable properties">
+		<_37 v="motion tracker normal range" />
+		<_38 v="motion tracker normal range">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_37 v="motion tracker extended range" />
+		<_38 v="motion tracker extended range">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_37 v="motion tracker vehicle range" />
+		<_38 v="motion tracker vehicle range">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_37 v="motion tracker threshold speed (friendly)" />
+		<_38 v="motion tracker threshold speed (friendly)">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_37 v="motion tracker threshold speed (enemy)" />
+		<_38 v="motion tracker threshold speed (enemy)">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_37 v="motion tracker visibility scalar" />
+		<_38 v="motion tracker visibility scalar">
+			<_14 v="Base Value" />
+			<_25 v="Value Bounds" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="inventory limits">
+		<_3C v="maximum allowed weapons per player" />
+		<_3B v="" />
+	</_38>
+	<_38 v="interaction priorities">
+		<_36 v="Interaction Priorities" />
+		<_3C v="None" />
+		<_3C v="WeaponPickUpDisabled" />
+		<_3C v="DeviceInteractDenied" />
+		<_3C v="BannedVehicleEntrance" />
+		<_3C v="PickUpGrenade" />
+		<_3C v="PickUpWeapon" />
+		<_3C v="PickUpAbility" />
+		<_3C v="PickUpEquipment" />
+		<_3C v="PickUpDispenserWeapon" />
+		<_3C v="TouchDevice" />
+		<_3C v="EvictFromVehicle" />
+		<_3C v="EnterVehicle" />
+		<_3C v="TradeWeapon" />
+		<_3C v="BoardVehicle" />
+		<_3C v="PickUpMultiplayerObject" />
+		<_3C v="FlipVehicle" />
+		<_3C v="HighPriorityDevice" />
+		<_3C v="LookingAt" />
+		<_3B v="" />
+	</_38>
+	<_34 v="generated_pad9d6c" length="5" />
+	<_3B v="" />
+</root>
