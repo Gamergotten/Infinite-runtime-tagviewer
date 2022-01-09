@@ -138,11 +138,11 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					case "_2":
 						pairs.Add(offset, new C { T = "mmr3Hash", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
-					case "_3":// unmapped
+					case "_3":// unmapped - This case isn't found in any tag file
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
-					case "_4":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
+					case "_4":
+						pairs.Add(offset, new C { T = "Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_5":
 						pairs.Add(offset, new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
@@ -156,9 +156,12 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					case "_8":
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
-					case "_9":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
+					case "_9": 
+						pairs.Add(offset, new C { T = "String", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
+						// This is the special case mentioned in previous versions.
+						// Example, needing to change the empty tag reference in effects to spawn AI.
+						// I tested it in game and its functional.
 
 					case "_A":
 						Dictionary<int, string> childdictionary1 = new();
@@ -222,10 +225,10 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					case "_11":// unmapped
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
-					case "_12":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
+					case "_12":
+						pairs.Add(offset, new C { T = "mmr3Hash", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
-					case "_13":// unmapped
+					case "_13":// unmapped - only found in ttag
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_14":
@@ -258,7 +261,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Y" });
 						pairs.Add((offset + 12), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Z" });
 						return group_lengths_dict[xn.Name];
-					case "_1B":// unmapped
+					case "_1B":
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".X" });
 						pairs.Add(offset+4, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + " .Y" });
 						return group_lengths_dict[xn.Name];
@@ -270,23 +273,32 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					case "_1D":// unmapped
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
-					case "_1E":// unmapped
+					case "_1E": // pretty sure this is currect, could be wrong though. I referenced calculus equations
+						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".x" });
+						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".y" });
+						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".z" });
+						pairs.Add((offset + 12), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".point" });
+						return group_lengths_dict[xn.Name];
+					case "_1F":
+						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".R" });
+						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".G" });
+						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".B" });
+						return group_lengths_dict[xn.Name];
+					case "_20":
+						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Alpha" });
+						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".R" });
+						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".G" });
+						pairs.Add((offset + 12), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".B" });
+						return group_lengths_dict[xn.Name];
+					case "_21":// unmapped - only found in ttag
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
-					case "_1F":// unmapped
+					case "_22":// unmapped  - only found in ttag
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
-					case "_20":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
-						return group_lengths_dict[xn.Name];
-					case "_21":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
-						return group_lengths_dict[xn.Name];
-					case "_22":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
-						return group_lengths_dict[xn.Name];
-					case "_23":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
+					case "_23":
+						pairs.Add(offset, new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText + ".min" });
+						pairs.Add((offset + 2), new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText + ".max" });
 						return group_lengths_dict[xn.Name];
 					case "_24":
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".min" });
@@ -296,35 +308,36 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".min" });
 						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".max" });
 						return group_lengths_dict[xn.Name];
-					case "_26":// unmapped
+					case "_26":
+						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".min" });
+						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".max" });
+						return group_lengths_dict[xn.Name];
+					case "_27":// unmapped - This case isn't found in any tag file
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
-					case "_27":// unmapped
+					case "_28":// unmapped - This case isn't found in any tag file
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
-					case "_28":// unmapped
+					case "_29":// unmapped  - only found in ttag
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
-					case "_29":// unmapped
+					case "_2A":// unmapped - only found in ttag
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
-					case "_2A":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
-						return group_lengths_dict[xn.Name];
-					case "_2B":// unmapped
+					case "_2B":// unmapped - only found in ttag
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_2C":
 						pairs.Add(offset, new C { T = "Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
-					case "_2D":// unmapped
+					case "_2D":// unmapped - only found in ttag
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_2E":
 						pairs.Add(offset, new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
-					case "_2F":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
+					case "_2F":
+						pairs.Add(offset, new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_30":
 						pairs.Add(offset, new C { T = "4Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
@@ -446,13 +459,13 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_0", 32 }, // _field_string
 				{ "_1", 256 }, // _field_long_string
 				{ "_2", 4 }, // _field_string_id
-				{ "_3", 4 },
-				{ "_4", 1 },
+				{ "_3", 4 }, // Not found in any tag type
+				{ "_4", 1 }, // _field_char_integer
 				{ "_5", 2 }, // _field_short_integer
 				{ "_6", 4 }, // _field_long_integer
 				{ "_7", 8 }, // _field_int64_integer
 				{ "_8", 4 }, // _field_angle
-				{ "_9", 4 },
+				{ "_9", 4 }, // _field_tag
 				{ "_A", 1 }, // _field_char_enum
 				{ "_B", 2 }, // _field_short_enum
 				{ "_C", 4 }, // _field_long_enum
@@ -460,9 +473,9 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_E", 2 }, // _field_word_flags
 				{ "_F", 1 }, // _field_byte_flags
 				{ "_10", 4 }, // _field_point_2d -- 2 2bytes?
-				{ "_11", 4 },
-				{ "_12", 4 },
-				{ "_13", 4 },
+				{ "_11", 4 }, // _field_rectangle_2d
+				{ "_12", 4 }, // _field_rgb_color -- hex color codes - it's technically only 3 bytes but the final byte is FF
+				{ "_13", 4 }, //_field_argb_color 
 				{ "_14", 4 }, // _field_real
 				{ "_15", 4 }, // _field_real_fraction
 				{ "_16", 8 }, // _field_real_point_2d
@@ -472,31 +485,31 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_1A", 16 }, // _field_real_quaternion
 				{ "_1B", 8 }, // _field_real_euler_angles_2d
 				{ "_1C", 12 }, // _field_real_euler_angles_3d
-				{ "_1D", 12 },
-				{ "_1E", 12 },
+				{ "_1D", 12 }, // _field_real_plane_2d
+				{ "_1E", 16 }, // _field_real_plane_3d
 				{ "_1F", 12 }, // _field_real_rgb_color
-				{ "_20", 4 },
-				{ "_21", 4 },
-				{ "_22", 4 },
-				{ "_23", 4 },
+				{ "_20", 16 }, // _field_real_argb_color
+				{ "_21", 4 }, // _field_real_hsv_colo
+				{ "_22", 4 }, // _field_real_ahsv_color
+				{ "_23", 4 }, // _field_short_bounds
 				{ "_24", 8 }, // _field_angle_bounds
 				{ "_25", 8 }, // _field_real_bounds
-				{ "_26", 4 },
-				{ "_27", 4 },
-				{ "_28", 4 },
-				{ "_29", 4 },
-				{ "_2A", 4 },
-				{ "_2B", 4 },
+				{ "_26", 8 }, // _field_real_fraction_bounds
+				{ "_27", 4 }, // Not found in any tag type
+				{ "_28", 4 }, // Not found in any tag type
+				{ "_29", 4 }, // _field_long_block_flags
+				{ "_2A", 4 }, // _field_word_block_flags
+				{ "_2B", 4 }, // _field_byte_block_flags
 				{ "_2C", 1 }, // _field_char_block_index
-				{ "_2D", 1 },
+				{ "_2D", 1 }, // _field_custom_char_block_index
 				{ "_2E", 2 }, // _field_short_block_index
-				{ "_2F", 2 },
+				{ "_2F", 2 }, // _field_custom_short_block_index
 				{ "_30", 4 }, // _field_long_block_index
-				{ "_31", 4 },
-				{ "_32", 4 },
-				{ "_33", 4 },
+				{ "_31", 4 }, // _field_custom_long_block_index
+				{ "_32", 4 }, // Not found in any tag type
+				{ "_33", 4 }, // Not found in any tag type
 				{ "_34", 4 }, // _field_pad
-				{ "_35", 4 },
+				{ "_35", 4 }, 
 				{ "_36", 0 }, // _field_explanation
 				{ "_37", 0 }, // _field_custom
 				{ "_38", 0 }, // _field_struct
