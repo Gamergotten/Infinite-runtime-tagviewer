@@ -10,6 +10,6 @@
             <ColumnDefinition Width="200*" MinWidth="200" />
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="comment" Text="test in the middle" Foreground="#fff" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="comment" Text="test in the middle, now with much more text" Foreground="#fff" HorizontalAlignment="Center" Margin="10,0,10,0"/>
     </Grid>
 </UserControl>

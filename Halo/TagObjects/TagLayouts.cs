@@ -139,10 +139,10 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add(offset, new C { T = "mmr3Hash", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_3":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_4":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_5":
 						pairs.Add(offset, new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
@@ -157,7 +157,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_9":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 
 					case "_A":
@@ -220,13 +220,13 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add(offset+2, new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText+".Y" });
 						return group_lengths_dict[xn.Name];
 					case "_11":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_12":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_13":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_14":
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText });
@@ -234,8 +234,9 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					case "_15":
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
-					case "_16":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+					case "_16":
+						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText+".X" });
+						pairs.Add(offset+4, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText+ ".Y" });
 						return group_lengths_dict[xn.Name];
 					case "_17":
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".X" });
@@ -258,7 +259,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add((offset + 12), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Z" });
 						return group_lengths_dict[xn.Name];
 					case "_1B":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".X" });
+						pairs.Add(offset+4, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + " .Y" });
 						return group_lengths_dict[xn.Name];
 					case "_1C":
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".X" });
@@ -266,25 +268,25 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Z" });
 						return group_lengths_dict[xn.Name];
 					case "_1D":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_1E":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_1F":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_20":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_21":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_22":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_23":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_24":
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".min" });
@@ -295,46 +297,46 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".max" });
 						return group_lengths_dict[xn.Name];
 					case "_26":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_27":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_28":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_29":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_2A":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_2B":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_2C":
 						pairs.Add(offset, new C { T = "Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_2D":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_2E":
 						pairs.Add(offset, new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_2F":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_30":
 						pairs.Add(offset, new C { T = "4Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_31":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_32":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_33":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_34": // field pad
 						int length = int.Parse(xn.Attributes.GetNamedItem("length").InnerText);
@@ -356,7 +358,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						}
 						return length;
 					case "_35":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return int.Parse(xn.Attributes.GetNamedItem("length").InnerText);
 					case "_36":
 						pairs.Add(offset + evalutated_index_PREVENT_DICTIONARYERROR, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText });
@@ -377,10 +379,10 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						}
 						return current_offset1 - offset;
 					case "_39":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_3A":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_3B":
 						return group_lengths_dict[xn.Name];
@@ -388,13 +390,13 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add(offset, new C { T = "Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_3D": // unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_3E":
 						pairs.Add(offset, new C { T = "4Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
-					case "_3F":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+					case "_3F":
+						pairs.Add(offset, new C { T = "Pointer", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_40":
 						if (xn.ChildNodes.Count > 0)
@@ -419,18 +421,20 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add(offset, new C { T = "TagRef", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_42":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_43":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_44":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_45":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), will cause errors)" });
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
-
+					case "_69":// unmapped
+						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), fuck this one value specifically)" });
+						return group_lengths_dict[xn.Name];
 
 				}
 				return group_lengths_dict[xn.Name];
@@ -461,12 +465,12 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_13", 4 },
 				{ "_14", 4 }, // _field_real
 				{ "_15", 4 }, // _field_real_fraction
-				{ "_16", 4 },
+				{ "_16", 8 }, // _field_real_point_2d
 				{ "_17", 12 }, // _field_real_point_3d
 				{ "_18", 8 }, // _field_real_vector_2d -- 
 				{ "_19", 12 }, // _field_real_vector_3d
 				{ "_1A", 16 }, // _field_real_quaternion
-				{ "_1B", 12 },
+				{ "_1B", 8 }, // _field_real_euler_angles_2d
 				{ "_1C", 12 }, // _field_real_euler_angles_3d
 				{ "_1D", 12 },
 				{ "_1E", 12 },
@@ -502,13 +506,14 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_3C", 1 }, // _field_byte_integer
 				{ "_3D", 2 },
 				{ "_3E", 4 }, // _field_dword_integer
-				{ "_3F", 8 },
+				{ "_3F", 8 }, // _field_qword_integer
 				{ "_40", 20 }, // _field_block_v2
 				{ "_41", 28 }, // _field_reference_v2
 				{ "_42", 24 }, // _field_data_v2
 				{ "_43", 4 },
 				{ "_44", 4 },
 				{ "_45", 4 },
+				{ "_69", 128 } // fuck you hlmt
 			};
 		}
 	}

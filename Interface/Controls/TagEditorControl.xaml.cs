@@ -128,7 +128,15 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			parentpanel.Children.Clear();
 			if (entry.Value.B != null)
 			{
-				readTagsAndCreateControls(tagStruct, tagOffset, entry.Value.B, loadingTag, parentpanel, abso_whatever_it_was);
+				try
+				{
+					readTagsAndCreateControls(tagStruct, tagOffset, entry.Value.B, loadingTag, parentpanel, abso_whatever_it_was);
+				}
+				catch
+				{
+					TextBox tb = new TextBox { Text = "this tagblock is fucked uwu" };
+					parentpanel.Children.Add(tb);
+				}
 			}
 		}
 
@@ -873,7 +881,87 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						found = true;
 					}
 				}
+				else if (control is TagValueBlock)
+				{
+					TagValueBlock? trb = (TagValueBlock) control;
+					string str = (string) trb.value_name.Text;
+					if (str != null && str.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+					{
+						control.Visibility = Visibility.Visible;
+						found = true;
+					}
+				}
+				else if (control is CommentBlock)
+				{
+					CommentBlock? trb = (CommentBlock) control;
+					string str = (string) trb.comment.Text;
+					if (str != null && str.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+					{
+						control.Visibility = Visibility.Visible;
+						found = true;
+					}
+				}
+				else if (control is EnumBlock)
+				{
+					EnumBlock? trb = (EnumBlock) control;
+					string str = (string) trb.value_name.Text;
+					if (str != null && str.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+					{
+						control.Visibility = Visibility.Visible;
+						found = true;
+					}
+				}
+				else if (control is TagRefBlock)
+				{
+					TagRefBlock? trb = (TagRefBlock) control;
+					string str = (string) trb.value_name.Text;
+					if (str != null && str.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+					{
+						control.Visibility = Visibility.Visible;
+						found = true;
+					}
+				}
+				else if (control is TagFlagsGroup)
+				{
+					TagFlagsGroup? trb = (TagFlagsGroup) control;
+					bool continue2 = false;
+					foreach (var v in trb.spBitCollection.Children)
+					{
+						if (v is TagsFlags) // im not sure if tagsflags are even used hmm
+						{
+							TagsFlags? trbaby = (TagsFlags) v;
 
+							foreach (var d in trbaby.goober_panel.Children)
+							{
+								CheckBox? trbaby2 = (CheckBox) d;
+								string str1 = (string) trbaby2.Content;
+								if (str1.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+								{
+									control.Visibility = Visibility.Visible;
+									found = true; continue2 = true;
+									continue;
+								}
+							}
+							if (continue2)
+								continue;
+
+						}
+						else if (v is CheckBox)
+						{
+							CheckBox? trbaby2 = (CheckBox) v;
+							string str1 = (string) trbaby2.Content;
+							if (str1.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+							{
+								control.Visibility = Visibility.Visible;
+								found = true; 
+								continue;
+							}
+						}
+					}
+				}
+				//
+				// tag flags block missing
+				//
 				else if (control is TagBlock)
 				{
 					TagBlock? tb = (TagBlock) control;
@@ -963,7 +1051,16 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						found = true;
 					}
 				}
-
+				else if (control is EnumBlock)
+				{
+					EnumBlock? tvb = (EnumBlock) control;
+					string? val = tvb.enums.Text.ToString();
+					if (val != null && val.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+					{
+						control.Visibility = Visibility.Visible;
+						found = true;
+					}
+				}
 				else if (control is TagRefBlock)
 				{
 					TagRefBlock? trb = (TagRefBlock) control;

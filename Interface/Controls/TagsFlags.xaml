@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls"
              mc:Ignorable="d">
     <Border Background="DarkGoldenrod" Margin="5,5,0,0" Width="170" Height="120">
-        <StackPanel Grid.Column="1" Margin="5, 0, 0, 0">
+        <StackPanel x:Name="goober_panel" Grid.Column="1" Margin="5, 0, 0, 0">
             <CheckBox x:Name="flag1" Content="Flag1" Click="flag1_Checked"/>
             <CheckBox x:Name="flag2" Content="Flag2" Click="flag1_Checked"/>
             <CheckBox x:Name="flag3" Content="Flag3" Click="flag1_Checked"/>

@@ -30,16 +30,31 @@ namespace InfiniteRuntimeTagViewer
 	/// </summary>
 	public partial class MainWindow
 	{
-		// #### NOTES
-		//
-		// tagref dropdown actually gives the wrong tags, may be because some objects have the same datnums
-		// 
+		/* ###### THINGS TO BE FIXED (which i will get around to eventually)
+		
+		### BUG FIXES
+		store tagref pokes as tagID and then convert back when poking, this is so you dont have to reload your list inbetween game restarts
+		tag evaluation checks - when poking we should check to see that the tag is still valid
 
-		// something since the inital release is causing windows defender to act up
-		// my thoughts - either the AOB or .net 5.0? could just be random too tho
-		// - Callum : I believe its AOB, That kind of stuff always flags up the AV's.
-		//            They smell it like blood in the water.
-		//
+		### QOL
+		add colapse to tagblocks
+		reload tag button
+		auto poke changes as tags are loaded/reloaded
+		revert changes list
+		only change UI tags loaded things that need to be added/removed to save perfromance
+
+		### ERROR CATCHING
+		extra exception handling for tags - where we check for tag validity when poking?
+
+		### TAG STRUCTS
+		.style flags are invis
+		.jamd tag broke
+		.hlmt tag needs _39 mapped
+		.phmo tag kind broke
+
+
+
+		*/
 
 		public delegate void HookAndLoadDelagate();
 		public delegate void LoadTagsDelagate();
@@ -713,6 +728,7 @@ namespace InfiniteRuntimeTagViewer
 				//updateElement.tagSource.Text = def.TagStruct.TagFile + " + " + def.GetTagOffset();
 				string dont_Be_null = convert_ID_to_tag_name(def.OffsetOverride.Split(":").FirstOrDefault());
 				updateElement.tagSource.Text = dont_Be_null;
+				updateElement.bordercolor.BorderBrush = new SolidColorBrush(Colors.Yellow); 
 			}
 			else
 			{
@@ -721,11 +737,6 @@ namespace InfiniteRuntimeTagViewer
 					address = { Text = def.OffsetOverride },
 					type = { Text = def.MemoryType },
 					value = { Text = value },
-					// uncomment this at your own risk, it would probably take
-					// an extra step or two to get this working again 
-					// i don't save the tag name so it has a null reference
-					//tagSource = { Text = def.TagStruct.TagFile + " + " + def.GetTagOffset() } 
-
 				};
 				string dont_Be_null = convert_ID_to_tag_name(def.OffsetOverride.Split(":").FirstOrDefault());
 				newBlock.tagSource.Text = dont_Be_null;
@@ -780,7 +791,7 @@ namespace InfiniteRuntimeTagViewer
 			{
 				//pokesingle(pair.Key, pair.Value.Key, pair.Value.Value);
 				pokes++;
-
+				bool failed = false;
 				string do_the_thing = SUSSY_BALLS_2(pair.Key);
 				if (do_the_thing != "")
 				{
@@ -788,12 +799,22 @@ namespace InfiniteRuntimeTagViewer
 					{
 						fails++;
 						pokes--;
+						failed = true;
 					}
 				}
 				else
 				{
 					fails++;
 					pokes--;
+					failed = true;
+				}
+				if (failed)
+				{
+					UIpokelist[pair.Key].bordercolor.BorderBrush = new SolidColorBrush(Colors.Red); 
+				}
+				else
+				{
+					UIpokelist[pair.Key].bordercolor.BorderBrush = null;
 				}
 			}
 			if (fails < 1)
@@ -824,15 +845,18 @@ namespace InfiniteRuntimeTagViewer
 		}
 		public void tagchangesblock_fetchdata_by_ID(TagChangesBlock target)
 		{
+			
 			KeyValuePair<string, string> pair = Pokelist[target.sig_address_path];
 			//pokesingle(target.sig_address_ID, pair.Key, pair.Value);
 			//SUSSY_BALLS_2
 			string do_the_thing = SUSSY_BALLS_2(target.sig_address_path);
+			bool failed = false;
 			if (do_the_thing != "")
 			{
 				if(!pokesingle(do_the_thing, pair.Key, pair.Value))
 				{
 					poke_text.Text = "poke error";
+					failed = true;
 				}
 				else
 				{
@@ -842,6 +866,15 @@ namespace InfiniteRuntimeTagViewer
 			else
 			{
 				poke_text.Text = "poke error";
+				failed = true;
+			}
+			if (failed)
+			{
+				target.bordercolor.BorderBrush = new SolidColorBrush(Colors.Red);
+			}
+			else
+			{
+				target.bordercolor.BorderBrush = null;
 			}
 		}
 
@@ -853,15 +886,23 @@ namespace InfiniteRuntimeTagViewer
 				if (hooked_string.Length == 2)
 				{
 					string do_the_thing = SUSSY_BALLS_2(hooked_string[1]);
-					string read = readmem_for_1_very_specific_task(do_the_thing, type);
-					if (read != "")
+					if (do_the_thing != "")
 					{
-						pokesingle(address, type, read);
+						string read = readmem_for_1_very_specific_task(do_the_thing, type);
+						if (read != "")
+						{
+							pokesingle(address, type, read);
+						}
+						else
+						{
+							return false;
+						}
 					}
 					else
 					{
 						return false;
 					}
+
 				}
 				else
 				{
