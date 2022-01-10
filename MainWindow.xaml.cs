@@ -33,7 +33,6 @@ namespace InfiniteRuntimeTagViewer
 		/* ###### THINGS TO BE FIXED (which i will get around to eventually)
 		
 		### BUG FIXES
-		store tagref pokes as tagID and then convert back when poking, this is so you dont have to reload your list inbetween game restarts
 		tag evaluation checks - when poking we should check to see that the tag is still valid
 
 		### QOL
@@ -51,7 +50,7 @@ namespace InfiniteRuntimeTagViewer
 		.jamd tag broke
 		.hlmt tag needs _39 mapped
 		.phmo tag kind broke
-
+		char ' gets turned into the funny unknown char. ex. don't -> dont^t (i dont actually have the symbol so thats not a good example)
 
 
 		*/
@@ -582,16 +581,7 @@ namespace InfiniteRuntimeTagViewer
 						string big_ol_poke_dump = "";
 						foreach (var k in Pokelist)
 						{
-							if (k.Value.Key != "TagrefTag")
-							{
-								big_ol_poke_dump+=k.Key + ";" + k.Value.Key + ";" + k.Value.Value + "\r\n";
-							}
-							else
-							{
-
-								big_ol_poke_dump+=k.Key + ";" + k.Value.Key + ";" + get_tagID_by_datnum(k.Value.Value) + "\r\n";
-
-							}
+							big_ol_poke_dump+=k.Key + ";" + k.Value.Key + ";" + k.Value.Value + "\r\n";
 						}
 						Savewindow sw = new();
 						sw.Show();
@@ -659,27 +649,11 @@ namespace InfiniteRuntimeTagViewer
 					if (parts.Length == 3)
 					{
 						prev++;
-						if (parts[1] != "TagrefTag")
-						{
-							AddPokeChange(new TagEditorDefinition { OffsetOverride = parts[0], MemoryType = parts[1], }, parts[2]);
-						}
-						else
-						{
-							if (TagsList.Keys.Contains(parts[2]))
-							{
-
-								AddPokeChange(new TagEditorDefinition { OffsetOverride = parts[0], MemoryType = parts[1], }, TagsList[parts[2]].Datnum);
-							}
-							else
-							{
-								fails++;
-								prev--;
-							}
-						}
-
+						AddPokeChange(new TagEditorDefinition { OffsetOverride = parts[0], MemoryType = parts[1], }, parts[2]);
 					}
 				}
 			}
+			// nothing could cause an issue here
 			if (fails < 1)
 			{
 				poke_text.Text = prev + " Loaded!";
@@ -957,9 +931,18 @@ namespace InfiniteRuntimeTagViewer
 					case "TagrefTag":
 						try
 						{
-							string temp = Regex.Replace(value, @"(.{2})", "$1 ");
-							temp = temp.TrimEnd();
-							M.WriteMemory(address, "bytes", temp);
+							// convert ID to datnum
+							if (TagsList.Keys.Contains(value))
+							{
+								string datnum_from_ID = TagsList[value].Datnum;
+								string temp = Regex.Replace(datnum_from_ID, @"(.{2})", "$1 ");
+								temp = temp.TrimEnd();
+								M.WriteMemory(address, "bytes", temp);
+							}
+							else
+							{
+								return false;
+							}
 						}
 						catch { return false; }
 						return true;

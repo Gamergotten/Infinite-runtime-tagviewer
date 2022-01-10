@@ -173,7 +173,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			}
 			//_mainWindow.AddPokeChange(long.Parse(s: cb.Tag.ToString()), "TagrefGroup", value: cb.SelectedValue.ToString());
 
-			// What the actual fuck is all of this? 
+			// What the actual fuck is all of this? // it wouldnt let me get the owner UI element so i did what i needed
 			Grid? td = cb.Parent as Grid;
 			Button? b = td.Children[1] as Button;
 			TED_TagRefGroup? btnTed = b.Tag as TED_TagRefGroup;
@@ -356,7 +356,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			TreeViewItem? b = sender as TreeViewItem;
 			TED_TagRefGroup ted = b.Tag as TED_TagRefGroup;
 
-			_mainWindow.AddPokeChange(ted, ted.DatNum);
+			_mainWindow.AddPokeChange(ted, _mainWindow.get_tagID_by_datnum(ted.DatNum));
 
 			string id = _mainWindow.get_tagid_by_datnum(ted.DatNum);
 			TheLastTagrefButtonWePressed.Content = _mainWindow.convert_ID_to_tag_name(id);
@@ -410,7 +410,15 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						if (fg3.A == 1)
 						{
 							int test_this = _m.ReadByte((address + entry.Key).ToString("X"));
-							eb1.enums.SelectedIndex = test_this;
+							if (eb1.enums.Items.Count >= test_this)
+							{
+								eb1.enums.SelectedIndex = test_this;
+							}
+							else
+							{
+								TextBox tb = new TextBox { Text = "the enum below is broken :(" };
+								parentpanel.Children.Add(tb);
+							}
 							eb1.ValueDefinition = new TagEditorDefinition()
 							{
 								MemoryType = "Byte",
@@ -422,7 +430,15 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						else if (fg3.A == 2)
 						{
 							int test_this = _m.Read2Byte((address + entry.Key).ToString("X"));
-							eb1.enums.SelectedIndex = test_this;
+							if (eb1.enums.Items.Count >= test_this)
+							{
+								eb1.enums.SelectedIndex = test_this;
+							}
+							else
+							{
+								TextBox tb = new TextBox { Text = "the enum below is broken :(" };
+								parentpanel.Children.Add(tb);
+							}
 							eb1.ValueDefinition = new TagEditorDefinition()
 							{
 								MemoryType = "2Byte",
@@ -434,7 +450,15 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						else if (fg3.A == 4)
 						{
 							int test_this = _m.ReadInt((address + entry.Key).ToString("X"));
-							eb1.enums.SelectedIndex = test_this;
+							if (eb1.enums.Items.Count >= test_this)
+							{
+								eb1.enums.SelectedIndex = test_this;
+							}
+							else
+							{
+								TextBox tb = new TextBox { Text = "the enum below is broken :(" };
+								parentpanel.Children.Add(tb);
+							}
 							eb1.ValueDefinition = new TagEditorDefinition()
 							{
 								MemoryType = "4Byte",

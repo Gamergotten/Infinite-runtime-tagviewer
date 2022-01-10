@@ -117,22 +117,25 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 									string[] filters = ln.Substring(1).Split("~");
 									foreach (string filterthing in filters)
 									{
-										mi.filter_panel.Children.Add(new TextBox { TextWrapping = TextWrapping.Wrap, Text = filterthing, FontSize = 9 });
-										dump_filters.Add(filterthing);
-										if (!loaded_filters.Keys.Contains(filterthing))
+										if (filterthing != "")
 										{
-											modcheckfilter moe = new();
-											moe.mwidow = this;
-											filterspanel.Children.Add(moe);
-											loaded_filters.Add(filterthing, moe);
-											moe.filtercount.Text = "(" + moe.debug_count + ")";
-											moe.filterbox.Content = filterthing;
-										}
-										else
-										{
-											modcheckfilter moe = loaded_filters[filterthing];
-											moe.debug_count++;
-											moe.filtercount.Text = "(" + moe.debug_count + ")";
+											mi.filter_panel.Children.Add(new TextBox { TextWrapping = TextWrapping.Wrap, Text = filterthing, FontSize = 9 });
+											dump_filters.Add(filterthing);
+											if (!loaded_filters.Keys.Contains(filterthing))
+											{
+												modcheckfilter moe = new();
+												moe.mwidow = this;
+												filterspanel.Children.Add(moe);
+												loaded_filters.Add(filterthing, moe);
+												moe.filtercount.Text = "(" + moe.debug_count + ")";
+												moe.filterbox.Content = filterthing;
+											}
+											else
+											{
+												modcheckfilter moe = loaded_filters[filterthing];
+												moe.debug_count++;
+												moe.filtercount.Text = "(" + moe.debug_count + ")";
+											}
 										}
 									}
 								}

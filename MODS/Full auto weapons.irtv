@@ -1,0 +1,27 @@
+^campaign~gameplay~rebalancing
+###USAGE - have campaign loaded when applying, you may need to drop and pickup and weapons you're holding
+
+another very basic mod to fill up these empty slots, it makes some auto weapons fire faster and makes the majority of semi auto weapons full auto
+^
+B7410000:,3196,6;2Byte;0
+A873E7E6:,3196,6;2Byte;0
+93850000:,3196,6;2Byte;0
+BF794820:,3216,60;Float;0.1
+94850000:,3196,6;2Byte;0
+94850000:,3216,60;Float;0.5
+10B9D0A2:,3196,6;2Byte;0
+10B9D0A2:,3216,60;Float;0.5
+93850000:,3216,60;Float;0.1
+6E1BE89E:,3216,60;Float;0.3
+6E1BE89E:,3216,4;Float;5
+6E1BE89E:,3216,8;Float;5
+A873E7E6:,3216,4;Float;7.7
+A873E7E6:,3216,8;Float;7.7
+51B0A16E:,3216,8;Float;11
+51B0A16E:,3216,4;Float;11
+02DD3C00:,3216,4;Float;4
+02DD3C00:,3216,8;Float;4
+02DD3C00:,3216,852;Float;4
+02DD3C00:,3216,856;Float;4
+95850000:,3216,4;Float;16
+95850000:,3216,8;Float;16

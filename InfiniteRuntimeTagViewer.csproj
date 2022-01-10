@@ -53,6 +53,12 @@
     <None Update="files\tagnames.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="MODS\AI Encounters shuffle.irtv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="MODS\Full auto weapons.irtv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="MODS\IRTV Campaign Reticles FIX v1.irtv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -1,0 +1,32 @@
+^campaign~gameplay~rebalancing~encounters~
+###USAGE - have campaign loaded and generally reload and apply before entering big combat zones, probably will break things
+
+simple mod to demonstrate changing encounters to allow for completely different combat scenarios
+also, i tried to get a mongoose squad in, which replaces one of the phantom squads
+^
+6037FEF0:,20,40;TagrefTag;1DF449DB
+E557F505:,20,40;TagrefTag;840F2700
+6FC453DE:,20,40;TagrefTag;95EC6653
+1D868892:,20,40;TagrefTag;5185B3D0
+1985264D:,20,40;TagrefTag;CAA3BFBB
+A988DFD6:,20,40;TagrefTag;94E8C94D
+31DD2ADA:,20,40;TagrefTag;1DF449DB
+4F6975D5:,20,40;TagrefTag;C6AF3A78
+F5A06A33:,20,40;TagrefTag;884A336F
+80FFC9DF:,20,40;TagrefTag;496C20E3
+4BA7A9E1:,20,40;TagrefTag;1DF449DB
+FB367994:,20,40;TagrefTag;45DF1700
+F22EAA27:,20,40;TagrefTag;B70275BF
+9C93CAE0:,20,40;TagrefTag;4F5E4889
+8F6651D8:,20,40;TagrefTag;5F260100
+5150CFF6:,20,40;TagrefTag;4ADF1700
+9BB293C8:,20,40;TagrefTag;5F260100
+49DA14D0:,20,40;TagrefTag;4ADF1700
+A9FB7F35:,20,40;TagrefTag;E975F1A1
+491E9DE3:,20,40;TagrefTag;F2C30000
+F830B2F8:,20,40;TagrefTag;C6AF3A78
+6CC17F6D:,20,40;TagrefTag;48A6A67A
+740CE691:,60,24,24;TagrefTag;AA250000
+740CE691:,60,24,56,40;TagrefTag;3912D102
+740CE691:,60,24,56,152;TagrefTag;C290BC57
+740CE691:,60,24,56,264;TagrefTag;C290BC57
