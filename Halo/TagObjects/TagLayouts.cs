@@ -400,8 +400,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					case "_3C":
 						pairs.Add(offset, new C { T = "Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
-					case "_3D": // unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
+					case "_3D":
+						pairs.Add(offset, new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_3E":
 						pairs.Add(offset, new C { T = "4Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
@@ -457,7 +457,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_0", 32 }, // _field_string
 				{ "_1", 256 }, // _field_long_string
 				{ "_2", 4 }, // _field_string_id
-				{ "_3", 4 }, // Not found in any tag type
+				{ "_3", 4 }, // ## Not found in any tag type
 				{ "_4", 1 }, // _field_char_integer
 				{ "_5", 2 }, // _field_short_integer
 				{ "_6", 4 }, // _field_long_integer
@@ -473,7 +473,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_10", 4 }, // _field_point_2d -- 2 2bytes?
 				{ "_11", 4 }, // _field_rectangle_2d
 				{ "_12", 4 }, // _field_rgb_color -- hex color codes - it's technically only 3 bytes but the final byte is FF
-				{ "_13", 4 }, //_field_argb_color 
+				{ "_13", 4 }, // _field_argb_color 
 				{ "_14", 4 }, // _field_real
 				{ "_15", 4 }, // _field_real_fraction
 				{ "_16", 8 }, // _field_real_point_2d
@@ -493,8 +493,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_24", 8 }, // _field_angle_bounds
 				{ "_25", 8 }, // _field_real_bounds
 				{ "_26", 8 }, // _field_real_fraction_bounds
-				{ "_27", 4 }, // Not found in any tag type
-				{ "_28", 4 }, // Not found in any tag type
+				{ "_27", 4 }, // ## Not found in any tag type
+				{ "_28", 4 }, // ## Not found in any tag type
 				{ "_29", 4 }, // _field_long_block_flags
 				{ "_2A", 4 }, // _field_word_block_flags
 				{ "_2B", 4 }, // _field_byte_block_flags
@@ -504,18 +504,18 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_2F", 2 }, // _field_custom_short_block_index
 				{ "_30", 4 }, // _field_long_block_index
 				{ "_31", 4 }, // _field_custom_long_block_index
-				{ "_32", 4 }, // Not found in any tag type
-				{ "_33", 4 }, // Not found in any tag type
-				{ "_34", 4 }, // _field_pad
+				{ "_32", 4 }, // ## Not found in any tag type
+				{ "_33", 4 }, // ## Not found in any tag type
+				{ "_34", 4 }, // _field_pad ## variable length
 				{ "_35", 4 }, 
 				{ "_36", 0 }, // _field_explanation
 				{ "_37", 0 }, // _field_custom
 				{ "_38", 0 }, // _field_struct
 				{ "_39", 32 }, // _field_array
 				{ "_3A", 4 },
-				{ "_3B", 0 }, // end of struct or something
+				{ "_3B", 0 }, // ## end of struct or something
 				{ "_3C", 1 }, // _field_byte_integer
-				{ "_3D", 2 },
+				{ "_3D", 2 }, // _field_word_integer
 				{ "_3E", 4 }, // _field_dword_integer
 				{ "_3F", 8 }, // _field_qword_integer
 				{ "_40", 20 }, // _field_block_v2
