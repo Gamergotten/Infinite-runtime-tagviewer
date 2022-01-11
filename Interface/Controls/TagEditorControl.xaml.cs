@@ -871,7 +871,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						rgb1.rgb_name.Text = entry.Value.N;
 						rgb1.color_hash.Text = "#" + hex_color;
-						rgb1.rgb_color.Fill = new SolidColorBrush(Color.FromRgb(r_hex, g_hex, b_hex));
+						rgb1.rgb_colorpicker.SelectedColor = Color.FromRgb(r_hex, g_hex, b_hex);
 
 						break;
 				}
