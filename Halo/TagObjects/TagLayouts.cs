@@ -254,7 +254,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".X" });
 						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Y" });
 						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Z"});
-				return group_lengths_dict[xn.Name];
+						return group_lengths_dict[xn.Name];
 					case "_1A":
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".W" });
 						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".X" });
@@ -280,9 +280,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add((offset + 12), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".point" });
 						return group_lengths_dict[xn.Name];
 					case "_1F":
-						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".R" });
-						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".G" });
-						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".B" });
+						pairs.Add(offset, new C { T = "RGB", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_20":
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Alpha" });

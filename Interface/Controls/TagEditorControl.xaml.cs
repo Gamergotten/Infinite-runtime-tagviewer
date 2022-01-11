@@ -828,6 +828,52 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						vb5.value_name.Text = entry.Value.N;
 
 						break;
+					case "RGB":
+						TagRGBBlock? rgb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						rgb1.r_value.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
+						rgb1.g_value.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
+						rgb1.b_value.Text = _m.ReadFloat((address + entry.Key + 8).ToString("X")).ToString();
+
+						byte r_hex = (byte) Math.Round(_m.ReadFloat((address + entry.Key).ToString("X")) * 255);
+						byte g_hex = (byte) Math.Round(_m.ReadFloat((address + entry.Key + 4).ToString("X")) * 255);
+						byte b_hex = (byte) Math.Round(_m.ReadFloat((address + entry.Key + 8).ToString("X")) * 255);
+						string hex_color = r_hex.ToString("X2") + g_hex.ToString("X2") + b_hex.ToString("X2");
+
+						parentpanel.Children.Add(rgb1);
+
+						rgb1.r_value.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
+						};
+
+						rgb1.g_value.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 4),
+						};
+						
+						rgb1.b_value.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 8),
+						};
+
+						rgb1.r_value.TextChanged += value_TextChanged;
+						rgb1.g_value.TextChanged += value_TextChanged;
+						rgb1.b_value.TextChanged += value_TextChanged;
+
+						rgb1.rgb_name.Text = entry.Value.N;
+						rgb1.color_hash.Text = "#" + hex_color;
+						rgb1.rgb_color.Fill = new SolidColorBrush(Color.FromRgb(r_hex, g_hex, b_hex));
+
+						break;
 				}
 
 				prevEntry = entry;
