@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d" Height="85" HorizontalAlignment="Stretch" Width="281.75">
     <Grid Background="#3F3F46" Margin="5,5,0,0" Height="80">
         <Grid.RowDefinitions>
@@ -27,7 +28,9 @@
         <TextBlock x:Name="g_label" Foreground="#fff" Text="G" Grid.Row="2" HorizontalAlignment="Center" Width="7" Height="12" VerticalAlignment="Center" />
         <TextBlock x:Name="b_label" Foreground="#fff" Text="B" Grid.Row="3" HorizontalAlignment="Center" Width="7" Height="12" VerticalAlignment="Center" />
         <TextBlock x:Name="color_hash" Foreground="#fff" Text="Color" TextAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="60" Height="20" Grid.Column="2" Margin="0,2,0,0" Grid.RowSpan="2" />
-        
-        <Rectangle x:Name="rgb_color" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" Stroke="#505050" StrokeThickness="1" />
+
+        <xctk:ColorPicker x:Name="rgb_colorpicker" BorderThickness="0,0,0,0" Foreground="#fff" BorderBrush="#505050" Grid.RowSpan="3" Grid.Column="2" Grid.Row="1" ColorMode="ColorCanvas" UsingAlphaChannel="False"
+                          Background="#505050" RenderTransformOrigin="0,0" DisplayColorTooltip="False" ShowTabHeaders="False" ShowDropDownButton="False" VerticalContentAlignment="Stretch"
+                          DropDownBackground="#3F3F46" DropDownBorderThickness="0" SelectedColorChanged="Color_SelectionChanged"></xctk:ColorPicker>
     </Grid>
 </UserControl>
