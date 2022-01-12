@@ -507,7 +507,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_32", 4 }, // ## Not found in any tag type
 				{ "_33", 4 }, // ## Not found in any tag type
 				{ "_34", 4 }, // _field_pad ## variable length
-				{ "_35", 4 }, 
+				{ "_35", 4 }, // 'field_skip' ## iirc
 				{ "_36", 0 }, // _field_explanation
 				{ "_37", 0 }, // _field_custom
 				{ "_38", 0 }, // _field_struct
@@ -521,7 +521,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_40", 20 }, // _field_block_v2
 				{ "_41", 28 }, // _field_reference_v2
 				{ "_42", 24 }, // _field_data_v2
-				{ "_43", 4 },
+
+				{ "_43", 4 }, // im pretty sure 
 				{ "_44", 4 },
 				{ "_45", 4 },
 				{ "_69", 128 } // fuck you hlmt

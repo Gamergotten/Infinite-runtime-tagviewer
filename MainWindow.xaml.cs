@@ -754,7 +754,7 @@ namespace InfiniteRuntimeTagViewer
 				}
 			}
 
-			return "wtf does this even do";
+			return "FFFFFFFF"; // ok i found out what this was for: when we poke FFFFFFFF tag // annnnd it didnt work
 		}
 		
 		public void PokeChanges()
@@ -936,6 +936,12 @@ namespace InfiniteRuntimeTagViewer
 							{
 								string datnum_from_ID = TagsList[value].Datnum;
 								string temp = Regex.Replace(datnum_from_ID, @"(.{2})", "$1 ");
+								temp = temp.TrimEnd();
+								M.WriteMemory(address, "bytes", temp);
+							}
+							else if (value == "FFFFFFFF")
+							{
+								string temp = Regex.Replace(value, @"(.{2})", "$1 ");
 								temp = temp.TrimEnd();
 								M.WriteMemory(address, "bytes", temp);
 							}
