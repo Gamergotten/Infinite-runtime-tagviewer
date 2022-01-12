@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
@@ -11,7 +11,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
     /// <summary>
     /// Interaction logic for tagblock.xaml
     /// </summary>
-    public partial class TagBlock
+    public partial class TagBlock : UserControl
     {
         public TagEditorControl EditorControl { get; }
 
@@ -48,6 +48,19 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			{
 				sb.Begin();
 			}
+		}
+
+		private void ECB_Check(object sender, EventArgs e)
+		{
+			
+			user_control_thingy.MaxHeight = 10000000;
+			Expand_Collapse_Button.Content = "-";
+		}
+
+		private void ECB_Uncheck(object sender, EventArgs e)
+		{
+			user_control_thingy.MaxHeight = 46;
+			Expand_Collapse_Button.Content = "+";
 		}
 	}
 }
