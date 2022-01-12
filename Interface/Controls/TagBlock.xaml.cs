@@ -11,7 +11,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
     /// <summary>
     /// Interaction logic for tagblock.xaml
     /// </summary>
-    public partial class TagBlock : UserControl
+    public partial class TagBlock
     {
         public TagEditorControl EditorControl { get; }
 
