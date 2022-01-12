@@ -11,6 +11,6 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="filtercount" Text="(0)" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0"/>
-        <CheckBox x:Name="filterbox" Grid.Column="1" Content="test filter" Margin="0,0,10,0" VerticalAlignment="Center" IsChecked="True" HorizontalAlignment="Stretch" Click="filterbox_Click"/>
+        <CheckBox x:Name="filterbox" Grid.Column="1" Content="test filter" Margin="0,0,10,0" VerticalAlignment="Center" IsChecked="False" HorizontalAlignment="Stretch" Click="filterbox_Click"/>
     </Grid>
 </UserControl>

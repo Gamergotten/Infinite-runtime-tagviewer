@@ -62,6 +62,9 @@
     <None Update="MODS\IRTV Campaign Reticles FIX v1.irtv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="MODS\Unofficial mp patch v1.irtv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Plugins\aaap.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

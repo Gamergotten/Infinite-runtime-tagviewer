@@ -28,11 +28,23 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
         private void indexbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            EditorControl.recall_blockloop(TagStruct, (indexbox.SelectedIndex * Children.Value.S), 
-				Children, BlockAddress + (indexbox.SelectedIndex * Children.Value.S), dockpanel, Children.Value.AbsoluteTagOffset); // bro
+			if (indexbox.SelectedIndex > -1)
+			{
+				EditorControl.recall_blockloop(TagStruct, (indexbox.SelectedIndex * Children.Value.S),Children, BlockAddress + (indexbox.SelectedIndex * Children.Value.S), dockpanel, Children.Value.AbsoluteTagOffset); // bro
+				stored_num_on_index = indexbox.SelectedIndex; // unless from creation hmmm
+				its_too_late_at_night_for_me_to_think_of_a_better_way_to_do_this = true;
+				Expand_Collapse_Button.Content = "-";
+			}
+			else
+			{
+				dockpanel.Children.Clear();
+
+			}
+
 
 			// OK WE HAVE A PROBLEM HERE, + (indexbox.SelectedIndex * Children.Value.S)
-        }
+			// i dont see a problem here, past me
+		}
 
 		Random rand = new Random();
 		private void GroupBox_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -50,17 +62,23 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			}
 		}
 
-		private void ECB_Check(object sender, EventArgs e)
-		{
-			
-			user_control_thingy.MaxHeight = 10000000;
-			Expand_Collapse_Button.Content = "-";
-		}
+		public int stored_num_on_index = 0;
 
-		private void ECB_Uncheck(object sender, EventArgs e)
+		public bool its_too_late_at_night_for_me_to_think_of_a_better_way_to_do_this;
+
+		private void Expand_Collapse_Button_Click(object sender, System.Windows.RoutedEventArgs e)
 		{
-			user_control_thingy.MaxHeight = 46;
-			Expand_Collapse_Button.Content = "+";
+			its_too_late_at_night_for_me_to_think_of_a_better_way_to_do_this = !its_too_late_at_night_for_me_to_think_of_a_better_way_to_do_this;
+			if (its_too_late_at_night_for_me_to_think_of_a_better_way_to_do_this)
+			{
+				indexbox.SelectedIndex = stored_num_on_index;
+				Expand_Collapse_Button.Content = "-";
+			}
+			else
+			{
+				indexbox.SelectedIndex = -1;
+				Expand_Collapse_Button.Content = "+";
+			}
 		}
 	}
 }

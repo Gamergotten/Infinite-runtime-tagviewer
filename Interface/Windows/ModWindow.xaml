@@ -7,7 +7,7 @@
 xmlns:Controls="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls" x:Class="InfiniteRuntimeTagViewer.Interface.Windows.ModWindow"
 mc:Ignorable="d"
                  Background="#333333"
-                 Title="Settings" Height="650" Width="600" Closed="Window_Closed">
+                 Title="Settings" Height="650" Width="800" Closed="Window_Closed">
     <Window.Resources>
         <TransformGroup x:Key="windowScaleTransform">
             <ScaleTransform
@@ -144,6 +144,7 @@ mc:Ignorable="d"
                         <RowDefinition Height="20"/>
                         <RowDefinition Height="20"/>
                         <RowDefinition Height="20"/>
+                        <RowDefinition Height="15"/>
                         <RowDefinition Height="20"/>
                         <RowDefinition Height="20"/>
                         <RowDefinition Height="20"/>
@@ -152,16 +153,16 @@ mc:Ignorable="d"
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <Button Content="Halocustoms.com for mods" Click="Button_Click_1"/>
+                    <Button Content="Halocustoms.com for more mods" Click="Button_Click_1"/>
                     <Button Content="import mods" Grid.Row="1" Click="Button_Click_2" />
                     <Button Content="reload mods" Grid.Row="2" Click="Button_Click"/>
-                    <Button Content="game refresh" Grid.Row="3" Click="Button_Click_3" />
-                    <Button Content="Apply changes" Grid.Row="4" Click="Button_Click_4" />
-                    <Button Content="Clear changes" Grid.Row="5" Click="Button_Click_5"  />
-                    <TextBlock x:Name="test_changes" Text="0 changes queued" Grid.Row="6" Margin="5,0,0,0"/>
+                    <Button Content="game refresh" Grid.Row="4" Click="Button_Click_3" />
+                    <Button Content="Apply changes" Grid.Row="5" Click="Button_Click_4" />
+                    <Button Content="Clear changes" Grid.Row="6" Click="Button_Click_5"  />
+                    <TextBlock x:Name="test_changes" Text="0 changes queued" Grid.Row="7" Margin="5,0,0,0"/>
                     
-                    <TextBlock Text="Filters" Grid.Row="7" Margin="5,0,0,0" VerticalAlignment="Bottom"/>
-                    <StackPanel x:Name="filterspanel" Grid.Row="8" Background="#FF191919" Margin="3,3,3,3">
+                    <TextBlock Text="Filters" Grid.Row="8" Margin="5,0,0,0" VerticalAlignment="Bottom"/>
+                    <StackPanel x:Name="filterspanel" Grid.Row="9" Background="#FF191919" Margin="3,3,3,3">
 
 
                     </StackPanel>

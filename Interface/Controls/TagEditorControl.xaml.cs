@@ -722,18 +722,23 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							}
 							if (childs > 0)
 							{
-								tb1.indexbox.SelectedIndex = 0;
+								tb1.indexbox.SelectedIndex = -1;
 							}
 							else
 							{
+								tb1.Expand_Collapse_Button.IsEnabled = false;
+								tb1.Expand_Collapse_Button.Content = "";
 								tb1.indexbox.IsEnabled = false;
 							}
 						}
 						else
 						{
+							tb1.Expand_Collapse_Button.IsEnabled = false;
+							tb1.Expand_Collapse_Button.Content = "";
 							tb1.indexbox.IsEnabled = false;
 
 						}
+						tb1.stored_num_on_index = 0;
 						//recall_blockloop(entry, new_address, tb1.dockpanel);
 						break;
 

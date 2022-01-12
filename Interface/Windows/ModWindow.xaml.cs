@@ -30,7 +30,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 		public Dictionary<string, modcheckfilter> loaded_filters = new();
 		public List<modinstance> loaded_modsui = new List<modinstance>();
 
-		public modcheckfilter any_filter;
 
 		private void Window_Closed(object sender, EventArgs e)
 		{
@@ -43,13 +42,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 			filterspanel.Children.Clear();
 			mods_panel.Children.Clear();
 
-			any_filter = new();
-			any_filter.mwidow = this;
-			filterspanel.Children.Add(any_filter);
-			loaded_filters.Add("Any", any_filter);
-			any_filter.filtercount.Text = "(" + 0 + ")";
-			any_filter.debug_count = 0;
-			any_filter.filterbox.Content = "Any";
 
 			// physical program directory
 			string appdata_ = Directory.GetCurrentDirectory()+ "\\MODS";
@@ -71,8 +63,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 			{
 				if (System.IO.Path.GetExtension(file) == ".irtv")
 				{
-					any_filter.debug_count++;
-					any_filter.filtercount.Text = "(" + any_filter.debug_count + ")";
 
 					modinstance mi = new();
 					mods_panel.Children.Add(mi);
@@ -80,7 +70,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 					mi.filepath = file;
 					mi.main = main;
 					mi.title.Text = System.IO.Path.GetFileNameWithoutExtension(file);
-					List<string> dump_filters = new() { "Any" };
+					List<string> dump_filters = new();
 					using (StreamReader reader = new StreamReader(file))
 					{
 						int counter = 0;
@@ -119,7 +109,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 									{
 										if (filterthing != "")
 										{
-											mi.filter_panel.Children.Add(new TextBox { TextWrapping = TextWrapping.Wrap, Text = filterthing, FontSize = 9 });
+											mi.filter_panel.Children.Add(new TextBox { TextWrapping = TextWrapping.Wrap, Text = filterthing, FontSize = 12 });
 											dump_filters.Add(filterthing);
 											if (!loaded_filters.Keys.Contains(filterthing))
 											{
@@ -167,13 +157,18 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 			}
 			foreach (modinstance mso in loaded_modsui)
 			{
-				bool passed_filter = false;
-				foreach (string filt in mso.filters)
+				bool passed_filter = true;
+				bool contained_all_filters = false;
+				foreach (string filt in required_filters)
 				{
-					if (required_filters.Contains(filt) && mso.title.Text.Contains(search_filter.Text))
+					if (!mso.filters.Contains(filt))
 					{
-						passed_filter = true;
+						passed_filter = false;
 					}
+				}
+				if (!mso.title.Text.Contains(search_filter.Text))
+				{
+					passed_filter = false;
 				}
 				if (passed_filter == true)
 				{

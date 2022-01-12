@@ -14,7 +14,7 @@
                     <ColumnDefinition Width="10"/>
                     <ColumnDefinition Width="70"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock x:Name="title" Text="poop and fard mod sample" Margin="5,0,0,0"/>
+                <TextBlock x:Name="title" Text="poop and fard mod sample" Margin="5,0,0,0" FontSize="14"/>
                 <Button Content="Add to Pokes" Grid.Column="1" Click="Button_Click"/>
                 <Button Content="Delete" Grid.Column="3" Click="Button_Click_3"  />
             </Grid>
@@ -23,10 +23,10 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock x:Name="desc_text" TextWrapping="Wrap" Margin="8,0,4,0" FontSize="10"/>
+                <TextBlock x:Name="desc_text" TextWrapping="Wrap" Margin="8,0,4,0" FontSize="12"/>
 
                 <StackPanel x:Name="filter_panel" Grid.Column="1" Margin="0,1,0,0">
-                    <TextBox  TextWrapping="Wrap" Text="Any" FontSize="9"/>
+                    <!--TextBox  TextWrapping="Wrap" Text="Any" FontSize="9"/-->
                 </StackPanel>
                 <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Left" Margin="-3,0,0,0" Background="#FF8C8C8C"/>
             </Grid>
