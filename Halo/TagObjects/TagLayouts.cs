@@ -380,14 +380,18 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						evalutated_index_PREVENT_DICTIONARYERROR++;
 						return 0;
 					case "_38": //struct
-						pairs.Add(offset + evalutated_index_PREVENT_DICTIONARYERROR, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText });
-						evalutated_index_PREVENT_DICTIONARYERROR++;
+						Dictionary<long, C> subthings1 = new Dictionary<long, C>();
 						XmlNodeList xnl1 = xn.ChildNodes;
+						int childnodescount = xnl1.Count;
 						long current_offset1 = offset;
 						foreach (XmlNode xntwo2 in xnl1)
 						{
-							current_offset1 += the_switch_statement(xntwo2, current_offset1, ref pairs);
+							current_offset1 += the_switch_statement(xntwo2, current_offset1, ref subthings1);
+							
 						}
+
+						pairs.Add(offset, new C { T = "TagStructBlock", N = xn.Attributes.GetNamedItem("v").InnerText + " Nodes = " + childnodescount, B = subthings1 });
+
 						return current_offset1 - offset;
 					case "_39":// unmapped
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
