@@ -371,13 +371,27 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					case "_35":// unmapped
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return int.Parse(xn.Attributes.GetNamedItem("length").InnerText);
-					case "_36":
-						pairs.Add(offset + evalutated_index_PREVENT_DICTIONARYERROR, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText });
-						evalutated_index_PREVENT_DICTIONARYERROR++;
+										case "_36":
+						if (xn.Attributes.GetNamedItem("v").InnerText != "")
+						{
+							pairs.Add(offset + evalutated_index_PREVENT_DICTIONARYERROR, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText });
+							evalutated_index_PREVENT_DICTIONARYERROR++;
+						}
+						else
+						{
+
+						}
 						return 0;
 					case "_37":
-						pairs.Add(offset + evalutated_index_PREVENT_DICTIONARYERROR, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText });
-						evalutated_index_PREVENT_DICTIONARYERROR++;
+						if (xn.Attributes.GetNamedItem("v").InnerText != "")
+						{
+							pairs.Add(offset + evalutated_index_PREVENT_DICTIONARYERROR, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText });
+							evalutated_index_PREVENT_DICTIONARYERROR++;
+						}
+						else
+						{
+
+						}
 						return 0;
 					case "_38": //struct
 						pairs.Add(offset + evalutated_index_PREVENT_DICTIONARYERROR, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText });
