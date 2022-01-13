@@ -741,6 +741,17 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tb1.stored_num_on_index = 0;
 						//recall_blockloop(entry, new_address, tb1.dockpanel);
 						break;
+					
+					case "TagStructBlock":
+						TagStructBlock? ts1 = new(this, tagStruct, entry, address + entry.Key)
+						{
+							HorizontalAlignment = HorizontalAlignment.Left
+						};
+						parentpanel.Children.Add(ts1);
+						ts1.tagblock_title.Text = entry.Value.N;
+						ts1.Children = entry;
+						
+						break;
 
 					case "String":
 						TagValueBlock? vb4 = new() { HorizontalAlignment = HorizontalAlignment.Left };
