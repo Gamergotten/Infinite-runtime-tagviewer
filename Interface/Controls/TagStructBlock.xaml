@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="InfiniteRuntimeTagViewer.Interface.Controls.TagStructBlock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <GroupBox BorderThickness="2" Background="#3F3F46" Margin="2,5,2,1">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="250" Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="28" />
+                <RowDefinition Height="Auto" MinHeight="3" />
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="tagblock_title" Text="Tag block description" VerticalAlignment="Center" HorizontalAlignment="Left" />
+
+            <Grid Grid.Row="3" Grid.ColumnSpan="4" Grid.Column="0" Height="auto" Background="#222" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="2" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="4" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Row="0" x:Name="dockpanel" MinHeight="50" Background="#222"/>
+            </Grid>
+        </Grid>
+    </GroupBox>
+</UserControl>
