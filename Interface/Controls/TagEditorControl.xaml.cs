@@ -743,6 +743,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						break;
 					
 					case "TagStructBlock":
+						//--THIS DOESN'T WORK, DON'T USE. IF YOU WANT TO TRY TO GET IT WORKING, GOOD LUCK.
+						
 						TagStructBlock? ts1 = new(this, tagStruct, entry, address + entry.Key)
 						{
 							HorizontalAlignment = HorizontalAlignment.Left
