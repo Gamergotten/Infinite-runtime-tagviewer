@@ -28,3 +28,8 @@ DA8E0DD1:_used_warthog
 
 D43D5C02:_turret_chaingun
 56B458D8:_fp_chaingun
+
+if you're still interested i have dumped millions of strings from every halos, so theres about 50/50 you'd find the hash you're looking for
+https://github.com/Gamergotten/murmur3Hash_dumper/releases/tag/test2
+if you wanna try and figure the hashes out yourself
+http://murmurhash.shorelabs.com/
