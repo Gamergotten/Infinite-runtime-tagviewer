@@ -825,6 +825,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						parentpanel.Children.Add(tfg);
 						tfg.generateBits(address + entry.Key, fg.A, fg.MB, fg.STR);
+						tfg.flag_name.Text = fg.N;
 
 						break;
 					case "mmr3Hash":
