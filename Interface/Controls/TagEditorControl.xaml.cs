@@ -731,6 +731,19 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tb1.stored_num_on_index = 0;
 						//recall_blockloop(entry, new_address, tb1.dockpanel);
 						break;
+					
+					case "TagStructBlock":
+						//--THIS DOESN'T WORK, DON'T USE. IF YOU WANT TO TRY TO GET IT WORKING, GOOD LUCK.
+						
+						TagStructBlock? ts1 = new(this, tagStruct, entry, address + entry.Key)
+						{
+							HorizontalAlignment = HorizontalAlignment.Left
+						};
+						parentpanel.Children.Add(ts1);
+						ts1.tagblock_title.Text = entry.Value.N;
+						ts1.Children = entry;
+						
+						break;
 
 					case "String":
 						TagValueBlock? vb4 = new() { HorizontalAlignment = HorizontalAlignment.Left };
@@ -802,6 +815,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						parentpanel.Children.Add(tfg);
 						tfg.generateBits(address + entry.Key, fg.A, fg.MB, fg.STR);
+						tfg.flag_name.Text = fg.N;
 
 						break;
 					case "mmr3Hash":
@@ -869,6 +883,311 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						rgb1.rgb_colorpicker.SelectedColor = Color.FromRgb(r_hex, g_hex, b_hex);
 
 						break;
+
+					case "BoundsFloat":
+						TagTwoBlock? ttb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						ttb1.f_type1.Text = "Float";
+						ttb1.f_type2.Text = "Float";
+						
+						ttb1.f_label1.Text = "Min:";
+						ttb1.f_label2.Text = "Max:";
+
+						ttb1.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
+						ttb1.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
+						parentpanel.Children.Add(ttb1);
+
+						ttb1.f_value1.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
+						};
+
+						ttb1.f_value2.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 4),
+						};
+
+						ttb1.f_value1.TextChanged += value_TextChanged;
+						ttb1.f_value2.TextChanged += value_TextChanged;
+
+						ttb1.f_name.Text = entry.Value.N;
+
+						break;
+
+					case "Bounds2Byte":
+						TagTwoBlock? ttb2 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						ttb2.f_type1.Text = "2 Byte";
+						ttb2.f_type2.Text = "2 Byte";
+
+						ttb2.f_label1.Text = "Min:";
+						ttb2.f_label2.Text = "Max:";
+
+						ttb2.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
+						ttb2.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
+						parentpanel.Children.Add(ttb2);
+
+						ttb2.f_value1.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "2Byte",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
+						};
+
+						ttb2.f_value2.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "2Byte",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 4),
+						};
+
+						ttb2.f_value1.TextChanged += value_TextChanged;
+						ttb2.f_value2.TextChanged += value_TextChanged;
+
+						ttb2.f_name.Text = entry.Value.N;
+
+						break;
+					
+					case "2DPoint_Float":
+						TagTwoBlock? ttb3 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						ttb3.f_type1.Text = "Float";
+						ttb3.f_type2.Text = "Float";
+
+						ttb3.f_label1.Text = "X:";
+						ttb3.f_label2.Text = "Y:";
+
+						ttb3.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
+						ttb3.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
+						parentpanel.Children.Add(ttb3);
+
+						ttb3.f_value1.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
+						};
+
+						ttb3.f_value2.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 4),
+						};
+
+						ttb3.f_value1.TextChanged += value_TextChanged;
+						ttb3.f_value2.TextChanged += value_TextChanged;
+
+						ttb3.f_name.Text = entry.Value.N;
+
+						break;
+
+					case "2DPoint_2Byte":
+						TagTwoBlock? ttb4 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						ttb4.f_type1.Text = "2 Byte";
+						ttb4.f_type2.Text = "2 Byte";
+
+						ttb4.f_label1.Text = "X:";
+						ttb4.f_label2.Text = "Y:";
+
+						ttb4.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
+						ttb4.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
+						parentpanel.Children.Add(ttb4);
+
+						ttb4.f_value1.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "2Byte",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
+						};
+
+						ttb4.f_value2.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "2Byte",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 4),
+						};
+
+						ttb4.f_value1.TextChanged += value_TextChanged;
+						ttb4.f_value2.TextChanged += value_TextChanged;
+
+						ttb4.f_name.Text = entry.Value.N;
+
+						break;
+
+					case "3DPoint":
+						TagThreeBlock? tthb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						tthb1.f_type1.Text = "Float";
+						tthb1.f_type2.Text = "Float";
+						tthb1.f_type3.Text = "Float";
+
+						tthb1.f_label1.Text = "X:";
+						tthb1.f_label2.Text = "Y:";
+						tthb1.f_label3.Text = "Z:";
+
+						tthb1.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
+						tthb1.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
+						tthb1.f_value3.Text = _m.ReadFloat((address + entry.Key + 8).ToString("X")).ToString();
+						parentpanel.Children.Add(tthb1);
+
+						tthb1.f_value1.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
+						};
+
+						tthb1.f_value2.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 4),
+						};
+
+						tthb1.f_value3.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 8),
+						};
+
+						tthb1.f_value1.TextChanged += value_TextChanged;
+						tthb1.f_value2.TextChanged += value_TextChanged;
+						tthb1.f_value3.TextChanged += value_TextChanged;
+
+						tthb1.f_name.Text = entry.Value.N;
+
+						break;
+
+					case "Quanternion":
+						TagFourBlock? tfob1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						tfob1.f_type1.Text = "Float";
+						tfob1.f_type2.Text = "Float";
+						tfob1.f_type3.Text = "Float";
+						tfob1.f_type4.Text = "Float";
+
+						tfob1.f_label1.Text = "W:";
+						tfob1.f_label2.Text = "X:";
+						tfob1.f_label3.Text = "Y:";
+						tfob1.f_label4.Text = "Z:";
+
+						tfob1.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
+						tfob1.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
+						tfob1.f_value3.Text = _m.ReadFloat((address + entry.Key + 8).ToString("X")).ToString();
+						tfob1.f_value4.Text = _m.ReadFloat((address + entry.Key + 12).ToString("X")).ToString();
+						parentpanel.Children.Add(tfob1);
+
+						tfob1.f_value1.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
+						};
+
+						tfob1.f_value2.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 4),
+						};
+
+						tfob1.f_value3.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 8),
+						};
+						
+						tfob1.f_value4.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 8),
+						};
+
+						tfob1.f_value1.TextChanged += value_TextChanged;
+						tfob1.f_value2.TextChanged += value_TextChanged;
+						tfob1.f_value3.TextChanged += value_TextChanged;
+						tfob1.f_value4.TextChanged += value_TextChanged;
+
+						tfob1.f_name.Text = entry.Value.N;
+
+						break;
+					case "3DPlane":
+						TagFourBlock? tfob2 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						tfob2.f_type1.Text = "Float";
+						tfob2.f_type2.Text = "Float";
+						tfob2.f_type3.Text = "Float";
+						tfob2.f_type4.Text = "Float";
+							
+						tfob2.f_label1.Text = "X:";
+						tfob2.f_label2.Text = "Y:";
+						tfob2.f_label3.Text = "Z:";
+						tfob2.f_label4.Text = "Point:";
+							
+						tfob2.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
+						tfob2.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
+						tfob2.f_value3.Text = _m.ReadFloat((address + entry.Key + 8).ToString("X")).ToString();
+						tfob2.f_value4.Text = _m.ReadFloat((address + entry.Key + 12).ToString("X")).ToString();
+						parentpanel.Children.Add(tfob2);
+
+						tfob2.f_value1.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
+						};
+
+						tfob2.f_value2.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 4),
+						};
+
+						tfob2.f_value3.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 8),
+						};
+
+						tfob2.f_value4.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 8),
+						};
+
+						tfob2.f_value1.TextChanged += value_TextChanged;
+						tfob2.f_value2.TextChanged += value_TextChanged;
+						tfob2.f_value3.TextChanged += value_TextChanged;
+						tfob2.f_value4.TextChanged += value_TextChanged;
+
+						tfob2.f_name.Text = entry.Value.N;
+
+						break;
+
 				}
 
 				prevEntry = entry;
