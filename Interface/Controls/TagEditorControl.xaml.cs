@@ -886,8 +886,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 					case "BoundsFloat":
 						TagTwoBlock? ttb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-						ttb1.f_type1.Text = "Float";
-						ttb1.f_type2.Text = "Float";
 						
 						ttb1.f_label1.Text = "Min:";
 						ttb1.f_label2.Text = "Max:";
@@ -915,14 +913,12 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						ttb1.f_value1.TextChanged += value_TextChanged;
 						ttb1.f_value2.TextChanged += value_TextChanged;
 
-						ttb1.f_name.Text = entry.Value.N;
+						ttb1.f_name.Text = entry.Value.N + " - Float";
 
 						break;
 
 					case "Bounds2Byte":
 						TagTwoBlock? ttb2 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-						ttb2.f_type1.Text = "2 Byte";
-						ttb2.f_type2.Text = "2 Byte";
 
 						ttb2.f_label1.Text = "Min:";
 						ttb2.f_label2.Text = "Max:";
@@ -950,14 +946,12 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						ttb2.f_value1.TextChanged += value_TextChanged;
 						ttb2.f_value2.TextChanged += value_TextChanged;
 
-						ttb2.f_name.Text = entry.Value.N;
+						ttb2.f_name.Text = entry.Value.N + " - 2 Byte";
 
 						break;
 					
 					case "2DPoint_Float":
 						TagTwoBlock? ttb3 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-						ttb3.f_type1.Text = "Float";
-						ttb3.f_type2.Text = "Float";
 
 						ttb3.f_label1.Text = "X:";
 						ttb3.f_label2.Text = "Y:";
@@ -985,14 +979,12 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						ttb3.f_value1.TextChanged += value_TextChanged;
 						ttb3.f_value2.TextChanged += value_TextChanged;
 
-						ttb3.f_name.Text = entry.Value.N;
+						ttb3.f_name.Text = entry.Value.N + " - Float";
 
 						break;
 
 					case "2DPoint_2Byte":
 						TagTwoBlock? ttb4 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-						ttb4.f_type1.Text = "2 Byte";
-						ttb4.f_type2.Text = "2 Byte";
 
 						ttb4.f_label1.Text = "X:";
 						ttb4.f_label2.Text = "Y:";
@@ -1020,15 +1012,12 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						ttb4.f_value1.TextChanged += value_TextChanged;
 						ttb4.f_value2.TextChanged += value_TextChanged;
 
-						ttb4.f_name.Text = entry.Value.N;
+						ttb4.f_name.Text = entry.Value.N + " - 2 Byte";
 
 						break;
 
 					case "3DPoint":
 						TagThreeBlock? tthb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-						tthb1.f_type1.Text = "Float";
-						tthb1.f_type2.Text = "Float";
-						tthb1.f_type3.Text = "Float";
 
 						tthb1.f_label1.Text = "X:";
 						tthb1.f_label2.Text = "Y:";
@@ -1067,16 +1056,12 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tthb1.f_value2.TextChanged += value_TextChanged;
 						tthb1.f_value3.TextChanged += value_TextChanged;
 
-						tthb1.f_name.Text = entry.Value.N;
+						tthb1.f_name.Text = entry.Value.N + " - Float";
 
 						break;
 
 					case "Quanternion":
 						TagFourBlock? tfob1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-						tfob1.f_type1.Text = "Float";
-						tfob1.f_type2.Text = "Float";
-						tfob1.f_type3.Text = "Float";
-						tfob1.f_type4.Text = "Float";
 
 						tfob1.f_label1.Text = "W:";
 						tfob1.f_label2.Text = "X:";
@@ -1126,16 +1111,12 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tfob1.f_value3.TextChanged += value_TextChanged;
 						tfob1.f_value4.TextChanged += value_TextChanged;
 
-						tfob1.f_name.Text = entry.Value.N;
+						tfob1.f_name.Text = entry.Value.N + " - Float";
 
 						break;
 					case "3DPlane":
-						TagFourBlock? tfob2 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-						tfob2.f_type1.Text = "Float";
-						tfob2.f_type2.Text = "Float";
-						tfob2.f_type3.Text = "Float";
-						tfob2.f_type4.Text = "Float";
-							
+						TagFourBlock? tfob2 = new() { HorizontalAlignment = HorizontalAlignment.Left };							
+						
 						tfob2.f_label1.Text = "X:";
 						tfob2.f_label2.Text = "Y:";
 						tfob2.f_label3.Text = "Z:";
@@ -1184,7 +1165,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tfob2.f_value3.TextChanged += value_TextChanged;
 						tfob2.f_value4.TextChanged += value_TextChanged;
 
-						tfob2.f_name.Text = entry.Value.N;
+						tfob2.f_name.Text = entry.Value.N + " - Float";
 
 						break;
 

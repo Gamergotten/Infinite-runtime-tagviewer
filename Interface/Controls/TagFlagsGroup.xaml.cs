@@ -65,6 +65,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
                     int _byte = @byte, _bit = bit;
 
                     checkbox = new CheckBox();
+					checkbox.Margin = new System.Windows.Thickness(5,0,0,0);
                     checkbox.IsChecked = flags_value.GetBit(bit);
                     checkbox.Checked   += (s, e) => Checkbox_BitIsChanged(_byte, _bit);
                     checkbox.Unchecked += (s, e) => Checkbox_BitIsChanged(_byte, _bit);
