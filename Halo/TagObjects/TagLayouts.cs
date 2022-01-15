@@ -219,8 +219,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						return group_lengths_dict[xn.Name];
 
 					case "_10": // im not 100% on this one
-						pairs.Add(offset, new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText+".X" });
-						pairs.Add(offset+2, new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText+".Y" });
+						pairs.Add(offset, new C { T = "2DPoint_2Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_11":// unmapped
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
@@ -238,46 +237,31 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_16":
-						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText+".X" });
-						pairs.Add(offset+4, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText+ ".Y" });
+						pairs.Add(offset, new C { T = "2DPoint_Float", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_17":
-						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".X" });
-						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Y" });
-						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Z" });
+						pairs.Add(offset, new C { T = "3DPoint", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_18":
-						pairs.Add(offset, new C { T = "FLoat", N = xn.Attributes.GetNamedItem("v").InnerText +".X" });
-						pairs.Add(offset+4, new C { T = "FLoat", N = xn.Attributes.GetNamedItem("v").InnerText+".Y" });
+						pairs.Add(offset, new C { T = "2DPoint_Float", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_19":
-						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".X" });
-						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Y" });
-						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Z"});
+						pairs.Add(offset, new C { T = "3DPoint", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_1A":
-						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".W" });
-						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".X" });
-						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Y" });
-						pairs.Add((offset + 12), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Z" });
+						pairs.Add(offset, new C { T = "Quanternion", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_1B":
-						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".X" });
-						pairs.Add(offset+4, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + " .Y" });
+						pairs.Add(offset, new C { T = "2DPoint_Float", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_1C":
-						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".X" });
-						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Y" });
-						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Z" });
+						pairs.Add(offset, new C { T = "3DPoint", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_1D":// unmapped
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_1E": // pretty sure this is currect, could be wrong though. I referenced calculus equations
-						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".x" });
-						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".y" });
-						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".z" });
-						pairs.Add((offset + 12), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".point" });
+						pairs.Add(offset, new C { T = "3DPlane", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_1F":
 						pairs.Add(offset, new C { T = "RGB", N = xn.Attributes.GetNamedItem("v").InnerText });
@@ -299,16 +283,13 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add((offset + 2), new C { T = "2Byte", N = xn.Attributes.GetNamedItem("v").InnerText + ".max" });
 						return group_lengths_dict[xn.Name];
 					case "_24":
-						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".min" });
-						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".max" });
+						pairs.Add(offset, new C { T = "BoundsFloat", N = xn.Attributes.GetNamedItem("v").InnerText});
 						return group_lengths_dict[xn.Name];
 					case "_25":
-						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".min" });
-						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".max" });
+						pairs.Add(offset, new C { T = "BoundsFloat", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_26":
-						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".min" });
-						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".max" });
+						pairs.Add(offset, new C { T = "BoundsFloat", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_27":// unmapped - This case isn't found in any tag file
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
