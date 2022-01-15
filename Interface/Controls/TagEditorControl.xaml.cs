@@ -311,68 +311,58 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 			trd.MainWindow = _mainWindow;
 			TheLastTagrefButtonWePressed = b;
+			List<string> big = new();
+			List<string> targets = new();
 
 			// Null type
-			TreeViewItem? tvi = new()
-			{
-				Header = _mainWindow.convert_ID_to_tag_name("FFFFFFFF"),
-				Tag = new TED_TagRefGroup(ted)
-				{
-					MemoryType = "TagrefTag",
-					DatNum = "FFFFFFFF"
-				} //s[0] + ":" + "FFFFFFFF"
-			};
+			//TreeViewItem? tvi = new()
+			//{
+			//	Header = _mainWindow.convert_ID_to_tag_name("FFFFFFFF"),
+			//	Tag = new TED_TagRefGroup(ted)
+			//	{
+			//		MemoryType = "TagrefTag",
+			//		DatNum = "FFFFFFFF"
+			//	} //s[0] + ":" + "FFFFFFFF"
+			//};
+			big.Add(_mainWindow.convert_ID_to_tag_name("FFFFFFFF"));
+			targets.Add("FFFFFFFF");
 
-			trd.tag_select_panel.Items.Add(tvi);
-			tvi.Selected += update_tagref;
+
+			//trd.tag_select_panel.Items.Add(tvi);
+			//tvi.Selected += update_tagref;
 
 			foreach (KeyValuePair<string, TagStruct> tg in _mainWindow.TagsList.OrderBy(key => key.Value.TagFullName)) // should probably store this instead of sorting everytime
 			{
 				if (tg.Value.TagGroup == ted.TagGroup)
 				{
-					TreeViewItem? tvi2 = new()
-					{
-						Header = _mainWindow.convert_ID_to_tag_name(tg.Key),
-						//Tag = s[0] + ":" + tg.Datnum
-						Tag = new TED_TagRefGroup(ted)
-						{
-							MemoryType = "TagrefTag",
-							DatNum = tg.Value.Datnum
-						}
-					};
+					big.Add(_mainWindow.convert_ID_to_tag_name(tg.Key));
+					targets.Add(tg.Value.Datnum);
+					//TreeViewItem? tvi2 = new()
+					//{
+					//	Header = _mainWindow.convert_ID_to_tag_name(tg.Key),
+					//	//Tag = s[0] + ":" + tg.Datnum
+					//	Tag = new TED_TagRefGroup(ted)
+					//	{
+					//		MemoryType = "TagrefTag",
+					//		DatNum = tg.Value.Datnum
+					//	}
+					//};
 
-					trd.tag_select_panel.Items.Add(tvi2);
-					tvi2.Selected += update_tagref;
+					//trd.tag_select_panel.Items.Add(tvi2);
+					//tvi2.Selected += update_tagref;
 				}
 			}
-
+			trd.TheLastTagrefButtonWePressed = TheLastTagrefButtonWePressed;
+			trd.ted = ted;
+			trd.datnums = targets;
+			trd.source = big;
+			trd.tag_select_panel.ItemsSource = big;
 			trd.Show();
 			return;
 		}
 
 		// this is for our dropdown thingo for changing tag refs
-		public void update_tagref(object sender, RoutedEventArgs e)
-		{
-			TreeViewItem? b = sender as TreeViewItem;
-			TED_TagRefGroup ted = b.Tag as TED_TagRefGroup;
 
-			_mainWindow.AddPokeChange(ted, _mainWindow.get_tagID_by_datnum(ted.DatNum));
-
-			string id = _mainWindow.get_tagid_by_datnum(ted.DatNum);
-			TheLastTagrefButtonWePressed.Content = _mainWindow.convert_ID_to_tag_name(id);
-
-			// need to do this the lazy way again, have to head off in a sec
-			Grid? td = TheLastTagrefButtonWePressed.Parent as Grid;
-			Button? x = td.Children[2] as Button;
-			//X.Tag = ID;
-
-			x.Tag = _mainWindow.get_tagID_by_datnum(ted.DatNum); // need to do tagID rather
-
-			if (trd != null)
-			{
-				trd.Closethis();
-			}
-		}
 
 		// had to adapt this to bealbe to read tagblocks and forgot to allow it to iterate through them *sigh* good enough for now
 		// second time this happened, i wish i had more time in a day to get this all done

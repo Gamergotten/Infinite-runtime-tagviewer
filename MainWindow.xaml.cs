@@ -111,10 +111,8 @@ namespace InfiniteRuntimeTagViewer
 			_ = HookProcessAsync();
 			if (BaseAddress != -1 )
 			{
-				Dispatcher.BeginInvoke(new Action(async () =>
-				{
-					await LoadTagsMem();
-				}), DispatcherPriority.SystemIdle);
+				LoadTagsMem();
+
 				
 				if (hooked == true)
 				{
@@ -136,7 +134,7 @@ namespace InfiniteRuntimeTagViewer
 				_ = HookProcessAsync();
 				if (CbxAutoLoadTags.IsChecked && !loadedTags)
 				{
-					_ = LoadTagsMem();
+					LoadTagsMem();
 				}
 				if (CbxAutoPokeChanges.IsChecked)
 				{
@@ -277,7 +275,7 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
-		public async Task LoadTagsMem()
+		public void LoadTagsMem()
 		{
 			if (TagCount != -1)
 			{
@@ -327,7 +325,7 @@ namespace InfiniteRuntimeTagViewer
 					TagsList.Add(currentTag.ObjectId, currentTag);
 				}
 			}
-			await Loadtags();
+			Loadtags();
 		}
 		public string? read_tag_group(long tagGroupAddress)
 		{
@@ -368,54 +366,113 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 		// as far as im aware this is still running on the main thread :frown:
-		public async Task Loadtags()
+
+		// group 4chars, group instance
+		// eg. weap, { system.whatever.balls }
+		public Dictionary<string, TreeViewItem> groups_headers = new();
+		public Dictionary<string, TreeViewItem> tags_headers = new();
+
+		public void Loadtags()
 		{
-			TagsTree.Items.Clear();
+			//TagsTree.Items.Clear();
+
+			Dictionary<string, TreeViewItem> groups_headers_diff = new();
+
+			// cycle through and evaluate against diff
+
+			// act accordingly
+
+			// save
+
 			// TagsTree
 			loadedTags = true;
-			for (int i = 0; i < TagGroups.Count; i++)
+			for (int i = 0; i<TagGroups.Count; i++) // per group
 			{
-				int tagsPercent = (int) (i / (double) TagGroups.Count * 100);
-				hook_text.Text = "Loading Tags..." + tagsPercent + "%";
-				await Task.Delay(1); // overall this causes aprox 500 ms delay. that is half a second
-				GroupTagStruct displayGroup = TagGroups.ElementAt(i).Value;
-
-				TreeViewItem sortheader = new()
+				KeyValuePair<string, GroupTagStruct> goop = TagGroups.ElementAt(i);
+				if (groups_headers.Keys.Contains(goop.Key)) // is included in group_headers
 				{
-					Header = displayGroup.TagGroupName + " (" + displayGroup.TagGroupDesc + ")",
-					ToolTip = new TextBlock { Foreground = Brushes.Black, Text = displayGroup.TagGroupDefinitition }
-				};
+					TreeViewItem t = groups_headers[goop.Key];
+					groups_headers_diff.Add(goop.Key, t);
+					groups_headers.Remove(goop.Key);
 
-				displayGroup.TagCategory = sortheader;
+					GroupTagStruct displayGroup = goop.Value;
+					displayGroup.TagCategory = t;
+					TagGroups[goop.Key] = displayGroup;
+				}
+				else
+				{
+					GroupTagStruct displayGroup = goop.Value;
+					TreeViewItem sortheader = new()
+					{
+						Header = displayGroup.TagGroupName + " (" + displayGroup.TagGroupDesc + ")",
+						ToolTip = new TextBlock { Foreground = Brushes.Black, Text = displayGroup.TagGroupDefinitition }
+					};
+					displayGroup.TagCategory = sortheader;
+					TagGroups[goop.Key] = displayGroup;
 
-				TagsTree.Items.Add(sortheader);
+					TagsTree.Items.Add(sortheader);
 
-				TagGroups[TagGroups.ElementAt(i).Key] = displayGroup;
+					groups_headers_diff.Add(goop.Key, sortheader);
+
+				}
 			}
-			// var sortedList = TagsList.OrderBy(x => x.TagFullName).ToList();
-			hook_text.Text = "Loaded Tags";
-			foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList.OrderBy(key => key.Value.TagFullName))
+			foreach (KeyValuePair<string, TreeViewItem> poop in groups_headers) // per group
 			{
-				TreeViewItem t = new();
-				TagStruct tag = curr_tag.Value;
-				TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct dictTagGroup);
-
-				t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
-
-				t.Tag = curr_tag.Key; // our index to our tag
-
-				//t.Tag = TagsList.FindIndex(x => x.ObjectId == tag.ObjectId); // yucky, this thing causes way too much latency // remember we do this up to 70000 times
-
-				//t.MouseLeftButtonDown += new MouseButtonEventHandler(Select_Tag_click);
-				t.Selected += Select_Tag_click;
-
-				dictTagGroup.TagCategory.Items.Add(t);
+				if (poop.Value != null)
+				{
+					TagsTree.Items.Remove(poop.Value);
+				}
 			}
+			groups_headers = groups_headers_diff;
+
+
+
+			Dictionary<string, TreeViewItem> tags_headers_diff = new();
+
+			foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList.OrderBy(key => key.Value.TagFullName)) // per tag
+			{
+				if (tags_headers.Keys.Contains(curr_tag.Key)) // is included in tag_headers UI
+				{
+					TreeViewItem t = tags_headers[curr_tag.Key];
+					t.Tag = curr_tag.Key;
+					tags_headers_diff.Add(curr_tag.Key, t);
+					tags_headers.Remove(curr_tag.Key);
+				}
+				else // tag isnt in UI
+				{
+					TreeViewItem t = new();
+					TagStruct tag = curr_tag.Value;
+					TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct dictTagGroup);
+
+					t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
+
+					t.Tag = curr_tag.Key; // our index to our tag
+
+					t.Selected += Select_Tag_click;
+
+					dictTagGroup.TagCategory.Items.Add(t);
+
+					tags_headers_diff.Add(curr_tag.Key, t);
+				}
+
+			}
+			foreach (KeyValuePair<string, TreeViewItem> poop in tags_headers) // per tag remove
+			{
+				if (poop.Value != null)
+				{
+					TreeViewItem ownber = poop.Value.Parent as TreeViewItem;
+					ownber.Items.Remove(poop.Value);
+				}
+			}
+			tags_headers = tags_headers_diff;
+
+
 			if (TagsTree.Items.Count < 1)
 			{
 				loadedTags = false;
 			}
 			//had to do this cause for whatever reason the multithreading prevented it from actually filtering the tags
+			hook_text.Text = "Loaded Tags";
 			cbxFilterOnlyMapped.IsChecked = false;
 			cbxFilterOnlyMapped.IsChecked = true;
 

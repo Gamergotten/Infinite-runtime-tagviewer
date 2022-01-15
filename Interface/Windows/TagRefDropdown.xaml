@@ -27,7 +27,7 @@
         </Grid.ColumnDefinitions>
 
         <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.ColumnSpan="3">
-            <TreeView x:Name="tag_select_panel" />
+            <ListView x:Name="tag_select_panel" SelectionChanged="tag_select_panel_SelectionChanged" />
         </Border>
 
         <TextBlock WindowChrome.IsHitTestVisibleInChrome="True" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" 
