@@ -310,15 +310,16 @@
 
                     <Grid Grid.Row="3" Grid.ColumnSpan="1" Margin="5,5,5,5">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto" />
                             <ColumnDefinition />
-                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="45" />
+                            <ColumnDefinition Width="33" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="auto" />
-                            <RowDefinition Height="auto" />
+                            <RowDefinition />
+                            <RowDefinition />
                         </Grid.RowDefinitions>
-                        <TextBlock x:Name="hook_text" Text="Not hooked" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" />
+                        <TextBlock x:Name="hook_text" Text="Not hooked" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" />
+                        <Button x:Name="Reload_Button" Content="Reload" Grid.Column="1" Click="BtnReLoadTags_Click" Padding="4,4,4,4" IsEnabled="False" />
                         <Button Content="Load" Grid.Column="2" Click="BtnLoadTags_Click" Padding="4,4,4,4" />
 
                         <controls:ProcessSelector x:Name="processSelector" Grid.Row="1" Grid.ColumnSpan="3" Margin="00,2,0,0" />

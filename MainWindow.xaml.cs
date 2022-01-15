@@ -106,12 +106,14 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
+
+
 		public void HookAndLoad()
 		{
 			_ = HookProcessAsync();
 			if (BaseAddress != -1 )
 			{
-				LoadTagsMem();
+				LoadTagsMem(false);
 
 				
 				if (hooked == true)
@@ -134,7 +136,8 @@ namespace InfiniteRuntimeTagViewer
 				_ = HookProcessAsync();
 				if (CbxAutoLoadTags.IsChecked && !loadedTags)
 				{
-					LoadTagsMem();
+					LoadTagsMem(false);
+
 				}
 				if (CbxAutoPokeChanges.IsChecked)
 				{
@@ -197,9 +200,17 @@ namespace InfiniteRuntimeTagViewer
 		public SortedDictionary<string, GroupTagStruct> TagGroups { get; set; } = new();
 
 		// load tags from Mem
+		public void BtnReLoadTags_Click(object sender, RoutedEventArgs e)
+		{
+			TagsTree.Items.Clear();
+			groups_headers.Clear();
+			tags_headers.Clear();
+			HookAndLoad();
+		}
 		private void BtnLoadTags_Click(object sender, RoutedEventArgs e)
 		{
 			HookAndLoad();
+			Reload_Button.IsEnabled = true;
 		}
 
 		// instead of using the other method i made a new one because the last one yucky,
@@ -210,7 +221,10 @@ namespace InfiniteRuntimeTagViewer
 			{
 				if (load_tags_too)
 				{
-					SlientLoadTagsMem();
+					TagsTree.Items.Clear();
+					groups_headers.Clear();
+					tags_headers.Clear();
+					LoadTagsMem(true);
 
 					if (hooked == true)
 					{
@@ -221,61 +235,8 @@ namespace InfiniteRuntimeTagViewer
 			}
 			return false;
 		}
-		public void SlientLoadTagsMem()
-		{
-			// silent denotes that we aren't loading anything into the UI // which slices off a significant load time
-			// which we'll be using this mainly for our mod loader because you really dont need to reload the goddamn ui everytime
-			if (TagCount != -1)
-			{
-				TagCount = -1;
-				TagGroups.Clear();
-				TagsList.Clear();
-			}
-			TagCount = M.ReadInt((BaseAddress + 0x6C).ToString("X"));
-			long tagsStart = M.ReadLong((BaseAddress + 0x78).ToString("X"));
 
-			// each tag is 52 bytes long // was it 52 or was it 0x52? whatever
-			// 0x0 datnum 4bytes
-			// 0x4 ObjectID 4bytes
-			// 0x8 Tag_group Pointer 8bytes
-			// 0x10 Tag_data Pointer 8bytes
-			// 0x18 Tag_type_desc Pointer 8bytes
-
-			TagsList = new Dictionary<string, TagStruct>();
-			for (int tagIndex = 0; tagIndex < TagCount; tagIndex++)
-			{
-				TagStruct currentTag = new();
-				long tagAddress = tagsStart + (tagIndex * 52);
-
-				byte[] test1 = M.ReadBytes(tagAddress.ToString("X"), 4);
-				try
-				{
-					currentTag.Datnum = BitConverter.ToString(test1).Replace("-", string.Empty);
-					loadedTags = false;
-				}
-				catch (System.ArgumentNullException)
-				{
-					hooked = false;
-					return;
-				}
-				byte[] test = (M.ReadBytes((tagAddress + 4).ToString("X"), 4));
-
-				// = String.Concat(bytes.Where(c => !Char.IsWhiteSpace(c)));
-				currentTag.ObjectId = BitConverter.ToString(test).Replace("-", string.Empty);
-				currentTag.TagGroup = read_tag_group(M.ReadLong((tagAddress + 0x8).ToString("X")));
-				currentTag.TagData = M.ReadLong((tagAddress + 0x10).ToString("X"));
-				currentTag.TagFullName = convert_ID_to_tag_name(currentTag.ObjectId).Trim();
-				currentTag.TagFile = currentTag.TagFullName.Split('\\').Last().Trim();
-
-				// do the tag definitition
-				if (!TagsList.ContainsKey(currentTag.ObjectId))
-				{
-					TagsList.Add(currentTag.ObjectId, currentTag);
-				}
-			}
-		}
-
-		public void LoadTagsMem()
+		public void LoadTagsMem(bool is_silent)
 		{
 			if (TagCount != -1)
 			{
@@ -325,7 +286,8 @@ namespace InfiniteRuntimeTagViewer
 					TagsList.Add(currentTag.ObjectId, currentTag);
 				}
 			}
-			Loadtags();
+			if (!is_silent)
+				Loadtags();
 		}
 		public string? read_tag_group(long tagGroupAddress)
 		{
@@ -374,7 +336,6 @@ namespace InfiniteRuntimeTagViewer
 
 		public void Loadtags()
 		{
-			//TagsTree.Items.Clear();
 
 			Dictionary<string, TreeViewItem> groups_headers_diff = new();
 
