@@ -267,10 +267,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						pairs.Add(offset, new C { T = "RGB", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_20":
-						pairs.Add(offset, new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".Alpha" });
-						pairs.Add((offset + 4), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".R" });
-						pairs.Add((offset + 8), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".G" });
-						pairs.Add((offset + 12), new C { T = "Float", N = xn.Attributes.GetNamedItem("v").InnerText + ".B" });
+						pairs.Add(offset, new C { T = "ARGB", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_21":// unmapped - only found in ttag
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });

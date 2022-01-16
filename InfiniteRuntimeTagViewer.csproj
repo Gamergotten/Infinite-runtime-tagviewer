@@ -1517,4 +1517,10 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Interface\Controls\TagARGBBlock.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+
 </Project>

@@ -883,12 +883,68 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						rgb1.rgb_colorpicker.SelectedColor = Color.FromRgb(r_hex, g_hex, b_hex);
 
 						break;
+					case "ARGB":
+						TagARGBBlock? argb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+						argb1.a_value.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
+						argb1.r_value.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
+						argb1.g_value.Text = _m.ReadFloat((address + entry.Key + 8).ToString("X")).ToString();
+						argb1.b_value.Text = _m.ReadFloat((address + entry.Key + 12).ToString("X")).ToString();
 
+						byte a_hex2 = (byte) Math.Round(_m.ReadFloat((address + entry.Key).ToString("X")) * 255);
+						byte r_hex2 = (byte) Math.Round(_m.ReadFloat((address + entry.Key + 4).ToString("X")) * 255);
+						byte g_hex2 = (byte) Math.Round(_m.ReadFloat((address + entry.Key + 8).ToString("X")) * 255);
+						byte b_hex2 = (byte) Math.Round(_m.ReadFloat((address + entry.Key + 12).ToString("X")) * 255);
+
+						parentpanel.Children.Add(argb1);
+
+						argb1.a_value.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = entry.Value.AbsoluteTagOffset
+						};
+
+						argb1.r_value.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 4),
+						};
+
+						argb1.g_value.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 8),
+						};
+
+						argb1.b_value.Tag = new TagEditorDefinition()
+						{
+							MemoryType = "Float",
+							TagDef = entry.Value,
+							TagStruct = tagStruct,
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 12),
+						};
+
+						argb1.a_value.TextChanged += value_TextChanged;
+						argb1.r_value.TextChanged += value_TextChanged;
+						argb1.g_value.TextChanged += value_TextChanged;
+						argb1.b_value.TextChanged += value_TextChanged;
+
+						argb1.rgb_name.Text = entry.Value.N;
+						argb1.argb_colorpicker.SelectedColor = Color.FromArgb(a_hex2 ,r_hex2, g_hex2, b_hex2);
+
+						break;
 					case "BoundsFloat":
 						TagTwoBlock? ttb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
 						
 						ttb1.f_label1.Text = "Min:";
 						ttb1.f_label2.Text = "Max:";
+
+						ttb1.f_type.Text = "Float";
 
 						ttb1.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
 						ttb1.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
@@ -913,7 +969,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						ttb1.f_value1.TextChanged += value_TextChanged;
 						ttb1.f_value2.TextChanged += value_TextChanged;
 
-						ttb1.f_name.Text = entry.Value.N + " - Float";
+						ttb1.f_name.Text = entry.Value.N;
 
 						break;
 
@@ -922,6 +978,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						ttb2.f_label1.Text = "Min:";
 						ttb2.f_label2.Text = "Max:";
+
+						ttb2.f_type.Text = "2 Byte";
 
 						ttb2.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
 						ttb2.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
@@ -946,7 +1004,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						ttb2.f_value1.TextChanged += value_TextChanged;
 						ttb2.f_value2.TextChanged += value_TextChanged;
 
-						ttb2.f_name.Text = entry.Value.N + " - 2 Byte";
+						ttb2.f_name.Text = entry.Value.N;
 
 						break;
 					
@@ -955,6 +1013,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						ttb3.f_label1.Text = "X:";
 						ttb3.f_label2.Text = "Y:";
+
+						ttb3.f_type.Text = "Float";
 
 						ttb3.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
 						ttb3.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
@@ -979,7 +1039,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						ttb3.f_value1.TextChanged += value_TextChanged;
 						ttb3.f_value2.TextChanged += value_TextChanged;
 
-						ttb3.f_name.Text = entry.Value.N + " - Float";
+						ttb3.f_name.Text = entry.Value.N;
 
 						break;
 
@@ -988,6 +1048,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 						ttb4.f_label1.Text = "X:";
 						ttb4.f_label2.Text = "Y:";
+
+						ttb4.f_type.Text = "2 Byte";
 
 						ttb4.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
 						ttb4.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
@@ -1012,7 +1074,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						ttb4.f_value1.TextChanged += value_TextChanged;
 						ttb4.f_value2.TextChanged += value_TextChanged;
 
-						ttb4.f_name.Text = entry.Value.N + " - 2 Byte";
+						ttb4.f_name.Text = entry.Value.N;
 
 						break;
 
@@ -1022,6 +1084,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tthb1.f_label1.Text = "X:";
 						tthb1.f_label2.Text = "Y:";
 						tthb1.f_label3.Text = "Z:";
+
+						tthb1.f_type.Text = "Float";
 
 						tthb1.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
 						tthb1.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
@@ -1056,7 +1120,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tthb1.f_value2.TextChanged += value_TextChanged;
 						tthb1.f_value3.TextChanged += value_TextChanged;
 
-						tthb1.f_name.Text = entry.Value.N + " - Float";
+						tthb1.f_name.Text = entry.Value.N;
 
 						break;
 
@@ -1067,6 +1131,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tfob1.f_label2.Text = "X:";
 						tfob1.f_label3.Text = "Y:";
 						tfob1.f_label4.Text = "Z:";
+
+						tfob1.f_type.Text = "Float";
 
 						tfob1.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
 						tfob1.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
@@ -1111,7 +1177,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tfob1.f_value3.TextChanged += value_TextChanged;
 						tfob1.f_value4.TextChanged += value_TextChanged;
 
-						tfob1.f_name.Text = entry.Value.N + " - Float";
+						tfob1.f_name.Text = entry.Value.N;
 
 						break;
 					case "3DPlane":
@@ -1121,7 +1187,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tfob2.f_label2.Text = "Y:";
 						tfob2.f_label3.Text = "Z:";
 						tfob2.f_label4.Text = "Point:";
-							
+
+						tfob2.f_type.Text = "Float";
+
 						tfob2.f_value1.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
 						tfob2.f_value2.Text = _m.ReadFloat((address + entry.Key + 4).ToString("X")).ToString();
 						tfob2.f_value3.Text = _m.ReadFloat((address + entry.Key + 8).ToString("X")).ToString();
@@ -1165,7 +1233,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tfob2.f_value3.TextChanged += value_TextChanged;
 						tfob2.f_value4.TextChanged += value_TextChanged;
 
-						tfob2.f_name.Text = entry.Value.N + " - Float";
+						tfob2.f_name.Text = entry.Value.N;
 
 						break;
 
