@@ -1169,7 +1169,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							MemoryType = "Float",
 							TagDef = entry.Value,
 							TagStruct = tagStruct,
-							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 8),
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 12),
 						};
 
 						tfob1.f_value1.TextChanged += value_TextChanged;
@@ -1225,7 +1225,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 							MemoryType = "Float",
 							TagDef = entry.Value,
 							TagStruct = tagStruct,
-							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 8),
+							OffsetOverride = SUSSY_BALLS(entry.Value.AbsoluteTagOffset, 12),
 						};
 
 						tfob2.f_value1.TextChanged += value_TextChanged;
