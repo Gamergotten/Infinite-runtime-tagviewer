@@ -10,7 +10,116 @@
 		<_3B v="" />
 	</_38>
 	<_38 v="psoBucketData">
-		<_39 v="psoData" />
+		<_39 v="psoData">
+			<_40 v="psoData">
+				<_39 v="shaderBytecodes">
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+				</_39>
+				<_41 v="rootSignature" />
+				<_6 v="numReferences" />
+				<_3C v="vertexType" />
+				<_3C v="rasterizerOutputType" />
+				<_3C v="rasterizerMode" />
+				<_3C v="blendMode" />
+				<_3C v="depthStencilMode" />
+				<_3C v="primitiveTopologyType" />
+				<_34 v="generated_pad78d6" length="2" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+			<_40 v="psoData">
+				<_39 v="shaderBytecodes">
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+				</_39>
+				<_41 v="rootSignature" />
+				<_6 v="numReferences" />
+				<_3C v="vertexType" />
+				<_3C v="rasterizerOutputType" />
+				<_3C v="rasterizerMode" />
+				<_3C v="blendMode" />
+				<_3C v="depthStencilMode" />
+				<_3C v="primitiveTopologyType" />
+				<_34 v="generated_pad78d6" length="2" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+			<_40 v="psoData">
+				<_39 v="shaderBytecodes">
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+				</_39>
+				<_41 v="rootSignature" />
+				<_6 v="numReferences" />
+				<_3C v="vertexType" />
+				<_3C v="rasterizerOutputType" />
+				<_3C v="rasterizerMode" />
+				<_3C v="blendMode" />
+				<_3C v="depthStencilMode" />
+				<_3C v="primitiveTopologyType" />
+				<_34 v="generated_pad78d6" length="2" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+			<_40 v="psoData">
+				<_39 v="shaderBytecodes">
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+					<_41 v="shader bytecode" />
+					<_3B v="" />
+				</_39>
+				<_41 v="rootSignature" />
+				<_6 v="numReferences" />
+				<_3C v="vertexType" />
+				<_3C v="rasterizerOutputType" />
+				<_3C v="rasterizerMode" />
+				<_3C v="blendMode" />
+				<_3C v="depthStencilMode" />
+				<_3C v="primitiveTopologyType" />
+				<_34 v="generated_pad78d6" length="2" />
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_39>
 		<_3B v="" />
 	</_38>
 	<_6 v="numPipelineStates" />

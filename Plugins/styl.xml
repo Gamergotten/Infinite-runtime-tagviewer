@@ -240,7 +240,7 @@
 		<Flag v="idle" />
 		<Flag v="" />
 		<Flag v="" />
-		<Flag v="" />
+		<Flag v="patrol" />
 		<Flag v="" />
 		<Flag v="" />
 		<Flag v="" />
@@ -270,7 +270,7 @@
 		<Flag v="" />
 		<Flag v="" />
 		<Flag v="" />
-		<Flag v="" />
+		<Flag v="activity" />
 		<Flag v="" />
 		<Flag v="" />
 		<Flag v="" />

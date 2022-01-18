@@ -96,13 +96,47 @@
 		<_14 v="look velocity step (yaw)" />
 		<_14 v="mouse input velocity scale" />
 		<_36 v="Flying camera pitch values" />
-		<_39 v="flying camera pitch values" />
+		<_39 v="flying camera pitch values">
+			<_14 v="Angular velocity" />
+			<_3B v="" />
+			<_14 v="Angular velocity" />
+			<_3B v="" />
+			<_14 v="Angular velocity" />
+			<_3B v="" />
+			<_14 v="Angular velocity" />
+			<_3B v="" />
+		</_39>
 		<_36 v="Flying camera yaw values" />
-		<_39 v="flying camera yaw values" />
+		<_39 v="flying camera yaw values">
+			<_14 v="Angular velocity" />
+			<_3B v="" />
+			<_14 v="Angular velocity" />
+			<_3B v="" />
+			<_14 v="Angular velocity" />
+			<_3B v="" />
+			<_14 v="Angular velocity" />
+			<_3B v="" />
+		</_39>
 		<_36 v="Flying camera speed values" />
-		<_39 v="flying camera speed values" />
+		<_39 v="flying camera speed values">
+			<_14 v="Speed" />
+			<_3B v="" />
+			<_14 v="Speed" />
+			<_3B v="" />
+			<_14 v="Speed" />
+			<_3B v="" />
+			<_14 v="Speed" />
+			<_3B v="" />
+		</_39>
 		<_36 v="Flying camera thrust values" />
-		<_39 v="flying camera thrust values" />
+		<_39 v="flying camera thrust values">
+			<_14 v="Thrust" />
+			<_3B v="" />
+			<_14 v="Thrust" />
+			<_3B v="" />
+			<_14 v="Thrust" />
+			<_3B v="" />
+		</_39>
 		<_3B v="" />
 	</_40>
 	<_40 v="@first person weapon">

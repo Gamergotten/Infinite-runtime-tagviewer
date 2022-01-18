@@ -279,7 +279,16 @@
 				<_7 v="materialConstantBuffer" />
 				<_7 v="alternateConstantBuffer" />
 				<_3E v="material constant shader stage mask" />
-				<_39 v="runtime queryable properties table" />
+				<_39 v="runtime queryable properties table">
+					<_3C v="index" />
+					<_3B v="" />
+					<_3C v="index" />
+					<_3B v="" />
+					<_3C v="index" />
+					<_3B v="" />
+					<_3C v="index" />
+					<_3B v="" />
+				</_39>
 				<_3B v="" />
 			</_40>
 			<_2 v="physics material name" />

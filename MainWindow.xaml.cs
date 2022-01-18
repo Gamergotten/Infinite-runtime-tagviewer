@@ -92,7 +92,7 @@ namespace InfiniteRuntimeTagViewer
 				// Get the base address
 				BaseAddress = M.ReadLong("HaloInfinite.exe+0x4879758");
 				string validtest = M.ReadString(BaseAddress.ToString("X"));
-				System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite.exe+0x3D13E38"));
+				System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite.exe+0x3D13E38")); // this is the wrong address lol
 				if (validtest == "tag instances")
 				{
 					hook_text.Text = "Process Hooked: " + M.theProc.Id;

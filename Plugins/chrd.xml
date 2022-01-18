@@ -9,6 +9,547 @@
 		</_38>
 		<_3B v="" />
 	</_38>
-	<_39 v="event animations" />
+	<_39 v="event animations">
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+		<_B v="event">
+			<Flag v="Unsc Vehicle" />
+			<Flag v="Covenant Vehicle" />
+			<Flag v="Melee" />
+			<Flag v="Shield Break" />
+			<Flag v="Grapple Hook Deploy" />
+			<Flag v="Out Of Ammo" />
+			<Flag v="Boss Fight" />
+			<Flag v="Narrative" />
+			<Flag v="Player Death" />
+			<Flag v="Win" />
+			<Flag v="Loss" />
+			<Flag v="Idle" />
+			<Flag v="Graple Hook Pull" />
+			<Flag v="Grapple Hook Reel" />
+			<Flag v="Main Menu" />
+		</_B>
+		<_B v="layering">
+			<Flag v="Opaque" />
+			<Flag v="Mix" />
+			<Flag v="Blend" />
+		</_B>
+		<_5 v="priority" />
+		<_34 v="generated_padd53a" length="2" />
+		<_37 v="files" />
+		<_38 v="event files">
+			<_41 v="keyboard file" />
+			<_41 v="mouse file" />
+			<_41 v="headset file" />
+			<_41 v="keypad file" />
+			<_41 v="mousepad file" />
+			<_41 v="chromalink file" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_3B v="" />
+	</_39>
 	<_3B v="" />
 </root>

@@ -56,7 +56,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 				rand = new Random();
 			}
 
-			if (rand.Next(1, 30) == 1)
+			if (rand.Next(1, 470) == 1)
 			{
 				sb.Begin();
 			}

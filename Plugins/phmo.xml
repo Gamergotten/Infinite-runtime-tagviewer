@@ -794,8 +794,26 @@
 			<_40 v="vertices">
 				<_38 v="point">
 					<_17 v="position" />
-					<_39 v="node indices" />
-					<_39 v="node weights" />
+					<_39 v="node indices">
+						<_3C v="node index" />
+						<_3B v="" />
+						<_3C v="node index" />
+						<_3B v="" />
+						<_3C v="node index" />
+						<_3B v="" />
+						<_3C v="node index" />
+						<_3B v="" />
+					</_39>
+					<_39 v="node weights">
+						<_14 v="node weight" />
+						<_3B v="" />
+						<_14 v="node weight" />
+						<_3B v="" />
+						<_14 v="node weight" />
+						<_3B v="" />
+						<_14 v="node weight" />
+						<_3B v="" />
+					</_39>
 					<_3B v="" />
 				</_38>
 				<_20 v="color" />
@@ -805,8 +823,26 @@
 			<_40 v="vectors">
 				<_38 v="point">
 					<_17 v="position" />
-					<_39 v="node indices" />
-					<_39 v="node weights" />
+					<_39 v="node indices">
+						<_3C v="node index" />
+						<_3B v="" />
+						<_3C v="node index" />
+						<_3B v="" />
+						<_3C v="node index" />
+						<_3B v="" />
+						<_3C v="node index" />
+						<_3B v="" />
+					</_39>
+					<_39 v="node weights">
+						<_14 v="node weight" />
+						<_3B v="" />
+						<_14 v="node weight" />
+						<_3B v="" />
+						<_14 v="node weight" />
+						<_3B v="" />
+						<_14 v="node weight" />
+						<_3B v="" />
+					</_39>
 					<_3B v="" />
 				</_38>
 				<_20 v="color" />
@@ -815,17 +851,245 @@
 				<_3B v="" />
 			</_40>
 			<_40 v="lines">
-				<_39 v="points" />
+				<_39 v="points">
+					<_38 v="point">
+						<_17 v="position" />
+						<_39 v="node indices">
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+						</_39>
+						<_39 v="node weights">
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+						</_39>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+					<_38 v="point">
+						<_17 v="position" />
+						<_39 v="node indices">
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+						</_39>
+						<_39 v="node weights">
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+						</_39>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_39>
 				<_20 v="color" />
 				<_3B v="" />
 			</_40>
 			<_40 v="triangles">
-				<_39 v="points" />
+				<_39 v="points">
+					<_38 v="point">
+						<_17 v="position" />
+						<_39 v="node indices">
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+						</_39>
+						<_39 v="node weights">
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+						</_39>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+					<_38 v="point">
+						<_17 v="position" />
+						<_39 v="node indices">
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+						</_39>
+						<_39 v="node weights">
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+						</_39>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+					<_38 v="point">
+						<_17 v="position" />
+						<_39 v="node indices">
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+						</_39>
+						<_39 v="node weights">
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+						</_39>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_39>
 				<_20 v="color" />
 				<_3B v="" />
 			</_40>
 			<_40 v="quads">
-				<_39 v="points" />
+				<_39 v="points">
+					<_38 v="point">
+						<_17 v="position" />
+						<_39 v="node indices">
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+						</_39>
+						<_39 v="node weights">
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+						</_39>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+					<_38 v="point">
+						<_17 v="position" />
+						<_39 v="node indices">
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+						</_39>
+						<_39 v="node weights">
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+						</_39>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+					<_38 v="point">
+						<_17 v="position" />
+						<_39 v="node indices">
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+						</_39>
+						<_39 v="node weights">
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+						</_39>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+					<_38 v="point">
+						<_17 v="position" />
+						<_39 v="node indices">
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+							<_3C v="node index" />
+							<_3B v="" />
+						</_39>
+						<_39 v="node weights">
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+							<_14 v="node weight" />
+							<_3B v="" />
+						</_39>
+						<_3B v="" />
+					</_38>
+					<_3B v="" />
+				</_39>
 				<_20 v="color" />
 				<_3B v="" />
 			</_40>
@@ -833,8 +1097,26 @@
 				<_42 v="text" />
 				<_38 v="point">
 					<_17 v="position" />
-					<_39 v="node indices" />
-					<_39 v="node weights" />
+					<_39 v="node indices">
+						<_3C v="node index" />
+						<_3B v="" />
+						<_3C v="node index" />
+						<_3B v="" />
+						<_3C v="node index" />
+						<_3B v="" />
+						<_3C v="node index" />
+						<_3B v="" />
+					</_39>
+					<_39 v="node weights">
+						<_14 v="node weight" />
+						<_3B v="" />
+						<_14 v="node weight" />
+						<_3B v="" />
+						<_14 v="node weight" />
+						<_3B v="" />
+						<_14 v="node weight" />
+						<_3B v="" />
+					</_39>
 					<_3B v="" />
 				</_38>
 				<_20 v="color" />

@@ -40,7 +40,7 @@
 
             <TextBlock x:Name="tagblock_title" Text="Tag block description" VerticalAlignment="Center" HorizontalAlignment="Left" Height="Auto" Width="Auto" Grid.Column="1"/>
 
-            <TextBox x:Name="tagblock_address" Text="Tag block address" Grid.Column="2" Height="20" Width="190" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" />
+            <TextBox x:Name="tagblock_address" Text="Tag block address" Grid.Column="2" Height="20" Width="110" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" />
             <TextBlock Text="Count" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Right" Width="30" Height="14" Margin="0,0,90,0"/>
             <TextBox x:Name="tagblock_count" Text="-" Grid.Column="4" Background="#111" Height="20" Width="40" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,45,0"/>
 

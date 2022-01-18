@@ -56,7 +56,17 @@
 	</_40>
 	<_40 v="Material Layer Ids">
 		<_2 v="Id" />
-		<_39 v="Output Bitmap References" />
+		<_39 v="Output Bitmap References">
+			<_6 v="Bitmap Reference Index" />
+			<_18 v="Scale of the UV transform" />
+			<_3B v="" />
+			<_6 v="Bitmap Reference Index" />
+			<_18 v="Scale of the UV transform" />
+			<_3B v="" />
+			<_6 v="Bitmap Reference Index" />
+			<_18 v="Scale of the UV transform" />
+			<_3B v="" />
+		</_39>
 		<_3B v="" />
 	</_40>
 	<_6 v="Placements Layers Count" />

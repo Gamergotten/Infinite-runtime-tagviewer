@@ -105,7 +105,24 @@
 		<_6 v="long in struct" />
 		<_3B v="" />
 	</_38>
-	<_39 v="basic array" />
+	<_39 v="basic array">
+		<_6 v="long in array" />
+		<_3B v="" />
+		<_6 v="long in array" />
+		<_3B v="" />
+		<_6 v="long in array" />
+		<_3B v="" />
+		<_6 v="long in array" />
+		<_3B v="" />
+		<_6 v="long in array" />
+		<_3B v="" />
+		<_6 v="long in array" />
+		<_3B v="" />
+		<_6 v="long in array" />
+		<_3B v="" />
+		<_6 v="long in array" />
+		<_3B v="" />
+	</_39>
 	<_43 v="basic resource" />
 	<_40 v="block with struct">
 		<_38 v="struct in block">
@@ -152,7 +169,248 @@
 		</_40>
 		<_3B v="" />
 	</_38>
-	<_39 v="complex array" />
+	<_39 v="complex array">
+		<_0 v="string in array" />
+		<_40 v="basic block in array">
+			<_1 v="name" />
+			<_3B v="" />
+		</_40>
+		<_10 v="point 2d in array" />
+		<_38 v="complex struct in array">
+			<_40 v="basic block">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_20 v="color" />
+			<_40 v="complex block">
+				<_40 v="foo">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_40 v="bar">
+					<_41 v="reference" />
+					<_40 v="raz">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+		<_0 v="string in array" />
+		<_40 v="basic block in array">
+			<_1 v="name" />
+			<_3B v="" />
+		</_40>
+		<_10 v="point 2d in array" />
+		<_38 v="complex struct in array">
+			<_40 v="basic block">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_20 v="color" />
+			<_40 v="complex block">
+				<_40 v="foo">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_40 v="bar">
+					<_41 v="reference" />
+					<_40 v="raz">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+		<_0 v="string in array" />
+		<_40 v="basic block in array">
+			<_1 v="name" />
+			<_3B v="" />
+		</_40>
+		<_10 v="point 2d in array" />
+		<_38 v="complex struct in array">
+			<_40 v="basic block">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_20 v="color" />
+			<_40 v="complex block">
+				<_40 v="foo">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_40 v="bar">
+					<_41 v="reference" />
+					<_40 v="raz">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+		<_0 v="string in array" />
+		<_40 v="basic block in array">
+			<_1 v="name" />
+			<_3B v="" />
+		</_40>
+		<_10 v="point 2d in array" />
+		<_38 v="complex struct in array">
+			<_40 v="basic block">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_20 v="color" />
+			<_40 v="complex block">
+				<_40 v="foo">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_40 v="bar">
+					<_41 v="reference" />
+					<_40 v="raz">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+		<_0 v="string in array" />
+		<_40 v="basic block in array">
+			<_1 v="name" />
+			<_3B v="" />
+		</_40>
+		<_10 v="point 2d in array" />
+		<_38 v="complex struct in array">
+			<_40 v="basic block">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_20 v="color" />
+			<_40 v="complex block">
+				<_40 v="foo">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_40 v="bar">
+					<_41 v="reference" />
+					<_40 v="raz">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+		<_0 v="string in array" />
+		<_40 v="basic block in array">
+			<_1 v="name" />
+			<_3B v="" />
+		</_40>
+		<_10 v="point 2d in array" />
+		<_38 v="complex struct in array">
+			<_40 v="basic block">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_20 v="color" />
+			<_40 v="complex block">
+				<_40 v="foo">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_40 v="bar">
+					<_41 v="reference" />
+					<_40 v="raz">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+		<_0 v="string in array" />
+		<_40 v="basic block in array">
+			<_1 v="name" />
+			<_3B v="" />
+		</_40>
+		<_10 v="point 2d in array" />
+		<_38 v="complex struct in array">
+			<_40 v="basic block">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_20 v="color" />
+			<_40 v="complex block">
+				<_40 v="foo">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_40 v="bar">
+					<_41 v="reference" />
+					<_40 v="raz">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+		<_0 v="string in array" />
+		<_40 v="basic block in array">
+			<_1 v="name" />
+			<_3B v="" />
+		</_40>
+		<_10 v="point 2d in array" />
+		<_38 v="complex struct in array">
+			<_40 v="basic block">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_20 v="color" />
+			<_40 v="complex block">
+				<_40 v="foo">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_40 v="bar">
+					<_41 v="reference" />
+					<_40 v="raz">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_40>
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_39>
 	<_38 v="motherload struct">
 		<_38 v="struct">
 			<_40 v="basic block">
@@ -177,7 +435,248 @@
 			</_40>
 			<_3B v="" />
 		</_38>
-		<_39 v="array" />
+		<_39 v="array">
+			<_0 v="string in array" />
+			<_40 v="basic block in array">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_10 v="point 2d in array" />
+			<_38 v="complex struct in array">
+				<_40 v="basic block">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_20 v="color" />
+				<_40 v="complex block">
+					<_40 v="foo">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bar">
+						<_41 v="reference" />
+						<_40 v="raz">
+							<_1 v="name" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+			<_0 v="string in array" />
+			<_40 v="basic block in array">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_10 v="point 2d in array" />
+			<_38 v="complex struct in array">
+				<_40 v="basic block">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_20 v="color" />
+				<_40 v="complex block">
+					<_40 v="foo">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bar">
+						<_41 v="reference" />
+						<_40 v="raz">
+							<_1 v="name" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+			<_0 v="string in array" />
+			<_40 v="basic block in array">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_10 v="point 2d in array" />
+			<_38 v="complex struct in array">
+				<_40 v="basic block">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_20 v="color" />
+				<_40 v="complex block">
+					<_40 v="foo">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bar">
+						<_41 v="reference" />
+						<_40 v="raz">
+							<_1 v="name" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+			<_0 v="string in array" />
+			<_40 v="basic block in array">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_10 v="point 2d in array" />
+			<_38 v="complex struct in array">
+				<_40 v="basic block">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_20 v="color" />
+				<_40 v="complex block">
+					<_40 v="foo">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bar">
+						<_41 v="reference" />
+						<_40 v="raz">
+							<_1 v="name" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+			<_0 v="string in array" />
+			<_40 v="basic block in array">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_10 v="point 2d in array" />
+			<_38 v="complex struct in array">
+				<_40 v="basic block">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_20 v="color" />
+				<_40 v="complex block">
+					<_40 v="foo">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bar">
+						<_41 v="reference" />
+						<_40 v="raz">
+							<_1 v="name" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+			<_0 v="string in array" />
+			<_40 v="basic block in array">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_10 v="point 2d in array" />
+			<_38 v="complex struct in array">
+				<_40 v="basic block">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_20 v="color" />
+				<_40 v="complex block">
+					<_40 v="foo">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bar">
+						<_41 v="reference" />
+						<_40 v="raz">
+							<_1 v="name" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+			<_0 v="string in array" />
+			<_40 v="basic block in array">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_10 v="point 2d in array" />
+			<_38 v="complex struct in array">
+				<_40 v="basic block">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_20 v="color" />
+				<_40 v="complex block">
+					<_40 v="foo">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bar">
+						<_41 v="reference" />
+						<_40 v="raz">
+							<_1 v="name" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+			<_0 v="string in array" />
+			<_40 v="basic block in array">
+				<_1 v="name" />
+				<_3B v="" />
+			</_40>
+			<_10 v="point 2d in array" />
+			<_38 v="complex struct in array">
+				<_40 v="basic block">
+					<_1 v="name" />
+					<_3B v="" />
+				</_40>
+				<_20 v="color" />
+				<_40 v="complex block">
+					<_40 v="foo">
+						<_1 v="name" />
+						<_3B v="" />
+					</_40>
+					<_40 v="bar">
+						<_41 v="reference" />
+						<_40 v="raz">
+							<_1 v="name" />
+							<_3B v="" />
+						</_40>
+						<_3B v="" />
+					</_40>
+					<_3B v="" />
+				</_40>
+				<_3B v="" />
+			</_38>
+			<_3B v="" />
+		</_39>
 		<_40 v="block">
 			<_40 v="foo">
 				<_1 v="name" />

@@ -302,15 +302,66 @@
 						<_14 v="bounding radius override" />
 						<_38 v="runtime m_gpu_data">
 							<_40 v="runtime gpu_property_block">
-								<_39 v="runtime gpu_property_sub_array" />
+								<_39 v="runtime gpu_property_sub_array">
+									<_14 v="runtime gpu_property_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_property_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_property_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_property_real" />
+									<_3B v="" />
+								</_39>
 								<_3B v="" />
 							</_40>
 							<_40 v="runtime gpu_functions_block">
-								<_39 v="runtime gpu_function_sub_array" />
+								<_39 v="runtime gpu_function_sub_array">
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+								</_39>
 								<_3B v="" />
 							</_40>
 							<_40 v="runtime gpu_colors_block">
-								<_39 v="runtime gpu_color_sub_array" />
+								<_39 v="runtime gpu_color_sub_array">
+									<_14 v="runtime gpu_color_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_color_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_color_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_color_real" />
+									<_3B v="" />
+								</_39>
 								<_3B v="" />
 							</_40>
 							<_3B v="" />
@@ -335,15 +386,66 @@
 						<_14 v="bounding radius override" />
 						<_38 v="runtime m_gpu_data">
 							<_40 v="runtime gpu_property_block">
-								<_39 v="runtime gpu_property_sub_array" />
+								<_39 v="runtime gpu_property_sub_array">
+									<_14 v="runtime gpu_property_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_property_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_property_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_property_real" />
+									<_3B v="" />
+								</_39>
 								<_3B v="" />
 							</_40>
 							<_40 v="runtime gpu_functions_block">
-								<_39 v="runtime gpu_function_sub_array" />
+								<_39 v="runtime gpu_function_sub_array">
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_function_real" />
+									<_3B v="" />
+								</_39>
 								<_3B v="" />
 							</_40>
 							<_40 v="runtime gpu_colors_block">
-								<_39 v="runtime gpu_color_sub_array" />
+								<_39 v="runtime gpu_color_sub_array">
+									<_14 v="runtime gpu_color_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_color_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_color_real" />
+									<_3B v="" />
+									<_14 v="runtime gpu_color_real" />
+									<_3B v="" />
+								</_39>
 								<_3B v="" />
 							</_40>
 							<_3B v="" />

@@ -109,7 +109,18 @@
 		<_34 v="generated_pad48bb" length="1" />
 		<_3B v="" />
 	</_40>
-	<_39 v="First Person Weapon Offset Controls Index Cache" />
+	<_39 v="First Person Weapon Offset Controls Index Cache">
+		<_6 v="Index" />
+		<_3B v="" />
+		<_6 v="Index" />
+		<_3B v="" />
+		<_6 v="Index" />
+		<_3B v="" />
+		<_6 v="Index" />
+		<_3B v="" />
+		<_6 v="Index" />
+		<_3B v="" />
+	</_39>
 	<_14 v="game options - weapon offset scaling factor" />
 	<_34 v="generated_padcb7b" length="4" />
 	<_3B v="" />

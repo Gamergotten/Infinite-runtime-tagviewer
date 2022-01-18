@@ -274,7 +274,16 @@
 			<_7 v="materialConstantBuffer" />
 			<_7 v="alternateConstantBuffer" />
 			<_3E v="material constant shader stage mask" />
-			<_39 v="runtime queryable properties table" />
+			<_39 v="runtime queryable properties table">
+				<_3C v="index" />
+				<_3B v="" />
+				<_3C v="index" />
+				<_3B v="" />
+				<_3C v="index" />
+				<_3B v="" />
+				<_3C v="index" />
+				<_3B v="" />
+			</_39>
 			<_3B v="" />
 		</_40>
 		<_2 v="physics material name" />
@@ -387,7 +396,16 @@
 	<_41 v="Model" />
 	<_38 v="runtime m_gpu_data">
 		<_40 v="runtime m_sprite">
-			<_39 v="runtime gpu_sprite_array" />
+			<_39 v="runtime gpu_sprite_array">
+				<_14 v="runtime gpu_real" />
+				<_3B v="" />
+				<_14 v="runtime gpu_real" />
+				<_3B v="" />
+				<_14 v="runtime gpu_real" />
+				<_3B v="" />
+				<_14 v="runtime gpu_real" />
+				<_3B v="" />
+			</_39>
 			<_3B v="" />
 		</_40>
 		<_3B v="" />

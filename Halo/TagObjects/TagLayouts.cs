@@ -368,7 +368,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						}
 						else
 						{
-
+							// what
 						}
 						return 0;
 					case "_38": //struct
@@ -394,9 +394,16 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 						return current_offset1 - offset;
 
 
-					case "_39":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
-						return group_lengths_dict[xn.Name];
+					case "_39":
+						pairs.Add(offset + evalutated_index_PREVENT_DICTIONARYERROR, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText });
+						evalutated_index_PREVENT_DICTIONARYERROR++;
+						XmlNodeList xnl3 = xn.ChildNodes;
+						long current_offset3 = offset;
+						foreach (XmlNode xntwo2 in xnl3)
+						{
+							current_offset3 += the_switch_statement(xntwo2, current_offset3, ref pairs);
+						}
+						return current_offset3 - offset;
 					case "_3A":// unmapped
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
@@ -436,8 +443,8 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					case "_41":
 						pairs.Add(offset, new C { T = "TagRef", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
-					case "_42":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
+					case "_42":
+						pairs.Add(offset, new C { T = "FUNCTION", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_43":// unmapped
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
@@ -527,11 +534,14 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_41", 28 }, // _field_reference_v2
 				{ "_42", 24 }, // _field_data_v2
 
-				{ "_43", 4 }, // im pretty sure 
+				{ "_43", 4 }, // ok this one is actually used lol
+
 				{ "_44", 4 },
 				{ "_45", 4 },
 				{ "_69", 128 } // fuck you hlmt
 			};
+
+
 		}
 	}
 }
