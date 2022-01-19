@@ -36,20 +36,20 @@ namespace InfiniteRuntimeTagViewer
 		tag evaluation checks - when poking we should check to see that the tag is still valid
 
 		### QOL
-		add colapse to tagblocks
 		reload tag button
 		auto poke changes as tags are loaded/reloaded
+
+		Multiple poke lists
 		revert changes list
-		only change UI tags loaded things that need to be added/removed to save perfromance
+		mod poke abort
+		-- required tags
+		-- can abort
+
 
 		### ERROR CATCHING
 		extra exception handling for tags - where we check for tag validity when poking?
 
 		### TAG STRUCTS
-		.style flags are invis
-		.jamd tag broke
-		.hlmt tag needs _39 mapped
-		.phmo tag kind broke
 		char ' gets turned into the funny unknown char. ex. don't -> dont^t (i dont actually have the symbol so thats not a good example)
 
 
@@ -108,9 +108,9 @@ namespace InfiniteRuntimeTagViewer
 
 
 
-		public void HookAndLoad()
+		public async void HookAndLoad()
 		{
-			_ = HookProcessAsync();
+			await HookProcessAsync(); // this didn't wait lol
 			if (BaseAddress != -1 )
 			{
 				LoadTagsMem(false);
