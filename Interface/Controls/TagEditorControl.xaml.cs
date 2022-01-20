@@ -409,190 +409,201 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						};
 						fb1.tagblock_count.TextChanged += value_TextChanged;
 
-						fb1.BlockAddress = functAddress;
-						// next base for thingos
-						if (functAddress != 0)
+						try 
 						{
-							// 1st byte
-							TagValueBlock? fb_vb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-							fb_vb1.value_type.Text = "Byte";
-							fb_vb1.value.Text = _m.ReadByte((functAddress).ToString("X")).ToString();
-							fb_vb1.value.Tag = new TagEditorDefinition()
+							fb1.BlockAddress = functAddress;
+							// next base for thingos
+							if (functAddress != 0)
 							{
-								MemoryType = "Byte",
-								TagDef = entry.Value,
-								TagStruct = tagStruct,
-								OffsetOverride = entry.Value.AbsoluteTagOffset + ",0"
-							};
-							fb_vb1.value.TextChanged += value_TextChanged;
-							fb_vb1.value_name.Text = "Function Type1";
-							fb1.dockpanel.Children.Add(fb_vb1);
-							// 2nd byte
-							TagValueBlock? fb_vb2 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-							fb_vb2.value_type.Text = "Byte";
-							fb_vb2.value.Text = _m.ReadByte((functAddress + 1).ToString("X")).ToString();
-							fb_vb2.value.Tag = new TagEditorDefinition()
-							{
-								MemoryType = "Byte",
-								TagDef = entry.Value,
-								TagStruct = tagStruct,
-								OffsetOverride = entry.Value.AbsoluteTagOffset + ",1"
-							};
-							fb_vb2.value.TextChanged += value_TextChanged;
-							fb_vb2.value_name.Text = "Function Type2";
-							fb1.dockpanel.Children.Add(fb_vb2);
-							// 3rd byte
-							TagValueBlock? fb_vb3 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-							fb_vb3.value_type.Text = "Byte";
-							fb_vb3.value.Text = _m.ReadByte((functAddress + 2).ToString("X")).ToString();
-							fb_vb3.value.Tag = new TagEditorDefinition()
-							{
-								MemoryType = "Byte",
-								TagDef = entry.Value,
-								TagStruct = tagStruct,
-								OffsetOverride = entry.Value.AbsoluteTagOffset + ",2"
-							};
-							fb_vb3.value.TextChanged += value_TextChanged;
-							fb_vb3.value_name.Text = "Function Type3";
-							fb1.dockpanel.Children.Add(fb_vb3);
-							// 4th byte
-							TagValueBlock? fb_vb4 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-							fb_vb4.value_type.Text = "Byte";
-							fb_vb4.value.Text = _m.ReadByte((functAddress + 3).ToString("X")).ToString();
-							fb_vb4.value.Tag = new TagEditorDefinition()
-							{
-								MemoryType = "Byte",
-								TagDef = entry.Value,
-								TagStruct = tagStruct,
-								OffsetOverride = entry.Value.AbsoluteTagOffset + ",3"
-							};
-							fb_vb4.value.TextChanged += value_TextChanged;
-							fb_vb4.value_name.Text = "Function Type4";
-							fb1.dockpanel.Children.Add(fb_vb4);
-							// MIN FLOAT
-							TagValueBlock? fb_vb5 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-							fb_vb5.value_type.Text = "Float";
-							fb_vb5.value.Text = _m.ReadFloat((functAddress + 4).ToString("X"), "", false).ToString();
-							fb_vb5.value.Tag = new TagEditorDefinition()
-							{
-								MemoryType = "Float",
-								TagDef = entry.Value,
-								TagStruct = tagStruct,
-								OffsetOverride = entry.Value.AbsoluteTagOffset + ",4"
-							};
-							fb_vb5.value.TextChanged += value_TextChanged;
-							fb_vb5.value_name.Text = "Min";
-							fb1.dockpanel.Children.Add(fb_vb5);
-							// MAX FLOAT
-							TagValueBlock? fb_vb6 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-							fb_vb6.value_type.Text = "Float";
-							fb_vb6.value.Text = _m.ReadFloat((functAddress + 8).ToString("X"), "", false).ToString();
-							fb_vb6.value.Tag = new TagEditorDefinition()
-							{
-								MemoryType = "Float",
-								TagDef = entry.Value,
-								TagStruct = tagStruct,
-								OffsetOverride = entry.Value.AbsoluteTagOffset + ",8"
-							};
-							fb_vb6.value.TextChanged += value_TextChanged;
-							fb_vb6.value_name.Text = "Max";
-							fb1.dockpanel.Children.Add(fb_vb6);
-							// UNKNOWN1
-							TagValueBlock? fb_vb7 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-							fb_vb7.value_type.Text = "Float";
-							fb_vb7.value.Text = _m.ReadFloat((functAddress + 12).ToString("X"), "", false).ToString();
-							fb_vb7.value.Tag = new TagEditorDefinition()
-							{
-								MemoryType = "Float",
-								TagDef = entry.Value,
-								TagStruct = tagStruct,
-								OffsetOverride = entry.Value.AbsoluteTagOffset + ",12"
-							};
-							fb_vb7.value.TextChanged += value_TextChanged;
-							fb_vb7.value_name.Text = "Unknown1";
-							fb1.dockpanel.Children.Add(fb_vb7);
-							// UNKNOWN2
-							TagValueBlock? fb_vb8 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-							fb_vb8.value_type.Text = "Float";
-							fb_vb8.value.Text = _m.ReadFloat((functAddress + 16).ToString("X"), "", false).ToString();
-							fb_vb8.value.Tag = new TagEditorDefinition()
-							{
-								MemoryType = "Float",
-								TagDef = entry.Value,
-								TagStruct = tagStruct,
-								OffsetOverride = entry.Value.AbsoluteTagOffset + ",16"
-							};
-							fb_vb8.value.TextChanged += value_TextChanged;
-							fb_vb8.value_name.Text = "Unknown2";
-							fb1.dockpanel.Children.Add(fb_vb8);
-							// UNK MIN
-							TagValueBlock? fb_vb9 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-							fb_vb9.value_type.Text = "Float";
-							fb_vb9.value.Text = _m.ReadFloat((functAddress + 20).ToString("X"), "", false).ToString();
-							fb_vb9.value.Tag = new TagEditorDefinition()
-							{
-								MemoryType = "Float",
-								TagDef = entry.Value,
-								TagStruct = tagStruct,
-								OffsetOverride = entry.Value.AbsoluteTagOffset + ",20"
-							};
-							fb_vb9.value.TextChanged += value_TextChanged;
-							fb_vb9.value_name.Text = "Unk Min";
-							fb1.dockpanel.Children.Add(fb_vb9);
-							// UNK MAX
-							TagValueBlock? fb_vb10 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-							fb_vb10.value_type.Text = "Float";
-							fb_vb10.value.Text = _m.ReadFloat((functAddress + 24).ToString("X"), "", false).ToString();
-							fb_vb10.value.Tag = new TagEditorDefinition()
-							{
-								MemoryType = "Float",
-								TagDef = entry.Value,
-								TagStruct = tagStruct,
-								OffsetOverride = entry.Value.AbsoluteTagOffset + ",24"
-							};
-							fb_vb10.value.TextChanged += value_TextChanged;
-							fb_vb10.value_name.Text = "Unk Max";
-							fb1.dockpanel.Children.Add(fb_vb10);
-							// leftover bytes -- used for the curvature information
-							int leftoverbytes = _m.ReadInt((functAddress + 28).ToString("X"));
-							//
-							TagValueBlock? fb_vb11 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-							fb_vb11.value_type.Text = "4Byte";
-							fb_vb11.value.Text = leftoverbytes.ToString();
-							fb_vb11.value.Tag = new TagEditorDefinition()
-							{
-								MemoryType = "4Byte",
-								TagDef = entry.Value,
-								TagStruct = tagStruct,
-								OffsetOverride = entry.Value.AbsoluteTagOffset + ",28"
-							};
-							fb_vb11.value.TextChanged += value_TextChanged;
-							fb_vb11.value_name.Text = "Curvature Bytecount";
-							fb1.dockpanel.Children.Add(fb_vb11);
-							// write the rest of the junk to here
-							if (leftoverbytes > 0)
-							{
-								TagValueBlock? fb_vb12 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-								fb_vb12.value_type.Text = "Bytes or something";
-								fb_vb12.value.Text = BitConverter.ToString(_m.ReadBytes((address + entry.Key).ToString("X"), leftoverbytes)).Replace("-", string.Empty);
-								fb_vb12.value.Tag = new TagEditorDefinition()
+								// 1st byte
+								TagValueBlock? fb_vb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+								fb_vb1.value_type.Text = "Byte";
+								fb_vb1.value.Text = _m.ReadByte((functAddress).ToString("X")).ToString();
+								fb_vb1.value.Tag = new TagEditorDefinition()
 								{
-									MemoryType = "mmr3Hash",
+									MemoryType = "Byte",
 									TagDef = entry.Value,
 									TagStruct = tagStruct,
-									OffsetOverride = entry.Value.AbsoluteTagOffset + ",32"
+									OffsetOverride = entry.Value.AbsoluteTagOffset + ",0"
 								};
-								fb_vb12.value.TextChanged += value_TextChanged;
-								fb_vb12.value_name.Text = "Curvature Bytes";
-								fb1.dockpanel.Children.Add(fb_vb12);
-							}
-							else
-							{
-								CommentBlock? vb99 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-								fb1.dockpanel.Children.Add(vb99);
-								vb99.comment.Text = "no curvature";
+								fb_vb1.value.TextChanged += value_TextChanged;
+								fb_vb1.value_name.Text = "Function Type1";
+								fb1.dockpanel.Children.Add(fb_vb1);
+								// 2nd byte
+								TagValueBlock? fb_vb2 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+								fb_vb2.value_type.Text = "Byte";
+								fb_vb2.value.Text = _m.ReadByte((functAddress + 1).ToString("X")).ToString();
+								fb_vb2.value.Tag = new TagEditorDefinition()
+								{
+									MemoryType = "Byte",
+									TagDef = entry.Value,
+									TagStruct = tagStruct,
+									OffsetOverride = entry.Value.AbsoluteTagOffset + ",1"
+								};
+								fb_vb2.value.TextChanged += value_TextChanged;
+								fb_vb2.value_name.Text = "Function Type2";
+								fb1.dockpanel.Children.Add(fb_vb2);
+								// 3rd byte
+								TagValueBlock? fb_vb3 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+								fb_vb3.value_type.Text = "Byte";
+								fb_vb3.value.Text = _m.ReadByte((functAddress + 2).ToString("X")).ToString();
+								fb_vb3.value.Tag = new TagEditorDefinition()
+								{
+									MemoryType = "Byte",
+									TagDef = entry.Value,
+									TagStruct = tagStruct,
+									OffsetOverride = entry.Value.AbsoluteTagOffset + ",2"
+								};
+								fb_vb3.value.TextChanged += value_TextChanged;
+								fb_vb3.value_name.Text = "Function Type3";
+								fb1.dockpanel.Children.Add(fb_vb3);
+								// 4th byte
+								TagValueBlock? fb_vb4 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+								fb_vb4.value_type.Text = "Byte";
+								fb_vb4.value.Text = _m.ReadByte((functAddress + 3).ToString("X")).ToString();
+								fb_vb4.value.Tag = new TagEditorDefinition()
+								{
+									MemoryType = "Byte",
+									TagDef = entry.Value,
+									TagStruct = tagStruct,
+									OffsetOverride = entry.Value.AbsoluteTagOffset + ",3"
+								};
+								fb_vb4.value.TextChanged += value_TextChanged;
+								fb_vb4.value_name.Text = "Function Type4";
+								fb1.dockpanel.Children.Add(fb_vb4);
+								// MIN FLOAT
+								TagValueBlock? fb_vb5 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+								fb_vb5.value_type.Text = "Float";
+								fb_vb5.value.Text = _m.ReadFloat((functAddress + 4).ToString("X"), "", false).ToString();
+								fb_vb5.value.Tag = new TagEditorDefinition()
+								{
+									MemoryType = "Float",
+									TagDef = entry.Value,
+									TagStruct = tagStruct,
+									OffsetOverride = entry.Value.AbsoluteTagOffset + ",4"
+								};
+								fb_vb5.value.TextChanged += value_TextChanged;
+								fb_vb5.value_name.Text = "Min";
+								fb1.dockpanel.Children.Add(fb_vb5);
+								// MAX FLOAT
+								TagValueBlock? fb_vb6 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+								fb_vb6.value_type.Text = "Float";
+								fb_vb6.value.Text = _m.ReadFloat((functAddress + 8).ToString("X"), "", false).ToString();
+								fb_vb6.value.Tag = new TagEditorDefinition()
+								{
+									MemoryType = "Float",
+									TagDef = entry.Value,
+									TagStruct = tagStruct,
+									OffsetOverride = entry.Value.AbsoluteTagOffset + ",8"
+								};
+								fb_vb6.value.TextChanged += value_TextChanged;
+								fb_vb6.value_name.Text = "Max";
+								fb1.dockpanel.Children.Add(fb_vb6);
+								// UNKNOWN1
+								TagValueBlock? fb_vb7 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+								fb_vb7.value_type.Text = "Float";
+								fb_vb7.value.Text = _m.ReadFloat((functAddress + 12).ToString("X"), "", false).ToString();
+								fb_vb7.value.Tag = new TagEditorDefinition()
+								{
+									MemoryType = "Float",
+									TagDef = entry.Value,
+									TagStruct = tagStruct,
+									OffsetOverride = entry.Value.AbsoluteTagOffset + ",12"
+								};
+								fb_vb7.value.TextChanged += value_TextChanged;
+								fb_vb7.value_name.Text = "Unknown1";
+								fb1.dockpanel.Children.Add(fb_vb7);
+								// UNKNOWN2
+								TagValueBlock? fb_vb8 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+								fb_vb8.value_type.Text = "Float";
+								fb_vb8.value.Text = _m.ReadFloat((functAddress + 16).ToString("X"), "", false).ToString();
+								fb_vb8.value.Tag = new TagEditorDefinition()
+								{
+									MemoryType = "Float",
+									TagDef = entry.Value,
+									TagStruct = tagStruct,
+									OffsetOverride = entry.Value.AbsoluteTagOffset + ",16"
+								};
+								fb_vb8.value.TextChanged += value_TextChanged;
+								fb_vb8.value_name.Text = "Unknown2";
+								fb1.dockpanel.Children.Add(fb_vb8);
+								// UNK MIN
+								TagValueBlock? fb_vb9 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+								fb_vb9.value_type.Text = "Float";
+								fb_vb9.value.Text = _m.ReadFloat((functAddress + 20).ToString("X"), "", false).ToString();
+								fb_vb9.value.Tag = new TagEditorDefinition()
+								{
+									MemoryType = "Float",
+									TagDef = entry.Value,
+									TagStruct = tagStruct,
+									OffsetOverride = entry.Value.AbsoluteTagOffset + ",20"
+								};
+								fb_vb9.value.TextChanged += value_TextChanged;
+								fb_vb9.value_name.Text = "Unk Min";
+								fb1.dockpanel.Children.Add(fb_vb9);
+								// UNK MAX
+								TagValueBlock? fb_vb10 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+								fb_vb10.value_type.Text = "Float";
+								fb_vb10.value.Text = _m.ReadFloat((functAddress + 24).ToString("X"), "", false).ToString();
+								fb_vb10.value.Tag = new TagEditorDefinition()
+								{
+									MemoryType = "Float",
+									TagDef = entry.Value,
+									TagStruct = tagStruct,
+									OffsetOverride = entry.Value.AbsoluteTagOffset + ",24"
+								};
+								fb_vb10.value.TextChanged += value_TextChanged;
+								fb_vb10.value_name.Text = "Unk Max";
+								fb1.dockpanel.Children.Add(fb_vb10);
+								// leftover bytes -- used for the curvature information
+								int leftoverbytes = _m.ReadInt((functAddress + 28).ToString("X"));
+								//
+								TagValueBlock? fb_vb11 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+								fb_vb11.value_type.Text = "4Byte";
+								fb_vb11.value.Text = leftoverbytes.ToString();
+								fb_vb11.value.Tag = new TagEditorDefinition()
+								{
+									MemoryType = "4Byte",
+									TagDef = entry.Value,
+									TagStruct = tagStruct,
+									OffsetOverride = entry.Value.AbsoluteTagOffset + ",28"
+								};
+								fb_vb11.value.TextChanged += value_TextChanged;
+								fb_vb11.value_name.Text = "Curvature Bytecount";
+								fb1.dockpanel.Children.Add(fb_vb11);
+								// write the rest of the junk to here
+								if (leftoverbytes > 0)
+								{
+									TagValueBlock? fb_vb12 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+									fb_vb12.value_type.Text = "Bytes or something";
+									fb_vb12.value.Text = BitConverter.ToString(_m.ReadBytes((address + entry.Key).ToString("X"), leftoverbytes)).Replace("-", string.Empty);
+									fb_vb12.value.Tag = new TagEditorDefinition()
+									{
+										MemoryType = "mmr3Hash",
+										TagDef = entry.Value,
+										TagStruct = tagStruct,
+										OffsetOverride = entry.Value.AbsoluteTagOffset + ",32"
+									};
+									fb_vb12.value.TextChanged += value_TextChanged;
+									fb_vb12.value_name.Text = "Curvature Bytes";
+									fb1.dockpanel.Children.Add(fb_vb12);
+								}
+								else
+								{
+									CommentBlock? vb99 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+									fb1.dockpanel.Children.Add(vb99);
+									vb99.comment.Text = "no curvature";
+								}
 							}
 						}
+						catch
+						{
+							CommentBlock? vb99 = new() { HorizontalAlignment = HorizontalAlignment.Left };
+							fb1.dockpanel.Children.Add(vb99);
+							vb99.comment.Text = "this is what happens when i only add partial support for things";
+						}
+
+
 						break;
 					case "EnumGroup":
 						// make sure we got a enumgroup def
