@@ -2,14 +2,14 @@
 
 # Download
 
-In-development build (Click to download)(this is the one you want to download):
+In-development build:
 
 [![Download latest build](https://github.com/Gamergotten/Infinite-runtime-tagviewer/actions/workflows/dotnet.yml/badge.svg)](https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/Binaries.zip) <- (click to download)
 
 
 # Read me
 
-epic runtime tag editing tool for infinite, some useful documentations and guides here: https://www.halocustoms.com/modding-wiki/haloinfinite/
+epic runtime tag editing tool for infinite, some useful documentations and guides here (when its ready and finalized): https://www.halocustoms.com/modding-wiki/haloinfinite/
 
 
 
@@ -20,5 +20,8 @@ enormous thanks to Krevil for his tool (https://github.com/Krevil/InfiniteModule
 
 also pretty huge thanks to Callum Carmicheal for the various contributions and the UI (which now doesn't look terrible lol, nice work!), 
 as well as the rest of the halo mods crew for being awesome
+
+also thanks to gamecheat13 for being able to help get the tool work again after updates
+Aswell as thanks to TypeChecked for the awesome icon
 
 https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/Binaries.zip
