@@ -162,6 +162,7 @@
 
                         </MenuItem>
                         <MenuItem Header="Tools" WindowChrome.IsHitTestVisibleInChrome="True" FontFamily="Segoe UI Light" Height="28">
+                            <MenuItem x:Name="TeleportMenuButton" Header="Teleport Menu" Click="OpenTeleportMenu"/>
                             <MenuItem x:Name="DebugMenu" Header="Debug">
                                 <MenuItem x:Name="UnloadAllTags" Header="Unload Tags" Click="UnloadTags" >
                                     <MenuItem.ToolTip>

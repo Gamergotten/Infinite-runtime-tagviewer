@@ -1289,6 +1289,12 @@ namespace InfiniteRuntimeTagViewer
 			win2.Show();
 		}
 
+		public void OpenTeleportMenu(object sender, RoutedEventArgs e)
+		{
+			TeleportWindow tp_win = new(M);
+			tp_win.Show();
+		}
+
 		public ProcessSelector GetProcessSelector()
 		{
 			return processSelector;
