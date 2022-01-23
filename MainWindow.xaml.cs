@@ -144,7 +144,7 @@ namespace InfiniteRuntimeTagViewer
 				// Get the base address
 				BaseAddress = M.ReadLong("HaloInfinite.exe+3E96260");
 				string validtest = M.ReadString(BaseAddress.ToString("X"));
-				//System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite.exe+0x3D13E38")); // this is the wrong address lol
+				//System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite .exe+0x3D13E38")); // this is the wrong address lol
 				if (validtest == "tag instances")
 				{
 					hook_text.Text = "Process Hooked: " + M.theProc.Id;
@@ -239,7 +239,7 @@ namespace InfiniteRuntimeTagViewer
 
 		public async Task ScanMem()
 		{
-			BaseAddress = M.ReadLong("HaloInfinite.exe+3E96260");
+			BaseAddress = M.ReadLong("HaloInfinite.exe+3E96260"); // FALLBACK ADDRESS POINTER (which is literally useless)
 			string validtest = M.ReadString(BaseAddress.ToString("X"));
 
 			if (validtest == "tag instances")
@@ -716,6 +716,12 @@ namespace InfiniteRuntimeTagViewer
 					string instuctions = peep_this_one.Key;
 					string value_type = peep_this_one.Value.Key;
 					string value_itself = peep_this_one.Value.Value;
+					string revert = "none";
+					if (Pokelistlist[queuename].revertlist.ContainsKey(instuctions))
+					{
+						revert = Pokelistlist[queuename].revertlist[instuctions].Value;
+					}
+
 					if (UIpokelist.ContainsKey(instuctions))
 					{
 						TagChangesBlock updateElement = UIpokelist[instuctions];
@@ -727,6 +733,7 @@ namespace InfiniteRuntimeTagViewer
 						string dont_Be_null = convert_ID_to_tag_name(instuctions.Split(":").FirstOrDefault());
 						updateElement.tagSource.Text = dont_Be_null;
 						updateElement.bordercolor.BorderBrush = new SolidColorBrush(Colors.Yellow);
+						updateElement.revert.Text = revert;
 					}
 					else
 					{
@@ -739,6 +746,7 @@ namespace InfiniteRuntimeTagViewer
 						string dont_Be_null = convert_ID_to_tag_name(instuctions.Split(":").FirstOrDefault());
 						newBlock.tagSource.Text = dont_Be_null;
 						newBlock.sig_address_path = instuctions;
+						newBlock.revert.Text = revert;
 						newBlock.main = this;
 						changes_panel.Children.Add(newBlock);
 						UIpokelist.Add(instuctions, newBlock);
@@ -755,48 +763,32 @@ namespace InfiniteRuntimeTagViewer
 
 		private void Save_pokes(object sender, RoutedEventArgs e)
 		{
-			if (loadedTags)
+			var sfd = new Microsoft.Win32.SaveFileDialog
 			{
-				//if (Pokelist.Count > 0)
-				//{
-					var sfd = new Microsoft.Win32.SaveFileDialog
-					{
-						Filter = "IRTV Files (*.irtv)|*.irtv|All files (*.*)|*.*",
-						// Set other options depending on your needs ...
-					};
-					if (sfd.ShowDialog() == true)
-					{
-
-
-						string filename = sfd.FileName;
-						// save the file
-						//File.WriteAllText(filename, contents);
-
-						//KeyValuePair<string, KeyValuePair<string, string>>
-						string big_ol_poke_dump = "";
-						foreach (var k in Pokelistlist[current_pokelist].Pokelist)
-						{
-							big_ol_poke_dump+=k.Key + ";" + k.Value.Key + ";" + k.Value.Value + "\r\n";
-						}
-						Savewindow sw = new();
-						sw.Show();
-						sw.main = this;
-						sw.ill_take_it_from_here_mainwindow(filename, big_ol_poke_dump);
-
-						poke_text.Text = Pokelistlist[current_pokelist].Pokelist.Count + " Pokes Saved!";
-					}
-
-				//}
-				//else
-				//{
-				//	poke_text.Text = "no pokes to save";
-				//}
-			}
-			else
+				Filter = "IRTV Files (*.irtv)|*.irtv|All files (*.*)|*.*",
+				// Set other options depending on your needs ...
+			};
+			if (sfd.ShowDialog() == true)
 			{
-				poke_text.Text = "You MUST 'load' first";
-			}
 
+
+				string filename = sfd.FileName;
+				// save the file
+				//File.WriteAllText(filename, contents);
+
+				//KeyValuePair<string, KeyValuePair<string, string>>
+				string big_ol_poke_dump = "";
+				foreach (var k in Pokelistlist[current_pokelist].Pokelist)
+				{
+					big_ol_poke_dump+=k.Key + ";" + k.Value.Key + ";" + k.Value.Value + "\r\n";
+				}
+				Savewindow sw = new();
+				sw.Show();
+				sw.main = this;
+				sw.ill_take_it_from_here_mainwindow(filename, big_ol_poke_dump);
+
+				poke_text.Text = Pokelistlist[current_pokelist].Pokelist.Count + " Pokes Saved!";
+			}
 		}
 
 		private void Open_pokes(object sender, RoutedEventArgs e)
@@ -1087,6 +1079,7 @@ namespace InfiniteRuntimeTagViewer
 		public bool pokesingle(string instruction_address, string type, string value, string reverthost_pokelist)
 		{
 			string address = SUSSY_BALLS_2(instruction_address);
+			if (address == "") return false;
 			if (value.Contains("`"))
 			{
 				string[] hooked_string = value.Split('`');
@@ -1098,7 +1091,14 @@ namespace InfiniteRuntimeTagViewer
 						string read = readmem_for_1_very_specific_task(do_the_thing, type);
 						if (read != "")
 						{
-							pokesingle(instruction_address, type, read, reverthost_pokelist);
+							if (read == "FFFFFFFF" && type == "TagrefGroup")
+							{
+								pokesingle(instruction_address, "4Byte", "-1", reverthost_pokelist);
+							}
+							else
+							{
+								pokesingle(instruction_address, type, read, reverthost_pokelist);
+							}
 						}
 						else
 						{
@@ -1121,11 +1121,23 @@ namespace InfiniteRuntimeTagViewer
 			{
 				if (!Pokelistlist[reverthost_pokelist].revertlist.ContainsKey(instruction_address))
 				{
-					string REVERT_address = readmem_for_1_very_specific_task(address, type);
-					Pokelistlist[reverthost_pokelist].revertlist[instruction_address] = new KeyValuePair<string, string>(type, REVERT_address);
-					if (UIpokelist.ContainsKey(instruction_address))
+					string REVERT_value = readmem_for_1_very_specific_task(address, type);
+					if (REVERT_value == "FFFFFFFF" && type == "TagrefGroup")
 					{
-						UIpokelist[instruction_address].revert.Text = REVERT_address;
+						Pokelistlist[reverthost_pokelist].revertlist[instruction_address] = new KeyValuePair<string, string>("4Byte", "-1");
+						if (UIpokelist.ContainsKey(instruction_address))
+						{
+							TagChangesBlock tcb = UIpokelist[instruction_address];
+							tcb.revert.Text = "-1";
+						}
+					}
+					else
+					{
+						Pokelistlist[reverthost_pokelist].revertlist[instruction_address] = new KeyValuePair<string, string>(type, REVERT_value);
+						if (UIpokelist.ContainsKey(instruction_address))
+						{
+							UIpokelist[instruction_address].revert.Text = REVERT_value;
+						}
 					}
 				}
 				return writemem(type, address, value);
@@ -1288,6 +1300,11 @@ namespace InfiniteRuntimeTagViewer
 				case "TagrefGroup":
 					try 
 					{
+						string read_incase_bad_string = BitConverter.ToString(M.ReadBytes(address, 4)).Replace("-", string.Empty);
+						if (read_incase_bad_string == "FFFFFFFF")
+						{
+							return "FFFFFFFF";
+						}
 						output = ReverseString(M.ReadString(address, "", 4));
 					}
 					catch { }
@@ -1374,16 +1391,20 @@ namespace InfiniteRuntimeTagViewer
 		}
 		public void clear_all_pokelists()
 		{
-			for (int i = 0; i < Pokelistlist.Count; i++)
-			{
-				var peep_this_one = Pokelistlist.ElementAt(i);
-				clear_pokes_list(peep_this_one.Key);
-			}
+			Pokelistlist.Clear();
+			PokeList_Combobox.Items.Clear();
+			add_new_section_to_pokelist("Poke Queue");
+
+			if (PokeList_Combobox.Items.Count > 0)
+				PokeList_Combobox.SelectedIndex = 0;
+
 			change_text.Text = "0 changes queued";
 			if (mwidow != null)
 			{
 				mwidow.test_changes.Text = "0 changes queued";
 			}
+			poke_text.Text = "All queues cleared";
+
 		}
 		private void BtnClearQueueSingle_Click(object sender, RoutedEventArgs e)
 		{
@@ -1540,12 +1561,6 @@ namespace InfiniteRuntimeTagViewer
 		public void ClickExit(object sender, RoutedEventArgs e)
 		{
 			SystemCommands.CloseWindow(this);
-		}
-
-		public void SettingsControl(object sender, RoutedEventArgs e)
-		{
-			SettingsControl win2 = new();
-			win2.Show();
 		}
 
 		public void OpenTeleportMenu(object sender, RoutedEventArgs e)
@@ -1755,6 +1770,7 @@ namespace InfiniteRuntimeTagViewer
 		public bool revert_single_poke(string instruction_address, string type, string value)
 		{
 			string address = SUSSY_BALLS_2(instruction_address);
+			if (address == "") return false;
 			return writemem(type, address, value);
 		}
 

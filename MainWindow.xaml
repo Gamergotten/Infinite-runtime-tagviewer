@@ -107,7 +107,7 @@
                             <MenuItem Header="_Save" Click="Save_pokes" >
                                 <!--DONE ;)-->
                                 <MenuItem.ToolTip>
-                                    <TextBlock Foreground="Black">Save a file.</TextBlock>
+                                    <TextBlock Foreground="Black">Save all pokes from current sub-pokelist in queue.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
                             <Separator />
@@ -272,7 +272,7 @@
 
                         </Grid>
                     </Grid>
-                    <Grid x:Name="queuelist"  MinHeight="170" MaxHeight="200" Grid.Row="3" Grid.ColumnSpan="5" Margin="0,0,0,10" Background="#252526" Visibility="Collapsed" >
+                    <Grid x:Name="queuelist"  MinHeight="170" MaxHeight="200" Grid.Row="3" Grid.ColumnSpan="5" Margin="0,0,0,10" Background="#252526" Visibility="Collapsed"  >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="25"/>
                             <RowDefinition/>
@@ -288,8 +288,8 @@
                                 <ColumnDefinition Width="70"/>
                                 <ColumnDefinition Width="130"/>
                             </Grid.ColumnDefinitions>
-                            <Button Grid.Column="3" HorizontalAlignment="Stretch" Content="Poke Queue" VerticalAlignment="Stretch" Click="Button_Click" />
-                            <Button Grid.Column="4" HorizontalAlignment="Stretch" Content="Revert Queue" VerticalAlignment="Stretch" Click="REVERT_SINGLE_BUTTON" />
+                            <Button Grid.Column="3" HorizontalAlignment="Stretch" Content="Poke These" VerticalAlignment="Stretch" Click="Button_Click" />
+                            <Button Grid.Column="4" HorizontalAlignment="Stretch" Content="Revert These" VerticalAlignment="Stretch" Click="REVERT_SINGLE_BUTTON" />
 
                             <ComboBox x:Name="PokeList_Combobox" Grid.Column="1"  SelectionChanged="PokeList_Combobox_SelectionChanged" MinWidth="160" />
 
