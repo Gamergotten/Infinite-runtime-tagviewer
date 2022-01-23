@@ -144,17 +144,14 @@
             <Rectangle Stroke="#505050" Grid.Column="1" Grid.Row="9"  Grid.ColumnSpan="4"/>
             <Rectangle Stroke="#505050" Grid.Column="1" Grid.Row="10" Grid.RowSpan="5" Grid.ColumnSpan="4"/>
 
-            <TextBlock Text="Other Options" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="4" HorizontalAlignment="Center" Height="15" VerticalAlignment="Center"/>
-            <TextBlock Text="Campaign" Grid.Column="2" Grid.Row="11" HorizontalAlignment="Center" Height="15" VerticalAlignment="Center"/>
-            <TextBlock Text="Multiplayer" Grid.Column="4" Grid.Row="11" HorizontalAlignment="Center" Height="15" VerticalAlignment="Center"/>
-            <TextBlock Text="Player" Grid.Column="2" Grid.Row="13" HorizontalAlignment="Center" Height="15" VerticalAlignment="Center"/>
-            <TextBlock Text="All Entites" Grid.Column="4" Grid.Row="13" HorizontalAlignment="Center" Height="15" VerticalAlignment="Center"/>
+            <TextBlock Text="Other Options" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="4" HorizontalAlignment="Center" Height="15" VerticalAlignment="Center" />
+            <TextBlock Text="Player" Grid.Column="2" Grid.Row="11" HorizontalAlignment="Left" Height="15" VerticalAlignment="Center" Margin="5,0,0,0"/>
+            <TextBlock Text="AI" Grid.Column="4" Grid.Row="11" HorizontalAlignment="Left" Height="15" VerticalAlignment="Center" Margin="5,0,0,0"/>
+            <TextBlock Text="All Entities" Grid.Column="2" Grid.Row="13" HorizontalAlignment="Left" Height="15" VerticalAlignment="Center" Margin="5,0,0,0"/>
 
-            <RadioButton x:Name="campaign_search" GroupName="mode" Grid.Column="1" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True"/>
-            <RadioButton x:Name="multiplayer_search" GroupName="mode" Grid.Column="3" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False"/>
-
-            <RadioButton x:Name="player_search" GroupName="entity" Grid.Column="1" Grid.Row="13" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True"/>
-            <RadioButton x:Name="all_entites_search" GroupName="entity" Grid.Column="3" Grid.Row="13" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False"/>
+            <RadioButton x:Name="player_search" GroupName="entity" Grid.Column="1" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True"/>
+            <RadioButton x:Name="ai_search" GroupName="entity" Grid.Column="3" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="True"/>
+            <RadioButton x:Name="all_entity_search" GroupName="entity" Grid.Column="1" Grid.Row="13" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="True"/>
 
             <!--Locations-->
             <Rectangle Stroke="#505050" Grid.Column="5" Grid.Row="9"  Grid.ColumnSpan="3"/>
@@ -198,7 +195,7 @@
             <Rectangle Stroke="#505050" Grid.Row="15" Grid.ColumnSpan="9"/>
 
             <TextBlock Text="Status:" Grid.Row="15" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" Height="15"/>
-            <TextBlock x:Name="Status" Text="" Grid.Row="15" Grid.Column="0" Margin="40,2,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="20"/>
+            <TextBlock x:Name="Status" Text="" Grid.Row="15" Grid.Column="0" Margin="40,2,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="10" Height="20"/>
             
             <!--Window Controls-->
 
