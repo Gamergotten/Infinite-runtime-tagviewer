@@ -32,27 +32,35 @@ namespace InfiniteRuntimeTagViewer
 	/// </summary>
 	public partial class MainWindow
 	{
-		/* ###### THINGS TO BE FIXED (which i will get around to eventually) ######
+		/* ###### THINGS TO BE FIXED/ADDED (which i will get around to eventually) ######
 		
 		### BUG FIXES ###
+		autoload + dont show unloaded tags + load: cant create new tag ui instances or something
+		-- oh i know what happened there, when halo gets unhooked, it wipes the UI without scrubbing the UI references from UItaglist or something
+
 		theres still a ton of opportunites to crash in unlikely scenarios, need to investigate all crashes and create handlers
 
 		### QOL ###
 		reload tag button
 		optimize tagdata loading by making combobox index a source
-
 		mod poke abort
 		-- required tags
 		-- can abort
 
 		### FEATURES ###
 		randomize tagref option
-		
+		single poke doesn't have revert button :(
 
 		### ERROR CATCHING ###
 
 		### TAG STRUCTS ###
 		char ' gets turned into the funny unknown char. ex. don't -> dont^t (ok using that character there prompts vs to use unicode mode, no)
+
+		### HASH STUFF (i'll do this next week or sometime) ###
+		add tool: hash logger - will read through every loaded tag in the game and log referenced hashes
+		add hash database support - so people can convert hashes to known unhashed strings
+		add tool: hash guesser - lets users guess ushash strings from unknown hashes
+		prolly some more stuff i cant remember how i was gonna do all this
 
 		### STUFF THATS NOT REALLY ON THE LIST ###
 		show red border on failed pokes INSIDE tag data tab, and not just in the poke queue
