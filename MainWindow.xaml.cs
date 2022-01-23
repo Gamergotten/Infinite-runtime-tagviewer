@@ -90,7 +90,8 @@ namespace InfiniteRuntimeTagViewer
 			if (!hooked || reset)
 			{
 				// Get the base address
-				BaseAddress = M.ReadLong("HaloInfinite.exe+3E96260");
+				//BaseAddress = M.ReadLong("HaloInfinite.exe+3E96260"); //old
+				BaseAddress = M.ReadLong("HaloInfinite.exe+0x4879758");
 				string validtest = M.ReadString(BaseAddress.ToString("X"));
 				//System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite.exe+0x3D13E38")); // this is the wrong address lol
 				if (validtest == "tag instances")
@@ -148,7 +149,8 @@ namespace InfiniteRuntimeTagViewer
 
 		public async Task ScanMem()
 		{
-			BaseAddress = M.ReadLong("HaloInfinite.exe+0x4879758");
+			//BaseAddress = M.ReadLong("HaloInfinite.exe+0x4879758"); //old
+			BaseAddress = M.ReadLong("HaloInfinite.exe+0x3E96260");
 			string validtest = M.ReadString(BaseAddress.ToString("X"));
 
 			if (validtest == "tag instances")
