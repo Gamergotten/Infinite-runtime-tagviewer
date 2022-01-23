@@ -23,6 +23,8 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.Windows.Threading;
 
+using InfiniteRuntimeTagViewer.Properties;
+
 namespace InfiniteRuntimeTagViewer
 {
 	/// <summary>
@@ -30,30 +32,73 @@ namespace InfiniteRuntimeTagViewer
 	/// </summary>
 	public partial class MainWindow
 	{
-		/* ###### THINGS TO BE FIXED (which i will get around to eventually)
+		/* ###### THINGS TO BE FIXED (which i will get around to eventually) ######
 		
-		### BUG FIXES
-		tag evaluation checks - when poking we should check to see that the tag is still valid
+		### BUG FIXES ###
+		theres still a ton of opportunites to crash in unlikely scenarios, need to investigate all crashes and create handlers
 
-		### QOL
+		### QOL ###
 		reload tag button
-		auto poke changes as tags are loaded/reloaded
+		optimize tagdata loading by making combobox index a source
 
-		Multiple poke lists
-		revert changes list
 		mod poke abort
 		-- required tags
 		-- can abort
 
+		### FEATURES ###
+		randomize tagref option
+		
 
-		### ERROR CATCHING
-		extra exception handling for tags - where we check for tag validity when poking?
+		### ERROR CATCHING ###
 
-		### TAG STRUCTS
-		char ' gets turned into the funny unknown char. ex. don't -> dont^t (i dont actually have the symbol so thats not a good example)
+		### TAG STRUCTS ###
+		char ' gets turned into the funny unknown char. ex. don't -> dont^t (ok using that character there prompts vs to use unicode mode, no)
 
+		### STUFF THATS NOT REALLY ON THE LIST ###
+		show red border on failed pokes INSIDE tag data tab, and not just in the poke queue
 
 		*/
+
+		public bool AutoHookKey;
+		public bool AutoLoadKey;
+		public bool AutoPokeKey;
+		public bool FilterOnlyMappedKey;
+
+		public bool done_loading_settings;
+
+		#region poop region
+		public void GetGeneralSettingsFromConfig()
+		{
+			AutoHookKey = Settings.Default.AutoHook;
+			AutoLoadKey = Settings.Default.AutoLoad;
+			AutoPokeKey = Settings.Default.AutoPoke;
+			FilterOnlyMappedKey = Settings.Default.FilterOnlyMapped;
+		}
+		public void SetGeneralSettingsFromConfig()
+		{
+			GetGeneralSettingsFromConfig();
+			CbxSearchProcess.IsChecked = AutoHookKey;
+			CbxAutoPokeChanges.IsChecked = AutoPokeKey;
+			CbxFilterUnloaded.IsChecked = FilterOnlyMappedKey;
+			whatdoescbxstandfor.IsChecked = AutoLoadKey;
+		}
+		public void OnApplyChanges_Click()
+		{
+			SaveUserChangedSettings();
+			Settings.Default.Save();
+			SetGeneralSettingsFromConfig();
+		}
+		public void SaveUserChangedSettings()
+		{
+			Settings.Default.AutoHook = CbxSearchProcess.IsChecked;
+			Settings.Default.AutoLoad = whatdoescbxstandfor.IsChecked;
+			Settings.Default.AutoPoke = CbxAutoPokeChanges.IsChecked;
+			Settings.Default.FilterOnlyMapped = CbxFilterUnloaded.IsChecked;
+
+		}
+
+
+		#endregion
 
 		public delegate void HookAndLoadDelagate();
 		public delegate void LoadTagsDelagate();
@@ -65,14 +110,20 @@ namespace InfiniteRuntimeTagViewer
 			InitializeComponent();
 			//GetAllMethods();
 			StateChanged += MainWindowStateChangeRaised;
+
 			_t = new System.Timers.Timer();
 			_t.Elapsed += OnTimedEvent;
 			_t.Interval = 2000;
 			_t.AutoReset = true;
+
 			inhale_tagnames();
-			SettingsControl settings = new();
-			settings.SetGeneralSettingsFromConfig();
-			settings.Close();
+			//SettingsControl settings = new();
+			SetGeneralSettingsFromConfig();
+			done_loading_settings = true;
+			//settings.Close();
+
+			add_new_section_to_pokelist("Poke Queue");
+
 		}
 
 		private async Task HookProcessAsync()
@@ -82,6 +133,7 @@ namespace InfiniteRuntimeTagViewer
 			{
 				// Could not find the process
 				hook_text.Text = "Cant find HaloInfinite.exe";
+				BaseAddress = -1;
 				hooked = false;
 				loadedTags = false;
 				TagsTree.Items.Clear();
@@ -111,7 +163,7 @@ namespace InfiniteRuntimeTagViewer
 		public async void HookAndLoad()
 		{
 			await HookProcessAsync(); // this didn't wait lol
-			if (BaseAddress != -1 )
+			if (BaseAddress != -1 && BaseAddress != 0)
 			{
 				LoadTagsMem(false);
 
@@ -126,29 +178,68 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
+		// AUTO MOD LOADER STUFF
+		static int min_tags_changed_for_update = 750;
+		static int min_tags_changed_for_interupt_update = 225;
 
-		public bool loadedTags = false;
-		public bool hooked = false;
-		private void OnTimedEvent(object source, ElapsedEventArgs e)
+		public int tag_count_last_update = 0;
+		public int current_tag_count = 0;
+
+		public bool is_waiting;
+
+		private async void OnTimedEvent(object source, ElapsedEventArgs e)
 		{
-			Dispatcher.Invoke(new Action(() =>
+			Dispatcher.Invoke(new Action(async () =>
 			{
-				_ = HookProcessAsync();
-				if (CbxAutoLoadTags.IsChecked && !loadedTags)
+				if (hooked) // wait till hooked so, the user can decide when to turn this on without it annoyingly firing off
 				{
-					LoadTagsMem(false);
+					if (!is_waiting)
+					{
+						await HookProcessAsync();
+						if (BaseAddress > 0)
+						{
+							int real_tag_count = M.ReadInt((BaseAddress + 0x70).ToString("X"));
+							current_tag_count = real_tag_count;
+							extra_tag_text.Text = "found (" + real_tag_count + " tags)";
+							if (current_tag_count < tag_count_last_update - min_tags_changed_for_update || current_tag_count > tag_count_last_update + min_tags_changed_for_update)
+							{
+								is_waiting = true;
+								extra_tag_text.Text = "one sec (" + real_tag_count + " tags)"; // actually its 12 seconds fuck you
+								while (is_waiting)
+								{
+									await Task.Delay(12000);
 
-				}
-				if (CbxAutoPokeChanges.IsChecked)
-				{
-					PokeChanges();
+									int real_tag_count_again = M.ReadInt((BaseAddress + 0x70).ToString("X"));
+									if (!(real_tag_count_again < current_tag_count - min_tags_changed_for_interupt_update) && !(real_tag_count_again > current_tag_count + min_tags_changed_for_interupt_update))
+									{
+										is_waiting = false;
+										extra_tag_text.Text = "reloading (" + real_tag_count_again + " tags)";
+										LoadTagsMem(false);
+										if (whatdoescbxstandfor.IsChecked)
+										{
+											PokeChanges();
+										}
+										tag_count_last_update = real_tag_count_again;
+									}
+									else
+									{
+										current_tag_count = real_tag_count_again;
+										extra_tag_text.Text = "Awaiting (" + real_tag_count_again + " tags)";
+									}
+								}
+							}
+						}
+					}
 				}
 			}));
 		}
 
+		public bool loadedTags = false;
+		public bool hooked = false;
+
 		public async Task ScanMem()
 		{
-			BaseAddress = M.ReadLong("HaloInfinite.exe+0x4879758");
+			BaseAddress = M.ReadLong("HaloInfinite.exe+3E96260");
 			string validtest = M.ReadString(BaseAddress.ToString("X"));
 
 			if (validtest == "tag instances")
@@ -187,9 +278,26 @@ namespace InfiniteRuntimeTagViewer
 
 		private void CheckBoxProcessCheck(object sender, RoutedEventArgs e)
 		{
-			if (CbxSearchProcess.IsChecked == true)
+			_t.Enabled = CbxSearchProcess.IsChecked;
+			if (done_loading_settings)
 			{
-				_t.Enabled = true;
+				OnApplyChanges_Click();
+			}
+		}
+		private void UpdateOptionsFromSettings(object sender, RoutedEventArgs e)
+		{
+			if (done_loading_settings)
+			OnApplyChanges_Click();
+		}
+		private void UpdateOption_for_hiding_unloaded(object sender, RoutedEventArgs e)
+		{
+			if (done_loading_settings)
+			{
+				OnApplyChanges_Click();
+				if (loadedTags == true)
+				{
+					HookAndLoad();
+				}
 			}
 		}
 
@@ -280,6 +388,22 @@ namespace InfiniteRuntimeTagViewer
 				currentTag.TagFullName = convert_ID_to_tag_name(currentTag.ObjectId).Trim();
 				currentTag.TagFile = currentTag.TagFullName.Split('\\').Last().Trim();
 
+				if (CbxFilterUnloaded.IsChecked)
+				{
+					byte[] b = M.ReadBytes((currentTag.TagData + 12).ToString("X"), 4);
+					if (b != null)
+					{
+						string checked_datnum = BitConverter.ToString(b).Replace("-", string.Empty);
+						if (checked_datnum != currentTag.Datnum)
+						{
+							currentTag.unloaded = true;
+						}
+					}
+					else
+					{
+						currentTag.unloaded = true;
+					}
+				}
 				// do the tag definitition
 				if (!TagsList.ContainsKey(currentTag.ObjectId))
 				{
@@ -392,30 +516,32 @@ namespace InfiniteRuntimeTagViewer
 
 			foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList.OrderBy(key => key.Value.TagFullName)) // per tag
 			{
-				if (tags_headers.Keys.Contains(curr_tag.Key)) // is included in tag_headers UI
+				if (!curr_tag.Value.unloaded)
 				{
-					TreeViewItem t = tags_headers[curr_tag.Key];
-					t.Tag = curr_tag.Key;
-					tags_headers_diff.Add(curr_tag.Key, t);
-					tags_headers.Remove(curr_tag.Key);
+					if (tags_headers.Keys.Contains(curr_tag.Key)) // is included in tag_headers UI
+					{
+						TreeViewItem t = tags_headers[curr_tag.Key];
+						t.Tag = curr_tag.Key;
+						tags_headers_diff.Add(curr_tag.Key, t);
+						tags_headers.Remove(curr_tag.Key);
+					}
+					else // tag isnt in UI
+					{
+						TreeViewItem t = new();
+						TagStruct tag = curr_tag.Value;
+						TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct dictTagGroup);
+
+						t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
+
+						t.Tag = curr_tag.Key; // our index to our tag
+
+						t.Selected += Select_Tag_click;
+
+						dictTagGroup.TagCategory.Items.Add(t);
+
+						tags_headers_diff.Add(curr_tag.Key, t);
+					}
 				}
-				else // tag isnt in UI
-				{
-					TreeViewItem t = new();
-					TagStruct tag = curr_tag.Value;
-					TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct dictTagGroup);
-
-					t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
-
-					t.Tag = curr_tag.Key; // our index to our tag
-
-					t.Selected += Select_Tag_click;
-
-					dictTagGroup.TagCategory.Items.Add(t);
-
-					tags_headers_diff.Add(curr_tag.Key, t);
-				}
-
 			}
 			foreach (KeyValuePair<string, TreeViewItem> poop in tags_headers) // per tag remove
 			{
@@ -434,8 +560,7 @@ namespace InfiniteRuntimeTagViewer
 			}
 			//had to do this cause for whatever reason the multithreading prevented it from actually filtering the tags
 			hook_text.Text = "Loaded Tags";
-			cbxFilterOnlyMapped.IsChecked = false;
-			cbxFilterOnlyMapped.IsChecked = true;
+			// the filter thing used to be here lol
 
 		}
 
@@ -537,51 +662,103 @@ namespace InfiniteRuntimeTagViewer
 
 		// list of changes to ammend to the memory when we phit the poke button
 		// i think it goes: address, type, value
-		public Dictionary<string, KeyValuePair<string, string>> Pokelist = new();
+		// address instructions | value type | value value
+
+		public Dictionary<string, Poke_queue> Pokelistlist = new();
+
+		public class Poke_queue
+		{
+			public Dictionary<string, KeyValuePair<string, string>> Pokelist =new();
+			public Dictionary<string, KeyValuePair<string, string>>? revertlist = new();
+		} 
+
+		public string current_pokelist = "";
+
+		public void add_new_section_to_pokelist(string newname)
+		{
+			if (!Pokelistlist.ContainsKey(newname))
+			{
+				ComboBoxItem? comboBoxItem = new() { Content = newname };
+				PokeList_Combobox.Items.Add(comboBoxItem);
+				Pokelistlist[newname] = new();
+				PokeList_Combobox.SelectedIndex = PokeList_Combobox.Items.Count - 1;
+			}
+			current_pokelist = newname;
+		}
+		private void PokeList_Combobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			var comboBoxItem = PokeList_Combobox.SelectedItem as ComboBoxItem;
+			if (comboBoxItem != null)
+			{
+				load_a_pokelist(comboBoxItem.Content.ToString());
+			}
+				
+		}
+		public void load_a_pokelist(string queuename)
+		{
+			if (Pokelistlist.ContainsKey(queuename))
+			{
+				current_pokelist = queuename;
+				if (queuename == "Poke Queue")
+				{
+					remove_from_quee_button.IsEnabled = false;
+				}
+				else
+				{
+					remove_from_quee_button.IsEnabled = true;
+				}
+				changes_panel.Children.Clear();
+				UIpokelist.Clear();
+
+				for (int i = 0; i< Pokelistlist[queuename].Pokelist.Count; i++)
+				{
+					KeyValuePair<string, KeyValuePair<string, string>> peep_this_one = Pokelistlist[queuename].Pokelist.ElementAt(i);
+					string instuctions = peep_this_one.Key;
+					string value_type = peep_this_one.Value.Key;
+					string value_itself = peep_this_one.Value.Value;
+					if (UIpokelist.ContainsKey(instuctions))
+					{
+						TagChangesBlock updateElement = UIpokelist[instuctions];
+						updateElement.address.Text = instuctions;
+						updateElement.sig_address_path = instuctions;
+						updateElement.type.Text = value_type;
+						updateElement.value.Text = value_itself;
+						//updateElement.tagSource.Text = def.TagStruct.TagFile + " + " + def.GetTagOffset();
+						string dont_Be_null = convert_ID_to_tag_name(instuctions.Split(":").FirstOrDefault());
+						updateElement.tagSource.Text = dont_Be_null;
+						updateElement.bordercolor.BorderBrush = new SolidColorBrush(Colors.Yellow);
+					}
+					else
+					{
+						TagChangesBlock newBlock = new()
+						{
+							address = { Text = instuctions },
+							type = { Text = value_type },
+							value = { Text = value_itself },
+						};
+						string dont_Be_null = convert_ID_to_tag_name(instuctions.Split(":").FirstOrDefault());
+						newBlock.tagSource.Text = dont_Be_null;
+						newBlock.sig_address_path = instuctions;
+						newBlock.main = this;
+						changes_panel.Children.Add(newBlock);
+						UIpokelist.Add(instuctions, newBlock);
+					}
+				}
+
+			}
+		}
 
 		// to keep track of the UI elements we're gonna use a dictionary, will probably be better
-		public Dictionary<string, TagChangesBlock> UIpokelist = new();
-
-		// type (TagrefGroup, TagrefTag)
-		// address,
-		// WARNING: Please note if something calls this function it wont be replicated
-		// in the future when saving or netcode is added!!!
-		//public void AddPokeChange(string offset, string type, string value)
-		//{
+		public Dictionary<string, TagChangesBlock> UIpokelist = new(); // i *think* we can just leave this as is
 
 
-		//	// hmm we need to change this so we either update or add a new UI element
-		//	Pokelist[offset] = new KeyValuePair<string, string>(type, value);
-
-		//	// there we go, now we aren't touching the pokelist code
-		//	if (UIpokelist.ContainsKey(offset))
-		//	{
-		//		TagChangesBlock updateElement = UIpokelist[offset];
-		//		updateElement.address.Text = offset;
-		//		updateElement.type.Text = type;
-		//		updateElement.value.Text = value;
-		//	}
-		//	else
-		//	{
-		//		TagChangesBlock newBlock = new() {
-		//			address = { Text = offset },
-		//			type = { Text = type },
-		//			value = { Text = value },
-		//		};
-
-		//		changes_panel.Children.Add(newBlock);
-		//		UIpokelist.Add(offset, newBlock);
-		//	}
-
-		//	change_text.Text = Pokelist.Count + " changes queued";
-		//}
 
 		private void Save_pokes(object sender, RoutedEventArgs e)
 		{
 			if (loadedTags)
 			{
-				if (Pokelist.Count > 0)
-				{
+				//if (Pokelist.Count > 0)
+				//{
 					var sfd = new Microsoft.Win32.SaveFileDialog
 					{
 						Filter = "IRTV Files (*.irtv)|*.irtv|All files (*.*)|*.*",
@@ -597,7 +774,7 @@ namespace InfiniteRuntimeTagViewer
 
 						//KeyValuePair<string, KeyValuePair<string, string>>
 						string big_ol_poke_dump = "";
-						foreach (var k in Pokelist)
+						foreach (var k in Pokelistlist[current_pokelist].Pokelist)
 						{
 							big_ol_poke_dump+=k.Key + ";" + k.Value.Key + ";" + k.Value.Value + "\r\n";
 						}
@@ -606,14 +783,14 @@ namespace InfiniteRuntimeTagViewer
 						sw.main = this;
 						sw.ill_take_it_from_here_mainwindow(filename, big_ol_poke_dump);
 
-						poke_text.Text = Pokelist.Count + " Pokes Saved!";
+						poke_text.Text = Pokelistlist[current_pokelist].Pokelist.Count + " Pokes Saved!";
 					}
 
-				}
-				else
-				{
-					poke_text.Text = "no pokes to save";
-				}
+				//}
+				//else
+				//{
+				//	poke_text.Text = "no pokes to save";
+				//}
 			}
 			else
 			{
@@ -641,9 +818,11 @@ namespace InfiniteRuntimeTagViewer
 			// Get the selected file name and display in a TextBox 
 			if (result == true)
 			{
-				recieve_file_to_inhalo_pokes(dlg.FileName);
 				string fullFileName = dlg.FileName;
 				string fileNameWithExt = Path.GetFileName(fullFileName);
+				add_new_section_to_pokelist(fileNameWithExt);
+
+				recieve_file_to_inhalo_pokes(dlg.FileName);
 				string target_folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\IRTV";
 				if (!Directory.Exists(target_folder))
 					Directory.CreateDirectory(target_folder);
@@ -658,6 +837,9 @@ namespace InfiniteRuntimeTagViewer
 			int prev = 0;
 			int fails = 0;
 			// Open document 
+
+			add_new_section_to_pokelist(Path.GetFileName(filename));
+
 			using (StreamReader inputFile = new StreamReader(filename))
 			{
 				string line;
@@ -671,7 +853,7 @@ namespace InfiniteRuntimeTagViewer
 					}
 				}
 			}
-			// nothing could cause an issue here
+			// nothing could cause an issue here // was that sarcastic lol
 			if (fails < 1)
 			{
 				poke_text.Text = prev + " Loaded!";
@@ -690,14 +872,6 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
-		//var lines = File.ReadLines(filename);
-		//              foreach (var line in lines)
-		//              {
-		//                  string[] parts = line.Split(":");
-
-		//Hashedstrings[parts[1]] = parts[0];
-		//              }
-
 		public void AddPokeChange(TagEditorDefinition def, string value)
 		{
 			// Hmm we need to change this so we either update or add a new UI element
@@ -707,7 +881,7 @@ namespace InfiniteRuntimeTagViewer
 			// memory type
 			// value
 			// tagname
-			Pokelist[def.OffsetOverride] = new KeyValuePair<string, string>(def.MemoryType, value);
+			Pokelistlist[current_pokelist].Pokelist[def.OffsetOverride] = new KeyValuePair<string, string>(def.MemoryType, value);
 
 			// there we go, now we aren't touching the pokelist code
 			if (UIpokelist.ContainsKey(def.OffsetOverride))
@@ -738,10 +912,23 @@ namespace InfiniteRuntimeTagViewer
 				UIpokelist.Add(def.OffsetOverride, newBlock);
 			}
 
-			change_text.Text = Pokelist.Count + " changes queued";
+			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
 			if (mwidow != null)
 			{
-				mwidow.test_changes.Text = Pokelist.Count + " changes queued";
+				mwidow.test_changes.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+			}
+
+			if (CbxAutoPokeChanges.IsChecked)
+			{
+				bool passed = pokesingle(def.OffsetOverride, def.MemoryType, value, current_pokelist);
+				if (!passed)
+				{
+					UIpokelist[def.OffsetOverride].bordercolor.BorderBrush = new SolidColorBrush(Colors.Red);
+				}
+				else
+				{
+					UIpokelist[def.OffsetOverride].bordercolor.BorderBrush = null;
+				}
 			}
 		}
 
@@ -771,43 +958,23 @@ namespace InfiniteRuntimeTagViewer
 					return curr_tag.Key;
 				}
 			}
-
 			return "FFFFFFFF"; // ok i found out what this was for: when we poke FFFFFFFF tag // annnnd it didnt work
 		}
 		
 		public void PokeChanges()
 		{
+			if (!hooked)
+			{
+				poke_text.Text = "you MUST 'Load' first";
+				return;
+			}
 			int fails = 0;
 			int pokes = 0;
-			foreach (KeyValuePair<string, KeyValuePair<string, string>> pair in Pokelist)
+			for (int q = 0; q < Pokelistlist.Count; q++)
 			{
-				//pokesingle(pair.Key, pair.Value.Key, pair.Value.Value);
-				pokes++;
-				bool failed = false;
-				string do_the_thing = SUSSY_BALLS_2(pair.Key);
-				if (do_the_thing != "")
-				{
-					if (!pokesingle(do_the_thing, pair.Value.Key, pair.Value.Value))
-					{
-						fails++;
-						pokes--;
-						failed = true;
-					}
-				}
-				else
-				{
-					fails++;
-					pokes--;
-					failed = true;
-				}
-				if (failed)
-				{
-					UIpokelist[pair.Key].bordercolor.BorderBrush = new SolidColorBrush(Colors.Red); 
-				}
-				else
-				{
-					UIpokelist[pair.Key].bordercolor.BorderBrush = null;
-				}
+			 	KeyValuePair<int, int> kv = pokelist(Pokelistlist.ElementAt(q).Key);
+				fails += kv.Value;
+				pokes += kv.Key;
 			}
 			if (fails < 1)
 			{
@@ -825,8 +992,55 @@ namespace InfiniteRuntimeTagViewer
 					mwidow.debug_text.Text = pokes + " poked, " + fails + " failed";
 				}
 			}
-
-			change_text.Text = Pokelist.Count + " changes queued";
+			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+		}
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			KeyValuePair<int, int> kv = pokelist(current_pokelist);
+			poke_text.Text = kv.Key + " poked, " + kv.Value + " failed";
+			if (mwidow != null)
+			{
+				mwidow.debug_text.Text = kv.Key + " poked, " + kv.Value + " failed";
+			}
+		}
+		public KeyValuePair<int, int> pokelist(string listname)
+		{
+			int fails = 0;
+			int pokes = 0;
+			// pokes || fails
+			foreach (KeyValuePair<string, KeyValuePair<string, string>> pair in Pokelistlist[listname].Pokelist)
+			{
+				pokes++;
+				bool failed = false;
+				string do_the_thing = (pair.Key); 
+				if (do_the_thing != "")
+				{
+					if (!pokesingle(do_the_thing, pair.Value.Key, pair.Value.Value, listname))
+					{
+						fails++;
+						pokes--;
+						failed = true;
+					}
+				}
+				else
+				{
+					fails++;
+					pokes--;
+					failed = true;
+				}
+				if (UIpokelist.ContainsKey(pair.Key))
+				{
+					if (failed)
+					{
+						UIpokelist[pair.Key].bordercolor.BorderBrush = new SolidColorBrush(Colors.Red);
+					}
+					else
+					{
+						UIpokelist[pair.Key].bordercolor.BorderBrush = null;
+					}
+				}
+			}
+			return  new KeyValuePair<int, int> (pokes, fails);
 		}
 
 
@@ -835,17 +1049,17 @@ namespace InfiniteRuntimeTagViewer
 		{
 			PokeChanges();
 		}
-		public void tagchangesblock_fetchdata_by_ID(TagChangesBlock target)
+		public void tagchangesblock_fetchdata_by_ID(TagChangesBlock target) // aka do a single poke lol ?
 		{
 			
-			KeyValuePair<string, string> pair = Pokelist[target.sig_address_path];
+			KeyValuePair<string, string> pair = Pokelistlist[current_pokelist].Pokelist[target.sig_address_path];
 			//pokesingle(target.sig_address_ID, pair.Key, pair.Value);
 			//SUSSY_BALLS_2
-			string do_the_thing = SUSSY_BALLS_2(target.sig_address_path);
+			//string do_the_thing = SUSSY_BALLS_2();
 			bool failed = false;
-			if (do_the_thing != "")
+			if (target.sig_address_path != "")
 			{
-				if(!pokesingle(do_the_thing, pair.Key, pair.Value))
+				if(!pokesingle(target.sig_address_path, pair.Key, pair.Value, current_pokelist))
 				{
 					poke_text.Text = "poke error";
 					failed = true;
@@ -870,8 +1084,9 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
-		public bool pokesingle(string address, string type, string value)
+		public bool pokesingle(string instruction_address, string type, string value, string reverthost_pokelist)
 		{
+			string address = SUSSY_BALLS_2(instruction_address);
 			if (value.Contains("`"))
 			{
 				string[] hooked_string = value.Split('`');
@@ -883,7 +1098,7 @@ namespace InfiniteRuntimeTagViewer
 						string read = readmem_for_1_very_specific_task(do_the_thing, type);
 						if (read != "")
 						{
-							pokesingle(address, type, read);
+							pokesingle(instruction_address, type, read, reverthost_pokelist);
 						}
 						else
 						{
@@ -901,65 +1116,82 @@ namespace InfiniteRuntimeTagViewer
 					return false;
 				}
 				return true;
-
 			}
 			else
 			{
-				switch (type)
+				if (!Pokelistlist[reverthost_pokelist].revertlist.ContainsKey(instruction_address))
 				{
-					case "4Byte":
-						try { M.WriteMemory(address, "int", value); }
-						catch { return false; }
-						return true;
-					case "2Byte": // needs to cap value
-						try { M.WriteMemory(address, "2bytes", value); }
-						catch { return false; }
-						return true;
-					case "Byte":
-						try { M.WriteMemory(address, "byte", int.Parse(value).ToString("X")); }
-						catch { return false; }
-						return true;
-					case "Flags":
-						try { M.WriteMemory(address, "byte", Convert.ToByte(value).ToString("X")); }
-						catch { return false; }
-						return true;
-					case "Float":
-						try { M.WriteMemory(address, "float", value); }
-						catch { return false; }
-						return true;
-					case "Pointer":
-						try
+					string REVERT_address = readmem_for_1_very_specific_task(address, type);
+					Pokelistlist[reverthost_pokelist].revertlist[instruction_address] = new KeyValuePair<string, string>(type, REVERT_address);
+					if (UIpokelist.ContainsKey(instruction_address))
+					{
+						UIpokelist[instruction_address].revert.Text = REVERT_address;
+					}
+				}
+				return writemem(type, address, value);
+			}
+			return false;
+		}
+
+		public bool writemem(string type, string address, string value)
+		{
+			if (!hooked)
+				return false;
+			switch (type)
+			{
+				case "4Byte":
+					try { M.WriteMemory(address, "int", value); }
+					catch { return false; }
+					return true;
+				case "2Byte": // needs to cap value
+					try { M.WriteMemory(address, "2bytes", value); }
+					catch { return false; }
+					return true;
+				case "Byte":
+					try { M.WriteMemory(address, "byte", int.Parse(value).ToString("X")); }
+					catch { return false; }
+					return true;
+				case "Flags":
+					try { M.WriteMemory(address, "byte", Convert.ToByte(value).ToString("X")); }
+					catch { return false; }
+					return true;
+				case "Float":
+					try { M.WriteMemory(address, "float", value); }
+					catch { return false; }
+					return true;
+				case "Pointer":
+					try
+					{
+						string? willThisWork = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
+						M.WriteMemory(address, "long", willThisWork); // apparently it does
+					}
+					catch
+					{
+						return false;
+					}
+					return true;
+				case "String":
+					try { M.WriteMemory(address, "string", value + "\0"); }
+					catch { return false; }
+					return true;
+				case "TagrefGroup":
+					try { M.WriteMemory(address, "string", ReverseString(value)); }
+					catch { return false; }
+					return true;
+				case "TagrefTag":
+					try
+					{
+						// convert ID to datnum
+						if (TagsList.Keys.Contains(value))
 						{
-							string? willThisWork = new System.ComponentModel.Int64Converter().ConvertFromString(value).ToString();
-							M.WriteMemory(address, "long", willThisWork); // apparently it does
-						}
-						catch 
-						{ 
-							return false; 
-						}
-						return true;
-					case "String":
-						try { M.WriteMemory(address, "string", value + "\0"); }
-						catch { return false; }
-						return true;
-					case "TagrefGroup":
-						try { M.WriteMemory(address, "string", ReverseString(value)); }
-						catch { return false; }
-						return true;
-					case "TagrefTag":
-						try
-						{
-							// convert ID to datnum
-							if (TagsList.Keys.Contains(value))
+							var big_w = TagsList[value];
+							string checked_ID = BitConverter.ToString(M.ReadBytes((big_w.TagData + 8).ToString("X"), 4)).Replace("-", string.Empty);
+							string checked_datnum = BitConverter.ToString(M.ReadBytes((big_w.TagData + 12).ToString("X"), 4)).Replace("-", string.Empty);
+
+							if (checked_ID == big_w.ObjectId && checked_datnum == big_w.Datnum)
 							{
 								string datnum_from_ID = TagsList[value].Datnum;
 								string temp = Regex.Replace(datnum_from_ID, @"(.{2})", "$1 ");
-								temp = temp.TrimEnd();
-								M.WriteMemory(address, "bytes", temp);
-							}
-							else if (value == "FFFFFFFF")
-							{
-								string temp = Regex.Replace(value, @"(.{2})", "$1 ");
 								temp = temp.TrimEnd();
 								M.WriteMemory(address, "bytes", temp);
 							}
@@ -968,23 +1200,35 @@ namespace InfiniteRuntimeTagViewer
 								return false;
 							}
 						}
-						catch { return false; }
-						return true;
-					case "mmr3Hash":
-						try
+						else if (value == "FFFFFFFF")
 						{
-							string temp2 = Regex.Replace(value, @"(.{2})", "$1 ");
-							temp2 = temp2.TrimEnd();
-							M.WriteMemory(address, "bytes", temp2);
+							string temp = Regex.Replace(value, @"(.{2})", "$1 ");
+							temp = temp.TrimEnd();
+							M.WriteMemory(address, "bytes", temp);
 						}
-						catch 
-						{ 
-							return false; }
-						return true;
-				}
+						else
+						{
+							return false;
+						}
+					}
+					catch { return false; }
+					return true;
+				case "mmr3Hash":
+					try
+					{
+						string temp2 = Regex.Replace(value, @"(.{2})", "$1 ");
+						temp2 = temp2.TrimEnd();
+						M.WriteMemory(address, "bytes", temp2);
+					}
+					catch
+					{
+						return false;
+					}
+					return true;
 			}
 			return false;
 		}
+
 
 		public string readmem_for_1_very_specific_task(string address, string type)
 		{
@@ -994,7 +1238,7 @@ namespace InfiniteRuntimeTagViewer
 				case "4Byte": 
 					try 
 					{
-						output = M.ReadInt(address).ToString(); // (+entry.Key?) lmao, no wonder why it wasn't working
+						output = M.ReadInt(address).ToString(); 
 					}
 					catch { }
 					return output;
@@ -1051,7 +1295,7 @@ namespace InfiniteRuntimeTagViewer
 				case "TagrefTag":
 					try
 					{
-						output = BitConverter.ToString(M.ReadBytes(address, 4)).Replace("-", string.Empty);
+						output = get_tagID_by_datnum(BitConverter.ToString(M.ReadBytes(address, 4)).Replace("-", string.Empty)); // need to convert to tagID
 					}
 					catch { }
 					return output;
@@ -1081,46 +1325,101 @@ namespace InfiniteRuntimeTagViewer
 
 			string joined = string.Join(",", last_offset.Skip(2));
 			long poop = long.Parse(last_offset.Skip(1).First());
-			// exception handling required here
+			// exception handling required here // i gotchu
 			if (TagsList.Keys.Contains(p[0]))
 			{
 				var tag_thing = TagsList[p[0]];
-				return "0x" + (poop += tag_thing.TagData).ToString("X") + ((joined == "") ? "" : "," + joined);
 
+				string checked_ID = BitConverter.ToString(M.ReadBytes((tag_thing.TagData + 8).ToString("X"), 4)).Replace("-", string.Empty);
+				string checked_datnum = BitConverter.ToString(M.ReadBytes((tag_thing.TagData + 12).ToString("X"), 4)).Replace("-", string.Empty);
+
+				if (checked_ID == tag_thing.ObjectId && checked_datnum == tag_thing.Datnum)
+				{
+					return "0x" + (poop += tag_thing.TagData).ToString("X") + ((joined == "") ? "" : "," + joined);
+				}
 			}
 			return "";
 		}
+
+		public string return_real_number_of_pokes_queued_okk()
+		{
+			int num_of_pokes_counted = 0;
+			for (int i = 0; i < Pokelistlist.Count; i++)
+			{
+				num_of_pokes_counted += Pokelistlist.ElementAt(i).Value.Pokelist.Count;
+			}
+
+			return num_of_pokes_counted.ToString();
+		}
+
 		public void Update_poke_value(TagChangesBlock target, string new_value)
 		{
-			KeyValuePair<string, string> pair = Pokelist[target.sig_address_path];
-			Pokelist[target.sig_address_path] = new KeyValuePair<string, string>(pair.Key, new_value);
+			KeyValuePair<string, string> pair = Pokelistlist[current_pokelist].Pokelist[target.sig_address_path];
+			Pokelistlist[current_pokelist].Pokelist[target.sig_address_path] = new KeyValuePair<string, string>(pair.Key, new_value);
 			poke_text.Text = "Poke Value Updated";
 
 		}
 
 		public void clearsingle(TagChangesBlock target)
 		{
-			Pokelist.Remove(target.sig_address_path);
+			Pokelistlist[current_pokelist].Pokelist.Remove(target.sig_address_path);
 			UIpokelist.Remove(target.sig_address_path);
 			changes_panel.Children.Remove(target);
-			change_text.Text = Pokelist.Count + " changes queued";
+			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
 		}
 
 		private void BtnClearQueue_Click(object sender, RoutedEventArgs e)
 		{
-			clear_pokes_list();
+			clear_all_pokelists();
 		}
-		public void clear_pokes_list()
+		public void clear_all_pokelists()
 		{
-			changes_panel.Children.Clear();
-			Pokelist.Clear();
-			UIpokelist.Clear();
-			change_text.Text = Pokelist.Count + " changes queued";
+			for (int i = 0; i < Pokelistlist.Count; i++)
+			{
+				var peep_this_one = Pokelistlist.ElementAt(i);
+				clear_pokes_list(peep_this_one.Key);
+			}
+			change_text.Text = "0 changes queued";
 			if (mwidow != null)
 			{
-				mwidow.test_changes.Text = Pokelist.Count + " changes queued";
+				mwidow.test_changes.Text = "0 changes queued";
 			}
 		}
+		private void BtnClearQueueSingle_Click(object sender, RoutedEventArgs e)
+		{
+			clear_pokes_list(current_pokelist);
+			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+			if (mwidow != null)
+			{
+				mwidow.test_changes.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+			}
+			poke_text.Text = "Poke List Cleared";
+		}
+		public void clear_pokes_list(string queue)
+		{
+			changes_panel.Children.Clear();
+			Pokelistlist[queue].Pokelist.Clear();
+			UIpokelist.Clear();
+
+			poke_text.Text = "Poke Lists Cleared";
+		}
+		private void BtnREMOVEQueueSingle_Click(object sender, RoutedEventArgs e)
+		{
+			clear_pokes_list(current_pokelist);
+			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+			if (mwidow != null)
+			{
+				mwidow.test_changes.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+			}
+			Pokelistlist.Remove(current_pokelist);
+			PokeList_Combobox.Items.Remove(PokeList_Combobox.SelectedItem);
+			if (PokeList_Combobox.Items.Count > 0)
+				PokeList_Combobox.SelectedIndex = 0;
+
+			poke_text.Text = "Poke List Removed";
+		}
+
+
 		private void DockManager_DocumentClosing(object sender, AvalonDock.DocumentClosingEventArgs e)
 		{
 			// On tag window closing.
@@ -1133,9 +1432,9 @@ namespace InfiniteRuntimeTagViewer
 		{
 			System.Windows.Controls.Button? btn = (System.Windows.Controls.Button) sender;
 
-			changes_panel_container.Visibility = changes_panel_container.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+			queuelist.Visibility = queuelist.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
 			btn.Content =
-				changes_panel_container.Visibility == Visibility.Visible
+				queuelist.Visibility == Visibility.Visible
 				? "Hide Queue"
 				: "Show Queue";
 		}
@@ -1210,15 +1509,6 @@ namespace InfiniteRuntimeTagViewer
 			string search = Searchbox.Text;
 			foreach (TreeViewItem? tv in TagsTree.Items)
 			{
-				bool isSupportedTag = true; // supportedTags.Contains(tv.Header.ToString().Split(' ')[0].ToLower());
-
-				// Ignore tags that are not implemented
-				if ((bool) cbxFilterOnlyMapped.IsChecked && !isSupportedTag)
-				{
-					tv.Visibility = Visibility.Collapsed;
-					continue;
-				}
-
 				if (!tv.Header.ToString().Contains(search))
 				{
 					tv.Visibility = Visibility.Collapsed;
@@ -1246,47 +1536,10 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
-		private void cbxFilterOnlyMapped_Changed(object sender, RoutedEventArgs e)
-		{
-			//string[] supportedTags = Halo.TagObjects.TagLayouts.Tags.Keys.ToArray();
-			if (Searchbox != null)
-			{
-				string search = Searchbox.Text;
-
-				// If we have a filter just call the search function
-				if (!string.IsNullOrEmpty(search))
-				{
-					Searchbox_TextChanged(null, null);
-					return;
-				}
-				if (TagsTree != null)
-				{
-					foreach (TreeViewItem tv in TagsTree.Items)
-					{
-						// Ignore tags that are not implemented
-						if ((bool) cbxFilterOnlyMapped.IsChecked)
-						{
-							tv.Visibility = Visibility.Visible;
-						}
-						else
-						{
-							tv.Visibility = Visibility.Visible;
-						}
-					}
-				}
-			}
-		}
-
 		#region MenuCommands
 		public void ClickExit(object sender, RoutedEventArgs e)
 		{
 			SystemCommands.CloseWindow(this);
-		}
-
-		public void SettingsControl(object sender, RoutedEventArgs e)
-		{
-			SettingsControl win2 = new();
-			win2.Show();
 		}
 
 		public ProcessSelector GetProcessSelector()
@@ -1389,8 +1642,116 @@ namespace InfiniteRuntimeTagViewer
 			}
 			else
 			{
+				mwidow.Show();
 				mwidow.Focus();
 			}
+		}
+
+	
+		// REVERT POKE STUFF
+		private void REVERT_ALL_BUTTON(object sender, RoutedEventArgs e)
+		{
+			int fails = 0;
+			int pokes = 0;
+			for (int q = 0; q < Pokelistlist.Count; q++)
+			{
+				KeyValuePair<int, int> kv = revertlist(Pokelistlist.ElementAt(q).Key);
+				fails += kv.Value;
+				pokes += kv.Key;
+			}
+			if (fails < 1)
+			{
+				poke_text.Text = pokes + " changes reverted!";
+				if (mwidow != null)
+				{
+					mwidow.debug_text.Text = pokes + " changes reverted!";
+				}
+			}
+			else
+			{
+				poke_text.Text = pokes + " reverted, " + fails + " failed";
+				if (mwidow != null)
+				{
+					mwidow.debug_text.Text = pokes + " reverted, " + fails + " failed";
+				}
+			}
+
+			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+		}
+		private void REVERT_SINGLE_BUTTON(object sender, RoutedEventArgs e)
+		{
+			KeyValuePair<int, int> kv = revertlist(current_pokelist);
+			int fails = kv.Value;
+			int pokes = kv.Key;
+			if (fails < 1)
+			{
+				poke_text.Text = pokes + " changes reverted!";
+				if (mwidow != null)
+				{
+					mwidow.debug_text.Text = pokes + " changes reverted!";
+				}
+			}
+			else
+			{
+				poke_text.Text = pokes + " reverted, " + fails + " failed";
+				if (mwidow != null)
+				{
+					mwidow.debug_text.Text = pokes + " reverted, " + fails + " failed";
+				}
+			}
+
+			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+		}
+		public KeyValuePair<int, int> revertlist(string listname)
+		{
+			int fails = 0;
+			int pokes = 0;
+			// pokes || fails
+			foreach (KeyValuePair<string, KeyValuePair<string, string>> pair in Pokelistlist[listname].revertlist)
+			{
+				pokes++;
+				bool failed = false;
+				if (pair.Key != "")
+				{
+					if (!revert_single_poke(pair.Key, pair.Value.Key, pair.Value.Value))
+					{
+						fails++;
+						pokes--;
+						failed = true;
+					}
+				}
+				else
+				{
+					fails++;
+					pokes--;
+					failed = true;
+				}
+				if (UIpokelist.ContainsKey(pair.Key))
+				{
+					if (failed)
+					{
+						UIpokelist[pair.Key].bordercolor.BorderBrush = new SolidColorBrush(Colors.Red);
+					}
+					else
+					{
+						UIpokelist[pair.Key].bordercolor.BorderBrush = null;
+					}
+				}
+			}
+			return new KeyValuePair<int, int>(pokes, fails);
+		}
+		public bool revert_single_poke(string instruction_address, string type, string value)
+		{
+			string address = SUSSY_BALLS_2(instruction_address);
+			return writemem(type, address, value);
+		}
+
+		// addd new poke list
+		public int num_of_user_added_lists = 0;
+		private void Button_Click_1(object sender, RoutedEventArgs e)
+		{
+			num_of_user_added_lists++;
+			add_new_section_to_pokelist("Poke Queue("+num_of_user_added_lists +")");
 		}
 	}
 }

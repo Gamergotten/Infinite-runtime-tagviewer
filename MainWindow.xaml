@@ -7,7 +7,7 @@
                  x:Class="InfiniteRuntimeTagViewer.MainWindow"
                  mc:Ignorable="d"
                  Background="#333333"
-                 Title="Infinite Runtime Tagviewer" Height="650" Width="1100">
+                 Title="Infinite Runtime Tagviewer" Height="650" Width="1150">
 
     <Window.Resources>
         <TransformGroup x:Key="windowScaleTransform">
@@ -118,26 +118,30 @@
                             </MenuItem>
                         </MenuItem>
                         <MenuItem Header="Options" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Height="28">
-                            <MenuItem x:Name="cbxFilterOnlyMapped" Header="Filter Only Mapped" IsCheckable="True" IsChecked="True" Checked="cbxFilterOnlyMapped_Changed" Unchecked="cbxFilterOnlyMapped_Changed">
-                                <MenuItem.ToolTip>
-                                    <TextBlock Foreground="Black">Filter only mapped tags.</TextBlock>
-                                </MenuItem.ToolTip>
-                            </MenuItem>
-                            <MenuItem x:Name="CbxSearchProcess" Header="Auto Hook" IsCheckable="True" IsChecked="False" Checked="CheckBoxProcessCheck" Unchecked="CheckBoxProcessCheck" >
+                            
+                            <MenuItem x:Name="CbxSearchProcess" Header="Auto Loader" IsCheckable="True" IsChecked="False" Checked="CheckBoxProcessCheck" Unchecked="CheckBoxProcessCheck" >
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Automatically search and hook Halo process.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
-                            <MenuItem x:Name="CbxAutoLoadTags" Header="Auto Load" IsCheckable="True" IsChecked="False" >
+
+                            <MenuItem x:Name="whatdoescbxstandfor" Header="Auto Loader - Auto poker" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
                                 <MenuItem.ToolTip>
-                                    <TextBlock Foreground="Black">Automatically load tags.</TextBlock>
+                                    <TextBlock Foreground="Black">Automatically applies all pokes after a load.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
-                            <MenuItem x:Name="CbxAutoPokeChanges" Header="Auto Poke" IsCheckable="True" IsChecked="False" >
+                            
+                            <MenuItem x:Name="CbxAutoPokeChanges" Header="Auto Poke" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
                                 <MenuItem.ToolTip>
-                                    <TextBlock Foreground="Black">Automatically poke changes.</TextBlock>
+                                    <TextBlock Foreground="Black">Auto pokes anything you change.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
+                            <MenuItem x:Name="CbxFilterUnloaded" Header="Don't show unloaded" IsCheckable="True" IsChecked="False" Checked="UpdateOption_for_hiding_unloaded" Unchecked="UpdateOption_for_hiding_unloaded" >
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Hide tags that aren't loaded ingame.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+
                             <MenuItem Header="Process Selecter">
                                 <!--Added this here for process selecter in the future.-->
                                 <MenuItem.ToolTip>
@@ -153,11 +157,6 @@
                                         <TextBlock Foreground="Black">Hook specific Halo process.</TextBlock>
                                     </MenuItem.ToolTip>
                                 </MenuItem>
-                            </MenuItem>
-                            <MenuItem Header="Settings..." Click="SettingsControl">
-                                <MenuItem.ToolTip>
-                                    <TextBlock Foreground="Black">Personalization Settings</TextBlock>
-                                </MenuItem.ToolTip>
                             </MenuItem>
 
                         </MenuItem>
@@ -251,25 +250,58 @@
                         <Grid Margin="5,5,5,5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="80" />
                                 <ColumnDefinition Width="110" />
                                 <ColumnDefinition Width="110" />
                                 <ColumnDefinition Width="50" />
-                                <ColumnDefinition Width="150" />
                                 <ColumnDefinition />
+                                <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="225" />
+                                <ColumnDefinition Width="25" />
                             </Grid.ColumnDefinitions>
 
                             <Button     Content="Poke All" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BtnPokeChanges_Click" Padding="4,4,4,4" />
-                            <TextBlock  x:Name="poke_text" Grid.Column="1" HorizontalAlignment="Left" Text=". . ." VerticalAlignment="Center" Margin="5,0,0,0" />
+                            <Button     Content="Revert pokes" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="REVERT_ALL_BUTTON" Padding="4,4,4,4" />
+                            <TextBlock  x:Name="poke_text" Grid.Column="2" HorizontalAlignment="Left" Text=". . ." VerticalAlignment="Center" Margin="5,0,0,0" />
 
-                            <TextBlock  x:Name="change_text" Grid.Column="2" HorizontalAlignment="Right" Text="0 changes queued" VerticalAlignment="Center" Margin="0,0,5,0" />
-                            <Button     Grid.Column="3" Content="Clear All" HorizontalAlignment="Stretch" Click="BtnClearQueue_Click" />
-                            <Button     Grid.Column="4" Content="Show Queue" HorizontalAlignment="Stretch" Click="BtnShowHideQueue_Click" Margin="10,0,0,0" />
+                            <TextBlock  x:Name="change_text" Grid.Column="3" HorizontalAlignment="Right" Text="0 changes queued" VerticalAlignment="Center" Margin="0,0,5,0" />
+                            <Button     Grid.Column="4" Content="Clear All" HorizontalAlignment="Stretch" Click="BtnClearQueue_Click" />
+                            <Button     Grid.Column="6" Content="Show Queue" HorizontalAlignment="Stretch" Click="BtnShowHideQueue_Click" Margin="10,0,0,0" />
+                            
+
                         </Grid>
                     </Grid>
+                    <Grid x:Name="queuelist"  MinHeight="170" MaxHeight="200" Grid.Row="3" Grid.ColumnSpan="5" Margin="0,0,0,10" Background="#252526" Visibility="Collapsed" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid Background="#FF2B2B2B">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="25" />
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="110"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="130"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="3" HorizontalAlignment="Stretch" Content="Poke Queue" VerticalAlignment="Stretch" Click="Button_Click" />
+                            <Button Grid.Column="4" HorizontalAlignment="Stretch" Content="Revert Queue" VerticalAlignment="Stretch" Click="REVERT_SINGLE_BUTTON" />
 
-                    <ScrollViewer x:Name="changes_panel_container" MinHeight="100" MaxHeight="200" Grid.Row="3" Grid.ColumnSpan="5" Margin="0,10,0,10" Background="#252526" Visibility="Collapsed" >
-                        <StackPanel x:Name="changes_panel" Background="#252526" />
-                    </ScrollViewer>
+                            <ComboBox x:Name="PokeList_Combobox" Grid.Column="1"  SelectionChanged="PokeList_Combobox_SelectionChanged" MinWidth="160" />
+
+                            <Button Grid.Column="0"  Content="+" Click="Button_Click_1"/>
+
+                            <Button Grid.Column="6" Content="CLear List" Click="BtnClearQueueSingle_Click"/>
+                            <Button x:Name="remove_from_quee_button" Grid.Column="7" Content="Remove from queue" Click="BtnREMOVEQueueSingle_Click" />
+                        </Grid>
+
+                        <ScrollViewer Grid.Row="1" x:Name="changes_panel_container" >
+                            <StackPanel x:Name="changes_panel" Background="#FF212121" />
+                        </ScrollViewer>
+                    </Grid>
                 </Grid>
                 <!-- > Tags Grid -->
 
@@ -319,6 +351,7 @@
                             <RowDefinition />
                         </Grid.RowDefinitions>
                         <TextBlock x:Name="hook_text" Text="Not hooked" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" />
+                        <TextBlock x:Name="extra_tag_text" Text="not auto loading" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,5,0" />
                         <Button x:Name="Reload_Button" Content="Reload" Grid.Column="1" Click="BtnReLoadTags_Click" Padding="4,4,4,4" IsEnabled="False" />
                         <Button Content="Load" Grid.Column="2" Click="BtnLoadTags_Click" Padding="4,4,4,4" />
 

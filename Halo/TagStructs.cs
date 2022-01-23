@@ -21,6 +21,8 @@ namespace InfiniteRuntimeTagViewer.Halo
 		public string TagFullName;
 
 		public string TagFile;
+
+		public bool unloaded;
 	}
 
 	public class GroupTagStruct

@@ -330,11 +330,16 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 			//trd.tag_select_panel.Items.Add(tvi);
 			//tvi.Selected += update_tagref;
+			bool filter_unmapped = _mainWindow.CbxFilterUnloaded.IsChecked;
 
 			foreach (KeyValuePair<string, TagStruct> tg in _mainWindow.TagsList.OrderBy(key => key.Value.TagFullName)) // should probably store this instead of sorting everytime
 			{
 				if (tg.Value.TagGroup == ted.TagGroup)
 				{
+					if (filter_unmapped && tg.Value.unloaded == true)
+					{
+						continue;
+					}
 					big.Add(_mainWindow.convert_ID_to_tag_name(tg.Key));
 					targets.Add(tg.Value.Datnum);
 					//TreeViewItem? tvi2 = new()
