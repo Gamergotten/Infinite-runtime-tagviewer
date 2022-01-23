@@ -786,11 +786,15 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 					case "TagRef":
 						TagRefBlock? tfb1 = new() { HorizontalAlignment = HorizontalAlignment.Left };
-						tfb1.taggroup.Items.Add("Null");
-						foreach (string s in _mainWindow.TagGroups.Keys)
-						{
-							tfb1.taggroup.Items.Add(s);
-						}
+						//tfb1.taggroup.Items.Add("Null");
+
+						List<string> swrign = new() { "Null" };
+						swrign.AddRange(_mainWindow.TagGroups.Keys);
+						//foreach (string s in _mainWindow.TagGroups.Keys)
+						//{
+						//	tfb1.taggroup.Items.Add(s);
+						//}
+						tfb1.taggroup.ItemsSource = swrign;
 
 						string tagGroup = ReverseString(_m.ReadString((address + entry.Key + 20).ToString("X"), "", 4));
 						tfb1.taggroup.SelectedItem = tagGroup;
@@ -934,10 +938,13 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						}
 						if (entry.Value.B != null) // this should optimize the hell outta opening tags // like we were literally instaniating 1million items for the levl tag
 						{
+							List<string> source_yummy = new List<string>();
 							for (int y = 0; y < childs; y++)
 							{
-								tb1.indexbox.Items.Add(new ComboBoxItem { Content = y }); // this should be a combobox item?
+								source_yummy.Add(y.ToString());
+								//tb1.indexbox.Items.Add(new ComboBoxItem { Content = y }); // this should be a combobox item?
 							}
+							tb1.indexbox.ItemsSource = source_yummy;
 							if (childs > 0)
 							{
 								tb1.indexbox.SelectedIndex = -1;

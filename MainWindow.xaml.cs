@@ -188,7 +188,7 @@ namespace InfiniteRuntimeTagViewer
 
 		// AUTO MOD LOADER STUFF
 		static int min_tags_changed_for_update = 750;
-		static int min_tags_changed_for_interupt_update = 225;
+		static int min_tags_changed_for_interupt_update = 150;
 
 		public int tag_count_last_update = 0;
 		public int current_tag_count = 0;
