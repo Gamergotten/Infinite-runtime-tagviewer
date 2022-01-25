@@ -1,0 +1,9 @@
+instructions to fix base address
+1. open cheat engine (one that doesnt crash infinite) 
+2. hook to halo infinite
+3. go into cheat engine "Scan Settings" (main window -> settings -> Scan Settings) 
+   - Untick "Don't scan memory that is protected with Write Combine option"
+   - Tick "MEM_MAPPED:Memory that is mapped into the view of a section (E.g:File mapping, emulator memory, slow)"
+4. scan for "tag instances" as a string
+5. scan for the resulting address you got from step 4.
+6. one of those addresses should look something like "HaloInfinite.exe+3E96260", and thats your address

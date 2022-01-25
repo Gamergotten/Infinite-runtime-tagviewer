@@ -53,6 +53,9 @@
     <None Update="files\hashnames.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="files\how to update base address.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="files\tagnames.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -60,9 +63,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="MODS\Full auto weapons.irtv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="MODS\IRTV Campaign Reticles FIX v1.irtv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="MODS\Unofficial mp patch v1.irtv">

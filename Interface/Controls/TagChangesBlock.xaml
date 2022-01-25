@@ -13,6 +13,8 @@
                 <ColumnDefinition Width="60" />
                 <ColumnDefinition Width="120" />
                 <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="40" />
                 <ColumnDefinition Width="120" />
                 <ColumnDefinition Width="40" />
                 <ColumnDefinition Width="120" />
@@ -34,8 +36,11 @@
             <TextBlock Grid.Column="6" HorizontalAlignment="Right" Text="Value" VerticalAlignment="Center" Margin="0,0,5,0" />
             <TextBox x:Name="value" Grid.Column="7" Text="None" VerticalAlignment="Stretch" TextChanged="value_TextChanged" />
 
-            <TextBlock Grid.Column="8" HorizontalAlignment="Right" Text="Source" VerticalAlignment="Center" Margin="0,0,5,0" />
-            <TextBox x:Name="tagSource" Grid.Column="9" Text="" VerticalAlignment="Stretch" />
+            <TextBlock Grid.Column="8" HorizontalAlignment="Right" Text="Revert" VerticalAlignment="Center" Margin="0,0,5,0" />
+            <TextBox x:Name="revert" Grid.Column="9" Text="None" VerticalAlignment="Stretch" />
+            
+            <TextBlock Grid.Column="10" HorizontalAlignment="Right" Text="Source" VerticalAlignment="Center" Margin="0,0,5,0" />
+            <TextBox x:Name="tagSource" Grid.Column="11" Text="" VerticalAlignment="Stretch" />
         </Grid>
     </Border>
 </UserControl>

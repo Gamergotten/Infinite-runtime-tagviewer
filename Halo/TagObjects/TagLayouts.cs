@@ -538,7 +538,6 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 
 				{ "_44", 4 },
 				{ "_45", 4 },
-				{ "_69", 128 } // fuck you hlmt
 			};
 
 

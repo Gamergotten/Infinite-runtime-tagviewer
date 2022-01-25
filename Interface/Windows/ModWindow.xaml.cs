@@ -284,7 +284,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 		// clear changes
 		private void Button_Click_5(object sender, RoutedEventArgs e)
 		{
-			main.clear_pokes_list();
+			main.clear_all_pokelists();
 			debug_text.Text = "Queue cleared";
 			load_mods_from_directories();
 		}
