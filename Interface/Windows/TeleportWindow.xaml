@@ -147,11 +147,12 @@
             <TextBlock Text="Other Options" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="4" HorizontalAlignment="Center" Height="15" VerticalAlignment="Center" />
             <TextBlock Text="Player" Grid.Column="2" Grid.Row="11" HorizontalAlignment="Left" Height="15" VerticalAlignment="Center" Margin="5,0,0,0"/>
             <TextBlock Text="AI" Grid.Column="4" Grid.Row="11" HorizontalAlignment="Left" Height="15" VerticalAlignment="Center" Margin="5,0,0,0"/>
-            <TextBlock Text="All Entities" Grid.Column="2" Grid.Row="13" HorizontalAlignment="Left" Height="15" VerticalAlignment="Center" Margin="5,0,0,0"/>
 
             <RadioButton x:Name="player_search" GroupName="entity" Grid.Column="1" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True"/>
             <RadioButton x:Name="ai_search" GroupName="entity" Grid.Column="3" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="True"/>
-            <RadioButton x:Name="all_entity_search" GroupName="entity" Grid.Column="1" Grid.Row="13" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="True"/>
+
+            <Button x:Name="scan_waypoint" Content="Scan Waypoint" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="13" Margin="2,0,3,0" Click="Scan_Waypoint"/>
+            <Button x:Name="set_waypoint" Content="Set Waypoint" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="13" Margin="2,0,3,0" Click="Set_Waypoint"/>
 
             <!--Locations-->
             <Rectangle Stroke="#505050" Grid.Column="5" Grid.Row="9"  Grid.ColumnSpan="3"/>

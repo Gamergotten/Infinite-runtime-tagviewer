@@ -12,6 +12,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 	{
 		private readonly Mem _m;
 		private long CoordAddress = -1;
+		private long WaypointCoordAddress = -1;
+		private int scan_test = 0; // Used to prevent incorrect output
 		private long[] AoBCoordsResults;
 
 		public TeleportWindow(Mem m)
@@ -19,7 +21,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 			StateChanged += MainWindowStateChangeRaised;
 			_m = m;
 			InitializeComponent();
-
 		}
 
 		#region TitleBar Commands
@@ -72,67 +73,126 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 			try
 			{
 				CoordAddress = -1;
-				Address_List.Children.Clear();
+				
+				Address_List.Children.Clear(); // Clear Window
 				x_cur.Text = "";
 				y_cur.Text = "";
 				z_cur.Text = "";
 				selected_address.Text = "";
-				
-				if (player_search.IsChecked == true)
+
+				if (player_search.IsChecked == true) // Search for player coordinats
 				{
+					Status.Text = "Scanning for player coordinates...";
 					AoBCoordsResults = (await _m.AoBScan("FF FF FF 7F ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 03 3C ?? ?? 00 ?? FF FF FF 7F", true)).ToArray();
 				}
-				else if (ai_search.IsChecked == true)
+				else if (ai_search.IsChecked == true) // Search for AI coordinates
 				{
-					AoBCoordsResults = (await _m.AoBScan("FF FF FF 7F ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 03 3C", true)).ToArray();
-				}
-				else if (all_entity_search.IsChecked == true)
-				{
-					AoBCoordsResults = (await _m.AoBScan("FF FF FF 7F 00 00 00 00 00 00 ?? ?? ?? 00 00 00 ?? ?? FF ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 ?? FF FF FF 7F", true)).ToArray();
+					Status.Text = "Scanning for AI coordinates...";
+					AoBCoordsResults = (await _m.AoBScan("FF FF FF 7F ?? ?? ?? ?? ?? ?? ?? ?? 01 00 00 00 80 5F FF 03 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F0 FF 7F 5F ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F0 FF 7F 5F ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 ?? ?? ?? ?? 00 ?? ?? ?? ?? ??", true)).ToArray();
+					
 				}
 
+				// Sets the first address as the selected
 				selected_address.Text = AoBCoordsResults[0].ToString("X");
 				CoordAddress = AoBCoordsResults[0];
 				
-				foreach (var coord in AoBCoordsResults)
+				foreach (var coord in AoBCoordsResults) //Creates address list
 				{
-
 					TextBox crd = new TextBox();
 					crd.Text = coord.ToString("X");
 					crd.IsReadOnly = true;
 					Address_List.Children.Add(crd);
-
 				}
-				TextBox filler_tbx = new TextBox();
+				
+				TextBox filler_tbx = new TextBox(); // Filler so you can scroll to the bottom
 				Address_List.Children.Add(filler_tbx);
+				
+				if (AoBCoordsResults.Length == 1)
+				{
+					Status.Text = "Scan Complete: Found " + AoBCoordsResults.Length.ToString() + " Result!";
+				}
+				
+				else if (AoBCoordsResults.Length > 1)
+				{
+					Status.Text = "Scan Complete: Found " + AoBCoordsResults.Length.ToString() + " Results!";
+				}
+				scan_test = 0;
 
-			}
-			catch (Exception)
-			{
-			}
-		}
-		private async void Scan_Coords(object sender, RoutedEventArgs e)
-		{
-			Status.Text = "Scanning...";
-			await GetCoordsFromAoB();
-			
-			try
-			{
-				x_cur.Text = _m.ReadFloat((CoordAddress + 0x54).ToString("X")).ToString();
-				y_cur.Text = _m.ReadFloat((CoordAddress + 0x58).ToString("X")).ToString();
-				z_cur.Text = _m.ReadFloat((CoordAddress + 0x5C).ToString("X")).ToString();
-
-				Status.Text = "Scan Complete: Found " + AoBCoordsResults.Length.ToString() + " Results!";
 			}
 			catch (Exception)
 			{
 				Status.Text = "Scan Failed!";
+				scan_test = 1;
 			}
+		}
+
+		public async Task GetWaypointFromAoB()
+		{
+			try
+			{
+				Status.Text = "Scanning for Waypoint!";
+
+				WaypointCoordAddress = -1; // Clear data
+				x_des.Text = "";
+				y_des.Text = "";
+				z_des.Text = "";
+				
+				WaypointCoordAddress = (await _m.AoBScan("10 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? 00 00 12 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00", true)).First();
+
+				Status.Text = "Found Waypoint Coords!";
+				scan_test = 0;
+			}
+			catch (Exception)
+			{
+				Status.Text = "Waypint Scan Failed!";
+				scan_test = 1;
+			}
+		}
+
+		private async void Scan_Waypoint(object sender, RoutedEventArgs e)
+		{
+			await GetWaypointFromAoB();
+			
+			if (scan_test == 0)
+			{
+				x_des.Text = _m.ReadFloat((WaypointCoordAddress + 0x4).ToString("X")).ToString();
+				y_des.Text = _m.ReadFloat((WaypointCoordAddress + 0x8).ToString("X")).ToString();
+				z_des.Text = _m.ReadFloat((WaypointCoordAddress + 0xC).ToString("X")).ToString();
+			}
+
+		}
+
+		private void Set_Waypoint(object sender, RoutedEventArgs e)
+		{
+			if (_m.ReadFloat((WaypointCoordAddress + 0x4).ToString("X")).ToString() != "0" || _m.ReadFloat((WaypointCoordAddress + 0x4).ToString("X")).ToString() != x_des.Text)
+			{
+				x_des.Text = _m.ReadFloat((WaypointCoordAddress + 0x4).ToString("X")).ToString();
+				y_des.Text = _m.ReadFloat((WaypointCoordAddress + 0x8).ToString("X")).ToString();
+				z_des.Text = _m.ReadFloat((WaypointCoordAddress + 0xC).ToString("X")).ToString();
+			}
+			else
+			{
+				Status.Text = "Failed to set waypoint. Make sure a new one has been marked. If you have done so, rescan.";
+			}
+
+		}
+		private async void Scan_Coords(object sender, RoutedEventArgs e)
+		{
+
+			await GetCoordsFromAoB();
+
+			if (scan_test == 0)
+			{
+				x_cur.Text = _m.ReadFloat((CoordAddress + 0x54).ToString("X")).ToString();
+				y_cur.Text = _m.ReadFloat((CoordAddress + 0x58).ToString("X")).ToString();
+				z_cur.Text = _m.ReadFloat((CoordAddress + 0x5C).ToString("X")).ToString();
+			}
+			
 		}
 		private void Update_Coords(object sender, RoutedEventArgs e)
 		{
 
-			try
+			if (CoordAddress != -1 || _m.ReadFloat((CoordAddress + 0x54).ToString("X")).ToString() != "0") // A value of 0 occurs when the entity despawns or is invalid
 			{
 				CoordAddress = long.Parse(selected_address.Text, System.Globalization.NumberStyles.HexNumber);
 
@@ -142,9 +202,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 
 				Status.Text = "Coords Updated";
 			}
-			catch (Exception)
+			else
 			{
-				Status.Text = "Coords Failed to Update!";
+				Status.Text = "Coords failed to update, select a different address or rescan.";
 			}
 		}
 
@@ -152,9 +212,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 		{
 			try
 			{
-				CoordAddress = long.Parse(selected_address.Text, System.Globalization.NumberStyles.HexNumber);
+				CoordAddress = long.Parse(selected_address.Text, System.Globalization.NumberStyles.HexNumber); // Converts from Hex to Long
 
-				if (x_des.Text == "")
+				if (x_des.Text == "") // Checks to see if blocks are empty to autofill
 				{
 					x_des.Text = x_cur.Text;
 				}
@@ -181,7 +241,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 
 		private void Poke_All_Coords(object sender, RoutedEventArgs e)
 		{
-			if (x_des.Text == "")
+			int counter = 0;
+			
+			if (x_des.Text == "") // Checks to see if blocks are empty to autofill
 			{
 				x_des.Text = x_cur.Text;
 			}
@@ -196,10 +258,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 			
 			try
 			{
-				foreach (var coord in AoBCoordsResults)
+				foreach (var coord in AoBCoordsResults) // Pokes every address in coord list
 				{
 					CoordAddress = coord;
-
 					_m.WriteMemory(((CoordAddress + 0x54).ToString("X")), "float", x_des.Text);
 					_m.WriteMemory(((CoordAddress + 0x58).ToString("X")), "float", y_des.Text);
 					_m.WriteMemory(((CoordAddress + 0x5C).ToString("X")), "float", z_des.Text);
@@ -213,11 +274,11 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 			}
 		}
 
-		private void Set_Coords(object sender, RoutedEventArgs e)
+		private void Set_Coords(object sender, RoutedEventArgs e) // List of locations to teleport to
 		{
 			if (location_selector.Text == "FOB Alpha")
 			{
-				x_des.Text = "845.5";
+				x_des.Text = "-845.5";
 				y_des.Text = "387.73";
 				z_des.Text = "157.18";
 			}
@@ -288,7 +349,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 				z_des.Text = "146.77";
 			}
 		}
-		private void Clear_Des_Coords(object sender, RoutedEventArgs e)
+		private void Clear_Des_Coords(object sender, RoutedEventArgs e) // Clears desired coords section
 		{
 			x_des.Text = "";
 			y_des.Text = "";
