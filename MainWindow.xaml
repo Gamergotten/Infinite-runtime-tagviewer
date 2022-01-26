@@ -7,7 +7,7 @@
                  x:Class="InfiniteRuntimeTagViewer.MainWindow"
                  mc:Ignorable="d"
                  Background="#333333"
-                 Title="Infinite Runtime Tagviewer" Height="650" Width="1150">
+                 Title="Infinite Runtime Tagviewer" Height="650" Width="1150" AllowsTransparency="True" WindowStyle="None">
 
     <Window.Resources>
         <TransformGroup x:Key="windowScaleTransform">
@@ -82,9 +82,10 @@
     <Border x:Name="MainWindowBorder" BorderBrush="Transparent" BorderThickness="0" >
         <Grid x:Name="parentContainer" Background="Transparent">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="21*"/>
                 <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="527*"/>
+                <ColumnDefinition Width="497*"/>
+                <ColumnDefinition Width="54*"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
@@ -93,7 +94,7 @@
             </Grid.RowDefinitions>
 
             <!--Window chrome-->
-            <Grid Grid.Row="0" Height="30" Background="#252526" Grid.ColumnSpan="3">
+            <Grid Grid.Row="0" Height="30" Background="#252526" Grid.ColumnSpan="4">
 
                 <DockPanel>
                     <Menu x:Name="MainMenu" IsMainMenu="True" Padding="10 0" Background="#252526">
@@ -118,7 +119,7 @@
                             </MenuItem>
                         </MenuItem>
                         <MenuItem Header="Options" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Height="28">
-                            
+
                             <MenuItem x:Name="CbxSearchProcess" Header="Auto Loader" IsCheckable="True" IsChecked="False" Checked="CheckBoxProcessCheck" Unchecked="CheckBoxProcessCheck" >
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Automatically search and hook Halo process.</TextBlock>
@@ -130,7 +131,7 @@
                                     <TextBlock Foreground="Black">Automatically applies all pokes after a load.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
-                            
+
                             <MenuItem x:Name="CbxAutoPokeChanges" Header="Auto Poke" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Auto pokes anything you change.</TextBlock>
@@ -139,6 +140,12 @@
                             <MenuItem x:Name="CbxFilterUnloaded" Header="Don't show unloaded" IsCheckable="True" IsChecked="False" Checked="UpdateOption_for_hiding_unloaded" Unchecked="UpdateOption_for_hiding_unloaded" >
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Hide tags that aren't loaded ingame.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+
+                            <MenuItem x:Name="CbxOpacity" Header="Window Opacity" IsCheckable="True" IsChecked="False" Checked="Ppacity" Unchecked="Ppacity" >
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Toggle Transparency.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
 
@@ -197,7 +204,7 @@
             </Grid>
 
             <!-- App content -->
-            <Grid Grid.Row="1" x:Name="AppArea" LayoutTransform="{StaticResource windowScaleTransform}" Grid.ColumnSpan="3">
+            <Grid Grid.Row="1" x:Name="AppArea" LayoutTransform="{StaticResource windowScaleTransform}" Grid.ColumnSpan="4">
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="5*" />
@@ -268,7 +275,7 @@
                             <TextBlock  x:Name="change_text" Grid.Column="3" HorizontalAlignment="Right" Text="0 changes queued" VerticalAlignment="Center" Margin="0,0,5,0" />
                             <Button     Grid.Column="4" Content="Clear All" HorizontalAlignment="Stretch" Click="BtnClearQueue_Click" />
                             <Button     Grid.Column="6" Content="Show Queue" HorizontalAlignment="Stretch" Click="BtnShowHideQueue_Click" Margin="10,0,0,0" />
-                            
+
 
                         </Grid>
                     </Grid>
@@ -307,6 +314,10 @@
                 <!-- > Tags Grid -->
 
                 <Grid Grid.Column="0" Margin="0,0,2,0" Background="#252526" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="37*"/>
+                        <ColumnDefinition Width="129*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="10" />
                         <RowDefinition Height="20" />
@@ -315,7 +326,7 @@
                     </Grid.RowDefinitions>
 
                     <!-- > Search Box -->
-                    <Grid Grid.RowSpan="2" Margin="0,1,0,2" Background="#252526">
+                    <Grid Grid.RowSpan="2" Margin="0,1,0,2" Background="#252526" Grid.ColumnSpan="2">
                         <Grid VerticalAlignment="Center" Margin="10,0,15,0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto" />
@@ -329,7 +340,7 @@
                     </Grid>
                     <!-- < Search Box -->
 
-                    <TreeView x:Name="TagsTree" Grid.Row="2" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling">
+                    <TreeView x:Name="TagsTree" Grid.Row="2" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" Grid.ColumnSpan="2">
                         <TreeViewItem Header="Press the load button to get started!" />
                         <TreeViewItem Header="Press again whenever the map/zoneset changes" />
                         <TreeViewItem Header="Make sure tags are loaded correctly when saving/loading" />
@@ -341,7 +352,7 @@
                     </TreeView>
                     <!-- < #TagsTree -->
 
-                    <Grid Grid.Row="3" Grid.ColumnSpan="1" Margin="5,5,5,5">
+                    <Grid Grid.Row="3" Grid.ColumnSpan="2" Margin="5,5,5,5">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition Width="45" />
@@ -363,3 +374,4 @@
         </Grid>
     </Border>
 </Window>
+
