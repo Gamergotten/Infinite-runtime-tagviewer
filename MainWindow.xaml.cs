@@ -309,6 +309,18 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
+		private void Ppacity(object sender, RoutedEventArgs e)
+		{
+			if (window.Opacity != 0.90)
+			{
+				window.Opacity = 0.90;
+			}
+			else
+			{
+				window.Opacity = 1;
+			}
+		}
+
 		private long BaseAddress = -1;
 		private int TagCount = -1;
 
