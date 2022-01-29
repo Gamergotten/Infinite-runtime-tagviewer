@@ -144,15 +144,13 @@
             <Rectangle Stroke="#505050" Grid.Column="1" Grid.Row="9"  Grid.ColumnSpan="4"/>
             <Rectangle Stroke="#505050" Grid.Column="1" Grid.Row="10" Grid.RowSpan="5" Grid.ColumnSpan="4"/>
 
-            <TextBlock Text="Other Options" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="4" HorizontalAlignment="Center" Height="15" VerticalAlignment="Center" />
-            <TextBlock Text="Player" Grid.Column="2" Grid.Row="11" HorizontalAlignment="Left" Height="15" VerticalAlignment="Center" Margin="5,0,0,0"/>
-            <TextBlock Text="AI" Grid.Column="4" Grid.Row="11" HorizontalAlignment="Left" Height="15" VerticalAlignment="Center" Margin="5,0,0,0"/>
+            <TextBlock Text="Waypoint Options" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="4" HorizontalAlignment="Center" Height="15" VerticalAlignment="Center" />
+            <TextBlock Text="Address:" Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" HorizontalAlignment="left" Height="15" VerticalAlignment="Center" Margin="5,0,0,0"/>
 
-            <RadioButton x:Name="player_search" GroupName="entity" Grid.Column="1" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True"/>
-            <RadioButton x:Name="ai_search" GroupName="entity" Grid.Column="3" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="True"/>
+            <TextBox x:Name="waypoint_address" IsReadOnly="True" Grid.Row="11" Grid.Column="2" Margin="30,0,0,0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="125" BorderBrush="#505050"/>
 
-            <Button x:Name="scan_waypoint" Content="Scan Waypoint" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="13" Margin="2,0,3,0" Click="Scan_Waypoint"/>
-            <Button x:Name="set_waypoint" Content="Set Waypoint" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="13" Margin="2,0,3,0" Click="Set_Waypoint"/>
+            <Button x:Name="scan_waypoint" Content="Scan" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="13" Margin="5,0,2.5,0" Click="Scan_Waypoint"/>
+            <Button x:Name="set_waypoint" Content="Update/Set" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="13" Margin="2.5,0,5,0" Click="Set_Waypoint"/>
 
             <!--Locations-->
             <Rectangle Stroke="#505050" Grid.Column="5" Grid.Row="9"  Grid.ColumnSpan="3"/>
@@ -197,17 +195,28 @@
 
             <TextBlock Text="Status:" Grid.Row="15" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" Height="15"/>
             <TextBlock x:Name="Status" Text="" Grid.Row="15" Grid.Column="0" Margin="40,2,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="10" Height="20"/>
-            
+
             <!--Window Controls-->
+            <DockPanel Grid.ColumnSpan="9">
+                <Menu x:Name="TPMainMenu" IsMainMenu="True" Padding="10 0" Background="#252526">
+                    <MenuItem Header="_Settings" HorizontalAlignment="Center" VerticalAlignment="Center" WindowChrome.IsHitTestVisibleInChrome="True" FontFamily="Segoe UI Light" Height="28">
+                        <MenuItem x:Name="auto_updater" Header="Auto Update [DISABLED]" Click="Auto_Updater_Toggle"/>
 
-            <Rectangle Fill="#252526" Grid.ColumnSpan="9"/>
+                        <MenuItem Header="Scan Type">
+                            <MenuItem x:Name="player_scan" Header="Player Scan [ENABLED]" Click="Player_Scan_Selected"/>
+                            <MenuItem x:Name="ai_scan" Header="AI Scan" Click="AI_Scan_Selected"/>
+                        </MenuItem>
+                    </MenuItem>
+                </Menu>
+            </DockPanel>
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="8">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="6">
                 <TextBlock Text="{Binding Title, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:TeleportWindow}}}" FontFamily="Arial" Margin="15 0 0 0" />
             </StackPanel>
 
             <!--Caption buttons-->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.ColumnSpan="9" >
+
                 <Button Style="{StaticResource MinimizeButtonStyle}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Minimize"
                             Command="{x:Static SystemCommands.MinimizeWindowCommand}" />
                 <Button x:Name="RestoreButton" Visibility="Collapsed" Style="{StaticResource RestoreButtonStyle}" 

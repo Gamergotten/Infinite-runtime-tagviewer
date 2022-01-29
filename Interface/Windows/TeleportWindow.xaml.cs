@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
+
 namespace InfiniteRuntimeTagViewer.Interface.Windows
 {
 	public partial class TeleportWindow
@@ -16,12 +17,24 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 		private int scan_test = 0; // Used to prevent incorrect output
 		private long[] AoBCoordsResults;
 
+		private int scan_type = 0; // 0 is player, 1 is AI
+
+		System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+
+
 		public TeleportWindow(Mem m)
 		{
 			StateChanged += MainWindowStateChangeRaised;
 			_m = m;
 			InitializeComponent();
+
+			dispatcherTimer.Tick += OnTimedEvent;
+			dispatcherTimer.Interval = new TimeSpan(20000);
+			
+
 		}
+
+	
 
 		#region TitleBar Commands
 		private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
@@ -80,41 +93,53 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 				z_cur.Text = "";
 				selected_address.Text = "";
 
-				if (player_search.IsChecked == true) // Search for player coordinats
+				if (scan_type == 0) // Search for player coordinats
 				{
 					Status.Text = "Scanning for player coordinates...";
 					AoBCoordsResults = (await _m.AoBScan("FF FF FF 7F ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 03 3C ?? ?? 00 ?? FF FF FF 7F", true)).ToArray();
 				}
-				else if (ai_search.IsChecked == true) // Search for AI coordinates
+				else if (scan_type == 1) // Search for AI coordinates
 				{
 					Status.Text = "Scanning for AI coordinates...";
 					AoBCoordsResults = (await _m.AoBScan("FF FF FF 7F ?? ?? ?? ?? ?? ?? ?? ?? 01 00 00 00 80 5F FF 03 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F0 FF 7F 5F ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F0 FF 7F 5F ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 3F 00 00 00 00 00 00 ?? ?? ?? ?? 00 ?? ?? ?? ?? ??", true)).ToArray();
 					
 				}
 
-				// Sets the first address as the selected
-				selected_address.Text = AoBCoordsResults[0].ToString("X");
-				CoordAddress = AoBCoordsResults[0];
+				int add_count = 0;
 				
 				foreach (var coord in AoBCoordsResults) //Creates address list
 				{
-					TextBox crd = new TextBox();
-					crd.Text = coord.ToString("X");
-					crd.IsReadOnly = true;
-					Address_List.Children.Add(crd);
+					string address_verify = _m.ReadFloat((coord + 0x54).ToString("X")).ToString();
+
+					if (address_verify != "0")
+					{
+						Button crd = new Button();
+						crd.Content = coord.ToString("X");
+						Address_List.Children.Add(crd);
+
+						crd.Click += Address_Select_Click;
+
+						add_count++;
+					}
+
+					if (address_verify != "0" && add_count == 1)
+					{
+						selected_address.Text = coord.ToString("X");
+						CoordAddress = coord;
+					}
 				}
 				
 				TextBox filler_tbx = new TextBox(); // Filler so you can scroll to the bottom
 				Address_List.Children.Add(filler_tbx);
 				
-				if (AoBCoordsResults.Length == 1)
+				if (add_count == 1)
 				{
-					Status.Text = "Scan Complete: Found " + AoBCoordsResults.Length.ToString() + " Result!";
+					Status.Text = "Scan Complete: Found " + add_count.ToString() + " Result!";
 				}
 				
-				else if (AoBCoordsResults.Length > 1)
+				else if (add_count > 1)
 				{
-					Status.Text = "Scan Complete: Found " + AoBCoordsResults.Length.ToString() + " Results!";
+					Status.Text = "Scan Complete: Found " + add_count.ToString() + " Results!";
 				}
 				scan_test = 0;
 
@@ -124,6 +149,92 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 				Status.Text = "Scan Failed!";
 				scan_test = 1;
 			}
+		}
+
+		private void Auto_Updater_Toggle(object sender, EventArgs e)
+		{
+			if (dispatcherTimer.IsEnabled == false)
+			{
+				dispatcherTimer.Start();
+
+				auto_updater.Header = "Auto Update [ENABLED]";
+
+				Status.Text = "Auto Update Enabled!";
+			}
+			else if (dispatcherTimer.IsEnabled == true)
+			{
+				dispatcherTimer.Stop();
+
+				auto_updater.Header = "Auto Update [DISABLED]";
+
+				Status.Text = "Auto Update Disabled!";
+			}
+		}
+
+		private void Player_Scan_Selected(object sender, EventArgs e)
+		{
+			if (scan_type == 0)
+			{
+				Status.Text = "Player Scan Already Enabled!";
+			}
+			else if (scan_type == 1)
+			{
+				ai_scan.Header = "AI Scan";
+				player_scan.Header = "Player Scan [ENABLED]";
+
+				scan_type = 0;
+
+				Status.Text = "Player Scan Enabled!";
+			}
+		}
+
+		private void AI_Scan_Selected(object sender, EventArgs e)
+		{
+			if (scan_type == 0)
+			{
+				ai_scan.Header = "AI Scan [ENABLED]";
+				player_scan.Header = "Player Scan";
+
+				scan_type = 1;
+
+				Status.Text = "AI Scan Enabled!";
+			}
+			else if (scan_type == 1)
+			{
+				Status.Text = "AI Scan Already Enabled!";
+			}
+		}
+
+		private void OnTimedEvent(object sender, EventArgs e)
+		{
+			try
+			{
+				CoordAddress = long.Parse(selected_address.Text, System.Globalization.NumberStyles.HexNumber);
+
+				x_cur.Text = _m.ReadFloat((CoordAddress + 0x54).ToString("X")).ToString();
+				y_cur.Text = _m.ReadFloat((CoordAddress + 0x58).ToString("X")).ToString();
+				z_cur.Text = _m.ReadFloat((CoordAddress + 0x5C).ToString("X")).ToString();
+			}
+			catch (Exception)
+			{
+				x_cur.Text = "";
+				y_cur.Text = "";
+				z_cur.Text = "";
+			}
+		}
+
+		private void Address_Select_Click(object sender, RoutedEventArgs e)
+		{
+			Button? found_add = sender as Button;
+			string selection = found_add.Content.ToString();
+			selected_address.Text = selection;
+
+			CoordAddress = long.Parse(selection, System.Globalization.NumberStyles.HexNumber);
+			x_cur.Text = _m.ReadFloat((CoordAddress + 0x54).ToString("X")).ToString();
+			y_cur.Text = _m.ReadFloat((CoordAddress + 0x58).ToString("X")).ToString();
+			z_cur.Text = _m.ReadFloat((CoordAddress + 0x5C).ToString("X")).ToString();
+
+			Status.Text = "Address Selected: " + selection;
 		}
 
 		public async Task GetWaypointFromAoB()
@@ -138,6 +249,8 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 				z_des.Text = "";
 				
 				WaypointCoordAddress = (await _m.AoBScan("10 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? 00 00 12 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00", true)).First();
+
+				waypoint_address.Text = WaypointCoordAddress.ToString("X");
 
 				Status.Text = "Found Waypoint Coords!";
 				scan_test = 0;
@@ -226,12 +339,18 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 				{
 					z_des.Text = z_cur.Text;
 				}
+				if (_m.ReadFloat((CoordAddress + 0x54).ToString("X")).ToString() != "0")
+				{
+					_m.WriteMemory(((CoordAddress + 0x54).ToString("X")), "float", x_des.Text);
+					_m.WriteMemory(((CoordAddress + 0x58).ToString("X")), "float", y_des.Text);
+					_m.WriteMemory(((CoordAddress + 0x5C).ToString("X")), "float", z_des.Text);
 
-				_m.WriteMemory(((CoordAddress + 0x54).ToString("X")), "float", x_des.Text);
-				_m.WriteMemory(((CoordAddress + 0x58).ToString("X")), "float", y_des.Text);
-				_m.WriteMemory(((CoordAddress + 0x5C).ToString("X")), "float", z_des.Text);
-
-				Status.Text = "Coords Poked";
+					Status.Text = "Coords Poked";
+				}
+				else
+				{
+					Status.Text = "Invalid Address!";
+				}
 			}
 			catch (Exception)
 			{
@@ -261,12 +380,15 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 				foreach (var coord in AoBCoordsResults) // Pokes every address in coord list
 				{
 					CoordAddress = coord;
-					_m.WriteMemory(((CoordAddress + 0x54).ToString("X")), "float", x_des.Text);
-					_m.WriteMemory(((CoordAddress + 0x58).ToString("X")), "float", y_des.Text);
-					_m.WriteMemory(((CoordAddress + 0x5C).ToString("X")), "float", z_des.Text);
+					if (_m.ReadFloat((CoordAddress + 0x54).ToString("X")).ToString() != "0")
+					{
+						_m.WriteMemory(((CoordAddress + 0x54).ToString("X")), "float", x_des.Text);
+						_m.WriteMemory(((CoordAddress + 0x58).ToString("X")), "float", y_des.Text);
+						_m.WriteMemory(((CoordAddress + 0x5C).ToString("X")), "float", z_des.Text);
+					}
 				}
 
-				Status.Text = "All Coords Poked";
+				Status.Text = "All Valid Coords Poked";
 			}
 			catch (Exception)
 			{
