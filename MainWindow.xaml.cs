@@ -112,6 +112,7 @@ namespace InfiniteRuntimeTagViewer
 		public delegate void LoadTagsDelagate();
 		private readonly System.Timers.Timer _t;
 		public Mem M = new();
+		private readonly string HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x4879758", ScanMemAOBBaseAddr = "HaloInfinite.exe+0x3E96260";
 
 		public MainWindow()
 		{
@@ -150,7 +151,7 @@ namespace InfiniteRuntimeTagViewer
 			if (!hooked || reset)
 			{
 				// Get the base address
-				BaseAddress = M.ReadLong("HaloInfinite.exe+3E96260");
+				BaseAddress = M.ReadLong(HookProcessAsyncBaseAddr);
 				string validtest = M.ReadString(BaseAddress.ToString("X"));
 				//System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite .exe+0x3D13E38")); // this is the wrong address lol
 				if (validtest == "tag instances")
@@ -247,7 +248,9 @@ namespace InfiniteRuntimeTagViewer
 
 		public async Task ScanMem()
 		{
-			BaseAddress = M.ReadLong("HaloInfinite.exe+3E96260"); // FALLBACK ADDRESS POINTER (which is literally useless)
+			// FALLBACK ADDRESS POINTER (which is literally useless)
+			// However, it is faster than scanning memory and is used as a fast reference ptr to load quicker.
+			BaseAddress = M.ReadLong(ScanMemAOBBaseAddr);
 			string validtest = M.ReadString(BaseAddress.ToString("X"));
 
 			if (validtest == "tag instances")
