@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls"
              mc:Ignorable="d" >
-    <Grid  Margin="5,5,0,0" Height="20" >
+    <Grid  Margin="5,5,0,0" Height="20" Width="auto" HorizontalAlignment="Stretch" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200*" MinWidth="200" />
             <ColumnDefinition/>

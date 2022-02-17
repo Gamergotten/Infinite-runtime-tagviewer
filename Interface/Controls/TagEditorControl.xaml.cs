@@ -1545,13 +1545,22 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 		private bool filterTags_Titles(UIElementCollection collection, string filterText)
 		{
+			if (collection == null) return false;
+
 			bool found = false;
 			foreach (Control control in collection)
 			{
 				if (control is TagBlock)
 				{
-					TagBlock? trb = (TagBlock) control;
-					if (((string) trb.tagblock_title.Text).Contains(filterText, StringComparison.OrdinalIgnoreCase))
+					TagBlock? tb = (TagBlock) control;
+					if (((string) tb.tagblock_title.Text).Contains(filterText, StringComparison.OrdinalIgnoreCase))
+					{
+						control.Visibility = Visibility.Visible;
+						found = true;
+					}
+
+					// Now scan the inner block
+					if (filterTags_Titles(tb.dockpanel.Children, filterText))
 					{
 						control.Visibility = Visibility.Visible;
 						found = true;
@@ -1600,7 +1609,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 				else if (control is TagFlagsGroup)
 				{
 					TagFlagsGroup? trb = (TagFlagsGroup) control;
-					bool continue2 = false;
+					bool @continue = false;
 					foreach (var v in trb.spBitCollection.Children)
 					{
 						if (v is TagsFlags) // im not sure if tagsflags are even used hmm
@@ -1614,19 +1623,19 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 								if (str1.Contains(filterText, StringComparison.OrdinalIgnoreCase))
 								{
 									control.Visibility = Visibility.Visible;
-									found = true; continue2 = true;
+									found = true; @continue = true;
 									continue;
 								}
 							}
-							if (continue2)
-								continue;
 
+							if (@continue)
+								continue;
 						}
 						else if (v is CheckBox)
 						{
-							CheckBox? trbaby2 = (CheckBox) v;
-							string str1 = (string) trbaby2.Content;
-							if (str1.Contains(filterText, StringComparison.OrdinalIgnoreCase))
+							CheckBox? cbx = (CheckBox) v;
+							string str = (string) cbx.Content;
+							if (str.Contains(filterText, StringComparison.OrdinalIgnoreCase))
 							{
 								control.Visibility = Visibility.Visible;
 								found = true; 
@@ -1635,33 +1644,15 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						}
 					}
 				}
-				//
-				// tag flags block missing
-				//
-				else if (control is TagBlock)
-				{
-					TagBlock? tb = (TagBlock) control;
-					StackPanel? dp = tb.dockpanel;
-					if (dp == null)
-					{
-						continue;
-					}
-
-					bool f = filterTags_Titles(dp.Children, filterText);
-					if (f)
-					{
-						found = true;
-						tb.Visibility = Visibility.Visible;
-					}
-				}
 			}
 			return found;
 		}
 
 		private bool filterTags_Datatypes(UIElementCollection collection, string filterText)
 		{
-			bool found = false;
+			if (collection == null) return false;
 
+			bool found = false;
 			foreach (Control control in collection)
 			{
 				if (control is TagRefBlock)
@@ -1695,14 +1686,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 				else if (control is TagBlock)
 				{
 					TagBlock? tb = (TagBlock) control;
-					StackPanel? dp = tb.dockpanel;
-					if (dp == null)
-					{
-						continue;
-					}
-
-					bool f = filterTags_Datatypes(dp.Children, filterText);
-					if (f)
+					
+					// Now scan the inner block
+					if (filterTags_Datatypes(tb.dockpanel.Children, filterText))
 					{
 						found = true;
 						tb.Visibility = Visibility.Visible;
@@ -1751,14 +1737,9 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 				else if (control is TagBlock)
 				{
 					TagBlock? tb = (TagBlock) control;
-					StackPanel? dp = tb.dockpanel;
-					if (dp == null)
-					{
-						continue;
-					}
 
-					bool f = filterTags_Values(dp.Children, filterText);
-					if (f)
+					// Now scan the inner block
+					if (filterTags_Values(tb.dockpanel.Children, filterText))
 					{
 						found = true;
 						tb.Visibility = Visibility.Visible;
@@ -1768,7 +1749,6 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			return found;
 		}
 
-	
 
 		public void Dispose()
 		{

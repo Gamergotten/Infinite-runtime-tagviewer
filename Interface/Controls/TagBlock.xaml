@@ -28,10 +28,6 @@
                 <ColumnDefinition Width="208.846"/>
                 <ColumnDefinition MinWidth="10" Width="1*" />
                 <ColumnDefinition Width="150"/>
-
-
-
-
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30" />

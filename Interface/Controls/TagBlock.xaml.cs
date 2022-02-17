@@ -38,9 +38,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 			else
 			{
 				dockpanel.Children.Clear();
-
 			}
-
 
 			// OK WE HAVE A PROBLEM HERE, + (indexbox.SelectedIndex * Children.Value.S)
 			// i dont see a problem here, past me

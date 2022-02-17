@@ -128,14 +128,8 @@ mc:Ignorable="d"
                     <TextBlock Text="Search" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"/>
                     <TextBox x:Name="search_filter" Margin="40,0,0,0" TextChanged="search_filter_TextChanged" />
                     <ScrollViewer Grid.Row="2">
-                        <StackPanel x:Name="mods_panel" >
-
-
-                        </StackPanel>
+                        <StackPanel x:Name="mods_panel" />
                     </ScrollViewer>
-
-
-
                 </Grid>
 
                 <Grid Grid.Column="0" Margin="0,0,2,0" Background="#252526" Grid.ColumnSpan="2">
@@ -153,7 +147,7 @@ mc:Ignorable="d"
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <Button Content="Halocustoms.com for more mods" Click="Button_Click_1"/>
+                    <Button Content="Visit halocustoms.com for more mods" Click="Button_Click_1"/>
                     <Button Content="import mods" Grid.Row="1" Click="Button_Click_2" />
                     <Button Content="reload mods" Grid.Row="2" Click="Button_Click"/>
                     <Button Content="game refresh" Grid.Row="4" Click="Button_Click_3" />
@@ -162,12 +156,7 @@ mc:Ignorable="d"
                     <TextBlock x:Name="test_changes" Text="0 changes queued" Grid.Row="7" Margin="5,0,0,0"/>
                     
                     <TextBlock Text="Filters" Grid.Row="8" Margin="5,0,0,0" VerticalAlignment="Bottom"/>
-                    <StackPanel x:Name="filterspanel" Grid.Row="9" Background="#FF191919" Margin="3,3,3,3">
-
-
-                    </StackPanel>
-
-
+                    <StackPanel x:Name="filterspanel" Grid.Row="9" Background="#FF191919" Margin="3,3,3,3" />
                 </Grid>
             </Grid>
         </Grid>
