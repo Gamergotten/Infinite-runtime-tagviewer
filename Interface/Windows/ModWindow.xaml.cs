@@ -151,33 +151,24 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 			foreach (KeyValuePair<string, modcheckfilter> thing in loaded_filters)
 			{
 				if (thing.Value.filterbox.IsChecked == true)
-				{
 					required_filters.Add(thing.Key);
-				}
 			}
+
 			foreach (modinstance mso in loaded_modsui)
 			{
-				bool passed_filter = true;
-				bool contained_all_filters = false;
+				bool passedFilter = true;
+
 				foreach (string filt in required_filters)
-				{
 					if (!mso.filters.Contains(filt))
-					{
-						passed_filter = false;
-					}
-				}
+						passedFilter = false;
+
 				if (!mso.title.Text.Contains(search_filter.Text))
-				{
-					passed_filter = false;
-				}
-				if (passed_filter == true)
-				{
+					passedFilter = false;
+
+				if (passedFilter == true)
 					mso.Visibility = Visibility.Visible;
-				}
 				else
-				{
 					mso.Visibility = Visibility.Collapsed;	
-				}
 			}
 		}
 

@@ -17,7 +17,7 @@
             
         </ComboBox>
 
-        <TextBlock x:Name="value_name" Foreground="#fff" Text="name test" HorizontalAlignment="Stretch" Margin="5,0,5,0" />
+        <TextBlock x:Name="value_name" Foreground="#fff" Text="Enum Value" HorizontalAlignment="Stretch" Margin="5,0,5,0" />
 
     </Grid>
 </UserControl>
