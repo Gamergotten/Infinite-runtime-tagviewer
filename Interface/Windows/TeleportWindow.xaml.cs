@@ -257,7 +257,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 			}
 			catch (Exception)
 			{
-				Status.Text = "Waypint Scan Failed!";
+				Status.Text = "Waypoint Scan Failed!";
 				scan_test = 1;
 			}
 		}

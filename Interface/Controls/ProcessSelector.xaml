@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <ComboBox x:Name="cbxSelector" SelectedIndex="0" DropDownOpened="cbxSelector_DropDownOpened" SelectionChanged="cbxSelector_SelectionChanged">
-            <ComboBoxItem Content="Hook any Halo process.">
+            <ComboBoxItem Content="Hook any Halo Infinite process.">
                 <ComboBoxItem.ToolTip>
                     <TextBlock Foreground="Black">Automatically find any halo infinite process and hook it.</TextBlock>
                 </ComboBoxItem.ToolTip>
