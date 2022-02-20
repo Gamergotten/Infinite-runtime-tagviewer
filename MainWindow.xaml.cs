@@ -112,7 +112,11 @@ namespace InfiniteRuntimeTagViewer
 		public delegate void LoadTagsDelagate();
 		private readonly System.Timers.Timer _t;
 		public Mem M = new();
-		private readonly string HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x4879758", ScanMemAOBBaseAddr = "HaloInfinite.exe+0x3E96260";
+
+		//Offsets
+		private readonly string 
+			                    HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x4879758", 
+			                    ScanMemAOBBaseAddr = "HaloInfinite.exe+0x3E96260";
 
 		public MainWindow()
 		{
