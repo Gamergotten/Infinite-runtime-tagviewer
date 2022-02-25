@@ -115,8 +115,12 @@ namespace InfiniteRuntimeTagViewer
 
 		//Offsets
 		private readonly string 
-			                    HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x4879758", 
-			                    ScanMemAOBBaseAddr = "HaloInfinite.exe+0x3E96260";
+								// Hard-Coded Addresses
+			                    HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x41A2920",			 // Tag_List_Function
+			                    ScanMemAOBBaseAddr       = "HaloInfinite.exe+0x360DB10",			 // Tag_List_Str
+								
+								// AOB's to scan.
+								AOBScanTagStr            = "74 61 67 20 69 6E 73 74 61 6E 63 65 73"; // Tag_List_Backup Str to find
 
 		public MainWindow()
 		{
@@ -267,7 +271,7 @@ namespace InfiniteRuntimeTagViewer
 				hook_text.Text = "Offset failed, scanning...";
 				try
 				{
-					long? aobScan = (await M.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
+					long? aobScan = (await M.AoBScan(AOBScanTagStr, true))
 						.First(); // "tag instances"
 
 					// Failed to find base tag address
