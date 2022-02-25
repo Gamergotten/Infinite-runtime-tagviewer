@@ -113,6 +113,15 @@ namespace InfiniteRuntimeTagViewer
 		private readonly System.Timers.Timer _t;
 		public Mem M = new();
 
+		//Offsets
+		private readonly string 
+								// Hard-Coded Addresses
+			                    HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x41A2920",			 // Tag_List_Function
+			                    ScanMemAOBBaseAddr       = "HaloInfinite.exe+0x360DB10",			 // Tag_List_Str
+								
+								// AOB's to scan.
+								AOBScanTagStr            = "74 61 67 20 69 6E 73 74 61 6E 63 65 73"; // Tag_List_Backup Str to find
+
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -150,7 +159,7 @@ namespace InfiniteRuntimeTagViewer
 			if (!hooked || reset)
 			{
 				// Get the base address
-				BaseAddress = M.ReadLong("HaloInfinite.exe+3E96260");
+				BaseAddress = M.ReadLong(HookProcessAsyncBaseAddr);
 				string validtest = M.ReadString(BaseAddress.ToString("X"));
 				//System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite .exe+0x3D13E38")); // this is the wrong address lol
 				if (validtest == "tag instances")
@@ -247,7 +256,9 @@ namespace InfiniteRuntimeTagViewer
 
 		public async Task ScanMem()
 		{
-			BaseAddress = M.ReadLong("HaloInfinite.exe+3E96260"); // FALLBACK ADDRESS POINTER (which is literally useless)
+			// FALLBACK ADDRESS POINTER (which is literally useless)
+			// However, it is faster than scanning memory and is used as a fast reference ptr to load quicker.
+			BaseAddress = M.ReadLong(ScanMemAOBBaseAddr);
 			string validtest = M.ReadString(BaseAddress.ToString("X"));
 
 			if (validtest == "tag instances")
@@ -260,7 +271,7 @@ namespace InfiniteRuntimeTagViewer
 				hook_text.Text = "Offset failed, scanning...";
 				try
 				{
-					long? aobScan = (await M.AoBScan("74 61 67 20 69 6E 73 74 61 6E 63 65 73", true))
+					long? aobScan = (await M.AoBScan(AOBScanTagStr, true))
 						.First(); // "tag instances"
 
 					// Failed to find base tag address

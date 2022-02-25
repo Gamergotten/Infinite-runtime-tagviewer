@@ -99,13 +99,13 @@
                 <DockPanel>
                     <Menu x:Name="MainMenu" IsMainMenu="True" Padding="10 0" Background="#252526">
                         <MenuItem Header="_File" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Height="30">
-                            <MenuItem Header="_Open" Click="Open_pokes">
+                            <MenuItem Header="_Open (Poke List)" Click="Open_pokes">
                                 <!--DONE ;)-->
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Open a file.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
-                            <MenuItem Header="_Save" Click="Save_pokes" >
+                            <MenuItem Header="_Save (Poke List)" Click="Save_pokes" >
                                 <!--DONE ;)-->
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Save all pokes from current sub-pokelist in queue.</TextBlock>
@@ -149,14 +149,14 @@
                                 </MenuItem.ToolTip>
                             </MenuItem>
 
-                            <MenuItem Header="Process Selecter">
+                            <MenuItem Header="Process Selector">
                                 <!--Added this here for process selecter in the future.-->
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Select a Halo process.</TextBlock>
                                 </MenuItem.ToolTip>
                                 <MenuItem x:Name="CbxAnyProcess" Header="Any" Click="AnyProcess" IsChecked="True">
                                     <MenuItem.ToolTip>
-                                        <TextBlock Foreground="Black">Hook any Halo process.</TextBlock>
+                                        <TextBlock Foreground="Black">Hook any Halo Infinite process.</TextBlock>
                                     </MenuItem.ToolTip>
                                 </MenuItem>
                                 <MenuItem x:Name="CbxSpecificProcess" Header="Specific" Click="SpecificProcess">
@@ -302,7 +302,7 @@
 
                             <Button Grid.Column="0"  Content="+" Click="Button_Click_1"/>
 
-                            <Button Grid.Column="6" Content="CLear List" Click="BtnClearQueueSingle_Click"/>
+                            <Button Grid.Column="6" Content="Clear List" Click="BtnClearQueueSingle_Click"/>
                             <Button x:Name="remove_from_quee_button" Grid.Column="7" Content="Remove from queue" Click="BtnREMOVEQueueSingle_Click" />
                         </Grid>
 
@@ -341,16 +341,15 @@
                     <!-- < Search Box -->
 
                     <TreeView x:Name="TagsTree" Grid.Row="2" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" Grid.ColumnSpan="2">
-                        <TreeViewItem Header="Press the load button to get started!" />
-                        <TreeViewItem Header="Press again whenever the map/zoneset changes" />
-                        <TreeViewItem Header="Make sure tags are loaded correctly when saving/loading" />
-                        <TreeViewItem Header="To save presets, make sure your changes are queued" />
-                        <TreeViewItem Header="" />
-                        <TreeViewItem Header="Gamergotten says hi" />
-                        <TreeViewItem Header="" />
-                        <TreeViewItem Header="So does xxZxx" />
-                        <TreeViewItem Header="" />
-                        <TreeViewItem Header="Don't forget about Callum Carmicheal :P" />
+						<TreeViewItem Header="[Tutorial]" />
+                        <TreeViewItem Header="1. Press the load button to get started!" />
+                        <TreeViewItem Header="2. Press again whenever the map/zoneset changes." />
+                        <TreeViewItem Header="3. Make sure tags are loaded correctly when saving/loading!" />
+                        <TreeViewItem Header="4. To save presets, make sure your changes are queued." />
+                        <TreeViewItem Header="5. Gamergotten xxZxx, and Callum Carmicheal says hi :P" />
+						<TreeViewItem Header="" />
+                        <TreeViewItem Header="[Build Information]" />
+                        <TreeViewItem Header="This build was cleaned and maintained by: TempAccountNull" />
                     </TreeView>
                     <!-- < #TagsTree -->
 
@@ -365,7 +364,7 @@
                             <RowDefinition />
                         </Grid.RowDefinitions>
                         <TextBlock x:Name="hook_text" Text="Not hooked" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" />
-                        <TextBlock x:Name="extra_tag_text" Text="not auto loading" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,5,0" />
+                        <TextBlock x:Name="extra_tag_text" Text="Not auto loading" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,5,0" />
                         <Button x:Name="Reload_Button" Content="Reload" Grid.Column="1" Click="BtnReLoadTags_Click" Padding="4,4,4,4" IsEnabled="False" />
                         <Button Content="Load" Grid.Column="2" Click="BtnLoadTags_Click" Padding="4,4,4,4" />
 
