@@ -24,4 +24,6 @@ as well as the rest of the halo mods crew for being awesome
 also thanks to gamecheat13 for being able to help get the tool work again after updates
 Aswell as thanks to TypeChecked for the awesome icon
 
+Also thanks to TempAccountNull for his constant updating while I haven't been working on the project. He'll take over from now on.
+
 https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/Binaries.zip
