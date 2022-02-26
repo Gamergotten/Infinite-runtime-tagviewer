@@ -31,4 +31,5 @@ If you want to read some useful documentations and check out some guides you can
 - Thanks to TempAccountNull for his constant help with updating the tool, while I haven't been working on the project. He'll take over from now on.
 
 The Current binaries are below.
+
 https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/Binaries.zip
