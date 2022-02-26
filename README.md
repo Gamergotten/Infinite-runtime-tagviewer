@@ -9,11 +9,12 @@ In-development build:
 
 # Read me
 Welcome to the very first 'Epic Runtime Tag Editing Tool' for Halo Infinite. 
-If you want to read some useful documentations and check out some guides you can do this here (when its ready and finalized): https://www.halocustoms.com/modding-wiki/haloinfinite/
+- If you want to read some useful documentations and check out some guides you can do this here (when its ready and finalized): https://www.halocustoms.com/modding-wiki/haloinfinite/
 
 
 **Currently**
-- We now support all tags (kinda, if they dont load then theres an issue with the value mappings). Please shoot me a message on whereever and I'll look into it.
+- We now support all tags (Well. Kinda.) 
+- If they don't load then there's an issue with the value mappings). Please shoot me a message on whereever and I'll look into it.
 
 **Thanks To the following people**
 - Lord Zedd and Exhibit for their work on dumping the tag definitions, which was a massive help, To understand how the tag definitions work.
