@@ -13,7 +13,7 @@ If you want to read some useful documentations and check out some guides you can
 
 
 **Currently**
-We now support all tags (kinda, if they dont load then theres an issue with the value mappings). Please shoot me a message on whereever and I'll look into it.
+- We now support all tags (kinda, if they dont load then theres an issue with the value mappings). Please shoot me a message on whereever and I'll look into it.
 
 **Thanks To the following people**
 - Lord Zedd and Exhibit for their work on dumping the tag definitions, which was a massive help, To understand how the tag definitions work.
