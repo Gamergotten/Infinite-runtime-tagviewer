@@ -14,16 +14,16 @@ Welcome to the very first 'Epic Runtime Tag Editing Tool' for Halo Infinite.
 
 **Currently**
 - We now support all tags (Well. Kinda.) 
-- If they don't load then there's an issue with the value mappings). Please shoot me a message on whereever and I'll look into it.
+- If they don't load then there's an issue with the value mappings). Please shoot me a message on where ever and I'll look into it.
 
 **Thanks To the following people**
-- Lord Zedd and Exhibit for their work on dumping the tag definitions, which was a massive help, To understand how the tag definitions work.
+- Lord Zedd and Exhibit for their amazing work on dumping the tag definitions, which was a massive help to understand how the tag definitions work.
 
 - Enormous thanks to Krevil for his tool (https://github.com/Krevil/InfiniteModuleReader) that allows us to dump the Tag Names & IDs, in this way, we can see the correct names of each tag and easily re-dump the info at anytime when there's a change in the module information.
 
 - A Pretty huge thanks to Callum Carmicheal for the various contributions and the UI (which now doesn't look terrible lol) - Nice work! 
 
-- The halo mods crew for being awesome
+- The Halo Mods Crew for being awesome!
 
 - Thanks to Gamecheat13 for being able to help get the tool work again after updates!
 
@@ -31,6 +31,6 @@ Welcome to the very first 'Epic Runtime Tag Editing Tool' for Halo Infinite.
 
 - Thanks to TempAccountNull for his constant help with updating the tool, while I haven't been working on the project. He'll take over from now on.
 
-The Current binaries are below.
+**The Current binaries**
 
 https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/Binaries.zip
