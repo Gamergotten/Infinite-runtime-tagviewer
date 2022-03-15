@@ -29,6 +29,8 @@ Welcome to the very first 'Epic Runtime Tag Editing Tool' for Halo Infinite.
 
 - A Big thank you goes out to TypeChecked for the awesome icon!
 
+- Shoutouts to Sopitive for his generous PR request adding Quality of life options to the options menu.
+
 - Thanks to TempAccountNull for his constant help with updating the tool, while I haven't been working on the project. He'll take over from now on.
 
 **The Current binaries**
