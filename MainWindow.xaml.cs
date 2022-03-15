@@ -71,6 +71,8 @@ namespace InfiniteRuntimeTagViewer
 		public bool AutoLoadKey;
 		public bool AutoPokeKey;
 		public bool FilterOnlyMappedKey;
+		public bool OpacityKey;
+		public bool AlwaysOnTopKey;
 
 		public bool done_loading_settings;
 
@@ -81,6 +83,8 @@ namespace InfiniteRuntimeTagViewer
 			AutoLoadKey = Settings.Default.AutoLoad;
 			AutoPokeKey = Settings.Default.AutoPoke;
 			FilterOnlyMappedKey = Settings.Default.FilterOnlyMapped;
+			OpacityKey = Settings.Default.Opacity;
+			AlwaysOnTopKey = Settings.Default.AlwaysOnTop;
 		}
 		public void SetGeneralSettingsFromConfig()
 		{
@@ -89,6 +93,8 @@ namespace InfiniteRuntimeTagViewer
 			CbxAutoPokeChanges.IsChecked = AutoPokeKey;
 			CbxFilterUnloaded.IsChecked = FilterOnlyMappedKey;
 			whatdoescbxstandfor.IsChecked = AutoLoadKey;
+			CbxOnTop.IsChecked = AlwaysOnTopKey;
+			CbxOpacity.IsChecked = OpacityKey;
 		}
 		public void OnApplyChanges_Click()
 		{
@@ -102,6 +108,8 @@ namespace InfiniteRuntimeTagViewer
 			Settings.Default.AutoLoad = whatdoescbxstandfor.IsChecked;
 			Settings.Default.AutoPoke = CbxAutoPokeChanges.IsChecked;
 			Settings.Default.FilterOnlyMapped = CbxFilterUnloaded.IsChecked;
+			Settings.Default.AlwaysOnTop = CbxOnTop.IsChecked;
+			Settings.Default.Opacity = CbxOpacity.IsChecked;
 
 		}
 
@@ -320,8 +328,22 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
+		private void Window_Deactivated(object sender, EventArgs e)
+		{
+			Window window = (Window) sender;
+			if (CbxOnTop.IsChecked == true)
+			{
+				window.Topmost = true;
+			}
+			else
+			{
+				window.Topmost = false;
+			}
+		}
+
 		private void Ppacity(object sender, RoutedEventArgs e)
 		{
+			UpdateOptionsFromSettings(sender, e);
 			if (window.Opacity != 0.90)
 			{
 				window.Opacity = 0.90;
