@@ -7,7 +7,7 @@
                  x:Class="InfiniteRuntimeTagViewer.MainWindow"
                  mc:Ignorable="d"
                  Background="#333333"
-                 Title="Infinite Runtime Tagviewer" Height="650" Width="1150" AllowsTransparency="True" WindowStyle="None">
+                 Title="Infinite Runtime Tagviewer" Height="650" Width="1150" AllowsTransparency="True" Deactivated="Window_Deactivated" WindowStyle="None">
 
     <Window.Resources>
         <TransformGroup x:Key="windowScaleTransform">
@@ -148,6 +148,13 @@
                                     <TextBlock Foreground="Black">Toggle Transparency.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
+							
+							<!-- Credit to: Sopitive for his PR. -->
+							<MenuItem x:Name="CbxOnTop" Header="Always On Top" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
+								<MenuItem.ToolTip>
+									<TextBlock Foreground="Black">Lock IRTV focus to be always on top of other programs.</TextBlock>
+								</MenuItem.ToolTip>
+							</MenuItem>
 
                             <MenuItem Header="Process Selector">
                                 <!--Added this here for process selecter in the future.-->
