@@ -1627,20 +1627,7 @@ namespace InfiniteRuntimeTagViewer
 			return processSelector;
 		}
 
-		public void AnyProcess(object sender, RoutedEventArgs e)
-		{
-			CbxAnyProcess.IsChecked = true;
-			CbxSpecificProcess.IsChecked = false;
-
-			processSelector.SelectedProcess = null;
-			CbxSpecificProcess.IsChecked = false;
-		}
-
-		public void SpecificProcess(object sender, RoutedEventArgs e)
-		{
-			CbxSpecificProcess.IsChecked = true;
-			CbxAnyProcess.IsChecked = false;
-		}
+		public bool specific;
 
 		public void UnloadTags(object sender, RoutedEventArgs e)
 		{
