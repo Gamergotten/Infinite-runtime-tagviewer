@@ -67,12 +67,13 @@ namespace InfiniteRuntimeTagViewer
 
 		*/
 
-		public bool AutoHookKey;
-		public bool AutoLoadKey;
-		public bool AutoPokeKey;
-		public bool FilterOnlyMappedKey;
-		public bool OpacityKey;
-		public bool AlwaysOnTopKey;
+		public bool
+			AutoHookKey,
+			AutoLoadKey,
+			AutoPokeKey,
+			FilterOnlyMappedKey,
+			OpacityKey,
+			AlwaysOnTopKey;
 		public string ProcAsyncBaseAddr = Settings.Default.ProcAsyncBaseAddr;
 
 		public bool done_loading_settings;
