@@ -94,5 +94,17 @@ namespace InfiniteRuntimeTagViewer.Properties {
                 this["AlwaysOnTop"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("undefined")]
+        public string ProcAsyncBaseAddr {
+            get {
+                return ((string)(this["ProcAsyncBaseAddr"]));
+            }
+            set {
+                this["ProcAsyncBaseAddr"] = value;
+            }
+        }
     }
 }

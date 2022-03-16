@@ -73,10 +73,19 @@ namespace InfiniteRuntimeTagViewer
 		public bool FilterOnlyMappedKey;
 		public bool OpacityKey;
 		public bool AlwaysOnTopKey;
+		public string ProcAsyncBaseAddr = Settings.Default.ProcAsyncBaseAddr;
 
 		public bool done_loading_settings;
 
 		#region poop region
+
+		public void ShowPointerDialog(object source, RoutedEventArgs e)
+		{
+			PointerDialog pointerDialog = new();
+			pointerDialog.Show();
+			pointerDialog.Focus();
+		}
+
 		public void GetGeneralSettingsFromConfig()
 		{
 			AutoHookKey = Settings.Default.AutoHook;
@@ -122,16 +131,18 @@ namespace InfiniteRuntimeTagViewer
 		public Mem M = new();
 
 		//Offsets
-		private readonly string 
+		public string 
 								// Hard-Coded Addresses
-			                    HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x41A2920",			 // Tag_List_Function  (did not change for TU9)
-			                    ScanMemAOBBaseAddr       = "HaloInfinite.exe+0x360DB10",			 // Tag_List_Str       (did not change for TU9)
+			                    //HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x41A2920",
+								HookProcessAsyncBaseAddr,// Tag_List_Function  (did not change for TU9)
+								ScanMemAOBBaseAddr       = "HaloInfinite.exe+0x360DB10",			 // Tag_List_Str       (did not change for TU9)
 								
 								// AOB's to scan.
 								AOBScanTagStr            = "74 61 67 20 69 6E 73 74 61 6E 63 65 73"; // Tag_List_Backup Str to find
 
 		public MainWindow()
 		{
+			UpdateAddress();
 			InitializeComponent();
 			//GetAllMethods();
 			StateChanged += MainWindowStateChangeRaised;
@@ -151,6 +162,18 @@ namespace InfiniteRuntimeTagViewer
 
 		}
 
+		public void UpdateAddress()
+		{
+			if (Settings.Default.ProcAsyncBaseAddr != "undefined")
+			{
+				HookProcessAsyncBaseAddr = Settings.Default.ProcAsyncBaseAddr;
+			}
+			else
+			{
+				HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x41A2920";
+			}
+		}
+
 		private async Task HookProcessAsync()
 		{
 			bool reset = processSelector.hookProcess(M);
@@ -167,6 +190,7 @@ namespace InfiniteRuntimeTagViewer
 			if (!hooked || reset)
 			{
 				// Get the base address
+				UpdateAddress();
 				BaseAddress = M.ReadLong(HookProcessAsyncBaseAddr);
 				string validtest = M.ReadString(BaseAddress.ToString("X"));
 				//System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite .exe+0x3D13E38")); // this is the wrong address lol

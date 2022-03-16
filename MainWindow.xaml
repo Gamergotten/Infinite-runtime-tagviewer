@@ -159,10 +159,15 @@
                                     <TextBlock Foreground="Black">Lock IRTV focus to be always on top of other programs.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
+                            <MenuItem x:Name="SetPointer" Header="Set Pointer..." Click="ShowPointerDialog">
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Lock IRTV focus to be always on top of other programs.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
                             <MenuItem Header="Process Selector">
-                            <controls:ProcessSelector x:Name="processSelector" />
+                                <controls:ProcessSelector x:Name="processSelector" />
                             </MenuItem>
-                            </MenuItem>
+                        </MenuItem>
                         <MenuItem Header="Tools" WindowChrome.IsHitTestVisibleInChrome="True" FontFamily="Segoe UI Light" Height="28">
                             <MenuItem x:Name="TeleportMenuButton" Header="Teleport Menu" Click="OpenTeleportMenu"/>
                             <MenuItem x:Name="DebugMenu" Header="Debug">
