@@ -7,7 +7,12 @@
                  x:Class="InfiniteRuntimeTagViewer.MainWindow"
                  mc:Ignorable="d"
                  Background="#333333"
-                 Title="Infinite Runtime Tagviewer" Height="650" Width="1150" AllowsTransparency="True" Deactivated="Window_Deactivated" WindowStyle="None">
+                 Title="Infinite Runtime Tagviewer" 
+                 Height="650" 
+                 Width="1150" 
+                 AllowsTransparency="True" 
+                 Deactivated="Window_Deactivated"
+                 WindowStyle="None">
 
     <Window.Resources>
         <TransformGroup x:Key="windowScaleTransform">
@@ -148,31 +153,20 @@
                                     <TextBlock Foreground="Black">Toggle Transparency.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
-							
-							<!-- Credit to: Sopitive for his PR. -->
-							<MenuItem x:Name="CbxOnTop" Header="Always On Top" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
-								<MenuItem.ToolTip>
-									<TextBlock Foreground="Black">Lock IRTV focus to be always on top of other programs.</TextBlock>
-								</MenuItem.ToolTip>
-							</MenuItem>
 
-                            <MenuItem Header="Process Selector">
-                                <!--Added this here for process selecter in the future.-->
+                            <MenuItem x:Name="CbxOnTop" Header="Always On Top" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
                                 <MenuItem.ToolTip>
-                                    <TextBlock Foreground="Black">Select a Halo process.</TextBlock>
+                                    <TextBlock Foreground="Black">Lock IRTV focus to be always on top of other programs.</TextBlock>
                                 </MenuItem.ToolTip>
-                                <MenuItem x:Name="CbxAnyProcess" Header="Any" Click="AnyProcess" IsChecked="True">
-                                    <MenuItem.ToolTip>
-                                        <TextBlock Foreground="Black">Hook any Halo Infinite process.</TextBlock>
-                                    </MenuItem.ToolTip>
-                                </MenuItem>
-                                <MenuItem x:Name="CbxSpecificProcess" Header="Specific" Click="SpecificProcess">
-                                    <MenuItem.ToolTip>
-                                        <TextBlock Foreground="Black">Hook specific Halo process.</TextBlock>
-                                    </MenuItem.ToolTip>
-                                </MenuItem>
                             </MenuItem>
-
+                            <MenuItem x:Name="SetPointer" Header="Set Pointer..." Click="ShowPointerDialog">
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Lock IRTV focus to be always on top of other programs.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+                            <MenuItem Header="Process Selector">
+                                <controls:ProcessSelector x:Name="processSelector" />
+                            </MenuItem>
                         </MenuItem>
                         <MenuItem Header="Tools" WindowChrome.IsHitTestVisibleInChrome="True" FontFamily="Segoe UI Light" Height="28">
                             <MenuItem x:Name="TeleportMenuButton" Header="Teleport Menu" Click="OpenTeleportMenu"/>
@@ -375,7 +369,6 @@
                         <Button x:Name="Reload_Button" Content="Reload" Grid.Column="1" Click="BtnReLoadTags_Click" Padding="4,4,4,4" IsEnabled="False" />
                         <Button Content="Load" Grid.Column="2" Click="BtnLoadTags_Click" Padding="4,4,4,4" />
 
-                        <controls:ProcessSelector x:Name="processSelector" Grid.Row="1" Grid.ColumnSpan="3" Margin="00,2,0,0" />
                     </Grid>
                 </Grid>
             </Grid>
