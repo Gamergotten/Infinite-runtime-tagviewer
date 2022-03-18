@@ -29,6 +29,8 @@ Welcome to the very first 'Epic Runtime Tag Editing Tool' for Halo Infinite.
 
 - A Big thank you goes out to TypeChecked for the awesome icon!
 
+- Late shoutout to my uncle for the birthday money that allowed me to get the campaign, pretty much funding this entire project lol
+
 - Shoutouts to Sopitive for his generous PR requests, and continuing to add Quality of life improvements when I haven't gotten around to doing so.
 
 - Thanks to TempAccountNull for his constant help with updating the tool, while I haven't been working on the project. He'll take over from now on.
