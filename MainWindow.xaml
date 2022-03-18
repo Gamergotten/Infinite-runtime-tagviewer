@@ -3,7 +3,9 @@
                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                 xmlns:local="clr-namespace:InfiniteRuntimeTagViewer" xmlns:controls="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls" x:Name="window"
+                 xmlns:local="clr-namespace:InfiniteRuntimeTagViewer" 
+                 xmlns:controls="clr-namespace:InfiniteRuntimeTagViewer.Interface.Controls" 
+                 x:Name="window"
                  x:Class="InfiniteRuntimeTagViewer.MainWindow"
                  mc:Ignorable="d"
                  Background="#333333"
@@ -161,7 +163,7 @@
                             </MenuItem>
                             <MenuItem x:Name="SetPointer" Header="Set Pointer..." Click="ShowPointerDialog">
                                 <MenuItem.ToolTip>
-                                    <TextBlock Foreground="Black">Lock IRTV focus to be always on top of other programs.</TextBlock>
+                                    <TextBlock Foreground="Black">Manually set pointer to tags.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
                             <MenuItem Header="Process Selector">
@@ -176,11 +178,6 @@
                                         <TextBlock Foreground="Black">Unload Tags</TextBlock>
                                     </MenuItem.ToolTip>
                                 </MenuItem>
-                                <!--<MenuItem x:Name="CallMethods" Header="Call Method">
-                                    <MenuItem.ToolTip>
-                                        <TextBlock Foreground="Black">Call specific implemented method.</TextBlock>
-                                    </MenuItem.ToolTip>
-                                </MenuItem>-->
                             </MenuItem>
                         </MenuItem>
                         <MenuItem Header="Mods" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Height="28" Click="MenuItem_Click"/>
