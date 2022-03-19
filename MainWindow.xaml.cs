@@ -132,14 +132,18 @@ namespace InfiniteRuntimeTagViewer
 		public Mem M = new();
 
 		//Offsets
-		public string 
+		public string
 								// Hard-Coded Addresses
-			                    //HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x41A2920",
+								//HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x41A2920",
 								HookProcessAsyncBaseAddr,// Tag_List_Function  (did not change for TU9)
-								ScanMemAOBBaseAddr       = "HaloInfinite.exe+0x360DB10",			 // Tag_List_Str       (did not change for TU9)
-								
+								ScanMemAOBBaseAddr = "HaloInfinite.exe+0x360DB10",           // Tag_List_Str       (did not change for TU9)
+
 								// AOB's to scan.
-								AOBScanTagStr            = "74 61 67 20 69 6E 73 74 61 6E 63 65 73"; // Tag_List_Backup Str to find
+								AOBScanTagStr = "74 61 67 20 69 6E 73 74 61 6E 63 65 73"; // Tag_List_Backup Str to find
+		private readonly long
+								AOBScanStartAddr = Convert.ToInt64("0000010000000000", 16),
+								AOBScanEndAddr = Convert.ToInt64("000003ffffffffff", 16);
+
 
 		public MainWindow()
 		{
@@ -304,7 +308,7 @@ namespace InfiniteRuntimeTagViewer
 				hook_text.Text = "Offset failed, scanning...";
 				try
 				{
-					long? aobScan = (await M.AoBScan(AOBScanTagStr, true))
+					long? aobScan = (await M.AoBScan(AOBScanStartAddr, AOBScanEndAddr, AOBScanTagStr, true))
 						.First(); // "tag instances"
 
 					// Failed to find base tag address
@@ -369,14 +373,23 @@ namespace InfiniteRuntimeTagViewer
 		private void Ppacity(object sender, RoutedEventArgs e)
 		{
 			UpdateOptionsFromSettings(sender, e);
-			if (window.Opacity != 0.90)
+			if (CbxOpacity.IsChecked)
 			{
 				window.Opacity = 0.90;
+				if (mwidow != null)
+				{
+					mwidow.Opacity = 0.90;
+				}
 			}
 			else
 			{
 				window.Opacity = 1;
+				if (mwidow != null)
+				{
+					mwidow.Opacity = 1;
+				}
 			}
+			
 		}
 
 		private long BaseAddress = -1;
@@ -1721,9 +1734,11 @@ namespace InfiniteRuntimeTagViewer
 		#endregion
 
 		// open mods window
-		public ModWindow mwidow;
+		public ModWindow? mwidow;
 		private void MenuItem_Click(object sender, RoutedEventArgs e)
 		{
+			try
+			{
 			if (mwidow == null)
 			{
 				mwidow = new ModWindow();
@@ -1733,9 +1748,23 @@ namespace InfiniteRuntimeTagViewer
 				mwidow.load_mods_from_directories();
 			}
 			else
+				{
+					mwidow.Show();
+					mwidow.Focus();
+				}
+			if (CbxOpacity.IsChecked)
+				{
+					mwidow.Opacity = 0.90;
+				}
+			else
+				{
+					mwidow.Opacity = 1;
+				}
+			}
+			catch (System.InvalidOperationException)
 			{
-				mwidow.Show();
-				mwidow.Focus();
+				mwidow = null;
+				MenuItem_Click(sender, e);
 			}
 		}
 
