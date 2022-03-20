@@ -22,6 +22,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Windows.Threading;
+using System.Collections.ObjectModel;
 
 using InfiniteRuntimeTagViewer.Properties;
 
@@ -434,75 +435,81 @@ namespace InfiniteRuntimeTagViewer
 			}
 			return false;
 		}
-
-		public void LoadTagsMem(bool is_silent)
+		private bool is_checked;
+		public async Task LoadTagsMem(bool is_silent)
 		{
-			if (TagCount != -1)
+			is_checked = CbxFilterUnloaded.IsChecked;
+			await Task.Run(() =>
 			{
-				TagCount = -1;
-				TagGroups.Clear();
-				TagsList.Clear();
-			}
-			TagCount = M.ReadInt((BaseAddress + 0x6C).ToString("X"));
-			long tagsStart = M.ReadLong((BaseAddress + 0x78).ToString("X"));
 
-			// each tag is 52 bytes long // was it 52 or was it 0x52? whatever
-			// 0x0 datnum 4bytes
-			// 0x4 ObjectID 4bytes
-			// 0x8 Tag_group Pointer 8bytes
-			// 0x10 Tag_data Pointer 8bytes
-			// 0x18 Tag_type_desc Pointer 8bytes
-
-			TagsList = new Dictionary<string, TagStruct>();
-			for (int tagIndex = 0; tagIndex < TagCount; tagIndex++)
-			{
-				TagStruct currentTag = new();
-				long tagAddress = tagsStart + (tagIndex * 52);
-
-				byte[] test1 = M.ReadBytes(tagAddress.ToString("X"), 4);
-				try
+				if (TagCount != -1)
 				{
-					currentTag.Datnum = BitConverter.ToString(test1).Replace("-", string.Empty);
-					loadedTags = false;
+					TagCount = -1;
+					TagGroups.Clear();
+					TagsList.Clear();
 				}
-				catch (System.ArgumentNullException)
-				{
-					hooked = false;
-					return;
-				}
-				byte[] test = (M.ReadBytes((tagAddress + 4).ToString("X"), 4));
+				TagCount = M.ReadInt((BaseAddress + 0x6C).ToString("X"));
+				long tagsStart = M.ReadLong((BaseAddress + 0x78).ToString("X"));
 
-				// = String.Concat(bytes.Where(c => !Char.IsWhiteSpace(c)));
-				currentTag.ObjectId = BitConverter.ToString(test).Replace("-", string.Empty);
-				currentTag.TagGroup = read_tag_group(M.ReadLong((tagAddress + 0x8).ToString("X")));
-				currentTag.TagData = M.ReadLong((tagAddress + 0x10).ToString("X"));
-				currentTag.TagFullName = convert_ID_to_tag_name(currentTag.ObjectId).Trim();
-				currentTag.TagFile = currentTag.TagFullName.Split('\\').Last().Trim();
+				// each tag is 52 bytes long // was it 52 or was it 0x52? whatever
+				// 0x0 datnum 4bytes
+				// 0x4 ObjectID 4bytes
+				// 0x8 Tag_group Pointer 8bytes
+				// 0x10 Tag_data Pointer 8bytes
+				// 0x18 Tag_type_desc Pointer 8bytes
 
-				if (CbxFilterUnloaded.IsChecked)
+				TagsList = new Dictionary<string, TagStruct>();
+				for (int tagIndex = 0; tagIndex < TagCount; tagIndex++)
 				{
-					byte[] b = M.ReadBytes((currentTag.TagData + 12).ToString("X"), 4);
-					if (b != null)
+					TagStruct currentTag = new();
+					long tagAddress = tagsStart + (tagIndex * 52);
+
+					byte[] test1 = M.ReadBytes(tagAddress.ToString("X"), 4);
+					try
 					{
-						string checked_datnum = BitConverter.ToString(b).Replace("-", string.Empty);
-						if (checked_datnum != currentTag.Datnum)
+						currentTag.Datnum = BitConverter.ToString(test1).Replace("-", string.Empty);
+						loadedTags = false;
+					}
+					catch (System.ArgumentNullException)
+					{
+						hooked = false;
+						return;
+					}
+					byte[] test = (M.ReadBytes((tagAddress + 4).ToString("X"), 4));
+
+					// = String.Concat(bytes.Where(c => !Char.IsWhiteSpace(c)));
+					currentTag.ObjectId = BitConverter.ToString(test).Replace("-", string.Empty);
+					currentTag.TagGroup = read_tag_group(M.ReadLong((tagAddress + 0x8).ToString("X")));
+					currentTag.TagData = M.ReadLong((tagAddress + 0x10).ToString("X"));
+					currentTag.TagFullName = convert_ID_to_tag_name(currentTag.ObjectId).Trim();
+					currentTag.TagFile = currentTag.TagFullName.Split('\\').Last().Trim();
+
+					if (is_checked)
+					{
+						byte[] b = M.ReadBytes((currentTag.TagData + 12).ToString("X"), 4);
+						if (b != null)
+						{
+							string checked_datnum = BitConverter.ToString(b).Replace("-", string.Empty);
+							if (checked_datnum != currentTag.Datnum)
+							{
+								currentTag.unloaded = true;
+							}
+						}
+						else
 						{
 							currentTag.unloaded = true;
 						}
 					}
-					else
+					// do the tag definitition
+					if (!TagsList.ContainsKey(currentTag.ObjectId))
 					{
-						currentTag.unloaded = true;
+						TagsList.Add(currentTag.ObjectId, currentTag);
 					}
 				}
-				// do the tag definitition
-				if (!TagsList.ContainsKey(currentTag.ObjectId))
-				{
-					TagsList.Add(currentTag.ObjectId, currentTag);
-				}
-			}
+			});
 			if (!is_silent)
 				Loadtags();
+			
 		}
 		public string? read_tag_group(long tagGroupAddress)
 		{
@@ -548,10 +555,10 @@ namespace InfiniteRuntimeTagViewer
 		// eg. weap, { system.whatever.balls }
 		public Dictionary<string, TreeViewItem> groups_headers = new();
 		public Dictionary<string, TreeViewItem> tags_headers = new();
+		public ObservableCollection<string> second_level = new();
 
 		public void Loadtags()
 		{
-
 			Dictionary<string, TreeViewItem> groups_headers_diff = new();
 
 			// cycle through and evaluate against diff
