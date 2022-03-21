@@ -21,9 +21,11 @@ namespace InfiniteRuntimeTagViewer.Interface.Windows
 	/// </summary>
 	public partial class PointerDialog : Window
 	{
+
 		public PointerDialog()
 		{
 			InitializeComponent();
+			pointer.Text = Settings.Default.ProcAsyncBaseAddr;
 		}
 
 		private readonly MainWindow mw = new();
