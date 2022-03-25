@@ -344,10 +344,10 @@
                         <TreeViewItem Header="2. Press again whenever the map/zoneset changes." />
                         <TreeViewItem Header="3. Make sure tags are loaded correctly when saving/loading!" />
                         <TreeViewItem Header="4. To save presets, make sure your changes are queued." />
-                        <TreeViewItem Header="5. Gamergotten xxZxx, and Callum Carmicheal says hi :P" />
+                        <TreeViewItem Header="5. Gamergotten xxZxx, Sopitive, and Callum Carmicheal say hi :P" />
 						<TreeViewItem Header="" />
                         <TreeViewItem Header="[Build Information]" />
-                        <TreeViewItem Header="This build was cleaned and maintained by: TempAccountNull" />
+                        <TreeViewItem Header="This build was cleaned and maintained by: Sopitive" />
                     </TreeView>
                     <!-- < #TagsTree -->
 

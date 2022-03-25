@@ -25,6 +25,7 @@ using System.Windows.Threading;
 using System.Collections.ObjectModel;
 
 using InfiniteRuntimeTagViewer.Properties;
+using System.ComponentModel;
 
 namespace InfiniteRuntimeTagViewer
 {
@@ -81,6 +82,8 @@ namespace InfiniteRuntimeTagViewer
 
 		#region poop region
 
+		
+
 		public void ShowPointerDialog(object source, RoutedEventArgs e)
 		{
 			PointerDialog pointerDialog = new();
@@ -131,6 +134,7 @@ namespace InfiniteRuntimeTagViewer
 		public delegate void LoadTagsDelagate();
 		private readonly System.Timers.Timer _t;
 		public Mem M = new();
+		
 
 		//Offsets
 		public string
@@ -217,10 +221,10 @@ namespace InfiniteRuntimeTagViewer
 
 		public async void HookAndLoad()
 		{
-			await HookProcessAsync(); // this didn't wait lol
+			await HookProcessAsync();
 			if (BaseAddress != -1 && BaseAddress != 0)
 			{
-				LoadTagsMem(false);
+				await LoadTagsMem(false);
 
 				
 				if (hooked == true)
@@ -259,7 +263,7 @@ namespace InfiniteRuntimeTagViewer
 							if (current_tag_count < tag_count_last_update - min_tags_changed_for_update || current_tag_count > tag_count_last_update + min_tags_changed_for_update)
 							{
 								is_waiting = true;
-								extra_tag_text.Text = "one sec (" + real_tag_count + " tags)"; // actually its 12 seconds fuck you
+								extra_tag_text.Text = "one sec (" + real_tag_count + " tags)";
 								while (is_waiting)
 								{
 									await Task.Delay(12000);
@@ -269,7 +273,7 @@ namespace InfiniteRuntimeTagViewer
 									{
 										is_waiting = false;
 										extra_tag_text.Text = "reloading (" + real_tag_count_again + " tags)";
-										LoadTagsMem(false);
+										await LoadTagsMem(false);
 										if (whatdoescbxstandfor.IsChecked)
 										{
 											PokeChanges();
@@ -333,6 +337,423 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
+		#region EventHandlers
+		private void Button_Click_1(object sender, RoutedEventArgs e)
+		{
+			num_of_user_added_lists++;
+			add_new_section_to_pokelist("Poke Queue(" + num_of_user_added_lists + ")");
+		}
+
+		#region Window Styling
+
+		// Can execute
+		private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+		{
+			e.CanExecute = true;
+		}
+
+		// Minimize
+		private void CommandBinding_Executed_Minimize(object sender, ExecutedRoutedEventArgs e)
+		{
+			SystemCommands.MinimizeWindow(this);
+		}
+
+		// Maximize
+		private void CommandBinding_Executed_Maximize(object sender, ExecutedRoutedEventArgs e)
+		{
+			SystemCommands.MaximizeWindow(this);
+		}
+
+		// Restore
+		private void CommandBinding_Executed_Restore(object sender, ExecutedRoutedEventArgs e)
+		{
+			SystemCommands.RestoreWindow(this);
+		}
+
+		// Close
+		private void CommandBinding_Executed_Close(object sender, ExecutedRoutedEventArgs e)
+		{
+			SystemCommands.CloseWindow(this);
+		}
+
+		// State change
+		private void MainWindowStateChangeRaised(object? sender, EventArgs e)
+		{
+			if (WindowState == WindowState.Maximized)
+			{
+				MainWindowBorder.BorderThickness = new Thickness(8);
+				RestoreButton.Visibility = Visibility.Visible;
+				MaximizeButton.Visibility = Visibility.Collapsed;
+			}
+			else
+			{
+				MainWindowBorder.BorderThickness = new Thickness(0);
+				RestoreButton.Visibility = Visibility.Collapsed;
+				MaximizeButton.Visibility = Visibility.Visible;
+			}
+		}
+		#endregion
+
+
+		// Search filter
+		private void Searchbox_TextChanged(object? sender, TextChangedEventArgs? e)
+		{
+			//string[] supportedTags = Halo.TagObjects.TagLayouts.Tags.Keys.ToArray();
+			string search = Searchbox.Text;
+			foreach (TreeViewItem? tv in TagsTree.Items)
+			{
+				if (!tv.Header.ToString().Contains(search))
+				{
+					tv.Visibility = Visibility.Collapsed;
+					foreach (TreeViewItem tc in tv.Items)
+					{
+						if (tc.Header.ToString().Contains(search))
+						{
+							tc.Visibility = Visibility.Visible;
+							tv.Visibility = Visibility.Visible;
+						}
+						else
+						{
+							tc.Visibility = Visibility.Collapsed;
+						}
+					}
+				}
+				else
+				{
+					tv.Visibility = Visibility.Visible;
+					foreach (TreeViewItem tc in tv.Items)
+					{
+						tc.Visibility = Visibility.Visible;
+					}
+				}
+			}
+		}
+
+		#region MenuCommands
+		public void ClickExit(object sender, RoutedEventArgs e)
+		{
+			SystemCommands.CloseWindow(this);
+		}
+
+		public void OpenTeleportMenu(object sender, RoutedEventArgs e)
+		{
+			TeleportWindow tp_win = new(M);
+			tp_win.Show();
+		}
+
+		public ProcessSelector GetProcessSelector()
+		{
+			return processSelector;
+		}
+
+		public bool specific;
+
+		public void UnloadTags(object sender, RoutedEventArgs e)
+		{
+			TagsTree.Items.Clear();
+			loadedTags = false;
+		}
+
+		//Commented out because mainly this has no function right now.
+
+		//public void GetAllMethods()
+		//{
+		//	Type myType = (typeof(MainWindow));
+		//	// Get the public methods.
+		//	MethodInfo[] myArrayMethodInfo = myType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+		//	Console.WriteLine("\nThe number of public methods is {0}.", myArrayMethodInfo.Length);
+		//	// Add all public methods to menu.
+		//	DisplayMethodInfo(myArrayMethodInfo);
+		//	// Add all non-public methods to array.
+		//	MethodInfo[] myArrayMethodInfo1 = myType.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+		//	// Add all non-public methods to menu.
+		//	DisplayMethodInfo(myArrayMethodInfo1);
+		//}
+
+
+		//public void DisplayMethodInfo(MethodInfo[] myArrayMethodInfo)
+		//{
+		//	// Display information for all methods.
+		//	for (int i = 0; i < myArrayMethodInfo.Length; i++)
+		//	{
+		//		MethodInfo myMethodInfo = (MethodInfo) myArrayMethodInfo[i];
+		//		//Console.WriteLine("\nThe name of the method is {0}.", myMethodInfo.Name);
+		//		MenuItem methods = new MenuItem();
+		//		MenuItem methodToAdd = (MenuItem) DebugMenu.Items[1];
+		//		methods.Header = myMethodInfo.Name;
+		//		methods.Click += CallMethod;
+		//		methodToAdd.Items.Add(methods);
+		//	}
+		//}
+
+		//public void CallMethod(object sender, RoutedEventArgs e)
+		//{
+		//	//Code that will call the specified method.
+		//	MenuItem? MI = sender as MenuItem;
+		//	if (MI != null)
+		//	{
+		//		try
+		//		{
+		//			Type mainType = (typeof(MainWindow));
+		//			string? clickedMethod = MI.Header.ToString();
+		//			System.Diagnostics.Debug.WriteLine(clickedMethod);
+		//			MethodInfo? method = mainType.GetMethod(clickedMethod);
+		//			if (method != null)
+		//			{
+		//				int paramCount = method.GetParameters().Length;
+		//				method.Invoke(this, null);
+		//			}
+		//		}
+		//		catch (Exception)
+		//		{
+		//			System.Diagnostics.Debug.WriteLine("Invalid parameter count. Consider calling a method with no parameters.");
+		//		}
+		//	}
+		//}
+
+		#endregion
+
+		// open mods window
+		public ModWindow? mwidow;
+		private void MenuItem_Click(object sender, RoutedEventArgs e)
+		{
+			try
+			{
+				if (mwidow == null)
+				{
+					mwidow = new ModWindow();
+					mwidow.Show();
+					mwidow.Focus();
+					mwidow.main = this;
+					mwidow.load_mods_from_directories();
+				}
+				else
+				{
+					mwidow.Show();
+					mwidow.Focus();
+				}
+				if (CbxOpacity.IsChecked)
+				{
+					mwidow.Opacity = 0.90;
+				}
+				else
+				{
+					mwidow.Opacity = 1;
+				}
+			}
+			catch (System.InvalidOperationException)
+			{
+				mwidow = null;
+				MenuItem_Click(sender, e);
+			}
+		}
+
+
+		// REVERT POKE STUFF
+		private void REVERT_ALL_BUTTON(object sender, RoutedEventArgs e)
+		{
+			int fails = 0;
+			int pokes = 0;
+			for (int q = 0; q < Pokelistlist.Count; q++)
+			{
+				KeyValuePair<int, int> kv = revertlist(Pokelistlist.ElementAt(q).Key);
+				fails += kv.Value;
+				pokes += kv.Key;
+			}
+			if (fails < 1)
+			{
+				poke_text.Text = pokes + " changes reverted!";
+				if (mwidow != null)
+				{
+					mwidow.debug_text.Text = pokes + " changes reverted!";
+				}
+			}
+			else
+			{
+				poke_text.Text = pokes + " reverted, " + fails + " failed";
+				if (mwidow != null)
+				{
+					mwidow.debug_text.Text = pokes + " reverted, " + fails + " failed";
+				}
+			}
+
+			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+		}
+		private void REVERT_SINGLE_BUTTON(object sender, RoutedEventArgs e)
+		{
+			KeyValuePair<int, int> kv = revertlist(current_pokelist);
+			int fails = kv.Value;
+			int pokes = kv.Key;
+			if (fails < 1)
+			{
+				poke_text.Text = pokes + " changes reverted!";
+				if (mwidow != null)
+				{
+					mwidow.debug_text.Text = pokes + " changes reverted!";
+				}
+			}
+			else
+			{
+				poke_text.Text = pokes + " reverted, " + fails + " failed";
+				if (mwidow != null)
+				{
+					mwidow.debug_text.Text = pokes + " reverted, " + fails + " failed";
+				}
+			}
+
+			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+		}
+
+		private void BtnREMOVEQueueSingle_Click(object sender, RoutedEventArgs e)
+		{
+			clear_pokes_list(current_pokelist);
+			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+			if (mwidow != null)
+			{
+				mwidow.test_changes.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+			}
+			Pokelistlist.Remove(current_pokelist);
+			PokeList_Combobox.Items.Remove(PokeList_Combobox.SelectedItem);
+			if (PokeList_Combobox.Items.Count > 0)
+				PokeList_Combobox.SelectedIndex = 0;
+
+			poke_text.Text = "Poke List Removed";
+		}
+
+
+		private void DockManager_DocumentClosing(object sender, AvalonDock.DocumentClosingEventArgs e)
+		{
+			// On tag window closing.
+			UpdateLayout();
+
+			GC.Collect(3, GCCollectionMode.Forced);
+		}
+
+		private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e)
+		{
+			System.Windows.Controls.Button? btn = (System.Windows.Controls.Button) sender;
+
+			queuelist.Visibility = queuelist.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+			btn.Content =
+				queuelist.Visibility == Visibility.Visible
+				? "Hide Queue"
+				: "Show Queue";
+		}
+
+		private void BtnClearQueueSingle_Click(object sender, RoutedEventArgs e)
+		{
+			clear_pokes_list(current_pokelist);
+			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+			if (mwidow != null)
+			{
+				mwidow.test_changes.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+			}
+			poke_text.Text = "Poke List Cleared";
+		}
+
+		private void BtnClearQueue_Click(object sender, RoutedEventArgs e)
+		{
+			clear_all_pokelists();
+		}
+
+		// POKE OUR CHANGES LETSGOOOO
+		private void BtnPokeChanges_Click(object sender, RoutedEventArgs e)
+		{
+			PokeChanges();
+		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			KeyValuePair<int, int> kv = pokelist(current_pokelist);
+			poke_text.Text = kv.Key + " poked, " + kv.Value + " failed";
+			if (mwidow != null)
+			{
+				mwidow.debug_text.Text = kv.Key + " poked, " + kv.Value + " failed";
+			}
+		}
+
+		private void Open_pokes(object sender, RoutedEventArgs e)
+		{
+			if (!loadedTags)
+			{
+				HookAndLoad();
+			}
+			// Create OpenFileDialog 
+			Microsoft.Win32.OpenFileDialog dlg = new()
+			{
+
+				// Set filter for file extension and default file extension 
+				DefaultExt = ".irtv",
+				Filter = "IRTV Files (*.irtv)|*.irtv"
+			};
+
+			// Display OpenFileDialog by calling ShowDialog method 
+			bool? result = dlg.ShowDialog();
+
+			// Get the selected file name and display in a TextBox 
+			if (result == true)
+			{
+				string fullFileName = dlg.FileName;
+				string fileNameWithExt = Path.GetFileName(fullFileName);
+				add_new_section_to_pokelist(fileNameWithExt);
+
+				recieve_file_to_inhalo_pokes(dlg.FileName);
+				string target_folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\IRTV";
+				if (!Directory.Exists(target_folder))
+					Directory.CreateDirectory(target_folder);
+				string destPath = Path.Combine(target_folder, fileNameWithExt);
+				if (File.Exists(destPath))
+					File.Delete(destPath);
+				File.Copy(dlg.FileName, destPath);
+			}
+		}
+
+		private void Save_pokes(object sender, RoutedEventArgs e)
+		{
+			Microsoft.Win32.SaveFileDialog? sfd = new()
+			{
+				Filter = "IRTV Files (*.irtv)|*.irtv|All files (*.*)|*.*",
+				// Set other options depending on your needs ...
+			};
+			if (sfd.ShowDialog() == true)
+			{
+
+
+				string filename = sfd.FileName;
+				// save the file
+				//File.WriteAllText(filename, contents);
+
+				//KeyValuePair<string, KeyValuePair<string, string>>
+				string big_ol_poke_dump = "";
+				foreach (KeyValuePair<string, KeyValuePair<string, string>> k in Pokelistlist[current_pokelist].Pokelist)
+				{
+					big_ol_poke_dump += k.Key + ";" + k.Value.Key + ";" + k.Value.Value + "\r\n";
+				}
+				Savewindow sw = new();
+				sw.Show();
+				sw.main = this;
+				sw.ill_take_it_from_here_mainwindow(filename, big_ol_poke_dump);
+
+				poke_text.Text = Pokelistlist[current_pokelist].Pokelist.Count + " Pokes Saved!";
+			}
+		}
+
+		private void PokeList_Combobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			ComboBoxItem? comboBoxItem = PokeList_Combobox.SelectedItem as ComboBoxItem;
+			if (comboBoxItem != null)
+			{
+				load_a_pokelist(comboBoxItem.Content.ToString());
+			}
+
+		}
+
+		private void Select_Tag_click(object sender, RoutedEventArgs e)
+		{
+			TreeViewItem? item = sender as TreeViewItem;
+			CreateTagEditorTabByTagIndex(item.Tag.ToString());
+		}
+
 		private void CheckBoxProcessCheck(object sender, RoutedEventArgs e)
 		{
 			_t.Enabled = CbxSearchProcess.IsChecked;
@@ -341,10 +762,11 @@ namespace InfiniteRuntimeTagViewer
 				OnApplyChanges_Click();
 			}
 		}
+
 		private void UpdateOptionsFromSettings(object sender, RoutedEventArgs e)
 		{
 			if (done_loading_settings)
-			OnApplyChanges_Click();
+				OnApplyChanges_Click();
 		}
 		private void UpdateOption_for_hiding_unloaded(object sender, RoutedEventArgs e)
 		{
@@ -356,6 +778,21 @@ namespace InfiniteRuntimeTagViewer
 					HookAndLoad();
 				}
 			}
+		}
+
+
+		// load tags from Mem
+		public void BtnReLoadTags_Click(object sender, RoutedEventArgs e)
+		{
+			TagsTree.Items.Clear();
+			groups_headers.Clear();
+			tags_headers.Clear();
+			HookAndLoad();
+		}
+		private void BtnLoadTags_Click(object sender, RoutedEventArgs e)
+		{
+			HookAndLoad();
+			Reload_Button.IsEnabled = true;
 		}
 
 		private void Window_Deactivated(object sender, EventArgs e)
@@ -370,6 +807,7 @@ namespace InfiniteRuntimeTagViewer
 				window.Topmost = false;
 			}
 		}
+
 
 		private void Ppacity(object sender, RoutedEventArgs e)
 		{
@@ -390,51 +828,23 @@ namespace InfiniteRuntimeTagViewer
 					mwidow.Opacity = 1;
 				}
 			}
-			
+
+
+
 		}
 
+		#endregion
 		private long BaseAddress = -1;
 		private int TagCount = -1;
 
+		#region TagLoading
 		public Dictionary<string, TagStruct> TagsList { get; set; } = new(); // and now we can convert it back because we just sort it elsewhere
 		public SortedDictionary<string, GroupTagStruct> TagGroups { get; set; } = new();
 
-		// load tags from Mem
-		public void BtnReLoadTags_Click(object sender, RoutedEventArgs e)
-		{
-			TagsTree.Items.Clear();
-			groups_headers.Clear();
-			tags_headers.Clear();
-			HookAndLoad();
-		}
-		private void BtnLoadTags_Click(object sender, RoutedEventArgs e)
-		{
-			HookAndLoad();
-			Reload_Button.IsEnabled = true;
-		}
+		//public ObservableCollection<GroupTagStruct> TagGroups { get; set; } = new();
 
-		// instead of using the other method i made a new one because the last one yucky,
-		public bool SlientHookAndLoad(bool load_tags_too)
-		{
-			_ = HookProcessAsync();
-			if (BaseAddress != -1 && BaseAddress != 0)
-			{
-				if (load_tags_too)
-				{
-					TagsTree.Items.Clear();
-					groups_headers.Clear();
-					tags_headers.Clear();
-					LoadTagsMem(true);
 
-					if (hooked == true)
-					{
-						Searchbox_TextChanged(null, null);
-					}
-				}
-				return true;
-			}
-			return false;
-		}
+
 		private bool is_checked;
 		public async Task LoadTagsMem(bool is_silent)
 		{
@@ -508,9 +918,177 @@ namespace InfiniteRuntimeTagViewer
 				}
 			});
 			if (!is_silent)
-				Loadtags();
-			
+				await Loadtags();
+
 		}
+		//public ObservableCollection<GroupTagStruct>;
+
+		public async Task Loadtags()
+		{
+			
+
+			Dictionary<string, TreeViewItem> groups_headers_diff = new();
+
+			await Task.Run(() =>
+			{
+
+			// cycle through and evaluate against diff
+
+			// act accordingly
+
+			// save
+
+			// TagsTree
+			loadedTags = true;
+			for (int i = 0; i < TagGroups.Count; i++) // per group
+			{
+				KeyValuePair<string, GroupTagStruct> goop = TagGroups.ElementAt(i);
+
+					//ObservableCollection<GroupTagStruct> tagGroups = new(TagGroups.Values);
+
+					if (groups_headers.Keys.Contains(goop.Key)) // is included in group_headers
+					{
+
+						TreeViewItem t = groups_headers[goop.Key];
+						groups_headers_diff.Add(goop.Key, t);
+						groups_headers.Remove(goop.Key);
+
+						GroupTagStruct displayGroup = goop.Value;
+						displayGroup.TagCategory = t;
+						TagGroups[goop.Key] = displayGroup;
+
+					}
+					else
+					{
+						GroupTagStruct displayGroup = goop.Value;
+						Dispatcher.Invoke(new Action(() =>
+						{ 
+						TreeViewItem sortheader = new()
+						{
+							Header = displayGroup.TagGroupName + " (" + displayGroup.TagGroupDesc + ")",
+							ToolTip = new TextBlock { Foreground = Brushes.Black, Text = displayGroup.TagGroupDefinitition }
+						};
+						displayGroup.TagCategory = sortheader;
+						TagGroups[goop.Key] = displayGroup;
+
+						TagsTree.Items.Add(sortheader); //The tree view in the UI
+
+								groups_headers_diff.Add(goop.Key, sortheader);
+
+
+					}));
+
+
+
+				}
+
+			}
+
+
+				Dispatcher.Invoke(new Action(async () =>
+				{
+					foreach (KeyValuePair<string, TreeViewItem> poop in groups_headers) // per group
+					{
+						if (poop.Value != null)
+						{
+							TagsTree.Items.Remove(poop.Value);
+						}
+					}
+					groups_headers = groups_headers_diff;
+				}));
+
+
+			Dictionary<string, TreeViewItem> tags_headers_diff = new();
+
+			foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList.OrderBy(key => key.Value.TagFullName)) // per tag
+			{
+				if (!curr_tag.Value.unloaded)
+				{
+				Dispatcher.Invoke(new Action(() =>
+				{
+					if (tags_headers.Keys.Contains(curr_tag.Key)) // is included in tag_headers UI
+					{
+						TreeViewItem t = tags_headers[curr_tag.Key];
+						t.Tag = curr_tag.Key;
+						tags_headers_diff.Add(curr_tag.Key, t);
+						tags_headers.Remove(curr_tag.Key);
+					}
+					else // tag isnt in UI
+					{
+						TreeViewItem t = new();
+						TagStruct tag = curr_tag.Value;
+						TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct? dictTagGroup);
+
+						t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
+
+						t.Tag = curr_tag.Key; // our index to our tag
+
+						t.Selected += Select_Tag_click;
+
+
+						if (dictTagGroup != null && dictTagGroup.TagCategory != null)
+						{
+							dictTagGroup.TagCategory.Items.Add(t);
+						}
+
+						tags_headers_diff.Add(curr_tag.Key, t);
+
+					}
+					}));
+				}
+			}
+			foreach (KeyValuePair<string, TreeViewItem> poop in tags_headers) // per tag remove
+			{
+				if (poop.Value != null)
+				{
+						Dispatcher.Invoke(new Action(() =>
+						{
+							TreeViewItem ownber = poop.Value.Parent as TreeViewItem;
+							ownber.Items.Remove(poop.Value);
+						}));
+				}
+			}
+			tags_headers = tags_headers_diff;
+
+
+			if (TagsTree.Items.Count < 1)
+			{
+				loadedTags = false;
+			}
+				Dispatcher.Invoke(new Action(() =>
+				{
+					hook_text.Text = "Loaded Tags";
+					//Sort the tags tree alphabetically.
+					TagsTree.Items.SortDescriptions.Add(new SortDescription("Header", ListSortDirection.Ascending));
+				}));
+			});
+		}
+
+		#endregion
+
+		// instead of using the other method i made a new one because the last one yucky,
+		public bool SlientHookAndLoad(bool load_tags_too)
+		{
+			_ = HookProcessAsync();
+			if (BaseAddress != -1 && BaseAddress != 0)
+			{
+				if (load_tags_too)
+				{
+					TagsTree.Items.Clear();
+					groups_headers.Clear();
+					tags_headers.Clear();
+					LoadTagsMem(true);
+
+					if (hooked == true)
+					{
+						Searchbox_TextChanged(null, null);
+					}
+				}
+				return true;
+			}
+			return false;
+		}
+		
 		public string? read_tag_group(long tagGroupAddress)
 		{
 			try
@@ -557,110 +1135,7 @@ namespace InfiniteRuntimeTagViewer
 		public Dictionary<string, TreeViewItem> tags_headers = new();
 		public ObservableCollection<string> second_level = new();
 
-		public void Loadtags()
-		{
-			Dictionary<string, TreeViewItem> groups_headers_diff = new();
-
-			// cycle through and evaluate against diff
-
-			// act accordingly
-
-			// save
-
-			// TagsTree
-			loadedTags = true;
-			for (int i = 0; i<TagGroups.Count; i++) // per group
-			{
-				KeyValuePair<string, GroupTagStruct> goop = TagGroups.ElementAt(i);
-				if (groups_headers.Keys.Contains(goop.Key)) // is included in group_headers
-				{
-					TreeViewItem t = groups_headers[goop.Key];
-					groups_headers_diff.Add(goop.Key, t);
-					groups_headers.Remove(goop.Key);
-
-					GroupTagStruct displayGroup = goop.Value;
-					displayGroup.TagCategory = t;
-					TagGroups[goop.Key] = displayGroup;
-				}
-				else
-				{
-					GroupTagStruct displayGroup = goop.Value;
-					TreeViewItem sortheader = new()
-					{
-						Header = displayGroup.TagGroupName + " (" + displayGroup.TagGroupDesc + ")",
-						ToolTip = new TextBlock { Foreground = Brushes.Black, Text = displayGroup.TagGroupDefinitition }
-					};
-					displayGroup.TagCategory = sortheader;
-					TagGroups[goop.Key] = displayGroup;
-
-					TagsTree.Items.Add(sortheader);
-
-					groups_headers_diff.Add(goop.Key, sortheader);
-
-				}
-			}
-			foreach (KeyValuePair<string, TreeViewItem> poop in groups_headers) // per group
-			{
-				if (poop.Value != null)
-				{
-					TagsTree.Items.Remove(poop.Value);
-				}
-			}
-			groups_headers = groups_headers_diff;
-
-
-
-			Dictionary<string, TreeViewItem> tags_headers_diff = new();
-
-			foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList.OrderBy(key => key.Value.TagFullName)) // per tag
-			{
-				if (!curr_tag.Value.unloaded)
-				{
-					if (tags_headers.Keys.Contains(curr_tag.Key)) // is included in tag_headers UI
-					{
-						TreeViewItem t = tags_headers[curr_tag.Key];
-						t.Tag = curr_tag.Key;
-						tags_headers_diff.Add(curr_tag.Key, t);
-						tags_headers.Remove(curr_tag.Key);
-					}
-					else // tag isnt in UI
-					{
-						TreeViewItem t = new();
-						TagStruct tag = curr_tag.Value;
-						TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct dictTagGroup);
-
-						t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
-
-						t.Tag = curr_tag.Key; // our index to our tag
-
-						t.Selected += Select_Tag_click;
-
-						dictTagGroup.TagCategory.Items.Add(t);
-
-						tags_headers_diff.Add(curr_tag.Key, t);
-					}
-				}
-			}
-			foreach (KeyValuePair<string, TreeViewItem> poop in tags_headers) // per tag remove
-			{
-				if (poop.Value != null)
-				{
-					TreeViewItem ownber = poop.Value.Parent as TreeViewItem;
-					ownber.Items.Remove(poop.Value);
-				}
-			}
-			tags_headers = tags_headers_diff;
-
-
-			if (TagsTree.Items.Count < 1)
-			{
-				loadedTags = false;
-			}
-			//had to do this cause for whatever reason the multithreading prevented it from actually filtering the tags
-			hook_text.Text = "Loaded Tags";
-			// the filter thing used to be here lol
-
-		}
+		
 
 		public Dictionary<string, string> InhaledTagnames = new();
 
@@ -708,7 +1183,7 @@ namespace InfiniteRuntimeTagViewer
 				// Check if we found the tag
 				if (dockSearch != null)
 				{
-					// Set the tag as active
+					// Set the tag as active. What does this even do, if the statement is true, you don't need to set it to true again...
 					if (dockSearch.IsActive)
 					{
 						dockSearch.IsActive = true;
@@ -728,7 +1203,7 @@ namespace InfiniteRuntimeTagViewer
 							}
 							else
 							{
-								bool? found = false; // used for debugging
+								bool? found = false; // used for debugging. Debugging what exactly? lol
 							}
 						}
 					}
@@ -752,11 +1227,6 @@ namespace InfiniteRuntimeTagViewer
 			dockLayoutRoot.ActiveContent = doc;
 		}
 
-		private void Select_Tag_click(object sender, RoutedEventArgs e)
-		{
-			TreeViewItem? item = sender as TreeViewItem;
-			CreateTagEditorTabByTagIndex(item.Tag.ToString());
-		}
 
 		// list of changes to ammend to the memory when we phit the poke button
 		// i think it goes: address, type, value
@@ -783,15 +1253,7 @@ namespace InfiniteRuntimeTagViewer
 			}
 			current_pokelist = newname;
 		}
-		private void PokeList_Combobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			var comboBoxItem = PokeList_Combobox.SelectedItem as ComboBoxItem;
-			if (comboBoxItem != null)
-			{
-				load_a_pokelist(comboBoxItem.Content.ToString());
-			}
-				
-		}
+		
 		public void load_a_pokelist(string queuename)
 		{
 			if (Pokelistlist.ContainsKey(queuename))
@@ -857,71 +1319,7 @@ namespace InfiniteRuntimeTagViewer
 		// to keep track of the UI elements we're gonna use a dictionary, will probably be better
 		public Dictionary<string, TagChangesBlock> UIpokelist = new(); // i *think* we can just leave this as is
 
-
-
-		private void Save_pokes(object sender, RoutedEventArgs e)
-		{
-			var sfd = new Microsoft.Win32.SaveFileDialog
-			{
-				Filter = "IRTV Files (*.irtv)|*.irtv|All files (*.*)|*.*",
-				// Set other options depending on your needs ...
-			};
-			if (sfd.ShowDialog() == true)
-			{
-
-
-				string filename = sfd.FileName;
-				// save the file
-				//File.WriteAllText(filename, contents);
-
-				//KeyValuePair<string, KeyValuePair<string, string>>
-				string big_ol_poke_dump = "";
-				foreach (var k in Pokelistlist[current_pokelist].Pokelist)
-				{
-					big_ol_poke_dump+=k.Key + ";" + k.Value.Key + ";" + k.Value.Value + "\r\n";
-				}
-				Savewindow sw = new();
-				sw.Show();
-				sw.main = this;
-				sw.ill_take_it_from_here_mainwindow(filename, big_ol_poke_dump);
-
-				poke_text.Text = Pokelistlist[current_pokelist].Pokelist.Count + " Pokes Saved!";
-			}
-		}
-
-		private void Open_pokes(object sender, RoutedEventArgs e)
-		{
-			if (!loadedTags)
-			{
-				HookAndLoad();
-			}
-			// Create OpenFileDialog 
-			Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-
-			// Set filter for file extension and default file extension 
-			dlg.DefaultExt = ".irtv";
-			dlg.Filter = "IRTV Files (*.irtv)|*.irtv";
-
-			// Display OpenFileDialog by calling ShowDialog method 
-			bool? result = dlg.ShowDialog();
-
-			// Get the selected file name and display in a TextBox 
-			if (result == true)
-			{
-				string fullFileName = dlg.FileName;
-				string fileNameWithExt = Path.GetFileName(fullFileName);
-				add_new_section_to_pokelist(fileNameWithExt);
-
-				recieve_file_to_inhalo_pokes(dlg.FileName);
-				string target_folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\IRTV";
-				if (!Directory.Exists(target_folder))
-					Directory.CreateDirectory(target_folder);
-				string destPath = Path.Combine(target_folder, fileNameWithExt);
-				if (File.Exists(destPath))
-					File.Delete(destPath);
-				File.Copy(dlg.FileName, destPath);
-			}
-		}
+		
 		public void recieve_file_to_inhalo_pokes(string filename)
 		{
 			int prev = 0;
@@ -1084,15 +1482,7 @@ namespace InfiniteRuntimeTagViewer
 			}
 			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
 		}
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-			KeyValuePair<int, int> kv = pokelist(current_pokelist);
-			poke_text.Text = kv.Key + " poked, " + kv.Value + " failed";
-			if (mwidow != null)
-			{
-				mwidow.debug_text.Text = kv.Key + " poked, " + kv.Value + " failed";
-			}
-		}
+		
 		public KeyValuePair<int, int> pokelist(string listname)
 		{
 			int fails = 0;
@@ -1134,11 +1524,7 @@ namespace InfiniteRuntimeTagViewer
 		}
 
 
-		// POKE OUR CHANGES LETSGOOOO
-		private void BtnPokeChanges_Click(object sender, RoutedEventArgs e)
-		{
-			PokeChanges();
-		}
+		
 		public void tagchangesblock_fetchdata_by_ID(TagChangesBlock target) // aka do a single poke lol ?
 		{
 			
@@ -1483,10 +1869,7 @@ namespace InfiniteRuntimeTagViewer
 			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
 		}
 
-		private void BtnClearQueue_Click(object sender, RoutedEventArgs e)
-		{
-			clear_all_pokelists();
-		}
+		
 		public void clear_all_pokelists()
 		{
 			Pokelistlist.Clear();
@@ -1504,16 +1887,7 @@ namespace InfiniteRuntimeTagViewer
 			poke_text.Text = "All queues cleared";
 
 		}
-		private void BtnClearQueueSingle_Click(object sender, RoutedEventArgs e)
-		{
-			clear_pokes_list(current_pokelist);
-			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
-			if (mwidow != null)
-			{
-				mwidow.test_changes.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
-			}
-			poke_text.Text = "Poke List Cleared";
-		}
+		
 		public void clear_pokes_list(string queue)
 		{
 			changes_panel.Children.Clear();
@@ -1522,41 +1896,7 @@ namespace InfiniteRuntimeTagViewer
 
 			poke_text.Text = "Poke Lists Cleared";
 		}
-		private void BtnREMOVEQueueSingle_Click(object sender, RoutedEventArgs e)
-		{
-			clear_pokes_list(current_pokelist);
-			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
-			if (mwidow != null)
-			{
-				mwidow.test_changes.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
-			}
-			Pokelistlist.Remove(current_pokelist);
-			PokeList_Combobox.Items.Remove(PokeList_Combobox.SelectedItem);
-			if (PokeList_Combobox.Items.Count > 0)
-				PokeList_Combobox.SelectedIndex = 0;
-
-			poke_text.Text = "Poke List Removed";
-		}
-
-
-		private void DockManager_DocumentClosing(object sender, AvalonDock.DocumentClosingEventArgs e)
-		{
-			// On tag window closing.
-			UpdateLayout();
-
-			GC.Collect(3, GCCollectionMode.Forced);
-		}
-
-		private void BtnShowHideQueue_Click(object sender, RoutedEventArgs e)
-		{
-			System.Windows.Controls.Button? btn = (System.Windows.Controls.Button) sender;
-
-			queuelist.Visibility = queuelist.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
-			btn.Content =
-				queuelist.Visibility == Visibility.Visible
-				? "Hide Queue"
-				: "Show Queue";
-		}
+		
 
 		/* 4Byte
 		 * 2Byte
@@ -1570,266 +1910,7 @@ namespace InfiniteRuntimeTagViewer
          * TagrefTag
          */
 
-		#region Window Styling
-
-		// Can execute
-		private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-		{
-			e.CanExecute = true;
-		}
-
-		// Minimize
-		private void CommandBinding_Executed_Minimize(object sender, ExecutedRoutedEventArgs e)
-		{
-			SystemCommands.MinimizeWindow(this);
-		}
-
-		// Maximize
-		private void CommandBinding_Executed_Maximize(object sender, ExecutedRoutedEventArgs e)
-		{
-			SystemCommands.MaximizeWindow(this);
-		}
-
-		// Restore
-		private void CommandBinding_Executed_Restore(object sender, ExecutedRoutedEventArgs e)
-		{
-			SystemCommands.RestoreWindow(this);
-		}
-
-		// Close
-		private void CommandBinding_Executed_Close(object sender, ExecutedRoutedEventArgs e)
-		{
-			SystemCommands.CloseWindow(this);
-		}
-
-		// State change
-		private void MainWindowStateChangeRaised(object? sender, EventArgs e)
-		{
-			if (WindowState == WindowState.Maximized)
-			{
-				MainWindowBorder.BorderThickness = new Thickness(8);
-				RestoreButton.Visibility = Visibility.Visible;
-				MaximizeButton.Visibility = Visibility.Collapsed;
-			}
-			else
-			{
-				MainWindowBorder.BorderThickness = new Thickness(0);
-				RestoreButton.Visibility = Visibility.Collapsed;
-				MaximizeButton.Visibility = Visibility.Visible;
-			}
-		}
-		#endregion
-
-
-		// Search filter
-		private void Searchbox_TextChanged(object? sender, TextChangedEventArgs? e)
-		{
-			//string[] supportedTags = Halo.TagObjects.TagLayouts.Tags.Keys.ToArray();
-			string search = Searchbox.Text;
-			foreach (TreeViewItem? tv in TagsTree.Items)
-			{
-				if (!tv.Header.ToString().Contains(search))
-				{
-					tv.Visibility = Visibility.Collapsed;
-					foreach (TreeViewItem tc in tv.Items)
-					{
-						if (tc.Header.ToString().Contains(search))
-						{
-							tc.Visibility = Visibility.Visible;
-							tv.Visibility = Visibility.Visible;
-						}
-						else
-						{
-							tc.Visibility = Visibility.Collapsed;
-						}
-					}
-				}
-				else
-				{
-					tv.Visibility = Visibility.Visible;
-					foreach (TreeViewItem tc in tv.Items)
-					{
-						tc.Visibility = Visibility.Visible;
-					}
-				}
-			}
-		}
-
-		#region MenuCommands
-		public void ClickExit(object sender, RoutedEventArgs e)
-		{
-			SystemCommands.CloseWindow(this);
-		}
-
-		public void OpenTeleportMenu(object sender, RoutedEventArgs e)
-		{
-			TeleportWindow tp_win = new(M);
-			tp_win.Show();
-		}
-
-		public ProcessSelector GetProcessSelector()
-		{
-			return processSelector;
-		}
-
-		public bool specific;
-
-		public void UnloadTags(object sender, RoutedEventArgs e)
-		{
-			TagsTree.Items.Clear();
-			loadedTags = false;
-			//Need to unload memory items somehow here too!
-		}
-
-		//Commented out because mainly this has no function right now.
-
-		//public void GetAllMethods()
-		//{
-		//	Type myType = (typeof(MainWindow));
-		//	// Get the public methods.
-		//	MethodInfo[] myArrayMethodInfo = myType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
-		//	Console.WriteLine("\nThe number of public methods is {0}.", myArrayMethodInfo.Length);
-		//	// Add all public methods to menu.
-		//	DisplayMethodInfo(myArrayMethodInfo);
-		//	// Add all non-public methods to array.
-		//	MethodInfo[] myArrayMethodInfo1 = myType.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
-		//	// Add all non-public methods to menu.
-		//	DisplayMethodInfo(myArrayMethodInfo1);
-		//}
-
-
-		//public void DisplayMethodInfo(MethodInfo[] myArrayMethodInfo)
-		//{
-		//	// Display information for all methods.
-		//	for (int i = 0; i < myArrayMethodInfo.Length; i++)
-		//	{
-		//		MethodInfo myMethodInfo = (MethodInfo) myArrayMethodInfo[i];
-		//		//Console.WriteLine("\nThe name of the method is {0}.", myMethodInfo.Name);
-		//		MenuItem methods = new MenuItem();
-		//		MenuItem methodToAdd = (MenuItem) DebugMenu.Items[1];
-		//		methods.Header = myMethodInfo.Name;
-		//		methods.Click += CallMethod;
-		//		methodToAdd.Items.Add(methods);
-		//	}
-		//}
-
-		//public void CallMethod(object sender, RoutedEventArgs e)
-		//{
-		//	//Code that will call the specified method.
-		//	MenuItem? MI = sender as MenuItem;
-		//	if (MI != null)
-		//	{
-		//		try
-		//		{
-		//			Type mainType = (typeof(MainWindow));
-		//			string? clickedMethod = MI.Header.ToString();
-		//			System.Diagnostics.Debug.WriteLine(clickedMethod);
-		//			MethodInfo? method = mainType.GetMethod(clickedMethod);
-		//			if (method != null)
-		//			{
-		//				int paramCount = method.GetParameters().Length;
-		//				method.Invoke(this, null);
-		//			}
-		//		}
-		//		catch (Exception)
-		//		{
-		//			System.Diagnostics.Debug.WriteLine("Invalid parameter count. Consider calling a method with no parameters.");
-		//		}
-		//	}
-		//}
-
-		#endregion
-
-		// open mods window
-		public ModWindow? mwidow;
-		private void MenuItem_Click(object sender, RoutedEventArgs e)
-		{
-			try
-			{
-			if (mwidow == null)
-			{
-				mwidow = new ModWindow();
-				mwidow.Show();
-				mwidow.Focus();
-				mwidow.main = this;
-				mwidow.load_mods_from_directories();
-			}
-			else
-				{
-					mwidow.Show();
-					mwidow.Focus();
-				}
-			if (CbxOpacity.IsChecked)
-				{
-					mwidow.Opacity = 0.90;
-				}
-			else
-				{
-					mwidow.Opacity = 1;
-				}
-			}
-			catch (System.InvalidOperationException)
-			{
-				mwidow = null;
-				MenuItem_Click(sender, e);
-			}
-		}
-
 	
-		// REVERT POKE STUFF
-		private void REVERT_ALL_BUTTON(object sender, RoutedEventArgs e)
-		{
-			int fails = 0;
-			int pokes = 0;
-			for (int q = 0; q < Pokelistlist.Count; q++)
-			{
-				KeyValuePair<int, int> kv = revertlist(Pokelistlist.ElementAt(q).Key);
-				fails += kv.Value;
-				pokes += kv.Key;
-			}
-			if (fails < 1)
-			{
-				poke_text.Text = pokes + " changes reverted!";
-				if (mwidow != null)
-				{
-					mwidow.debug_text.Text = pokes + " changes reverted!";
-				}
-			}
-			else
-			{
-				poke_text.Text = pokes + " reverted, " + fails + " failed";
-				if (mwidow != null)
-				{
-					mwidow.debug_text.Text = pokes + " reverted, " + fails + " failed";
-				}
-			}
-
-			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
-		}
-		private void REVERT_SINGLE_BUTTON(object sender, RoutedEventArgs e)
-		{
-			KeyValuePair<int, int> kv = revertlist(current_pokelist);
-			int fails = kv.Value;
-			int pokes = kv.Key;
-			if (fails < 1)
-			{
-				poke_text.Text = pokes + " changes reverted!";
-				if (mwidow != null)
-				{
-					mwidow.debug_text.Text = pokes + " changes reverted!";
-				}
-			}
-			else
-			{
-				poke_text.Text = pokes + " reverted, " + fails + " failed";
-				if (mwidow != null)
-				{
-					mwidow.debug_text.Text = pokes + " reverted, " + fails + " failed";
-				}
-			}
-
-			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
-		}
 		public KeyValuePair<int, int> revertlist(string listname)
 		{
 			int fails = 0;
@@ -1877,10 +1958,12 @@ namespace InfiniteRuntimeTagViewer
 
 		// addd new poke list
 		public int num_of_user_added_lists = 0;
-		private void Button_Click_1(object sender, RoutedEventArgs e)
-		{
-			num_of_user_added_lists++;
-			add_new_section_to_pokelist("Poke Queue("+num_of_user_added_lists +")");
-		}
+		
+	}
+
+
+	public class Tags
+	{
+
 	}
 }
