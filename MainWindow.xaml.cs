@@ -929,7 +929,7 @@ namespace InfiniteRuntimeTagViewer
 
 			Dictionary<string, TreeViewItem> groups_headers_diff = new();
 
-			await Task.Run(() =>
+			await Task.Run(async () =>
 			{
 
 			// cycle through and evaluate against diff
@@ -1000,8 +1000,10 @@ namespace InfiniteRuntimeTagViewer
 
 			Dictionary<string, TreeViewItem> tags_headers_diff = new();
 
+				int iteration = 0;
 			foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList.OrderBy(key => key.Value.TagFullName)) // per tag
 			{
+					iteration += 1;
 				if (!curr_tag.Value.unloaded)
 				{
 				Dispatcher.Invoke(new Action(() =>
@@ -1034,9 +1036,15 @@ namespace InfiniteRuntimeTagViewer
 						tags_headers_diff.Add(curr_tag.Key, t);
 
 					}
+					
 					}));
+						if (iteration > 200)
+						{
+							Thread.Sleep(1);
+							iteration = 0;
+						}
+					}
 				}
-			}
 			foreach (KeyValuePair<string, TreeViewItem> poop in tags_headers) // per tag remove
 			{
 				if (poop.Value != null)
