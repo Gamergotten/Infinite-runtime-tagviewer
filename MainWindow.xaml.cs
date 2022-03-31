@@ -26,6 +26,7 @@ using System.Collections.ObjectModel;
 
 using InfiniteRuntimeTagViewer.Properties;
 using System.ComponentModel;
+using System.Text;
 
 namespace InfiniteRuntimeTagViewer
 {
@@ -187,7 +188,7 @@ namespace InfiniteRuntimeTagViewer
 		private async Task HookProcessAsync()
 		{
 			bool reset = processSelector.hookProcess(M);
-			if (M.pHandle == IntPtr.Zero || processSelector.selected == false || loadedTags == false)
+			if (M.mProc.Process.Handle == IntPtr.Zero || processSelector.selected == false || loadedTags == false)
 			{
 				// Could not find the process
 				hook_text.Text = "Cant find HaloInfinite.exe";
@@ -206,7 +207,7 @@ namespace InfiniteRuntimeTagViewer
 				//System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite .exe+0x3D13E38")); // this is the wrong address lol
 				if (validtest == "tag instances")
 				{
-					hook_text.Text = "Process Hooked: " + M.theProc.Id;
+					hook_text.Text = "Process Hooked: " + M.mProc.Process.Id;
 					hooked = true;
 				}
 				else
@@ -293,9 +294,17 @@ namespace InfiniteRuntimeTagViewer
 			}));
 		}
 
+		public static IEnumerable<string> SplitThis( string str, int n)
+		{
+
+			return Enumerable.Range(0, str.Length / n)
+							.Select(i => str.Substring(i * n, n));
+		}
+
+
 		public bool loadedTags = false;
 		public bool hooked = false;
-
+		public long aobStart;
 		public async Task ScanMem()
 		{
 			// FALLBACK ADDRESS POINTER (which is literally useless)
@@ -305,7 +314,7 @@ namespace InfiniteRuntimeTagViewer
 
 			if (validtest == "tag instances")
 			{
-				hook_text.Text = "Process Hooked: " + M.theProc.Id;
+				hook_text.Text = "Process Hooked: " + M.mProc.Process.Id;
 				hooked = true;
 			}
 			else
@@ -315,6 +324,25 @@ namespace InfiniteRuntimeTagViewer
 				{
 					long? aobScan = (await M.AoBScan(AOBScanStartAddr, AOBScanEndAddr, AOBScanTagStr, true))
 						.First(); // "tag instances"
+					if (aobScan != null)
+					{
+						string aobHex = aobScan.Value.ToString("X");
+						IEnumerable<string> aobStr = SplitThis("0" + aobHex, 2);
+						IEnumerable<string> aobReversed = aobStr.Reverse().ToArray();
+						string aobSingle = string.Join("", aobReversed);
+						aobSingle = Regex.Replace(aobSingle, ".{2}", "$0 ");
+						aobSingle = aobSingle.TrimEnd();
+						System.Diagnostics.Debugger.Log(0, "DBGTIMING", "AOB: " + aobSingle);
+						
+						IEnumerable<long>? pointer = (await M.AoBScan(aobSingle, true, true, true));
+						for (int i = 0; i < pointer.Count(); i++)
+						{
+							System.Diagnostics.Debug.WriteLine(pointer.ElementAt(i).ToString("X"));
+						}
+						
+					}
+
+
 
 					// Failed to find base tag address
 					if (aobScan == null || aobScan == 0)
@@ -326,7 +354,7 @@ namespace InfiniteRuntimeTagViewer
 					else
 					{
 						BaseAddress = aobScan.Value;
-						hook_text.Text = "Process Hooked: " + M.theProc.Id + " (AOB)";
+						hook_text.Text = "Process Hooked: " + M.mProc.Process.Id + " (AOB)";
 						hooked = true;
 					}
 				}
