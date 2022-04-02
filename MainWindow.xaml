@@ -11,9 +11,10 @@
                  Background="#333333"
                  Title="Infinite Runtime Tagviewer" 
                  Height="650" 
-                 Width="1150" 
+                 Width="1250" 
                  AllowsTransparency="True" 
                  Deactivated="Window_Deactivated"
+                 SizeChanged="window_SizeChanged"
                  WindowStyle="None">
 
     <Window.Resources>
@@ -259,21 +260,30 @@
                                 <ColumnDefinition Width="80" />
                                 <ColumnDefinition Width="110" />
                                 <ColumnDefinition Width="110" />
-                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="75" />
                                 <ColumnDefinition />
                                 <ColumnDefinition Width="150" />
-                                <ColumnDefinition Width="225" />
-                                <ColumnDefinition Width="25" />
+                                <ColumnDefinition Width="125" />
+                                <ColumnDefinition Width="125" />
                             </Grid.ColumnDefinitions>
 
                             <Button     Content="Poke All" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BtnPokeChanges_Click" Padding="4,4,4,4" />
-                            <Button     Content="Revert pokes" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="REVERT_ALL_BUTTON" Padding="4,4,4,4" />
+                            <Button     Content="Revert pokes" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="REVERT_ALL_BUTTON" Padding="4,4,4,4" Margin="5 0 0 0" />
                             <TextBlock  x:Name="poke_text" Grid.Column="2" HorizontalAlignment="Left" Text=". . ." VerticalAlignment="Center" Margin="5,0,0,0" />
 
                             <TextBlock  x:Name="change_text" Grid.Column="3" HorizontalAlignment="Right" Text="0 changes queued" VerticalAlignment="Center" Margin="0,0,5,0" />
                             <Button     Grid.Column="4" Content="Clear All" HorizontalAlignment="Stretch" Click="BtnClearQueue_Click" />
                             <Button     Grid.Column="6" Content="Show Queue" HorizontalAlignment="Stretch" Click="BtnShowHideQueue_Click" Margin="10,0,0,0" />
-
+                            <Button x:Name="ReloadProcBtn"    Grid.Column="7" Content="Reload Process" HorizontalAlignment="Stretch" Click="BtnReloadProcessClick" Margin="10,0,0,0">
+                                <Button.ToolTip>
+                                <TextBlock Foreground="Black">Reload all Halo Infinite processes.</TextBlock>
+                                </Button.ToolTip>
+                            </Button>
+                            <Button x:Name="CloseProcBtn"     Grid.Column="8" Content="Close Process" HorizontalAlignment="Stretch" Click="BtnCloseClick" Margin="10,0,0,0" >
+                                <Button.ToolTip>
+                                    <TextBlock Foreground="Black">Close all Halo Infinite processes.</TextBlock>
+                                </Button.ToolTip>
+                            </Button>
 
                         </Grid>
                     </Grid>
@@ -354,8 +364,8 @@
                     <Grid Grid.Row="3" Grid.ColumnSpan="2" Margin="5,5,5,5">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
-                            <ColumnDefinition Width="45" />
-                            <ColumnDefinition Width="33" />
+                            <ColumnDefinition Width="0.25*" />
+                            <ColumnDefinition Width="0.25*" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition />
@@ -364,7 +374,7 @@
                         <TextBlock x:Name="hook_text" Text="Not hooked" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" />
                         <TextBlock x:Name="extra_tag_text" Text="Not auto loading" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,5,0" />
                         <Button x:Name="Reload_Button" Content="Reload" Grid.Column="1" Click="BtnReLoadTags_Click" Padding="4,4,4,4" IsEnabled="False" />
-                        <Button Content="Load" Grid.Column="2" Click="BtnLoadTags_Click" Padding="4,4,4,4" />
+                        <Button x:Name="LoadBtn" Content="Load" Grid.Column="2" Click="BtnLoadTags_Click" Padding="4,4,4,4" Margin="5 0 0 0" />
 
                     </Grid>
                 </Grid>

@@ -27,6 +27,7 @@ using System.Collections.ObjectModel;
 using InfiniteRuntimeTagViewer.Properties;
 using System.ComponentModel;
 using System.Text;
+using System.Diagnostics;
 
 namespace InfiniteRuntimeTagViewer
 {
@@ -222,7 +223,14 @@ namespace InfiniteRuntimeTagViewer
 
 		public async void HookAndLoad()
 		{
-			await HookProcessAsync();
+			try
+			{
+				await HookProcessAsync();
+			}
+			catch (System.ArgumentNullException)
+			{
+				
+			}
 			if (BaseAddress != -1 && BaseAddress != 0)
 			{
 				await LoadTagsMem(false);
@@ -324,23 +332,24 @@ namespace InfiniteRuntimeTagViewer
 				{
 					long? aobScan = (await M.AoBScan(AOBScanStartAddr, AOBScanEndAddr, AOBScanTagStr, true))
 						.First(); // "tag instances"
-					if (aobScan != null)
-					{
-						string aobHex = aobScan.Value.ToString("X");
-						IEnumerable<string> aobStr = SplitThis("0" + aobHex, 2);
-						IEnumerable<string> aobReversed = aobStr.Reverse().ToArray();
-						string aobSingle = string.Join("", aobReversed);
-						aobSingle = Regex.Replace(aobSingle, ".{2}", "$0 ");
-						aobSingle = aobSingle.TrimEnd();
-						System.Diagnostics.Debugger.Log(0, "DBGTIMING", "AOB: " + aobSingle);
-						
-						IEnumerable<long>? pointer = (await M.AoBScan(aobSingle, true, true, true));
-						for (int i = 0; i < pointer.Count(); i++)
-						{
-							System.Diagnostics.Debug.WriteLine(pointer.ElementAt(i).ToString("X"));
-						}
-						
-					}
+
+					//Uncomment here for more work on automatically finding the pointer value.
+
+					//if (aobScan != null)
+					//{
+					//	string aobHex = aobScan.Value.ToString("X");
+					//	IEnumerable<string> aobStr = SplitThis("0" + aobHex, 2);
+					//	IEnumerable<string> aobReversed = aobStr.Reverse().ToArray();
+					//	string aobSingle = string.Join("", aobReversed);
+					//	aobSingle = Regex.Replace(aobSingle, ".{2}", "$0 ");
+					//	aobSingle = aobSingle.TrimEnd();
+					//	System.Diagnostics.Debugger.Log(0, "DBGTIMING", "AOB: " + aobSingle);
+					//	IEnumerable<long>? pointer = await M.AoBScan(aobSingle + " 00 00", true, true, true);
+					//	for (int j = 0; j < pointer.Count(); j++)
+					//	{
+					//		System.Diagnostics.Debug.WriteLine("Found: " + pointer.ElementAt(j).ToString("X"));
+					//	}
+					//}
 
 
 
@@ -366,6 +375,54 @@ namespace InfiniteRuntimeTagViewer
 		}
 
 		#region EventHandlers
+
+		//Adjust UI element size depending on window size.
+		private void window_SizeChanged(object sender, SizeChangedEventArgs e)
+		{
+			
+			double newWindowWidth = e.NewSize.Width;
+			//Debug.WriteLine(newWindowWidth);
+			if (newWindowWidth < 1200)
+			{
+				CloseProcBtn.IsHitTestVisible = false;
+				CloseProcBtn.Visibility = Visibility.Collapsed;
+			}
+			else
+			{
+				CloseProcBtn.IsHitTestVisible = true;
+				CloseProcBtn.Visibility = Visibility.Visible;
+			}
+			if (newWindowWidth < 1000)
+			{
+				ReloadProcBtn.IsHitTestVisible = false;
+				ReloadProcBtn.Visibility = Visibility.Collapsed;
+			}
+			else
+			{
+				ReloadProcBtn.IsHitTestVisible = true;
+				ReloadProcBtn.Visibility = Visibility.Visible;
+			}
+			
+		}
+
+		private void BtnReloadProcessClick(object sender, RoutedEventArgs e)
+		{
+			foreach (Process? process in Process.GetProcessesByName("HaloInfinite"))
+			{
+				string? filePath = process.MainModule.FileName;
+				process.Kill();
+				Process.Start(filePath);
+			}
+		}
+
+		private void BtnCloseClick(object sender, RoutedEventArgs e)
+		{
+			foreach (Process? process in Process.GetProcessesByName("HaloInfinite"))
+			{
+				process.Kill();
+			}
+		}
+		
 		private void Button_Click_1(object sender, RoutedEventArgs e)
 		{
 			num_of_user_added_lists++;
@@ -1877,6 +1934,8 @@ namespace InfiniteRuntimeTagViewer
 			}
 			return "";
 		}
+
+		
 
 		public string return_real_number_of_pokes_queued_okk()
 		{
