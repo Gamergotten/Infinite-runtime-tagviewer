@@ -334,22 +334,28 @@ namespace InfiniteRuntimeTagViewer
 						.First(); // "tag instances"
 
 					//Uncomment here for more work on automatically finding the pointer value.
+					long haloInfinite = 0;
+					if (aobScan != null)
+					{
+						//get all processes named HaloInfinite
+						foreach (Process process in Process.GetProcessesByName("HaloInfinite"))
+						{
+							//get the base address of the process
+							haloInfinite = (long) process.MainModule.BaseAddress;
+						}
+						string aobHex = aobScan.Value.ToString("X");
+						IEnumerable<string> aobStr = SplitThis("0" + aobHex, 2);
+						IEnumerable<string> aobReversed = aobStr.Reverse().ToArray();
+						string aobSingle = string.Join("", aobReversed);
+						aobSingle = Regex.Replace(aobSingle, ".{2}", "$0 ");
+						aobSingle = aobSingle.TrimEnd();
+						Debugger.Log(0, "DBGTIMING", "AOB: " + aobSingle);
+						long pointer = (await M.AoBScan(haloInfinite, 140737488289791, aobSingle + " 00 00", true, true, true)).First();
+						Settings.Default.ProcAsyncBaseAddr = "HaloInfinite.exe+0x" + (pointer - haloInfinite).ToString("X");
+						Settings.Default.Save();
+						Debug.WriteLine(Settings.Default.ProcAsyncBaseAddr);
 
-					//if (aobScan != null)
-					//{
-					//	string aobHex = aobScan.Value.ToString("X");
-					//	IEnumerable<string> aobStr = SplitThis("0" + aobHex, 2);
-					//	IEnumerable<string> aobReversed = aobStr.Reverse().ToArray();
-					//	string aobSingle = string.Join("", aobReversed);
-					//	aobSingle = Regex.Replace(aobSingle, ".{2}", "$0 ");
-					//	aobSingle = aobSingle.TrimEnd();
-					//	System.Diagnostics.Debugger.Log(0, "DBGTIMING", "AOB: " + aobSingle);
-					//	IEnumerable<long>? pointer = await M.AoBScan(aobSingle + " 00 00", true, true, true);
-					//	for (int j = 0; j < pointer.Count(); j++)
-					//	{
-					//		System.Diagnostics.Debug.WriteLine("Found: " + pointer.ElementAt(j).ToString("X"));
-					//	}
-					//}
+					}
 
 
 
@@ -2054,11 +2060,5 @@ namespace InfiniteRuntimeTagViewer
 		// addd new poke list
 		public int num_of_user_added_lists = 0;
 		
-	}
-
-
-	public class Tags
-	{
-
 	}
 }
