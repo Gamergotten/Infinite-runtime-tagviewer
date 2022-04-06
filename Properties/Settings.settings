@@ -23,5 +23,8 @@
     <Setting Name="ProcAsyncBaseAddr" Type="System.String" Scope="User">
       <Value Profile="(Default)">undefined</Value>
     </Setting>
+    <Setting Name="ProcessPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">undefined</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
