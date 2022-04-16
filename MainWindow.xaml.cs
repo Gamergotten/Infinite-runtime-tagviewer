@@ -108,7 +108,7 @@ namespace InfiniteRuntimeTagViewer
 			CbxSearchProcess.IsChecked = AutoHookKey;
 			CbxAutoPokeChanges.IsChecked = AutoPokeKey;
 			CbxFilterUnloaded.IsChecked = FilterOnlyMappedKey;
-			whatdoescbxstandfor.IsChecked = AutoLoadKey;
+			whatdoescbxstandfor.IsChecked = AutoLoadKey; // Probably check box... -Z
 			CbxOnTop.IsChecked = AlwaysOnTopKey;
 			CbxOpacity.IsChecked = OpacityKey;
 		}
@@ -188,34 +188,41 @@ namespace InfiniteRuntimeTagViewer
 
 		private async Task HookProcessAsync()
 		{
-			bool reset = processSelector.hookProcess(M);
-			if (M.mProc.Process.Handle == IntPtr.Zero || processSelector.selected == false || loadedTags == false)
+			try
 			{
-				// Could not find the process
-				hook_text.Text = "Cant find HaloInfinite.exe";
-				BaseAddress = -1;
-				hooked = false;
-				loadedTags = false;
-				TagsTree.Items.Clear();
-			}
+				bool reset = processSelector.hookProcess(M);
+				if (M.mProc.Process.Handle == IntPtr.Zero || processSelector.selected == false || loadedTags == false)
+				{
+					// Could not find the process
+					hook_text.Text = "Cant find HaloInfinite.exe";
+					BaseAddress = -1;
+					hooked = false;
+					loadedTags = false;
+					TagsTree.Items.Clear();
+				}
 
-			if (!hooked || reset)
+				if (!hooked || reset)
+				{
+					// Get the base address
+					UpdateAddress();
+					BaseAddress = M.ReadLong(HookProcessAsyncBaseAddr);
+					string validtest = M.ReadString(BaseAddress.ToString("X"));
+					//System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite .exe+0x3D13E38")); // this is the wrong address lol
+					if (validtest == "tag instances")
+					{
+						hook_text.Text = "Process Hooked: " + M.mProc.Process.Id;
+						hooked = true;
+					}
+					else
+					{
+						hook_text.Text = "Offset failed, scanning...";
+						await ScanMem();
+					}
+				}
+			}
+			catch (Exception ex)
 			{
-				// Get the base address
-				UpdateAddress();
-				BaseAddress = M.ReadLong(HookProcessAsyncBaseAddr);
-				string validtest = M.ReadString(BaseAddress.ToString("X"));
-				//System.Diagnostics.Debug.WriteLine(M.ReadLong("HaloInfinite .exe+0x3D13E38")); // this is the wrong address lol
-				if (validtest == "tag instances")
-				{
-					hook_text.Text = "Process Hooked: " + M.mProc.Process.Id;
-					hooked = true;
-				}
-				else
-				{
-					hook_text.Text = "Offset failed, scanning...";
-					await ScanMem();
-				}
+				Debug.WriteLine(ex.ToString());
 			}
 		}
 
@@ -1550,36 +1557,43 @@ namespace InfiniteRuntimeTagViewer
 		
 		public void PokeChanges()
 		{
-			if (!hooked)
+			try
 			{
-				poke_text.Text = "you MUST 'Load' first";
-				return;
-			}
-			int fails = 0;
-			int pokes = 0;
-			for (int q = 0; q < Pokelistlist.Count; q++)
-			{
-			 	KeyValuePair<int, int> kv = pokelist(Pokelistlist.ElementAt(q).Key);
-				fails += kv.Value;
-				pokes += kv.Key;
-			}
-			if (fails < 1)
-			{
-				poke_text.Text = pokes + " changes poked!";
-				if (mwidow != null)
+				if (!hooked)
 				{
-					mwidow.debug_text.Text = pokes + " changes poked!";
+					poke_text.Text = "you MUST 'Load' first";
+					return;
 				}
-			}
-			else
-			{
-				poke_text.Text = pokes + " poked, " + fails + " failed";
-				if (mwidow != null)
+				int fails = 0;
+				int pokes = 0;
+				for (int q = 0; q < Pokelistlist.Count; q++)
 				{
-					mwidow.debug_text.Text = pokes + " poked, " + fails + " failed";
+					KeyValuePair<int, int> kv = pokelist(Pokelistlist.ElementAt(q).Key);
+					fails += kv.Value;
+					pokes += kv.Key;
 				}
+				if (fails < 1)
+				{
+					poke_text.Text = pokes + " changes poked!";
+					if (mwidow != null)
+					{
+						mwidow.debug_text.Text = pokes + " changes poked!";
+					}
+				}
+				else
+				{
+					poke_text.Text = pokes + " poked, " + fails + " failed";
+					if (mwidow != null)
+					{
+						mwidow.debug_text.Text = pokes + " poked, " + fails + " failed";
+					}
+				}
+				change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
 			}
-			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
+			catch (Exception ex)
+			{
+				Debug.WriteLine(ex.ToString());
+			}
 		}
 		
 		public KeyValuePair<int, int> pokelist(string listname)
