@@ -182,7 +182,8 @@ namespace InfiniteRuntimeTagViewer
 			}
 			else
 			{
-				HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x41A79E8";
+				//HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x41A79E8";
+				HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x40AD150"; // Season 2 Update
 			}
 		}
 
