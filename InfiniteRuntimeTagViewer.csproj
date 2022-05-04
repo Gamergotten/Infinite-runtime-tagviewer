@@ -34,7 +34,6 @@
 
   <ItemGroup>
     <Folder Include="MODS\" />
-    <Folder Include="Plugins\" />
     <Folder Include="RESEARCH NOTES\" />
     <Folder Include="Themes\" />
     <Folder Include="Utility\" />

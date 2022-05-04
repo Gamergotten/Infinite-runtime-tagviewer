@@ -2825,6 +2825,7 @@
 		<_14 v="height crouching" />
 		<_14 v="radius" />
 		<_14 v="mass" />
+		<_34 v="generated_pad024d" length="4" />
 		<_A v="maximum rigid body size override">
 			<Flag v="default" />
 			<Flag v="tiny" />
@@ -2969,6 +2970,12 @@
 			<_34 v="generated_pad9227" length="4" />
 			<_3B v="" />
 		</_40>
+		<_2 v="HERE" />
+		<_2 v="HERE" />
+		<_2 v="HERE" />
+		<_2 v="HERE" />
+		<_2 v="HERE" />
+		<_2 v="HERE" />
 		<_37 v="Physics - ground" />
 		<_38 v="ground physics">
 			<_D v="flags">
@@ -2996,6 +3003,7 @@
 			<_14 v="gravity scale" />
 			<_14 v="airborne acceleration scale" />
 			<_14 v="successive slide delay" />
+			<_2 v="HERE" />
 			<_14 v="minimum slide trigger sprint fraction" />
 			<_8 v="maximum direction change during slide" />
 			<_8 v="maximum turn during slide" />
@@ -3010,6 +3018,16 @@
 				<_37 v="" />
 				<_3B v="" />
 			</_38>
+			<_2 v="HERE" />
+			<_2 v="HERE" />
+			<_2 v="HERE" />
+			<_2 v="HERE" />
+			<_2 v="HERE" />
+			<_2 v="HERE" />
+			<_2 v="HERE" />
+			<_2 v="HERE" />
+			<_2 v="HERE" />
+			<_2 v="HERE" />
 			<_41 v="low ceiling control" />
 			<_3B v="" />
 		</_38>

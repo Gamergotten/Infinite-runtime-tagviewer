@@ -221,6 +221,7 @@
 				<_2 v="turn off with" />
 				<_2 v="ranged interpolation name" />
 				<_14 v="min value" />
+				<_34 v="generated_pad9518" length="4" />
 				<_37 v="default function" />
 				<_38 v="default function">
 					<_37 v="" />
@@ -1361,6 +1362,7 @@
 	</_38>
 	<_37 v="$$$ WEAPON $$$" />
 	<_41 v="parent" />
+	<_34 v="generated_pad2c03" length="4" />
 	<_36 v="" />
 	<_D v="flags">
 		<Flag v="gunkick disable roll" />

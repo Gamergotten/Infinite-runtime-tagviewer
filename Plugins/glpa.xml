@@ -21,6 +21,7 @@
 			<Flag v="can use health packs" />
 			<Flag v="use teammate chatter dialogue" />
 		</_F>
+		<_34 v="Here" length="20" />
 		<_34 v="generated_pad3e61" length="3" />
 		<_41 v="third person unit" />
 		<_2 v="third person variant" />
