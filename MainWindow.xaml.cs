@@ -141,9 +141,9 @@ namespace InfiniteRuntimeTagViewer
 		//Offsets
 		public string
 								// Hard-Coded Addresses
-								//HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x41A79E8",   //TU10
+								//HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x40AD150",   //TU11
 								HookProcessAsyncBaseAddr,									 // Tag_List_Function
-								ScanMemAOBBaseAddr = "HaloInfinite.exe+0x3612B08",           // Tag_List_Str
+								ScanMemAOBBaseAddr = "HaloInfinite.exe+0x305B1B0",           // Tag_List_Str
 
 								// AOB's to scan.
 								AOBScanTagStr = "74 61 67 20 69 6E 73 74 61 6E 63 65 73"; // Tag_List_Backup Str to find
@@ -182,7 +182,6 @@ namespace InfiniteRuntimeTagViewer
 			}
 			else
 			{
-				//HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x41A79E8";
 				HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x40AD150"; // Season 2 Update
 			}
 		}
