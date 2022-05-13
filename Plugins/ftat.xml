@@ -28,6 +28,7 @@
 		<_41 v="Runtime Underlying Geo (Static IO)" />
 		<_41 v="Runtime Underlying Collision Geo (Static IO)" />
 		<_41 v="Runtime Underlying Material Palette (Static IO)" />
+		<_2 v="Style" />
 		<_3B v="" />
 	</_40>
 	<_40 v="Edges">
@@ -59,11 +60,13 @@
 		<_41 v="Runtime Underlying Geo (Static IO)" />
 		<_41 v="Runtime Underlying Collision Geo (Static IO)" />
 		<_41 v="Runtime Underlying Material Palette (Static IO)" />
+		<_2 v="Style" />
 		<_3B v="" />
 	</_40>
 	<_40 v="Faces">
 		<_41 v="Object" />
 		<_19 v="Position" />
+		<_1A v="Rotation" />
 		<_2 v="variant" />
 		<_40 v="FaceEndPoints">
 			<_19 v="point" />
@@ -76,6 +79,7 @@
 		<_41 v="Runtime Underlying Geo (Static IO)" />
 		<_41 v="Runtime Underlying Collision Geo (Static IO)" />
 		<_41 v="Runtime Underlying Material Palette (Static IO)" />
+		<_2 v="Style" />
 		<_19 v="endPointsBoundsMax" />
 		<_19 v="endPointsBoundsMin" />
 		<_19 v="geoBoundsMin" />

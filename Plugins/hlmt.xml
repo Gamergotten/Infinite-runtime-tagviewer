@@ -54,6 +54,7 @@
 		<_6 v="Damage Style Index" />
 		<_D v="model variant flags">
 			<Flag v="available in forge" />
+			<Flag v="exclude default materials" />
 		</_D>
 		<_B v="Damage Effect Sounds - Enable Model Hit Override">
 			<Flag v="Same As Model" />
@@ -672,6 +673,7 @@
 				<Flag v="disable additive player damage sound" />
 				<Flag v="strippable armor" />
 				<Flag v="takes visual damage" />
+				<Flag v="requires ordered instant responses" />
 			</_D>
 			<_6 v="runtime flags" />
 			<_37 v="" />
@@ -769,6 +771,7 @@
 				</_D>
 				<_D v="flags2">
 					<Flag v="skip on incineration" />
+					<Flag v="generate script event" />
 				</_D>
 				<_2 v="label" />
 				<_40 v="included variants">

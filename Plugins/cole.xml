@@ -34,6 +34,7 @@
 		<_40 v="Gameplay Unlocks">
 			<_40 v="Skull Unlock">
 				<_A v="Game Skull">
+					<Flag v="Reserved0" />
 					<Flag v="BlackEye" />
 					<Flag v="Catch" />
 					<Flag v="Fog" />

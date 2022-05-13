@@ -22,6 +22,11 @@
 			<_14 v="LOD - 4 Player Splitscreen" />
 			<_37 v="" />
 			<_3E v="Number of LODs to skip" />
+			<_37 v="Number of LODs to skip for Splitscreen" />
+			<_3E v="LOD Skip - 2 Player Splitscreen" />
+			<_3E v="LOD Skip - 3 Player Splitscreen" />
+			<_3E v="LOD Skip - 4 Player Splitscreen" />
+			<_37 v="" />
 			<_25 v="Hide After Distance Multiplier" />
 			<_37 v="Hide After Distance Splitscreen Multipliers" />
 			<_14 v="HAD - 2 Player Splitscreen" />
@@ -43,6 +48,11 @@
 			<_14 v="LOD - 4 Player Splitscreen" />
 			<_37 v="" />
 			<_3E v="Number of LODs to skip" />
+			<_37 v="Number of LODs to skip for Splitscreen" />
+			<_3E v="LOD Skip - 2 Player Splitscreen" />
+			<_3E v="LOD Skip - 3 Player Splitscreen" />
+			<_3E v="LOD Skip - 4 Player Splitscreen" />
+			<_37 v="" />
 			<_25 v="Hide After Distance Multiplier" />
 			<_37 v="Hide After Distance Splitscreen Multipliers" />
 			<_14 v="HAD - 2 Player Splitscreen" />
@@ -64,6 +74,11 @@
 			<_14 v="LOD - 4 Player Splitscreen" />
 			<_37 v="" />
 			<_3E v="Number of LODs to skip" />
+			<_37 v="Number of LODs to skip for Splitscreen" />
+			<_3E v="LOD Skip - 2 Player Splitscreen" />
+			<_3E v="LOD Skip - 3 Player Splitscreen" />
+			<_3E v="LOD Skip - 4 Player Splitscreen" />
+			<_37 v="" />
 			<_25 v="Hide After Distance Multiplier" />
 			<_37 v="Hide After Distance Splitscreen Multipliers" />
 			<_14 v="HAD - 2 Player Splitscreen" />
@@ -85,6 +100,11 @@
 			<_14 v="LOD - 4 Player Splitscreen" />
 			<_37 v="" />
 			<_3E v="Number of LODs to skip" />
+			<_37 v="Number of LODs to skip for Splitscreen" />
+			<_3E v="LOD Skip - 2 Player Splitscreen" />
+			<_3E v="LOD Skip - 3 Player Splitscreen" />
+			<_3E v="LOD Skip - 4 Player Splitscreen" />
+			<_37 v="" />
 			<_25 v="Hide After Distance Multiplier" />
 			<_37 v="Hide After Distance Splitscreen Multipliers" />
 			<_14 v="HAD - 2 Player Splitscreen" />

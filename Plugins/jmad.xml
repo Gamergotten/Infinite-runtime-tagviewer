@@ -298,6 +298,54 @@
 				<_14 v="default value" />
 				<_3B v="" />
 			</_40>
+			<_40 v="user parameter masks">
+				<_2 v="name" />
+				<_E v="flags">
+					<Flag v="invert" />
+				</_E>
+				<_34 v="generated_pade566" length="2" />
+				<_40 v="userparams">
+					<_2E v="userparam index" />
+					<_3B v="" />
+				</_40>
+				<_2E v="add nodes" />
+				<_2E v="remove nodes" />
+				<_39 v="user parameter flags">
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+					<_6 v="flag data" />
+					<_3B v="" />
+				</_39>
+				<_3B v="" />
+			</_40>
 			<_3B v="" />
 		</_38>
 		<_38 v="ik">
@@ -1531,5 +1579,6 @@
 		<_3B v="" />
 	</_38>
 	<_37 v="" />
+	<_34 v="generated_pad6f43" length="4" />
 	<_3B v="" />
 </root>

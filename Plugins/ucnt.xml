@@ -31,9 +31,11 @@
 	<_40 v="situational overrides">
 		<_A v="Situation">
 			<Flag v="Player near physics volume" />
+			<Flag v="Melee lunge" />
 		</_A>
 		<_34 v="generated_pad752f" length="3" />
 		<_14 v="Check distance" />
+		<_36 v="Lowest velocity values" />
 		<_38 v="Override interpolation min values">
 			<_14 v="position delta max" />
 			<_8 v="rotation delta max" />
@@ -41,6 +43,7 @@
 			<_8 v="angular velocity delta max" />
 			<_3B v="" />
 		</_38>
+		<_36 v="Highest velocity values" />
 		<_38 v="Override interpolation max values">
 			<_14 v="position delta max" />
 			<_8 v="rotation delta max" />

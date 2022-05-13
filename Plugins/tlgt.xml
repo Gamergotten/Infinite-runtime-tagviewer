@@ -84,6 +84,7 @@
 				<Flag v="Switches" />
 				<Flag v="Switch On Asset" />
 				<Flag v="Boolean Logic" />
+				<Flag v="String Logic" />
 				<Flag v="Float Logic" />
 				<Flag v="Float Operators" />
 				<Flag v="Int Logic" />
@@ -140,6 +141,7 @@
 				<Flag v="Switches" />
 				<Flag v="Switch On Asset" />
 				<Flag v="Boolean Logic" />
+				<Flag v="String Logic" />
 				<Flag v="Float Logic" />
 				<Flag v="Float Operators" />
 				<Flag v="Int Logic" />
@@ -176,6 +178,7 @@
 				<Flag v="Frame Ratio" />
 			</_C>
 			<_14 v="Playback Rate" />
+			<_14 v="Start Position" />
 			<_E v="Animation Token Flags">
 				<Flag v="Looping" />
 				<Flag v="Play Loops From Start" />
@@ -244,6 +247,7 @@
 						<Flag v="Switches" />
 						<Flag v="Switch On Asset" />
 						<Flag v="Boolean Logic" />
+						<Flag v="String Logic" />
 						<Flag v="Float Logic" />
 						<Flag v="Float Operators" />
 						<Flag v="Int Logic" />
@@ -300,6 +304,7 @@
 						<Flag v="Switches" />
 						<Flag v="Switch On Asset" />
 						<Flag v="Boolean Logic" />
+						<Flag v="String Logic" />
 						<Flag v="Float Logic" />
 						<Flag v="Float Operators" />
 						<Flag v="Int Logic" />
@@ -372,6 +377,7 @@
 						<Flag v="Switches" />
 						<Flag v="Switch On Asset" />
 						<Flag v="Boolean Logic" />
+						<Flag v="String Logic" />
 						<Flag v="Float Logic" />
 						<Flag v="Float Operators" />
 						<Flag v="Int Logic" />
@@ -428,6 +434,7 @@
 						<Flag v="Switches" />
 						<Flag v="Switch On Asset" />
 						<Flag v="Boolean Logic" />
+						<Flag v="String Logic" />
 						<Flag v="Float Logic" />
 						<Flag v="Float Operators" />
 						<Flag v="Int Logic" />
@@ -487,6 +494,7 @@
 						<Flag v="Switches" />
 						<Flag v="Switch On Asset" />
 						<Flag v="Boolean Logic" />
+						<Flag v="String Logic" />
 						<Flag v="Float Logic" />
 						<Flag v="Float Operators" />
 						<Flag v="Int Logic" />
@@ -543,6 +551,7 @@
 						<Flag v="Switches" />
 						<Flag v="Switch On Asset" />
 						<Flag v="Boolean Logic" />
+						<Flag v="String Logic" />
 						<Flag v="Float Logic" />
 						<Flag v="Float Operators" />
 						<Flag v="Int Logic" />
@@ -607,6 +616,7 @@
 						<Flag v="Switches" />
 						<Flag v="Switch On Asset" />
 						<Flag v="Boolean Logic" />
+						<Flag v="String Logic" />
 						<Flag v="Float Logic" />
 						<Flag v="Float Operators" />
 						<Flag v="Int Logic" />
@@ -663,6 +673,7 @@
 						<Flag v="Switches" />
 						<Flag v="Switch On Asset" />
 						<Flag v="Boolean Logic" />
+						<Flag v="String Logic" />
 						<Flag v="Float Logic" />
 						<Flag v="Float Operators" />
 						<Flag v="Int Logic" />
@@ -804,6 +815,14 @@
 				<Flag v="Equal" />
 				<Flag v="Not Equal" />
 				<Flag v="Invert" />
+			</_C>
+			<_3B v="" />
+		</_40>
+		<_40 v="String Logic Nodes">
+			<_C v="Operation Type">
+				<Flag v="Equal" />
+				<Flag v="Not Equal" />
+				<Flag v="Is Empty" />
 			</_C>
 			<_3B v="" />
 		</_40>
@@ -984,8 +1003,13 @@
 			<_14 v="Offset Time" />
 			<_3B v="" />
 		</_40>
-		<_40 v="Bone Mask Nodes">
-			<_2 v="Bone Mask ID" />
+		<_40 v="Mask Nodes">
+			<_2 v="Mask ID" />
+			<_A v="Mask Node Type">
+				<Flag v="Bone Mask" />
+				<Flag v="User Parameter Mask" />
+			</_A>
+			<_34 v="generated_pad238e" length="3" />
 			<_3B v="" />
 		</_40>
 		<_40 v="IK Nodes">
@@ -1119,6 +1143,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1175,6 +1200,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1234,6 +1260,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1290,6 +1317,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1363,6 +1391,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1419,6 +1448,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1492,6 +1522,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1548,6 +1579,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1615,6 +1647,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1671,6 +1704,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1734,6 +1768,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1790,6 +1825,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1849,6 +1885,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1905,6 +1942,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -1964,6 +2002,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -2020,6 +2059,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -2087,6 +2127,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -2143,6 +2184,7 @@
 					<Flag v="Switches" />
 					<Flag v="Switch On Asset" />
 					<Flag v="Boolean Logic" />
+					<Flag v="String Logic" />
 					<Flag v="Float Logic" />
 					<Flag v="Float Operators" />
 					<Flag v="Int Logic" />
@@ -2234,6 +2276,7 @@
 			<Flag v="Switches" />
 			<Flag v="Switch On Asset" />
 			<Flag v="Boolean Logic" />
+			<Flag v="String Logic" />
 			<Flag v="Float Logic" />
 			<Flag v="Float Operators" />
 			<Flag v="Int Logic" />
@@ -2259,6 +2302,7 @@
 		</_C>
 		<_6 v="Final Pose Node Index" />
 		<_6 v="Final Pose Pin Index" />
+		<_34 v="generated_padfbb6" length="4" />
 		<_3B v="" />
 	</_38>
 	<_3B v="" />

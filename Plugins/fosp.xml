@@ -36,8 +36,8 @@
 		<_2 v="Callback Name" />
 		<_2 v="Submenu Id" />
 		<_2 v="Submenu Description" />
-		<_F v="Hidden in Forge">
-			<Flag v="True" />
+		<_F v="Forge Boolean Flags">
+			<Flag v="IsHidden" />
 		</_F>
 		<_34 v="generated_pad8383" length="3" />
 		<_3B v="" />

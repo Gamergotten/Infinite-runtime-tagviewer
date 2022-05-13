@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_40 v="Seasons">
+		<_6 v="SeasonNumber" />
+		<_2 v="SeasonIntroCompositionIdPre" />
+		<_2 v="SeasonIntroCompositionIdPost" />
+		<_0 v="Seasonal Pre Cinematic Name" />
+		<_1 v="Seasonal Cinematic Map AssetId" />
+		<_1 v="Seasonal Cinematic Game AssetId" />
+		<_2 v="LoadingBarStringId" />
+		<_3B v="" />
+	</_40>
+	<_40 v="Seasonal Event Cinematic Data">
+		<_0 v="TrackId" />
+		<_0 v="Seasonal Pre Event Cinematic Name" />
+		<_0 v="Seasonal Post Event Cinematic Name" />
+		<_1 v="Seasonal Cinematic Map AssetId" />
+		<_1 v="Seasonal Cinematic Game AssetId" />
+		<_2 v="LoadingBarStringIdPre" />
+		<_2 v="LoadingBarStringIdPost" />
+		<_3B v="" />
+	</_40>
+	<_3B v="" />
+</root>

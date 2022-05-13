@@ -113,6 +113,8 @@
 			<_14 v="Vertical movement jump check height" />
 			<_8 v="Target is aiming check threshold" />
 			<_14 v="Avoid dangerous object jump chance" />
+			<_14 v="Avoid dangerous objects jump distance" />
+			<_14 v="Vehicle avoid position prediction time" />
 			<_37 v="" />
 			<_37 v="" />
 			<_37 v="Grenades" />
@@ -237,6 +239,17 @@
 			<_14 v="Item pickup delay" />
 			<_14 v="Weapon pickup cooldown" />
 			<_14 v="Item observation radius" />
+			<_37 v="" />
+			<_3B v="" />
+		</_38>
+		<_38 v="Vehicle Tuning">
+			<_37 v="Vehicles" />
+			<_14 v="Vehicle observation radius" />
+			<_14 v="Max linear velocity for enterable vehicle sq" />
+			<_14 v="Passenger seat switch delay" />
+			<_14 v="Friendly objective carrier nearby distance" />
+			<_14 v="'Active vehicle' min speed" />
+			<_14 v="Exit inactive vehicle time" />
 			<_37 v="" />
 			<_3B v="" />
 		</_38>

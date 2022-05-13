@@ -1930,9 +1930,9 @@
 	<_7 v="instanceData" />
 	<_7 v="instanceBufferConstants" />
 	<_7 v="ioPlacementGpuTestingBuffer" />
-	<_7 v="ioPlacementGpuTestingSRV" />
 	<_7 v="ioLodStaticInfoBuffer" />
 	<_7 v="ioLodIndexBuffer" />
+	<_7 v="ioLodTransitionsOffsets" />
 	<_38 v="activeIoBitfield">
 		<_7 v="Bsp Structure Bitfield Buffer" />
 		<_39 v="CPU Bsp Structure  Bitfield">
@@ -6297,6 +6297,7 @@
 	<_F v="render flags">
 		<Flag v="Has Coatings" />
 		<Flag v="Coatings Are Finalized" />
+		<Flag v="Disable Gpu Submission" />
 	</_F>
 	<_34 v="generated_pad8b4a" length="3" />
 	<_3B v="" />

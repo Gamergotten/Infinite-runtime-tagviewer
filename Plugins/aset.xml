@@ -84,10 +84,15 @@
 		</_40>
 		<_40 v="Damage States">
 			<_C v="State">
+				<Flag v="undamaged" />
 				<Flag v="minor" />
 				<Flag v="medium" />
 				<Flag v="major" />
 				<Flag v="destroyed" />
+			</_C>
+			<_C v="Blur">
+				<Flag v="None" />
+				<Flag v="Blurred" />
 			</_C>
 			<_2 v="Geometry name" />
 			<_3B v="" />
@@ -140,6 +145,7 @@
 	<_A v="Default Load Variant Policy">
 		<Flag v="All Variants" />
 		<Flag v="First Variant" />
+		<Flag v="No Variant" />
 	</_A>
 	<_34 v="generated_pad387f" length="3" />
 	<_37 v="" />

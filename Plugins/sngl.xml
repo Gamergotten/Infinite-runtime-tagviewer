@@ -9,12 +9,9 @@
 		</_38>
 		<_3B v="" />
 	</_38>
-	<_2 v="Initial zone set preload event name" />
-	<_2 v="Level unloaded event name" />
-	<_2 v="Game preload event name" />
-	<_2 v="Game quit event name" />
 	<_2 v="Live theater scrub begin event" />
 	<_2 v="Live theater scrub end event" />
+	<_2 v="Forge mode event" />
 	<_41 v="Init sound bank" />
 	<_40 v="Global sound banks">
 		<_41 v="Sound bank" />
@@ -22,30 +19,6 @@
 	</_40>
 	<_40 v="Extra sound banks">
 		<_41 v="Sound bank" />
-		<_3B v="" />
-	</_40>
-	<_40 v="Campaign sound banks">
-		<_41 v="Sound bank" />
-		<_3B v="" />
-	</_40>
-	<_40 v="Multiplayer sound banks">
-		<_41 v="Sound bank" />
-		<_3B v="" />
-	</_40>
-	<_40 v="Streaming pack files">
-		<_D v="flags">
-			<Flag v="Language pack" />
-			<Flag v="Sound bank pack" />
-		</_D>
-		<_0 v="Streaming pck file" />
-		<_3B v="" />
-	</_40>
-	<_40 v="Excluded streaming pack files">
-		<_D v="flags">
-			<Flag v="Language pack" />
-			<Flag v="Sound bank pack" />
-		</_D>
-		<_0 v="Streaming pck file" />
 		<_3B v="" />
 	</_40>
 	<_14 v="Radio For Voice Radius" />
@@ -143,5 +116,11 @@
 	<_1 v="Spatial device" />
 	<_1 v="Spatial bus" />
 	<_37 v="" />
+	<_40 v="Gameplay state transition events">
+		<_2 v="EventId" />
+		<_3B v="" />
+	</_40>
+	<_14 v="Pause delay time (seconds)" />
+	<_34 v="generated_pad0634" length="4" />
 	<_3B v="" />
 </root>

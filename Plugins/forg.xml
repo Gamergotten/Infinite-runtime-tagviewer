@@ -14,6 +14,11 @@
 		<_1F v="color" />
 		<_3B v="" />
 	</_40>
+	<_40 v="Forge Colors Lighting">
+		<_2 v="name" />
+		<_1F v="color" />
+		<_3B v="" />
+	</_40>
 	<_40 v="Forge Color References">
 		<_2C v="Default Value" />
 		<_34 v="generated_pad6d1d" length="3" />
@@ -72,12 +77,20 @@
 		<_14 v="Max Explicit Camera Exposure" />
 		<_14 v="Default Ranged Camera Exposure" />
 		<_14 v="Max Camera Exposure Range" />
+		<_14 v="Min Fog Start Distance In Feet" />
+		<_14 v="Max Fog Start Distance In Feet" />
 		<_14 v="Min Fog Distance" />
 		<_14 v="Max Fog Distance" />
 		<_14 v="Min Fog Thickness" />
 		<_14 v="Max Fog Thickness" />
 		<_14 v="Min Fog Color Intensity" />
 		<_14 v="Max Fog Color Intensity" />
+		<_14 v="Min Ground Fog Thickness" />
+		<_14 v="Max Ground Fog Thickness" />
+		<_14 v="Min Ground Fog Intensity" />
+		<_14 v="Max Ground Fog Intensity" />
+		<_14 v="Min Volumetric Fog Density" />
+		<_14 v="Max Volumetric Fog Density" />
 		<_3B v="" />
 	</_38>
 	<_40 v="forge gobo definitions">
@@ -156,6 +169,7 @@
 	<_41 v="forge required resources" />
 	<_41 v="rotation handle shader" />
 	<_41 v="path preview shader" />
+	<_41 v="ai navmesh shader" />
 	<_40 v="global label values">
 		<_2 v="name" />
 		<_2 v="label display name" />
@@ -211,11 +225,18 @@
 		<_3B v="" />
 	</_40>
 	<_41 v="Default Boundary Shader" />
-	<_34 v="generated_padd2ca" length="4" />
+	<_40 v="styleShaders">
+		<_2 v="name" />
+		<_41 v="palette" />
+		<_41 v="coatingMaterialSet" />
+		<_3B v="" />
+	</_40>
 	<_7 v="m_rotationHandlePipelineState" />
 	<_7 v="m_pathPreviewPipelineState" />
 	<_7 v="m_defaultBoundaryPipelineState" />
 	<_7 v="m_handleWithDepthTestState" />
+	<_7 v="m_aiNavMeshPipelineState" />
+	<_7 v="m_aiPathPipelineState" />
 	<_41 v="Forge Object Manifest" />
 	<_41 v="Forge Named Tag Lists" />
 	<_40 v="Forge NodeGraph Schema">
@@ -242,8 +263,8 @@
 			<_2 v="name" />
 			<_3B v="" />
 		</_40>
+		<_2 v="mix state group" />
 		<_40 v="Mix States">
-			<_2 v="mix state group" />
 			<_2 v="mix state value" />
 			<_2 v="name" />
 			<_3B v="" />
@@ -253,5 +274,6 @@
 	</_38>
 	<_41 v="Forge Looping Sound Categories" />
 	<_41 v="Forge Sound Response Sounds" />
+	<_41 v="Forge Nav Mesh Seed Tag Reference" />
 	<_3B v="" />
 </root>

@@ -311,6 +311,7 @@
 		<_14 v="Edge Pan Screen Margin X" />
 		<_14 v="Edge Pan Screen Margin Y" />
 		<_14 v="Help Bar Height" />
+		<_14 v="Edge Pan Start Delay" />
 		<_14 v="Back Menu Tab Bar Height" />
 		<_3B v="" />
 	</_38>
@@ -472,5 +473,9 @@
 		<_3B v="" />
 	</_38>
 	<_6 v="TacMap Tab Index" />
+	<_F v="Settings And Feature Flags">
+		<Flag v="Mission Replay Option Enabled" />
+	</_F>
+	<_34 v="generated_padbfcb" length="3" />
 	<_3B v="" />
 </root>

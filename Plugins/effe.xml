@@ -137,6 +137,8 @@
 					<Flag v="enable only in aimed down sight (ADS)" />
 					<Flag v="use dynamic direction" />
 					<Flag v="conditional" />
+					<Flag v="disabled in any splitscreen" />
+					<Flag v="disabled in 3- and 4-way splitscreen" />
 				</_E>
 				<_A v="Priority">
 					<Flag v="Low" />

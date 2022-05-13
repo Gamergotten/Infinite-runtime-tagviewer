@@ -138,6 +138,9 @@
 		<_3B v="" />
 	</_38>
 	<_37 v="" />
+	<_37 v="Video Playback" />
+	<_0 v="Video Path" />
+	<_37 v="" />
 	<_37 v="ICS Points" />
 	<_0 v="ICS Point 0" />
 	<_0 v="ICS Point 1" />
@@ -3334,6 +3337,7 @@
 							<Flag v="First Person Perspective" />
 							<Flag v="Ready Weapon Immediately" />
 							<Flag v="Offset First Person Hands for Blend Out" />
+							<Flag v="Animated Arms" />
 						</_F>
 						<_3B v="" />
 					</_40>
@@ -5447,6 +5451,67 @@
 			<_6 v="guid" />
 			<_3B v="" />
 		</_38>
+		<_3B v="" />
+	</_40>
+	<_41 v="Bookend Transition Fade Overrides" />
+	<_40 v="Spawning Pattern Overrides">
+		<_41 v="By Tag" />
+		<_37 v="Cutscene Flag Overrides" />
+		<_38 v="2P, P2">
+			<_40 v="path">
+				<_6 v="guid" />
+				<_2 v="name" />
+				<_3B v="" />
+			</_40>
+			<_6 v="guid" />
+			<_3B v="" />
+		</_38>
+		<_38 v="3P, P2">
+			<_40 v="path">
+				<_6 v="guid" />
+				<_2 v="name" />
+				<_3B v="" />
+			</_40>
+			<_6 v="guid" />
+			<_3B v="" />
+		</_38>
+		<_38 v="3P, P3">
+			<_40 v="path">
+				<_6 v="guid" />
+				<_2 v="name" />
+				<_3B v="" />
+			</_40>
+			<_6 v="guid" />
+			<_3B v="" />
+		</_38>
+		<_38 v="4P, P2">
+			<_40 v="path">
+				<_6 v="guid" />
+				<_2 v="name" />
+				<_3B v="" />
+			</_40>
+			<_6 v="guid" />
+			<_3B v="" />
+		</_38>
+		<_38 v="4P, P3">
+			<_40 v="path">
+				<_6 v="guid" />
+				<_2 v="name" />
+				<_3B v="" />
+			</_40>
+			<_6 v="guid" />
+			<_3B v="" />
+		</_38>
+		<_38 v="4P, P4">
+			<_40 v="path">
+				<_6 v="guid" />
+				<_2 v="name" />
+				<_3B v="" />
+			</_40>
+			<_6 v="guid" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
 		<_3B v="" />
 	</_40>
 	<_34 v="generated_pad3ca3" length="4" />

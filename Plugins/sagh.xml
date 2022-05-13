@@ -89,7 +89,6 @@
 		<_41 v="hook projectile spawn object" />
 		<_19 v="hook projectile spawn offset" />
 		<_14 v="warmup time" />
-		<_14 v="post deploy transition delay" />
 		<_37 v="" />
 		<_37 v="line of sight testing" />
 		<_36 v="line of sight testing" />
@@ -320,5 +319,6 @@
 		<_37 v="" />
 		<_3B v="" />
 	</_38>
+	<_34 v="generated_pad6d7d" length="4" />
 	<_3B v="" />
 </root>

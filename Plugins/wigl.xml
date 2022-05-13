@@ -246,6 +246,7 @@
 			<Flag v="Sensitivity" />
 			<Flag v="ZoomedSensitivity" />
 			<Flag v="InputAcceleration" />
+			<Flag v="TriggerDeadzone" />
 			<Flag v="MoveDeadzone" />
 			<Flag v="LookDeadzone" />
 			<Flag v="Player" />
@@ -275,6 +276,10 @@
 		<_34 v="generated_pade2be" length="3" />
 		<_36 v="Slider Settings" />
 		<_40 v="Slider Settings">
+			<_F v="Flags">
+				<Flag v="Uses percentage units" />
+			</_F>
+			<_34 v="generated_pada24a" length="3" />
 			<_14 v="Min Value" />
 			<_14 v="Max Value" />
 			<_14 v="Increment Value" />
@@ -298,6 +303,7 @@
 			<Flag v="Sensitivity" />
 			<Flag v="ZoomedSensitivity" />
 			<Flag v="InputAcceleration" />
+			<Flag v="TriggerDeadzone" />
 			<Flag v="MoveDeadzone" />
 			<Flag v="LookDeadzone" />
 			<Flag v="Player" />
@@ -327,6 +333,10 @@
 		<_34 v="generated_pade2be" length="3" />
 		<_36 v="Slider Settings" />
 		<_40 v="Slider Settings">
+			<_F v="Flags">
+				<Flag v="Uses percentage units" />
+			</_F>
+			<_34 v="generated_pada24a" length="3" />
 			<_14 v="Min Value" />
 			<_14 v="Max Value" />
 			<_14 v="Increment Value" />
@@ -350,6 +360,7 @@
 			<Flag v="Sensitivity" />
 			<Flag v="ZoomedSensitivity" />
 			<Flag v="InputAcceleration" />
+			<Flag v="TriggerDeadzone" />
 			<Flag v="MoveDeadzone" />
 			<Flag v="LookDeadzone" />
 			<Flag v="Player" />
@@ -379,6 +390,10 @@
 		<_34 v="generated_pade2be" length="3" />
 		<_36 v="Slider Settings" />
 		<_40 v="Slider Settings">
+			<_F v="Flags">
+				<Flag v="Uses percentage units" />
+			</_F>
+			<_34 v="generated_pada24a" length="3" />
 			<_14 v="Min Value" />
 			<_14 v="Max Value" />
 			<_14 v="Increment Value" />

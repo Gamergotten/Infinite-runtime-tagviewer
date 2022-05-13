@@ -19,7 +19,6 @@
 	<_14 v="target distance" />
 	<_14 v="target delay time" />
 	<_15 v="target kill chance" />
-	<_15 v="ai destroy chance" />
 	<_36 v="Perlin noise parameters" />
 	<_15 v="random offset weight" />
 	<_25 v="random offset period" />
@@ -249,5 +248,6 @@
 		<_34 v="generated_pad8671" length="2" />
 		<_3B v="" />
 	</_40>
+	<_34 v="generated_padbf11" length="4" />
 	<_3B v="" />
 </root>

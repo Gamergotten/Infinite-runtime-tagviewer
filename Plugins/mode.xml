@@ -28,6 +28,7 @@
 	<_A v="Default Load Variant Policy">
 		<Flag v="All Variants" />
 		<Flag v="First Variant" />
+		<Flag v="No Variant" />
 	</_A>
 	<_34 v="generated_padd53e" length="3" />
 	<_6 v="Number of LODS to make required memory" />
@@ -1060,7 +1061,7 @@
 			<Flag v="alpha_blend_max" />
 			<Flag v="opaque_alpha_blend" />
 			<Flag v="alpha_blend_additive_transparent" />
-			<Flag v="floating shadow" />
+			<Flag v="floating_shadow" />
 			<Flag v="decal_alpha_blend" />
 			<Flag v="decal_add_src_times_src_alpha" />
 			<Flag v="decal_multiply_add" />

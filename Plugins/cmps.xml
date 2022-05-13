@@ -3154,6 +3154,7 @@
 							<Flag v="First Person Perspective" />
 							<Flag v="Ready Weapon Immediately" />
 							<Flag v="Offset First Person Hands for Blend Out" />
+							<Flag v="Animated Arms" />
 						</_F>
 						<_3B v="" />
 					</_40>

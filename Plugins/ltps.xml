@@ -83,12 +83,19 @@
 			<Flag v="XPGrant" />
 			<Flag v="XPBoost" />
 			<Flag v="ChallengeReroll" />
+			<Flag v="VirtualCurrency" />
 		</_B>
+		<_B v="Position Type">
+			<Flag v="Default" />
+			<Flag v="Custom" />
+			<Flag v="Custom1" />
+		</_B>
+		<_34 v="generated_pad7823" length="2" />
 		<_14 v="Dimmer transition time" />
 		<_F v="Skip Light Transition">
 			<Flag v="True" />
 		</_F>
-		<_34 v="generated_pad7823" length="3" />
+		<_34 v="generated_pad2b6e" length="3" />
 		<_40 v="Lights">
 			<_2 v="Light Name" />
 			<_19 v="Light Position Offset" />
@@ -212,12 +219,19 @@
 				<Flag v="XPGrant" />
 				<Flag v="XPBoost" />
 				<Flag v="ChallengeReroll" />
+				<Flag v="VirtualCurrency" />
 			</_B>
+			<_B v="Position Type">
+				<Flag v="Default" />
+				<Flag v="Custom" />
+				<Flag v="Custom1" />
+			</_B>
+			<_34 v="generated_pad7823" length="2" />
 			<_14 v="Dimmer transition time" />
 			<_F v="Skip Light Transition">
 				<Flag v="True" />
 			</_F>
-			<_34 v="generated_pad7823" length="3" />
+			<_34 v="generated_pad2b6e" length="3" />
 			<_40 v="Lights">
 				<_2 v="Light Name" />
 				<_19 v="Light Position Offset" />

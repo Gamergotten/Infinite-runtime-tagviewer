@@ -24,6 +24,7 @@
 		<_41 v="Runtime Underlying Geo (Static IO)" />
 		<_41 v="Runtime Underlying Collision Geo (Static IO)" />
 		<_41 v="Runtime Underlying Material Palette (Static IO)" />
+		<_2 v="Style" />
 		<_3B v="" />
 	</_40>
 	<_41 v="Runtime Telescoping Asset" />
@@ -39,6 +40,8 @@
 			<Flag v="Disable Normal Physics" />
 			<Flag v="Disable Fixed Physics" />
 			<Flag v="Disable Phased Physics" />
+			<Flag v="Allow Boundary Scale" />
+			<Flag v="Disable Rotation" />
 		</_E>
 		<_34 v="generated_padffaf" length="2" />
 		<_19 v="Starting yaw/pitch/roll" />
@@ -50,13 +53,16 @@
 			<Flag v="Edit time (Forge) and Run Time (Game)" />
 			<Flag v="Edit Time (Forge)" />
 		</_B>
+		<_F v="Exclude from NavMesh generation">
+			<Flag v="Exclude" />
+		</_F>
+		<_34 v="generated_padb2fa" length="1" />
 		<_37 v="Scale Limits" />
 		<_B v="Scale Limit Type">
 			<Flag v="Unset" />
 			<Flag v="Scale Multiplier" />
 			<Flag v="World Size" />
 		</_B>
-		<_34 v="generated_padb2fa" length="2" />
 		<_19 v="Starting Scale" />
 		<_19 v="Minimum Scale" />
 		<_19 v="Maximum Scale" />
@@ -188,6 +194,40 @@
 		</_38>
 		<_37 v="" />
 		<_37 v="" />
+		<_3B v="" />
+	</_38>
+	<_38 v="scriptable properties">
+		<_40 v="bool properties">
+			<_1 v="name" />
+			<_3C v="Value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="numeric properties">
+			<_1 v="name" />
+			<_14 v="Value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="string properties">
+			<_1 v="name" />
+			<_1 v="Value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="tag properties">
+			<_1 v="name" />
+			<_41 v="Value" />
+			<_2 v="load variant" />
+			<_3B v="" />
+		</_40>
+		<_40 v="color properties">
+			<_1 v="name" />
+			<_20 v="Value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="vector properties">
+			<_1 v="name" />
+			<_19 v="Value" />
+			<_3B v="" />
+		</_40>
 		<_3B v="" />
 	</_38>
 	<_34 v="generated_pad750f" length="4" />

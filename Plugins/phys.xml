@@ -17,6 +17,7 @@
 	<_34 v="generated_pad7535" length="3" />
 	<_14 v="Mass override" />
 	<_14 v="Mass scale override" />
+	<_14 v="Collision look ahead distance" />
 	<_40 v="Materials">
 		<_2 v="Property region" />
 		<_F v="Flags">
@@ -310,5 +311,6 @@
 		<_3B v="" />
 	</_40>
 	<_37 v="" />
+	<_34 v="generated_pad5b54" length="4" />
 	<_3B v="" />
 </root>

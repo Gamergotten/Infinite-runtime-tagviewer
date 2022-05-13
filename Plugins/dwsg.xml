@@ -6687,6 +6687,7 @@
 				<Flag v="Directional Light Far Dist" />
 				<Flag v="Directional Light Near Amount" />
 				<Flag v="Directional Light Far Amount" />
+				<Flag v="Directional Light Intensity First Person" />
 				<Flag v="Indirect Sky Scalar" />
 				<Flag v="Indirect Bounce Scalar" />
 				<Flag v="Indirect Near Dist" />
@@ -6701,6 +6702,7 @@
 			<_19 v="CVW Light Direction" />
 			<_19 v="CVW Light Color" />
 			<_14 v="CVW Direct Light Intensity" />
+			<_14 v="CVW Direct Light Intensity First Person" />
 			<_14 v="CVW Direct Near Distance" />
 			<_14 v="CVW Direct Far Distance" />
 			<_14 v="CVW Direct Near Amount" />
@@ -13442,6 +13444,7 @@
 						<Flag v="Directional Light Far Dist" />
 						<Flag v="Directional Light Near Amount" />
 						<Flag v="Directional Light Far Amount" />
+						<Flag v="Directional Light Intensity First Person" />
 						<Flag v="Indirect Sky Scalar" />
 						<Flag v="Indirect Bounce Scalar" />
 						<Flag v="Indirect Near Dist" />
@@ -13456,6 +13459,7 @@
 					<_19 v="CVW Light Direction" />
 					<_19 v="CVW Light Color" />
 					<_14 v="CVW Direct Light Intensity" />
+					<_14 v="CVW Direct Light Intensity First Person" />
 					<_14 v="CVW Direct Near Distance" />
 					<_14 v="CVW Direct Far Distance" />
 					<_14 v="CVW Direct Near Amount" />
@@ -13541,6 +13545,5 @@
 		<_34 v="generated_pad4488" length="3" />
 		<_3B v="" />
 	</_40>
-	<_34 v="generated_paddc42" length="4" />
 	<_3B v="" />
 </root>

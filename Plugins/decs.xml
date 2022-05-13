@@ -12,10 +12,8 @@
 	<_D v="flags">
 		<Flag v="random rotation" />
 		<Flag v="force planar" />
-		<Flag v="use new texture array" />
 	</_D>
 	<_14 v="material shader fade time" />
-	<_16 v="decal scale override" />
 	<_36 v="Decal bucket sharing" />
 	<_23 v="random sprite index bounds" />
 	<_40 v="decals">
@@ -194,7 +192,7 @@
 					<Flag v="alpha_blend_max" />
 					<Flag v="opaque_alpha_blend" />
 					<Flag v="alpha_blend_additive_transparent" />
-					<Flag v="floating shadow" />
+					<Flag v="floating_shadow" />
 					<Flag v="decal_alpha_blend" />
 					<Flag v="decal_add_src_times_src_alpha" />
 					<Flag v="decal_multiply_add" />
@@ -310,7 +308,7 @@
 				<Flag v="alpha_blend_max" />
 				<Flag v="opaque_alpha_blend" />
 				<Flag v="alpha_blend_additive_transparent" />
-				<Flag v="floating shadow" />
+				<Flag v="floating_shadow" />
 				<Flag v="decal_alpha_blend" />
 				<Flag v="decal_add_src_times_src_alpha" />
 				<Flag v="decal_multiply_add" />
@@ -383,7 +381,6 @@
 				<Flag v="mask TAA for transparents" />
 				<Flag v="force render velocity for TAA" />
 				<Flag v="render depth info when transparent" />
-				<Flag v="part material DOES NOT override depth write behavior" />
 			</_F>
 			<_14 v="taa mask threshold start" />
 			<_14 v="taa mask threshold end" />
@@ -391,7 +388,6 @@
 		</_38>
 		<_37 v="" />
 		<_25 v="radius" />
-		<_25 v="lifespan" />
 		<_14 v="clamp angle" />
 		<_14 v="cull angle" />
 		<_14 v="depth bias" />

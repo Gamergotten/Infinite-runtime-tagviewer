@@ -87,6 +87,8 @@
 			<Flag v="Nand" />
 			<Flag v="Nor" />
 			<Flag v="Xor" />
+			<Flag v="Equal" />
+			<Flag v="Not Equal" />
 		</_A>
 		<_34 v="generated_padd184" length="3" />
 		<_38 v="Action Node Identifier">

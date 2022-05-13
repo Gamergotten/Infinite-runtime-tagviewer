@@ -127,6 +127,7 @@
 			<Flag v="Low" />
 			<Flag v="Medium" />
 			<Flag v="High" />
+			<Flag v="Ultra" />
 		</_A>
 		<_A v="Shader Quality">
 			<Flag v="Low" />
@@ -912,10 +913,42 @@
 	</_40>
 	<_40 v="Hlod Presets">
 		<_0 v="Preset" />
-		<_14 v="HLOD Switch Distance Multiplier" />
-		<_14 v="HLOD Switch Distance Buffer" />
-		<_14 v="HLOD Texture Streaming Multiplier" />
-		<_14 v="Distant Geo Streaming Distance Multiplier" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_14 v="HLOD Switch Distance Multiplier" />
+			<_14 v="HLOD Switch Distance Buffer" />
+			<_14 v="HLOD Texture Streaming Multiplier" />
+			<_14 v="Distant Geo Streaming Distance Multiplier" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_14 v="HLOD Switch Distance Multiplier" />
+			<_14 v="HLOD Switch Distance Buffer" />
+			<_14 v="HLOD Texture Streaming Multiplier" />
+			<_14 v="Distant Geo Streaming Distance Multiplier" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_14 v="HLOD Switch Distance Multiplier" />
+			<_14 v="HLOD Switch Distance Buffer" />
+			<_14 v="HLOD Texture Streaming Multiplier" />
+			<_14 v="Distant Geo Streaming Distance Multiplier" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_14 v="HLOD Switch Distance Multiplier" />
+			<_14 v="HLOD Switch Distance Buffer" />
+			<_14 v="HLOD Texture Streaming Multiplier" />
+			<_14 v="Distant Geo Streaming Distance Multiplier" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
 		<_37 v="VRAM" />
 		<_38 v="vram">
 			<_6 v="Initial VRAM usage" />
@@ -1423,22 +1456,40 @@
 		<_0 v="Preset" />
 		<_6 v="Max Decal Count" />
 		<_14 v="Decal Lifetime Scale" />
-		<_6 v="Max Clustered Decals" />
+		<_A v="Max Clustered Decals">
+			<Flag v="Cluster 16" />
+			<Flag v="Cluster 32" />
+			<Flag v="Cluster 64" />
+		</_A>
 		<_A v="Blend Quality">
+			<Flag v="Albedo Only No Derivatives" />
 			<Flag v="Albedo Only" />
+			<Flag v="Normal No Derivatives" />
 			<Flag v="Normal" />
 		</_A>
-		<_34 v="generated_pada386" length="3" />
+		<_F v="Decal Options Flags">
+			<Flag v="Enable Track Decals" />
+		</_F>
+		<_34 v="generated_pada386" length="1" />
 		<_37 v="Single Screen" />
 		<_38 v="Single Screen Preset">
 			<_6 v="Max Decal Count" />
 			<_14 v="Decal Lifetime Scale" />
-			<_6 v="Max Clustered Decals" />
+			<_A v="Max Clustered Decals">
+				<Flag v="Cluster 16" />
+				<Flag v="Cluster 32" />
+				<Flag v="Cluster 64" />
+			</_A>
 			<_A v="Blend Quality">
+				<Flag v="Albedo Only No Derivatives" />
 				<Flag v="Albedo Only" />
+				<Flag v="Normal No Derivatives" />
 				<Flag v="Normal" />
 			</_A>
-			<_34 v="generated_pad2c5d" length="3" />
+			<_F v="Decal Options Flags">
+				<Flag v="Enable Track Decals" />
+			</_F>
+			<_34 v="generated_pad2c5d" length="1" />
 			<_3B v="" />
 		</_38>
 		<_37 v="" />
@@ -1446,12 +1497,21 @@
 		<_38 v="2 Player Splitscreen Preset">
 			<_6 v="Max Decal Count" />
 			<_14 v="Decal Lifetime Scale" />
-			<_6 v="Max Clustered Decals" />
+			<_A v="Max Clustered Decals">
+				<Flag v="Cluster 16" />
+				<Flag v="Cluster 32" />
+				<Flag v="Cluster 64" />
+			</_A>
 			<_A v="Blend Quality">
+				<Flag v="Albedo Only No Derivatives" />
 				<Flag v="Albedo Only" />
+				<Flag v="Normal No Derivatives" />
 				<Flag v="Normal" />
 			</_A>
-			<_34 v="generated_pad2c5d" length="3" />
+			<_F v="Decal Options Flags">
+				<Flag v="Enable Track Decals" />
+			</_F>
+			<_34 v="generated_pad2c5d" length="1" />
 			<_3B v="" />
 		</_38>
 		<_37 v="" />
@@ -1459,12 +1519,21 @@
 		<_38 v="3 Player Splitscreen Preset">
 			<_6 v="Max Decal Count" />
 			<_14 v="Decal Lifetime Scale" />
-			<_6 v="Max Clustered Decals" />
+			<_A v="Max Clustered Decals">
+				<Flag v="Cluster 16" />
+				<Flag v="Cluster 32" />
+				<Flag v="Cluster 64" />
+			</_A>
 			<_A v="Blend Quality">
+				<Flag v="Albedo Only No Derivatives" />
 				<Flag v="Albedo Only" />
+				<Flag v="Normal No Derivatives" />
 				<Flag v="Normal" />
 			</_A>
-			<_34 v="generated_pad2c5d" length="3" />
+			<_F v="Decal Options Flags">
+				<Flag v="Enable Track Decals" />
+			</_F>
+			<_34 v="generated_pad2c5d" length="1" />
 			<_3B v="" />
 		</_38>
 		<_37 v="" />
@@ -1472,12 +1541,21 @@
 		<_38 v="4 Player Splitscreen Preset">
 			<_6 v="Max Decal Count" />
 			<_14 v="Decal Lifetime Scale" />
-			<_6 v="Max Clustered Decals" />
+			<_A v="Max Clustered Decals">
+				<Flag v="Cluster 16" />
+				<Flag v="Cluster 32" />
+				<Flag v="Cluster 64" />
+			</_A>
 			<_A v="Blend Quality">
+				<Flag v="Albedo Only No Derivatives" />
 				<Flag v="Albedo Only" />
+				<Flag v="Normal No Derivatives" />
 				<Flag v="Normal" />
 			</_A>
-			<_34 v="generated_pad2c5d" length="3" />
+			<_F v="Decal Options Flags">
+				<Flag v="Enable Track Decals" />
+			</_F>
+			<_34 v="generated_pad2c5d" length="1" />
 			<_3B v="" />
 		</_38>
 		<_37 v="" />

@@ -11,21 +11,22 @@
 	</_38>
 	<_41 v="parent" />
 	<_D v="flags">
+		<Flag v="Player sound is non-positional" />
+		<Flag v="Cull By Max Radius" />
+		<Flag v="Don't play in splitscreen" />
 		<Flag v="Apply Focus Feature" />
+		<Flag v="Play on hidden objects" />
 		<Flag v="One Shots Use Sticky Emitter Parameters" />
 		<Flag v="Loops Use Sticky Emitter Parameters" />
-		<Flag v="Cull By Max Radius" />
+		<Flag v="Hemisphere" />
+		<Flag v="Sphere only affects acoustics" />
 		<Flag v="Prevent Source Zone Reverb" />
 		<Flag v="Disable Obstruction" />
 		<Flag v="Disable Occlusion" />
 		<Flag v="Disable Dynamic Object Obstruction" />
-		<Flag v="Disable Virtual Positioning" />
-		<Flag v="Don't play in splitscreen" />
-		<Flag v="Hemisphere" />
-		<Flag v="Play on hidden objects" />
-		<Flag v="Sphere only affects acoustics" />
+		<Flag v="Force First Person Propagation For All Listeners (Deprecated)" />
 		<Flag v="Disable Source portal occlusion" />
-		<Flag v="Player sound is non-positional" />
+		<Flag v="Disable Virtual Positioning" />
 	</_D>
 	<_14 v="Don't Play Time (seconds)" />
 	<_38 v="Audio Impulse Timer Settings">

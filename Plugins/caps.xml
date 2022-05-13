@@ -83,6 +83,7 @@
 			<Flag v="XPGrant" />
 			<Flag v="XPBoost" />
 			<Flag v="ChallengeReroll" />
+			<Flag v="VirtualCurrency" />
 		</_B>
 		<_40 v="Camera Settings">
 			<_B v="Core Focus Mode">
@@ -194,6 +195,7 @@
 				<Flag v="XPGrant" />
 				<Flag v="XPBoost" />
 				<Flag v="ChallengeReroll" />
+				<Flag v="VirtualCurrency" />
 			</_B>
 			<_40 v="Camera Settings">
 				<_B v="Core Focus Mode">

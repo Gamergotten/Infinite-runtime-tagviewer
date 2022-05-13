@@ -43,6 +43,7 @@
 				<Flag v="Disable additive player damage sound" />
 				<Flag v="Strippable armor" />
 				<Flag v="Takes visual damage" />
+				<Flag v="Requires ordered instant responses" />
 			</_D>
 			<_A v="Damage part">
 				<Flag v="gut" />
@@ -153,6 +154,7 @@
 				</_D>
 				<_D v="Flags2">
 					<Flag v="skip on incineration" />
+					<Flag v="generate script event" />
 				</_D>
 				<_40 v="Included variants">
 					<_2 v="Name" />

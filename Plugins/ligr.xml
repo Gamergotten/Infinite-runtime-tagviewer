@@ -79,6 +79,42 @@
 		</_E>
 		<_3B v="" />
 	</_38>
+	<_36 v="Static Shadow Resolution Multiplier" />
+	<_38 v="static_shadow_resolution_multiplier">
+		<_14 v="Very Low" />
+		<_14 v="Low" />
+		<_14 v="Medium" />
+		<_14 v="High" />
+		<_14 v="Ultra" />
+		<_14 v="2 Player Splitscreen" />
+		<_14 v="3 Player Splitscreen" />
+		<_14 v="4 Player Splitscreen" />
+		<_3B v="" />
+	</_38>
+	<_36 v="Dynamic Shadow Resolution Multiplier" />
+	<_38 v="dynamic_shadow_resolution_multiplier">
+		<_14 v="Very Low" />
+		<_14 v="Low" />
+		<_14 v="Medium" />
+		<_14 v="High" />
+		<_14 v="Ultra" />
+		<_14 v="2 Player Splitscreen" />
+		<_14 v="3 Player Splitscreen" />
+		<_14 v="4 Player Splitscreen" />
+		<_3B v="" />
+	</_38>
+	<_36 v="Shadow Filter Width Multiplier" />
+	<_38 v="shadow_filter_width_multiplier">
+		<_14 v="Very Low" />
+		<_14 v="Low" />
+		<_14 v="Medium" />
+		<_14 v="High" />
+		<_14 v="Ultra" />
+		<_14 v="2 Player Splitscreen" />
+		<_14 v="3 Player Splitscreen" />
+		<_14 v="4 Player Splitscreen" />
+		<_3B v="" />
+	</_38>
 	<_34 v="generated_pad133b" length="4" />
 	<_3B v="" />
 </root>

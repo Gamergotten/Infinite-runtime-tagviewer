@@ -83,25 +83,89 @@
 	<_14 v="Macro Color Near Opacity" />
 	<_14 v="Macro Color Far Opacity" />
 	<_38 v="Micro Height Vertex Density">
-		<_14 v="Very Low" />
-		<_14 v="Low" />
-		<_14 v="Medium" />
-		<_14 v="High" />
-		<_14 v="Ultra" />
-		<_14 v="2 Player Splitscreen" />
-		<_14 v="3 Player Splitscreen" />
-		<_14 v="4 Player Splitscreen" />
+		<_37 v="Single Player" />
+		<_38 v="Single Player">
+			<_14 v="Very Low" />
+			<_14 v="Low" />
+			<_14 v="Medium" />
+			<_14 v="High" />
+			<_14 v="Ultra" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen">
+			<_14 v="Very Low" />
+			<_14 v="Low" />
+			<_14 v="Medium" />
+			<_14 v="High" />
+			<_14 v="Ultra" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen">
+			<_14 v="Very Low" />
+			<_14 v="Low" />
+			<_14 v="Medium" />
+			<_14 v="High" />
+			<_14 v="Ultra" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen">
+			<_14 v="Very Low" />
+			<_14 v="Low" />
+			<_14 v="Medium" />
+			<_14 v="High" />
+			<_14 v="Ultra" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
 		<_3B v="" />
 	</_38>
 	<_38 v="Micro Height Radius">
-		<_14 v="Very Low" />
-		<_14 v="Low" />
-		<_14 v="Medium" />
-		<_14 v="High" />
-		<_14 v="Ultra" />
-		<_14 v="2 Player Splitscreen" />
-		<_14 v="3 Player Splitscreen" />
-		<_14 v="4 Player Splitscreen" />
+		<_37 v="Single Player" />
+		<_38 v="Single Player">
+			<_14 v="Very Low" />
+			<_14 v="Low" />
+			<_14 v="Medium" />
+			<_14 v="High" />
+			<_14 v="Ultra" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen">
+			<_14 v="Very Low" />
+			<_14 v="Low" />
+			<_14 v="Medium" />
+			<_14 v="High" />
+			<_14 v="Ultra" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen">
+			<_14 v="Very Low" />
+			<_14 v="Low" />
+			<_14 v="Medium" />
+			<_14 v="High" />
+			<_14 v="Ultra" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen">
+			<_14 v="Very Low" />
+			<_14 v="Low" />
+			<_14 v="Medium" />
+			<_14 v="High" />
+			<_14 v="Ultra" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
 		<_3B v="" />
 	</_38>
 	<_38 v="Micro Height Mip Level">

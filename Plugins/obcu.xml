@@ -57,10 +57,21 @@
 				<_B v="Camera Position Type">
 					<Flag v="Default" />
 					<Flag v="Custom" />
+					<Flag v="Custom1" />
 				</_B>
 				<_34 v="generated_pad010d" length="2" />
 				<_19 v="Camera Position" />
+				<_1C v="Camera Orientation" />
 				<_2 v="Composer Scene Name" />
+				<_F v="DOF Flags">
+					<Flag v="Enable DOF" />
+					<Flag v="Enable DOF RTT" />
+					<Flag v="Enable DOF World" />
+				</_F>
+				<_34 v="generated_pade72c" length="3" />
+				<_14 v="DOF Focal Length" />
+				<_14 v="DOF Focal Distance" />
+				<_14 v="DOF FStop" />
 				<_3B v="" />
 			</_40>
 			<_14 v="Camera FOV" />
@@ -127,10 +138,21 @@
 				<_B v="Camera Position Type">
 					<Flag v="Default" />
 					<Flag v="Custom" />
+					<Flag v="Custom1" />
 				</_B>
 				<_34 v="generated_pad010d" length="2" />
 				<_19 v="Camera Position" />
+				<_1C v="Camera Orientation" />
 				<_2 v="Composer Scene Name" />
+				<_F v="DOF Flags">
+					<Flag v="Enable DOF" />
+					<Flag v="Enable DOF RTT" />
+					<Flag v="Enable DOF World" />
+				</_F>
+				<_34 v="generated_pade72c" length="3" />
+				<_14 v="DOF Focal Length" />
+				<_14 v="DOF Focal Distance" />
+				<_14 v="DOF FStop" />
 				<_3B v="" />
 			</_40>
 			<_14 v="Camera FOV" />
@@ -146,6 +168,27 @@
 			<_2 v="UI Display String" />
 			<_2 v="UI Description�String" />
 			<_6 v="CMS Customization Item Type" />
+			<_B v="CMS Customization Core Type">
+				<Flag v="Unknown" />
+				<Flag v="Armor" />
+				<Flag v="Ai" />
+				<Flag v="WeaponSidekick" />
+				<Flag v="WeaponAR" />
+				<Flag v="WeaponBR" />
+				<Flag v="WeaponCommando" />
+				<Flag v="WeaponSPnKr" />
+				<Flag v="WeaponSniper" />
+				<Flag v="WeaponShotgun" />
+				<Flag v="WeaponHydra" />
+				<Flag v="VehicleWarthog" />
+				<Flag v="VehicleMongoose" />
+				<Flag v="VehicleScorpion" />
+				<Flag v="VehicleWasp" />
+				<Flag v="VehicleRazorBack" />
+				<Flag v="VehicleGungoose" />
+				<Flag v="VehicleRockethog" />
+			</_B>
+			<_34 v="generated_pad2a44" length="2" />
 			<_2 v="Region Name" />
 			<_2 v="Marker Name" />
 			<_14 v="Marker Offset" />
@@ -176,15 +219,26 @@
 				<Flag v="EaseInSinCustom" />
 				<Flag v="EaseOutSinCustom" />
 			</_B>
-			<_34 v="generated_pad2a44" length="2" />
+			<_34 v="generated_pad4425" length="2" />
 			<_40 v="Camera Positions">
 				<_B v="Camera Position Type">
 					<Flag v="Default" />
 					<Flag v="Custom" />
+					<Flag v="Custom1" />
 				</_B>
 				<_34 v="generated_pad010d" length="2" />
 				<_19 v="Camera Position" />
+				<_1C v="Camera Orientation" />
 				<_2 v="Composer Scene Name" />
+				<_F v="DOF Flags">
+					<Flag v="Enable DOF" />
+					<Flag v="Enable DOF RTT" />
+					<Flag v="Enable DOF World" />
+				</_F>
+				<_34 v="generated_pade72c" length="3" />
+				<_14 v="DOF Focal Length" />
+				<_14 v="DOF Focal Distance" />
+				<_14 v="DOF FStop" />
 				<_3B v="" />
 			</_40>
 			<_14 v="Camera FOV" />
@@ -196,7 +250,7 @@
 				<Flag v="Enable DOF RTT" />
 				<Flag v="Enable DOF World" />
 			</_F>
-			<_34 v="generated_pad4425" length="3" />
+			<_34 v="generated_pad90da" length="3" />
 			<_14 v="DOF Focal Length" />
 			<_14 v="DOF Focal Distance" />
 			<_14 v="DOF FStop" />
@@ -214,21 +268,6 @@
 			<_14 v="Maximum Yaw" />
 			<_14 v="Minimum Roll" />
 			<_14 v="Maximum Roll" />
-			<_3B v="" />
-		</_40>
-		<_40 v="Default Speed">
-			<_14 v="Step Fraction" />
-			<_14 v="Close Enough Distance" />
-			<_3B v="" />
-		</_40>
-		<_40 v="Drag Speed">
-			<_14 v="Step Fraction" />
-			<_14 v="Close Enough Distance" />
-			<_3B v="" />
-		</_40>
-		<_40 v="Impulse Speed">
-			<_14 v="Step Fraction" />
-			<_14 v="Close Enough Distance" />
 			<_3B v="" />
 		</_40>
 		<_3B v="" />

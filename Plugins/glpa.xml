@@ -21,10 +21,13 @@
 			<Flag v="can use health packs" />
 			<Flag v="use teammate chatter dialogue" />
 		</_F>
-		<_34 v="Here" length="20" />
 		<_34 v="generated_pad3e61" length="3" />
 		<_41 v="third person unit" />
 		<_2 v="third person variant" />
+		<_40 v="additional third person variants">
+			<_2 v="Variant" />
+			<_3B v="" />
+		</_40>
 		<_41 v="frame override" />
 		<_30 v="player information" />
 		<_41 v="hud screen reference" />
@@ -151,6 +154,8 @@
 			<Flag v="enable" />
 			<Flag v="include friendlies" />
 		</_D>
+		<_14 v="bounding sphere extrapolation time" />
+		<_14 v="bounding sphere scalar" />
 		<_14 v="participant radius scalar" />
 		<_15 v="participant adjustment fraction" />
 		<_15 v="adjustment fraction" />

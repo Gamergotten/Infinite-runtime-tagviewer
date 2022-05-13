@@ -39,7 +39,7 @@
 			<_D v="object flags">
 				<Flag v="always render in floating shadow" />
 				<Flag v="preserves initial damage owner" />
-				<Flag v="not a pathfinding obstacle" />
+				<Flag v="not a pathfinding obstacle(deprecated)" />
 				<Flag v="extension of parent" />
 				<Flag v="does not cause collision damage" />
 				<Flag v="early mover" />
@@ -221,6 +221,7 @@
 				<_2 v="turn off with" />
 				<_2 v="ranged interpolation name" />
 				<_14 v="min value" />
+				<_14 v="max value" />
 				<_37 v="default function" />
 				<_38 v="default function">
 					<_37 v="" />
@@ -309,7 +310,6 @@
 				<Flag v="Use the new animation system only" />
 				<Flag v="Detach children when the destroyed" />
 				<Flag v="Force projectile overpenetration" />
-				<Flag v="Create the Object Node Graph Component" />
 				<Flag v="Use inertialization" />
 				<Flag v="Cannot be grappled" />
 				<Flag v="Can be pulled to the player by the grapple hook" />
@@ -570,6 +570,9 @@
 					<Flag v="fx" />
 					<Flag v="bot navigation marker" />
 					<Flag v="jump hint volume" />
+					<Flag v="cubemap volume" />
+					<Flag v="navgenerator volume" />
+					<Flag v="navcutter volume" />
 				</_A>
 				<_F v="teleporter passability">
 					<Flag v="disallow players" />
@@ -658,6 +661,8 @@
 					<Flag v="Disable normal physics" />
 					<Flag v="Disable fixed physics" />
 					<Flag v="Disable phased physics" />
+					<Flag v="Hide top and bottom of boundary" />
+					<Flag v="Boundary height scales evenly" />
 				</_E>
 				<_A v="Default Physics Type">
 					<Flag v="Normal" />
@@ -681,7 +686,15 @@
 				<_7 v="m_cylinderBoundaryPipelineStates" />
 				<_7 v="m_boxBoundaryPipelineStates" />
 				<_14 v="Callout Radius" />
-				<_34 v="generated_pad048e" length="4" />
+				<_A v="Hint Volume Type">
+					<Flag v="None" />
+					<Flag v="Jump" />
+					<Flag v="Force Walk" />
+					<Flag v="Force Movement" />
+					<Flag v="Vehicle" />
+					<Flag v="Crouch" />
+				</_A>
+				<_34 v="generated_pad048e" length="3" />
 				<_3B v="" />
 			</_40>
 			<_40 v="Forge data">
@@ -1160,33 +1173,14 @@
 				<_3B v="" />
 			</_40>
 			<_40 v="shroud generator">
-				<_14 v="outer radius" />
-				<_2 v="edge effect marker" />
+				<_14 v="radius" />
+				<_2 v="active object function name" />
+				<_41 v="shroud created effect" />
+				<_41 v="shroud destroyed effect" />
+				<_2 v="biped effect marker" />
 				<_41 v="biped enter effect" />
 				<_41 v="biped inside effect" />
 				<_41 v="biped leave effect" />
-				<_37 v="Mapping function" />
-				<_38 v="inside shrouded mapping">
-					<_37 v="" />
-					<_42 v="data" />
-					<_37 v="" />
-					<_3B v="" />
-				</_38>
-				<_14 v="max distance inside for shroud" />
-				<_37 v="Mapping function" />
-				<_38 v="outside shrouded mapping">
-					<_37 v="" />
-					<_42 v="data" />
-					<_37 v="" />
-					<_3B v="" />
-				</_38>
-				<_14 v="max distance outside for shroud" />
-				<_37 v="Blocker" />
-				<_41 v="blocker object" />
-				<_2 v="blocker attach marker" />
-				<_2 v="blocker attach child marker" />
-				<_14 v="blocker scale" />
-				<_37 v="" />
 				<_3B v="" />
 			</_40>
 			<_37 v="" />
@@ -1383,7 +1377,7 @@
 	<_14 v="rest failsafe time" />
 	<_37 v="" />
 	<_D v="flags">
-		<Flag v="pathfinding obstacle" />
+		<Flag v="pathfinding obstacle(deprecated)" />
 		<Flag v="equipment is dangerous to ai" />
 		<Flag v="never dropped by ai" />
 		<Flag v="3rd person camera always" />
@@ -2170,8 +2164,13 @@
 			<_41 v="modifiers" />
 			<_3B v="" />
 		</_40>
-		<_40 v="Season 2 Block - Unknown">
-			<_14 v="idk" />
+		<_40 v="translocator">
+			<_36 v="quantum translocator" />
+			<_41 v="anchor object" />
+			<_14 v="activation completion time" />
+			<_14 v="teleport warmup time" />
+			<_14 v="teleport cooldown time" />
+			<_3B v="" />
 		</_40>
 		<_37 v="" />
 		<_41 v="activation while disabled by player traits sound" />

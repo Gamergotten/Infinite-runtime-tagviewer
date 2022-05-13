@@ -125,6 +125,21 @@
 		<_2E v="Remove joints from other mask" />
 		<_3B v="" />
 	</_40>
+	<_40 v="User parameter masks">
+		<_2 v="Name" />
+		<_A v="Mask selection behavior">
+			<Flag v="MaskAllSelected" />
+			<Flag v="MaskAllNotSelected" />
+		</_A>
+		<_34 v="generated_pad2330" length="3" />
+		<_40 v="Explicit user parameter selections">
+			<_2 v="User parameter name" />
+			<_3B v="" />
+		</_40>
+		<_2E v="Add user parameter from other mask" />
+		<_2E v="Remove user parameter from other mask" />
+		<_3B v="" />
+	</_40>
 	<_40 v="Joint animation filtering">
 		<_2 v="Joint name" />
 		<_3B v="" />
@@ -232,5 +247,6 @@
 		<_3B v="" />
 	</_40>
 	<_37 v="" />
+	<_34 v="generated_padb5c3" length="4" />
 	<_3B v="" />
 </root>

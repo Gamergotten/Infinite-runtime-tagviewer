@@ -12,6 +12,7 @@
 	<_D v="flags">
 		<Flag v="clang save both if both died" />
 		<Flag v="enable predictable rebound" />
+		<Flag v="enable damage acceleration with predictable rebound" />
 		<Flag v="use predictable collision pill" />
 		<Flag v="calculate head position as offset" />
 	</_D>
@@ -22,7 +23,6 @@
 	<_36 v="Network sensitive fields" />
 	<_14 v="clang simultaneous death vitality threshold" />
 	<_37 v="" />
-	<_14 v="input hold time" />
 	<_38 v="targeting">
 		<_37 v="targeting" />
 		<_24 v="yaw angles" />
@@ -74,16 +74,9 @@
 	<_37 v="" />
 	<_37 v="predictable rebound" />
 	<_36 v="predictable rebound" />
-	<_A v="rebound direction basis">
-		<Flag v="initial aim vector" />
-		<Flag v="aim vector" />
-		<Flag v="target vector" />
-		<Flag v="object forward" />
-	</_A>
-	<_34 v="generated_paded36" length="3" />
 	<_8 v="rebound angle" />
 	<_14 v="rebound speed" />
+	<_14 v="rebound ignore throttle time" />
 	<_37 v="" />
-	<_34 v="generated_pad39eb" length="4" />
 	<_3B v="" />
 </root>

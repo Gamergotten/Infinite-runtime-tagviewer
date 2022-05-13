@@ -25,7 +25,7 @@
 	<_4 v="import version" />
 	<_34 v="generated_pad19c2" length="3" />
 	<_14 v="welding tolerance" />
-	<_34 v="generated_pad19c2" length="4" />
+	<_14 v="collision look ahead distance" />
 	<_40 v="damped spring motors">
 		<_2 v="name" />
 		<_14 v="maximum force" />
@@ -1133,6 +1133,5 @@
 		</_40>
 		<_3B v="" />
 	</_40>
-	<_34 v="generated_pad6677" length="4" />
 	<_3B v="" />
 </root>
