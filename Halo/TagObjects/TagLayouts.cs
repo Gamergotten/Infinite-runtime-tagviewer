@@ -346,8 +346,9 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 							pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText });
 						}
 						return length;
-					case "_35":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
+					case "_35":
+						pairs.Add(offset, new C { T = "4Byte", N = xn.Attributes.GetNamedItem("v").InnerText + " Index" }); // Definitely could be wrong, just guessing here.
+						pairs.Add(offset + 4, new C { T = "mmr3Hash", N = xn.Attributes.GetNamedItem("v").InnerText + " Name" });
 						return int.Parse(xn.Attributes.GetNamedItem("length").InnerText);
 					case "_36":
 						if (xn.Attributes.GetNamedItem("v").InnerText != "")
@@ -404,7 +405,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 							current_offset3 += the_switch_statement(xntwo2, current_offset3, ref pairs);
 						}
 						return current_offset3 - offset;
-					case "_3A":// unmapped
+					case "_3A":// unmapped - Not found in any tag
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
 						return group_lengths_dict[xn.Name];
 					case "_3B":
@@ -446,8 +447,10 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 					case "_42":
 						pairs.Add(offset, new C { T = "FUNCTION", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
-					case "_43":// unmapped
-						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
+					case "_43":// Mapping these to fix errors. The new length seems to fix some issues. Check pfnd > mobileNavMeshes to understand.
+						pairs.Add(offset, new C { T = "Pointer", N = xn.Attributes.GetNamedItem("v").InnerText });
+						pairs.Add(offset + 8, new C { T = "mmr3Hash", N = xn.Attributes.GetNamedItem("v").InnerText});
+						pairs.Add(offset + 12, new C { T = "4Byte", N = xn.Attributes.GetNamedItem("v").InnerText });
 						return group_lengths_dict[xn.Name];
 					case "_44":// unmapped
 						pairs.Add(offset, new C { T = "Comment", N = xn.Attributes.GetNamedItem("v").InnerText + " (unmapped type(" + xn.Name + "), may cause errors)" });
@@ -534,7 +537,7 @@ namespace InfiniteRuntimeTagViewer.Halo.TagObjects
 				{ "_41", 28 }, // _field_reference_v2
 				{ "_42", 24 }, // _field_data_v2
 
-				{ "_43", 4 }, // ok this one is actually used lol
+				{ "_43", 16 }, // tag_resource, length could be wrong, probably not though.
 
 				{ "_44", 4 },
 				{ "_45", 4 },
