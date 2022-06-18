@@ -4,7 +4,7 @@
 
 In-development build:
 
-[![Download latest build](https://github.com/Gamergotten/Infinite-runtime-tagviewer/actions/workflows/dotnet.yml/badge.svg)](https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/Binaries.zip) <- (click to download)
+[![Download latest build](https://github.com/Gamergotten/Infinite-runtime-tagviewer/actions/workflows/dotnet.yml/badge.svg)](https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/IRTV.zip) <- (click to download)
 
 
 # Read me
