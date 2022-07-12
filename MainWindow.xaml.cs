@@ -29,6 +29,8 @@ using System.ComponentModel;
 using System.Text;
 using System.Diagnostics;
 using System.Net;
+using Newtonsoft.Json.Linq;
+
 namespace InfiniteRuntimeTagViewer
 {
 	/// <summary>
@@ -169,36 +171,13 @@ namespace InfiniteRuntimeTagViewer
 			SetGeneralSettingsFromConfig();
 			done_loading_settings = true;
 			//settings.Close();
-
+			
 			add_new_section_to_pokelist("Poke Queue");
-			UpdateVersion();
-
+			//Run CheckForUpdates(this, null) in a new task
+			UpdateForward(this, null);
 		}
 
-		string oldVersion;
-		string newVersion;
-		public void UpdateVersion()
-		{
-			//Write the version number to a file
-			//overwrite the version.txt file with the current version number
-			//read the version.txt file and display the version number in the window title
-			using (StreamReader reader = new(@"version.txt"))
-			{
-				oldVersion = reader.ReadLine();
-				string[] split = oldVersion.Split('.');
-				int last = Convert.ToInt32(split[split.Length - 1]);
-				last++;
-				newVersion = string.Join(".", split.Take(split.Length - 1)) + "." + last;
-				//log
-				Debug.WriteLine("Old Version: " + oldVersion);
-				Debug.WriteLine("New Version: " + newVersion);
-			}
 
-			using (StreamWriter writer = new(@"version.txt"))
-			{
-				writer.WriteLine("Version: " + newVersion);
-			}
-		}
 
 		public void UpdateAddress()
 		{
@@ -630,24 +609,33 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
-		public void CheckForUpdates(object sender, RoutedEventArgs e)
+		public async void UpdateForward(object sender, RoutedEventArgs e)
 		{
-			//Get the current version number from GitHub at https://github.com/Gamergotten/Infinite-runtime-tagviewer/version.txt
-			//Get the stored version number from the local version.txt file
-			//Compare the two and if the stored version is less than the current version, display a message box asking if the user would like to download the latest version
+			await CheckForUpdates(sender, e);
+		}
+		
+		
+		public async Task CheckForUpdates(object sender, RoutedEventArgs e)
+		{
+			//Check for recent commits on GitHub
+			//If there are recent commits, display a message box asking if the user would like to download the latest version
 			//If the user clicks yes, open the link to the GitHub repo and download the latest version
-			//If the user clicks no, do nothing
-			//If the user clicks cancel, do nothing
-			//If the user clicks the X button, do nothing
 
-			//Get the current version number from GitHub at https://github.com/Gamergotten/Infinite-runtime-tagviewer/version.txt
-			string version = "";
+			//Get recent commits from GitHub
+			string commits = "";
+			string node_id;
 			try
 			{
+				
 				using (WebClient client = new WebClient())
 				{
-					version = client.DownloadString("https://raw.githubusercontent.com/Sopitive/Infinite-runtime-tagviewer/master/version.txt");
-					Debug.WriteLine("Version: " + version);
+					client.Headers.Add("user-agent", "request");
+					commits = client.DownloadString("https://api.github.com/repos/Sopitive/Infinite-runtime-tagviewer/commits/master");
+					Debug.WriteLine("Commits: " + commits);
+					//parse the json and set node_id to the value of the node_id field
+					JObject json = JObject.Parse(commits);
+					node_id = (string) json["node_id"];
+					Debug.WriteLine("Node ID: " + node_id);
 				}
 			}
 			catch (Exception)
@@ -655,16 +643,12 @@ namespace InfiniteRuntimeTagViewer
 				System.Windows.Forms.MessageBox.Show("Unable to check for updates. Please check your internet connection.");
 				return;
 			}
-			//Get the stored version number from the local version.txt file
-			string storedVersion = "";
-			Version versionNumber;
+			string storedVersion;
 			try
 			{
-				using (StreamReader reader = new(@"version.txt"))
-				{
-					storedVersion = reader.ReadLine();
-					Debug.WriteLine("Stored Version: " + storedVersion);
-				}
+				//Get the stored version number from the settings file
+				storedVersion = Settings.Default.Version;
+				Debug.WriteLine("Stored version: " + storedVersion);
 			}
 			catch (Exception)
 			{
@@ -672,7 +656,7 @@ namespace InfiniteRuntimeTagViewer
 				return;
 			}
 			//Compare the two and if the stored version is less than the current version, display a message box asking if the user would like to download the latest version
-			if (storedVersion.CompareTo(version) < 0)
+			if (storedVersion.CompareTo(node_id) < 0)
 			{
 				DialogResult result = System.Windows.Forms.MessageBox.Show("A new version of the tag viewer is available. Would you like to download the latest version?", "Update Available", MessageBoxButtons.YesNoCancel);
 				if (result == System.Windows.Forms.DialogResult.Yes)
@@ -691,6 +675,9 @@ namespace InfiniteRuntimeTagViewer
 							{
 								hook_text.Text = "Download Complete";
 								// any other code to process the file
+								//Write the node id to the settings file
+								Settings.Default.Version = node_id;
+								Settings.Default.Save();
 							};
 							//Download the file on a background thread
 							client.DownloadFileAsync(new Uri("https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/IRTV.zip"), "IRTV.zip");
@@ -698,13 +685,12 @@ namespace InfiniteRuntimeTagViewer
 							{
 								System.Windows.Forms.Application.DoEvents();
 							}
-							
+
 						}
 					}
 					catch (Exception)
 					{
 						System.Windows.Forms.MessageBox.Show("Unable to download the latest version. Please check your internet connection.");
-						return;
 					}
 				}
 			}
@@ -712,6 +698,7 @@ namespace InfiniteRuntimeTagViewer
 			{
 				hook_text.Text = "Client Up To Date!";
 			}
+			return;
 		}
 
 		#endregion

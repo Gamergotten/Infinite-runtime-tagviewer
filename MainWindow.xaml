@@ -187,7 +187,7 @@
                                 </MenuItem>
                             </MenuItem>
                             <!--Check For Updates-->
-                            <MenuItem x:Name="CheckUpdates" Header="Check For Updates" Click="CheckForUpdates">
+                            <MenuItem x:Name="CheckUpdates" Header="Check For Updates" Click="UpdateForward">
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Check for updates to IRTV.</TextBlock>
                                 </MenuItem.ToolTip>
