@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Controls;
 
 using InfiniteRuntimeTagViewer.Halo.TagObjects;
@@ -39,11 +38,6 @@ namespace InfiniteRuntimeTagViewer.Halo
 		public string TagExtraName;
 
 		public TreeViewItem TagCategory;
-
-		public static implicit operator KeyValuePair<object, object>(GroupTagStruct v)
-		{
-			throw new NotImplementedException();
-		}
 	}
 
 

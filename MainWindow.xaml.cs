@@ -658,7 +658,7 @@ namespace InfiniteRuntimeTagViewer
 
 		#endregion
 
-				// open mods window
+		// open mods window
 		public ModWindow? mwidow;
 		private void MenuItem_Click(object sender, RoutedEventArgs e)
 		{
@@ -1212,7 +1212,7 @@ namespace InfiniteRuntimeTagViewer
 					TagsTree.Items.SortDescriptions.Add(new SortDescription("Header", ListSortDirection.Ascending));
 				}));
 			});
-			
+
 		}
 
 		#endregion
@@ -1320,13 +1320,13 @@ namespace InfiniteRuntimeTagViewer
 
 		public async Task CreateTagEditorTabByTagIndex(string tagID)
 		{
-				TagStruct? tag = TagsList[tagID];
-				string? tagFull = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
-				string tagName = tagFull.Split('\\').Last();
+			TagStruct? tag = TagsList[tagID];
+			string? tagFull = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
+			string tagName = tagFull.Split('\\').Last();
 
-				// Find the existing layout document ( draggable panel item )
-				if (dockManager.Layout.Descendents().OfType<LayoutDocument>().Any())
-				{
+			// Find the existing layout document ( draggable panel item )
+			if (dockManager.Layout.Descendents().OfType<LayoutDocument>().Any())
+			{
 				await Task.Run(() =>
 				{
 					LayoutDocument? dockSearch = dockManager.Layout.Descendents()
@@ -1359,10 +1359,10 @@ namespace InfiniteRuntimeTagViewer
 									bool? found = false; // used for debugging. Debugging what exactly? lol
 								}
 							}
-						
-					}
+
+						}
 						return;
-			}
+					}
 				});
 			}
 
@@ -1380,8 +1380,8 @@ namespace InfiniteRuntimeTagViewer
 
 			dockLayoutDocPane.Children.Add(doc);
 			dockLayoutRoot.ActiveContent = doc;
-			
-	}
+
+		}
 
 
 		// list of changes to ammend to the memory when we phit the poke button
@@ -1392,9 +1392,9 @@ namespace InfiniteRuntimeTagViewer
 
 		public class Poke_queue
 		{
-			public Dictionary<string, KeyValuePair<string, string>> Pokelist =new();
+			public Dictionary<string, KeyValuePair<string, string>> Pokelist = new();
 			public Dictionary<string, KeyValuePair<string, string>>? revertlist = new();
-		} 
+		}
 
 		public string current_pokelist = "";
 
@@ -1409,7 +1409,7 @@ namespace InfiniteRuntimeTagViewer
 			}
 			current_pokelist = newname;
 		}
-		
+
 		public void load_a_pokelist(string queuename)
 		{
 			if (Pokelistlist.ContainsKey(queuename))
@@ -1426,7 +1426,7 @@ namespace InfiniteRuntimeTagViewer
 				changes_panel.Children.Clear();
 				UIpokelist.Clear();
 
-				for (int i = 0; i< Pokelistlist[queuename].Pokelist.Count; i++)
+				for (int i = 0; i < Pokelistlist[queuename].Pokelist.Count; i++)
 				{
 					KeyValuePair<string, KeyValuePair<string, string>> peep_this_one = Pokelistlist[queuename].Pokelist.ElementAt(i);
 					string instuctions = peep_this_one.Key;
@@ -1475,7 +1475,7 @@ namespace InfiniteRuntimeTagViewer
 		// to keep track of the UI elements we're gonna use a dictionary, will probably be better
 		public Dictionary<string, TagChangesBlock> UIpokelist = new(); // i *think* we can just leave this as is
 
-		
+
 		public void recieve_file_to_inhalo_pokes(string filename)
 		{
 			int prev = 0;
@@ -1538,7 +1538,7 @@ namespace InfiniteRuntimeTagViewer
 				//updateElement.tagSource.Text = def.TagStruct.TagFile + " + " + def.GetTagOffset();
 				string dont_Be_null = convert_ID_to_tag_name(def.OffsetOverride.Split(":").FirstOrDefault());
 				updateElement.tagSource.Text = dont_Be_null;
-				updateElement.bordercolor.BorderBrush = new SolidColorBrush(Colors.Yellow); 
+				updateElement.bordercolor.BorderBrush = new SolidColorBrush(Colors.Yellow);
 			}
 			else
 			{
@@ -1604,7 +1604,7 @@ namespace InfiniteRuntimeTagViewer
 			}
 			return "FFFFFFFF"; // ok i found out what this was for: when we poke FFFFFFFF tag // annnnd it didnt work
 		}
-		
+
 		public void PokeChanges()
 		{
 			try
@@ -1645,7 +1645,7 @@ namespace InfiniteRuntimeTagViewer
 				Debug.WriteLine(ex.ToString());
 			}
 		}
-		
+
 		public KeyValuePair<int, int> pokelist(string listname)
 		{
 			int fails = 0;
@@ -1655,7 +1655,7 @@ namespace InfiniteRuntimeTagViewer
 			{
 				pokes++;
 				bool failed = false;
-				string do_the_thing = (pair.Key); 
+				string do_the_thing = (pair.Key);
 				if (do_the_thing != "")
 				{
 					if (!pokesingle(do_the_thing, pair.Value.Key, pair.Value.Value, listname))
@@ -1683,14 +1683,14 @@ namespace InfiniteRuntimeTagViewer
 					}
 				}
 			}
-			return  new KeyValuePair<int, int> (pokes, fails);
+			return new KeyValuePair<int, int>(pokes, fails);
 		}
 
 
-		
+
 		public void tagchangesblock_fetchdata_by_ID(TagChangesBlock target) // aka do a single poke lol ?
 		{
-			
+
 			KeyValuePair<string, string> pair = Pokelistlist[current_pokelist].Pokelist[target.sig_address_path];
 			//pokesingle(target.sig_address_ID, pair.Key, pair.Value);
 			//SUSSY_BALLS_2
@@ -1698,7 +1698,7 @@ namespace InfiniteRuntimeTagViewer
 			bool failed = false;
 			if (target.sig_address_path != "")
 			{
-				if(!pokesingle(target.sig_address_path, pair.Key, pair.Value, current_pokelist))
+				if (!pokesingle(target.sig_address_path, pair.Key, pair.Value, current_pokelist))
 				{
 					poke_text.Text = "poke error";
 					failed = true;
@@ -1894,10 +1894,10 @@ namespace InfiniteRuntimeTagViewer
 			string output = "";
 			switch (type)
 			{
-				case "4Byte": 
-					try 
+				case "4Byte":
+					try
 					{
-						output = M.ReadInt(address).ToString(); 
+						output = M.ReadInt(address).ToString();
 					}
 					catch { }
 					return output;
@@ -1909,21 +1909,21 @@ namespace InfiniteRuntimeTagViewer
 					catch { }
 					return output;
 				case "Byte":
-					try 
+					try
 					{
 						output = M.ReadByte(address).ToString();
 					}
 					catch { }
 					return output;
 				case "Flags":
-					try 
+					try
 					{
 						output = M.ReadByte(address).ToString("X");
 					}
 					catch { }
 					return output;
 				case "Float":
-					try 
+					try
 					{
 						output = M.ReadFloat(address).ToString();
 
@@ -1938,14 +1938,14 @@ namespace InfiniteRuntimeTagViewer
 					catch { }
 					return output;
 				case "String":
-					try 
+					try
 					{
 						output = M.ReadString(address, "", 100).ToString();
 					}
 					catch { }
 					return output;
 				case "TagrefGroup":
-					try 
+					try
 					{
 						string read_incase_bad_string = BitConverter.ToString(M.ReadBytes(address, 4)).Replace("-", string.Empty);
 						if (read_incase_bad_string == "FFFFFFFF")
@@ -1977,13 +1977,13 @@ namespace InfiniteRuntimeTagViewer
 		public string SUSSY_BALLS_2(string input)
 		{
 			//TAKE FIRST AND ADD INSTEAD OF LAST
-		 	string[] p = input.Split(":");
+			string[] p = input.Split(":");
 
 			//p[0] = tagID
 			//p[1] = address
 
 			string[] last_offset = p[1].Split(",");
-			
+
 			for (int i5 = 2; i5 < last_offset.Length; i5++)
 				last_offset[i5] = "0x" + long.Parse(last_offset[i5]).ToString("X");
 
@@ -2005,7 +2005,7 @@ namespace InfiniteRuntimeTagViewer
 			return "";
 		}
 
-		
+
 
 		public string return_real_number_of_pokes_queued_okk()
 		{
@@ -2034,7 +2034,7 @@ namespace InfiniteRuntimeTagViewer
 			change_text.Text = return_real_number_of_pokes_queued_okk() + " changes queued";
 		}
 
-		
+
 		public void clear_all_pokelists()
 		{
 			Pokelistlist.Clear();
@@ -2052,7 +2052,7 @@ namespace InfiniteRuntimeTagViewer
 			poke_text.Text = "All queues cleared";
 
 		}
-		
+
 		public void clear_pokes_list(string queue)
 		{
 			changes_panel.Children.Clear();
@@ -2061,7 +2061,7 @@ namespace InfiniteRuntimeTagViewer
 
 			poke_text.Text = "Poke Lists Cleared";
 		}
-		
+
 
 		/* 4Byte
 		 * 2Byte
@@ -2075,7 +2075,7 @@ namespace InfiniteRuntimeTagViewer
          * TagrefTag
          */
 
-	
+
 		public KeyValuePair<int, int> revertlist(string listname)
 		{
 			int fails = 0;
@@ -2123,6 +2123,6 @@ namespace InfiniteRuntimeTagViewer
 
 		// addd new poke list
 		public int num_of_user_added_lists = 0;
-		
+
 	}
 }
