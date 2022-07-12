@@ -30,6 +30,7 @@ using System.Text;
 using System.Diagnostics;
 using System.Net;
 using Newtonsoft.Json.Linq;
+using System.IO.Compression;
 
 namespace InfiniteRuntimeTagViewer
 {
@@ -173,7 +174,6 @@ namespace InfiniteRuntimeTagViewer
 			//settings.Close();
 			
 			add_new_section_to_pokelist("Poke Queue");
-			//Run CheckForUpdates(this, null) in a new task
 			UpdateForward(this, null);
 		}
 
@@ -678,9 +678,16 @@ namespace InfiniteRuntimeTagViewer
 								//Write the node id to the settings file
 								Settings.Default.Version = node_id;
 								Settings.Default.Save();
+								//Start the unzip.bat file
+								ProcessStartInfo startInfo = new ProcessStartInfo();
+								startInfo.FileName = "unzip.bat";
+								startInfo.Arguments = "Infinite-runtime-tagviewer.zip";
+								Process.Start(startInfo);
+								//Close the current process
+								Environment.Exit(0);
 							};
 							//Download the file on a background thread
-							client.DownloadFileAsync(new Uri("https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/IRTV.zip"), "IRTV.zip");
+							client.DownloadFileAsync(new Uri("https://nightly.link/Sopitive/Infinite-runtime-tagviewer/workflows/dotnet/master/IRTV.zip"), "IRTV.zip");
 							while (client.IsBusy)
 							{
 								System.Windows.Forms.Application.DoEvents();
