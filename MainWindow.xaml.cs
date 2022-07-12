@@ -29,7 +29,6 @@ using System.ComponentModel;
 using System.Text;
 using System.Diagnostics;
 using System.Net;
-
 namespace InfiniteRuntimeTagViewer
 {
 	/// <summary>
@@ -172,7 +171,33 @@ namespace InfiniteRuntimeTagViewer
 			//settings.Close();
 
 			add_new_section_to_pokelist("Poke Queue");
+			UpdateVersion();
 
+		}
+
+		string oldVersion;
+		string newVersion;
+		public void UpdateVersion()
+		{
+			//Write the version number to a file
+			//overwrite the version.txt file with the current version number
+			//read the version.txt file and display the version number in the window title
+			using (StreamReader reader = new(@"version.txt"))
+			{
+				oldVersion = reader.ReadLine();
+				string[] split = oldVersion.Split('.');
+				int last = Convert.ToInt32(split[split.Length - 1]);
+				last++;
+				newVersion = string.Join(".", split.Take(split.Length - 1)) + "." + last;
+				//log
+				Debug.WriteLine("Old Version: " + oldVersion);
+				Debug.WriteLine("New Version: " + newVersion);
+			}
+
+			using (StreamWriter writer = new(@"version.txt"))
+			{
+				writer.WriteLine("Version: " + newVersion);
+			}
 		}
 
 		public void UpdateAddress()
@@ -621,26 +646,29 @@ namespace InfiniteRuntimeTagViewer
 			{
 				using (WebClient client = new WebClient())
 				{
-					version = client.DownloadString("https://raw.githubusercontent.com/Gamergotten/Infinite-runtime-tagviewer/master/version.txt");
+					version = client.DownloadString("https://raw.githubusercontent.com/Sopitive/Infinite-runtime-tagviewer/master/version.txt");
+					Debug.WriteLine("Version: " + version);
 				}
 			}
 			catch (Exception)
 			{
-				hook_text.Text = "Could not check for updates";
+				System.Windows.Forms.MessageBox.Show("Unable to check for updates. Please check your internet connection.");
 				return;
 			}
 			//Get the stored version number from the local version.txt file
 			string storedVersion = "";
+			Version versionNumber;
 			try
 			{
-				using (StreamReader reader = new StreamReader(@"version.txt"))
+				using (StreamReader reader = new(@"version.txt"))
 				{
 					storedVersion = reader.ReadLine();
+					Debug.WriteLine("Stored Version: " + storedVersion);
 				}
 			}
 			catch (Exception)
 			{
-				hook_text.Text = "Could not check for updates";
+				System.Windows.Forms.MessageBox.Show("Unable to check for updates. Please check your internet connection.");
 				return;
 			}
 			//Compare the two and if the stored version is less than the current version, display a message box asking if the user would like to download the latest version
@@ -649,10 +677,40 @@ namespace InfiniteRuntimeTagViewer
 				DialogResult result = System.Windows.Forms.MessageBox.Show("A new version of the tag viewer is available. Would you like to download the latest version?", "Update Available", MessageBoxButtons.YesNoCancel);
 				if (result == System.Windows.Forms.DialogResult.Yes)
 				{
-					//Open https://github.com/Gamergotten/Infinite-runtime-tagviewer
-					Process.Start("https://github.com/Gamergotten/Infinite-runtime-tagviewer");
-
+					hook_text.Text = "Downloading latest version...";
+					//Download the file
+					try
+					{
+						using (WebClient client = new WebClient())
+						{
+							client.DownloadProgressChanged += (s, e) =>
+							{
+								hook_text.Text = "Downloading..." + e.ProgressPercentage.ToString() + "%";
+							};
+							client.DownloadFileCompleted += (s, e) =>
+							{
+								hook_text.Text = "Download Complete";
+								// any other code to process the file
+							};
+							//Download the file on a background thread
+							client.DownloadFileAsync(new Uri("https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/IRTV.zip"), "IRTV.zip");
+							while (client.IsBusy)
+							{
+								System.Windows.Forms.Application.DoEvents();
+							}
+							
+						}
+					}
+					catch (Exception)
+					{
+						System.Windows.Forms.MessageBox.Show("Unable to download the latest version. Please check your internet connection.");
+						return;
+					}
 				}
+			}
+			else
+			{
+				hook_text.Text = "Client Up To Date!";
 			}
 		}
 
