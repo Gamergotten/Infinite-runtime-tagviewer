@@ -174,7 +174,7 @@ namespace InfiniteRuntimeTagViewer
 			//settings.Close();
 			
 			add_new_section_to_pokelist("Poke Queue");
-			UpdateForward(this, null);
+			Task.Run(() => CheckForUpdates(this, null));
 		}
 
 
@@ -608,14 +608,9 @@ namespace InfiniteRuntimeTagViewer
 				hook_text.Text = "Updated Game Location";
 			}
 		}
-
-		public async void UpdateForward(object sender, RoutedEventArgs e)
-		{
-			await CheckForUpdates(sender, e);
-		}
 		
 		
-		public async Task CheckForUpdates(object sender, RoutedEventArgs e)
+		public void CheckForUpdates(object sender, RoutedEventArgs e)
 		{
 			//Check for recent commits on GitHub
 			//If there are recent commits, display a message box asking if the user would like to download the latest version
@@ -703,7 +698,11 @@ namespace InfiniteRuntimeTagViewer
 			}
 			else
 			{
-				hook_text.Text = "Client Up To Date!";
+				//Dispatcher here
+				Dispatcher.BeginInvoke(new Action(() =>
+				{
+					hook_text.Text = "Client up to date!";
+				}));
 			}
 			return;
 		}
