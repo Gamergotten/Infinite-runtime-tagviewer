@@ -26,5 +26,8 @@
     <Setting Name="ProcessPath" Type="System.String" Scope="User">
       <Value Profile="(Default)">undefined</Value>
     </Setting>
+    <Setting Name="GameLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

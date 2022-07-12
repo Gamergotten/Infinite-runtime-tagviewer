@@ -167,6 +167,12 @@
                                     <TextBlock Foreground="Black">Manually set pointer to tags.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
+                            <!--Button to change the location of the game exe-->
+                            <MenuItem x:Name="SetGameExe" Header="Set Game EXE..." Click="ShowGameExeDialog">
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Manually set the location of the game exe.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
                             <MenuItem Header="Process Selector">
                                 <controls:ProcessSelector x:Name="processSelector" />
                             </MenuItem>
@@ -179,6 +185,12 @@
                                         <TextBlock Foreground="Black">Unload Tags</TextBlock>
                                     </MenuItem.ToolTip>
                                 </MenuItem>
+                            </MenuItem>
+                            <!--Check For Updates-->
+                            <MenuItem x:Name="CheckUpdates" Header="Check For Updates" Click="CheckForUpdates">
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Check for updates to IRTV.</TextBlock>
+                                </MenuItem.ToolTip>
                             </MenuItem>
                         </MenuItem>
                         <MenuItem Header="Mods" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Height="28" Click="MenuItem_Click"/>

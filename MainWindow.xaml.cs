@@ -28,6 +28,7 @@ using InfiniteRuntimeTagViewer.Properties;
 using System.ComponentModel;
 using System.Text;
 using System.Diagnostics;
+using System.Net;
 
 namespace InfiniteRuntimeTagViewer
 {
@@ -84,7 +85,7 @@ namespace InfiniteRuntimeTagViewer
 
 		#region poop region
 
-		
+
 
 		public void ShowPointerDialog(object source, RoutedEventArgs e)
 		{
@@ -136,13 +137,13 @@ namespace InfiniteRuntimeTagViewer
 		public delegate void LoadTagsDelagate();
 		private readonly System.Timers.Timer _t;
 		public Mem M = new();
-		
+
 
 		//Offsets
 		public string
 								// Hard-Coded Addresses
 								//HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x40AD150",   //TU11
-								HookProcessAsyncBaseAddr,									 // Tag_List_Function
+								HookProcessAsyncBaseAddr,                                    // Tag_List_Function
 								ScanMemAOBBaseAddr = "HaloInfinite.exe+0x305B1B0",           // Tag_List_Str
 
 								// AOB's to scan.
@@ -223,6 +224,42 @@ namespace InfiniteRuntimeTagViewer
 			catch (Exception ex)
 			{
 				Debug.WriteLine(ex.ToString());
+				//If exception is a null reference exception, set the hook text to "Game Not Open"
+				if (ex.GetType().IsAssignableFrom(typeof(NullReferenceException)))
+				{
+					hook_text.Text = "Can't Find HaloInfinite.exe";
+					//Show a message box that prompts the user if they want to launch the game
+					MessageBoxResult result = (MessageBoxResult) System.Windows.Forms.MessageBox.Show("HaloInfinite.exe is not open. Do you want to open it?", "HaloInfinite.exe Not Open", System.Windows.Forms.MessageBoxButtons.YesNo);
+					if (result == MessageBoxResult.Yes)
+					{
+						//Check if the setting for the game location is set
+						if (Settings.Default.GameLocation != "")
+						{
+							//If it is set, open the game
+							System.Diagnostics.Process.Start(Settings.Default.GameLocation);
+							//wait 15 seconds before trying to load again
+							await Task.Delay(15000);
+							//Try to hook again
+							await HookProcessAsync();
+						}
+						else
+						{
+							//If it is not set, allow the user to browse to an exe file, then open that exe file, wait 15 seconds, and resume loading.
+							OpenFileDialog ofd = new()
+							{
+								Filter = "HaloInfinite.exe|HaloInfinite.exe",
+								Title = "Please select HaloInfinite.exe"
+							};
+							ofd.ShowDialog();
+							Settings.Default.GameLocation = ofd.FileName;
+							Settings.Default.Save();
+							System.Diagnostics.Process.Start(Settings.Default.GameLocation);
+							await Task.Delay(15000);
+							await HookProcessAsync();
+						}
+					}
+
+				}
 			}
 		}
 
@@ -236,13 +273,13 @@ namespace InfiniteRuntimeTagViewer
 			}
 			catch (System.ArgumentNullException)
 			{
-				
+
 			}
 			if (BaseAddress != -1 && BaseAddress != 0)
 			{
 				await LoadTagsMem(false);
 
-				
+
 				if (hooked == true)
 				{
 					Searchbox_TextChanged(null, null);
@@ -309,7 +346,7 @@ namespace InfiniteRuntimeTagViewer
 			}));
 		}
 
-		public static IEnumerable<string> SplitThis( string str, int n)
+		public static IEnumerable<string> SplitThis(string str, int n)
 		{
 
 			return Enumerable.Range(0, str.Length / n)
@@ -340,7 +377,6 @@ namespace InfiniteRuntimeTagViewer
 					long? aobScan = (await M.AoBScan(AOBScanStartAddr, AOBScanEndAddr, AOBScanTagStr, true))
 						.First(); // "tag instances"
 
-					//Uncomment here for more work on automatically finding the pointer value.
 					long haloInfinite = 0;
 					if (aobScan != null)
 					{
@@ -358,6 +394,7 @@ namespace InfiniteRuntimeTagViewer
 						aobSingle = aobSingle.TrimEnd();
 						Debugger.Log(0, "DBGTIMING", "AOB: " + aobSingle);
 						long pointer = (await M.AoBScan(haloInfinite, 140737488289791, aobSingle + " 00 00", true, true, true)).First();
+						Debug.WriteLine(pointer);
 						Settings.Default.ProcAsyncBaseAddr = "HaloInfinite.exe+0x" + (pointer - haloInfinite).ToString("X");
 						Settings.Default.Save();
 						Debug.WriteLine(Settings.Default.ProcAsyncBaseAddr);
@@ -392,7 +429,7 @@ namespace InfiniteRuntimeTagViewer
 		//Adjust UI element size depending on window size.
 		private void window_SizeChanged(object sender, SizeChangedEventArgs e)
 		{
-			
+
 			double newWindowWidth = e.NewSize.Width;
 			//Debug.WriteLine(newWindowWidth);
 			if (newWindowWidth < 1200)
@@ -415,7 +452,7 @@ namespace InfiniteRuntimeTagViewer
 				ReloadProcBtn.IsHitTestVisible = true;
 				ReloadProcBtn.Visibility = Visibility.Visible;
 			}
-			
+
 		}
 
 		private void BtnReloadProcessClick(object sender, RoutedEventArgs e)
@@ -435,7 +472,7 @@ namespace InfiniteRuntimeTagViewer
 				process.Kill();
 			}
 		}
-		
+
 		private void Button_Click_1(object sender, RoutedEventArgs e)
 		{
 			num_of_user_added_lists++;
@@ -552,66 +589,76 @@ namespace InfiniteRuntimeTagViewer
 			loadedTags = false;
 		}
 
-		//Commented out because mainly this has no function right now.
+		public void ShowGameExeDialog(object sender, RoutedEventArgs e)
+		{
+			OpenFileDialog ofd = new OpenFileDialog
+			{
+				Filter = "Halo Infinite Executable|HaloInfinite.exe",
+				Title = "Select the Halo Infinite executable"
+			};
+			ofd.ShowDialog();
+			if (ofd.FileName != "")
+			{
+				//Save the setting for the exe file
+				Settings.Default.GameLocation = ofd.FileName;
+				hook_text.Text = "Updated Game Location";
+			}
+		}
 
-		//public void GetAllMethods()
-		//{
-		//	Type myType = (typeof(MainWindow));
-		//	// Get the public methods.
-		//	MethodInfo[] myArrayMethodInfo = myType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
-		//	Console.WriteLine("\nThe number of public methods is {0}.", myArrayMethodInfo.Length);
-		//	// Add all public methods to menu.
-		//	DisplayMethodInfo(myArrayMethodInfo);
-		//	// Add all non-public methods to array.
-		//	MethodInfo[] myArrayMethodInfo1 = myType.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
-		//	// Add all non-public methods to menu.
-		//	DisplayMethodInfo(myArrayMethodInfo1);
-		//}
+		public void CheckForUpdates(object sender, RoutedEventArgs e)
+		{
+			//Get the current version number from GitHub at https://github.com/Gamergotten/Infinite-runtime-tagviewer/version.txt
+			//Get the stored version number from the local version.txt file
+			//Compare the two and if the stored version is less than the current version, display a message box asking if the user would like to download the latest version
+			//If the user clicks yes, open the link to the GitHub repo and download the latest version
+			//If the user clicks no, do nothing
+			//If the user clicks cancel, do nothing
+			//If the user clicks the X button, do nothing
 
+			//Get the current version number from GitHub at https://github.com/Gamergotten/Infinite-runtime-tagviewer/version.txt
+			string version = "";
+			try
+			{
+				using (WebClient client = new WebClient())
+				{
+					version = client.DownloadString("https://raw.githubusercontent.com/Gamergotten/Infinite-runtime-tagviewer/master/version.txt");
+				}
+			}
+			catch (Exception)
+			{
+				hook_text.Text = "Could not check for updates";
+				return;
+			}
+			//Get the stored version number from the local version.txt file
+			string storedVersion = "";
+			try
+			{
+				using (StreamReader reader = new StreamReader(@"version.txt"))
+				{
+					storedVersion = reader.ReadLine();
+				}
+			}
+			catch (Exception)
+			{
+				hook_text.Text = "Could not check for updates";
+				return;
+			}
+			//Compare the two and if the stored version is less than the current version, display a message box asking if the user would like to download the latest version
+			if (storedVersion.CompareTo(version) < 0)
+			{
+				DialogResult result = System.Windows.Forms.MessageBox.Show("A new version of the tag viewer is available. Would you like to download the latest version?", "Update Available", MessageBoxButtons.YesNoCancel);
+				if (result == System.Windows.Forms.DialogResult.Yes)
+				{
+					//Open https://github.com/Gamergotten/Infinite-runtime-tagviewer
+					Process.Start("https://github.com/Gamergotten/Infinite-runtime-tagviewer");
 
-		//public void DisplayMethodInfo(MethodInfo[] myArrayMethodInfo)
-		//{
-		//	// Display information for all methods.
-		//	for (int i = 0; i < myArrayMethodInfo.Length; i++)
-		//	{
-		//		MethodInfo myMethodInfo = (MethodInfo) myArrayMethodInfo[i];
-		//		//Console.WriteLine("\nThe name of the method is {0}.", myMethodInfo.Name);
-		//		MenuItem methods = new MenuItem();
-		//		MenuItem methodToAdd = (MenuItem) DebugMenu.Items[1];
-		//		methods.Header = myMethodInfo.Name;
-		//		methods.Click += CallMethod;
-		//		methodToAdd.Items.Add(methods);
-		//	}
-		//}
-
-		//public void CallMethod(object sender, RoutedEventArgs e)
-		//{
-		//	//Code that will call the specified method.
-		//	MenuItem? MI = sender as MenuItem;
-		//	if (MI != null)
-		//	{
-		//		try
-		//		{
-		//			Type mainType = (typeof(MainWindow));
-		//			string? clickedMethod = MI.Header.ToString();
-		//			System.Diagnostics.Debug.WriteLine(clickedMethod);
-		//			MethodInfo? method = mainType.GetMethod(clickedMethod);
-		//			if (method != null)
-		//			{
-		//				int paramCount = method.GetParameters().Length;
-		//				method.Invoke(this, null);
-		//			}
-		//		}
-		//		catch (Exception)
-		//		{
-		//			System.Diagnostics.Debug.WriteLine("Invalid parameter count. Consider calling a method with no parameters.");
-		//		}
-		//	}
-		//}
+				}
+			}
+		}
 
 		#endregion
 
-		// open mods window
+				// open mods window
 		public ModWindow? mwidow;
 		private void MenuItem_Click(object sender, RoutedEventArgs e)
 		{
@@ -939,9 +986,6 @@ namespace InfiniteRuntimeTagViewer
 		public Dictionary<string, TagStruct> TagsList { get; set; } = new(); // and now we can convert it back because we just sort it elsewhere
 		public SortedDictionary<string, GroupTagStruct> TagGroups { get; set; } = new();
 
-		//public ObservableCollection<GroupTagStruct> TagGroups { get; set; } = new();
-
-
 
 		private bool is_checked;
 		public async Task LoadTagsMem(bool is_silent)
@@ -978,7 +1022,7 @@ namespace InfiniteRuntimeTagViewer
 						currentTag.Datnum = BitConverter.ToString(test1).Replace("-", string.Empty);
 						loadedTags = false;
 					}
-					catch (System.ArgumentNullException)
+					catch (ArgumentNullException)
 					{
 						hooked = false;
 						return;
@@ -1023,24 +1067,24 @@ namespace InfiniteRuntimeTagViewer
 
 		public async Task Loadtags()
 		{
-			
+
 
 			Dictionary<string, TreeViewItem> groups_headers_diff = new();
 
 			await Task.Run(async () =>
 			{
 
-			// cycle through and evaluate against diff
+				// cycle through and evaluate against diff
 
-			// act accordingly
+				// act accordingly
 
-			// save
+				// save
 
-			// TagsTree
-			loadedTags = true;
-			for (int i = 0; i < TagGroups.Count; i++) // per group
-			{
-				KeyValuePair<string, GroupTagStruct> goop = TagGroups.ElementAt(i);
+				// TagsTree
+				loadedTags = true;
+				for (int i = 0; i < TagGroups.Count; i++) // per group
+				{
+					KeyValuePair<string, GroupTagStruct> goop = TagGroups.ElementAt(i);
 
 					//ObservableCollection<GroupTagStruct> tagGroups = new(TagGroups.Values);
 
@@ -1060,27 +1104,27 @@ namespace InfiniteRuntimeTagViewer
 					{
 						GroupTagStruct displayGroup = goop.Value;
 						Dispatcher.Invoke(new Action(() =>
-						{ 
-						TreeViewItem sortheader = new()
 						{
-							Header = displayGroup.TagGroupName + " (" + displayGroup.TagGroupDesc + ")",
-							ToolTip = new TextBlock { Foreground = Brushes.Black, Text = displayGroup.TagGroupDefinitition }
-						};
-						displayGroup.TagCategory = sortheader;
-						TagGroups[goop.Key] = displayGroup;
+							TreeViewItem sortheader = new()
+							{
+								Header = displayGroup.TagGroupName + " (" + displayGroup.TagGroupDesc + ")",
+								ToolTip = new TextBlock { Foreground = Brushes.Black, Text = displayGroup.TagGroupDefinitition }
+							};
+							displayGroup.TagCategory = sortheader;
+							TagGroups[goop.Key] = displayGroup;
 
-						TagsTree.Items.Add(sortheader); //The tree view in the UI
+							TagsTree.Items.Add(sortheader); //The tree view in the UI
 
-								groups_headers_diff.Add(goop.Key, sortheader);
-
-
-					}));
+							groups_headers_diff.Add(goop.Key, sortheader);
 
 
+						}));
+
+
+
+					}
 
 				}
-
-			}
 
 
 				Dispatcher.Invoke(new Action(async () =>
@@ -1096,46 +1140,46 @@ namespace InfiniteRuntimeTagViewer
 				}));
 
 
-			Dictionary<string, TreeViewItem> tags_headers_diff = new();
+				Dictionary<string, TreeViewItem> tags_headers_diff = new();
 
 				int iteration = 0;
-			foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList.OrderBy(key => key.Value.TagFullName)) // per tag
-			{
+				foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList.OrderBy(key => key.Value.TagFullName)) // per tag
+				{
 					iteration += 1;
-				if (!curr_tag.Value.unloaded)
-				{
-				Dispatcher.Invoke(new Action(() =>
-				{
-					if (tags_headers.Keys.Contains(curr_tag.Key)) // is included in tag_headers UI
+					if (!curr_tag.Value.unloaded)
 					{
-						TreeViewItem t = tags_headers[curr_tag.Key];
-						t.Tag = curr_tag.Key;
-						tags_headers_diff.Add(curr_tag.Key, t);
-						tags_headers.Remove(curr_tag.Key);
-					}
-					else // tag isnt in UI
-					{
-						TreeViewItem t = new();
-						TagStruct tag = curr_tag.Value;
-						TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct? dictTagGroup);
-
-						t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
-
-						t.Tag = curr_tag.Key; // our index to our tag
-
-						t.Selected += Select_Tag_click;
-
-
-						if (dictTagGroup != null && dictTagGroup.TagCategory != null)
+						Dispatcher.Invoke(new Action(() =>
 						{
-							dictTagGroup.TagCategory.Items.Add(t);
-						}
+							if (tags_headers.Keys.Contains(curr_tag.Key)) // is included in tag_headers UI
+							{
+								TreeViewItem t = tags_headers[curr_tag.Key];
+								t.Tag = curr_tag.Key;
+								tags_headers_diff.Add(curr_tag.Key, t);
+								tags_headers.Remove(curr_tag.Key);
+							}
+							else // tag isnt in UI
+							{
+								TreeViewItem t = new();
+								TagStruct tag = curr_tag.Value;
+								TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct? dictTagGroup);
 
-						tags_headers_diff.Add(curr_tag.Key, t);
+								t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
 
-					}
-					
-					}));
+								t.Tag = curr_tag.Key; // our index to our tag
+
+								t.Selected += Select_Tag_click;
+
+
+								if (dictTagGroup != null && dictTagGroup.TagCategory != null)
+								{
+									dictTagGroup.TagCategory.Items.Add(t);
+								}
+
+								tags_headers_diff.Add(curr_tag.Key, t);
+
+							}
+
+						}));
 						if (iteration > 200)
 						{
 							Thread.Sleep(1);
@@ -1143,24 +1187,24 @@ namespace InfiniteRuntimeTagViewer
 						}
 					}
 				}
-			foreach (KeyValuePair<string, TreeViewItem> poop in tags_headers) // per tag remove
-			{
-				if (poop.Value != null)
+				foreach (KeyValuePair<string, TreeViewItem> poop in tags_headers) // per tag remove
 				{
+					if (poop.Value != null)
+					{
 						Dispatcher.Invoke(new Action(() =>
 						{
 							TreeViewItem ownber = poop.Value.Parent as TreeViewItem;
 							ownber.Items.Remove(poop.Value);
 						}));
+					}
 				}
-			}
-			tags_headers = tags_headers_diff;
+				tags_headers = tags_headers_diff;
 
 
-			if (TagsTree.Items.Count < 1)
-			{
-				loadedTags = false;
-			}
+				if (TagsTree.Items.Count < 1)
+				{
+					loadedTags = false;
+				}
 				Dispatcher.Invoke(new Action(() =>
 				{
 					hook_text.Text = "Loaded Tags";
@@ -1168,6 +1212,7 @@ namespace InfiniteRuntimeTagViewer
 					TagsTree.Items.SortDescriptions.Add(new SortDescription("Header", ListSortDirection.Ascending));
 				}));
 			});
+			
 		}
 
 		#endregion
@@ -1194,7 +1239,7 @@ namespace InfiniteRuntimeTagViewer
 			}
 			return false;
 		}
-		
+
 		public string? read_tag_group(long tagGroupAddress)
 		{
 			try
@@ -1241,7 +1286,7 @@ namespace InfiniteRuntimeTagViewer
 		public Dictionary<string, TreeViewItem> tags_headers = new();
 		public ObservableCollection<string> second_level = new();
 
-		
+
 
 		public Dictionary<string, string> InhaledTagnames = new();
 
@@ -1273,53 +1318,57 @@ namespace InfiniteRuntimeTagViewer
 			return new string(myArr);
 		}
 
-		public void CreateTagEditorTabByTagIndex(string tagID)
+		public async Task CreateTagEditorTabByTagIndex(string tagID)
 		{
-			TagStruct? tag = TagsList[tagID];
-			string? tagFull = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
-			string tagName = tagFull.Split('\\').Last();
+				TagStruct? tag = TagsList[tagID];
+				string? tagFull = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
+				string tagName = tagFull.Split('\\').Last();
 
-			// Find the existing layout document ( draggable panel item )
-			if (dockManager.Layout.Descendents().OfType<LayoutDocument>().Any())
-			{
-				LayoutDocument? dockSearch = dockManager.Layout.Descendents()
-					.OfType<LayoutDocument>()
-					.FirstOrDefault(a => a.ContentId == tagFull);
-
-				// Check if we found the tag
-				if (dockSearch != null)
+				// Find the existing layout document ( draggable panel item )
+				if (dockManager.Layout.Descendents().OfType<LayoutDocument>().Any())
 				{
-					// Set the tag as active. What does this even do, if the statement is true, you don't need to set it to true again...
-					if (dockSearch.IsActive)
-					{
-						dockSearch.IsActive = true;
-					}
+				await Task.Run(() =>
+				{
+					LayoutDocument? dockSearch = dockManager.Layout.Descendents()
+						.OfType<LayoutDocument>()
+						.FirstOrDefault(a => a.ContentId == tagFull);
 
-					// Set the tag as the active tab
-					if (dockSearch.Parent is LayoutDocumentPane ldp)
+					// Check if we found the tag
+					if (dockSearch != null)
 					{
-						for (int x = 0; x < ldp.Children.Count; x++)
+						// Set the tag as active. What does this even do, if the statement is true, you don't need to set it to true again...
+						if (dockSearch.IsActive)
 						{
-							LayoutContent dlp = ldp.Children[x];
-
-							if (dlp == dockSearch)
-							{
-								bool? found = true;
-								ldp.SelectedContentIndex = x;
-							}
-							else
-							{
-								bool? found = false; // used for debugging. Debugging what exactly? lol
-							}
+							dockSearch.IsActive = true;
 						}
-					}
 
-					return;
-				}
+						// Set the tag as the active tab
+						if (dockSearch.Parent is LayoutDocumentPane ldp)
+						{
+							for (int x = 0; x < ldp.Children.Count; x++)
+							{
+								LayoutContent dlp = ldp.Children[x];
+
+								if (dlp == dockSearch)
+								{
+									bool? found = true;
+									ldp.SelectedContentIndex = x;
+								}
+								else
+								{
+									bool? found = false; // used for debugging. Debugging what exactly? lol
+								}
+							}
+						
+					}
+						return;
+			}
+				});
 			}
 
+
 			// Create the tag editor.
-			TagEditorControl? tagEditor = new TagEditorControl(this);
+			TagEditorControl? tagEditor = new(this);
 			tagEditor.Inhale_tag(tagID);
 
 			// Create the layout document for docking.
@@ -1331,7 +1380,8 @@ namespace InfiniteRuntimeTagViewer
 
 			dockLayoutDocPane.Children.Add(doc);
 			dockLayoutRoot.ActiveContent = doc;
-		}
+			
+	}
 
 
 		// list of changes to ammend to the memory when we phit the poke button
