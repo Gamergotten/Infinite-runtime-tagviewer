@@ -176,6 +176,12 @@
                             <MenuItem Header="Process Selector">
                                 <controls:ProcessSelector x:Name="processSelector" />
                             </MenuItem>
+                            <!--Menu item to opt out of checking for updates-->
+                            <MenuItem x:Name="CbxCheckForUpdates" Header="Update On Startup" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Check for updates on startup.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
                         </MenuItem>
                         <MenuItem Header="Tools" WindowChrome.IsHitTestVisibleInChrome="True" FontFamily="Segoe UI Light" Height="28">
                             <MenuItem x:Name="TeleportMenuButton" Header="Teleport Menu" Click="OpenTeleportMenu"/>

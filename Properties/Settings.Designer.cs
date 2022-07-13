@@ -142,5 +142,17 @@ namespace InfiniteRuntimeTagViewer.Properties {
                 this["Version"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Updater {
+            get {
+                return ((bool)(this["Updater"]));
+            }
+            set {
+                this["Updater"] = value;
+            }
+        }
     }
 }

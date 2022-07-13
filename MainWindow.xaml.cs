@@ -80,6 +80,7 @@ namespace InfiniteRuntimeTagViewer
 			AutoPokeKey,
 			FilterOnlyMappedKey,
 			OpacityKey,
+			CheckForUpdatesKey,
 			AlwaysOnTopKey;
 		public string ProcAsyncBaseAddr = Settings.Default.ProcAsyncBaseAddr;
 
@@ -104,6 +105,7 @@ namespace InfiniteRuntimeTagViewer
 			FilterOnlyMappedKey = Settings.Default.FilterOnlyMapped;
 			OpacityKey = Settings.Default.Opacity;
 			AlwaysOnTopKey = Settings.Default.AlwaysOnTop;
+			CheckForUpdatesKey = Settings.Default.Updater;
 		}
 		public void SetGeneralSettingsFromConfig()
 		{
@@ -114,6 +116,7 @@ namespace InfiniteRuntimeTagViewer
 			whatdoescbxstandfor.IsChecked = AutoLoadKey; // Probably check box... -Z
 			CbxOnTop.IsChecked = AlwaysOnTopKey;
 			CbxOpacity.IsChecked = OpacityKey;
+			CbxCheckForUpdates.IsChecked = CheckForUpdatesKey;
 		}
 		public void OnApplyChanges_Click()
 		{
@@ -129,6 +132,7 @@ namespace InfiniteRuntimeTagViewer
 			Settings.Default.FilterOnlyMapped = CbxFilterUnloaded.IsChecked;
 			Settings.Default.AlwaysOnTop = CbxOnTop.IsChecked;
 			Settings.Default.Opacity = CbxOpacity.IsChecked;
+			Settings.Default.Updater = CbxCheckForUpdates.IsChecked;
 
 		}
 
@@ -174,7 +178,12 @@ namespace InfiniteRuntimeTagViewer
 			//settings.Close();
 			
 			add_new_section_to_pokelist("Poke Queue");
-			Task.Run(() => CheckForUpdates(this, null));
+			//If the user has opted to check for updates automatically
+			if (Settings.Default.Updater)
+			{
+				//Check for updates
+				Task.Run(() => CheckForUpdates(this, null));
+			}
 		}
 
 
@@ -625,7 +634,7 @@ namespace InfiniteRuntimeTagViewer
 				using (WebClient client = new WebClient())
 				{
 					client.Headers.Add("user-agent", "request");
-					commits = client.DownloadString("https://api.github.com/repos/Sopitive/Infinite-runtime-tagviewer/commits/master");
+					commits = client.DownloadString("https://api.github.com/repos/Gamergotten/Infinite-runtime-tagviewer/commits/master");
 					Debug.WriteLine("Commits: " + commits);
 					//parse the json and set node_id to the value of the node_id field
 					JObject json = JObject.Parse(commits);
@@ -635,6 +644,7 @@ namespace InfiniteRuntimeTagViewer
 			}
 			catch (Exception)
 			{
+				Debug.WriteLine("API Fail");
 				System.Windows.Forms.MessageBox.Show("Unable to check for updates. Please check your internet connection.");
 				return;
 			}
@@ -674,15 +684,17 @@ namespace InfiniteRuntimeTagViewer
 								Settings.Default.Version = node_id;
 								Settings.Default.Save();
 								//Start the unzip.bat file
-								ProcessStartInfo startInfo = new ProcessStartInfo();
-								startInfo.FileName = "unzip.bat";
-								startInfo.Arguments = "Infinite-runtime-tagviewer.zip";
+								ProcessStartInfo startInfo = new()
+								{
+									FileName = "unzip.bat",
+									Arguments = "Infinite-runtime-tagviewer.zip"
+								};
 								Process.Start(startInfo);
 								//Close the current process
 								Environment.Exit(0);
 							};
 							//Download the file on a background thread
-							client.DownloadFileAsync(new Uri("https://nightly.link/Sopitive/Infinite-runtime-tagviewer/workflows/dotnet/master/IRTV.zip"), "IRTV.zip");
+							client.DownloadFileAsync(new Uri("https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/IRTV.zip"), "IRTV.zip");
 							while (client.IsBusy)
 							{
 								System.Windows.Forms.Application.DoEvents();
