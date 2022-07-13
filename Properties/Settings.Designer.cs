@@ -118,5 +118,41 @@ namespace InfiniteRuntimeTagViewer.Properties {
                 this["ProcessPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string GameLocation {
+            get {
+                return ((string)(this["GameLocation"]));
+            }
+            set {
+                this["GameLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Version {
+            get {
+                return ((string)(this["Version"]));
+            }
+            set {
+                this["Version"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Updater {
+            get {
+                return ((bool)(this["Updater"]));
+            }
+            set {
+                this["Updater"] = value;
+            }
+        }
     }
 }

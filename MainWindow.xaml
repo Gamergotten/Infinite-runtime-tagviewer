@@ -167,8 +167,20 @@
                                     <TextBlock Foreground="Black">Manually set pointer to tags.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
+                            <!--Button to change the location of the game exe-->
+                            <MenuItem x:Name="SetGameExe" Header="Set Game EXE..." Click="ShowGameExeDialog">
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Manually set the location of the game exe.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
                             <MenuItem Header="Process Selector">
                                 <controls:ProcessSelector x:Name="processSelector" />
+                            </MenuItem>
+                            <!--Menu item to opt out of checking for updates-->
+                            <MenuItem x:Name="CbxCheckForUpdates" Header="Update On Startup" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Check for updates on startup.</TextBlock>
+                                </MenuItem.ToolTip>
                             </MenuItem>
                         </MenuItem>
                         <MenuItem Header="Tools" WindowChrome.IsHitTestVisibleInChrome="True" FontFamily="Segoe UI Light" Height="28">
@@ -179,6 +191,12 @@
                                         <TextBlock Foreground="Black">Unload Tags</TextBlock>
                                     </MenuItem.ToolTip>
                                 </MenuItem>
+                            </MenuItem>
+                            <!--Check For Updates-->
+                            <MenuItem x:Name="CheckUpdates" Header="Check For Updates" Click="CheckForUpdates">
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Check for updates to IRTV.</TextBlock>
+                                </MenuItem.ToolTip>
                             </MenuItem>
                         </MenuItem>
                         <MenuItem Header="Mods" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Height="28" Click="MenuItem_Click"/>
@@ -276,7 +294,7 @@
                             <Button     Grid.Column="6" Content="Show Queue" HorizontalAlignment="Stretch" Click="BtnShowHideQueue_Click" Margin="10,0,0,0" />
                             <Button x:Name="ReloadProcBtn"    Grid.Column="7" Content="Reload Process" HorizontalAlignment="Stretch" Click="BtnReloadProcessClick" Margin="10,0,0,0">
                                 <Button.ToolTip>
-                                <TextBlock Foreground="Black">Reload all Halo Infinite processes.</TextBlock>
+                                    <TextBlock Foreground="Black">Reload all Halo Infinite processes.</TextBlock>
                                 </Button.ToolTip>
                             </Button>
                             <Button x:Name="CloseProcBtn"     Grid.Column="8" Content="Close Process" HorizontalAlignment="Stretch" Click="BtnCloseClick" Margin="10,0,0,0" >
@@ -349,13 +367,13 @@
                     <!-- < Search Box -->
 
                     <TreeView x:Name="TagsTree" Grid.Row="2" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" Grid.ColumnSpan="2">
-						<TreeViewItem Header="[Tutorial]" />
+                        <TreeViewItem Header="[Tutorial]" />
                         <TreeViewItem Header="1. Press the load button to get started!" />
                         <TreeViewItem Header="2. Press again whenever the map/zoneset changes." />
                         <TreeViewItem Header="3. Make sure tags are loaded correctly when saving/loading!" />
                         <TreeViewItem Header="4. To save presets, make sure your changes are queued." />
                         <TreeViewItem Header="5. Gamergotten xxZxx, Sopitive, and Callum Carmicheal say hi :P" />
-						<TreeViewItem Header="" />
+                        <TreeViewItem Header="" />
                         <TreeViewItem Header="[Build Information]" />
                         <TreeViewItem Header="This build was cleaned and maintained by: TempAccountNull" />
                     </TreeView>
