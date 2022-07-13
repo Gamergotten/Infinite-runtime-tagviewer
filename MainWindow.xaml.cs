@@ -641,6 +641,12 @@ namespace InfiniteRuntimeTagViewer
 					node_id = (string) json["node_id"];
 					Debug.WriteLine("Node ID: " + node_id);
 				}
+				if (Settings.Default.Version == "")
+				{
+					Settings.Default.Version = node_id;
+					Settings.Default.Save();
+					return;
+				}
 			}
 			catch (Exception)
 			{
@@ -661,7 +667,7 @@ namespace InfiniteRuntimeTagViewer
 				return;
 			}
 			//Compare the two and if the stored version is less than the current version, display a message box asking if the user would like to download the latest version
-			if (storedVersion.CompareTo(node_id) < 0)
+			if (storedVersion != node_id)
 			{
 				DialogResult result = System.Windows.Forms.MessageBox.Show("A new version of the tag viewer is available. Would you like to download the latest version?", "Update Available", MessageBoxButtons.YesNoCancel);
 				if (result == System.Windows.Forms.DialogResult.Yes)
