@@ -81,6 +81,9 @@ namespace InfiniteRuntimeTagViewer
 			FilterOnlyMappedKey,
 			OpacityKey,
 			CheckForUpdatesKey,
+			CloseTabsAutoKey,
+			ShowPrecursorKey,
+			ShowDatanumKey,
 			AlwaysOnTopKey;
 		public string ProcAsyncBaseAddr = Settings.Default.ProcAsyncBaseAddr;
 
@@ -106,6 +109,9 @@ namespace InfiniteRuntimeTagViewer
 			OpacityKey = Settings.Default.Opacity;
 			AlwaysOnTopKey = Settings.Default.AlwaysOnTop;
 			CheckForUpdatesKey = Settings.Default.Updater;
+			CloseTabsAutoKey = Settings.Default.CloseTabsAuto;
+			ShowPrecursorKey = Settings.Default.ShowPrecursor;
+			ShowDatanumKey = Settings.Default.ShowDatanum;
 		}
 		public void SetGeneralSettingsFromConfig()
 		{
@@ -117,6 +123,9 @@ namespace InfiniteRuntimeTagViewer
 			CbxOnTop.IsChecked = AlwaysOnTopKey;
 			CbxOpacity.IsChecked = OpacityKey;
 			CbxCheckForUpdates.IsChecked = CheckForUpdatesKey;
+			CbxCloseTabs.IsChecked = CloseTabsAutoKey;
+			CbxShowPrecursor.IsChecked = ShowPrecursorKey;
+			CbxShowDatanum.IsChecked = ShowDatanumKey;
 		}
 		public void OnApplyChanges_Click()
 		{
@@ -133,6 +142,9 @@ namespace InfiniteRuntimeTagViewer
 			Settings.Default.AlwaysOnTop = CbxOnTop.IsChecked;
 			Settings.Default.Opacity = CbxOpacity.IsChecked;
 			Settings.Default.Updater = CbxCheckForUpdates.IsChecked;
+			Settings.Default.CloseTabsAuto = CbxCloseTabs.IsChecked;
+			Settings.Default.ShowPrecursor = CbxShowPrecursor.IsChecked;
+			Settings.Default.ShowDatanum = CbxShowDatanum.IsChecked;
 
 		}
 
@@ -238,41 +250,42 @@ namespace InfiniteRuntimeTagViewer
 			{
 				Debug.WriteLine(ex.ToString());
 				//If exception is a null reference exception, set the hook text to "Game Not Open"
-				if (ex.GetType().IsAssignableFrom(typeof(NullReferenceException)))
+				await HandleHookFail(ex);
+			}
+		}
+		
+		public async Task HandleHookFail(Exception ex)
+		{
+			if (ex.GetType().IsAssignableFrom(typeof(NullReferenceException)))
+			{
+				hook_text.Text = "Can't Find HaloInfinite.exe";
+				//Show a message box that prompts the user if they want to launch the game
+				MessageBoxResult result = (MessageBoxResult) System.Windows.Forms.MessageBox.Show("HaloInfinite.exe is not open. Do you want to open it?", "HaloInfinite.exe Not Open", System.Windows.Forms.MessageBoxButtons.YesNo);
+				if (result == MessageBoxResult.Yes)
 				{
-					hook_text.Text = "Can't Find HaloInfinite.exe";
-					//Show a message box that prompts the user if they want to launch the game
-					MessageBoxResult result = (MessageBoxResult) System.Windows.Forms.MessageBox.Show("HaloInfinite.exe is not open. Do you want to open it?", "HaloInfinite.exe Not Open", System.Windows.Forms.MessageBoxButtons.YesNo);
-					if (result == MessageBoxResult.Yes)
+					//Check if the setting for the game location is set
+					if (Settings.Default.GameLocation != "")
 					{
-						//Check if the setting for the game location is set
-						if (Settings.Default.GameLocation != "")
-						{
-							//If it is set, open the game
-							System.Diagnostics.Process.Start(Settings.Default.GameLocation);
-							//wait 15 seconds before trying to load again
-							await Task.Delay(15000);
-							//Try to hook again
-							await HookProcessAsync();
-						}
-						else
-						{
-							//If it is not set, allow the user to browse to an exe file, then open that exe file, wait 15 seconds, and resume loading.
-							OpenFileDialog ofd = new()
-							{
-								Filter = "HaloInfinite.exe|HaloInfinite.exe",
-								Title = "Please select HaloInfinite.exe"
-							};
-							ofd.ShowDialog();
-							Settings.Default.GameLocation = ofd.FileName;
-							Settings.Default.Save();
-							System.Diagnostics.Process.Start(Settings.Default.GameLocation);
-							await Task.Delay(15000);
-							await HookProcessAsync();
-						}
+						//If it is set, open the game
+						Process.Start(Settings.Default.GameLocation);
 					}
-
+					else
+					{
+						//If it is not set, allow the user to browse to an exe file, then open that exe file, wait 15 seconds, and resume loading.
+						OpenFileDialog ofd = new()
+						{
+							Filter = "HaloInfinite.exe|HaloInfinite.exe",
+							Title = "Please select HaloInfinite.exe"
+						};
+						ofd.ShowDialog();
+						Settings.Default.GameLocation = ofd.FileName;
+						Settings.Default.Save();
+						System.Diagnostics.Process.Start(Settings.Default.GameLocation);
+						await Task.Delay(15000);
+						await HookProcessAsync();
+					}
 				}
+
 			}
 		}
 
@@ -284,7 +297,7 @@ namespace InfiniteRuntimeTagViewer
 			{
 				await HookProcessAsync();
 			}
-			catch (System.ArgumentNullException)
+			catch (ArgumentNullException)
 			{
 
 			}
@@ -297,7 +310,7 @@ namespace InfiniteRuntimeTagViewer
 				{
 					Searchbox_TextChanged(null, null);
 
-					System.Diagnostics.Debugger.Log(0, "DBGTIMING", "Done loading tags");
+					Debugger.Log(0, "DBGTIMING", "Done loading tags");
 
 				}
 			}
@@ -430,9 +443,10 @@ namespace InfiniteRuntimeTagViewer
 						hooked = true;
 					}
 				}
-				catch (Exception)
+				catch (Exception ex)
 				{
 					hook_text.Text = "Cant find HaloInfinite.exe";
+					await HandleHookFail(ex);
 				}
 			}
 		}
@@ -472,7 +486,7 @@ namespace InfiniteRuntimeTagViewer
 		{
 			foreach (Process? process in Process.GetProcessesByName("HaloInfinite"))
 			{
-				string? filePath = process.MainModule.FileName;
+				string? filePath = Settings.Default.ProcessPath;
 				process.Kill();
 				Process.Start(filePath);
 			}
@@ -1002,11 +1016,20 @@ namespace InfiniteRuntimeTagViewer
 			groups_headers.Clear();
 			tags_headers.Clear();
 			HookAndLoad();
+			//Remove children from dockLayoutDocPane if the user has selected to close them on load
+			if (Settings.Default.CloseTabsAuto)
+			{
+				dockLayoutDocPane.Children.Clear();
+			}
 		}
 		private void BtnLoadTags_Click(object sender, RoutedEventArgs e)
 		{
 			HookAndLoad();
 			Reload_Button.IsEnabled = true;
+			if (Settings.Default.CloseTabsAuto)
+			{
+				dockLayoutDocPane.Children.Clear();
+			}
 		}
 
 		private void Window_Deactivated(object sender, EventArgs e)
@@ -1196,7 +1219,7 @@ namespace InfiniteRuntimeTagViewer
 				}
 
 
-				Dispatcher.Invoke(new Action(async () =>
+				Dispatcher.Invoke(new Action( () =>
 				{
 					foreach (KeyValuePair<string, TreeViewItem> poop in groups_headers) // per group
 					{
@@ -1217,7 +1240,7 @@ namespace InfiniteRuntimeTagViewer
 					iteration += 1;
 					if (!curr_tag.Value.unloaded)
 					{
-						Dispatcher.Invoke(new Action(() =>
+						Dispatcher.Invoke(new Action(async() =>
 						{
 							if (tags_headers.Keys.Contains(curr_tag.Key)) // is included in tag_headers UI
 							{
@@ -1232,7 +1255,24 @@ namespace InfiniteRuntimeTagViewer
 								TagStruct tag = curr_tag.Value;
 								TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct? dictTagGroup);
 
-								t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
+								if (Settings.Default.ShowDatanum)
+								{
+									t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
+								}
+								else
+								{
+									t.Header = convert_ID_to_tag_name(tag.ObjectId);
+									//Debug.WriteLine(tag.ObjectId);
+								}
+								
+								if (!Settings.Default.ShowPrecursor)
+								{
+									//Filter out text such as objects/human/rifles and leave the actual tag name
+									string[] split = t.Header.ToString().Split('/');
+									t.Header = split[split.Length - 1];
+								}
+
+
 
 								t.Tag = curr_tag.Key; // our index to our tag
 
@@ -1396,50 +1436,47 @@ namespace InfiniteRuntimeTagViewer
 			// Find the existing layout document ( draggable panel item )
 			if (dockManager.Layout.Descendents().OfType<LayoutDocument>().Any())
 			{
-				await Task.Run(() =>
+
+				LayoutDocument? dockSearch = dockManager.Layout.Descendents()
+					.OfType<LayoutDocument>()
+					.FirstOrDefault(a => a.ContentId == tagFull);
+
+				// Check if we found the tag
+				if (dockSearch != null)
 				{
-					LayoutDocument? dockSearch = dockManager.Layout.Descendents()
-						.OfType<LayoutDocument>()
-						.FirstOrDefault(a => a.ContentId == tagFull);
-
-					// Check if we found the tag
-					if (dockSearch != null)
+					// Set the tag as active. What does this even do, if the statement is true, you don't need to set it to true again...
+					if (dockSearch.IsActive)
 					{
-						// Set the tag as active. What does this even do, if the statement is true, you don't need to set it to true again...
-						if (dockSearch.IsActive)
-						{
-							dockSearch.IsActive = true;
-						}
-
-						// Set the tag as the active tab
-						if (dockSearch.Parent is LayoutDocumentPane ldp)
-						{
-							for (int x = 0; x < ldp.Children.Count; x++)
-							{
-								LayoutContent dlp = ldp.Children[x];
-
-								if (dlp == dockSearch)
-								{
-									bool? found = true;
-									ldp.SelectedContentIndex = x;
-								}
-								else
-								{
-									bool? found = false; // used for debugging. Debugging what exactly? lol
-								}
-							}
-
-						}
-						return;
+						dockSearch.IsActive = true;
 					}
-				});
+
+					// Set the tag as the active tab
+					if (dockSearch.Parent is LayoutDocumentPane ldp)
+					{
+						for (int x = 0; x < ldp.Children.Count; x++)
+						{
+							LayoutContent dlp = ldp.Children[x];
+
+							if (dlp == dockSearch)
+							{
+								bool? found = true;
+								ldp.SelectedContentIndex = x;
+							}
+							else
+							{
+								bool? found = false; // used for debugging. Debugging what exactly? lol
+							}
+						}
+
+					}
+					
+				}
 			}
 
 
 			// Create the tag editor.
 			TagEditorControl? tagEditor = new(this);
 			tagEditor.Inhale_tag(tagID);
-
 			// Create the layout document for docking.
 			LayoutDocument doc = tagEditor.LayoutDocument = new LayoutDocument();
 			doc.Title = tagName;

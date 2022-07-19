@@ -154,5 +154,41 @@ namespace InfiniteRuntimeTagViewer.Properties {
                 this["Updater"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool CloseTabsAuto {
+            get {
+                return ((bool)(this["CloseTabsAuto"]));
+            }
+            set {
+                this["CloseTabsAuto"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowDatanum {
+            get {
+                return ((bool)(this["ShowDatanum"]));
+            }
+            set {
+                this["ShowDatanum"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowPrecursor {
+            get {
+                return ((bool)(this["ShowPrecursor"]));
+            }
+            set {
+                this["ShowPrecursor"] = value;
+            }
+        }
     }
 }

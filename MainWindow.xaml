@@ -182,6 +182,24 @@
                                     <TextBlock Foreground="Black">Check for updates on startup.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
+                            <!--Menu item to close dock layout tabs automatically when reloading the tags-->
+                            <MenuItem x:Name="CbxCloseTabs" Header="Close Tabs Automatically" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Close tag editor tabs automatically when reloading tags.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+                            <!--ShowDatanum-->
+                            <MenuItem x:Name="CbxShowDatanum" Header="Show Datanum" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Show datanum in tag names.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+                            <!--ShowTagname precursor WIP-->
+                            <!--<MenuItem x:Name="CbxShowPrecursor" Header="Show Precursor" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Show precursor in tag names.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>-->
                         </MenuItem>
                         <MenuItem Header="Tools" WindowChrome.IsHitTestVisibleInChrome="True" FontFamily="Segoe UI Light" Height="28">
                             <MenuItem x:Name="TeleportMenuButton" Header="Teleport Menu" Click="OpenTeleportMenu"/>
@@ -232,8 +250,7 @@
 
                 <GridSplitter Grid.Column="2"
                     HorizontalAlignment="Stretch"
-                    Background="#555"
-                    ShowsPreview="true" />
+                    Background="#555" />
 
                 <!-- Tags Grid -->
                 <Grid Grid.Column="3" Background="#252526">
@@ -276,13 +293,13 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50" />
                                 <ColumnDefinition Width="80" />
-                                <ColumnDefinition Width="110" />
-                                <ColumnDefinition Width="110" />
-                                <ColumnDefinition Width="75" />
+                                <ColumnDefinition Width="100*" />
+                                <ColumnDefinition Width="110*" />
+                                <ColumnDefinition Width="75*" />
                                 <ColumnDefinition />
-                                <ColumnDefinition Width="150" />
-                                <ColumnDefinition Width="125" />
-                                <ColumnDefinition Width="125" />
+                                <ColumnDefinition Width="125*" />
+                                <ColumnDefinition Width="125*" />
+                                <ColumnDefinition Width="125*" />
                             </Grid.ColumnDefinitions>
 
                             <Button     Content="Poke All" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BtnPokeChanges_Click" Padding="4,4,4,4" />

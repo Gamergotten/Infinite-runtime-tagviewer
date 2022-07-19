@@ -60,65 +60,65 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 
 		public void Inhale_tag(string tagID) // i love dictionaries
 		{
-			TagStruct loadingTag = _mainWindow.TagsList[tagID];
-			Tagname_text.Text = _mainWindow.convert_ID_to_tag_name(loadingTag.ObjectId);
-			tagID_text.Text = "ID: " + loadingTag.ObjectId;
-			tagdatnum_text.Text = "Datnum: " + loadingTag.Datnum;
-			tagdata_text.Text = "Tag data address: 0x" + loadingTag.TagData.ToString("X");
+				TagStruct loadingTag = _mainWindow.TagsList[tagID];
+				Tagname_text.Text = _mainWindow.convert_ID_to_tag_name(loadingTag.ObjectId);
+				tagID_text.Text = "ID: " + loadingTag.ObjectId;
+				tagdatnum_text.Text = "Datnum: " + loadingTag.Datnum;
+				tagdata_text.Text = "Tag data address: 0x" + loadingTag.TagData.ToString("X");
 
-			tagfilter_text.Text = "";
+				tagfilter_text.Text = "";
 
-			tagview_panels.Children.Clear();
+				tagview_panels.Children.Clear();
 
-			// OK, now we do a proper check to see if this tag is loaded, finally looked into this
+				// OK, now we do a proper check to see if this tag is loaded, finally looked into this
 
-			try // never done this before and i hope im doing it terribly wrong
-			{
-				// pointer check
-				TagValueBlock p_block = new() { HorizontalAlignment = HorizontalAlignment.Left };
-				p_block.value_type.Text = "Pointer check";
-				p_block.value.Text = _m.ReadLong((loadingTag.TagData).ToString("X")).ToString("X");
-				tagview_panels.Children.Add(p_block);
-
-				// ID check
-				TagValueBlock id_block = new() { HorizontalAlignment = HorizontalAlignment.Left };
-				id_block.value_type.Text = "ID check";
-				string checked_ID = BitConverter.ToString(_m.ReadBytes((loadingTag.TagData + 8).ToString("X"), 4)).Replace("-", string.Empty);
-				id_block.value.Text = checked_ID;
-				tagview_panels.Children.Add(id_block);
-
-				// Datnum check
-				TagValueBlock dat_block = new() { HorizontalAlignment = HorizontalAlignment.Left };
-				dat_block.value_type.Text = "Datnum check";
-				string checked_datnum = BitConverter.ToString(_m.ReadBytes((loadingTag.TagData + 12).ToString("X"), 4)).Replace("-", string.Empty);
-				dat_block.value.Text = checked_datnum;
-				tagview_panels.Children.Add(dat_block);
-
-				if (checked_ID != loadingTag.ObjectId || checked_datnum != loadingTag.Datnum)
+				try // never done this before and i hope im doing it terribly wrong
 				{
-					TextBox tb1 = new TextBox { Text = "Datnum/ID mismatch; Tag appears to be unloaded, meaning it may not be active on the map, else try reloading the tags" };
-					tagview_panels.Children.Add(tb1);
-					return;
-				}
+					// pointer check
+					TagValueBlock p_block = new() { HorizontalAlignment = HorizontalAlignment.Left };
+					p_block.value_type.Text = "Pointer check";
+					p_block.value.Text = _m.ReadLong((loadingTag.TagData).ToString("X")).ToString("X");
+					tagview_panels.Children.Add(p_block);
 
-				//if (TagLayouts.Tags.ContainsKey(loadingTag.TagGroup))
-				//{
+					// ID check
+					TagValueBlock id_block = new() { HorizontalAlignment = HorizontalAlignment.Left };
+					id_block.value_type.Text = "ID check";
+					string checked_ID = BitConverter.ToString(_m.ReadBytes((loadingTag.TagData + 8).ToString("X"), 4)).Replace("-", string.Empty);
+					id_block.value.Text = checked_ID;
+					tagview_panels.Children.Add(id_block);
+
+					// Datnum check
+					TagValueBlock dat_block = new() { HorizontalAlignment = HorizontalAlignment.Left };
+					dat_block.value_type.Text = "Datnum check";
+					string checked_datnum = BitConverter.ToString(_m.ReadBytes((loadingTag.TagData + 12).ToString("X"), 4)).Replace("-", string.Empty);
+					dat_block.value.Text = checked_datnum;
+					tagview_panels.Children.Add(dat_block);
+
+					if (checked_ID != loadingTag.ObjectId || checked_datnum != loadingTag.Datnum)
+					{
+						TextBox tb1 = new TextBox { Text = "Datnum/ID mismatch; Tag appears to be unloaded, meaning it may not be active on the map, else try reloading the tags" };
+						tagview_panels.Children.Add(tb1);
+						return;
+					}
+
+					//if (TagLayouts.Tags.ContainsKey(loadingTag.TagGroup))
+					//{
 					Dictionary<long, TagLayouts.C> tags = TagLayouts.Tags(loadingTag.TagGroup);
-					readTagsAndCreateControls(loadingTag, 0, tags, loadingTag.TagData, tagview_panels, tagID+":");
-				//}
-				//else
-				//{
-				//	TextBox tb = new TextBox { Text = "This tag isn't mapped out ):" };
-				//	tagview_panels.Children.Add(tb);
-				//}
-			}
+					readTagsAndCreateControls(loadingTag, 0, tags, loadingTag.TagData, tagview_panels, tagID + ":");
+					//}
+					//else
+					//{
+					//	TextBox tb = new TextBox { Text = "This tag isn't mapped out ):" };
+					//	tagview_panels.Children.Add(tb);
+					//}
+				}
 			catch
 			{
 				TextBox tb = new TextBox { Text = "ran into an oopsie woopsie, this tag is probably broken/unloaded right now" };
 				tagview_panels.Children.Add(tb);
 			}
 
-
+			
 		}
 
 		// hmm we need a system that reads the pointer and adds it
@@ -1471,19 +1471,11 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 						tfob2.f_name.Text = entry.Value.N;
 
 						break;
-
+					
 				}
 
 				prevEntry = entry;
 			}
-		}
-
-		public void fat_chunk_of_code_from_above(long thingo_address, FunctionBlock fb )
-		{
-			// address + entry.Key
-
-
-
 		}
 
 		public static string SUSSY_BALLS(string input, long add_to)
