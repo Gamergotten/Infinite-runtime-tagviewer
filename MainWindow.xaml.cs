@@ -361,7 +361,6 @@ namespace InfiniteRuntimeTagViewer
 
 		public static IEnumerable<string> SplitThis(string str, int n)
 		{
-
 			return Enumerable.Range(0, str.Length / n)
 							.Select(i => str.Substring(i * n, n));
 		}
@@ -1393,46 +1392,46 @@ namespace InfiniteRuntimeTagViewer
 			string? tagFull = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
 			string tagName = tagFull.Split('\\').Last();
 
+			// You can't put this as a task because it's owned by a different thread.
+			// You could invoke it with dispatcher, but then the task would basically be pointless.
+			// This was preventing more than one tab from opening. -Z
+
 			// Find the existing layout document ( draggable panel item )
 			if (dockManager.Layout.Descendents().OfType<LayoutDocument>().Any())
 			{
-				await Task.Run(() =>
+				LayoutDocument? dockSearch = dockManager.Layout.Descendents()
+					.OfType<LayoutDocument>()
+					.FirstOrDefault(a => a.ContentId == tagFull);
+
+				// Check if we found the tag
+				if (dockSearch != null)
 				{
-					LayoutDocument? dockSearch = dockManager.Layout.Descendents()
-						.OfType<LayoutDocument>()
-						.FirstOrDefault(a => a.ContentId == tagFull);
-
-					// Check if we found the tag
-					if (dockSearch != null)
+					// Set the tag as active. What does this even do, if the statement is true, you don't need to set it to true again...
+					if (dockSearch.IsActive)
 					{
-						// Set the tag as active. What does this even do, if the statement is true, you don't need to set it to true again...
-						if (dockSearch.IsActive)
-						{
-							dockSearch.IsActive = true;
-						}
-
-						// Set the tag as the active tab
-						if (dockSearch.Parent is LayoutDocumentPane ldp)
-						{
-							for (int x = 0; x < ldp.Children.Count; x++)
-							{
-								LayoutContent dlp = ldp.Children[x];
-
-								if (dlp == dockSearch)
-								{
-									bool? found = true;
-									ldp.SelectedContentIndex = x;
-								}
-								else
-								{
-									bool? found = false; // used for debugging. Debugging what exactly? lol
-								}
-							}
-
-						}
-						return;
+						dockSearch.IsActive = true;
 					}
-				});
+
+					// Set the tag as the active tab
+					if (dockSearch.Parent is LayoutDocumentPane ldp)
+					{
+						for (int x = 0; x < ldp.Children.Count; x++)
+						{
+							LayoutContent dlp = ldp.Children[x];
+
+							if (dlp == dockSearch)
+							{
+								bool? found = true;
+								ldp.SelectedContentIndex = x;
+							}
+							else
+							{
+								bool? found = false; // used for debugging. Debugging what exactly? lol
+							}
+						}
+					}
+					return;
+				}
 			}
 
 
