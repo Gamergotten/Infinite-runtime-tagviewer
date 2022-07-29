@@ -14,6 +14,9 @@ Welcome to the very first 'Epic Runtime Tag Editing Tool' for Halo Infinite.
 **Issues/Requests**
 - If you experience any issues, want an unmapped value mapped, or have any (reasonable) requests, please message xxZxx#0001 on discord.
 
+**Dumping Tag Structs**
+- Tool Link: https://github.com/Z-15/Infinite-Tagstruct-Dumper
+
 **Currently**
 - We now support all tags (Well. Kinda.) 
 - If they don't load then there's an issue with the value mappings). Please shoot me a message on where ever and I'll look into it.
