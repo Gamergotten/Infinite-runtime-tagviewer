@@ -16,17 +16,9 @@
                  Deactivated="Window_Deactivated"
                  SizeChanged="window_SizeChanged"
                  WindowStyle="None">
-
     <Window.Resources>
         <TransformGroup x:Key="windowScaleTransform">
-            <ScaleTransform
-                ScaleX="1"
-                ScaleY="1" />
-
-            <!-- <SkewTransform
-                AngleX="30" />
-
-            <RotateTransform Angle="6" /> -->
+            <ScaleTransform ScaleX="1" ScaleY="1" />
         </TransformGroup>
 
         <!--Base style for title bar buttons-->
@@ -89,32 +81,21 @@
 
     <Border x:Name="MainWindowBorder" BorderBrush="Transparent" BorderThickness="0" >
         <Grid x:Name="parentContainer" Background="Transparent">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="21*"/>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="497*"/>
-                <ColumnDefinition Width="54*"/>
-            </Grid.ColumnDefinitions>
-
             <Grid.RowDefinitions>
-                <RowDefinition Height ="Auto"/>
+                <RowDefinition Height ="30"/>
                 <RowDefinition Height ="*"/>
             </Grid.RowDefinitions>
-
             <!--Window chrome-->
             <Grid Grid.Row="0" Height="30" Background="#252526" Grid.ColumnSpan="4">
-
                 <DockPanel>
                     <Menu x:Name="MainMenu" IsMainMenu="True" Padding="10 0" Background="#252526">
                         <MenuItem Header="_File" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Height="30">
                             <MenuItem Header="_Open (Poke List)" Click="Open_pokes">
-                                <!--DONE ;)-->
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Open a file.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
                             <MenuItem Header="_Save (Poke List)" Click="Save_pokes" >
-                                <!--DONE ;)-->
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Save all pokes from current sub-pokelist in queue.</TextBlock>
                                 </MenuItem.ToolTip>
@@ -184,6 +165,7 @@
                             </MenuItem>
                         </MenuItem>
                         <MenuItem Header="Tools" WindowChrome.IsHitTestVisibleInChrome="True" FontFamily="Segoe UI Light" Height="28">
+                            <MenuItem Header="Dump Tag Structs" Click="DumpClick"/>
                             <MenuItem x:Name="TeleportMenuButton" Header="Teleport Menu" Click="OpenTeleportMenu"/>
                             <MenuItem x:Name="DebugMenu" Header="Debug">
                                 <MenuItem x:Name="UnloadAllTags" Header="Unload Tags" Click="UnloadTags" >
@@ -198,15 +180,23 @@
                                     <TextBlock Foreground="Black">Check for updates to IRTV.</TextBlock>
                                 </MenuItem.ToolTip>
                             </MenuItem>
+                            <MenuItem x:Name="ReloadProcBtn" Header="Reload Process" Click="BtnReloadProcessClick">
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Reload all Halo Infinite processes.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+                            <MenuItem x:Name="CloseProcBtn" Header="Close Process" Click="BtnCloseClick">
+                                <MenuItem.ToolTip>
+                                    <TextBlock Foreground="Black">Close all Halo Infinite processes.</TextBlock>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
                         </MenuItem>
                         <MenuItem Header="Mods" WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI Light" Height="28" Click="MenuItem_Click"/>
-
                     </Menu>
                 </DockPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBlock Text="{Binding Title, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:MainWindow}}}" FontFamily="Arial" Margin="15 0 0 0" />
                 </StackPanel>
-
                 <!--Caption buttons-->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
                     <Button Style="{StaticResource MinimizeButtonStyle}" WindowChrome.IsHitTestVisibleInChrome="True" ToolTip="Minimize"
@@ -221,152 +211,33 @@
             </Grid>
 
             <!-- App content -->
-            <Grid Grid.Row="1" x:Name="AppArea" LayoutTransform="{StaticResource windowScaleTransform}" Grid.ColumnSpan="4">
-
+            <Grid Grid.Row="1" x:Name="AppArea" LayoutTransform="{StaticResource windowScaleTransform}">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5*" />
-                    <ColumnDefinition Width="21*"/>
-                    <ColumnDefinition Width="8" />
-                    <ColumnDefinition Width="63*" />
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="3" />
+                    <ColumnDefinition Width="65*" />
                 </Grid.ColumnDefinitions>
-
-                <GridSplitter Grid.Column="2"
-                    HorizontalAlignment="Stretch"
-                    Background="#555"
-                    ShowsPreview="true" />
-
+                
                 <!-- Tags Grid -->
-                <Grid Grid.Column="3" Background="#252526">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                    </Grid.RowDefinitions>
-
-                    <DockingManager x:Name="dockManager" Grid.Row="0"
-                            Background="#333333"
-                            AllowMixedOrientation="True"
-                            AutoWindowSizeWhenOpened="True"
-                            DocumentClosing="DockManager_DocumentClosing" Margin="0,0,0,6">
-
-                        <DockingManager.Theme>
-                            <Vs2013DarkTheme />
-                        </DockingManager.Theme>
-
-                        <DockingManager.DocumentHeaderTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding Title}" TextTrimming="CharacterEllipsis" />
-                                </StackPanel>
-                            </DataTemplate>
-                        </DockingManager.DocumentHeaderTemplate>
-
-                        <LayoutRoot x:Name="dockLayoutRoot">
-                            <LayoutPanel x:Name="dockLayoutPanel">
-                                <LayoutDocumentPaneGroup>
-                                    <LayoutDocumentPane x:Name="dockLayoutDocPane" />
-                                </LayoutDocumentPaneGroup>
-                            </LayoutPanel>
-                        </LayoutRoot>
-                    </DockingManager>
-
-                    <Grid Grid.Row="1" Margin="0,0,0,0" Background="#252526">
-                        <Grid Margin="5,5,5,5">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="50" />
-                                <ColumnDefinition Width="80" />
-                                <ColumnDefinition Width="110" />
-                                <ColumnDefinition Width="110" />
-                                <ColumnDefinition Width="75" />
-                                <ColumnDefinition />
-                                <ColumnDefinition Width="150" />
-                                <ColumnDefinition Width="125" />
-                                <ColumnDefinition Width="125" />
-                            </Grid.ColumnDefinitions>
-
-                            <Button     Content="Poke All" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BtnPokeChanges_Click" Padding="4,4,4,4" />
-                            <Button     Content="Revert pokes" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="REVERT_ALL_BUTTON" Padding="4,4,4,4" Margin="5 0 0 0" />
-                            <TextBlock  x:Name="poke_text" Grid.Column="2" HorizontalAlignment="Left" Text=". . ." VerticalAlignment="Center" Margin="5,0,0,0" />
-
-                            <TextBlock  x:Name="change_text" Grid.Column="3" HorizontalAlignment="Right" Text="0 changes queued" VerticalAlignment="Center" Margin="0,0,5,0" />
-                            <Button     Grid.Column="4" Content="Clear All" HorizontalAlignment="Stretch" Click="BtnClearQueue_Click" />
-                            <Button     Grid.Column="6" Content="Show Queue" HorizontalAlignment="Stretch" Click="BtnShowHideQueue_Click" Margin="10,0,0,0" />
-                            <Button x:Name="ReloadProcBtn"    Grid.Column="7" Content="Reload Process" HorizontalAlignment="Stretch" Click="BtnReloadProcessClick" Margin="10,0,0,0">
-                                <Button.ToolTip>
-                                    <TextBlock Foreground="Black">Reload all Halo Infinite processes.</TextBlock>
-                                </Button.ToolTip>
-                            </Button>
-                            <Button x:Name="CloseProcBtn"     Grid.Column="8" Content="Close Process" HorizontalAlignment="Stretch" Click="BtnCloseClick" Margin="10,0,0,0" >
-                                <Button.ToolTip>
-                                    <TextBlock Foreground="Black">Close all Halo Infinite processes.</TextBlock>
-                                </Button.ToolTip>
-                            </Button>
-
-                        </Grid>
-                    </Grid>
-                    <Grid x:Name="queuelist"  MinHeight="170" MaxHeight="200" Grid.Row="3" Grid.ColumnSpan="5" Margin="0,0,0,10" Background="#252526" Visibility="Collapsed"  >
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="25"/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Grid Background="#FF2B2B2B">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="25" />
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="5"/>
-                                <ColumnDefinition Width="90"/>
-                                <ColumnDefinition Width="110"/>
-                                <ColumnDefinition />
-                                <ColumnDefinition Width="70"/>
-                                <ColumnDefinition Width="130"/>
-                            </Grid.ColumnDefinitions>
-                            <Button Grid.Column="3" HorizontalAlignment="Stretch" Content="Poke These" VerticalAlignment="Stretch" Click="Button_Click" />
-                            <Button Grid.Column="4" HorizontalAlignment="Stretch" Content="Revert These" VerticalAlignment="Stretch" Click="REVERT_SINGLE_BUTTON" />
-
-                            <ComboBox x:Name="PokeList_Combobox" Grid.Column="1"  SelectionChanged="PokeList_Combobox_SelectionChanged" MinWidth="160" />
-
-                            <Button Grid.Column="0"  Content="+" Click="Button_Click_1"/>
-
-                            <Button Grid.Column="6" Content="Clear List" Click="BtnClearQueueSingle_Click"/>
-                            <Button x:Name="remove_from_quee_button" Grid.Column="7" Content="Remove from queue" Click="BtnREMOVEQueueSingle_Click" />
-                        </Grid>
-
-                        <ScrollViewer Grid.Row="1" x:Name="changes_panel_container" >
-                            <StackPanel x:Name="changes_panel" Background="#FF212121" />
-                        </ScrollViewer>
-                    </Grid>
-                </Grid>
-                <!-- > Tags Grid -->
-
                 <Grid Grid.Column="0" Margin="0,0,2,0" Background="#252526" Grid.ColumnSpan="2">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="37*"/>
-                        <ColumnDefinition Width="129*"/>
-                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="10" />
-                        <RowDefinition Height="20" />
-                        <RowDefinition />
-                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="35"/>
                     </Grid.RowDefinitions>
 
-                    <!-- > Search Box -->
-                    <Grid Grid.RowSpan="2" Margin="0,1,0,2" Background="#252526" Grid.ColumnSpan="2">
-                        <Grid VerticalAlignment="Center" Margin="10,0,15,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="auto" />
-                            </Grid.ColumnDefinitions>
-                            <Label   Content="Search"   Grid.Column="0" Width="auto" Margin="0,0,10,0" />
-                            <TextBox x:Name="Searchbox" Grid.Column="1" TextChanged="Searchbox_TextChanged" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
-
-                        </Grid>
+                    <!-- Search Box -->
+                    <Grid Background="#252526">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="45"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Search" VerticalAlignment="Center" Margin="5,0,5,0"/>
+                        <TextBox x:Name="Searchbox" Grid.Column="1" TextChanged="Searchbox_TextChanged" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
                     </Grid>
-                    <!-- < Search Box -->
 
-                    <TreeView x:Name="TagsTree" Grid.Row="2" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" Grid.ColumnSpan="2">
+                    <!-- Tags Tree -->
+                    <TreeView x:Name="TagsTree" Grid.Row="1" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling">
                         <TreeViewItem Header="[Tutorial]" />
                         <TreeViewItem Header="1. Press the load button to get started!" />
                         <TreeViewItem Header="2. Press again whenever the map/zoneset changes." />
@@ -377,23 +248,95 @@
                         <TreeViewItem Header="[Build Information]" />
                         <TreeViewItem Header="This build was cleaned and maintained by: TempAccountNull" />
                     </TreeView>
-                    <!-- < #TagsTree -->
 
-                    <Grid Grid.Row="3" Grid.ColumnSpan="2" Margin="5,5,5,5">
+                    <!-- Load/Status Bar-->
+                    <Grid Grid.Row="2" Margin="5,5,5,5">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition Width="0.25*" />
-                            <ColumnDefinition Width="0.25*" />
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="125"/>
                         </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <TextBlock x:Name="hook_text" Text="Not hooked" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" />
-                        <TextBlock x:Name="extra_tag_text" Text="Not auto loading" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,5,0" />
-                        <Button x:Name="Reload_Button" Content="Reload" Grid.Column="1" Click="BtnReLoadTags_Click" Padding="4,4,4,4" IsEnabled="False" />
-                        <Button x:Name="LoadBtn" Content="Load" Grid.Column="2" Click="BtnLoadTags_Click" Padding="4,4,4,4" Margin="5 0 0 0" />
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="Status: "/>
+                            <TextBlock x:Name="statusText" Text="Not hooked" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Column="1">
+                            <Button x:Name="LoadBtn" Content="Load" Click="BtnLoadTags_Click" Width="60" Height="25" />
+                            <Button x:Name="Reload_Button" Content="Reload" Click="BtnReLoadTags_Click" Margin="5, 0, 0, 0" IsEnabled="False" Width="60" Height="25" />
+                        </StackPanel>
+                    </Grid>
+                </Grid>
 
+                <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Background="#555" ShowsPreview="true" />
+
+                <!-- Tags Grid -->
+                <Grid Grid.Column="2" Background="#252526">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <DockingManager x:Name="dockManager" Grid.Row="0" Background="#333333" AllowMixedOrientation="True" AutoWindowSizeWhenOpened="True" DocumentClosing="DockManager_DocumentClosing">
+                        <DockingManager.Theme>
+                            <Vs2013DarkTheme />
+                        </DockingManager.Theme>
+                        <DockingManager.DocumentHeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Title}" TextTrimming="CharacterEllipsis" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </DockingManager.DocumentHeaderTemplate>
+                        <LayoutRoot x:Name="dockLayoutRoot">
+                            <LayoutPanel x:Name="dockLayoutPanel">
+                                <LayoutDocumentPaneGroup>
+                                    <LayoutDocumentPane x:Name="dockLayoutDocPane" />
+                                </LayoutDocumentPaneGroup>
+                            </LayoutPanel>
+                        </LayoutRoot>
+                    </DockingManager>
+                    <Grid Grid.Row="1" Margin="0,0,0,0" Background="#252526">
+                        <Grid Margin="5,0,5,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0">
+                                <Button Content="Poke All" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BtnPokeChanges_Click" Height="25" Width="60"/>
+                                <Button Content="Revert pokes" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="REVERT_ALL_BUTTON" Margin="5,0,0,0" Height="25" Width="80"/>
+                                <TextBlock x:Name="poke_text" HorizontalAlignment="Left" Text=". . ." VerticalAlignment="Center" Margin="5,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1">
+                                <TextBlock x:Name="change_text" HorizontalAlignment="Right" Text="0 changes queued" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                                <Button Content="Clear All" HorizontalAlignment="Stretch" Click="BtnClearQueue_Click" Height="25" Width="60" Margin="5,0,0,0"/>
+                                <Button Content="Show Queue" HorizontalAlignment="Stretch" Click="BtnShowHideQueue_Click" Height="25" Width="80" Margin="5,0,0,0"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                    <Grid x:Name="queuelist"  MinHeight="170" MaxHeight="200" Grid.Row="3" Grid.ColumnSpan="5" Margin="0,0,0,10" Background="#252526" Visibility="Collapsed">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid Background="#FF2B2B2B">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                <Button Width="25" Content="+" Click="Button_Click_1" Margin="1.5"/>
+                                <ComboBox x:Name="PokeList_Combobox" SelectionChanged="PokeList_Combobox_SelectionChanged" Width="160" Margin="1.5"/>
+                                <Button Width="100" Content="Poke These" VerticalAlignment="Stretch" Click="Button_Click" Margin="1.5"/>
+                                <Button Width="100" Content="Revert These" VerticalAlignment="Stretch" Click="REVERT_SINGLE_BUTTON" Margin="1.5"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
+                                <Button Content="Clear List" Click="BtnClearQueueSingle_Click" Width="100" Margin="1.5"/>
+                                <Button x:Name="remove_from_quee_button" Content="Remove From Queue" Click="BtnREMOVEQueueSingle_Click" Width="115" Margin="1.5"/>
+                            </StackPanel>
+                        </Grid>
+                        <ScrollViewer Grid.Row="1" x:Name="changes_panel_container" >
+                            <StackPanel x:Name="changes_panel" Background="#FF212121" />
+                        </ScrollViewer>
                     </Grid>
                 </Grid>
             </Grid>
