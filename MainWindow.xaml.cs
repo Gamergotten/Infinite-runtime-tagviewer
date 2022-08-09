@@ -313,7 +313,7 @@ namespace InfiniteRuntimeTagViewer
 			}
 			else
 			{
-				HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x40C3048";
+				HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x40CF3D0";
 			}
 		}
 
@@ -2493,6 +2493,7 @@ namespace InfiniteRuntimeTagViewer
 		#endregion
 	}
 
+	// This is used for the Tag Struct Dumper
 	public class StructureLayouts
 	{
 		public struct Group_definitions_link_struct // 40 bytes
