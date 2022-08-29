@@ -313,7 +313,7 @@ namespace InfiniteRuntimeTagViewer
 			}
 			else
 			{
-				HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x40CF3D0";
+				HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x40CF410";
 			}
 		}
 
@@ -509,18 +509,28 @@ namespace InfiniteRuntimeTagViewer
 				SetStatus("Offset failed, scanning...");
 				try
 				{
-					long? aobScan = (await M.AoBScan(AOBScanStartAddr, AOBScanEndAddr, AOBScanTagStr, true)).First(); // "tag instances"
+					long[]? aobScanResults = (await M.AoBScan(AOBScanStartAddr, AOBScanEndAddr, AOBScanTagStr, true)).ToArray(); // "tag instances"
 
+					long aobScan = 0;
 					long haloInfinite = 0;
-					if (aobScan != null)
+					if (aobScanResults != null)
 					{
+						foreach (long aobResult in aobScanResults)
+						{
+							string temp = aobResult.ToString("X");
+							if (temp.EndsWith("0000"))
+							{
+								aobScan = aobResult;
+							}
+						}
+
 						//get all processes named HaloInfinite
 						foreach (Process process in Process.GetProcessesByName("HaloInfinite"))
 						{
 							//get the base address of the process
 							haloInfinite = (long) process.MainModule.BaseAddress;
 						}
-						string aobHex = aobScan.Value.ToString("X");
+						string aobHex = aobScan.ToString("X");
 						IEnumerable<string> aobStr = SplitThis("0" + aobHex, 2);
 						IEnumerable<string> aobReversed = aobStr.Reverse().ToArray();
 						string aobSingle = string.Join("", aobReversed);
@@ -544,7 +554,7 @@ namespace InfiniteRuntimeTagViewer
 					}
 					else
 					{
-						BaseAddress = aobScan.Value;
+						BaseAddress = aobScan;
 						SetStatus("Process Hooked: " + M.mProc.Process.Id + " (AOB)");
 						hooked = true;
 					}
