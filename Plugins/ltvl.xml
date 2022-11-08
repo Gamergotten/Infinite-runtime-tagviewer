@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
 	<_38 v="">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -367,6 +367,7 @@
 				<Flag v="mask TAA for transparents" />
 				<Flag v="force render velocity for TAA" />
 				<Flag v="render depth info when transparent" />
+				<Flag v="disable VRS on platforms that supports it" />
 			</_F>
 			<_14 v="taa mask threshold start" />
 			<_14 v="taa mask threshold end" />

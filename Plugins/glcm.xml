@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -12,7 +12,6 @@
 	<_40 v="composer globals">
 		<_14 v="cinematic film aperture" />
 		<_14 v="cinematic skip ui up time" />
-		<_6 v="Max frames jumped to trigger sound" />
 		<_37 v="Start, End, Skip Scripts" />
 		<_38 v="Start Script">
 			<_F v="Flags">
@@ -114,6 +113,8 @@
 		<_37 v="" />
 		<_41 v="Default Bookend Transitions" />
 		<_41 v="Default Spawning Patterns" />
+		<_14 v="Default Spawning Pattern Probe Start Height Offset" />
+		<_6 v="Fade Start Frames Adjustment" />
 		<_3B v="" />
 	</_40>
 	<_34 v="generated_pada30b" length="4" />

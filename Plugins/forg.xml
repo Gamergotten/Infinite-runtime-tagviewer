@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -17,12 +17,6 @@
 	<_40 v="Forge Colors Lighting">
 		<_2 v="name" />
 		<_1F v="color" />
-		<_3B v="" />
-	</_40>
-	<_40 v="Forge Color References">
-		<_2C v="Default Value" />
-		<_34 v="generated_pad6d1d" length="3" />
-		<_2 v="name" />
 		<_3B v="" />
 	</_40>
 	<_36 v="Magnets" />
@@ -168,6 +162,7 @@
 	</_40>
 	<_41 v="forge required resources" />
 	<_41 v="rotation handle shader" />
+	<_41 v="magnet marker shader" />
 	<_41 v="path preview shader" />
 	<_41 v="ai navmesh shader" />
 	<_40 v="global label values">
@@ -231,6 +226,11 @@
 		<_41 v="coatingMaterialSet" />
 		<_3B v="" />
 	</_40>
+	<_40 v="Forge Enabled Shaders">
+		<_41 v="forgeShader" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padd2ca" length="4" />
 	<_7 v="m_rotationHandlePipelineState" />
 	<_7 v="m_pathPreviewPipelineState" />
 	<_7 v="m_defaultBoundaryPipelineState" />
@@ -272,8 +272,24 @@
 		<_37 v="" />
 		<_3B v="" />
 	</_38>
+	<_38 v="Forge Game Mode Sounds">
+		<_40 v="Game Mode Sounds">
+			<_41 v="Looping Sound Reference" />
+			<_2 v="name" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
 	<_41 v="Forge Looping Sound Categories" />
+	<_38 v="Forge Looping Sound Property IDs">
+		<_2 v="Friendly Category Property ID" />
+		<_2 v="Enemy Category Property ID" />
+		<_2 v="Friendly Name Property ID" />
+		<_2 v="Enemy Name Property ID" />
+		<_3B v="" />
+	</_38>
 	<_41 v="Forge Sound Response Sounds" />
 	<_41 v="Forge Nav Mesh Seed Tag Reference" />
+	<_41 v="Forge Baking Overlay screen reference" />
 	<_3B v="" />
 </root>

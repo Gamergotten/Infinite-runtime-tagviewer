@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -31,7 +31,11 @@
 		<_14 v="Delay Time" />
 		<_3B v="" />
 	</_40>
-	<_6 v="Event priority" />
+	<_6 v="Action priority" />
+	<_40 v="Campaign Coop Parent Events">
+		<_2 v="Parent Event" />
+		<_3B v="" />
+	</_40>
 	<_37 v="Damage Listener" />
 	<_C v="Force Damage listener">
 		<Flag v="Not Set" />
@@ -45,7 +49,7 @@
 	<_5 v="Enemy tracking proximity" />
 	<_37 v="" />
 	<_37 v="Combat Intensity" />
-	<_C v="Enable Comabat intensities">
+	<_C v="Enable Combat intensities">
 		<Flag v="Not Set" />
 		<Flag v="Enabled" />
 		<Flag v="Disabled" />
@@ -58,6 +62,5 @@
 	<_5 v="Tracking Weighted Average Slew Time" />
 	<_37 v="" />
 	<_41 v="Sound Bank" />
-	<_34 v="generated_pad4359" length="4" />
 	<_3B v="" />
 </root>

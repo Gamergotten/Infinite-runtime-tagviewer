@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -759,6 +759,31 @@
 	</_40>
 	<_40 v="Lighting Presets">
 		<_0 v="Preset" />
+		<_14 v="Light Simulation Radius Scale" />
+		<_37 v="Single Screen" />
+		<_38 v="Single Screen Preset">
+			<_14 v="Light Simulation Radius Scale" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="2 Player Splitscreen" />
+		<_38 v="2 Player Splitscreen Preset">
+			<_14 v="Light Simulation Radius Scale" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="3 Player Splitscreen" />
+		<_38 v="3 Player Splitscreen Preset">
+			<_14 v="Light Simulation Radius Scale" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
+		<_37 v="4 Player Splitscreen" />
+		<_38 v="4 Player Splitscreen Preset">
+			<_14 v="Light Simulation Radius Scale" />
+			<_3B v="" />
+		</_38>
+		<_37 v="" />
 		<_37 v="VRAM" />
 		<_38 v="vram">
 			<_6 v="Initial VRAM usage" />

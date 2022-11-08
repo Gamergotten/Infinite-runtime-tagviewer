@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -95,6 +95,7 @@
 				<Flag v="WeaponSniper" />
 				<Flag v="WeaponShotgun" />
 				<Flag v="WeaponHydra" />
+				<Flag v="WeaponBandit" />
 				<Flag v="VehicleWarthog" />
 				<Flag v="VehicleMongoose" />
 				<Flag v="VehicleScorpion" />
@@ -180,6 +181,7 @@
 				<Flag v="WeaponSniper" />
 				<Flag v="WeaponShotgun" />
 				<Flag v="WeaponHydra" />
+				<Flag v="WeaponBandit" />
 				<Flag v="VehicleWarthog" />
 				<Flag v="VehicleMongoose" />
 				<Flag v="VehicleScorpion" />
@@ -268,6 +270,85 @@
 			<_14 v="Maximum Yaw" />
 			<_14 v="Minimum Roll" />
 			<_14 v="Maximum Roll" />
+			<_3B v="" />
+		</_40>
+		<_36 v="Cage Tag Data" />
+		<_40 v="Socket">
+			<_B v="Core Type">
+				<Flag v="Unknown" />
+				<Flag v="Armor" />
+				<Flag v="Ai" />
+				<Flag v="WeaponSidekick" />
+				<Flag v="WeaponAR" />
+				<Flag v="WeaponBR" />
+				<Flag v="WeaponCommando" />
+				<Flag v="WeaponSPnKr" />
+				<Flag v="WeaponSniper" />
+				<Flag v="WeaponShotgun" />
+				<Flag v="WeaponHydra" />
+				<Flag v="WeaponBandit" />
+				<Flag v="VehicleWarthog" />
+				<Flag v="VehicleMongoose" />
+				<Flag v="VehicleScorpion" />
+				<Flag v="VehicleWasp" />
+				<Flag v="VehicleRazorBack" />
+				<Flag v="VehicleGungoose" />
+				<Flag v="VehicleRockethog" />
+			</_B>
+			<_34 v="generated_padb16d" length="2" />
+			<_41 v="Cage Camera Definition Tag" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Inspect">
+			<_B v="Core Type">
+				<Flag v="Unknown" />
+				<Flag v="Armor" />
+				<Flag v="Ai" />
+				<Flag v="WeaponSidekick" />
+				<Flag v="WeaponAR" />
+				<Flag v="WeaponBR" />
+				<Flag v="WeaponCommando" />
+				<Flag v="WeaponSPnKr" />
+				<Flag v="WeaponSniper" />
+				<Flag v="WeaponShotgun" />
+				<Flag v="WeaponHydra" />
+				<Flag v="WeaponBandit" />
+				<Flag v="VehicleWarthog" />
+				<Flag v="VehicleMongoose" />
+				<Flag v="VehicleScorpion" />
+				<Flag v="VehicleWasp" />
+				<Flag v="VehicleRazorBack" />
+				<Flag v="VehicleGungoose" />
+				<Flag v="VehicleRockethog" />
+			</_B>
+			<_34 v="generated_padb16d" length="2" />
+			<_41 v="Cage Camera Definition Tag" />
+			<_3B v="" />
+		</_40>
+		<_40 v="Battle Pass Reward">
+			<_B v="Core Type">
+				<Flag v="Unknown" />
+				<Flag v="Armor" />
+				<Flag v="Ai" />
+				<Flag v="WeaponSidekick" />
+				<Flag v="WeaponAR" />
+				<Flag v="WeaponBR" />
+				<Flag v="WeaponCommando" />
+				<Flag v="WeaponSPnKr" />
+				<Flag v="WeaponSniper" />
+				<Flag v="WeaponShotgun" />
+				<Flag v="WeaponHydra" />
+				<Flag v="WeaponBandit" />
+				<Flag v="VehicleWarthog" />
+				<Flag v="VehicleMongoose" />
+				<Flag v="VehicleScorpion" />
+				<Flag v="VehicleWasp" />
+				<Flag v="VehicleRazorBack" />
+				<Flag v="VehicleGungoose" />
+				<Flag v="VehicleRockethog" />
+			</_B>
+			<_34 v="generated_padb16d" length="2" />
+			<_41 v="Cage Camera Definition Tag" />
 			<_3B v="" />
 		</_40>
 		<_3B v="" />

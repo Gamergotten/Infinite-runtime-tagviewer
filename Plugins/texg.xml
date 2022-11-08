@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -21,7 +21,6 @@
 		<_2 v="editor group" />
 		<_36 v="Mips to Drop" />
 		<_38 v="mip settings">
-			<_6 v="Very Low" />
 			<_6 v="Low" />
 			<_6 v="Medium" />
 			<_6 v="High" />
@@ -38,7 +37,6 @@
 		</_A>
 		<_34 v="generated_pad6823" length="3" />
 		<_38 v="required resolution settings">
-			<_6 v="Very Low" />
 			<_6 v="Low" />
 			<_6 v="Medium" />
 			<_6 v="High" />
@@ -50,7 +48,6 @@
 		</_38>
 		<_36 v="Minimum Resolution" />
 		<_38 v="minimum resolution settings">
-			<_6 v="Very Low" />
 			<_6 v="Low" />
 			<_6 v="Medium" />
 			<_6 v="High" />

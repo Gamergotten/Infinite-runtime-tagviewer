@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -85,7 +85,6 @@
 	<_38 v="Micro Height Vertex Density">
 		<_37 v="Single Player" />
 		<_38 v="Single Player">
-			<_14 v="Very Low" />
 			<_14 v="Low" />
 			<_14 v="Medium" />
 			<_14 v="High" />
@@ -95,7 +94,6 @@
 		<_37 v="" />
 		<_37 v="2 Player Splitscreen" />
 		<_38 v="2 Player Splitscreen">
-			<_14 v="Very Low" />
 			<_14 v="Low" />
 			<_14 v="Medium" />
 			<_14 v="High" />
@@ -105,7 +103,6 @@
 		<_37 v="" />
 		<_37 v="3 Player Splitscreen" />
 		<_38 v="3 Player Splitscreen">
-			<_14 v="Very Low" />
 			<_14 v="Low" />
 			<_14 v="Medium" />
 			<_14 v="High" />
@@ -115,7 +112,6 @@
 		<_37 v="" />
 		<_37 v="4 Player Splitscreen" />
 		<_38 v="4 Player Splitscreen">
-			<_14 v="Very Low" />
 			<_14 v="Low" />
 			<_14 v="Medium" />
 			<_14 v="High" />
@@ -128,7 +124,6 @@
 	<_38 v="Micro Height Radius">
 		<_37 v="Single Player" />
 		<_38 v="Single Player">
-			<_14 v="Very Low" />
 			<_14 v="Low" />
 			<_14 v="Medium" />
 			<_14 v="High" />
@@ -138,7 +133,6 @@
 		<_37 v="" />
 		<_37 v="2 Player Splitscreen" />
 		<_38 v="2 Player Splitscreen">
-			<_14 v="Very Low" />
 			<_14 v="Low" />
 			<_14 v="Medium" />
 			<_14 v="High" />
@@ -148,7 +142,6 @@
 		<_37 v="" />
 		<_37 v="3 Player Splitscreen" />
 		<_38 v="3 Player Splitscreen">
-			<_14 v="Very Low" />
 			<_14 v="Low" />
 			<_14 v="Medium" />
 			<_14 v="High" />
@@ -158,7 +151,6 @@
 		<_37 v="" />
 		<_37 v="4 Player Splitscreen" />
 		<_38 v="4 Player Splitscreen">
-			<_14 v="Very Low" />
 			<_14 v="Low" />
 			<_14 v="Medium" />
 			<_14 v="High" />
@@ -169,7 +161,6 @@
 		<_3B v="" />
 	</_38>
 	<_38 v="Micro Height Mip Level">
-		<_6 v="Very Low" />
 		<_6 v="Low" />
 		<_6 v="Medium" />
 		<_6 v="High" />
@@ -183,5 +174,6 @@
 	<_D v="Flags">
 		<Flag v="Enable Erosion" />
 	</_D>
+	<_34 v="generated_pad544d" length="4" />
 	<_3B v="" />
 </root>

@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
 	</_38>
 	<_36 v="Global Text Strings" />
-	<_41 v="unicode string list tag" />
-	<_36 v="Global Text Strings for Language" />
 	<_41 v="String list tag" />
+	<_36 v="Global Narration String" />
+	<_41 v="Narration string list tag" />
 	<_36 v="Global Resources" />
 	<_40 v="Resources tags">
 		<_41 v="resources list" />
@@ -48,59 +48,14 @@
 	<_41 v="Weapon discarded sound" />
 	<_41 v="Callout Spam Prevention Sound" />
 	<_41 v="Grenade switching sound" />
-	<_36 v="HaloX Alerts" />
-	<_40 v="alert descriptions">
-		<_2 v="error name" />
-		<_F v="flags">
-			<Flag v="allow auto dismissal" />
-			<Flag v="show spinner" />
-		</_F>
-		<_A v="error category">
-			<Flag v="default" />
-			<Flag v="networking" />
-			<Flag v="storage (reading/writing failure)" />
-			<Flag v="controller" />
-		</_A>
-		<_A v="error icon">
-			<Flag v="default alert" />
-			<Flag v="downloading" />
-			<Flag v="paused" />
-			<Flag v="uploading" />
-			<Flag v="completed" />
-		</_A>
-		<_34 v="generated_padd9db" length="1" />
-		<_2 v="title" />
-		<_2 v="message" />
+	<_36 v="Alerts" />
+	<_40 v="alert description tags">
+		<_41 v="Reference" />
 		<_3B v="" />
 	</_40>
-	<_36 v="HaloX Dialogs" />
-	<_40 v="dialog descriptions">
-		<_2 v="dialog name" />
-		<_E v="flags">
-			<Flag v="unused" />
-		</_E>
-		<_34 v="generated_pad869b" length="2" />
-		<_2 v="title" />
-		<_2 v="message" />
-		<_2 v="first_item" />
-		<_2 v="second_item" />
-		<_2 v="third_item" />
-		<_2 v="fourth_item" />
-		<_2 v="button key" />
-		<_B v="default item">
-			<Flag v="first item" />
-			<Flag v="second item" />
-			<Flag v="third item" />
-			<Flag v="fourth item" />
-		</_B>
-		<_B v="b button action">
-			<Flag v="dismisses dialog" />
-			<Flag v="button ignored" />
-			<Flag v="first item activates" />
-			<Flag v="second item activates" />
-			<Flag v="third item activates" />
-			<Flag v="fourth item activates" />
-		</_B>
+	<_36 v="Dialogs" />
+	<_40 v="dialog description tags">
+		<_41 v="Reference" />
 		<_3B v="" />
 	</_40>
 	<_36 v="Lua User Libraries" />
@@ -156,6 +111,7 @@
 			<Flag v="Academy" />
 			<Flag v="Forge" />
 			<Flag v="Install" />
+			<Flag v="ForgeBake" />
 		</_A>
 		<_34 v="generated_pad0e13" length="3" />
 		<_41 v="Loading Screen Image Group" />
@@ -899,6 +855,6 @@
 	</_40>
 	<_41 v="Narration Phonemes Tag" />
 	<_41 v="Skip UI tag" />
-	<_34 v="generated_pad6e00" length="4" />
+	<_41 v="mission thumbnail bitmap dictionary" />
 	<_3B v="" />
 </root>

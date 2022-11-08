@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -17,6 +17,24 @@
 		<_40 v="tag graph float params">
 			<_2 v="name" />
 			<_14 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="tag graph bool params">
+			<_2 v="name" />
+			<_F v="value">
+				<Flag v="value" />
+			</_F>
+			<_34 v="generated_pad0473" length="3" />
+			<_3B v="" />
+		</_40>
+		<_40 v="taggraph instance variables - strings">
+			<_2 v="name" />
+			<_2 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="taggraph instance variables - tag references">
+			<_2 v="name" />
+			<_41 v="value" />
 			<_3B v="" />
 		</_40>
 		<_41 v="override type" />

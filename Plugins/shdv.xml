@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -15,7 +15,7 @@
 		<Flag v="is_water" />
 		<Flag v="is_hologram" />
 		<Flag v="is_wireframe_hologram" />
-		<Flag v="is_emblem" />
+		<Flag v="SupportsForgeCoatingCustomization" />
 		<Flag v="is_alpha_clip" />
 		<Flag v="is_explicit_shader" />
 		<Flag v="uses_fade_time" />
@@ -46,6 +46,7 @@
 		<Flag v="validation" />
 		<Flag v="debug" />
 		<Flag v="deoptimize" />
+		<Flag v="iteration" />
 	</_D>
 	<_40 v="shader groups">
 		<_40 v="shaders">

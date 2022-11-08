@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -27,6 +27,7 @@
 			<Flag v="does not block grapple line of sight" />
 			<Flag v="does not block callout raycasts" />
 			<Flag v="blocks grapple aim assist" />
+			<Flag v="non-physical melee pass through" />
 		</_E>
 		<_34 v="generated_pad3ced" length="2" />
 		<_2 v="general armor" />
@@ -145,6 +146,7 @@
 			<Flag v="does not block grapple line of sight" />
 			<Flag v="does not block callout raycasts" />
 			<Flag v="blocks grapple aim assist" />
+			<Flag v="non-physical melee pass through" />
 		</_E>
 		<_34 v="generated_pad3ced" length="2" />
 		<_2 v="general armor" />

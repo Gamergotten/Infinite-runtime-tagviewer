@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -13,6 +13,7 @@
 	<_38 v="Fade Out From Game">
 		<_F v="Flags">
 			<Flag v="Active" />
+			<Flag v="Override similar existing transition" />
 		</_F>
 		<_34 v="generated_pad569d" length="1" />
 		<_5 v="Fade Hold" />
@@ -25,6 +26,7 @@
 	<_38 v="Fade In">
 		<_F v="Flags">
 			<Flag v="Active" />
+			<Flag v="Override similar existing transition" />
 		</_F>
 		<_34 v="generated_pad569d" length="1" />
 		<_5 v="Fade Hold" />
@@ -37,6 +39,7 @@
 	<_38 v="Fade Out">
 		<_F v="Flags">
 			<Flag v="Active" />
+			<Flag v="Override similar existing transition" />
 		</_F>
 		<_34 v="generated_pad569d" length="1" />
 		<_5 v="Fade Hold" />
@@ -49,6 +52,7 @@
 	<_38 v="Fade Post Load">
 		<_F v="Flags">
 			<Flag v="Active" />
+			<Flag v="Override similar existing transition" />
 		</_F>
 		<_34 v="generated_pad569d" length="1" />
 		<_5 v="Fade Hold" />
@@ -61,6 +65,7 @@
 	<_38 v="Fade In To Game">
 		<_F v="Flags">
 			<Flag v="Active" />
+			<Flag v="Override similar existing transition" />
 		</_F>
 		<_34 v="generated_pad569d" length="1" />
 		<_5 v="Fade Hold" />

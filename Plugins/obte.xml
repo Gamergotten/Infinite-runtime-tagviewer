@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_38 v="teleport effects">
+		<_36 v="Target Effects" />
+		<_40 v="target effects">
+			<_14 v="radius" />
+			<_41 v="disappear effect" />
+			<_41 v="appear effect" />
+			<_3B v="" />
+		</_40>
+		<_2 v="target effects marker" />
+		<_36 v="Nodegraph Events" />
+		<_40 v="nodegraph events">
+			<_E v="object types">
+				<Flag v="biped" />
+				<Flag v="vehicle" />
+				<Flag v="weapon" />
+				<Flag v="equipment" />
+				<Flag v="terminal" />
+				<Flag v="projectile" />
+				<Flag v="scenery" />
+				<Flag v="machine" />
+				<Flag v="control" />
+				<Flag v="dispenser" />
+				<Flag v="crate" />
+				<Flag v="creature" />
+				<Flag v="giant" />
+				<Flag v="effect_scenery" />
+			</_E>
+			<_34 v="generated_padaba7" length="2" />
+			<_D v="flags">
+				<Flag v="locally controlled" />
+			</_D>
+			<_2 v="source object event" />
+			<_2 v="destination object event" />
+			<_3B v="" />
+		</_40>
+		<_3B v="" />
+	</_38>
+	<_34 v="generated_pad97e7" length="4" />
+	<_3B v="" />
+</root>

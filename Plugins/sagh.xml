@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -99,10 +99,12 @@
 		<_2 v="deploy animation" />
 		<_14 v="deploy duration override" />
 		<_14 v="max range" />
+		<_14 v="deploy exit min fraction" />
 		<_37 v="" />
 		<_37 v="attaching" />
 		<_2 v="biped attach marker" />
 		<_19 v="biped attach offset" />
+		<_2 v="item attach marker" />
 		<_37 v="" />
 		<_37 v="pull stage" />
 		<_2 v="pull animation (airborne)" />

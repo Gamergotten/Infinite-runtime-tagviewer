@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="AnyTag">
-		<_7 v="vtable space" />
-		<_38 v="internal struct">
-			<_6 v="global tag ID" />
-			<_34 v="local tag handle" length="4" />
+	<_38 v="">
+		<_7 v="" />
+		<_38 v="">
+			<_6 v="" />
+			<_34 v="" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -23,6 +23,7 @@
 		<Flag v="Immediate ICS" />
 		<Flag v="Don't Force Hologram Render" />
 		<Flag v="Lower Weapon" />
+		<Flag v="Hide Hud with Fade" />
 		<Flag v="Hide Hud" />
 		<Flag v="Allow Player Input With Camera Track" />
 		<Flag v="AI Does Not Ignore Players With Camera Track" />
@@ -40,7 +41,6 @@
 		<Flag v="Skip All Scenes" />
 		<Flag v="Disable Fade-In After Skip" />
 		<Flag v="Fade Vehicle Transition" />
-		<Flag v="Fade Support Transition" />
 		<Flag v="Fade Airborne Transition" />
 	</_D>
 	<_14 v="Animation Blend In" />
@@ -139,7 +139,7 @@
 	</_38>
 	<_37 v="" />
 	<_37 v="Video Playback" />
-	<_0 v="Video Path" />
+	<_1 v="Video Path" />
 	<_37 v="" />
 	<_37 v="ICS Points" />
 	<_0 v="ICS Point 0" />
@@ -1388,6 +1388,7 @@
 				</_38>
 				<_3B v="" />
 			</_40>
+			<_2 v="Composition Variant" />
 			<_38 v="SubTracks">
 				<_40 v="SubTracks References">
 					<_41 v="SubTracks Reference" />
@@ -1426,7 +1427,7 @@
 							<Flag v="Environment Darken" />
 							<Flag v="Exposure" />
 							<Flag v="Static Scalar" />
-							<Flag v="Lightmap Indirect Scalar" />
+							<Flag v="DWS State" />
 							<Flag v="Analytic Scalar" />
 							<Flag v="Light" />
 							<Flag v="Hologram Lighting" />
@@ -1472,6 +1473,7 @@
 							<Flag v="Object" />
 							<Flag v="Rumble" />
 							<Flag v="Camera Shake" />
+							<Flag v="Weapon Action" />
 						</_C>
 						<_A v="Start Type">
 							<Flag v="Offset From Start" />
@@ -4458,6 +4460,22 @@
 						</_38>
 						<_3B v="" />
 					</_40>
+					<_40 v="DWS State SubActions">
+						<_A v="DWS State">
+							<Flag v="Push for duration" />
+							<Flag v="Pop for duration" />
+							<Flag v="Push (persist after Composition ends)" />
+							<Flag v="Pop (persist after Composition ends)" />
+						</_A>
+						<_34 v="generated_pad1c61" length="3" />
+						<_2 v="Event List Name" />
+						<_2 v="Target State" />
+						<_14 v="Start Interpolation Time" />
+						<_6 v="Start Steps" />
+						<_14 v="End Interpolation Time" />
+						<_6 v="End Steps" />
+						<_3B v="" />
+					</_40>
 					<_40 v="DWS Color Grading SubActions">
 						<_E v="Curves">
 							<Flag v="Weight" />
@@ -4947,6 +4965,22 @@
 						</_38>
 						<_3B v="" />
 					</_40>
+					<_40 v="Weapon Action SubActions">
+						<_38 v="Weapon Action">
+							<_A v="Weapon Action">
+								<Flag v="LowerWeapon" />
+								<Flag v="LowerThenStowWeapon" />
+								<Flag v="StowWeapon" />
+								<Flag v="RaiseWeapon" />
+								<Flag v="DoNothing" />
+							</_A>
+							<_F v="Weapon Flags">
+								<Flag v="Hide Stowed Weapon" />
+							</_F>
+							<_3B v="" />
+						</_38>
+						<_3B v="" />
+					</_40>
 					<_3B v="" />
 				</_40>
 				<_3B v="" />
@@ -5115,6 +5149,20 @@
 				<Flag v="No Restore Limbo" />
 				<Flag v="Use Player Action Pose Weapon" />
 			</_D>
+			<_38 v="Weapon Action">
+				<_A v="Weapon Action">
+					<Flag v="LowerWeapon" />
+					<Flag v="LowerThenStowWeapon" />
+					<Flag v="StowWeapon" />
+					<Flag v="RaiseWeapon" />
+					<Flag v="DoNothing" />
+				</_A>
+				<_F v="Weapon Flags">
+					<Flag v="Hide Stowed Weapon" />
+				</_F>
+				<_3B v="" />
+			</_38>
+			<_34 v="generated_pad8afd" length="2" />
 			<_41 v="Type" />
 			<_41 v="Parent Model Animation Graph" />
 			<_40 v="Model Animation Graphs">
@@ -5514,6 +5562,9 @@
 		<_37 v="" />
 		<_3B v="" />
 	</_40>
-	<_34 v="generated_pad3ca3" length="4" />
+	<_40 v="Composition Variants">
+		<_2 v="Variant Name" />
+		<_3B v="" />
+	</_40>
 	<_3B v="" />
 </root>
