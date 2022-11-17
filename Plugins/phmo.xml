@@ -48,7 +48,7 @@
 	</_40>
 	<_40 v="phantom types">
 		<_D v="flags">
-			<Flag v="UNUSED" />
+			<Flag v="only affects authoritative gameplay" />
 			<Flag v="use acc as force" />
 			<Flag v="negates gravity" />
 			<Flag v="ignores players" />

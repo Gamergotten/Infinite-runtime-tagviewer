@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<_38 v="">
+	<_38 v="AnyTag">
 		<_7 v="vtable space" />
 		<_38 v="internal struct">
 			<_6 v="global tag ID" />
@@ -23,6 +23,7 @@
 			<Flag v="WeaponSniper" />
 			<Flag v="WeaponShotgun" />
 			<Flag v="WeaponHydra" />
+			<Flag v="WeaponBandit" />
 			<Flag v="VehicleWarthog" />
 			<Flag v="VehicleMongoose" />
 			<Flag v="VehicleScorpion" />
@@ -159,6 +160,7 @@
 				<Flag v="WeaponSniper" />
 				<Flag v="WeaponShotgun" />
 				<Flag v="WeaponHydra" />
+				<Flag v="WeaponBandit" />
 				<Flag v="VehicleWarthog" />
 				<Flag v="VehicleMongoose" />
 				<Flag v="VehicleScorpion" />

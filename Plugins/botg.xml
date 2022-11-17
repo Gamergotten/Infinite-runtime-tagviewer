@@ -136,6 +136,8 @@
 			<_14 v="Deploy drop wall confidence threshold" />
 			<_14 v="Min drop wall delay time" />
 			<_14 v="Max drop wall delay time" />
+			<_14 v="Min active camo delay time" />
+			<_14 v="Max active camo delay time" />
 			<_14 v="Disengage confidence threshold" />
 			<_14 v="Evade min delay time" />
 			<_14 v="Evade max delay time" />

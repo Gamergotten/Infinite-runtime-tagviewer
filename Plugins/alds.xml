@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="Alerts" />
+	<_40 v="descriptions">
+		<_2 v="error name" />
+		<_F v="flags">
+			<Flag v="allow auto dismissal" />
+			<Flag v="show spinner" />
+		</_F>
+		<_A v="error category">
+			<Flag v="default" />
+			<Flag v="networking" />
+			<Flag v="storage (reading/writing failure)" />
+			<Flag v="controller" />
+		</_A>
+		<_A v="error icon">
+			<Flag v="default alert" />
+			<Flag v="downloading" />
+			<Flag v="paused" />
+			<Flag v="uploading" />
+			<Flag v="completed" />
+		</_A>
+		<_34 v="generated_padd9db" length="1" />
+		<_2 v="title" />
+		<_2 v="message" />
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad8bc4" length="4" />
+	<_3B v="" />
+</root>

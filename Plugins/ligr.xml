@@ -11,7 +11,6 @@
 	</_38>
 	<_36 v="Fadeoff distance multiplier" />
 	<_38 v="fadeoff_distance_multiplier">
-		<_25 v="Very Low" />
 		<_25 v="Low" />
 		<_25 v="Medium" />
 		<_25 v="High" />
@@ -23,7 +22,6 @@
 	</_38>
 	<_36 v="Near Fadeoff distance multiplier" />
 	<_38 v="near_fadeoff_distance_multiplier">
-		<_25 v="Very Low" />
 		<_25 v="Low" />
 		<_25 v="Medium" />
 		<_25 v="High" />
@@ -35,7 +33,6 @@
 	</_38>
 	<_36 v="Static Object Shadow Fade" />
 	<_38 v="static_object_shadow_fade">
-		<_25 v="Very Low" />
 		<_25 v="Low" />
 		<_25 v="Medium" />
 		<_25 v="High" />
@@ -47,7 +44,6 @@
 	</_38>
 	<_36 v="Dynamic Object Shadow Fade" />
 	<_38 v="dynamic_object_shadow_fade">
-		<_25 v="Very Low" />
 		<_25 v="Low" />
 		<_25 v="Medium" />
 		<_25 v="High" />
@@ -60,7 +56,6 @@
 	<_36 v="Cast Shadows" />
 	<_38 v="cast_shadows">
 		<_E v="Flags">
-			<Flag v="very low" />
 			<Flag v="low" />
 			<Flag v="medium" />
 			<Flag v="high" />
@@ -71,7 +66,6 @@
 	<_36 v="Dynamic Object Shadow Casting" />
 	<_38 v="dynamic_object_shadow_casting">
 		<_E v="Flags">
-			<Flag v="very low" />
 			<Flag v="low" />
 			<Flag v="medium" />
 			<Flag v="high" />
@@ -81,7 +75,6 @@
 	</_38>
 	<_36 v="Static Shadow Resolution Multiplier" />
 	<_38 v="static_shadow_resolution_multiplier">
-		<_14 v="Very Low" />
 		<_14 v="Low" />
 		<_14 v="Medium" />
 		<_14 v="High" />
@@ -93,7 +86,6 @@
 	</_38>
 	<_36 v="Dynamic Shadow Resolution Multiplier" />
 	<_38 v="dynamic_shadow_resolution_multiplier">
-		<_14 v="Very Low" />
 		<_14 v="Low" />
 		<_14 v="Medium" />
 		<_14 v="High" />
@@ -105,7 +97,6 @@
 	</_38>
 	<_36 v="Shadow Filter Width Multiplier" />
 	<_38 v="shadow_filter_width_multiplier">
-		<_14 v="Very Low" />
 		<_14 v="Low" />
 		<_14 v="Medium" />
 		<_14 v="High" />
@@ -115,6 +106,5 @@
 		<_14 v="4 Player Splitscreen" />
 		<_3B v="" />
 	</_38>
-	<_34 v="generated_pad133b" length="4" />
 	<_3B v="" />
 </root>

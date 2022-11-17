@@ -22,6 +22,7 @@
 			<Flag v="Color" />
 			<Flag v="String" />
 			<Flag v="Tag" />
+			<Flag v="CustomString" />
 		</_B>
 		<_34 v="generated_pad36ce" length="2" />
 		<_14 v="Float Min" />

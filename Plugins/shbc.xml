@@ -15,9 +15,10 @@
 		<_3D v="semantic index" />
 		<_3B v="" />
 	</_40>
+	<_34 v="generated_padbcac" length="4" />
+	<_7 v="runtimeBytecodeDataHash" />
 	<_6 v="platform marker" />
 	<_3D v="instruction count" />
 	<_3D v="texture reads" />
-	<_34 v="generated_padbcac" length="4" />
 	<_3B v="" />
 </root>

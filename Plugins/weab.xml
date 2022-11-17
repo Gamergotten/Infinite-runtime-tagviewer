@@ -28,6 +28,24 @@
 				<_14 v="value" />
 				<_3B v="" />
 			</_40>
+			<_40 v="tag graph bool params">
+				<_2 v="name" />
+				<_F v="value">
+					<Flag v="value" />
+				</_F>
+				<_34 v="generated_pad0473" length="3" />
+				<_3B v="" />
+			</_40>
+			<_40 v="taggraph instance variables - strings">
+				<_2 v="name" />
+				<_2 v="value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="taggraph instance variables - tag references">
+				<_2 v="name" />
+				<_41 v="value" />
+				<_3B v="" />
+			</_40>
 			<_41 v="override type" />
 			<_36 v="variant names" />
 			<_40 v="variant names">
@@ -378,12 +396,17 @@
 			<_37 v="$$$ New Sound $$$" />
 			<_40 v="weapon fire sound">
 				<_38 v="Weapon Fire Sound">
+					<_F v="Fire sound flags">
+						<Flag v="Calculate a minimum spewing loop length" />
+					</_F>
+					<_34 v="generated_padf053" length="1" />
 					<_B v="Firing Type">
 						<Flag v="One off" />
 						<Flag v="Looping" />
 						<Flag v="Burst" />
 					</_B>
 					<_2E v="Barrel Attachment Index" />
+					<_34 v="generated_pada39e" length="2" />
 					<_14 v="Fire start delay" />
 					<_40 v="Weapon Fire Sound Variations">
 						<_41 v="Weapon Fire Sound" />
@@ -646,12 +669,17 @@
 			<_37 v="$$$ New Sound $$$" />
 			<_40 v="weapon fire sound">
 				<_38 v="Weapon Fire Sound">
+					<_F v="Fire sound flags">
+						<Flag v="Calculate a minimum spewing loop length" />
+					</_F>
+					<_34 v="generated_padf053" length="1" />
 					<_B v="Firing Type">
 						<Flag v="One off" />
 						<Flag v="Looping" />
 						<Flag v="Burst" />
 					</_B>
 					<_2E v="Barrel Attachment Index" />
+					<_34 v="generated_pada39e" length="2" />
 					<_14 v="Fire start delay" />
 					<_40 v="Weapon Fire Sound Variations">
 						<_41 v="Weapon Fire Sound" />

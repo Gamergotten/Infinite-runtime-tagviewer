@@ -202,7 +202,6 @@
 			<Flag v="ChartAggregatorLockUVRotation" />
 		</_D>
 		<_F v="AggregationStates">
-			<Flag v="BaseAtlasOnOriginalTexCoords" />
 			<Flag v="MergeGeometries" />
 		</_F>
 		<_34 v="generated_pad1668" length="3" />

@@ -56,7 +56,7 @@
 			<Flag v="vaultable" />
 			<Flag v="collides with own projectiles" />
 			<Flag v="object rejects dynamic decals" />
-			<Flag v="Do not network" />
+			<Flag v="Client side only" />
 			<Flag v="Wake when visible to player" />
 			<Flag v="Sleep when not visible to player" />
 			<Flag v="Does not accept active camouflage" />
@@ -328,6 +328,7 @@
 			<Flag v="Enable Damage Hit Ticks" />
 			<Flag v="Blocks grapple aim assist" />
 			<Flag v="Send Damage Aftermath to Parent" />
+			<Flag v="Pre size attachments for customization" />
 		</_D>
 		<_37 v="Customization" />
 		<_2 v="customization set" />
@@ -340,6 +341,24 @@
 			<_40 v="tag graph float params">
 				<_2 v="name" />
 				<_14 v="value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="tag graph bool params">
+				<_2 v="name" />
+				<_F v="value">
+					<Flag v="value" />
+				</_F>
+				<_34 v="generated_pad0473" length="3" />
+				<_3B v="" />
+			</_40>
+			<_40 v="taggraph instance variables - strings">
+				<_2 v="name" />
+				<_2 v="value" />
+				<_3B v="" />
+			</_40>
+			<_40 v="taggraph instance variables - tag references">
+				<_2 v="name" />
+				<_41 v="value" />
 				<_3B v="" />
 			</_40>
 			<_41 v="override type" />
@@ -572,6 +591,7 @@
 				<Flag v="cubemap volume" />
 				<Flag v="navgenerator volume" />
 				<Flag v="navcutter volume" />
+				<Flag v="light probe volume" />
 			</_A>
 			<_F v="teleporter passability">
 				<Flag v="disallow players" />

@@ -425,6 +425,7 @@
 	<_38 v="Transition Settings">
 		<_14 v="IntroMinLoadTime" />
 		<_14 v="IntroTotalTransitionTime" />
+		<_14 v="MissionDataUpdateMaxDelayTime" />
 		<_14 v="OuttroMapTransitionTime" />
 		<_14 v="OuttroMinUnloadTime" />
 		<_14 v="OuttroGameplayTransitionTime" />
@@ -476,6 +477,6 @@
 	<_F v="Settings And Feature Flags">
 		<Flag v="Mission Replay Option Enabled" />
 	</_F>
-	<_34 v="generated_padbfcb" length="3" />
+	<_34 v="generated_padbfcb" length="7" />
 	<_3B v="" />
 </root>

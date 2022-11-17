@@ -231,57 +231,6 @@
 		<_14 v="blend speed (0-1)" />
 		<_3B v="" />
 	</_38>
-	<_36 v="SELF ILLUM MATERIAL SHADER FUNCTION PARAMETER - (UNSC)" />
-	<_38 v="self_illum_scale_unsc">
-		<_E v="flags">
-			<Flag v="use default (ignore these values)" />
-			<Flag v="maximum change is relative" />
-			<Flag v="(unused)" />
-			<Flag v="bit3" />
-			<Flag v="fixed" />
-			<Flag v="(unused2)" />
-			<Flag v="fixed2" />
-		</_E>
-		<_34 v="generated_pad7166" length="2" />
-		<_14 v="parameter value" />
-		<_14 v="maximum change" />
-		<_14 v="blend speed (0-1)" />
-		<_3B v="" />
-	</_38>
-	<_36 v="SELF ILLUM MATERIAL SHADER FUNCTION PARAMETER - (Covenant)" />
-	<_38 v="self_illum_scale_covenant">
-		<_E v="flags">
-			<Flag v="use default (ignore these values)" />
-			<Flag v="maximum change is relative" />
-			<Flag v="(unused)" />
-			<Flag v="bit3" />
-			<Flag v="fixed" />
-			<Flag v="(unused2)" />
-			<Flag v="fixed2" />
-		</_E>
-		<_34 v="generated_pad7166" length="2" />
-		<_14 v="parameter value" />
-		<_14 v="maximum change" />
-		<_14 v="blend speed (0-1)" />
-		<_3B v="" />
-	</_38>
-	<_36 v="SELF ILLUM MATERIAL SHADER FUNCTION PARAMETER - (Forerunner)" />
-	<_38 v="self_illum_scale_forerunner">
-		<_E v="flags">
-			<Flag v="use default (ignore these values)" />
-			<Flag v="maximum change is relative" />
-			<Flag v="(unused)" />
-			<Flag v="bit3" />
-			<Flag v="fixed" />
-			<Flag v="(unused2)" />
-			<Flag v="fixed2" />
-		</_E>
-		<_34 v="generated_pad7166" length="2" />
-		<_14 v="parameter value" />
-		<_14 v="maximum change" />
-		<_14 v="blend speed (0-1)" />
-		<_3B v="" />
-	</_38>
 	<_36 v="EFFECT EXPOSURE OVERRIDE" />
 	<_41 v="effect exposure override" />
 	<_38 v="color_grading">
@@ -385,7 +334,6 @@
 				<Flag v="Override Input" />
 			</_D>
 			<_6 v="Input" />
-			<_14 v="Very Low" />
 			<_14 v="Low" />
 			<_14 v="Medium" />
 			<_14 v="High" />
@@ -441,7 +389,6 @@
 				<Flag v="Override Input" />
 			</_D>
 			<_14 v="Input" />
-			<_14 v="Very Low" />
 			<_14 v="Low" />
 			<_14 v="Medium" />
 			<_14 v="High" />
@@ -616,7 +563,6 @@
 			</_A>
 			<_34 v="generated_padfbf4" length="1" />
 			<_E v="Flags">
-				<Flag v="Very Low" />
 				<Flag v="Low" />
 				<Flag v="Medium" />
 				<Flag v="High" />
@@ -657,7 +603,6 @@
 				<Flag v="Override Input" />
 			</_D>
 			<_6 v="Input" />
-			<_14 v="Very Low" />
 			<_14 v="Low" />
 			<_14 v="Medium" />
 			<_14 v="High" />
@@ -707,7 +652,6 @@
 				<Flag v="Override Input" />
 			</_D>
 			<_14 v="Input" />
-			<_14 v="Very Low" />
 			<_14 v="Low" />
 			<_14 v="Medium" />
 			<_14 v="High" />
@@ -757,7 +701,6 @@
 				<Flag v="Override Input" />
 			</_D>
 			<_14 v="Input" />
-			<_14 v="Very Low" />
 			<_14 v="Low" />
 			<_14 v="Medium" />
 			<_14 v="High" />
@@ -912,6 +855,5 @@
 		<_3B v="" />
 	</_38>
 	<_37 v="" />
-	<_34 v="generated_pad3e12" length="4" />
 	<_3B v="" />
 </root>

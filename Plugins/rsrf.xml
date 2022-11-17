@@ -45,33 +45,26 @@
 				<Flag v="Random" />
 			</_A>
 			<_34 v="generated_pada2d4" length="3" />
-			<_38 v="Cull Distance Scale">
-				<_14 v="Very Low" />
-				<_14 v="Low" />
-				<_14 v="Medium" />
-				<_14 v="High" />
-				<_14 v="Ultra" />
-				<_14 v="2 Player Splitscreen" />
-				<_14 v="3 Player Splitscreen" />
-				<_14 v="4 Player Splitscreen" />
-				<_3B v="" />
-			</_38>
-			<_38 v="Density Multiplier">
-				<_14 v="Very Low" />
-				<_14 v="Low" />
-				<_14 v="Medium" />
-				<_14 v="High" />
-				<_14 v="Ultra" />
-				<_14 v="2 Player Splitscreen" />
-				<_14 v="3 Player Splitscreen" />
-				<_14 v="4 Player Splitscreen" />
-				<_3B v="" />
-			</_38>
+			<_14 v="Cull Distance Scale Low" />
+			<_17 v="Cull Distance Scale Splitscreen Multiplier Low" />
+			<_14 v="Cull Distance Scale Medium" />
+			<_17 v="Cull Distance Scale Splitscreen Multiplier Medium" />
+			<_14 v="Cull Distance Scale High" />
+			<_17 v="Cull Distance Scale Splitscreen Multiplier High" />
+			<_14 v="Cull Distance Scale Ultra" />
+			<_17 v="Cull Distance Scale Splitscreen Multiplier Ultra" />
+			<_14 v="Density Multiplier Low" />
+			<_17 v="Density Multiplier Splitscreen Multiplier Low" />
+			<_14 v="Density Multiplier Medium" />
+			<_17 v="Density Multiplier Splitscreen Multiplier Medium" />
+			<_14 v="Density Multiplier High" />
+			<_17 v="Density Multiplier Splitscreen Multiplier High" />
+			<_14 v="Density Multiplier Ultra" />
+			<_17 v="Density Multiplier Splitscreen Multiplier Ultra" />
 			<_2 v="Variant Name" />
 			<_20 v="Debug Color" />
 			<_6 v="Precompiled Technique Index" />
 			<_38 v="Distance Dither Start">
-				<_14 v="Very Low" />
 				<_14 v="Low" />
 				<_14 v="Medium" />
 				<_14 v="High" />

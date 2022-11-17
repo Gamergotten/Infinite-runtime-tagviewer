@@ -12,7 +12,6 @@
 	<_40 v="composer globals">
 		<_14 v="cinematic film aperture" />
 		<_14 v="cinematic skip ui up time" />
-		<_6 v="Max frames jumped to trigger sound" />
 		<_37 v="Start, End, Skip Scripts" />
 		<_38 v="Start Script">
 			<_F v="Flags">
@@ -114,6 +113,8 @@
 		<_37 v="" />
 		<_41 v="Default Bookend Transitions" />
 		<_41 v="Default Spawning Patterns" />
+		<_14 v="Default Spawning Pattern Probe Start Height Offset" />
+		<_6 v="Fade Start Frames Adjustment" />
 		<_3B v="" />
 	</_40>
 	<_34 v="generated_pada30b" length="4" />

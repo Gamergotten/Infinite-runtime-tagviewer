@@ -157,11 +157,6 @@
 			<Flag v="Enabled" />
 			<Flag v="Disabled" />
 		</_C>
-		<_C v="Detect primitive normals">
-			<Flag v="Default" />
-			<Flag v="Enabled" />
-			<Flag v="Disabled" />
-		</_C>
 		<_C v="Scale by area">
 			<Flag v="Default" />
 			<Flag v="Enabled" />
@@ -182,11 +177,6 @@
 		</_C>
 		<_14 v="Weld distance" />
 		<_C v="Weld only border verts">
-			<Flag v="Default" />
-			<Flag v="Enabled" />
-			<Flag v="Disabled" />
-		</_C>
-		<_C v="Weld only on object boundary">
 			<Flag v="Default" />
 			<Flag v="Enabled" />
 			<Flag v="Disabled" />

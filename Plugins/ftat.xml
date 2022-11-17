@@ -103,9 +103,18 @@
 		<Flag v="XZ" />
 		<Flag v="YZ" />
 		<Flag v="XYZ" />
+	</_A>
+	<_A v="ScaleRestriction">
+		<Flag v="None" />
+		<Flag v="X" />
+		<Flag v="Y" />
+		<Flag v="Z" />
+		<Flag v="XY" />
+		<Flag v="XZ" />
+		<Flag v="YZ" />
 		<Flag v="Unscalable" />
 	</_A>
-	<_34 v="generated_pad9337" length="3" />
+	<_34 v="generated_pad9337" length="2" />
 	<_19 v="Minimum Scale" />
 	<_19 v="Maximum Scale" />
 	<_41 v="Runtime Underlying Collision Geo (Static IO)" />

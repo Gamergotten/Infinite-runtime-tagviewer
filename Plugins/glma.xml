@@ -27,6 +27,7 @@
 			<Flag v="does not block grapple line of sight" />
 			<Flag v="does not block callout raycasts" />
 			<Flag v="blocks grapple aim assist" />
+			<Flag v="non-physical melee pass through" />
 		</_E>
 		<_34 v="generated_pad3ced" length="2" />
 		<_2 v="general armor" />
@@ -145,6 +146,7 @@
 			<Flag v="does not block grapple line of sight" />
 			<Flag v="does not block callout raycasts" />
 			<Flag v="blocks grapple aim assist" />
+			<Flag v="non-physical melee pass through" />
 		</_E>
 		<_34 v="generated_pad3ced" length="2" />
 		<_2 v="general armor" />

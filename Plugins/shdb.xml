@@ -16,7 +16,7 @@
 		<Flag v="is_water" />
 		<Flag v="is_hologram" />
 		<Flag v="is_wireframe_hologram" />
-		<Flag v="is_emblem" />
+		<Flag v="SupportsForgeCoatingCustomization" />
 		<Flag v="is_alpha_clip" />
 		<Flag v="is_explicit_shader" />
 		<Flag v="uses_fade_time" />
@@ -47,6 +47,7 @@
 		<Flag v="validation" />
 		<Flag v="debug" />
 		<Flag v="deoptimize" />
+		<Flag v="iteration" />
 	</_D>
 	<_40 v="emitter property names">
 		<_2 v="name" />

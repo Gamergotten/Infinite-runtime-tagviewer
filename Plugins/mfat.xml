@@ -13,6 +13,7 @@
 		<_36 v="melee damage parameters" />
 		<_1B v="damage pyramid angles" />
 		<_14 v="damage pyramid depth" />
+		<_14 v="damage pyramid depth when lunging" />
 		<_14 v="maximum lunge range" />
 		<_14 v="damage lunge explosive depth" />
 		<_14 v="runtime damage lunge explosive fraction" />

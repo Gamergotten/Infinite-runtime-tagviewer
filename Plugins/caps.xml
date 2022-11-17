@@ -23,6 +23,7 @@
 			<Flag v="WeaponSniper" />
 			<Flag v="WeaponShotgun" />
 			<Flag v="WeaponHydra" />
+			<Flag v="WeaponBandit" />
 			<Flag v="VehicleWarthog" />
 			<Flag v="VehicleMongoose" />
 			<Flag v="VehicleScorpion" />
@@ -135,6 +136,7 @@
 				<Flag v="WeaponSniper" />
 				<Flag v="WeaponShotgun" />
 				<Flag v="WeaponHydra" />
+				<Flag v="WeaponBandit" />
 				<Flag v="VehicleWarthog" />
 				<Flag v="VehicleMongoose" />
 				<Flag v="VehicleScorpion" />

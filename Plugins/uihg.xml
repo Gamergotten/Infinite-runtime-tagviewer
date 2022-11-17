@@ -54,9 +54,8 @@
 	<_14 v="Enemy Name Visibility Distance" />
 	<_14 v="Fireteam Name Visibility Distance" />
 	<_14 v="Friendly Name Visibility Distance" />
-	<_40 v="navpoint presentations">
-		<_2 v="name" />
-		<_41 v="navpoint tag" />
+	<_40 v="navpoint presentation tags">
+		<_41 v="reference" />
 		<_3B v="" />
 	</_40>
 	<_36 v="Damage globals" />
@@ -124,22 +123,8 @@
 	<_14 v="Hit tick persist time" />
 	<_36 v="Sounds" />
 	<_41 v="banned vehicle entrance sound" />
-	<_36 v="High Contrast globals" />
-	<_F v="High Contrast Flags">
-		<Flag v="disable dynamic contrast" />
-		<Flag v="disable double draw" />
-	</_F>
-	<_34 v="generated_pad9952" length="3" />
-	<_36 v="Dynamic Contrast Settings" />
-	<_14 v="Minimum Threshold" />
-	<_14 v="Maximum Threshold" />
-	<_14 v="Clamp Threshold" />
-	<_36 v="Double Draw Settings" />
-	<_14 v="Darken Factor" />
-	<_14 v="Brighten Factor" />
 	<_36 v="Text" />
 	<_40 v="string references">
-		<_41 v="string list" />
 		<_41 v="new string list" />
 		<_3B v="" />
 	</_40>
@@ -162,20 +147,6 @@
 	<_40 v="keyboard mouse string id overrides">
 		<_2 v="original string id" />
 		<_2 v="string id override" />
-		<_3B v="" />
-	</_40>
-	<_36 v="Player Training" />
-	<_40 v="player training data">
-		<_2 v="display string" />
-		<_3D v="max display time" />
-		<_3D v="display count" />
-		<_3D v="dissapear delay" />
-		<_3D v="redisplay delay" />
-		<_14 v="display delay (s)" />
-		<_E v="flags">
-			<Flag v="not in multiplayer" />
-		</_E>
-		<_34 v="generated_pad0814" length="2" />
 		<_3B v="" />
 	</_40>
 	<_36 v="Grenade Indicator Globals" />
@@ -226,18 +197,6 @@
 			<Flag v="enabled" />
 		</_F>
 		<_34 v="generated_pad4665" length="3" />
-		<_3B v="" />
-	</_40>
-	<_36 v="High contrast globals" />
-	<_40 v="high contrast params">
-		<_2 v="name" />
-		<_14 v="dynamic threshold min" />
-		<_14 v="dynamic threshold max" />
-		<_14 v="dynamic threshold clamp" />
-		<_F v="flags">
-			<Flag v="enabled" />
-		</_F>
-		<_34 v="generated_pad0542" length="3" />
 		<_3B v="" />
 	</_40>
 	<_36 v="Threat tracker globals" />

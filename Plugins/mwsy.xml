@@ -17,7 +17,9 @@
 	<_6 v="regions Vector1" />
 	<_6 v="regions Vector2" />
 	<_40 v="coatingMaterialSets">
+		<_3F v="elementID" />
 		<_41 v="coatingMaterialSet" />
+		<_34 v="generated_pad2ed3" length="4" />
 		<_3B v="" />
 	</_40>
 	<_6 v="coatingMaterialSets Flags" />
@@ -38,6 +40,7 @@
 			<_2E v="Coating Material Set" />
 			<_34 v="generated_pad4b96" length="2" />
 			<_40 v="layers">
+				<_3F v="elementID" />
 				<_2 v="name" />
 				<_A v="Hero_Reveal">
 					<Flag v="disabled" />
@@ -69,7 +72,7 @@
 					<Flag v="disabled" />
 					<Flag v="enabled" />
 				</_A>
-				<_34 v="generated_pad910e" length="2" />
+				<_34 v="generated_pad910e" length="6" />
 				<_3B v="" />
 			</_40>
 			<_6 v="layers Flags" />
@@ -94,8 +97,12 @@
 	</_F>
 	<_34 v="generated_pad245e" length="3" />
 	<_40 v="Preloaded Swatches">
+		<_3F v="elementID" />
 		<_41 v="swatch" />
+		<_34 v="generated_pad863f" length="4" />
 		<_3B v="" />
 	</_40>
+	<_3E v="Material Style Hash" />
+	<_34 v="generated_padd7a9" length="4" />
 	<_3B v="" />
 </root>

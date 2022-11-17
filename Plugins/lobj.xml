@@ -111,6 +111,7 @@
 				<Flag v="Subtract" />
 				<Flag v="override CVW lighting" />
 				<Flag v="override CVW lighting - disable CVW for this placement" />
+				<Flag v="client only no relevancy" />
 			</_D>
 			<_17 v="position" />
 			<_1C v="rotation" />
@@ -545,6 +546,7 @@
 				<Flag v="Subtract" />
 				<Flag v="override CVW lighting" />
 				<Flag v="override CVW lighting - disable CVW for this placement" />
+				<Flag v="client only no relevancy" />
 			</_D>
 			<_17 v="position" />
 			<_1C v="rotation" />
@@ -976,6 +978,7 @@
 				<Flag v="Subtract" />
 				<Flag v="override CVW lighting" />
 				<Flag v="override CVW lighting - disable CVW for this placement" />
+				<Flag v="client only no relevancy" />
 			</_D>
 			<_17 v="position" />
 			<_1C v="rotation" />
@@ -1417,6 +1420,7 @@
 				<Flag v="Subtract" />
 				<Flag v="override CVW lighting" />
 				<Flag v="override CVW lighting - disable CVW for this placement" />
+				<Flag v="client only no relevancy" />
 			</_D>
 			<_17 v="position" />
 			<_1C v="rotation" />
@@ -1831,6 +1835,7 @@
 				<Flag v="Subtract" />
 				<Flag v="override CVW lighting" />
 				<Flag v="override CVW lighting - disable CVW for this placement" />
+				<Flag v="client only no relevancy" />
 			</_D>
 			<_17 v="position" />
 			<_1C v="rotation" />
@@ -2280,6 +2285,7 @@
 				<Flag v="Subtract" />
 				<Flag v="override CVW lighting" />
 				<Flag v="override CVW lighting - disable CVW for this placement" />
+				<Flag v="client only no relevancy" />
 			</_D>
 			<_17 v="position" />
 			<_1C v="rotation" />
@@ -2735,6 +2741,7 @@
 				<Flag v="Subtract" />
 				<Flag v="override CVW lighting" />
 				<Flag v="override CVW lighting - disable CVW for this placement" />
+				<Flag v="client only no relevancy" />
 			</_D>
 			<_17 v="position" />
 			<_1C v="rotation" />
@@ -2989,6 +2996,7 @@
 				<Flag v="Subtract" />
 				<Flag v="override CVW lighting" />
 				<Flag v="override CVW lighting - disable CVW for this placement" />
+				<Flag v="client only no relevancy" />
 			</_D>
 			<_17 v="position" />
 			<_1C v="rotation" />
@@ -3439,6 +3447,7 @@
 				<Flag v="Subtract" />
 				<Flag v="override CVW lighting" />
 				<Flag v="override CVW lighting - disable CVW for this placement" />
+				<Flag v="client only no relevancy" />
 			</_D>
 			<_17 v="position" />
 			<_1C v="rotation" />
@@ -3882,6 +3891,7 @@
 				<Flag v="Subtract" />
 				<Flag v="override CVW lighting" />
 				<Flag v="override CVW lighting - disable CVW for this placement" />
+				<Flag v="client only no relevancy" />
 			</_D>
 			<_17 v="position" />
 			<_1C v="rotation" />
@@ -4136,6 +4146,7 @@
 				<Flag v="Subtract" />
 				<Flag v="override CVW lighting" />
 				<Flag v="override CVW lighting - disable CVW for this placement" />
+				<Flag v="client only no relevancy" />
 			</_D>
 			<_17 v="position" />
 			<_1C v="rotation" />
@@ -4546,6 +4557,7 @@
 				<Flag v="Subtract" />
 				<Flag v="override CVW lighting" />
 				<Flag v="override CVW lighting - disable CVW for this placement" />
+				<Flag v="client only no relevancy" />
 			</_D>
 			<_17 v="position" />
 			<_1C v="rotation" />
@@ -4977,6 +4989,7 @@
 				<Flag v="Subtract" />
 				<Flag v="override CVW lighting" />
 				<Flag v="override CVW lighting - disable CVW for this placement" />
+				<Flag v="client only no relevancy" />
 			</_D>
 			<_17 v="position" />
 			<_1C v="rotation" />
@@ -5488,6 +5501,24 @@
 		<_40 v="float params">
 			<_2 v="name" />
 			<_14 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="bool params">
+			<_2 v="name" />
+			<_F v="value">
+				<Flag v="value" />
+			</_F>
+			<_34 v="generated_pad0473" length="3" />
+			<_3B v="" />
+		</_40>
+		<_40 v="taggraph instance variables - strings">
+			<_2 v="name" />
+			<_2 v="value" />
+			<_3B v="" />
+		</_40>
+		<_40 v="taggraph instance variables - tag references">
+			<_2 v="name" />
+			<_41 v="value" />
 			<_3B v="" />
 		</_40>
 		<_6 v="handle" />
@@ -9517,6 +9548,12 @@
 		<_14 v="transition speed" />
 		<_41 v="base air sound" />
 		<_41 v="base air sweetener sound" />
+		<_C v="environment type">
+			<Flag v="Use Enviroment Tag" />
+			<Flag v="Use Parent Zone" />
+			<Flag v="Interior" />
+			<Flag v="Exterior" />
+		</_C>
 		<_41 v="reverb settings" />
 		<_2 v="mix state group" />
 		<_2 v="mix state value" />
@@ -11378,16 +11415,6 @@
 			<_41 v="Override material ref" />
 			<_3B v="" />
 		</_40>
-		<_40 v="mask painting material bitmap overrides">
-			<_41 v="Original material ref" />
-			<_40 v="bitmap overrides">
-				<_2 v="parameter name" />
-				<_41 v="bitmap" />
-				<_3B v="" />
-			</_40>
-			<_41 v="Override material ref" />
-			<_3B v="" />
-		</_40>
 		<_40 v="EditorMetadata">
 			<_1 v="folder name" />
 			<_17 v="local space pivot point position" />
@@ -11496,16 +11523,6 @@
 		</_40>
 		<_40 v="material overrides">
 			<_41 v="Original material ref" />
-			<_41 v="Override material ref" />
-			<_3B v="" />
-		</_40>
-		<_40 v="mask painting material bitmap overrides">
-			<_41 v="Original material ref" />
-			<_40 v="bitmap overrides">
-				<_2 v="parameter name" />
-				<_41 v="bitmap" />
-				<_3B v="" />
-			</_40>
 			<_41 v="Override material ref" />
 			<_3B v="" />
 		</_40>
@@ -11618,16 +11635,6 @@
 		</_40>
 		<_40 v="material overrides">
 			<_41 v="Original material ref" />
-			<_41 v="Override material ref" />
-			<_3B v="" />
-		</_40>
-		<_40 v="mask painting material bitmap overrides">
-			<_41 v="Original material ref" />
-			<_40 v="bitmap overrides">
-				<_2 v="parameter name" />
-				<_41 v="bitmap" />
-				<_3B v="" />
-			</_40>
 			<_41 v="Override material ref" />
 			<_3B v="" />
 		</_40>

@@ -140,6 +140,10 @@
 		<_2E v="Remove user parameter from other mask" />
 		<_3B v="" />
 	</_40>
+	<_40 v="Stepped user parameters">
+		<_2 v="User parameter name" />
+		<_3B v="" />
+	</_40>
 	<_40 v="Joint animation filtering">
 		<_2 v="Joint name" />
 		<_3B v="" />
@@ -247,6 +251,5 @@
 		<_3B v="" />
 	</_40>
 	<_37 v="" />
-	<_34 v="generated_padb5c3" length="4" />
 	<_3B v="" />
 </root>

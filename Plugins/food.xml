@@ -30,6 +30,10 @@
 	<_41 v="Runtime Telescoping Asset" />
 	<_41 v="Forge Kit" />
 	<_2 v="Default Representation (Asset Variant or Object Representation Name)" />
+	<_F v="Placement Preview">
+		<Flag v="Enabled" />
+	</_F>
+	<_34 v="generated_pad750f" length="3" />
 	<_38 v="Configuration Options">
 		<_E v="Property Flags">
 			<Flag v="Yaw Rotation Only" />
@@ -53,8 +57,9 @@
 			<Flag v="Edit time (Forge) and Run Time (Game)" />
 			<Flag v="Edit Time (Forge)" />
 		</_B>
-		<_F v="Exclude from NavMesh generation">
-			<Flag v="Exclude" />
+		<_F v="Baking Flags">
+			<Flag v="Exclude Navmesh" />
+			<Flag v="Exclude Acoustics" />
 		</_F>
 		<_34 v="generated_padb2fa" length="1" />
 		<_37 v="Scale Limits" />
@@ -193,6 +198,17 @@
 			<_3B v="" />
 		</_38>
 		<_37 v="" />
+		<_37 v="Grime" />
+		<_A v="Is Grime Editable">
+			<Flag v="enabled" />
+			<Flag v="disabled" />
+		</_A>
+		<_34 v="generated_pad6645" length="3" />
+		<_40 v="Grime Groups">
+			<_2 v="Swatch Group Name" />
+			<_3B v="" />
+		</_40>
+		<_37 v="" />
 		<_37 v="" />
 		<_3B v="" />
 	</_38>
@@ -230,6 +246,5 @@
 		</_40>
 		<_3B v="" />
 	</_38>
-	<_34 v="generated_pad750f" length="4" />
 	<_3B v="" />
 </root>

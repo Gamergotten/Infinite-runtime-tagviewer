@@ -158,6 +158,10 @@
 		<_40 v="user parameters">
 			<_2 v="name" />
 			<_14 v="default value" />
+			<_F v="flags">
+				<Flag v="SteppedCurve" />
+			</_F>
+			<_34 v="generated_pad54cc" length="3" />
 			<_3B v="" />
 		</_40>
 		<_40 v="user parameter masks">

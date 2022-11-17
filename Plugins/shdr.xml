@@ -15,7 +15,7 @@
 		<Flag v="is_water" />
 		<Flag v="is_hologram" />
 		<Flag v="is_wireframe_hologram" />
-		<Flag v="is_emblem" />
+		<Flag v="SupportsForgeCoatingCustomization" />
 		<Flag v="is_alpha_clip" />
 		<Flag v="is_explicit_shader" />
 		<Flag v="uses_fade_time" />

@@ -32,6 +32,7 @@
 		<_30 v="player information" />
 		<_41 v="hud screen reference" />
 		<_2 v="hud transition event name" />
+		<_41 v="buddy teleport effects" />
 		<_41 v="first person hands model" />
 		<_41 v="generatedFirstPersonHandsModel" />
 		<_2 v="first person hands variant" />
@@ -54,6 +55,7 @@
 		<_41 v="outline to use for enemy flash acquire" />
 		<_41 v="outline to use for friendly" />
 		<_41 v="outline to use for friendly near reticle" />
+		<_41 v="non-occluded outline to use for friendly" />
 		<_41 v="outline to use when viewed by spectators" />
 		<_41 v="non-occluded outline to use when viewed by spectators" />
 		<_3B v="" />
@@ -152,13 +154,10 @@
 		<_36 v="Predictable Collision" />
 		<_D v="flags">
 			<Flag v="enable" />
-			<Flag v="include friendlies" />
+			<Flag v="include ai" />
 		</_D>
 		<_14 v="bounding sphere extrapolation time" />
 		<_14 v="bounding sphere scalar" />
-		<_14 v="participant radius scalar" />
-		<_15 v="participant adjustment fraction" />
-		<_15 v="adjustment fraction" />
 		<_14 v="linear correction velocity max" />
 		<_3B v="" />
 	</_40>

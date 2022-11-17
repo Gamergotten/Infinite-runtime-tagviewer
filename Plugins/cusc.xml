@@ -10,7 +10,6 @@
 		<_3B v="" />
 	</_38>
 	<_40 v="string references">
-		<_41 v="string list" />
 		<_41 v="new string list" />
 		<_3B v="" />
 	</_40>
@@ -602,5 +601,10 @@
 	<_41 v="script" />
 	<_2 v="name" />
 	<_6 v="Object count budget" />
+	<_F v="Cui Screen Flags">
+		<Flag v="Force FullCanvas UI for SLAMS" />
+		<Flag v="Force Fixed Size UI" />
+	</_F>
+	<_34 v="generated_padbb46" length="7" />
 	<_3B v="" />
 </root>

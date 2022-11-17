@@ -99,10 +99,12 @@
 		<_2 v="deploy animation" />
 		<_14 v="deploy duration override" />
 		<_14 v="max range" />
+		<_14 v="deploy exit min fraction" />
 		<_37 v="" />
 		<_37 v="attaching" />
 		<_2 v="biped attach marker" />
 		<_19 v="biped attach offset" />
+		<_2 v="item attach marker" />
 		<_37 v="" />
 		<_37 v="pull stage" />
 		<_2 v="pull animation (airborne)" />

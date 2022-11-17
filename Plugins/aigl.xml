@@ -207,7 +207,6 @@
 		<_37 v="" />
 		<_37 v="AI Networking Parameters" />
 		<_36 v="IMPORTANT" />
-		<_14 v="Position discrepancy below which throttle fixups are used exclusively" />
 		<_14 v="Positional discrepancy below which throttle fixups are NOT used if authority is stopped" />
 		<_14 v="Predict ahead time" />
 		<_36 v="Interpolation Settings" />

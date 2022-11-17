@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_37 v="Two Player Game, Player Two" />
+	<_38 v="2P, P2">
+		<_17 v="Offset" />
+		<_1B v="Offset Facing" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Three Player Game, Player Two" />
+	<_38 v="3P, P2">
+		<_17 v="Offset" />
+		<_1B v="Offset Facing" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Three Player Game, Player Three" />
+	<_38 v="3P, P3">
+		<_17 v="Offset" />
+		<_1B v="Offset Facing" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Four Player Game, Player Two" />
+	<_38 v="4P, P2">
+		<_17 v="Offset" />
+		<_1B v="Offset Facing" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Four Player Game, Player Three" />
+	<_38 v="4P, P3">
+		<_17 v="Offset" />
+		<_1B v="Offset Facing" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_37 v="Four Player Game, Player Four" />
+	<_38 v="4P, P4">
+		<_17 v="Offset" />
+		<_1B v="Offset Facing" />
+		<_3B v="" />
+	</_38>
+	<_37 v="" />
+	<_3B v="" />
+</root>

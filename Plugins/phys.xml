@@ -110,6 +110,7 @@
 		<_2 v="Name" />
 		<_37 v="Flags" />
 		<_D v="Flags">
+			<Flag v="Only affects authoritative gameplay" />
 			<Flag v="Ignores players" />
 			<Flag v="Ignores nonplayers" />
 			<Flag v="Ignores bipeds" />

@@ -12,11 +12,9 @@
 	<_2 v="name" />
 	<_2 v="warp params name" />
 	<_2 v="chromatic aberration params name" />
-	<_2 v="high contrast params name" />
 	<_40 v="components">
 		<_41 v="reference" />
 		<_3B v="" />
 	</_40>
-	<_34 v="generated_padbecb" length="4" />
 	<_3B v="" />
 </root>

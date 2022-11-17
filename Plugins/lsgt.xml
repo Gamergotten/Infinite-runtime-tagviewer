@@ -123,16 +123,6 @@
 					<_41 v="Override material ref" />
 					<_3B v="" />
 				</_40>
-				<_40 v="mask painting material bitmap overrides">
-					<_41 v="Original material ref" />
-					<_40 v="bitmap overrides">
-						<_2 v="parameter name" />
-						<_41 v="bitmap" />
-						<_3B v="" />
-					</_40>
-					<_41 v="Override material ref" />
-					<_3B v="" />
-				</_40>
 				<_40 v="EditorMetadata">
 					<_1 v="folder name" />
 					<_17 v="local space pivot point position" />
@@ -247,16 +237,6 @@
 				</_40>
 				<_40 v="material overrides">
 					<_41 v="Original material ref" />
-					<_41 v="Override material ref" />
-					<_3B v="" />
-				</_40>
-				<_40 v="mask painting material bitmap overrides">
-					<_41 v="Original material ref" />
-					<_40 v="bitmap overrides">
-						<_2 v="parameter name" />
-						<_41 v="bitmap" />
-						<_3B v="" />
-					</_40>
 					<_41 v="Override material ref" />
 					<_3B v="" />
 				</_40>

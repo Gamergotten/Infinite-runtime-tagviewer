@@ -76,8 +76,6 @@
 	<_1E v="plane 3d" />
 	<_1F v="real rgb color" />
 	<_20 v="real argb color" />
-	<_21 v="real hsv color" />
-	<_22 v="real ahsv color" />
 	<_23 v="short bounds" />
 	<_24 v="angle bounds" />
 	<_25 v="real bounds" />
@@ -100,6 +98,7 @@
 	<_2F v="short block index custom" />
 	<_31 v="long block index custom" />
 	<_42 v="data" />
+	<_44 v="data path" />
 	<_36 v="explanation" />
 	<_38 v="basic struct">
 		<_6 v="long in struct" />
@@ -123,7 +122,6 @@
 		<_6 v="long in array" />
 		<_3B v="" />
 	</_39>
-	<_43 v="basic resource" />
 	<_40 v="block with struct">
 		<_38 v="struct in block">
 			<_6 v="long in struct" />
@@ -694,5 +692,14 @@
 		</_40>
 		<_3B v="" />
 	</_38>
+	<_40 v="taggraph structs">
+		<_14 v="aFloat" />
+		<_14 v="aDifferentlyNamedFloat" />
+		<_38 v="anEmbeddedStruct">
+			<_14 v="sensibleFloatName" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
 	<_3B v="" />
 </root>

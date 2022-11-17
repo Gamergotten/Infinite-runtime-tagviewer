@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<_38 v="AnyTag">
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_38>
+	<_36 v="Dialogs" />
+	<_40 v="descriptions">
+		<_2 v="dialog name" />
+		<_E v="flags">
+			<Flag v="unused" />
+		</_E>
+		<_34 v="generated_pad869b" length="2" />
+		<_2 v="title" />
+		<_2 v="message" />
+		<_2 v="first_item" />
+		<_2 v="second_item" />
+		<_2 v="third_item" />
+		<_2 v="fourth_item" />
+		<_2 v="button key" />
+		<_B v="default item">
+			<Flag v="first item" />
+			<Flag v="second item" />
+			<Flag v="third item" />
+			<Flag v="fourth item" />
+		</_B>
+		<_B v="b button action">
+			<Flag v="dismisses dialog" />
+			<Flag v="button ignored" />
+			<Flag v="first item activates" />
+			<Flag v="second item activates" />
+			<Flag v="third item activates" />
+			<Flag v="fourth item activates" />
+		</_B>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_padf92c" length="4" />
+	<_3B v="" />
+</root>

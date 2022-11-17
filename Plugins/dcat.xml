@@ -31,19 +31,15 @@
 		<Flag v="Impostor" />
 	</_C>
 	<_37 v="Spec Control - LOD Multiplier" />
-	<_38 v="LOD Multiplier">
-		<_25 v="Very Low" />
-		<_25 v="Low" />
-		<_25 v="Medium" />
-		<_25 v="High" />
-		<_25 v="Ultra" />
-		<_14 v="2 Player Splitscreen" />
-		<_14 v="3 Player Splitscreen" />
-		<_14 v="4 Player Splitscreen" />
-		<_3B v="" />
-	</_38>
+	<_25 v="LOD Multiplier Low" />
+	<_17 v="LOD Multiplier Splitscreen Multiplier Low" />
+	<_25 v="LOD Multiplier Medium" />
+	<_17 v="LOD Multiplier Splitscreen Multiplier Medium" />
+	<_25 v="LOD Multiplier High" />
+	<_17 v="LOD Multiplier Splitscreen Multiplier High" />
+	<_25 v="LOD Multiplier Ultra" />
+	<_17 v="LOD Multiplier Splitscreen Multiplier Ultra" />
 	<_38 v="Distance Dither Start">
-		<_14 v="Very Low" />
 		<_14 v="Low" />
 		<_14 v="Medium" />
 		<_14 v="High" />
@@ -54,17 +50,14 @@
 		<_3B v="" />
 	</_38>
 	<_14 v="Distance Dither Transition Width" />
-	<_38 v="Distance Dither Density Multiplier">
-		<_14 v="Very Low" />
-		<_14 v="Low" />
-		<_14 v="Medium" />
-		<_14 v="High" />
-		<_14 v="Ultra" />
-		<_14 v="2 Player Splitscreen" />
-		<_14 v="3 Player Splitscreen" />
-		<_14 v="4 Player Splitscreen" />
-		<_3B v="" />
-	</_38>
+	<_14 v="Distance Dither Density Multiplier Low" />
+	<_17 v="Distance Dither Density Multiplier Splitscreen Multiplier Low" />
+	<_14 v="Distance Dither Density Multiplier Medium" />
+	<_17 v="Distance Dither Density Multiplier Splitscreen Multiplier Medium" />
+	<_14 v="Distance Dither Density Multiplier High" />
+	<_17 v="Distance Dither Density Multiplier Splitscreen Multiplier High" />
+	<_14 v="Distance Dither Density Multiplier Ultra" />
+	<_17 v="Distance Dither Density Multiplier Splitscreen Multiplier Ultra" />
 	<_37 v="" />
 	<_37 v="" />
 	<_37 v="Terrain influence" />

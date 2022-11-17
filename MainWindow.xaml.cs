@@ -109,7 +109,7 @@ namespace InfiniteRuntimeTagViewer
 		// Hard-Coded Addresses
 		//public string HookProcessAsyncBaseAddr = "HaloInfinite.exe+0x40AD150"; // TU11
 		public string HookProcessAsyncBaseAddr; // Tag_List_Function
-		public string ScanMemAOBBaseAddr = "HaloInfinite.exe+0x305B1B0"; // Tag_List_Str
+		public string ScanMemAOBBaseAddr = "HaloInfinite.exe+0x0"; // Tag_List_Str
 		public string AOBScanTagStr = "74 61 67 20 69 6E 73 74 61 6E 63 65 73"; // Tag_List_Backup Str to find
 		private readonly long AOBScanStartAddr = Convert.ToInt64("0000010000000000", 16);
 		private readonly long AOBScanEndAddr = Convert.ToInt64("000003ffffffffff", 16);
@@ -522,6 +522,7 @@ namespace InfiniteRuntimeTagViewer
 							{
 								aobScan = aobResult;
 							}
+							aobScan = aobResult;
 						}
 
 						//get all processes named HaloInfinite

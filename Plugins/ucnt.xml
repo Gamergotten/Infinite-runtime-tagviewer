@@ -28,10 +28,13 @@
 		<_3B v="" />
 	</_38>
 	<_15 v="cumulative limit fraction" />
+	<_36 v="Situational Overrides" />
 	<_40 v="situational overrides">
 		<_A v="Situation">
 			<Flag v="Player near physics volume" />
 			<Flag v="Melee lunge" />
+			<Flag v="Credulous Player near dynamic body" />
+			<Flag v="Credulous Out of inputs" />
 		</_A>
 		<_34 v="generated_pad752f" length="3" />
 		<_14 v="Check distance" />
@@ -53,5 +56,33 @@
 		</_38>
 		<_3B v="" />
 	</_40>
+	<_40 v="credulous overrides">
+		<_A v="Situation">
+			<Flag v="Player near physics volume" />
+			<Flag v="Melee lunge" />
+			<Flag v="Credulous Player near dynamic body" />
+			<Flag v="Credulous Out of inputs" />
+		</_A>
+		<_34 v="generated_pad752f" length="3" />
+		<_14 v="Check distance" />
+		<_36 v="Lowest velocity values" />
+		<_38 v="Override interpolation min values">
+			<_14 v="position delta max" />
+			<_8 v="rotation delta max" />
+			<_14 v="linear velocity delta max" />
+			<_8 v="angular velocity delta max" />
+			<_3B v="" />
+		</_38>
+		<_36 v="Highest velocity values" />
+		<_38 v="Override interpolation max values">
+			<_14 v="position delta max" />
+			<_8 v="rotation delta max" />
+			<_14 v="linear velocity delta max" />
+			<_8 v="angular velocity delta max" />
+			<_3B v="" />
+		</_38>
+		<_3B v="" />
+	</_40>
+	<_34 v="generated_pad799c" length="4" />
 	<_3B v="" />
 </root>

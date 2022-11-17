@@ -3994,6 +3994,7 @@
 	<_6 v="needToClearShadowSubmissionsBuffers" />
 	<_34 v="generated_pad0ad3" length="4" />
 	<_7 v="gpuFloatingShadowSubmissionData" />
+	<_7 v="BSPRuntimeData" />
 	<_39 v="GPU Submission Sources">
 		<_D v="flags">
 			<Flag v="Dirty Flag" />
