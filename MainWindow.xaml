@@ -232,8 +232,8 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="70"/>
                         </Grid.ColumnDefinitions>
-                        <TextBox x:Name="Searchbox" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="2.5" KeyDown="SearchBoxEnter"/>
-                        <Button Content="Search" Grid.Column="1" Margin="2.5" Width="60" Height="22.5" Click="SearchBoxClick"/>
+                        <TextBox x:Name="Searchbox" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5,0,0,0" KeyDown="SearchBoxEnter"/>
+                        <Button Content="Search" Grid.Column="1" Margin="2.5" Width="60" Height="22.5" Click="SearchBoxClick" VerticalAlignment="Center"/>
                     </Grid>
 
                     <!-- Tags Tree -->
