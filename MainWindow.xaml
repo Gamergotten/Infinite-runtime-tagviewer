@@ -115,11 +115,11 @@
                                 </MenuItem.ToolTip>
                             </MenuItem>
 
-                            <MenuItem x:Name="whatdoescbxstandfor" Header="Auto Loader - Auto poker" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
+                            <!--<MenuItem x:Name="whatdoescbxstandfor" Header="Auto Loader - Auto poker" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
                                 <MenuItem.ToolTip>
                                     <TextBlock Foreground="Black">Automatically applies all pokes after a load.</TextBlock>
                                 </MenuItem.ToolTip>
-                            </MenuItem>
+                            </MenuItem>-->
 
                             <MenuItem x:Name="CbxAutoPokeChanges" Header="Auto Poke" IsCheckable="True" IsChecked="False" Checked="UpdateOptionsFromSettings" Unchecked="UpdateOptionsFromSettings" >
                                 <MenuItem.ToolTip>
@@ -165,8 +165,7 @@
                             </MenuItem>
                         </MenuItem>
                         <MenuItem Header="Tools" WindowChrome.IsHitTestVisibleInChrome="True" FontFamily="Segoe UI Light" Height="28">
-                            <MenuItem Header="Dump Tag Structs" Click="DumpClick"/>
-                            <MenuItem x:Name="TeleportMenuButton" Header="Teleport Menu" Click="OpenTeleportMenu"/>
+                            <!--<MenuItem x:Name="TeleportMenuButton" Header="Teleport Menu" Click="OpenTeleportMenu"/>-->
                             <MenuItem x:Name="DebugMenu" Header="Debug">
                                 <MenuItem x:Name="UnloadAllTags" Header="Unload Tags" Click="UnloadTags" >
                                     <MenuItem.ToolTip>
@@ -174,6 +173,7 @@
                                     </MenuItem.ToolTip>
                                 </MenuItem>
                             </MenuItem>
+                            <MenuItem Header="Dump Tag Structs" Click="DumpClick"/>
                             <!--Check For Updates-->
                             <MenuItem x:Name="CheckUpdates" Header="Check For Updates" Click="CheckForUpdates">
                                 <MenuItem.ToolTip>
@@ -229,11 +229,11 @@
                     <!-- Search Box -->
                     <Grid Background="#252526">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="45"/>
                             <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="70"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="Search" VerticalAlignment="Center" Margin="5,0,5,0"/>
-                        <TextBox x:Name="Searchbox" Grid.Column="1" TextChanged="Searchbox_TextChanged" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                        <TextBox x:Name="Searchbox" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="2.5" KeyDown="SearchBoxEnter"/>
+                        <Button Content="Search" Grid.Column="1" Margin="2.5" Width="60" Height="22.5" Click="SearchBoxClick"/>
                     </Grid>
 
                     <!-- Tags Tree -->
