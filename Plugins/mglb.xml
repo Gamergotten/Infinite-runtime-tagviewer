@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
 	<_38 v="">
-		<_7 v="" />
-		<_38 v="">
-			<_6 v="" />
-			<_34 v="" length="4" />
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -14,8 +14,18 @@
 		<Flag v="enable predictable rebound" />
 		<Flag v="enable damage acceleration with predictable rebound" />
 		<Flag v="use predictable collision pill" />
-		<Flag v="calculate head position as offset" />
 	</_D>
+	<_A v="head position calculation method">
+		<Flag v="from head marker" />
+		<Flag v="as offset from base position" />
+		<Flag v="sight position" />
+	</_A>
+	<_A v="head position calculation method (parented)">
+		<Flag v="from head marker" />
+		<Flag v="as offset from base position" />
+		<Flag v="sight position" />
+	</_A>
+	<_34 v="generated_paded36" length="2" />
 	<_14 v="melee death acceleration" />
 	<_14 v="uber melee death acceleration" />
 	<_37 v="clang" />
@@ -79,5 +89,6 @@
 	<_14 v="rebound speed" />
 	<_14 v="rebound ignore throttle time" />
 	<_37 v="" />
+	<_34 v="generated_pad39eb" length="4" />
 	<_3B v="" />
 </root>

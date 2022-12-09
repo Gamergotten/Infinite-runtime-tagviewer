@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
 	<_38 v="">
-		<_7 v="" />
-		<_38 v="">
-			<_6 v="" />
-			<_34 v="" length="4" />
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -206,6 +206,7 @@
 			<Flag v="MoveDeadzone" />
 			<Flag v="LookDeadzone" />
 			<Flag v="Player" />
+			<Flag v="Scoreboard" />
 			<Flag v="Vehicle" />
 			<Flag v="Communication" />
 			<Flag v="Observer" />
@@ -230,6 +231,7 @@
 		</_F>
 		<_1 v="Toggle Axis" />
 		<_34 v="generated_pade2be" length="3" />
+		<_2 v="Compatible Axis" />
 		<_36 v="Slider Settings" />
 		<_40 v="Slider Settings">
 			<_F v="Flags">
@@ -263,6 +265,7 @@
 			<Flag v="MoveDeadzone" />
 			<Flag v="LookDeadzone" />
 			<Flag v="Player" />
+			<Flag v="Scoreboard" />
 			<Flag v="Vehicle" />
 			<Flag v="Communication" />
 			<Flag v="Observer" />
@@ -287,6 +290,7 @@
 		</_F>
 		<_1 v="Toggle Axis" />
 		<_34 v="generated_pade2be" length="3" />
+		<_2 v="Compatible Axis" />
 		<_36 v="Slider Settings" />
 		<_40 v="Slider Settings">
 			<_F v="Flags">
@@ -320,6 +324,7 @@
 			<Flag v="MoveDeadzone" />
 			<Flag v="LookDeadzone" />
 			<Flag v="Player" />
+			<Flag v="Scoreboard" />
 			<Flag v="Vehicle" />
 			<Flag v="Communication" />
 			<Flag v="Observer" />
@@ -344,6 +349,7 @@
 		</_F>
 		<_1 v="Toggle Axis" />
 		<_34 v="generated_pade2be" length="3" />
+		<_2 v="Compatible Axis" />
 		<_36 v="Slider Settings" />
 		<_40 v="Slider Settings">
 			<_F v="Flags">

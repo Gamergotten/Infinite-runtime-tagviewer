@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
 	<_38 v="">
-		<_7 v="" />
-		<_38 v="">
-			<_6 v="" />
-			<_34 v="" length="4" />
+		<_7 v="vtable space" />
+		<_38 v="internal struct">
+			<_6 v="global tag ID" />
+			<_34 v="local tag handle" length="4" />
 			<_3B v="" />
 		</_38>
 		<_3B v="" />
@@ -96,6 +96,8 @@
 			<_14 v="biped speed reference" />
 			<_14 v="active camo ground vertical speed scalar" />
 			<_14 v="active camo airborne vertical speed scalar" />
+			<_14 v="landing protection speed threshold" />
+			<_14 v="landing protection duration" />
 			<_14 v="vehicle speed reference" />
 			<_15 v="camo value for game name" />
 			<_38 v="camo value to distortion">
