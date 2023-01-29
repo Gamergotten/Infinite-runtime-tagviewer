@@ -6,6 +6,8 @@ In-development build:
 
 [![Download latest build](https://github.com/Gamergotten/Infinite-runtime-tagviewer/actions/workflows/dotnet.yml/badge.svg)](https://nightly.link/Gamergotten/Infinite-runtime-tagviewer/workflows/dotnet/master/IRTV.zip) <- (click to download)
 
+[.Net 5.0 Download](https://download.visualstudio.microsoft.com/download/pr/1055020b-9c1a-4fd1-bb3e-64de0de2ee65/fbb705491eaea5fd9137de9fd230bbba/dotnet-sdk-5.0.405-win-x64.exe)
+
 
 # Read me
 Welcome to the very first 'Epic Runtime Tag Editing Tool' for Halo Infinite. 
