@@ -34,4 +34,4 @@ jobs:
       with:
         name: IRTV
         path: bin/Release/net5.0-windows
-        retention-days: 90
+        retention-days: 120
