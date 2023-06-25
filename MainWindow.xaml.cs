@@ -1126,16 +1126,17 @@ namespace InfiniteRuntimeTagViewer
 
 					long aobScan = 0;
 					long haloInfinite = 0;
+					bool found_pointer = false;
 					if (aobScanResults != null)
 					{
 						foreach (long aobResult in aobScanResults)
 						{
 							string temp = aobResult.ToString("X");
-							if (temp.EndsWith("0000"))
+							if (temp.EndsWith("0000") || aobScan == 0) // failsafe for if it doesn't end in "0000"
 							{
 								aobScan = aobResult;
 							}
-							aobScan = aobResult;
+							//aobScan = aobResult; // problematic code; if an address was found after (before?) then it wouldn't find the pointer
 						}
 
 						//get all processes named HaloInfinite
@@ -1151,7 +1152,10 @@ namespace InfiniteRuntimeTagViewer
 						aobSingle = Regex.Replace(aobSingle, ".{2}", "$0 ");
 						aobSingle = aobSingle.TrimEnd();
 						Debugger.Log(0, "DBGTIMING", "AOB: " + aobSingle);
-						long pointer = (await M.AoBScan(haloInfinite, 140737488289791, aobSingle + " 00 00", true, true, true)).First();
+						var testing_var = await M.AoBScan(haloInfinite, 0x7FFFFFFEFFFF, aobSingle + " 00 00", true, true, true);
+						long pointer = testing_var.First();
+						found_pointer = (pointer != 0);
+
 						Debug.WriteLine(pointer);
 						Settings.Default.ProcAsyncBaseAddr = "HaloInfinite.exe+0x" + (pointer - haloInfinite).ToString("X");
 						Settings.Default.Save();
@@ -1169,7 +1173,8 @@ namespace InfiniteRuntimeTagViewer
 					else
 					{
 						BaseAddress = aobScan;
-						SetStatus("Process Hooked: " + M.mProc.Process.Id + " (AOB)");
+						if (found_pointer) SetStatus("Process Hooked: " + M.mProc.Process.Id + " (AOB): pointer found");
+						else SetStatus("Process Hooked: " + M.mProc.Process.Id + " (AOB): pointer not found (may not load tags)");
 						hooked = true;
 					}
 				}
