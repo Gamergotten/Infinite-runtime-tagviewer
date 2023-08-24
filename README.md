@@ -13,7 +13,6 @@ In-development build:
 Welcome to the very first 'Epic Runtime Tag Editing Tool' for Halo Infinite. 
 - If you want to read some useful documentations and check out some guides you can do this here (when its ready and finalized): https://www.halocustoms.com/modding-wiki/haloinfinite/
 - If you are experienceig any bugs, issues, or have any features to suggest, please submit a ticket in the issues section.
-- This project is currently being managed and updated by xxZxx.
 
 **Currently**
 - We now support all tags. 
