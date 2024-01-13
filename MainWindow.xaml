@@ -237,7 +237,7 @@
                     </Grid>
 
                     <!-- Tags Tree -->
-                    <TreeView x:Name="TagsTree" Grid.Row="1" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling">
+                    <TreeView x:Name="TagsTree" Grid.Row="1" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" >
                         <TreeViewItem Header="[Tutorial]" />
                         <TreeViewItem Header="1. Press the load button to get started!" />
                         <TreeViewItem Header="2. Press again whenever the map/zoneset changes." />
@@ -257,8 +257,16 @@
                             <TextBlock x:Name="statusText" Text="Not hooked" VerticalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Grid.Column="1">
-                            <Button x:Name="LoadBtn" Content="Load" Click="BtnLoadTags_Click" Width="60" Height="25" />
-                            <Button x:Name="Reload_Button" Content="Reload" Click="BtnReLoadTags_Click" Margin="5, 0, 0, 0" IsEnabled="False" Width="60" Height="25" />
+                            <Button x:Name="LoadBtn" Content="Load" Click="BtnLoadTags_Click" Width="60" Height="25">
+                                <Button.ToolTip>
+                                    <TextBlock Foreground="Black">Load New Tags</TextBlock>
+                                </Button.ToolTip>
+                            </Button>
+                            <Button x:Name="Reload_Button" Content="Reload" Click="BtnReLoadTags_Click" Margin="5, 0, 0, 0" IsEnabled="False" Width="60" Height="25" >
+                                <Button.ToolTip>
+                                    <TextBlock Foreground="Black">Clear Tags List And Hard Reload</TextBlock>
+                                </Button.ToolTip>
+                            </Button>
                         </StackPanel>
                     </Grid>
                 </Grid>

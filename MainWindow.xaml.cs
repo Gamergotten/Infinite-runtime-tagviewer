@@ -24,6 +24,7 @@ using System.Net;
 using Newtonsoft.Json.Linq;
 using System.Xml;
 using InfiniteRuntimeTagViewer.Halo.TagStructDump;
+using System.Text;
 
 namespace InfiniteRuntimeTagViewer
 {
@@ -167,6 +168,9 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
+
+		
+
 		private void BtnReloadProcessClick(object sender, RoutedEventArgs e)
 		{
 			foreach (Process? process in Process.GetProcessesByName("HaloInfinite"))
@@ -289,6 +293,7 @@ namespace InfiniteRuntimeTagViewer
 			string search = Searchbox.Text;
 			foreach (TreeViewItem tv in TagsTree.Items)
 			{
+				
 				if (!tv.Header.ToString().Contains(search))
 				{
 					tv.Visibility = Visibility.Collapsed;
@@ -315,6 +320,11 @@ namespace InfiniteRuntimeTagViewer
 				}
 			}
 		}
+
+		private void Tv_Expanded(object sender, RoutedEventArgs e)
+		{
+			throw new NotImplementedException();
+		}
 		#endregion
 
 		#region MenuCommands
@@ -338,7 +348,7 @@ namespace InfiniteRuntimeTagViewer
 
 		public void UnloadTags(object sender, RoutedEventArgs e)
 		{
-			TagsTree.Items.Clear();
+			Tags.Clear();
 			loadedTags = false;
 		}
 
@@ -730,7 +740,7 @@ namespace InfiniteRuntimeTagViewer
 		// load tags from Mem
 		public void BtnReLoadTags_Click(object sender, RoutedEventArgs e)
 		{
-			TagsTree.Items.Clear();
+			Tags.Clear();
 			groups_headers.Clear();
 			tags_headers.Clear();
 			HookAndLoad();
@@ -738,6 +748,7 @@ namespace InfiniteRuntimeTagViewer
 
 		private void BtnLoadTags_Click(object sender, RoutedEventArgs e)
 		{
+			//Tags.Clear();
 			HookAndLoad();
 			Reload_Button.IsEnabled = true;
 		}
@@ -827,7 +838,7 @@ namespace InfiniteRuntimeTagViewer
 			{
 				if (load_tags_too)
 				{
-					TagsTree.Items.Clear();
+					Tags.Clear();
 					groups_headers.Clear();
 					tags_headers.Clear();
 					LoadTagsMem(true);
@@ -854,7 +865,7 @@ namespace InfiniteRuntimeTagViewer
 					BaseAddress = -1;
 					hooked = false;
 					loadedTags = false;
-					TagsTree.Items.Clear();
+					Tags.Clear();
 				}
 
 				if (!hooked || reset)
@@ -1007,102 +1018,139 @@ namespace InfiniteRuntimeTagViewer
 			}
 		}
 
-		public void Loadtags()
+		public string GetTagNameFromCache(string objectId)
 		{
-			Dictionary<string, TreeViewItem> tags_headers_diff = new();
-			Dictionary<string, TreeViewItem> groups_headers_diff = new();
-			loadedTags = true;
-
-			for (int i = 0; i < TagGroups.Count; i++)
+			if (InhaledTagnames.TryGetValue(objectId, out string tagName))
 			{
-				KeyValuePair<string, GroupTagStruct> goop = TagGroups.ElementAt(i);
+				return tagName;
+			}
+			else
+			{
+				// Handle the case where the objectId is not in the cache
+				// This could involve fetching the tag name from a database or file, for example
+				// For simplicity, we'll just return the objectId
+				return objectId;
+			}
+		}
+		private ObservableCollection<TreeViewItem> _tags = new ObservableCollection<TreeViewItem>();
+		public ObservableCollection<TreeViewItem> Tags
+		{
+			get { return _tags; }
+			set
+			{
+				_tags = value;
+				OnPropertyChanged("Tags");
+			}
+		}
 
-				if (groups_headers.Keys.Contains(goop.Key))
-				{
-					TreeViewItem t = groups_headers[goop.Key];
-					groups_headers_diff.Add(goop.Key, t);
-					groups_headers.Remove(goop.Key);
+		public event PropertyChangedEventHandler PropertyChanged;
 
-					GroupTagStruct displayGroup = goop.Value;
-					displayGroup.TagCategory = t;
-					TagGroups[goop.Key] = displayGroup;
-				}
-				else
-				{
-					GroupTagStruct displayGroup = goop.Value;
-					TreeViewItem sortheader = new();
-
-					sortheader.Header = displayGroup.TagGroupName + " (" + displayGroup.TagGroupDesc + ")";
-					sortheader.ToolTip = new TextBlock { Foreground = Brushes.Black, Text = displayGroup.TagGroupDefinitition };
-					displayGroup.TagCategory = sortheader;
-
-					TagGroups[goop.Key] = displayGroup;
-					TagsTree.Items.Add(sortheader);
-
-					groups_headers_diff.Add(goop.Key, sortheader);
-				}
+		protected virtual void OnPropertyChanged(string propertyName)
+		{
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+		}
+		public async void Loadtags()
+        {
+			
+			if (TagsTree.ItemsSource == null)
+			{
+				TagsTree.Items.Clear();
 			}
 
-			foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList.OrderBy(key => key.Value.TagFullName))
+			TagsTree.ItemsSource = Tags;
+
+			Dictionary<string, GroupTagStruct> tempTagGroups = new(TagGroups);
+            Dictionary<string, TreeViewItem> tags_headers_diff = new();
+            Dictionary<string, TreeViewItem> groups_headers_diff = new();
+            loadedTags = true;
+
+			foreach (var goop in tempTagGroups)
+			{
+				if (!groups_headers.TryGetValue(goop.Key, out TreeViewItem t))
+				{
+					GroupTagStruct displayGroup = goop.Value;
+					// Check if the tree view item already exists in the UI
+					if (!Tags.Any(item => item.Header.ToString() == new StringBuilder().Append(displayGroup.TagGroupName).Append(" (").Append(displayGroup.TagGroupDesc).Append(")").ToString()))
+					{
+						t = new TreeViewItem
+						{
+							Header = new StringBuilder().Append(displayGroup.TagGroupName).Append(" (").Append(displayGroup.TagGroupDesc).Append(")").ToString(),
+							ToolTip = new TextBlock { Foreground = Brushes.Black, Text = displayGroup.TagGroupDefinitition },
+							
+							
+						};
+						displayGroup.TagCategory = t;
+						Tags.Add(t);
+					}
+				}
+
+				TagGroups[goop.Key] = goop.Value;
+				groups_headers_diff.Add(goop.Key, t);
+			}
+
+
+			foreach (KeyValuePair<string, TagStruct> curr_tag in TagsList)
 			{
 				if (!curr_tag.Value.unloaded)
 				{
-					if (tags_headers.Keys.Contains(curr_tag.Key))
+					if (tags_headers.TryGetValue(curr_tag.Key, out TreeViewItem t))
 					{
-						TreeViewItem t = tags_headers[curr_tag.Key];
 						t.Tag = curr_tag.Key;
 						tags_headers_diff.Add(curr_tag.Key, t);
-						tags_headers.Remove(curr_tag.Key);
 					}
 					else
 					{
-						TreeViewItem t = new();
-						TagStruct tag = curr_tag.Value;
-						TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct? dictTagGroup);
-
-						t.Header = "(" + tag.Datnum + ") " + convert_ID_to_tag_name(tag.ObjectId);
-						t.Tag = curr_tag.Key;
-						t.Selected += Select_Tag_click;
-
-						if (dictTagGroup != null && dictTagGroup.TagCategory != null)
+						// Check if a TreeViewItem with the same tag datnum and object id already exists
+						bool itemExists = false;
+						if (Tags.Count > 0) 
 						{
-							dictTagGroup.TagCategory.Items.Add(t);
+							itemExists = Tags.Any(item => item.Tag != null && ((string) item.Tag).Split(' ')[0] == curr_tag.Value.Datnum && ((string) item.Tag).Split(' ')[1] == GetTagNameFromCache(curr_tag.Value.ObjectId));
+
 						}
 
-						tags_headers_diff.Add(curr_tag.Key, t);
+
+						if (!itemExists)
+						{
+							TreeViewItem tr = new();
+							TagStruct tag = curr_tag.Value;
+							TagGroups.TryGetValue(tag.TagGroup, out GroupTagStruct? dictTagGroup);
+
+							tr.Header = new StringBuilder().Append("(").Append(tag.Datnum).Append(") ").Append(GetTagNameFromCache(tag.ObjectId)).ToString();
+							tr.Tag = curr_tag.Key;
+							tr.Selected += Select_Tag_click;
+
+							if (dictTagGroup != null && dictTagGroup.TagCategory != null)
+							{
+								dictTagGroup.TagCategory.Items.Add(tr);
+							}
+
+							tags_headers_diff.Add(curr_tag.Key, tr);
+						}
 					}
 				}
 			}
 
-			foreach (KeyValuePair<string, TreeViewItem> poop in groups_headers)
-			{
-				if (poop.Value != null)
-				{
-					TagsTree.Items.Remove(poop.Value);
-				}
-			}
 
-			foreach (KeyValuePair<string, TreeViewItem> poop in tags_headers)
-			{
-				if (poop.Value != null)
-				{
-					TreeViewItem ownber = (TreeViewItem) poop.Value.Parent;
-					ownber.Items.Remove(poop.Value);
-				}
-			}
 
-			tags_headers = tags_headers_diff;
-			groups_headers = groups_headers_diff;
+			//foreach (var item in tags_headers.Values)
+   //         {
+   //             TreeViewItem owner = (TreeViewItem)item.Parent;
+   //             owner.Items.Remove(item);
+   //         }
+			
+            tags_headers = tags_headers_diff;
+            groups_headers = groups_headers_diff;
 
-			if (TagsTree.Items.Count < 1)
-			{
-				loadedTags = false;
-			}
-
+            if (TagsTree.Items.Count < 1)
+            {
+                loadedTags = false;
+            }
+			
 			TagsTree.Items.SortDescriptions.Add(new SortDescription("Header", ListSortDirection.Ascending));
 
-			SetStatus("Loaded Tags!");
-		}
+            SetStatus("Loaded Tags!");
+        }
+
 
 		public async Task ScanMem()
 		{
@@ -1160,7 +1208,17 @@ namespace InfiniteRuntimeTagViewer
 						Settings.Default.ProcAsyncBaseAddr = "HaloInfinite.exe+0x" + (pointer - haloInfinite).ToString("X");
 						Settings.Default.Save();
 						Debug.WriteLine(Settings.Default.ProcAsyncBaseAddr);
-
+						EventLogger.LogEvent("AOB Scan Dump:");
+						EventLogger.LogEvent("AOB Scan: " + aobSingle);
+						EventLogger.LogEvent("AOB Scan Result: " + aobScan.ToString("X"));
+						EventLogger.LogEvent("AOB Scan Result (Reversed): " + aobSingle);
+						EventLogger.LogEvent("AOB Scan Result (Pointer): " + pointer.ToString("X"));
+						EventLogger.LogEvent("AOB Scan Result (Pointer - HaloInfinite.exe): " + (pointer - haloInfinite).ToString("X"));
+						EventLogger.LogEvent("AOB Scan Result (HaloInfinite.exe+0x): " + Settings.Default.ProcAsyncBaseAddr);
+						foreach (long aobResult in aobScanResults)
+						{
+							EventLogger.LogEvent("AOB Scan Result (All): " + aobResult.ToString("X"));
+						}
 					}
 
 					// Failed to find base tag address
@@ -1178,9 +1236,11 @@ namespace InfiniteRuntimeTagViewer
 						hooked = true;
 					}
 				}
-				catch (Exception)
+				catch (Exception ex)
 				{
 					SetStatus("Cant find HaloInfinite.exe");
+					EventLogger.LogEvent("Exception Thrown:");
+					EventLogger.LogEvent(ex.ToString());
 				}
 			}
 		}
